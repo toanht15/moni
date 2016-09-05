@@ -1,0 +1,29 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: le_tung
+ * Date: 2014/05/21
+ * Time: 12:42
+ */
+
+class DatabaseSeeder extends Seeder{
+    public function run()
+    {
+        $value = array(
+            array(
+                'id' => '1',
+                'enterprise_id' => 1,
+                'name' => 'HelloWorld',
+                'profile_img_url' => '',
+                'background_img_url' => '',
+                'directory_name' => 'sekine',
+                'color_main' => '#333333',
+                'color_background' => '#f3f3f3',
+                'del_flg' => 0,
+                'created_at' => '0000-00-00 00:00:00',
+                'updated_at' => '0000-00-00 00:00:00'
+            )
+        );
+        DB::table('brands')->insert( $value );
+    }
+} 

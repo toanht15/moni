@@ -1,0 +1,112 @@
+.couponTable1 {
+  width: 100%;
+  border: 1px solid $borderC;
+  margin-bottom: 20px;
+
+  th,
+  td {
+    padding: 9px;
+    vertical-align: middle;
+    border-bottom: 1px solid $borderC;
+    border-left: 1px dotted $borderC;
+    background: #fff;
+  }
+  thead {
+
+    th {
+      white-space: nowrap;
+      background: #eee;
+    }
+  }
+}
+.couponDetail1 {
+  @include cf;
+
+  dt {
+    clear: both;
+    float: left;
+    width: 145px;
+    margin-bottom: 20px;
+    min-height: 20px;
+  }
+  dd {
+    float: left;
+    width: -webkit-calc(100% - 145px);
+    width: calc(100% - 145px);
+    margin-bottom: 20px;
+    min-height: 20px;
+
+    &>[type="text"] {
+      width: 598px;
+    }
+    &>textarea {
+      width: 598px;
+    }
+  }
+  .pager1 {
+    margin: 10px auto 0;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+.couponCodeWrap {
+  max-height: 400px;
+  overflow: auto;
+}
+.couponCodeTable1 {
+  width: 100%;
+  border: 1px solid $borderC;
+
+  th,
+  td {
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid $borderC;
+    background-color: #fff;
+    -ms-word-break: break-all;
+        word-break: break-all;
+  }
+  th {
+    white-space: nowrap;
+    background-color: #eee;
+
+    .distributeCode:before {
+      content: none;
+    }
+    .addUpperlimit:before {
+      content: none;
+    }
+  }
+  .distributeCode {
+    text-align: center;
+
+      &:before {
+        @include fontBase(arrow-right-single);
+        color: $iconC2;
+        font-size: 13px;
+        display: inline-block;
+        float: left;
+        margin-left: -10px;
+      }
+  }
+  .upperlimitCode {
+    text-align: center;
+  }
+  .addUpperlimit {
+    text-align: center;
+
+    &:before {
+      content: "+";
+      display: inline;
+      margin-right: 5px;
+    }
+  }
+}
+.couponWrap {
+  margin-bottom: 30px;
+}
+.couponDelete {
+  text-align: right;
+  margin-top: 10px;
+}

@@ -1,0 +1,55 @@
+本日は:<#TODAY>
+
+運用担当 様
+おはようございます
+本日(<#YESTERDAY>)のKPIは以下となります。
+
+UU : <#UserNumKPI>
+新規UU : <#JoinUserNumKPI>
+パネルクリック数 : <#UserPanelClickNumKPI>
+cp参加 : <#JoinCpUserNumKPI>
+ファン登録(MPFB等) : <#JoinMoniplaCpRelationRunningNumKPI>
+ファン登録(BC) : <#JoinBrandcoCpRelationRunningNumKPI>
+MAU : <#MAU>
+累計ファン数 : <#BrandsUsersNum>
+MAU(UU) : <#MAUUU>
+メッセージ : <#MessageNumKPI>
+オプトイン数 : <#OptInFlgKPI>
+PV : <#PV>
+セッション : <#GaSessions>
+ユーザ(GA) : <#GaUsers>
+ページ/セッション: <#GaPageviewsPerSession>
+平均セッション時間: <#GaAvgSessionDuration>
+直帰率: <#GaBounceRate>
+新規セッション率: <#GaPercentNewSessions>
+公開企業数: <#CompanyPublicKPI>
+公開キャンペーン数: <#OpenCampaignKPI>
+プロフィールアンケート数: <#ProfileQuestionnaireKPI>
+プロフィールアンケート設問数: <#ProfileQuestionKPI>
+プロフィールアンケート単一回答数: <#ProfileQuestionSingleAnswerKPI>
+プロフィールアンケート複数回答人数: <#ProfileQuestionMultiAnswerPersonKPI>
+プロフィールアンケート複数回答数: <#ProfileQuestionMultiAnswerKPI>
+プロフィールアンケート自由回答数: <#ProfileQuestionFreeAnswerKPI>
+CPアンケート数: <#CpQuestionnaireKPI>
+CPアンケート設問数: <#CpQuestionKPI>
+CPアンケート単一回答数: <#CpQuestionSingleAnswerKPI>
+CPアンケート複数回答人数: <#CpQuestionMultiAnswerPersonKPI>
+CPアンケート複数回答数: <#CpQuestionMultiAnswerKPI>
+CPアンケート自由回答数: <#CpQuestionFreeAnswerKPI>
+cp参加累計: <#JoinCpUserNumSumKPI>
+SNS投稿総数: <#SnsPostNum>
+SNS投稿TOPパネル表示数: <#SnsPostPanelDisplayNum>
+写真投稿総数: <#PhotoPostNum>
+写真投稿TOPパネル表示数: <#PhotoPostPanelDisplayNum>
+公開中CMS投稿総数: <#CmsPostNum>
+キャンペーン参加数（アカウント入力完了）: <#JoinCpEntryUserKPI>
+キャンペーン参加UU（当日）: <#JoinCpUserUUKPI>
+キャンペーン参加MAU（30日移動）: <#JoinCpUserMAUBetween30DaysKPI>
+キャンペーン参加UU（当月積上）: <#JoinCpUserMAUKPI>
+
+NO : Name : Fans(Change)
+<#LOOP_DATA>
+<#ID>   <#NAME>   <#TOTAL>(<#CHANGE>)
+<#/LOOP_DATA>
+
+よろしくお願いします

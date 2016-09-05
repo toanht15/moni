@@ -1,0 +1,41 @@
+/* ### parts.scss ### */
+/* mp adjust */
+.spFanNumber { margin: 0 0 5px; }
+
+article { width: auto; max-width: 100%; padding: 0; box-sizing: border-box; }
+
+.pageWrap { padding: 0; border: 0; }
+
+/* layout */
+#olympusHeaderInner { margin-bottom: 0; z-index: 600; }
+
+#olympusHeaderContent { padding-bottom: 15px; }
+
+#logoOlympus { margin-top: 6px; width: 146px; height: auto; }
+
+#logoOlympus img { width: 146px; height: auto; }
+
+#logoOlympusImaging { margin: 10px 0 0 0; border-left: 0; }
+
+#logoOlympusImaging img { width: 124px; height: auto; }
+
+#logoOlympusSub { display: none; }
+
+#olympusGlobalNav { display: none; }
+#olympusGlobalNav.active { display: block; }
+
+header .account ul { text-align: right; }
+
+#olympusVoiceRecorderHeader { width: auto; margin: 0 auto; }
+#olympusVoiceRecorderHeader h1 { background: none; display: inline-block; padding: 15px 0; height: auto; }
+#olympusVoiceRecorderHeader h1 img { display: inline-block; }
+#olympusVoiceRecorderHeader h1 a { display: inline; width: auto; height: auto; margin: 0; }
+#olympusVoiceRecorderHeader #btnOlympusMenu { display: inline-block; margin: 0 0 0 22px; padding: 0; border: 0; background: none; outline: none; line-height: 35px; vertical-align: bottom; }
+#olympusVoiceRecorderHeader li { float: none; }
+#olympusVoiceRecorderHeader li:last-child { display: block; }
+#olympusVoiceRecorderHeader li a, #olympusVoiceRecorderHeader li span { width: 100% !important; height: auto !important; background: none !important; }
+#olympusVoiceRecorderHeader li img { display: block; }
+
+body > footer#olympusFooter { width: auto; padding: 0 15px; }
+body > footer#olympusFooter .copyright { float: none; }
+body > footer#olympusFooter .olympusLinks, body > footer#olympusFooter .olympusMoniplaLinks { float: none; text-align: left; margin-left: -10px; }

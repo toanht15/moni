@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>03_setting_attract / admin-cp-edit</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+
+    <h1 class="hd1"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="campaign img" class="hdCampaignIcon"><span class="label2">登録完了</span><span class="hdInnerText">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が</span></h1>
+    <ul class="campaignAction">
+      <li class="setting"><a href="#">基本設定</a></li>
+      <li class="attract"><a href="#">集客設定</a></li>
+      <li class="download"><a href="#"><span class="labelModeAllied">個人情報取得</span></a></li>
+      <li class="attract"><a href="#">集客設定</a></li>
+      <li class="stepedit"><a href="#">フロー編集</a></li>
+      <li class="user"><a href="#">参加者一覧</a></li>
+      <li class="download"><a href="#">STEP6DL</a></li>
+      <li class="download"><a href="#"><span class="labelModeClient">配送先住所DL</span></a></li>
+      <li class="status"><span class="campaignTag">発表日：2014/6/17</span><span class="campaignTag">当選数：90,000</span></li>
+    </ul>
+
+    <section class="campaignFlowWrap">
+      <div class="campaignFlow">
+        <ul class="campaignFlowCont">
+          <li class="flowDetail_finished">
+            <h1>STEP1-3</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">キャンペーン告知</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">クイズ：○○にあて…</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">キャンペーン告知</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">クイズ：○○にあて…</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail_finished --></li>
+          <li class="flowDetail_focus">
+            <h1>STEP4</h1>
+            <div class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/win1.png" width="16" height="16" alt="結果発表" class="hdModuleIcon">結果発表</dt>
+                <dd><span class="iconMail1"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">--</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></div>
+          <!-- /.flowDetail --></li>
+        <li class="flowDetail">
+          <h1>STEP *</h1>
+          <a href="#modal1" class="moduleWrap jsOpenModal">
+            <p class="addModule"><span class="linkAdd">追加する</span></p>
+          <!-- /.campaignModule1 --></a>
+        <!-- /.flowDetail --></li>
+        <!-- /.campaignFlowCont --></ul>
+      <!-- /.campaignFlow --></div>
+      <ul class="campaignFlowScroll">
+        <li class="flowPrev">←</li>
+        <li class="flowNext">→</li>
+      <!-- /.campaignFlowScroll --></ul>
+    <!-- /.campaignFlowWrap --></section>
+
+    <h1 class="hd1"><img src="../../../../img/module/attract1.png" width="25" height="25" alt="集客設定" class="hdModuleIcon"><span class="hdInnerText">集客設定<span class="progress">基本情報2/2 STEP1 0/3</span></span></h1>
+
+    <section class="moduleEditWrap">
+      <section class="attractSetting1">
+        <ul>
+          <li class="url"><label class="labelTitle">公開URL</label><input type="text" value="https://monipla.com/campaign/detail/23274" readonly></li>
+          <li class="mailNews jsCheckToggleWrap">
+            <label><input type="checkbox" class="jsCheckToggle">メールで通知する</label>
+            <textarea cols="50" rows="5" class="jsCheckToggleTarget">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</textarea>
+          </li>
+          <li><label><input type="checkbox">monipla.comに掲載する</label></li>
+          <li><label><input type="checkbox">ページトップに表示する</label><a href="#" class="openNewWindow1">確認</a></li>
+          <li><label><input type="checkbox">グローバルナビゲーションに表示する</label><a href="#" class="openNewWindow1">確認</a></li>
+          <li class="embed">
+            <label><input type="checkbox">他のサイトに埋め込む</label>
+            <span class="iframeSize">横幅<input type="text" value="420">px</span> <span class="iframeSize">縦幅<input type="text" value="315">px</span>
+            <textarea cols="50" rows="5">&lt;iframe width="420" height="315" src="https://monipla.com/campaign/detail/23274" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</textarea>
+            <small>注意書きサンプルテキストサンプルテキスト</small>
+          </li>
+        </ul>
+      <!-- /.attractSetting1 --></section>
+    <!-- /.moduleEditWrap --></section>
+
+    <div class="moduleCheck">
+      <ul>
+        <li class="btn3"><a href="#">更新</a></li>
+      </ul>
+    <!-- /.moduleCheck --></div>
+
+  <!-- /.wrap --></article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+</body>
+</html>

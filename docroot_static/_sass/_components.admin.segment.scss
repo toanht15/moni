@@ -1,0 +1,1419 @@
+%labelBase {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:before,
+  &:after {
+    top: 0;
+    left: 0;
+
+    position: absolute;
+    content: " ";
+    height: 0;
+    width: 0;
+  }
+  span {
+    position: absolute;
+    z-index: 1;
+    content: " ";
+    top: 0;
+    left: 1px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    color: #fff;
+    font-size: 10px;
+  }
+}
+.labelNot {
+  @extend %labelBase;
+  z-index: 1;
+
+  &:before {
+    border-left-color: #fff;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid;
+    z-index: 2;
+  }
+  &:after {
+    border-left-color: #999999;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid;
+  }
+  span {
+    top: 2.5px;
+    left: 2.5px;
+  }
+}
+.labelOr {
+  @extend %labelBase;
+  z-index: 3;
+
+  &:after {
+    border-left-color: #ff6b6f;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid;
+  }
+  span {
+    top: -5px;
+    left: 0;
+  }
+}
+
+.conditionSegmentWrap {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.conditionSegmentMeta {
+    @include cf;
+
+    dt {
+        width: 180px;
+        float: left;
+        clear: both;
+        margin-bottom: 10px;
+    }
+    dd {
+        width: 570px;
+        float: left;
+        margin-bottom: 10px;
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+        }
+        .urlParts {
+            width: 250px;
+        }
+        textarea {
+            height: 44px;
+            display: block;
+        }
+        .sub {
+            margin-top: 10px;
+            display: block;
+        }
+    }
+}
+.adDataSetting {
+  @extend .conditionSegmentMeta;
+}
+.segmentWaap {
+  width: 960px;
+}
+
+.segmentList {
+  width: 100%;
+  box-sizing: border-box;
+
+  .segmentItemInner {
+    @include cf;
+    min-height: 75px;
+    padding: 10px 10px 0 15px;
+    display: inline-block;
+
+    .iconError1 {
+      margin-bottom: 5px;
+    }
+  }
+  .metricBoxs {
+    padding-bottom: 13px;
+
+    li {
+      width: 170px;
+      margin-left: 10px;
+      vertical-align: top;
+      display: inline-block;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.metricBoxAddWrap {
+        width: auto;
+      }
+    }
+  }
+  .segmentItem {
+    padding-left: 12px;
+    margin-bottom: 15px;
+    border: 1px solid $borderC;
+    position: relative;
+    background: #fff;
+
+    .addOption {
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+    }
+    &:hover {
+
+      .addOption {
+        opacity: 1;
+      }
+    }
+  }
+  .segmentMove {
+    width: 17px;
+    background: #ccc;
+    height: 100%;
+    display:inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor:move;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &:before {
+      @include fontBase(menu);
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 4px;
+      font-size: 10px;
+      margin-top: -5px;
+      color: $iconC2;
+    }
+  }
+  .segmentNoMove {
+    @extend .segmentMove;
+    cursor: auto;
+
+    &:before {
+      content: none;
+    }
+  }
+  .segmentItemNa {
+    padding-left: 12px;
+    margin-bottom: 30px;
+    border: 1px solid $borderC;
+    position: relative;
+    background: #ddd;
+  }
+  .option {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1;
+
+    .groupDelete {
+      width: 14px;
+      height: 14px;
+      position: relative;
+      display: inline-block;
+      background: #888;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:after {
+        @include fontBase(delete);
+        color: #ddd;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -6px;
+        margin-left: -6px;
+      }
+    }
+
+    .btnArrowB1 {
+      width: 18px;
+      height: 18px;
+      border-radius: 0;
+    }
+    &+.sortBox {
+      top: 18px;
+      right: 0;
+      left: inherit;
+      min-width: 113px;
+
+      .btnSet {
+        margin-top: 0;
+        padding-top: 0;
+        border: none;
+      }
+      .btn2 {
+        width: 100%;
+
+        .small1 {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .addOption {
+    width: 162px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -webkit-calc(-162px / 2) ;
+    margin-left: calc(-162px / 2) ;
+    letter-spacing: -.4em;
+
+    li {
+      margin: 0 5px;
+      font-size: 12px;
+      display: inline-block;
+      letter-spacing: normal;
+
+      a {
+        padding: 5px 10px 5px 0;
+        line-height: 35px;
+        border-radius: 3px;
+        background: #ccc;
+        color: #555;
+        text-decoration: none;
+
+        &:hover {
+          color: #fff;
+          background: #888;
+        }
+      }
+    }
+    .add {
+
+      a:before {
+        @include fontBase(plus);
+        color: #fff;
+        background: #888;
+        border-radius: 3px 0 0 3px;
+        padding: 4px 3px 6px 5px;
+        margin-right: 5px;
+      }
+    }
+    .copy {
+
+      a:before {
+        @include fontBase(replicate);
+        color: #fff;
+        background: #888;
+        border-radius: 3px 0 0 3px;
+        padding: 4px 3px 6px 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .segmentNames,
+  .metricBox,
+  .metricBoxAddWrap,
+  .metricBoxWrap,
+  .metricBoxOptionAdd {
+    display: inline-block;
+  }
+  .segmentNames {
+    width: 110px;
+    vertical-align: top;
+
+    .segmentName {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .edit {
+      position: relative;
+      text-align: right;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      vertical-align: top;
+      overflow: hidden;
+      display: inline-block;
+
+      &:before {
+        @include fontBase(edit);
+        font-size: 17px;
+        color: $iconC1;
+        display: block;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .segmentMember {
+      margin-top: 5px;
+      display: block;
+      font-size: 13px;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .metricBoxWrap {
+    width: 796px;
+    overflow-x: scroll;
+    letter-spacing: -.40em;
+
+    &>.metricBoxOptionAdd,
+    &>.metricBoxOptionNone {
+      margin-left: 0;
+    }
+  }
+  .metricBox {
+    width: 170px;
+    height: 72px;
+    padding: 13px 15px 12px 13px;
+    border: 1px solid $borderC;
+    position: relative;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    vertical-align: top;
+    background: #fff;
+
+    &+.metricBox {
+      margin-top: -1px;
+    }
+    .metricName {
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .input {
+      font-size: 11px;
+      margin-top: 5px;
+      display: block;
+    }
+    .sortBox {
+      font-weight: normal;
+
+      .inputDate {
+        width: 75px;
+        margin-bottom: 10px;
+      }
+    }
+    .btnArrowB1 {
+      margin-left: 5px;
+      background: #ddd;
+
+      &:after {
+        border-top: 4px solid #999;
+      }
+    }
+  }
+  .delete {
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: -1px;
+    display: inline-block;
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    line-height: 18px;
+
+    &:before {
+      @include fontBase(delete);
+      font-size: 13px;
+      color: #ddd;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .or {
+    position: absolute;
+    left: 6px;
+    bottom: -9px;
+    z-index: 1;
+
+    a {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 10px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 1.2;
+      background-color: #ddd;
+      box-shadow: 0 -2px 0 0 #BCBCBC inset;
+      color: #999;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+      &:active {
+        background-color: #D0D0D0;
+        box-shadow: 0 2px 1px 0 #BCBCBC inset;
+      }
+    }
+
+  }
+  .metricBoxAdd {
+    background: #fff;
+
+    a {
+      border: 1px dotted #555;
+      display: block;
+      padding: 23px;
+
+      width: 25px;
+      height: 25px;
+      display: block;
+      overflow: hidden;
+      vertical-align: middle;
+      line-height: 35px;
+      text-decoration: none;
+
+      &:before {
+        @include fontBase(add-plus);
+        overflow: hidden;
+        color: #bbb;
+        font-size: 25px;
+      }
+      &:hover {
+
+        &:before {
+          color:#ff6b6f;
+        }
+      }
+    }
+  }
+  .metricBoxOptionAdd {
+    width: 170px;
+    height: 72px;
+    margin-left: 10px;
+    position: relative;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &+.metricBox {
+      margin-left: 10px;
+    }
+    span {
+      display: block;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    a {
+      border: 1px dotted $borderC;
+      padding: 0;
+      width: 170px;
+      height: 70px;
+      display: block;
+      text-align: center;
+      line-height: 70px;
+      overflow: hidden;
+      box-sizing: border-box;
+      background: #fff;
+
+      &:before {
+        @include fontBase(add-plus);
+        overflow: hidden;
+        color: #bbb;
+        font-size: 25px;
+        vertical-align: middle;
+      }
+      &:hover {
+        border: 1px dotted #ff6b6f;
+        text-decoration: none;
+
+        &:before {
+          color: #ff6b6f;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .metricBoxOptionNone {
+    width: 170px;
+    height: 72px;
+    margin-left: 10px;
+    position: relative;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+
+    &+.metricBox {
+      margin-left: 10px;
+    }
+
+    p {
+      overflow: hidden;
+    }
+    span {
+      border: 1px dotted $borderC;
+      padding: 0;
+      width: 170px;
+      height: 70px;
+      display: block;
+      text-align: center;
+      line-height: 70px;
+      box-sizing: border-box;
+      background: #fff;
+      position: relative;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        width:　184px;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top:33px;
+        left: -10px;
+        background: #ccc;
+        overflow: hidden;
+        font-size: 20px;
+        vertical-align: middle;
+        -webkit-transform: rotate(22deg);
+           -moz-transform: rotate(22deg);
+            -ms-transform: rotate(22deg);
+             -o-transform: rotate(22deg);
+                transform: rotate(22deg);
+      }
+    }
+  }
+}
+.remainingBox {
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  margin-bottom: 15px;
+
+  .hd2,
+  .segmentMember {
+    display: inline-block;
+  }
+  .segmentMember {
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: normal;
+
+    .num {
+      font-weight: bold;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+.sideAction {
+  @include cf;
+  height:50px;
+  float: right;
+
+  .btn {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+.metricSettingBox {
+
+  h1 {
+    padding-left: 10px;
+    display: inline-block;
+  }
+  .option {
+    margin-top: 10px;
+  }
+}
+.metricSettingList {
+  @include cf;
+  width: 324px;
+  margin: 0 auto;
+
+  dt {
+    padding-top: 5px;
+    float:left;
+
+    &+dt {
+      margin-top: 25px;
+    }
+  }
+  dd {
+    padding-left: 120px;
+    margin-bottom: 20px;
+
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+  }
+  .child {
+    width: -webkit-calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    position: relative;
+
+    &:before {
+      content: "└";
+      position: absolute;
+      top: 11px;
+      font-size: 21px;
+      left: -28px;
+    }
+  }
+  .inputDate {
+    width: 82px;
+  }
+  .nameTitle {
+    margin-bottom: 5px;
+    display: block;
+  }
+  select {
+    width: 200px;
+  }
+}
+
+.metricDetailTitle {
+  font-size: 12px;
+  margin-bottom: 10px
+}
+.sortBoxInner {
+
+  ul li {
+    margin-left: 1px;
+  }
+  p {
+    margin: 5px 0;
+  }
+  .range {
+
+    select {
+      margin-right: 5px;
+    }
+    .check {
+      padding-left: 18px;
+      text-indent: -18px;
+    }
+  }
+}
+.segmentMakeWrap {
+  margin-bottom: 15px;
+  float: right;
+
+  li {
+    position: relative;
+  }
+  .iconHelp {
+    line-height: 27px;
+    position: absolute;
+    right: 5px;
+  }
+}
+.segmentCont {
+  clear: both;
+  padding: 10px;
+  border: 1px solid $borderC;
+  background: #fff;
+
+  .actionWrap {
+    margin: 10px 0;
+    text-align: right;
+  }
+}
+
+.actionWrap {
+  margin-left: 5px;
+
+  .btn3 {
+    margin-left: 5px;
+  }
+  &+.actionWrap {
+    float: right;
+  }
+}
+.segmentWrap {
+  @include cf;
+}
+.segmentTypeList {
+  float: left;
+  width: 195px;
+  height: 100%;
+  border: 1px solid $borderC;
+
+  li {
+    border-top: 1px solid $borderC;
+    display: table;
+    width: 100%;
+
+    &:first-child {
+      border-top: none;
+    }
+    & > * {
+      position: relative;
+      width: 100%;
+      height: 65px;
+      padding-right: 15px;
+      padding-left: 40px;
+      font-size: 15px;
+      display: table-cell;
+      vertical-align: middle;
+
+      &:before {
+        color: #737373;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+  a {
+    color: #8a8a8a;
+    background: #e8e8e8;
+
+    &:hover {
+      color: #fff;
+      background: #858585;
+      text-decoration: none;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+  .current {
+    color: #737373;
+    background: #fff;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -1px;
+      background: #fff;
+      z-index: 100;
+    }
+  }
+  .number {
+    font-size: 13px;
+    display: block;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+  .segmentAll>*:before {
+    @include fontBase(all);
+    font-size: 22px;
+    left: 11px;
+    height: 22px;
+  }
+  .segmentTerms>*:before {
+    @include fontBase(sort);
+    font-size: 25px;
+    left: 10px;
+    height: 25px;
+  }
+  .segmentGroup>*:before {
+    @include fontBase(segment);
+    font-size: 22px;
+    left: 11px;
+    height: 22px;
+  }
+  .userTag>*:before {
+    @include fontBase(tag);
+    font-size: 22px;
+    left: 11px;
+    height: 22px;
+  }
+}
+
+.segmentItemList {
+  position: relative;
+  float: left;
+  border: 1px solid $borderC;
+  margin-left: -1px;
+  width: 740px;
+  width: -webkit-calc(100% - 195px - 3px);
+  width: calc(100% - 195px - 3px);
+
+  .segmentItem {
+
+    &:first-child {
+
+      &>.segmentItemInner {
+        border-top: none;
+      }
+    }
+  }
+  .segmentItemInner {
+    border-top: 1px dotted $borderC;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: table;
+  }
+  .itemSelect,
+  .segmentName,
+  .status {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .itemSelect {
+    padding: 0 10px;
+    text-align: center;
+    background: #F5F5F5;
+
+    input {
+      margin: 0;
+    }
+  }
+  .customaudienceTooltip {
+    position: absolute;
+    right: 20px;
+    z-index: 100;
+    display: none;
+  }
+
+  .segmentName {
+    position: relative;
+    padding-left: 10px;
+    width: 100%;
+
+    .name {
+      font-size: 16px;
+      position: relative;
+      display: block;
+    }
+    .detail {
+      font-size: 11px;
+      color: #aaa;
+      letter-spacing: normal;
+    }
+    .arrowToggle {
+      width: 16px;
+      height: 16px;
+      margin-right: 3px;
+      line-height: 17px;
+      position: relative;
+      vertical-align: middle;
+      overflow: hidden;
+      display: inline-block;
+      top: -1px;
+      cursor: pointer;
+
+      &:before {
+        @include fontBase(arrow-bottom);
+        font-size: 12px;
+        color: #000;
+      }
+      &.close {
+
+        &:before {
+          @include fontBase(arrow-right-single);
+        }
+      }
+    }
+  }
+  .labelDynamic {
+    font-size: 10px;
+    padding: 1px 3px;
+    background: #699ee0;
+    color: #fff;
+    text-align: center;
+
+    &+.name {
+      margin-top: 5px;
+      font-size: 16px;
+      display: block;
+    }
+  }
+  .labelRelation {
+    font-size: 10px;
+    padding: 1px 3px;
+    background: #7dcc66;
+    color: #fff;
+    text-align: center;
+
+    &+.name {
+      margin-top: 5px;
+      display: block;
+    }
+  }
+  .status {
+    padding-right: 20px;
+    font-size: 12px;
+    text-align: right;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    .diff {
+      margin-left: 10px;
+      font-size: 10px;
+      display: inline-block;
+
+      span {
+        color: #333;
+      }
+    }
+    .up {
+
+      .diff,
+      &:after {
+        color: #D80000;
+      }
+    }
+    .down {
+
+      .diff,
+      &:after {
+        color: #006DD9;
+      }
+    }
+    .iconDraft1 {
+      &:before {
+        content: "";
+      }
+      &:after {
+        @include iconFontLeft(write);
+        font-size: 13px;
+        color: $iconC1;
+      }
+    }
+  }
+  .segmentNum {
+    font-weight:bold;
+    color: #333;
+    font-size: 15px;
+  }
+  .option {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+
+    .btnArrowB1 {
+      border-radius: 0;
+      vertical-align: top;
+    }
+  }
+  .optionAction {
+    width: 113px;
+    top: 14px;
+    right: 0;
+    position: absolute;
+    z-index: 110;
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,.5);
+
+    .boxCloseBtn {
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    li {
+      width: 100%;
+    }
+    .btn2 a {
+      width: 100%;
+    }
+  }
+
+  .subSegment {
+    margin-left: 35px;
+  }
+}
+
+.actionMenu {
+  letter-spacing: -.4em;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    position: relative;
+    letter-spacing: normal;
+    text-align: center;
+    width: -webkit-calc((100%/4) - 10px);
+    width: calc((100%/4) - 10px);
+    margin-left: 10px;
+    vertical-align: middle;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &>a {
+      height: 6em;
+      padding: 40px 0 10px;
+      color: #999;
+      line-height: 1.3;
+      letter-spacing: normal;
+      border-radius: 3px;
+      display: block;
+      background: #404040;
+      box-sizing: border-box;
+
+      &:before {
+        margin-top: -28px;
+        margin-left: -11px;
+        position: absolute;
+        color: #E2E2E2;
+        font-size: 22px;
+        display: block;
+        top: 50%;
+        left: 50%;
+      }
+      &:hover {
+        background: #222;
+        text-decoration: none;
+      }
+    }
+  }
+  .actionMessage>a:before {
+    @include fontBase(mail-close2);
+  }
+  .actionCampaign>a:before {
+    @include fontBase(campaign);
+  }
+  .actionAd>a:before {
+    @include fontBase(ad);
+    margin-top: -30px;
+    margin-left: -15px;
+    font-size: 30px;
+  }
+  .actionCsv>a:before {
+    @include fontBase(download);
+  }
+}
+
+.metricSettingList {
+  select {
+    width: 100%;
+  }
+  .status li {
+    display: inline-block;
+  }
+}
+
+.segmentAncondition {
+  margin-bottom: 20px;
+
+  .segmentList .segmentItem {
+    margin-bottom: 5px;
+  }
+}
+
+.segmentSelectCont {
+  @include cf;
+  margin: auto -10px 15px -10px;
+
+  &> * {
+    font-size: 12px;
+  }
+  .selected {
+    background: #E8E8E8;
+  }
+}
+.segmentSelectContPankuzu {
+  @extend .segmentSelectCont;
+
+  .segmentTab ul,
+  .segmentData .second,
+  .segmentData .third {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
+.segmentTab,
+.segmentData {
+  margin: 0;
+  float:left;
+  display: block;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+
+  li {
+    margin-top: 0;
+    position: relative;
+
+    &:after {
+      @include fontBase(arrow-right-single);
+      margin-top: -6px;
+      color: #BFBFBF;
+      position: absolute;
+      top: 50%;
+      right: 4px;
+    }
+  }
+  li>* {
+    color: #333;
+  }
+  li>a,
+  li>span {
+    padding: 8px 13px 7px 10px;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+      background: #E8E8E8;
+    }
+  }
+}
+.segmentTab {
+
+  ul {
+    width: 160px;
+    height: 315px;
+    overflow: auto;
+    margin: 0;
+    background: #F6F6F6;
+
+    li {
+      border-bottom: 1px solid #e8e8e8;
+    }
+  }
+}
+.segmentData {
+  @include cf;
+  margin: 0;
+
+  .second {
+    width: 506px;
+    height: 315px;
+    margin: 0;
+    float: left;
+    overflow-y: scroll;
+
+    li {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+  .third {
+    width: 170px;
+    height: 315px;
+    margin: 0;
+    float:right;
+    display: block;
+    overflow-y: scroll;
+
+    li {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
+
+.segmentValue {
+  margin-bottom: 30px;
+}
+.segmentValueInner {
+  border:1px dotted #ccc;
+  padding: 10px;
+
+  .metricSettingList {
+    width: 100%;
+  }
+  dt {
+    margin-bottom: 5px;
+    float: none;
+    font-weight:bold;
+
+    .status:last-child {
+      margin-bottom: 0;
+    }
+  }
+  dd {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+.segmentSelectHd {
+  margin: 10px 0;
+  font-weight: bold;
+}
+.subtext {
+
+  &+.supplement1 {
+    margin: 2px 0 10px 0;
+  }
+}
+
+.segmentPresetInfo {
+  @include cf;
+  height: 24px;
+  padding: 4px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 2px;
+  background: #FFFCEE;
+  border: 1px solid #F8C25C;
+}
+
+.dataLinkSettingWrap {
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+}
+.addAcountList {
+  height: 99px;
+  margin-bottom: 5px;
+  border-top: 1px solid $borderC;
+  border-bottom: 1px solid $borderC;
+  overflow-y: scroll;
+
+  li {
+    border-bottom: 1px solid $borderC;
+  }
+  label {
+    padding: 15px 20px;
+    display: block;
+  }
+  .iconFB1:before,
+  .iconTW1_2:before {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+.addAcountConfirmList {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .iconFB1:before,
+  .iconTW1_2:before {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}
+.addAcount {
+  margin-bottom: 50px;
+  text-align: right;
+
+  &:before {
+    @include iconFontLeft(plus);
+    color: #fff;
+    font-size: 14px;
+    background: $iconC3;
+  }
+}
+.segmentPreviewWrap {
+  position: relative;
+
+  .customaudienceTooltip {
+    position: absolute;
+    right: -50px;
+    z-index: 100;
+    display: none;
+    margin-top: -25px;
+  }
+}
+
+.segmentPreview {
+  width: 100%;
+  border: 1px solid $borderC;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+
+  &>* {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .segmentTotal {
+    width: 130px;
+    height: 42px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 35px;
+    left: 15px;
+
+    strong {
+      font-size:20px;
+      font-weight: bold;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .segmentItem {
+    width: calc(100% - 180px - 5px);
+    height: 110px;
+    padding: 5px 5px 5px 180px;
+    overflow-y: scroll;
+
+    li {
+      width: 100%;
+      padding: 5px 25px;
+      margin-bottom: 5px;
+      display: table;
+      border: 1px solid $borderC;
+      box-sizing: border-box;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &>* {
+        display: table-cell;
+        max-width: 1px;
+      }
+      &:before {
+        content:"";
+        width: 0;
+        height: 0;
+        margin: -8px 0 0 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        border: 8px solid transparent;
+        border-right: 8px solid #ccc;
+        border-left: 0 solid transparent;
+      }
+      &:after {
+        content:"";
+        width: 0;
+        height: 0;
+        margin: -8px 0 0 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: -7px;
+        border: 8px solid transparent;
+        border-right: 8px solid #fff;
+        border-left: 0 solid transparent;
+      }
+    }
+    .itemTitle {
+
+    }
+    .itemNum {
+      width: 100px;
+      text-align: right;
+    }
+  }
+}

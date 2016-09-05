@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_plugin_detail / admin-comment</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <link rel="stylesheet" href="../../css/jqueryUI.css">
+</head>
+
+<body>
+    <header class="editHeadWrap">
+        <section class="editHead">
+            <div class="wrap">
+                <h1><a href="#"><img src="../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+                <nav class="editMenu">
+                    <ul>
+                        <li class="actionCampaign">
+                            <a href="#">キャンペーン</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">作成</a></li>
+                                <li><a href="#">クーポン設定</a></li>
+                            </ul>
+                        </li>
+                        <li class="actionMessage">
+                            <a href="#">メッセージ</a>
+                        </li>
+                        <li class="actionContents">
+                            <a href="#">コンテンツ</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">ページ</a></li>
+                                <li><a href="#">コメント</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                        <li class="actionFan">
+                            <a href="#">ファン<span class="badge1">+99</span></a>
+                        </li>
+                        <li class="actionDashboard">
+                            <a href="#">ダッシュボード</a>
+                        </li>
+                        <li class="actionInfo">
+                            <a href="#">お知らせ<span class="badge1">+3</span></a>
+                        </li>
+                        <li class="actionContact">
+                            <a href="#">お問い合わせ</a>
+                        </li>
+                        <li class="actionSetting">
+                            <a href="#">設定</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">管理者設定</a></li>
+                                <li><a href="#">ユーザー設定</a></li>
+                                <li><a href="#">ページ設定</a></li>
+                                <li><a href="#">CVタグ設定</a></li>
+                                <li><a href="#">リダイレクト設定</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                    </ul>
+                <!-- /.editMenu --></nav>
+            <!-- /.wrap --></div>
+        <!-- /.editHead --></section>
+
+        <section class="account">
+            <ul>
+                <li class="accountCompany">
+                    <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li>
+                <li class="preview"><a href="#">プレビュー</a></li>
+                <li class="accountName">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+                <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+            </ul>
+        <!-- /.account --></section>
+
+    <!-- /.editHeadWrap --></header>
+
+    <article>
+        <h1 class="hd1">コメント機能</h1>
+        <h2 class="hd2">「あなたの子供の頃の思い出を聞かせてください」アンケート</h2>
+        <section class="commentPluginWrap">
+
+            <div class="itemsSortingDetail">
+                <dl class="column">
+                    <dt>公開ステータス</dt>
+                    <dd><label><input type="radio" name="radio1">全て</label><label><input type="radio" name="radio1">公開</label><label><input type="radio" name="radio1">非公開</label>
+                        <!-- <span><label><input type="checkbox" name="radio1">ユーザーによって削除された投稿</label></span> -->
+                    </dd>
+                    <dt>期間</dt>
+                    <dd>
+                        <input type="text" class="jsDate inputDate" placeholder="年/月/日"><span class="dash">〜</span><input type="text" class="jsDate inputDate" placeholder="年/月/日">
+                    </dd>
+                </dl>
+                <dl class="column">
+                    <dt>ニックネーム</dt>
+                    <dd><input type="text" class="" placeholder="ニックネームを入力"></dd>
+                    <dt>投稿内容</dt>
+                    <dd><input type="text" class="" placeholder="キーワード入力"></dd>
+                </dl>
+                <div class="jsSettingContWrap">
+                    <p class="detailSetting jsSettingContTile close">詳細検索</p>
+
+                    <dl class="detailInner jsSettingContTarget" style="display: none;">
+                        <dt>会員No</dt>
+                        <dd>
+                            <textarea placeholder="No." class="pluralItems"></textarea><small class="supplement1">※カンマ/改行区切りで複数指定可</small></dd>
+                        <dt>SNSへのシェア</dt>
+                        <dd><label><input type="radio" name="radio2">あり</label><label><input type="radio" name="radio2">なし</label></dd>
+                        <dt>メモ</dt>
+                        <dd><label><input type="radio" name="radio2">あり</label><label><input type="radio" name="radio2">なし</label></dd>
+                    </dl>
+                <!-- /.detailInner --></div>
+                <p class="btnSet"><span class="btn2"><a href="#" class="small1">リセット</a></span><span class="btn1"><a href="#" class="small1">適用</a></span></p>
+            <!-- /.itemsSortingDetail --></div>
+
+            <div class="pager1">
+                <p>99,999件中101件～120件表示しています</p>
+                <p class="order">
+                    <select name="" id="">
+                        <option>投稿順</option>
+                        <option>ユーザーID順</option>
+                    </select>
+                    <label><input type="radio" name="radio3">[A-Z↓] 昇順</label><label><input type="radio" name="radio3">[Z-A↑] 降順</label>
+                </p>
+                <ul>
+                    <li class="first"><a href="#">最初のページヘ</a></li>
+                    <li class="prev"><a href="#">前のページへ</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>6</span></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">99</a></li>
+                    <li class="next"><a href="#">次のページへ</a></li>
+                    <li class="last"><a href="#">最後のページヘ</a></li>
+                </ul>
+            <!-- /.pager1 --></div>
+
+
+            <p class="batchAction">
+                <span class="iconCheck3">選択中0件</span>
+                <label><input type="radio" value="" name="1" checked="checked">公開</label>
+                <label><input type="radio" value="" name="1">非公開</label>
+                <span class="btn3"><a href="#" class="small1">適用</a></span>
+            <!-- /.batchAction --></p>
+
+            <table class="commentPluginTable1">
+                <thead>
+                    <tr>
+                        <th class="check">
+                            <input type="checkbox">
+                        <!-- /.check --></th>
+                        <th class="postData">
+                            投稿情報
+                        <!-- /.postData --></th>
+                        <th class="userData">
+                            会員情報
+                        <!-- /.userData --></th>
+                        <th class="action">
+                            いいね/返信
+                        <!-- /.action --></th>
+                        <th class="share">
+                            シェア（友達数）
+                        <!-- /.share --></th>
+                        <th class="postBody">
+                            投稿内容（全て<a href="#">開く</a>▼/<a href="#">閉じる</a>▲）
+                        <!-- /.postBody --></th>
+                        <th class="status">
+                            公開ステータス
+                        <!-- /.status --></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="check">
+                            <input type="checkbox">
+                        <!-- /.check --></td>
+                        <td class="postData">
+                            No.0000001<br> 2016/05/09 12:45
+                        <!-- /.postData --></td>
+                        <td class="userData">
+                            <a href="./03_plugin_detail_reply.html">
+                                <img src="../../img/dummy/02.jpg" width="20" height="20" alt="ユーザー名が入る">ユーザー名が入るユーザー名が入る<br> ID 9999999</a>
+                        <!-- /.userData --></td>
+                        <td class="action">
+                            <span><span class="actionLike">いいね数</span>100</span>
+                            <span><span class="actionReply">返信</span>5</span>
+                        <!-- /.action --></td>
+                        <td class="share">
+                        <!-- /.share --></td>
+                        <td class="postBody">
+                            <p class="postTile"><strong>テレビの選局のエピソード</strong></p>
+                            <p class="postRating">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_0.png">
+                                <img src="../../img/raty/iconStar_0.png">
+                            <!-- /.postRating --></p>
+                            <p class="postImages">
+                                <span class="thumb"><img src="../../img/dummy/cp1.png"></span>
+                                <span class="thumb"><img src="../../img/dummy/05.jpg"></span>
+                                <span class="thumb"><img src="../../img/dummy/CPmain.jpg"></span>
+                            <!-- /.postImages --></p>
+                            <p class="postText">
+                                テレビゲーム自体を子供の頃は買ったりもしてくれない親だったけど、商売的な理由もあり家の中には深夜近くまで兄弟、姉妹だけで生活せざる事が当たり前だったため、テレビにしても子供にとった遊びの対象になるものは大抵が、年功序列でのケンカの強い順で決まってしまって… <a href="#">more</a>
+                            <!-- /.postText --></p>
+                        <!-- /.postBody --></td>
+                        <td class="status">
+                            <span class="statusInner">
+                <p class="userDelete">ユーザーによって削除されました</p>
+          <!-- /.statusInner --></span>
+                            <span class="statusInner">
+                <a href="#" class="pluginPreview">確認</a>
+          <!-- /.statusInner --></span>
+                            <span class="statusInner">
+                <a href="#modal1" class="postMemo jsOpenModal">
+                  <span class="inner off">メモを書く</span>
+                            <span class="textBalloon1">
+                    <span>
+                      残しておきたいメモを書けます。
+                    </span>
+                        <!-- /.textBalloon1 --></span>
+                        <!-- /.postMemo --></a>
+                        <!-- /.statusInner --></span>
+                        <!-- /.status --></td>
+                    </tr>
+                    <tr>
+                        <td class="check">
+                            <input type="checkbox">
+                        <!-- /.check --></td>
+                        <td class="postData">
+                            No.0000001<br> 2016/05/09 12:45
+                        <!-- /.postData --></td>
+                        <td class="userData">
+                            <a href="./03_plugin_detail_reply.html">
+                                <img src="../../img/dummy/02.jpg" width="20" height="20" alt="ユーザー名が入る">ユーザー名が入るユーザー名が入る<br> ID 9999999</a>
+                        <!-- /.userData --></td>
+                        <td class="action">
+                            <span><span class="actionLike">いいね数</span>100</span>
+                            <span><span class="actionReply">返信</span>5</span>
+                        <!-- /.action --></td>
+                        <td class="share">
+                            <span><span class="iconFB2_off">Facebook未シェア</span></span>
+                            <span><span class="iconTW2_off">Twitter未シェア</span></span>
+                        <!-- /.share --></td>
+                        <td class="postBody">
+                            <p class="postTile"><strong>テレビの選局のエピソード</strong></p>
+                            <p class="postRating">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_0.png">
+                                <img src="../../img/raty/iconStar_0.png">
+                            <!-- /.postRating --></p>
+                            <p class="postImages">
+                                <span class="thumb"><img src="../../img/dummy/cp1.png"></span>
+                                <span class="thumb"><img src="../../img/dummy/05.jpg"></span>
+                                <span class="thumb"><img src="../../img/dummy/CPmain.jpg"></span>
+                            <!-- /.postImages --></p>
+                            <p class="postText">
+                                テレビゲーム自体を子供の頃は買ったりもしてくれない親だったけど、商売的な理由もあり家の中には深夜近くまで兄弟、姉妹だけで生活せざる事が当たり前だったため、テレビにしても子供にとった遊びの対象になるものは大抵が、年功序列でのケンカの強い順で決まってしまって… <a href="#">more</a>
+                            <!-- /.postText --></p>
+                        <!-- /.postBody --></td>
+                        <td class="status">
+                            <span class="statusInner">
+                <a href="#" class="switch_large on"><span class="switchInner"><span class="selectON">公開</span><span class="selectOFF">非公開</span></span>
+                            </a>
+                        <!-- /.statusInner --></span>
+                            <span class="statusInner">
+                <a href="#" class="pluginPreview">確認</a>
+          <!-- /.statusInner --></span>
+                            <span class="statusInner">
+                <a href="#modal1" class="postMemo jsOpenModal">
+                  <span class="inner off">メモを書く</span>
+                            <span class="textBalloon1">
+                    <span>
+                      残しておきたいメモを書けます。
+                    </span>
+                        <!-- /.textBalloon1 --></span>
+                        <!-- /.postMemo --></a>
+                        <!-- /.statusInner --></span>
+                        <!-- /.status --></td>
+                    </tr>
+                    <tr>
+                        <td class="check">
+                            <input type="checkbox">
+                        <!-- /.check --></td>
+                        <td class="postData">
+                            No.0000001<br> 2016/05/09 12:45
+                        <!-- /.postData --></td>
+                        <td class="userData">
+                            <a href="./03_plugin_detail_reply.html">
+                                <img src="../../img/dummy/02.jpg" width="20" height="20" alt="ユーザー名が入る">ユーザー<br> ID 9999999</a>
+                        <!-- /.userData --></td>
+                        <td class="action">
+                            <span><span class="actionLike">いいね数</span>100</span>
+                            <span><span class="actionReply">返信</span>5</span>
+                        <!-- /.action --></td>
+                        <td class="share">
+                            <span><span class="iconFB2">Facebookシェア済み</span>(145)<br><a href="#">投稿を見る</a></span>
+                            <span><span class="iconTW2">Twitterシェア済み</span>(35)<br><a href="#">投稿を見る</a></span>
+                        <!-- /.share --></td>
+                        <td class="postBody">
+                            <p class="postTile"><strong>テレビの選局のエピソード</strong></p>
+                            <p class="postRating">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_5.png">
+                                <img src="../../img/raty/iconStar_0.png">
+                                <img src="../../img/raty/iconStar_0.png">
+                            <!-- /.postRating --></p>
+                            <p class="postText">
+                                テレビゲーム自体を子供の頃は買ったりもしてくれない親だったけど、商売的な理由もあり家の中には深夜近くまで兄弟、姉妹だけで生活せざる事が当たり前だったため、テレビにしても子供にとった遊びの対象になるものは大抵が、年功序列でのケンカの強い順で決まってしまって… <a href="#">more</a>
+                            <!-- /.postText --></p>
+                        <!-- /.postBody --></td>
+                        <td class="status">
+                            <span class="statusInner">
+                <a href="#" class="switch_large off"><span class="switchInner"><span class="selectON">公開</span><span class="selectOFF">非公開</span></span>
+                            </a>
+                        <!-- /.statusInner --></span>
+                            <span class="statusInner">
+                <a href="#" class="pluginPreview">確認</a>
+          <!-- /.statusInner --></span>
+                            <span class="statusInner">
+                <a href="#modal1" class="postMemo jsOpenModal">
+                  <span class="inner on">メモを書く</span>
+                            <span class="textBalloon1">
+                    <span>
+                      残しておきたいメモを書けます。
+                    </span>
+                        <!-- /.textBalloon1 --></span>
+                        <!-- /.postMemo --></a>
+                        <!-- /.statusInner --></span>
+                        <!-- /.status --></td>
+                    </tr>
+                </tbody>
+            <!-- /.commentPluginTable1 --></table>
+
+            <div class="pager1">
+                <p>99,999件中101件～120件表示しています</p>
+                <ul>
+                    <li class="first"><a href="#">最初のページヘ</a></li>
+                    <li class="prev"><a href="#">前のページへ</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>6</span></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">99</a></li>
+                    <li class="next"><a href="#">次のページへ</a></li>
+                    <li class="last"><a href="#">最後のページヘ</a></li>
+                </ul>
+            <!-- /.pager1 --></div>
+
+            <div class="commentPluginDownload">
+                <p class="showItemNum">
+                    表示件数
+                    <select name="" id="">
+                        <option value="#" selected>20件</option>
+                        <option value="#" selected>50件</option>
+                        <option value="#" selected>100件</option>
+                    </select>
+                    <span class="btn2"><a href="#" class="small1">反映</a></span>
+                <!-- /.showItemNum --></p>
+
+                <p class="btnDownload"><span class="btn1"><a href="#" class="large2">CSVダウンロード</a></span></p>
+            <!-- /.commentPluginDownload --></div>
+
+            <ul class="pager2">
+                <li class="prev"><a href="#" class="iconPrev1">プラグイン一覧へ</a></li>
+            <!-- /.pager2 --></ul>
+        <!-- /.commentPluginWrap --></section>
+    </article>
+
+    <footer>
+        <div class="copyright">
+            <ul class="links">
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+            </ul>
+            <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+        <!-- /.copyright --></div>
+        <ul class="links">
+            <li><a href="#">モニプラ出展利用規約</a></li>
+            <li><a href="#">アライドID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+        <p class="poweredBy"><small>Powered by monipla</small></p>
+    </footer>
+    <div class="modal1 jsModal" id="modal1">
+        <section class="modalCont-medium jsModalCont">
+            <h1>メモを残せます。</h1>
+            <p>
+                <textarea name="" id="" cols="70" rows="5"></textarea>
+            </p>
+            <p class="btnSet">
+                <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+                <span class="btn3"><a href="#closeModal">保存</a></span>
+            </p>
+        </section>
+    <!-- /.modal1 --></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+    $(function() {
+      $(".jsDate").datepicker();
+    });
+  </script>
+
+    <script>
+    $('.jsSettingContTile').click(function(){
+        var trigger = $(this);
+        var target = trigger.parents('.jsSettingContWrap').find('.jsSettingContTarget');
+
+        if(trigger.hasClass('close')) {
+            target.slideDown(200, function() {
+                trigger.removeClass('close');
+            });
+        }else{
+            target.slideUp(200, function() {
+                trigger.addClass('close');
+            });
+        }
+    });
+  </script>
+</body>
+
+</html>

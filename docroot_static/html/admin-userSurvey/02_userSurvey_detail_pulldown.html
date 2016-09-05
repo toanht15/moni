@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_userSurvey_detail_pulldown / admin-others</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+
+  <script src="../../js/brandco/Brandco.js"></script>
+  <script src="../../js/brandco/Brandco.net.js"></script>
+  <script src="../../js/brandco/Brandco.api.js"></script>
+  <script src="../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../js/_unit.js"></script>
+  <script src="../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">Setting</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <h1 class="hd1">アンケート設定</h1>
+
+    <div class="userSurveyWrap">
+      <div class="userSurveyColWrap">
+        <div class="userSurveySettingCol">
+          <div class="userSurveyColHeader">
+            <h2 class="hd2">設問の追加</h2>
+          <!-- /.userSurveyColHeader --></div>
+
+          <div class="userSurveyItemEdit">
+            <div class="itemTitle">
+              <p class="cautionText1">文言の編集で、設問の意味が変わらないよう注意してください。</p>
+              <p class="iconError1">エラーテキストが入る</p>
+              <p class="text"><label><span class="num">Q.</span><input type="text" placeholder="設問文を入力してください"></label></p>
+            <!-- /.itemTitle --></div>
+
+            <ul class="itemType">
+              <li><label><input type="radio" name="userSurveyType">選択式設問（テキスト）</label></li>
+              <li><label><input type="radio" name="userSurveyType" checked>選択式設問（プルダウン）</label></li>
+              <li><label><input type="radio" name="userSurveyType">自由回答（文字入力）</label></li>
+              <li><label><input type="radio" name="userSurveyType">選択式設問（画像選択）</label></li>
+            <!-- /.itemType --></ul>
+
+            <div class="itemAnswers">
+              <div class="itemAnswersInner">
+                <p class="cautionText1">文言の編集で、設問の意味が変わらないよう注意してください。</p>
+                <p class="iconError1">エラーテキストが入る</p>
+                <p class="itemAnswersPullDown">
+                  <textarea>sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text</textarea>
+                  <small>選択肢を1行に1つずつ入力ください</small>
+                <!-- /.itemAnswersPullDown --></p>
+
+                <p class="itemAnswersOption">
+                  <a href="#" class="linkAdd">選択肢を追加する</a>
+                  <a href="#" class="historyToggle">過去に利用した選択肢</a>
+                <!-- /.itemAnswersOption --></p>
+              <!-- /.itemAnswersInner --></div>
+
+              <ul class="itemHistoryAnswers">
+                <li><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="addSelected">選択肢に追加する</a></li>
+                <li><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="addSelected">選択肢に追加する</a></li>
+                <li class="selected"><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="added">選択肢に追加済み</a></li>
+                <li class="selected"><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="added">選択肢に追加済み</a></li>
+                <li><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="addSelected">選択肢に追加する</a></li>
+                <li><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="addSelected">選択肢に追加する</a></li>
+                <li><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="addSelected">選択肢に追加する</a></li>
+                <li><span class="itemHistoryTitle">過去に使った設問が入ります。</span><a href="#" class="addSelected">選択肢に追加する</a></li>
+              <!-- /.itemHistoryAnswers --></ul>
+            <!-- /.itemAnswers --></div>
+
+            <div class="itemOptions">
+              <dl class="optionSettings">
+                <dt>回答必須</dt>
+                <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                <dt>選択肢をランダムに表示する</dt>
+                <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+              <!-- /.optionSettings --></dl>
+              <p><a href="#modal1" class="linkDelete jsOpenModal">設問を削除する</a></p>
+            <!-- /.itemOptions --></div>
+          <!-- /.userSurveyItemEdit --></div>
+        <!-- /.userSurveySettingCol --></div>
+
+        <div class="userSurveyPreviewCol">
+          <div class="userSurveyColHeader">
+            <p class="messagePreview">スマホ(320px)でプレビュー中(<a href="#">完成版で見る</a>)</p>
+          <!-- /.userSurveyColHeader --></div>
+
+          <div class="userSurveyPreviewInner">
+            <div class="displaySP">
+              <section class="message">
+                <dl class="module">
+                  <dt class="require1">Q1.サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</dt>
+                  <dd>
+                    <select>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                      <option value="#">サンプルテキストサンプルテキスト</option>
+                    </select>
+                  </dd>
+                <!-- /.module --></dl>
+              <!-- /.message --></section>
+            <!-- /.displaySP --></div>
+          <!-- /.userSurveyPreviewInner --></div>
+        <!-- /.userSurveyPreviewCol --></div>
+      <!-- /.userSurveyColWrap --></div>
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+        <span class="btn3"><a href="#" class="middle1">保存</a></span>
+      <!-- /.btnSet --></p>
+    <!-- /.userSurveyWrap --></div>
+
+  </article>
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <h1>本当に削除しますか？</h1>
+      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+        <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <script>
+    jQuery(function($) {
+      $(document).on('click', '.historyToggle', function(e) {
+        $(this).toggleClass('open');
+        $('.itemHistoryAnswers').stop(true, true).slideToggle(200);
+        return false;
+      });
+    });
+  </script>
+
+</body>
+</html>

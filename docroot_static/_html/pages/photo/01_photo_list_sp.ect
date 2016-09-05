@@ -1,0 +1,43 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'mainContents' : %>
+    <div class="photoPageWrap">
+      <header class="photoPageHeader">
+        <h1>Photo Gallery</h1>
+        <nav>
+          <p class="category"><a href="#" class="jsPhotoCategoryToggle">Category</a></p>
+          <ul class="jsPhotoPageCategory">
+            <li><a href="#">All</a></li><li><a href="#">旅行</a></li><li><a href="#">フォトコンテスト</a></li><li><a href="#">ほげほげ</a></li><li><a href="#">サンプルテキスト</a></li>
+          </ul>
+        </nav>
+      <!-- /.photoPageHeader --></header>
+
+      <ul class="photoPageList">
+        <li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li><li><a href="#"><img src="../../img/dummy/01.png" alt="photo title"></a></li>
+      <!-- /.photoPageList --></ul>
+
+      <ul class="snsBtns-btn">
+        <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+        ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+        ><li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li
+        >
+      <!-- /.snsBtns-btn --></ul>
+      <ul class="snsBtns-box">
+        <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+        ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+        ><li><div class="g-plusone" data-size="tall"></div></li
+        ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+      <!-- /.snsBtns-box --></ul>
+
+    <!-- /.photoPageWrap --></div>
+
+    <p class="pagePrev"><a href="#">一覧へ戻る</a></p>
+
+    <nav class="bredlink1">
+      <ul>
+        <li class="home"><a href="#">HOME</a></li>
+        <li class="current"><span>Photo Gallery</span></li>
+      </ul>
+    <!-- /.bredlink1 --></nav>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+<% end %>

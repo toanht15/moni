@@ -1,0 +1,49 @@
+.embedPageBody,
+.embedPageBody body {
+  min-width: 200px;
+  width: 100%;
+}
+.OwnedWrap {
+
+  .entryOwned {
+    width: 100%;
+    max-width: 520px;
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+
+    .signupSns {
+      margin: 0;
+      padding: 10px;
+      border: none;
+
+      a {
+        width: 100%;
+        padding: 0;
+        min-width: 180px;
+        max-width: 280px;
+      }
+    }
+    .loginAttention {
+      max-width: 280px;
+      padding: 0 10px;
+      margin: 0 0 10px 0;
+      display: inline-block;
+    }
+  }
+  .notFound {
+    width: 100%;
+    max-width: 520px;
+    margin: 10px auto;
+    border: 1px solid $borderC;
+
+    h1 {
+      line-height: 1.2;
+    }
+  }
+}
+@media screen and (max-width: 396px) {
+  .OwnedWrap .entryOwned .signupSns li {
+    width: 100%;
+  }
+}

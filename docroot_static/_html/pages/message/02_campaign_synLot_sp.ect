@@ -1,0 +1,97 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'pageStatus' : %>logout<% end %>
+
+<% block 'mainContents' : %>
+    <section class="messageWrap">
+      <section class="campaign">
+        <p class="campaignImg"><img src="../../img/campaign/imgSynLotCampaign.png" alt="img text"></p>
+        <section class="campaignText">
+          <div class="synLotCampaign">
+            <h1><img src="../../img/campaign/synLotTitle01.png" alt="続々当選のチャンス!"></h1>
+
+            <div class="synLotCounter">
+              <h2><img src="../../img/campaign/synLotTitle02.png" alt="現在までの当選数"></h2>
+              <p>15<span>人</span></p>
+            <!-- /.synLotCounter --></div>
+
+            <h1><img src="../../img/campaign/synLotTitle03.png" alt="毎日おトクなキャンペーン" href="#"></h1>
+            <ul class="synLotPointList">
+              <li><img src="../../img/campaign/synLotPint01.png" alt="POINT1 その場で当たりがわかる!"></li>
+              <li><img src="../../img/campaign/synLotPint02.png" alt="POINT2 連続参加で当選確率2倍"></li>
+              <li><img src="../../img/campaign/synLotPint03.png" alt="POINT3 Wチャンス！他のサービスを楽しんでもう1回チャレンジ！"></li>
+            </ul>
+            <p>1日1回チャレンジできる！その場であたりがわかるスピードくじに参加して賞品をGETしよう！</p>
+          <!-- /.synLot --></div>
+        </section>
+
+        <div class="joinCommSite">
+          <h1>お持ちのアカウントでかんたん応募！</h1>
+          <ul class="btnSet">
+            <li class="btnSnsFb1"><a href="#" class="arrow1"><span class="inner">Facebook<br>で応募</span></a></li>
+            <li class="btnSnsTw1"><a href="#" class="arrow1"><span class="inner">Twitter<br>で応募</span></a></li>
+            <li class="btnSnsIn1"><a href="#" class="arrow1"><span class="inner">LinkedIn<br>で応募</span></a></li>
+            <li class="btnSnsLn1"><a href="#" class="arrow1"><span class="inner">LINE<br>で応募</span></a></li>
+            <li class="btnSnsIg1"><a href="#" class="arrow1"><span class="inner">Instagram<br>で応募</span></a></li>
+            <li class="btnSnsGp1"><a href="#" class="arrow1"><span class="inner">Google<br>で応募</span></a></li>
+            <li class="btnSnsYh1"><a href="#" class="arrow1"><span class="inner">Yahoo! <br>JAPAN ID<br>で応募</span></a></li>
+          <!-- /.btnSet --></ul>
+          <div class="joinAddress">
+            <p class="joinAddressTitle"><a href="#" class="iconMail1 jsJoinAddress">メールアドレスで応募</a></p>
+            <form action="#" class="inputAddress jsJoinAddressTarget">
+              <ul>
+                <li class="address"><!-- <span class="iconError1">入力してください</span> --><input type="email" placeholder="メールアドレス"></li>
+                <li class="btn3"><a href="02_campaign_new_sp.html#step1" class="large1">次へ</a></li>
+              </ul>
+            <!-- /.inputAddress --></form>
+          <!-- /.joinAddress --></div>
+          <p class="loginAttention">※本サービスを利用するにあたり、<a href="#"><img src="../../img/icon/iconAlliedID2.png" alt="アライドID">アライドID</a>の情報を利用いたします。</p>
+          <p class="supplement1"><a href="#" class="openNewWindow1">アライドID利用規約</a>に同意の上、ご応募ください。</p>
+        <!-- /.joinCommSite --></div>
+
+        <div class="campaignShare">
+          <p>このキャンペーンを友達に知らせよう</p>
+          <ul class="snsBtns-box">
+            <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+            ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+            ><li><div class="g-plusone" data-size="tall"></div></li
+            ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+          <!-- /.snsBtns-box --></ul>
+        <!-- /.campaignShare --></div>
+        <ul class="campaignData">
+          <li class="present"><span class="itemTitle">プレゼント</span><span class="itemData">9,999,999名様</span></li>
+          <li class="term"><span class="itemTitle">開催期間</span><span class="itemData">2014/09/17（水）～2014/10/31（金）23:59</span></li>
+          <li class="result"><span class="itemTitle">発表日</span><span class="itemData">2014/11/06（木）</span></li>
+          <li class="sponsor"><span class="itemTitle">開催</span><span class="itemData">モニプラ運営事務局</span></li>
+          <li class="attention"><span class="itemTitle">注意事項</span><span class="itemData">・当選されたお客様には、モニプラにご登録のメールアドレスへご連絡いたします。<br>・賞品の発送は11月中旬を予定しております。<br>・応募は、お一人様1回限りとさせていただきます。<br>・応募は日本国内にお住まいの方に限らせていただきます。<br>・当選賞品の販売・換金はできません。</span></li>
+        <!-- /.campaignData --></ul>
+        <p class="notAffiliated"><small>Not affiliated with Facebook, Inc.</small></p>
+      <!-- /.campaign --></section>
+
+        <section class="messageWrap">
+
+            <a id="newMessage"></a>
+            <section class="jsMessage" style="display:none"></section>
+            <section class="message jsMessage">
+              <p class="messageImg" id="drawImg" style="display: none;"><img src="//s0.monipla.com/img/module/instantWin/animeLucky_draw_doubleUp.gif?1458638015"></p><p class="messageImg" style="" id="resultImg"><img src="../../img/module/instantWin/animeLucky_lose2.gif"></p>
+              <section class="messageText" id="drawText" style="display: block;"><p></p><center>
+
+              <p>▼あわせてチェックしてみよう！▼<br>
+              <a href="https://monipla.com/syndot-campaign/r/t_gunosy" target="_blank"><img src="https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/image/brand/1be3bc32e6564055d5ca3e5a354acbef/upload_file/2f497f851e7fed2729cc418a5f2170b0e376d9d2/gunosy.png" alt="" title="gunosy"></a>
+              </p></center><p></p>
+              </section>
+
+              <p class="messageLotNext" style="display: block;">次回参加まであと<br><strong id="timeLeft">1時間38分23秒</strong></p>
+              <div class="synLotWchance">
+                <h1>今すぐもう1回挑戦できるWチャンス！</h1>
+                <p><img src="../../img/campaign/synLotWchance.png" alt="メニューを開いて他のサービスを楽しむ！メニューを経由して毎日ラッキーくじにもう1回チャレンジ！"></p>
+              <!-- /.synLotWchance --></div>
+
+              <ul class="btnSet" style="display: block;">
+                <li class="btn3"><a class="ynLotMenu1" href="javascript:openMenu($('#side-menu'));openModalBase($('#side-menu'));">メニューを開く</a></li>
+              </ul>
+              <p class="messageDate"><small>2016/05/20 18:02</small></p>
+                <!-- /.message --></section>
+        </section>
+    <!-- /.messageWrap --></section>
+<% end %>

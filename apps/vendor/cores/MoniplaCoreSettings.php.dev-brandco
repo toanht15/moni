@@ -1,0 +1,10 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: ishidatakeshi
+ * Date: 2013/03/12
+ * Time: 13:08
+ * To change this template use File | Settings | File Templates.
+ */
+define ('TCORE_SERVER','10.201.0.239');
+define ('TCORE_PORT','9090');

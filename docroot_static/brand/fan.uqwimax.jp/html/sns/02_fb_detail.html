@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_fb_detail / sns</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#" class="jsSpOpenLink">MENU</a></p>
+      <!-- /.companyName --></div>
+
+      <p class="spFanNumber">29,285人</p>
+
+      <nav class="gnavi">
+        <ul class="jsGnavi">
+          <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+        </ul>
+        <a href="#" class="openLink">0</a>
+      <!-- /.gnavi --></nav>
+    <!-- /.company --></section>
+  </header>
+  <article class="mainCol">
+    <header class="snsPageHeader">
+      <figure><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt=""></figure>
+      <div class="accountWrap">
+        <h1><a href="#" target="_blank">Visee ‐ヴィセ‐</a><span class="labelFb">Facebook</span></h1>
+        <div class="snsBtnWrap"><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></div>
+      <!-- /.accountWrap --></div>
+    <!-- /.snsPageHeader --></header>
+
+    <header class="snsPageHeader">
+      <figure><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt=""></figure>
+      <div class="accountWrap">
+        <h1><a href="#" target="_blank">Visee ‐ヴィセ‐</a><span class="labelFb">Facebook</span></h1>
+        <div class="snsBtnWrap"><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></div>
+        <p class="aboutAccount">コーセー「Visee-ヴィセ-」の公式facebookページです。商品やイベント情報、メイクアップテクニックなどをお届けします。(max全角85文字)</p>
+      <!-- /.accountWrap --></div>
+    <!-- /.snsPageHeader --></header>
+
+    <div class="snsPageWrap">
+
+      <section class="snsPageFb">
+        <figure><img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/11006468_970530502957109_4335714483522932841_n.jpg?oh=4463d60a156afd57ab313f9c532224a0&oe=5591D90B&__gda__=1430833026_5bbae696dcfd3111b2c6faf1f58a9f68" alt=""></figure>
+
+        <div class="postWrap">
+          <p class="postText">本日発売の雑誌「ViVi」の“ライン×リップで魅せる！春の3大メジャーメイク”特集で、ヴィセのニューアイテムが登場！<br>ライン×リップでつくる上級ミニマムメイクを、今をときめく玉城ティナさん、河北麻友子さん、佐久間由衣さんの3人が魅せてくれています。<br>ViVi今月号、ぜひご覧くださいね！<br><a href="#">hgoehogesampletext</a></p>
+
+          <p class="postLink"><a href="#" target="_blank"><span class="iconFB2">facebook</span>Visee ‐ヴィセ‐　2015/2/16</a></p>
+
+          <div class="snsWrap">
+            <ul class="snsBtns-btn">
+              <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+              ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+              ><li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li
+              >
+            <!-- /.snsBtns-btn --></ul>
+            <ul class="snsBtns-box">
+              <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+              ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+              ><li><div class="g-plusone" data-size="tall"></div></li
+              ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+            <!-- /.snsBtns-box --></ul>
+          <!-- /.snsWrap --></div>
+        <!-- /.postWrap --></div>
+      <!-- /.snsPageFb --></section>
+
+      <ul class="pager3">
+        <li><a href="#" class="iconPrev1">前の記事</a></li><li><a href="#" class="iconNext1">次の記事</a></li>
+      <!-- /.pager3 --></ul>
+
+    <!-- /.snsPageWrap --></div>
+
+    <div class="snsPageWrap">
+
+      <section class="snsPageFb">
+
+        <div class="postWrap">
+          <p class="postText">画像がない場合<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+
+          <p class="postLink"><a href="#" target="_blank"><span class="iconFB2">facebook</span>Visee ‐ヴィセ‐　2015/2/16</a></p>
+
+          <div class="snsWrap">
+            <ul class="snsBtns-btn">
+              <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+              ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+              ><li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li
+              >
+            <!-- /.snsBtns-btn --></ul>
+            <ul class="snsBtns-box">
+              <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+              ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+              ><li><div class="g-plusone" data-size="tall"></div></li
+              ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+            <!-- /.snsBtns-box --></ul>
+          <!-- /.snsWrap --></div>
+        <!-- /.postWrap --></div>
+      <!-- /.snsPageFb --></section>
+
+      <ul class="pager3">
+        <li><a href="#" class="iconPrev1">前の記事</a></li><li><a href="#" class="iconNext1">次の記事</a></li>
+      <!-- /.pager3 --></ul>
+
+    <!-- /.snsPageWrap --></div>
+
+    <p class="pagePrev"><a href="#">一覧へ戻る</a></p>
+
+    <nav class="bredlink1">
+      <ul>
+        <li class="home"><a href="#">HOME</a></li>
+        <li><a href="#">親カテゴリータイトル親カテゴリータイトル親カテゴリータイトル親カテゴリ</a></li>
+        <li><a href="#">子カテゴリータイトル子カテゴリータイトル子カテゴリータイトル子カテゴリ</a></li>
+        <li><a href="#">孫カテゴリータイトル孫カテゴリータイトル孫カテゴリータイトル孫カテゴリ</a></li>
+        <li class="current"><span>ページタイトルページタイトルページタイトルページタイトルページタイトル</span></li>
+      </ul>
+    <!-- /.bredlink1 --></nav>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+
+</body>
+</html>

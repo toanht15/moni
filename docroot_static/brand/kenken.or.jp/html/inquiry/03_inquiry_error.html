@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_inquiry_error / inquiry</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#" class="jsSpOpenLink">MENU</a></p>
+      <!-- /.companyName --></div>
+      <nav class="gnavi">
+        <ul class="jsGnavi">
+          <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+        </ul>
+        <a href="#" class="openLink">0</a>
+      <!-- /.gnavi --></nav>
+    <!-- /.company --></section>
+  </header>
+  <article>
+    <section class="inquiryWrap">
+      <h1 class="hd1">お問い合わせ</h1>
+      <ul class="commonTableList1">
+        <li>
+          <p class="title1">
+            <span class="require1">お名前</span>
+          <!-- /.title1 --></p>
+          <p class="itemEdit">
+            <span class="iconError1">入力してください</span>
+            <span class="editInput">
+              <input type="text" placeholder="山田太郎">
+            <!-- /.editInput --></span>
+          <!-- /.itemEdit --></p>
+        </li>
+        <li>
+          <p class="title1">
+            <span class="require1">メールアドレス</span>
+          <!-- /.title1 --></p>
+          <p class="itemEdit">
+            <span class="iconError1">入力してください</span>
+            <span class="editInput">
+              <input type="email" placeholder="sample@aaic.co.jp">
+            <!-- /.editInput --></span>
+          <!-- /.itemEdit --></p>
+        </li>
+        <li>
+          <p class="title1">
+            <span class="require1">お問い合わせの種類</span>
+          <!-- /.title1 --></p>
+          <p class="itemEdit">
+            <span class="iconError1">選択してください</span>
+            <span class="editInput">
+              <select name="" id="">
+                <option value="#" selected="selected">選択してください</option>
+                <option value="#">アカウント登録・設定変更について</option>
+                <option value="#">ポイントについて</option>
+                <option value="#">退会について</option>
+                <option value="#">不具合・エラーについて</option>
+                <option value="#">メール配信について</option>
+                <option value="#">プレゼントについて</option>
+                <option value="#">モニプラについて</option>
+                <option value="#">モニプラファンブログについて</option>
+                <option value="#">FIND!について</option>
+                <option value="#">その他のサービスについて</option>
+                <option value="#">ご意見・ご要望</option>
+                <option value="#">その他</option>
+              </select>
+            <!-- /.editInput --></span>
+          <!-- /.itemEdit --></p>
+        </li>
+        <li>
+          <p class="title1">
+            <span class="require1">お問い合わせ内容</span>
+          <!-- /.title1 --></p>
+          <p class="itemEdit">
+            <span class="iconError1">入力してください</span>
+            <span class="editInput">
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            <!-- /.editInput --></span>
+          <!-- /.itemEdit --></p>
+        </li>
+      <!-- /.commonTableList1 --></ul>
+      <h2 class="hd2">利用規約</h2>
+      <section class="ruleAreaWrap1">
+        <div class="ruleArea">
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <!-- /.ruleArea --></div>
+      <!-- /.ruleAreaWrap1 --></section>
+      <p class="btnSet"><span class="btn3"><a href="#" class="large3"><small>個人情報の取り扱いに</small>同意して確認</a></span></p>
+    <!-- /.inquiryWrap --></section>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+</body>
+</html>

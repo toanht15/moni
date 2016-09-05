@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>08_contents_tenmplateDetailEditNew / admin-inquiry</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+
+</head>
+
+<body class="modalInnerBody">
+    <article class="modalInner-large">
+        <header class="tenmplateTitle">
+            <h1>カテゴリーを決めてください。</h1>
+        </header>
+        <section class="modalInner-cont scroll">
+            <section class="tenmplateListWrap">
+                <div class="tenmplateDetailWrap">
+
+                    <h2 class="hd2">カテゴリー作成</h2>
+                    <p class="categoryCreate">
+                        <span><input type="text" placeholder="カテゴリー名を入力してください。" size="40"></span><span class="btn3"><a href="./04_contents_tenmplateDetailEdit_2.html" class="small1">作成</a></span>
+                    <!-- /.categoryCreate --></p>
+
+                    <h2 class="hd2">カテゴリー一覧</h2>
+                    <ul class="categoryList1" style="margin-top:20px;">
+                        <li>
+                            <p class="category1">
+                                <span class="categoryMove">順番を入れ替える</span>親カテゴリ1
+                                <span class="categoryAction"><a href="./04_contents_tenmplateDetailEdit_2.html" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                            <!-- /.category1 --></p>
+                            <ul class="categoryList1">
+                                <li class="categoryHolder" style="height: 38px"></li>
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                            <!-- /.categoryList1 --></ul>
+                        </li>
+                        <li>
+                            <p class="category1">
+                                <span class="categoryMove">順番を入れ替える</span>親カテゴリ2
+                                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                            <!-- /.category1 --></p>
+                            <ul class="categoryList1">
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                            <!-- /.categoryList1 --></ul>
+                        </li>
+                        <li>
+                            <p class="category1">
+                                <span class="categoryMove">順番を入れ替える</span>親カテゴリ3
+                                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                            <!-- /.category1 --></p>
+                            <ul class="categoryList1">
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                                <li>
+                                    <p class="category1">
+                                        <span class="categoryMove">順番を入れ替える</span><a href="#">タイトル名</a>
+                                        <span class="categoryAction"><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                                    <!-- /.category1 --></p>
+                                </li>
+                            <!-- /.categoryList1 --></ul>
+                        </li>
+                        <li>
+                            <p class="category1">
+                                <span class="categoryMove">順番を入れ替える</span>親カテゴリ4
+                                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                            <!-- /.category1 --></p>
+                        </li>
+                    <!-- /.categoryList1 --></ul>
+                <!-- /.tenmplateDetailWrap --></div>
+
+            </section>
+        </section>
+        <footer>
+            <p class="btnSet"><span class="btn2"><a href="#closeModalFrame">キャンセル</a></span><span class="btn3"><a href="#closeModalFrame">保存する</a></span></p>
+        </footer>
+    </article>
+
+    <div class="modal1 jsModal" id="modal1">
+        <section class="modalCont-small jsModalCont">
+            <h1>本当に削除しますか？</h1>
+            <p id="deleteMessage">【Lorem ipsum】</p>
+            <p class="btnSet">
+                <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                <span class="btn4"><a href="javascript:void(0)" class="small1" id="deleteCategoryButton" data-category-id="21">削除</a></span>
+            </p>
+        </section>
+    <!-- /.modal1 --></div>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+/* ### setting.scss ### */
+/* ### mixin.scss ### */
+/* ### parts.scss ### */
+/* ### page.scss ### */
+.mainCol .ckeditorWrap .kenkenWrap { /* top page */ /* about page */ /* privacy */ }
+.mainCol .ckeditorWrap .kenkenWrap h2.kenkenTtlKenkoukentei { background: url(../img/index/pc/ttlKenkoukentei.gif) 0 0 no-repeat; height: 315px; padding: 0; margin: 0 0 30px; }
+.mainCol .ckeditorWrap .kenkenWrap h2.kenkenTtlKenkoukentei:before, .mainCol .ckeditorWrap .kenkenWrap h2.kenkenTtlKenkoukentei:after { display: none; }
+.mainCol .ckeditorWrap .kenkenWrap h2.kenkenTtlKenkoukentei img { display: none; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenLeadHealthLifespan { background: url(../img/index/pc/ttlHelthLifespan.gif) 0 0 no-repeat; height: 33px; padding: 0; margin: 0 0 30px; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenLeadHealthLifespan img { display: none; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenAboutLogo1 { height: 92px; background: url(../img/about/pc/imgAbout.gif) 0 0 no-repeat; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenAboutLogo1 img { display: none; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenAboutProfTable { margin: 0 0 20px; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenAboutProfTable td:first-child { padding-right: 20px; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont { margin: 0 0 40px; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont .kenkenPrivacyHeader { text-align: right; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont ul { margin: 0; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont ul li { text-indent: -2em; padding-left: 2em; margin: 0 0 1em; }
+.mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont ul li:before { display: none; }
+
+/* end ckeditorWrap */
+/* for SP 
+================================================================================================================================================================================ */
+@media screen and (max-width: 640px) { .mainCol .ckeditorWrap .kenkenWrap { /* about */ /* privacy */ }
+  .mainCol .ckeditorWrap .kenkenWrap h2.kenkenTtlKenkoukentei { background: none; height: auto; margin: 0 0 20px; }
+  .mainCol .ckeditorWrap .kenkenWrap h2.kenkenTtlKenkoukentei img { display: block; }
+  .mainCol .ckeditorWrap .kenkenWrap .kenkenLeadHealthLifespan { background: none; height: auto; padding: 0; margin: 0 0 20px; }
+  .mainCol .ckeditorWrap .kenkenWrap .kenkenLeadHealthLifespan img { display: block; }
+  .mainCol .ckeditorWrap .kenkenWrap .kenkenAboutLogo1 { height: auto; background: none; }
+  .mainCol .ckeditorWrap .kenkenWrap .kenkenAboutLogo1 img { display: block; }
+  .mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont { font-size: 13px; padding-top: 40px; }
+  .mainCol .ckeditorWrap .kenkenWrap .kenkenPrivacyCont h3 { font-size: 15px; }
+  /* end ckeditroWrap */ }
+/* end for SP */

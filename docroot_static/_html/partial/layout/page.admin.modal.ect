@@ -1,0 +1,22 @@
+<% pageInfo = {
+    pageType: 'admin',
+    title: @title,
+    htmlDir: @htmlDir
+} %>
+<!doctype html>
+<html lang="ja">
+<head>
+  <% include 'partial/parts/head', pageInfo %>
+
+  <% content 'head' %>
+</head>
+<body class="modalInnerBody">
+  <article class="modalInner-large">
+    <% content 'mainContents' %>
+  </article>
+
+  <% content 'modal' %>
+
+  <% content 'script' %>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_coupon_list / admin-coupon</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.net.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.api.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.helper.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.message.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+              <ul class="editMenuInner">
+                <li><a href="#">作成</a></li>
+                <li><a href="#">クーポン設定</a></li>
+              </ul>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Infomation</a>
+              <span class="badge1">+3</span>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+                <li><a href="#">リダイレクト設定</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <h1 class="hd1">クーポン設定</h1>
+    <p class="supplement1">店舗のレジや、ECサイトなどで使える、ユーザーに配布するクーポンの設定</p>
+    <section class="couponWrap">
+      <p><span class="btn3"><a href="#">新規作成</a></span></p>
+    <!-- /.couponWrap --></section>
+    <h2 class="hd2">クーポン一覧</h2>
+    <section class="couponWrap">
+      <table class="couponTable1">
+        <thead>
+          <tr>
+            <th>クーポン名</th>
+            <th>メモ</th>
+            <th>上限数</th>
+            <th>利用中のキャンペーンなど</th>
+            <th>割当数</th>
+            <th>配布数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><a href="#">20%引きクーポン</a></th>
+            <td>店頭で購入時に合計金額から20%引くクーポン。200名様　※合計金額2,000円以上の場合</td>
+            <td>4,500</td>
+            <td><a href="#" class="typeCampaign1">アンケートに答えて20%引きクーポンをあてよう！</a></td>
+            <td>1,500</td>
+            <td>142</td>
+          </tr>
+          <tr>
+            <th rowspan="2"><a href="#">ソフトバンクギフト、セブンイレブン用コード</a></th>
+            <td rowspan="2">キャンペーンインセンティブ用</td>
+            <td rowspan="2">100,000</td>
+            <td><a href="#" class="typeCampaign1">新商品のパッケージを選んで、ハーゲンダッツをもらおう</a></td>
+            <td>8,000</td>
+            <td>7,265</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="typeMail1">2015/12/24配信クーポンモジュール</a></td>
+            <td>1,000</td>
+            <td>415</td>
+          </tr>
+          <tr>
+            <th><a href="#">Amazonギフトコード</a></th>
+            <td>キャンペーンの当選者に送るAmazonギフトコードのリスト</td>
+            <td>1,000</td>
+            <td><a href="#" class="typeMail1">2015/1/13配信クーポンモジュール</a></td>
+            <td>1,000</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <th><a href="#">10%引きクーポン</a></th>
+            <td>店頭で購入時に合計金額から10%引くクーポン。配布制限なし。</td>
+            <td>999,999</td>
+            <td><a href="#" class="typePage1">新規登録者向けクーポンプレゼントページ</a></td>
+            <td>999,999</td>
+            <td>145,687</td>
+          </tr>
+        </tbody>
+      <!-- /.couponTable1 --></table>
+      <div class="pager1">
+        <p>99,999件中101件～120件表示しています</p>
+        <ul>
+          <li class="first"><a href="#">最初のページヘ</a></li>
+          <li class="prev"><a href="#">前のページへ</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><span>6</span></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">99</a></li>
+          <li class="next"><a href="#">次のページへ</a></li>
+          <li class="last"><a href="#">最後のページヘ</a></li>
+        </ul>
+      <!-- /.pager1 --></div>
+    <!-- /.couponWrap --></section>
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>03_tw_list / sns</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/brandco/services/BrandcoMasonryCategoryService.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+  <!-- olympus files -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../js/util.js"></script>
+
+  <!-- olympus header  -->
+  <header id="olympusHeader"><div id="olympusHeaderInner">
+    <div id="olympusHeaderContent">
+      <p id="logoOlympus">
+        <img src="../../img/olympus-imaging.jp/000000002.svg" alt="OLYMPUS" class="svg" />
+        <img src="../../img/olympus-imaging.jp/000000003.svg" alt="" class="svgSp" />
+        <img src="../../img/olympus-imaging.jp/000000004.gif" alt="" class="image" />
+      <!-- /#logoOlympus --></p>
+      <div id="logoOlympusSub">
+        <p><a href="http://www.olympus.co.jp/">Olympus Japan</a></p>
+        <p><a href="http://www.olympus-global.com/en/network/"><img src="../../img/olympus-imaging.jp/000000017.gif" alt="OLYMPUS" /></a></p>
+      <!-- /#logoOlympusSub --></div>
+      <p id="logoOlympusImaging">
+        <a href="http://olympus-imaging.jp/">
+          <img src="../../img/olympus-imaging.jp/000000005.svg" alt="OLYMPUS IMAGING" class="svg" />
+          <img src="../../img/olympus-imaging.jp/000000006.gif" alt="OLYMPUS IMAGING" class="image" />
+        </a>
+      </p>
+    <!-- /#olympusHeaderContent --></div>
+    <!-- /#olympusHeaderInner --></div>
+
+    <div id="olympusVoiceRecorderHeader">
+      <h1><img src="../../img/common/logo.gif" width="223"></h1>
+      <button id="btnOlympusMenu"><img src="../../img/common/btnMenu.gif" width="45"></button>
+      <nav id="olympusGlobalNav">
+        <ul>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/" class="nav1"><img src="../../img/common/btnGlobalNav1.gif" alt="TOP"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/introduce" class="nav2"><img src="../../img/common/btnGlobalNav2.gif" alt="なぜレコーダーが選ばれるの？"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/categories/use" class="nav3"><img src="../../img/common/btnGlobalNav3.gif" alt="ボイスレコーダー活用術"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/type" class="nav4"><img src="../../img/common/btnGlobalNav4.gif" alt="レコーダーのタイプ"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/original" class="nav5"><img src="../../img/common/btnGlobalNav5.gif" alt="オリンパスのボイスレコーダーはここがすごい！"></a></li>
+          <li><span class="nav6"><img src="../../img/common/btnGlobalNav6_disable.gif" alt="どれ買うナビ"></span></li>
+          <li><span class="nav7"><img src="../../img/common/btnGlobalNav7_disable.gif" alt="レビュー"></span></li>
+          <li><a href="#" id="olympusGlobalNavClose"><img src="../../img/common/btnGlobalNav8.gif" alt="閉じる"></a></li>
+        </ul>
+      </nav>
+    <!-- /#olympusVoiceRecorderHeader --></div>
+  <!-- /#olympusHeader --></header>
+  <!-- / olympus header  -->
+  <article class="mainCol">
+    <header class="snsPageHeader">
+      <figure><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt=""></figure>
+      <div class="accountWrap">
+        <h1><a href="#" target="_blank">雪肌精公式ツイッター ‏@kose_sekkisei</a><span class="labelTw">Twitter</span></h1>
+        <div class="snsBtnWrap"><a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @twitter</a></div>
+      <!-- /.accountWrap --></div>
+    <!-- /.snsPageHeader --></header>
+
+    <header class="snsPageHeader">
+      <figure><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt=""></figure>
+      <div class="accountWrap">
+        <h1><a href="#" target="_blank">雪肌精公式ツイッター ‏@kose_sekkisei</a><span class="labelTw">Twitter</span></h1>
+        <div class="snsBtnWrap"><a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @twitter</a></div>
+        <p class="aboutAccount">こちらはコーセー 雪肌精の公式Twitterアカウントです。 宣伝部の雪肌精担当(ソーシャルメディア専属PR)SETSUKOを中心に、お得な情報をツイートしていきます。※Twitter上でのご意見などは拝見しておりますが、お返事できないこともございます。ご了承くださいませ。(max全角160文字)</p>
+      <!-- /.accountWrap --></div>
+    <!-- /.snsPageHeader --></header>
+
+    <div class="snsPageWrap jsMasonry">
+      <section class="snsPageList jsPanel">
+        <a href="#" class="twInner">
+          <p class="contText">
+            今日は東京は少し暖かい日でしたが、エアコンがガンガンに効きすぎたお部屋にいると、肌がカピカピになってしまいますよね…。乾燥ダメージが気になる時はエクセレントシリーズでリッチなケアをします♪今日は東京は少し暖かい日でしたが、エアコンがガンガンに効きすぎたお部屋にいると、肌がカピカピ
+            <img src="../../../../img/dummy/02.jpg" width="285" height="241" alt="">
+            <small class="timeStamp">1:12 - 2015年2月18日</small>
+          <!-- /.contText --></p>
+        <!-- /.twInner --></a>
+        <ul class="twActions">
+          <li><a href="#" class="twFollow">フォローする</a></li>
+          <li><a href="#" class="twReply">リプライ</a></li>
+          <li><a href="#" class="twRetweet">リツイート</a></li>
+          <li><a href="#" class="twFavo">お気に入り</a></li>
+        <!-- /.twActions --></ul>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="twInner">
+          <p class="contText">
+            ネイルも大好きなＳＥＴＳＵＫＯからのお知らせ♪NAIL HOLIC｜KOSE｜ネイル好きの血が騒ぎだす68色が、ずらり。プチプラなのもウフッ http://www.nailholic.jp/ #nailholic_kose
+            <img src="http://upload.aafactory.jp/brandco/mock2/img/kose/B-NRHzACUAEfwpN.jpg" width="285" height="241" alt="">
+            <small class="timeStamp">1:12 - 2015年2月18日</small>
+          <!-- /.contText --></p>
+        <!-- /.twInner --></a>
+        <ul class="twActions">
+          <li><a href="#" class="twFollow">フォローする</a></li>
+          <li><a href="#" class="twReply">リプライ</a></li>
+          <li><a href="#" class="twRetweet">リツイート</a></li>
+          <li><a href="#" class="twFavo">お気に入り</a></li>
+        <!-- /.twActions --></ul>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="twInner">
+          <p class="contText">
+            サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+            <small class="timeStamp">1:12 - 2015年2月18日</small>
+          <!-- /.contText --></p>
+        <!-- /.twInner --></a>
+        <ul class="twActions">
+          <li><a href="#" class="twFollow">フォローする</a></li>
+          <li><a href="#" class="twReply">リプライ</a></li>
+          <li><a href="#" class="twRetweet">リツイート</a></li>
+          <li><a href="#" class="twFavo">お気に入り</a></li>
+        <!-- /.twActions --></ul>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="twInner">
+          <p class="contText">
+            サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+            <img src="../../../../img/dummy/02.jpg" width="285" height="241" alt="">
+            <small class="timeStamp">1:12 - 2015年2月18日</small>
+          <!-- /.contText --></p>
+        <!-- /.twInner --></a>
+        <ul class="twActions">
+          <li><a href="#" class="twFollow">フォローする</a></li>
+          <li><a href="#" class="twReply">リプライ</a></li>
+          <li><a href="#" class="twRetweet">リツイート</a></li>
+          <li><a href="#" class="twFavo">お気に入り</a></li>
+        <!-- /.twActions --></ul>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="twInner">
+          <p class="contText">
+            サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+            <small class="timeStamp">1:12 - 2015年2月18日</small>
+          <!-- /.contText --></p>
+        <!-- /.twInner --></a>
+        <ul class="twActions">
+          <li><a href="#" class="twFollow">フォローする</a></li>
+          <li><a href="#" class="twReply">リプライ</a></li>
+          <li><a href="#" class="twRetweet">リツイート</a></li>
+          <li><a href="#" class="twFavo">お気に入り</a></li>
+        <!-- /.twActions --></ul>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="twInner">
+          <p class="contText">
+            サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+            <small class="timeStamp">1:12 - 2015年2月18日</small>
+          <!-- /.contText --></p>
+        <!-- /.twInner --></a>
+        <ul class="twActions">
+          <li><a href="#" class="twFollow">フォローする</a></li>
+          <li><a href="#" class="twReply">リプライ</a></li>
+          <li><a href="#" class="twRetweet">リツイート</a></li>
+          <li><a href="#" class="twFavo">お気に入り</a></li>
+        <!-- /.twActions --></ul>
+      <!-- /.snsPageList --></section>
+
+      <p class="jsPanel morePanels">
+        <span class="btn2"><a href="" class="small1">more</a></span>
+      </p>
+
+      <p class="jsPanel loading">
+        <img src="../../../../img/base/amimeLoading.gif" alt="loading">
+      <!-- /.loading --></p>
+
+      <section class="snsWrap jsPanel">
+        <ul class="snsBtns-btn">
+          <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+          ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+          ><li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li
+          >
+        <!-- /.snsBtns-btn --></ul>
+        <ul class="snsBtns-box">
+          <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+          ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+          ><li><div class="g-plusone" data-size="tall"></div></li
+          ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+        <!-- /.snsBtns-box --></ul>
+      <!-- /.snsWrap --></section>
+
+    <!-- /.snsPageWrap --></div>
+
+    <p class="pagePrev"><a href="#">一覧へ戻る</a></p>
+
+    <nav class="bredlink1">
+      <ul>
+        <li class="home"><a href="#">HOME</a></li>
+        <li><a href="#">親カテゴリータイトル親カテゴリータイトル親カテゴリータイトル親カテゴリ</a></li>
+        <li><a href="#">子カテゴリータイトル子カテゴリータイトル子カテゴリータイトル子カテゴリ</a></li>
+        <li><a href="#">孫カテゴリータイトル孫カテゴリータイトル孫カテゴリータイトル孫カテゴリ</a></li>
+        <li class="current"><span>ページタイトルページタイトルページタイトルページタイトルページタイトル</span></li>
+      </ul>
+    <!-- /.bredlink1 --></nav>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <!-- olympus footer  -->
+  <footer id="olympusFooter">
+    <ul class="snsBtns-btn">
+      <li>
+        <div id="fb-root" data-appid = "749555551767856"></div>
+        <div class="fb-like" data-href="http://www.voicerecorder.olympus-imaging.com/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+      </li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+    <!-- /.snsBtns --></ul>
+
+    <ul class="olympusLinks">
+      <li><a href="http://olympus-imaging.jp/notice/policy.html" target="_blank">ご利用条件</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">お問い合わせ</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">会社概要</a></li>
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/page/site">本サイトについて</a></li>
+    </ul>
+    <p class="copyright">© <script type="text/javascript">
+    <!--
+    myD = new Date();
+    myYear = myD.getYear();
+    myYears = (myYear < 2000) ? myYear + 1900 : myYear;
+    document.write(myYears);
+    -->
+    </script> Olympus Corporation<br>Powered by monipla</p>
+    <ul class="olympusMoniplaLinks">
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/inquiry/">モニプラお問い合わせ</a></li>
+      <li><a href="//allied-id.com/agreement" target="_blank">利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    </ul>
+  <!-- /#olympusFooter --></footer>
+  <!-- / olympus footer  -->
+
+  <script>
+  jQuery(function($) {
+      BrandcoMasonryCategoryService.goMason(true);
+
+      $('#sortable').imagesLoaded(function() {
+        BrandcoMasonryCategoryService.goMason(true);
+      });
+  });
+  </script>
+
+</body>
+</html>

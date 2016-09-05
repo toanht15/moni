@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>03_withdraw_sp / mypage</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/style_sp.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit_sp.js"></script>
+
+ <!-- syn -->
+  <script src="../../../../js/syn/synapse.min.js"></script>
+  <script src="../../../../js/syn/jquery.inview.min.js"></script>
+  <script src="../../../../js/syn/unit_syn.dev.js"></script>
+  <!-- /.syn -->
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#side-menu"  class="syn-notice jsMenuTrigger">MENU</a></p>
+      <!-- /.companyName --></div>
+      <aside class="drawerNaviWrap close jsModalTarget-menu" id="side-menu">
+        <div class="drawerNavi">
+          <div id="adg_div">
+            <script src="http://i.socdm.com/sdk/js/adg-script-loader.js?id=31095&targetID=adg_31095&displayid=1&adType=FREE&async=false&tagver=2.0.0"></script>
+          </div>
+          <script>
+            // ロード完了時イベント
+            window.addEventListener($adg.listener.loaded, function (e) {
+              // inview は、オブジェクトの各辺が描画領域に入ると報告されるが、そのうち最初の1回だけ
+              // 受け取れるようにフラグを立てて管理する。
+              var firstInView = false;
+
+              $('#adg_div').css('display', 'block');
+              // jquery.inviewによるinview判定
+              $('#adg_div').on('inview', function(event, isInView){
+                if (isInView) {
+                  if (!firstInView) {
+                    $adg.ads.trackShowEvent(); // トラッキング
+                    firstInView = true;
+                  }
+                }
+              });
+            });
+            window.addEventListener($adg.listener.failed, function () {
+              //console.log('adFailed!');
+            });
+          </script>
+          <h2 class="hd2">ブランド名orモニプラ</h2>
+          <ul class="privateMenu">
+            <li class="home"><a href="http://www.aainc.co.jp/">トップページ</a></li>
+            <li><a href="#">ほめられ美脚なら♪</a></li>
+            <li><a href="#">脱ビール腹！大人の男磨きしよう！</a></li>
+            <li><a href="#">男のやせる専門店誕生</a></li>
+          </ul>
+
+          <div id='synapse-service-list-outer-box' style='display: none'>
+            <h2 class="hd2">おすすめサービス</h2>
+            <ul id='synapse-service-list'>
+            </ul>
+          </div>
+
+          <div id="synapse-logo-box" class="synapse_logo" style='display: none'></div>
+        </div>
+      </aside>
+      <div class="modalBase jsModalBase"></div>
+    <!-- /.company --></section>
+  </header>
+
+  <article class="singleWrap">
+    <h1 class="singleWrapHd1">退会手続き</h1>
+
+    <p class="withdrawSite">以下のファンサイトを退会します<strong>「なべやき屋キンレイ」</strong></p>
+
+    <h2 class="hd2">注意事項</h2>
+    <ul class="commonList1">
+      <li>退会が完了すると、サービスの会員登録情報、利用履歴等はすべて閲覧不可能となり、会員機能もご利用できなくなります。</li>
+      <li>参加中のキャンペーンへの登録は無効となります。</li>
+      <li>投稿物やアンケート回答結果、投票などのデータは削除されません。削除を希望される場合は退会前に<a href="#">こちら</a>よりお問い合わせください。</li>
+      <li>BRANDCoを退会する場合は<a href="#">こちら</a>より退会手続きを行ってください。BRANDCoを退会すると登録中の全てのファンサイトを退会します。</li>
+      <li>Allied IDを退会する場合は<a href="#">こちら</a>より退会手続きを行ってください。</li>
+    <!-- /.commonList1 --></ul>
+
+    <ul class="commonTableList1">
+      <li>
+        <p class="title1">
+          <span class="require1">ラジオの項目</span>
+        <!-- /.title1 --></p>
+        <ul class="itemEdit">
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio21"><label for="radio21">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio22"><label for="radio22">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio23"><label for="radio23">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio24"><label for="radio24">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio25"><label for="radio25">その他</label><textarea name="" id="" cols="30" rows="10"></textarea></li>
+        <!-- /.itemEdit --></ul>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">チェックの項目</span>
+        <!-- /.title1 --></p>
+        <ul class="itemEdit">
+          <li><input type="checkbox" class="customCheck" id="check11"><label for="check11">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check12"><label for="check12">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check13"><label for="check13">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check14"><label for="check14">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check15"><label for="check15">その他</label><textarea name="" id="" cols="30" rows="10"></textarea></li>
+        <!-- /.itemEdit --></ul>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">テキストエリア</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+    <!-- /.commonTableList1 --></ul>
+
+    <p class="btnSet"><span class="btn2"><a href="06_signup_iframe.html" class="middle1">キャンセル</a></span><span class="btn3"><a href="#" class="large3"><small>アンケートに回答して</small>退会手続きへ</a></span></p>
+
+  <!-- /.singleWrap --></article>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+</body>
+</html>

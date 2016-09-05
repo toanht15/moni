@@ -1,0 +1,373 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1">セグメントグループ</h1>
+
+    <div class="conditionSegmentWrap">
+      <dl class="conditionSegmentMeta">
+        <dt><label>セグメントグループ名</label></dt>
+        <dd>
+          <input type="text" id="input3" placeholder="">
+          <span class="jsCheckToggleWrap">
+            <span class="sub"><label><input type="checkbox" class="jsCheckToggle">メモ</label></span><input type="text" id="input3" placeholder="" class="jsCheckToggleTarget" style="display:none;">
+          </span>
+        </dd>
+      <!-- /.conditionSegmentMeta --></dl>
+        <div class="segmentWaap">
+            <ul class="segmentList">
+                <!-- <li class="segmentItem" style="width:1230px;"> -->
+                <li class="segmentItem">
+                    <div class="segmentItemInner">
+                        <div class="segmentNames">
+                            <p><span class="segmentName">クラスタ名</span><span class="edit jsTextareaToggle">編集する</span></p>
+                            <p class="segmentMember">0人</p>
+                        <!-- /.segmentNames --></div>
+
+                        <div class="metricBoxWrap jsSyncTarget">
+                            <div class="metricBoxs">
+                                <div class="metricBoxOptionAdd">
+                                    <p><a href="#metricDtaileSetting" class="jsOpenModal"></a></p>
+                                <!-- /.metricBoxOptionAdd --></div>
+                            <!-- /.metricBoxs --></div>
+                            <div class="jsAreaToggleWrap">
+                                <p class="option">
+                                    <a href="#" class="groupDelete">削除</a>
+                                <!-- /.option --></p>
+                                <ul class="addOption">
+                                    <li class="add"><a href="#">新規追加</a></li>
+                                    <li class="copy"><a href="#">複製</a></li>
+                                </ul>
+                            <!-- /.jsAreaToggleWrap --></div>
+                        <!-- /.metricBoxWrap --></div>
+                    <!-- /.segmentItemInner --></div>
+                <!-- /.segmentItem --></li>
+            <!-- /.segmentList --></ul>
+        <!-- /.segmentWaap --></div>
+
+      <h2 class="hd2">除外クラスタ</h2>
+      <ul class="segmentList">
+        <li class="segmentItemNa">
+          <div class="segmentItemInner">
+            <div class="segmentNames">
+              <p><span class="segmentName">クラスタ名</span><span class="edit jsTextareaToggle">編集する</span></p>
+              <p class="segmentMember">400人</p>
+            <!-- /.segmentNames --></div>
+            <div class="metricBoxWrap">
+              <div class="metricBoxOptionAdd"><p><a href="#metricDtaileSetting3" class="jsOpenModal"></a></p></div>
+              <div class="jsAreaToggleWrap">
+                <p class="option">
+                  <a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnSet">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">削除</a></li>
+                    </ul>
+                  <!-- /.sortBox --></div>
+                <!-- /.option --></p>
+              <!-- /.jsAreaToggleWrap --></div>
+            <!-- /.metricBoxWrap --></div>
+          <!-- /.segmentItemInner --></div>
+        <!-- /.segmentItem --></li>
+      <!-- /.segmentList --></ul>
+      <div class="sideAction" style="padding-bottom: 15px;">
+        <p class="btn">
+          <span class="btn1"><a href="01_relation_segment.html">下書き保存</a></span>
+          <span class="btn3"><a href="#metricDtaileSetting4" class="jsOpenModal">確定</a></span>
+        </p>
+      <!-- /.sideAction --></div>
+      <ul class="pager2" style="clear: both;">
+        <li class="prev"><a href="#" class="iconPrev1">セグメント一覧</a></li>
+      <!-- /.pager2 --></ul>
+    <!-- /.conditionSegmentWrap --></div>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+      <h1>以下の内容でFacebookにカスタムオーディエンスを送信します</h1>
+      <table class="customaudienceCheck">
+        <tbody>
+          <tr>
+            <th>カスタムオーディエンス名</th>
+            <td>ファシオ アイメイクセルフィ投稿キャンペーン（Instagram）</td>
+          </tr>
+          <tr>
+            <th>ユーザー数</th>
+            <td>185名</td>
+          </tr>
+          <tr>
+            <th>Info 1</th>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th>Info 2</th>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="large1">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal" class="large1">送信</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="metricDtaileSetting">
+    <section class="metricSettingBox modalCont-large jsModalCont">
+      <h1>AND条件</h1>
+      <p class="option"><label><input type="checkbox" name="user">除外条件（NOT）に設定</label></p>
+      <div class="pagePartsSetting">
+        <div class="pagePartsSettingCont">
+          <p>追加する条件を「項目」より選び、「値」を決めてください。</p>
+          <h2 class="segmentSelectHd">項目</h2>
+          <div class="segmentSelectCont">
+            <div class="segmentTab">
+              <ul>
+                <li><a href="#">ユーザー情報</a></li>
+                <li><a href="#">カスタムプロフィール</a></li>
+                <li><a href="#">コンバージョン</a></li>
+                <li><a href="#">SNS</a></li>
+                <li><a href="#" class="selected">キャンペーン</a></li>
+                <li><a href="#">メッセージ</a></li>
+                <li><a href="#">外部連携DMP連携</a></li>
+              </ul>
+            <!-- /.segmentTab --></div>
+            <div class="segmentData">
+              <ul class="second">
+                <li><a href="#">新 ASTABLANC　先行モニター募集（参加完了：1,425名）</a></li>
+                <li><a href="#">沖縄旅行が当たる！泡 Art Contest（参加完了：3,126名）</a></li>
+                <li><a href="#" class="selected">ファシオ アイメイクセルフィ投稿キャンペーン（参加完...</a></li>
+                <li><a href="#">ファシオ　ミネラル ファンデーション　プレゼントキャンペーン（参加完...</a></li>
+                <li><a href="#">米肌　人気アイテムを詰め込んだスペシャルコフレプレゼント！（参加完...</a></li>
+                <li><a href="#">「薬用 雪肌精」を5名様にプレゼント！（参加完了：912名）</a></li>
+              </ul>
+              <ul class="third">
+                <li><a href="#">1 キャンペーン告知</a></li>
+                <li><a href="#">2 メッセージ</a></li>
+                <li><a href="#">3 配送先情報</a></li>
+                <li><a href="#">4 参加完了</a></li>
+                <li><a href="#">5 シェア</a></li>
+                <li><a href="#" class="selected">6 エンゲージ（FB）</a></li>
+                <li><a href="#">7 エンゲージ（TW）</a></li>
+                <li><a href="#">8 スピードくじ</a></li>
+                <li><a href="#">9 アンケート</a></li>
+              </ul>
+            <!-- /.segmentData --></div>
+          <!-- /.segmentSelectCont --></div>
+          <div class="segmentValue">
+            <h2 class="segmentSelectHd">値</h2>
+            <div class="segmentValueInner">
+              <dl class="metricSettingList">
+                <dt>6 エンゲージ（FB）</dt>
+                <dd>
+                  <ul class="status">
+                    <li><label><input type="checkbox">新規いいね！</label></li>
+                    <li><label><input type="checkbox">既存いいね！</label></li>
+                    <li><label><input type="checkbox">非表示</label></li>
+                    <li><label><input type="checkbox">スキップ</label></li>
+                  <!-- /.status --></ul>
+                </dd>
+                </dl>
+            </div>
+          <!-- /.segmentValue --></div>
+        <!-- /.pagePartsSettingCont --></div>
+        <p class="btnSet">
+          <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+          <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+        </p>
+      <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#metricDtaileSetting --></div>
+
+  <div class="modal1 jsModal" id="metricDtaileSetting2">
+    <section class="metricSettingBox modalCont-large jsModalCont">
+      <h1>OR条件</h1>
+      <div class="pagePartsSetting">
+        <div class="pagePartsSettingCont">
+          <p>追加する条件を「項目」より選び、「値」を決めてください。</p>
+          <h2 class="segmentSelectHd">項目</h2>
+          <div class="segmentSelectCont">
+            <div class="segmentTab">
+              <ul>
+                <li><a href="#">ユーザー情報</a></li>
+                <li><a href="#">カスタムプロフィール</a></li>
+                <li><a href="#">コンバージョン</a></li>
+                <li><a href="#">SNS</a></li>
+                <li><a href="#" class="selected">キャンペーン</a></li>
+                <li><a href="#">メッセージ</a></li>
+                <li><a href="#">外部連携DMP連携</a></li>
+              </ul>
+            <!-- /.segmentTab --></div>
+            <div class="segmentData">
+              <ul class="second">
+                <li><a href="#">新 ASTABLANC　先行モニター募集（参加完了：1,425名）</a></li>
+                <li><a href="#">沖縄旅行が当たる！泡 Art Contest（参加完了：3,126名）</a></li>
+                <li><a href="#" class="selected">ファシオ アイメイクセルフィ投稿キャンペーン（参加完...</a></li>
+                <li><a href="#">ファシオ　ミネラル ファンデーション　プレゼントキャンペーン（参加完...</a></li>
+                <li><a href="#">米肌　人気アイテムを詰め込んだスペシャルコフレプレゼント！（参加完...</a></li>
+                <li><a href="#">「薬用 雪肌精」を5名様にプレゼント！（参加完了：912名）</a></li>
+              </ul>
+              <ul class="third">
+                <li><a href="#">1 キャンペーン告知</a></li>
+                <li><a href="#">2 メッセージ</a></li>
+                <li><a href="#">3 配送先情報</a></li>
+                <li><a href="#">4 参加完了</a></li>
+                <li><a href="#">5 シェア</a></li>
+                <li><a href="#" class="selected">6 エンゲージ（FB）</a></li>
+                <li><a href="#">7 エンゲージ（TW）</a></li>
+                <li><a href="#">8 スピードくじ</a></li>
+                <li><a href="#">9 アンケート</a></li>
+              </ul>
+            <!-- /.segmentData --></div>
+          <!-- /.segmentSelectCont --></div>
+          <div class="segmentValue">
+            <h2 class="segmentSelectHd">値</h2>
+            <div class="segmentValueInner">
+              <dl class="metricSettingList">
+                <dt>6 エンゲージ（FB）</dt>
+                <dd>
+                  <ul class="status">
+                    <li><label><input type="checkbox">新規いいね！</label></li>
+                    <li><label><input type="checkbox">既存いいね！</label></li>
+                    <li><label><input type="checkbox">非表示</label></li>
+                    <li><label><input type="checkbox">スキップ</label></li>
+                  <!-- /.status --></ul>
+                </dd>
+                </dl>
+            </div>
+          <!-- /.segmentValue --></div>
+        <!-- /.pagePartsSettingCont --></div>
+        <p class="btnSet">
+          <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+          <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+        </p>
+      <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#metricDtaileSetting --></div>
+
+  <div class="modal1 jsModal" id="metricDtaileSetting3">
+    <section class="metricSettingBox modalCont-large jsModalCont">
+      <h1>除外条件</h1>
+      <div class="pagePartsSetting">
+        <div class="pagePartsSettingCont">
+          <p>追加する条件を「項目」より選び、「値」を決めてください。</p>
+          <h2 class="segmentSelectHd">項目</h2>
+          <div class="segmentSelectCont">
+            <div class="segmentTab">
+              <ul>
+                <li><a href="#">ユーザー情報</a></li>
+                <li><a href="#">カスタムプロフィール</a></li>
+                <li><a href="#">コンバージョン</a></li>
+                <li><a href="#">SNS</a></li>
+                <li><a href="#" class="selected">キャンペーン</a></li>
+                <li><a href="#">メッセージ</a></li>
+                <li><a href="#">外部連携DMP連携</a></li>
+              </ul>
+            <!-- /.segmentTab --></div>
+            <div class="segmentData">
+              <ul class="second">
+                <li><a href="#">新 ASTABLANC　先行モニター募集（参加完了：1,425名）</a></li>
+                <li><a href="#">沖縄旅行が当たる！泡 Art Contest（参加完了：3,126名）</a></li>
+                <li><a href="#" class="selected">ファシオ アイメイクセルフィ投稿キャンペーン（参加完...</a></li>
+                <li><a href="#">ファシオ　ミネラル ファンデーション　プレゼントキャンペーン（参加完...</a></li>
+                <li><a href="#">米肌　人気アイテムを詰め込んだスペシャルコフレプレゼント！（参加完...</a></li>
+                <li><a href="#">「薬用 雪肌精」を5名様にプレゼント！（参加完了：912名）</a></li>
+              </ul>
+              <ul class="third">
+                <li><a href="#">1 キャンペーン告知</a></li>
+                <li><a href="#">2 メッセージ</a></li>
+                <li><a href="#">3 配送先情報</a></li>
+                <li><a href="#">4 参加完了</a></li>
+                <li><a href="#">5 シェア</a></li>
+                <li><a href="#" class="selected">6 エンゲージ（FB）</a></li>
+                <li><a href="#">7 エンゲージ（TW）</a></li>
+                <li><a href="#">8 スピードくじ</a></li>
+                <li><a href="#">9 アンケート</a></li>
+              </ul>
+            <!-- /.segmentData --></div>
+          <!-- /.segmentSelectCont --></div>
+          <div class="segmentValue">
+            <h2 class="segmentSelectHd">値</h2>
+            <div class="segmentValueInner">
+              <dl class="metricSettingList">
+                <dt>6 エンゲージ（FB）</dt>
+                <dd>
+                  <ul class="status">
+                    <li><label><input type="checkbox">新規いいね！</label></li>
+                    <li><label><input type="checkbox">既存いいね！</label></li>
+                    <li><label><input type="checkbox">非表示</label></li>
+                    <li><label><input type="checkbox">スキップ</label></li>
+                  <!-- /.status --></ul>
+                </dd>
+                </dl>
+            </div>
+          <!-- /.segmentValue --></div>
+        <!-- /.pagePartsSettingCont --></div>
+        <p class="btnSet">
+          <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+          <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+        </p>
+      <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#metricDtaileSetting --></div>
+
+  <div class="modal1 jsModal" id="metricDtaileSetting4">
+    <section class="modalCont-medium jsModalCont" style="display: block; opacity: 1; top: 30px;">
+      <p style="margin-bottom: 10px;">セグメントを確定すると集計が開始されます。<br>集計を開始してよろしいですか？</p>
+      <p class="supplement1">
+      ・条件の変更を行うには集計を停止する必要があります。<br>
+      ・条件を途中で変更すると集計したデータは上書きされます。
+      <!-- /.suplement --></p>
+      <ul class="btnSet">
+        <li class="btn3 disableButton"><a href="#closeModal" class="large1">OK</a></li>
+        <li class="btn2"><a href="#closeModal" class="large1">キャンセル</a></li>
+      </ul>
+    </section>
+  <!-- /#metricDtaileSetting --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script>
+    $(function(){
+      $('.jsCloneToggle').click(function(){
+        var clone = $(this).next().clone().css({
+          top: $(this).offset().top + 15,
+          left: $(this).offset().left - 98
+        }).stop(true, true).fadeToggle(200);
+
+        clone.click(function(){
+          $(this).fadeOut().queue(function(){
+            $(this).remove();
+          });
+        });
+        $('body').append(clone);
+        return false;
+      });
+    });
+
+    //scroll sync
+    $(function(){
+      var containers = $('.jsSyncTarget');
+      var horizontalSync = function (e) {
+        var self = containers.not(this).off('scroll');
+
+        for(i=0; i < self.length; i++){
+          self[i].scrollLeft = this.scrollLeft;
+          setTimeout(function () { self.on('scroll', horizontalSync); }, 10);
+        }
+      }
+      containers.on('scroll', horizontalSync);
+     });
+    </script>
+    <script>
+      $(function(){
+        $('.jsTextareaToggle').click(function(){
+          var target = $(this).prev('.segmentName');
+          var txt = target.text();
+          target.html('<input type="text" value="'+txt+'" />');
+          $(this).css({display:'none'});
+          console.log(txt);
+        });
+      });
+  </script>
+<% end %>

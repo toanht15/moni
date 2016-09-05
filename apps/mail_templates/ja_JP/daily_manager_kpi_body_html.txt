@@ -1,0 +1,50 @@
+<!doctype html>
+<head><meta charset="utf-8">
+<html lang="ja"></head>
+<body>
+    <div>
+      <table>
+        <tr>
+          <td style="text-align:left;">運用担当 様<br>
+              おはようございます<br>
+              本日<b>(<#YESTERDAY>)</b>のKPIは以下となります。</td>
+        </tr>
+      </table>
+      <br>
+      <p><#KPI_URL>Today KPI</a></p>
+      <table border="1" style="float:left;width:30%;margin-bottom:50px;box-sizing:border-box;">
+        <tr>
+          <th>KPI NAME</th>
+          <th>TOTAL</th>
+        </tr>
+        <#LOOP_KPI>
+        <tr>
+          <td><#KPI_NAME></td>
+          <td><#KPI_VALUE></td>
+        </tr>
+        <#/LOOP_KPI>
+      </table>
+      <td></td>
+      <table border="1" style="float:loi;width:60%;margin-bottom:50px;box-sizing:border-box;">
+       <tr>
+          <th>NO</th>
+          <th>Brand Name</th>
+          <th>Fans</th>
+          <th>前日差分</th>
+          <th>CP参加者数</th>
+          <th>Brand KPI Link</th>
+          </tr>
+          <#LOOP_DATA>
+          <tr>
+          <td><#ID></td>
+          <td><#BRAND_URL><#NAME></a></td>
+          <td><#TOTAL></td>
+          <#COLOR><#SYMBOL> <#CHANGE></td>
+          <td><#TOTAL_USER></td>
+          <td><#BRAND_MANAGER_URL>Brand KPI</a></td>
+          </tr>
+         <#/LOOP_DATA>
+      </table>
+    </div>
+</body>
+</html>

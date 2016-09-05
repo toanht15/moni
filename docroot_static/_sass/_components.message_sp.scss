@@ -1,0 +1,858 @@
+.messageWrap {
+  background: none;
+  border: none;
+
+  &>h2 {
+    width: auto;
+  }
+  .pagePrev {
+    left: 0;
+    margin: 0;
+
+    a {
+      background: url(../img/icon/iconArrowL1.png) no-repeat center rgba(0, 0 ,0, .7);
+      -webkit-background-size: 20px;
+              background-size: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+article > .messageWrap {
+  padding: 0 10px;
+}
+%messageBaseSp {
+  width: auto;
+
+  .btnSet {
+    margin-bottom: 5px;
+
+    &>* {
+      margin-bottom: 10px;
+    }
+  }
+  .messageInner {
+    padding: 9px;
+    background-color: #FFF;
+
+    &>h1 {
+      font-size: 24px;
+    }
+    &>h2 {
+      margin-bottom: 15px;
+    }
+  }
+}
+.message {
+  @extend %messageBaseSp;
+
+  & .messageEngagement {
+    margin: 10px;
+  }
+  .uploadCont {
+
+    .photo {
+      width: 250px;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0;
+      display: block;
+
+      span {
+        display: block;
+      }
+      .comment {
+        padding-left: 0;
+        margin: 10px;
+        width: 225px;
+        width: -webkit-calc(100% - 20px);
+        width: calc(100% - 20px);
+      }
+    }
+  }
+  .messageHd1 .poweredByMonipla {
+    top: 10px;
+
+    img {
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+
+.message_backToMonipla {
+  @extend %messageBaseSp;
+
+  .messageHd1 {
+    padding: 10px 20px 10px;
+
+    img {
+      width: 140px;
+      height: auto;
+    }
+  }
+  .backToMonipla {
+    padding: 15px 15px;
+    background-size: 42px 34px, 46px 35px, 44px 40px, 45px 37px;
+    background-position: 5% 5%,95% 5%,5% 95%,95% 95%;
+
+    p {
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .btnSet {
+      margin-top: 0;
+    }
+    .moniplaPrText {
+      text-align: center;
+
+      span {
+        display:block;
+      }
+    }
+  }
+}
+.moniplAengagementWrap {
+  margin: 25px 0;
+
+  .messageHd2 {
+    display: table-caption;
+  }
+}
+.moniplAengagement {
+  display: block;
+  width: 100%;
+
+  &:nth-child(2) {
+    border-bottom: 10px solid #fff;
+  }
+  .snsBtns-box {
+    margin-top: 0;
+  }
+}
+
+
+.recommendCampaign {
+
+  a {
+    padding: 8px;
+  }
+  .campaignImg {
+
+    img {
+      width: 120px;
+      height: auto;
+    }
+  }
+  .campaignInfo {
+    padding-left:8px;
+
+    p {
+      font-size: 11px;
+    }
+    .campaigntitle {
+      line-height: 1.2;
+    }
+  }
+}
+
+
+
+.lotteryPrWrap {
+  width: auto;
+  padding: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  .btnSet {
+    margin-top: 5px;
+
+    .btn4 .large1 {
+      width: auto;
+      padding: 0 15px;
+      font-size: 16px;
+    }
+  }
+  .getCode {
+    max-width: 250px;
+    margin: 0 auto 20px auto;
+    font-size: 14px;
+  }
+}
+
+.message_thanks {
+  @extend %messageBaseSp;
+
+  .messageInner {
+    -webkit-background-size: 110px;
+            background-size: 110px;
+  }
+  .messageHd1 {
+    padding: 10px 9px;
+
+    span {
+      font-size: 14px;
+    }
+
+  }
+}
+.messageOrderContent {
+
+  .content {
+    width: -webkit-calc(100% - 36px - 180px);
+    width: calc(100% - 36px - 180px);
+  }
+}
+
+.messageOrder {
+
+  .commonTableList1 {
+
+    .title1 {
+      width: auto;
+    }
+    .supplement1 {
+      display: inline-block;
+    }
+  }
+ .acMenu {
+
+  .cradTypeImg {
+    float: initial;
+    display: block;
+  }
+ }
+}
+.settlementHistory {
+  margin-top: 10px;
+  text-align: right;
+}
+
+
+.message_backToMoniplaPr {
+  @extend %messageBaseSp;
+
+
+}
+.message_moniplaThanks {
+  @extend %messageBaseSp;
+
+  .messageInner {
+    -webkit-background-size: 110px;
+            background-size: 110px;
+  }
+}
+.message_backToMonipla {
+  @extend %messageBaseSp;
+
+  .backToMoniplaInner {
+    padding: 20px 9px;
+  }
+}
+.message_win {
+  @extend %messageBaseSp;
+
+  .messageInner {
+    -webkit-background-size: 125px 126px;
+            background-size: 125px 126px;
+  }
+}
+.message_share {
+  @extend %messageBaseSp;
+
+  .shareInner {
+    padding: 10px 9px;
+    .figure {
+        width: 100px;
+        padding-right: 9px;
+    }
+    figure {
+      height: 52px;
+    }
+    .title {
+      display: table-cell;
+      vertical-align: top;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+}
+.message_introduceCp {
+  @extend %messageBaseSp;
+
+  .introduceInner {
+    padding: 20px 9px;
+  }
+}
+.message_engagement {
+  @extend %messageBaseSp;
+
+  .engagementInner {
+    padding: 0 10px;
+    margin: 30px auto 20px;
+    display: table;
+    text-align: center;
+  }
+  figure {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    padding-right: 10px;
+    margin-right: 0;
+  }
+  // instagram
+  .instagram-media {
+    width: -webkit-calc(100% - 2px) !important;
+    width: calc(100% - 2px) !important;
+  }
+  .postDummy_ig {
+    width: 278px;
+    height: 486px;
+    background: url(../img/message/bgInsta2.png) no-repeat center;
+  }
+  .engagementIg {
+    margin-top: 0;
+
+    &:after {
+      @include fontBase(arrow-follow);
+      color: $igC;
+      display: block;
+      position: absolute;
+      font-size: 22px;
+      top: -25px;
+      left: 180px;
+    }
+  }
+  .openAccount {
+    text-align: right;
+    margin-top: 25px;
+  }
+  .aboutIgAccount {
+    padding: 9px;
+    text-align: left;
+
+    figure {
+      width: 80px;
+      height: 80px;
+    }
+    p {
+      display: table-cell;
+      margin-left: 0;
+    }
+    strong {
+      font-size: 16px;
+    }
+  }
+  // youtube
+  //LINE
+  .engagementYt {
+    float: none;
+    display: table-cell;
+    width: auto;
+  }
+  .engagementLn {
+    float: none;
+    text-align: center;
+  }
+  .demoMovie {
+    margin: -10px 10px 20px;
+  }
+  .engagementLineInner {
+    @extend %engagementSnsBase;
+    display: table;
+    margin: 30px auto 20px;
+    padding: 0 10px;
+    text-align: center;
+
+    .lineBtn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+    .engagementLn:after {
+      left: 50%;
+      margin-left: -80px;
+    }
+    .descriptionText {
+      padding-left: 0;
+      margin-top: 10px;
+      text-align: left;
+      display: block;
+      font-size: 11px;
+    }
+  }
+}
+.message_hashtag {
+  @extend %messageBaseSp;
+
+  .entryAccount {
+
+    input::-webkit-input-placeholder { color: #ccc;font-size: 15px;font-weight: normal;vertical-align: middle; }
+    input:-moz-placeholder { color: #ccc;font-size: 15px;font-weight: normal;vertical-align: middle; }
+    input:placeholder { color: #ccc;font-size: 15px;font-weight: normal;vertical-align: middle; }
+  }
+  .moduleItemUserImg {
+    padding: 0 9px;
+    text-align: center;
+  }
+  .moduleItemUserInner {
+    margin: 9px 0;
+
+    li {
+      margin: 10px 2px 0;
+    }
+  }
+}
+.message_end {
+  @extend %messageBaseSp;
+
+  .messageText {
+    text-align:center;
+  }
+  .attention1 {
+    text-align:center;
+    font-size: 18px;
+    line-height: 1.4;
+
+    strong {
+      display: block;
+    }
+  }
+  .engagementInner {
+    margin: 10px 10px 45px;
+  }
+  .aboutAccount {
+    margin: 10px 10px 0 10px;
+
+    .accountIcon {
+      margin: 0 auto 20px auto;
+      padding: 0;
+      display: block;
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+    .accountName {
+      display: block;
+      text-align: center;
+    }
+  }
+  .cpPrev {
+    margin: 10px 10px 45px;
+  }
+}
+
+.message_repurchase {
+  @extend %messageBaseSp;
+}
+
+.message_popupMovie {
+  width: 100%;
+  min-width: 0;
+}
+
+.messageList {
+  width: auto;
+
+  .messageListInner {
+
+    li {
+      @include cf;
+      margin-left: 50px;
+
+    }
+    figure {
+      width: 30px;
+      height: 30px;
+      padding: 0 5px 0 10px;
+      text-align: center;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    .book {
+      width: 30px;
+      height: auto;
+    }
+    .title {
+      padding: 0 10px 0 5px;
+    }
+    .timestamp {
+    }
+    .showAll {
+      margin: 0 5px 5px 50px;
+    }
+    .readed {
+    }
+  }
+}
+.messageListNone {
+  width: auto;
+}
+.messageEngagement {
+  margin: 15px 0 0;
+  padding: 9px;
+
+  .engagementInner {
+    text-align: center;
+    display: table;
+    margin: 25px auto 0;
+  }
+  figure {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    padding-right: 10px;
+  }
+  %engagementSnsBase {
+    float: none;
+    display: table-cell;
+    width: auto;
+  }
+  .engagementFb_pc {
+    display: none;
+  }
+  .engagementFb_sp,
+  .engagementFb_already {
+    @extend %engagementSnsBase;
+  }
+  .engagementTw,
+  .engagementTw_already {
+    @extend %engagementSnsBase;
+  }
+  .engagementIg,
+  .engagementIg_already {
+    @extend %engagementSnsBase;
+  }
+}
+.cpPrev {
+  width: auto;
+}
+
+.messageRetweet {
+
+  .postImg {
+    width: 242px;
+    width: -webkit-calc(100% - 14px);
+    width: calc(100% - 14px);
+  }
+  .sizeFull {
+    width: 236px;
+    width: -webkit-calc(100% - 6px);
+    width: calc(100% - 6px);
+    height: 0;
+    padding-top: 50%;
+  }
+  .sizeHalf {
+    width: 115px;
+    width: -webkit-calc(50% - 6px);
+    width: calc(50% - 6px);
+    height: 0;
+    padding-top: 50%;
+  }
+  .sizeQuarter {
+    width: 115px;
+    width: -webkit-calc(50% - 6px);
+    width: calc(50% - 6px);
+    height: 0;
+    padding-top: 25%;
+    padding-top: -webkit-calc(25% - 1.5px);
+    padding-top: calc(25% - 1.5px);
+  }
+}
+
+.messageCodeInput {
+
+  .codeListWrap {
+    max-height: 120px;
+  }
+}
+
+.messageRankingPreview {
+
+  .messageRankingItem {
+    width: 100%;
+  }
+}
+.messageRankingItem {
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+  margin: -10px auto 10px;
+
+  li {
+    width: -webkit-calc(50% - 5px);
+    width: calc(50% - 5px);
+  }
+}
+
+.campaign {
+  width: auto;
+}
+.campaignShare {
+  display: block;
+  width: auto;
+  padding: 5px;
+
+  p {
+    display: block;
+    width: auto;
+    padding-right: 0;
+  }
+  .snsBtns-box {
+    display: block;
+  }
+}
+.commonTableList1 {
+
+  li {
+    display: block;
+  }
+  .title1 {
+    padding: 5px;
+    display: block;
+    width: auto;
+    border-right: none;
+    margin: 0;
+  }
+  .itme1,
+  .itemEdit,.itemEdit2,.itemEdit3 {
+    width: auto;
+    padding: 5px;
+    margin: auto;
+    display: block;
+    text-align: left;
+  }
+  input,
+  select {
+    width: 100%;
+
+    &.name {
+      width: 93px;
+    }
+    &.inputNum {
+      width: 55px;
+    }
+    &.inputNumMiddle {
+      width: 70px;
+      margin: 0 5px 0 5px;
+    }
+    &.inputNumSmall {
+      width: 50px;
+      margin-right: 5px;
+    }
+  }
+  .itemEdit2 {
+
+    &+.itemEdit2 {
+      border-left: none;
+      border-top: 1px dotted $borderC;
+    }
+  }
+}
+.messageOrder {
+
+  .commonTableList1 input.name,
+  .commonTableList1 select.name {
+    width: 82px;
+  }
+}
+[class*="btnSns"],
+.btnMail1 {
+
+  .login1 {
+    width: 132px;
+  }
+  .arrow1 {
+    width: 130px;
+    line-height: 1.2;
+    padding-right: 5px;
+
+    br {
+      display: inline;
+    }
+    .inner {
+      font-size: 11px;
+    }
+  }
+}
+
+//progressive bar
+.barIndicatorWrap {
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  margin-left: 0;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  z-index: 50;
+  background: rgba(165,165,165,.85);
+  z-index: 110;
+  box-sizing: border-box;
+
+  h1 {
+    height: 12px;
+    padding: 0 10px 0 0;
+    margin: 0;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  .finishHd {
+    width: 130px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .btnSet {
+    padding: 0;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+
+    .btn4 .middle1 {
+      height: 40px;
+      line-height: 40px;
+      font-size: 15px;
+    }
+  }
+  &:before {
+    content: none;
+    left: 0;
+  }
+  .barIndicatorInner {
+    width: 100%;
+    display: table;
+  }
+  .barIndicatorCount {
+    width: 100%;
+    white-space: nowrap;
+    display: table-cell;
+  }
+}
+.bi-wrp.bi-default-theme {
+
+  .bi-barInner {
+    border-radius: 7px!important;
+  }
+  .bi-bar {
+      border-radius: 10px!important;
+      background: #d8d8d8!important;
+      -webkit-box-shadow: none!important;
+      -ms-box-shadow: none!important;
+      -o-box-shadow: none!important;
+      -moz-box-shadow: none!important;
+  }
+}
+
+.campaignText {
+
+  .synLotCampaign {
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      img {
+        max-width: 233px;
+      }
+    }
+    .synLotCounter {
+      width: 100%;
+      // max-width: 280px;
+      padding: 3px;
+      margin: 0 auto 20px auto;
+
+      img {
+        max-width: 128px;
+      }
+      h2,p {
+      display: table-cell;
+      }
+      h2 {
+        padding-left: 12px;
+        line-height: .5;
+        vertical-align: middle
+      }
+      p {
+        padding: 3px 10px 0 15px;
+      }
+    }
+    .synLotPointList {
+      text-align: center;
+      img {
+        // max-width: 280px;
+      }
+    }
+  }
+}
+.messageSettlement {
+  padding: 0 10px 10px;
+
+  .productImg {
+    width: auto;
+    height: auto;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    text-align: left;
+
+
+    img {
+      width: 90px;
+      height: auto;
+      position: initial;
+    }
+  }
+
+  .settlementInfo {
+    position: relative;
+    padding-left: 0;
+  }
+  .settlementInfoInner {
+    padding-left: 15px;
+    display: table-cell;
+  }
+  .settlementInfoInner,
+  .text {
+    float: initial;
+    width: auto;
+  }
+  .number {
+    margin-bottom: 0;
+  }
+  .btn4 {
+    margin-bottom: 0;
+
+    .large1 {
+      width: 170px;
+    }
+  }
+}
+
+.settlementMethod {
+  margin-left: 0;
+
+  .cradName,
+  .cradNumber,
+  .cradTerm,
+  .securityCode {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+
+    span {
+      margin-bottom: 2px;
+    }
+  }
+
+  .cradTerm {
+    margin-bottom: 10px;
+  }
+}

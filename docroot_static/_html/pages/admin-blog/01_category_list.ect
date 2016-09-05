@@ -1,0 +1,126 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <nav class="categoryNav">
+        <ul class="tablink1">
+            <li><a href="#">ページ一覧</a></li>
+            <li><a href="#">ページ作成</a></li>
+            <li><a href="#">埋込ページ作成</a></li>
+            <li class="current"><span>カテゴリ</span></li>
+        <!-- /.tablink1 --></ul>
+    <!-- /.categoryNav --></nav>
+    <h1 class="hd1">カテゴリ一覧<span class="btn3"><a href="#" class="small1 jsCategoryNew">新規作成</a></span></h1>
+    <ul class="categoryList1">
+        <li>
+            <p class="category1">
+                <span class="categoryMove">順番を入れ替える</span><a href="#">親カテゴリ1</a><span class="directory">/category1/</span>
+                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+            <!-- /.category1 --></p>
+            <ul class="categoryList1">
+                <li>
+                    <p class="categoryNew">
+                        <input type="text" placeholder="カテゴリ名"><input type="text" placeholder="ディレクトリ名"><span class="btn3"><a href="#" class="small1">追加する</a></span>
+                        <span class="categoryAction"><a href="#" class="iconBtnDelete jsCategoryCancel">キャンセル</a></span>
+                        <span class="iconError1">カテゴリ名（or ディレクトリ名）が同一階層内で重複しています</span>
+                    <!-- /.categoryNew --></p>
+                </li>
+                <li class="categoryHolder" style="height: 38px"></li>
+                <li>
+                    <p class="category1">
+                        <span class="categoryMove">順番を入れ替える</span><a href="#">子カテゴリ1-1</a><span class="directory">/category1-1/</span>
+                        <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                    <!-- /.category1 --></p>
+                    <ul class="categoryList1">
+                        <li>
+                            <p class="category1">
+                                <span class="categoryMove">順番を入れ替える</span><a href="#">孫カテゴリ1-1-1</a><span class="directory">/category1-1-1/</span>
+                                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                            <!-- /.category1 --></p>
+                            <ul class="categoryList1">
+                                <li class="categoryError">これより下には移動できません</li>
+                            <!-- /.categoryList1 --></ul>
+                        </li>
+                    <!-- /.categoryList1 --></ul>
+                </li>
+                <li>
+                    <p class="category1">
+                        <span class="categoryMove">順番を入れ替える</span><a href="#">子カテゴリ1-2</a><span class="directory">/category1-2/</span>
+                        <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                    <!-- /.category1 --></p>
+                </li>
+            <!-- /.categoryList1 --></ul>
+        </li>
+        <li>
+            <p class="category1">
+                <span class="categoryMove">順番を入れ替える</span><a href="#">親カテゴリ2</a><span class="directory">/category2/</span>
+                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+            <!-- /.category1 --></p>
+        </li>
+        <li>
+            <p class="category1">
+                <span class="categoryMove">順番を入れ替える</span><a href="#">親カテゴリ3</a><span class="directory">/category3/</span>
+                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+            <!-- /.category1 --></p>
+            <ul class="categoryList1">
+                <li>
+                    <p class="category1">
+                        <span class="categoryMove">順番を入れ替える</span><a href="#">子カテゴリ3-1</a><span class="directory">/category3-1/</span>
+                        <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                    <!-- /.category1 --></p>
+                </li>
+                <li>
+                    <p class="category1">
+                        <span class="categoryMove">順番を入れ替える</span><a href="#">子カテゴリ3-2</a><span class="directory">/category3-2/</span>
+                        <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                    <!-- /.category1 --></p>
+                    <ul class="categoryList1">
+                        <li class="categoryHolder" style="height: 38px"></li>
+                    <!-- /.categoryList1 --></ul>
+                </li>
+                <li>
+                    <p class="category1">
+                        <span class="categoryMove">順番を入れ替える</span><a href="#">子カテゴリ3-3</a><span class="directory">/category3-3/</span>
+                        <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+                    <!-- /.category1 --></p>
+                </li>
+            <!-- /.categoryList1 --></ul>
+        </li>
+        <li>
+            <p class="category1">
+                <span class="categoryMove">順番を入れ替える</span><a href="#">親カテゴリ4</a><span class="directory">/category4/</span>
+                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+            <!-- /.category1 --></p>
+        </li>
+        <li>
+            <p class="category1">
+                <span class="categoryMove">順番を入れ替える</span><a href="#">親カテゴリ5</a><span class="directory">/category5/</span>
+                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+            <!-- /.category1 --></p>
+        </li>
+        <li>
+            <p class="category1">
+                <span class="categoryMove">順番を入れ替える</span><a href="#">親カテゴリ6</a><span class="directory">/category6/</span>
+                <span class="categoryAction"><a href="#" class="iconBtnAdd">子カテゴリを追加する</a><a href="#modal1" class="iconBtnNonDisplay jsOpenModal">カテゴリを削除する</a></span>
+            <!-- /.category1 --></p>
+        </li>
+    <!-- /.categoryList1 --></ul>
+
+    <div class="categoryEditCheck">
+        <ul>
+            <li class="btn3"><a href="#" class="">保存</a></li>
+        </ul>
+    <!-- /.categoryEditCheck --></div>
+<% end %>
+
+<% block 'modal' : %>
+    <div class="modal1 jsModal" id="modal1">
+        <section class="modalCont-small jsModalCont">
+            <h1>本当に削除しますか？</h1>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p class="btnSet">
+                <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+            </p>
+        </section>
+    <!-- /.modal1 --></div>
+<% end %>

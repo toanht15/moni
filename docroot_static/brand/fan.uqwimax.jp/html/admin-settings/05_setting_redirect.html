@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>05_setting_redirect / admin-setting</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">Setting</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <div class="adminWrap">
+    <aside class="adminSideCol">
+      <nav class="adminSettingWrap">
+        <ul>
+          <li class="admin"><a href="#">管理者設定</a></li>
+          <li class="user"><a href="#">ユーザー設定</a></li>
+          <li class="mail"><a href="#">登録メール設定</a></li>
+          <li class="page"><a href="#">ページ設定</a></li>
+          <li class="cvtag"><a href="#">コンバージョンタグ設定</a></li>
+          <li class="redirect"><span class="current">リダイレクトリンク設定</span></li>
+          <li class="contact"><a href="#">通知先メールアドレス設定</a></li>
+        </ul>
+      <!-- /.adminSettingWrap --></nav>
+    <!-- /.adminSideCol --></aside>
+    <article class="adminMainCol">
+      <h1 class="hd1">リダイレクトリンク設定</h1>
+
+      <section class="adminRedirectWrap">
+        <p><span class="btn3"><a href="#">新規作成</a></span></p>
+      <!-- /.adminRedirectWrap --></section>
+
+      <h2 class="hd2">リダイレクトリンク一覧</h2>
+      <section class="adminRedirectWrap">
+
+        <table class="adminRedirectTable">
+          <thead>
+            <tr>
+              <th>リダイレクトリンク</th>
+              <th>実URL</th>
+              <th>説明</th>
+              <th>アクセス数</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp/http://yahoo.co.jp/http://yahoo.co.jp/http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td><span class="btn3"><a href="#" class="small1">編集</a></span></td>
+            </tr>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td><span class="btn3"><a href="#" class="small1">編集</a></span></td>
+            </tr>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td><span class="btn3"><a href="#" class="small1">編集</a></span></td>
+            </tr>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td><span class="btn3"><a href="#" class="small1">編集</a></span></td>
+            </tr>
+          </tbody>
+        <!-- /.adminRedirectTable --></table>
+      <!-- /.adminRedirectWrap --></section>
+
+    <!-- /.adminMainCol --></article>
+  <!-- /.adminWrap --></div>
+
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+
+</body>
+</html>

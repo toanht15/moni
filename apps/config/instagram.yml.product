@@ -1,0 +1,18 @@
+Admin:
+  ClientID: 1818f4d132b84d8bab6cd1a6560659bd
+  ClientSecret: ed8f866cf9f74066a1b3700f83dccd02
+  RedirectUri: auth/instagram_callback
+  Scopes:
+    1: basic
+    2: public_content
+    3: follower_list
+User:
+  ClientID:
+  ClientSecret:
+  RedirectUri:
+  Scopes:
+    1: basic
+  ManagerAccessToken: 1821975796.2cee38c.5ee7842f896b489ab26ae4c70c2e12ff
+AccessTokenForCrawl:
+  1: 1821975796.2cee38c.5ee7842f896b489ab26ae4c70c2e12ff
+  2: 3292690611.2cee38c.5030343546674e73b757c7ec602782e7

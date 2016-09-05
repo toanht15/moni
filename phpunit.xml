@@ -1,0 +1,7 @@
+<phpunit>
+    <logging>
+        <log type="coverage-html" target="./reports/clover/coverage_html/" title="bc" charset="UTF-8" yui="true" highlight="true" lowupperbound="35" highlowerbound="70"></log>
+        <log type="coverage-clover" target="./reports/clover/coverage.xml"></log>
+    </logging>
+</phpunit>
+

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* ### setting.scss ### */
+.mainCol .ckeditorWrap .textArea:after, .mainCol .ckeditorWrap .kenkenWrap ul.clum3List:after { display: block; clear: both; content: ''; }
+
+/* ### mixin.scss ### */
+/* ### layout.scss ### */
+body { font-family: "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ",Meiryo; background: #fff !important; }
+
+header .account ul li.accountLogo { display: none; }
+
+nav.sideNavi > ul.sideNaviInner:last-child { display: none; }
+
+#kenkenHeader { margin: 0 0 10px; box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); background: url(../img/base/bgHeader.gif) 0 0 repeat-x; }
+#kenkenHeader #kenkenHeaderInner { width: 960px; margin: 0 auto; }
+#kenkenHeader h1 a { display: inline-block; color: #fff; line-height: 46px; font-size: 17px; position: relative; padding-left: 168px; }
+#kenkenHeader h1 a:before { content: ""; display: block; width: 150px; height: 116px; background: url(../img/base/pc/logo.gif); position: absolute; left: 0; top: 0; }
+#kenkenHeader h1 a br { display: none; }
+#kenkenHeader h1 img { display: none; }
+#kenkenHeader button { display: none; }
+#kenkenHeader ul { padding-left: 150px; letter-spacing: -.40em; text-align: right; width: 100%; box-sizing: border-box; }
+#kenkenHeader ul li { display: inline-block; letter-spacing: normal; }
+#kenkenHeader ul a { display: block; position: relative; line-height: 70px; color: #202020; font-size: 17px; padding: 0 30px; }
+#kenkenHeader ul a:hover { color: #ea5413; text-decoration: none; }
+#kenkenHeader ul a:hover:before { content: ""; display: block; height: 4px; position: absolute; right: 0; left: 0; bottom: 0; background: #ea5413; }
+#kenkenHeader ul a:after { content: ""; display: block; width: 1px; position: absolute; right: 0; top: 20px; bottom: 20px; background: #D8D4D0; }
+
+.pageTop { display: none !important; }
+
+.bredlink1 { display: none; }
+
+#kenkenFooter { width: 100%; box-sizing: border-box; background: #EA5413; padding: 35px 0; color: #fff; border: 0; }
+#kenkenFooter a { color: #fff; }
+#kenkenFooter .kenkenFooterInner { width: 960px; margin: 0 auto; padding-top: 20px; border-top: 1px solid #EE7642; position: relative; }
+#kenkenFooter .links a:before { border-left: 5px solid #fff; }
+#kenkenFooter .kenkenPagetop { position: absolute; top: -60px; right: 0; }
+#kenkenFooter .kenkenPagetop a { display: block; width: 157px; height: 41px; background: url(../img/base/pc/btnPagetop.gif); text-indent: -9999px; overflow: hidden; }
+
+.mainCol .lpWrap .ckeditorWrap .kenkenWrap { float: right; width: 630px; }
+
+.mainCol .ckeditorWrap { font-size: 16px; line-height: 1.6; /* column headline */ /* column page */ /* end ckeditor */ }
+.mainCol .ckeditorWrap:after { content: ""; display: block; clear: both; margin: 0 0 20px; }
+.mainCol .ckeditorWrap .kenkenSideCont { float: left; width: 300px; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideNav li { margin: 0 0 5px; padding: 0; text-indent: 0; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideNav li:before { display: none; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideNav li a { border: 1px solid #E1E0DF; border-radius: 3px; position: relative; display: block; padding: 20px; color: #202020; font-size: 16px; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideNav li a:after { content: ""; display: block; width: 3px; background: #EA4400 url(../img/base/pc/bgSideNav.gif) 0 0 no-repeat; position: absolute; top: 4px; left: 3px; bottom: 4px; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideNav li a:hover { border: 1px solid #EA5413; color: #fff; background: -moz-linear-gradient(top, #ee723c 0%, #ea5413 100%); background: -webkit-linear-gradient(top, #ee723c 0%, #ea5413 100%); background: linear-gradient(to bottom, #ee723c 0%, #ea5413 100%); text-decoration: none; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideNav li a:hover:after { background: #FFA770 url(../img/base/pc/bgSideNavHover.gif) 0 0 no-repeat; }
+.mainCol .ckeditorWrap .kenkenSideCont .kenkenSideBnr li { margin: 0 0 5px; }
+.mainCol .ckeditorWrap .kenkenComingSoon { height: 254px; background: url(../img/base/pc/imgComingSoon.gif); }
+.mainCol .ckeditorWrap .kenkenComingSoon img { display: none; }
+.mainCol .ckeditorWrap .slider li { text-align: center; text-indent: 0; padding-left: 0; }
+.mainCol .ckeditorWrap .slider li:before { content: ""; }
+.mainCol .ckeditorWrap .bx-wrapper { margin-bottom: 30px; }
+.mainCol .ckeditorWrap .bx-wrapper img { max-width: 100%; height: auto; }
+.mainCol .ckeditorWrap .bx-wrapper .bx-pager { text-align: center; }
+.mainCol .ckeditorWrap .bx-wrapper .bx-pager .bx-pager-item { display: inline-block; padding: 0 10px; }
+.mainCol .ckeditorWrap .bx-wrapper .bx-pager .bx-pager-item a { overflow: hidden; width: 15px; height: 15px; display: block; text-indent: -9999px; background: #ccc; -webkit-border-radius: 15px; -moz-border-radius: 15px; -ms-border-radius: 15px; border-radius: 15px; }
+.mainCol .ckeditorWrap .bx-wrapper .bx-pager .bx-pager-item a.active { background: #EB5B1C; }
+.mainCol .ckeditorWrap .bx-wrapper .bx-controls-direction { display: none; }
+.mainCol .ckeditorWrap p { margin: 0 0 1.5em; }
+.mainCol .ckeditorWrap ul { margin: 0 0 40px; }
+.mainCol .ckeditorWrap ul li { text-indent: -1em; padding-left: 1em; list-style: none; }
+.mainCol .ckeditorWrap ul li:before { content: "・"; }
+.mainCol .ckeditorWrap ol { margin: 0 0 40px; counter-reset: kenkenCommonNumberList; }
+.mainCol .ckeditorWrap ol li { text-indent: -1em; padding-left: 1em; list-style: none; }
+.mainCol .ckeditorWrap ol li:before { counter-increment: kenkenCommonNumberList; content: counter(kenkenCommonNumberList) "."; }
+.mainCol .ckeditorWrap strong { font-weight: bold; }
+.mainCol .ckeditorWrap .kenkenHeadline1 { background: #EA5413; text-align: center; font-weight: bold; font-size: 25px; position: relative; padding: 10px 15px; color: #fff; margin: 0 0 15px; }
+.mainCol .ckeditorWrap .kenkenHeadline1:before { content: ""; display: block; width: 3px; position: absolute; left: 3px; top: 0; bottom: 0; background: #FFA670 url(../img/base/pc/bgHeadline2.gif) 0 0 no-repeat; }
+.mainCol .ckeditorWrap .kenkenHeadline1:after { content: ""; display: block; width: 3px; position: absolute; right: 3px; top: 0; bottom: 0; background: #FFA670 url(../img/base/pc/bgHeadline2.gif) 0 0 no-repeat; }
+.mainCol .ckeditorWrap .kenkenHeadline2 { background: url(../img/base/pc/bgHeadline3.gif) 0 50% repeat-x; color: #ea5413; font-size: 28px; text-align: center; margin: 0 0 15px; }
+.mainCol .ckeditorWrap .kenkenHeadline2 span { display: inline-block; padding: 0 15px; background: #fff; }
+.mainCol .ckeditorWrap .kenkenHeadline3 { color: #202020; font-size: 21px; padding: 5px 0 5px 10px; position: relative; margin: 0 0 15px; }
+.mainCol .ckeditorWrap .kenkenHeadline3:before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #EB4A03 url(../img/base/pc/bgHeadline4.gif) 0 0 repeat-x; }
+.mainCol .ckeditorWrap .kenkenHeadline4 { color: #202020; font-size: 18px; padding: 5px 0 5px 10px; position: relative; font-weight: bold; margin: 0 0 15px; }
+.mainCol .ckeditorWrap .kenkenColumnHeadline1 { color: #ea5413; font-size: 28px; margin: 0 0 15px; line-height: 1.2; }
+.mainCol .ckeditorWrap .kenkenColumnHeadline2 { color: #202020; font-size: 22px; padding: 3px 0; margin: 0 0 15px; border-bottom: #EB4A03 3px solid; }
+.mainCol .ckeditorWrap .kenkenColumnHeadline2 span { display: inline-block; background: #fff; }
+.mainCol .ckeditorWrap .kenkenColumnHeadline3 { color: #202020; font-size: 18px; padding: 5px 0 5px 10px; position: relative; margin: 0 0 15px; }
+.mainCol .ckeditorWrap .kenkenColumnHeadline3:before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #EB4A03 url(../img/base/pc/bgHeadline4.gif) 0 0 repeat-x; }
+.mainCol .ckeditorWrap table.kenkenTable1 { font-size: 14px; margin: 0 0 15px; border-collapse: separate; border-spacing: 0; width: 100%; }
+.mainCol .ckeditorWrap table.kenkenTable1 tr { display: block; padding: 5px 0; border-bottom: 1px dotted #B3B0AD; }
+.mainCol .ckeditorWrap table.kenkenTable1 tr:first-child { border-top: 1px dotted #B3B0AD; }
+.mainCol .ckeditorWrap table.kenkenTable1 th { background: #F2F1F0; padding: 10px; width: 100px; word-break: keep-all; }
+.mainCol .ckeditorWrap table.kenkenTable1 td { padding: 10px; }
+.mainCol .ckeditorWrap table.topTable th { width: 100px; word-break: break-all; }
+.mainCol .ckeditorWrap table.topTable td { word-break: break-all; }
+.mainCol .ckeditorWrap table.kenkenTable2 { font-size: 14px; margin: 0 0 15px; }
+.mainCol .ckeditorWrap table.kenkenTable2 th { padding: 10px 20px 10px 0; border-bottom: 1px dotted #B3B0AD; word-break: keep-all; vertical-align: top; }
+.mainCol .ckeditorWrap table.kenkenTable2 td { padding: 10px 0; border-bottom: 1px dotted #B3B0AD; vertical-align: top; }
+.mainCol .ckeditorWrap table.kenkenTable3 { font-size: 14px; margin: 0 0 15px; border-top: 1px solid #B3B0AD; border-left: 1px solid #B3B0AD; width: 100%; }
+.mainCol .ckeditorWrap table.kenkenTable3 th { background: #F2F1F0; padding: 10px; word-break: keep-all; border-right: 1px solid #B3B0AD; border-bottom: 1px solid #B3B0AD; }
+.mainCol .ckeditorWrap table.kenkenTable3 td { background: #fff; padding: 10px; border-bottom: 1px solid #B3B0AD; border-right: 1px solid #B3B0AD; }
+.mainCol .ckeditorWrap .kenkenLinks { background: #FAF9F7; border-radius: 5px; padding: 10px 20px; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .kenkenLinks li { text-indent: 0; padding-left: 0; }
+.mainCol .ckeditorWrap .kenkenLinks li:before { display: none; }
+.mainCol .ckeditorWrap .kenkenLinks li a { display: block; padding: 5px; color: #202020; font-size: 16px; position: relative; background: url(../img/base/pc/arrowPageLink.gif) 0 50% no-repeat; padding-left: 15px; }
+.mainCol .ckeditorWrap .kenkenLinks li a:hover { color: #e84600; text-decoration: underline; }
+.mainCol .ckeditorWrap .textArea figure { float: left; margin-right: 20px; }
+.mainCol .ckeditorWrap .textArea p { overflow: hidden; }
+.mainCol .ckeditorWrap .kenkenWrap ul.clum3List { margin: 0 0 0 -10px; }
+.mainCol .ckeditorWrap .kenkenWrap ul.clum3List:before { content: ""; }
+.mainCol .ckeditorWrap .kenkenWrap ul.clum3List li { float: left; margin: 0 0 20px 10px; padding-left: 0; width: 200px; text-indent: 0; }
+.mainCol .ckeditorWrap .kenkenWrap ul.clum3List li img { max-width: 100%; height: auto; }
+.mainCol .ckeditorWrap .kenkenWrap ul.clum3List li:before { content: ""; }
+.mainCol .ckeditorWrap .kenkenWrap ul.clum3List p { font-size: 80%; margin-bottom: 0; }
+.mainCol .ckeditorWrap table.kenkenTable2 th { white-space: nowrap; }
+.mainCol .ckeditorWrap .kenkenCourseTable { border-collapse: separate; font-size: 14px; margin: 0 0 20px; }
+.mainCol .ckeditorWrap .kenkenCourseTable thead tr { padding: 0; }
+.mainCol .ckeditorWrap .kenkenCourseTable thead tr:after { display: none; }
+.mainCol .ckeditorWrap .kenkenCourseTable thead th { background: #ccc; padding: 10px; border-left: 3px solid #fff; }
+.mainCol .ckeditorWrap .kenkenCourseTable thead th:first-child { width: 145px; border-left: 0; }
+.mainCol .ckeditorWrap .kenkenCourseTable thead th:nth-child(2) { width: 235px; }
+.mainCol .ckeditorWrap .kenkenCourseTable thead th:nth-child(3) { width: 235px; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr { display: block; width: 100%; padding: 20px 0; position: relative; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr:after { content: ""; display: block; position: absolute; left: 0; right: 0; bottom: 0; border-top: 1px dotted #B3B0AD; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr td { border-left: 3px solid #fff; padding: 10px; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr td:first-child { width: 143px; box-shadow: 0 0 0 1px #F19167 inset; font-size: 15px; font-weight: bold; color: #ea5616; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr td:nth-child(2) { width: 235px; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr td:nth-child(3) { width: 235px; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr td.kenkenCourseTable2ColCellTtl { width: 132px; }
+.mainCol .ckeditorWrap .kenkenCourseTable tr td.kenkenCourseTable2ColCellData { width: 470px; }
+.mainCol .ckeditorWrap .kenkenCourseTable .kenkenCourseTableLabel { display: none; }
+.mainCol .ckeditorWrap .kenkenLinkCont { background: #F7F6F5; padding: 20px; margin: 0 0 20px; text-align: center; border: 1px solid #D4D2CF; box-shadow: 0 0 0 2px #fff inset; border-radius: 5px; }
+.mainCol .ckeditorWrap .kenkenLinkCont p { margin-bottom: 10px; }
+.mainCol .ckeditorWrap p.kenkenBtn1 { text-align: center; }
+.mainCol .ckeditorWrap p.kenkenBtn1 a { display: inline-block; padding: 10px 40px 10px 30px; border-radius: 5px; background: #EB5B1C; color: #fff; box-shadow: 0 2px 0 0 #DF4B0A; font-size: 20px; position: relative; }
+.mainCol .ckeditorWrap p.kenkenBtn1 a:after { content: ""; background: url(../img/base/pc/arrowRight.gif); width: 7px; height: 11px; position: absolute; right: 10px; top: 50%; margin-top: -5px; }
+.mainCol .ckeditorWrap p.kenkenBtn1 a:hover { text-decoration: none; opacity: .75; }
+.mainCol .ckeditorWrap .kenkenNewsList { margin: 0 0 20px; position: relative; }
+.mainCol .ckeditorWrap .kenkenNewsList li { border-bottom: 1px dotted #B3B0AD; padding: 15px 0 15px 150px; position: relative; text-indent: 0; }
+.mainCol .ckeditorWrap .kenkenNewsList li:before { display: none; }
+.mainCol .ckeditorWrap .kenkenNewsList li p { margin: 0; }
+.mainCol .ckeditorWrap .kenkenNewsList li p.kenkenNewsListDate { position: absolute; left: 0; top: 15px; }
+.mainCol .ckeditorWrap .kenkenBtnMoreNewsList { text-align: right; margin: 0 0 40px; }
+.mainCol .ckeditorWrap .kenkenBtnMoreNewsList a { display: inline-block; background: #F7F6F5; padding: 10px 20px 10px; color: #202020; box-shadow: 0 2px 0 0 #EFEDEB; border-radius: 25px; }
+.mainCol .ckeditorWrap .kenkenBtnMoreNewsList a:after { content: ""; margin: 0 0 4px 5px; display: inline-block; vertical-align: middle; width: 13px; height: 13px; background: url(../img/base/pc/iconPlus.gif); }
+.mainCol .ckeditorWrap .kenkenBtnMoreNewsList a:hover { text-decoration: none; opacity: .75; }
+.mainCol .ckeditorWrap .kenkenMailMagazineLink { background: #F7F6F5; padding: 20px; margin: 0 0 20px; text-align: left; border: 1px solid #D4D2CF; box-shadow: 0 0 0 2px #fff inset; border-radius: 5px; position: relative; }
+.mainCol .ckeditorWrap .kenkenMailMagazineLink p { margin-bottom: 10px; }
+.mainCol .ckeditorWrap .kenkenMailMagazineLink p.kenkenLinkContTtl { font-size: 21px; color: #ea5413; margin: 0 0 0 -18px; line-height: 52px; }
+.mainCol .ckeditorWrap .kenkenMailMagazineLink p.kenkenLinkContTtl:before { content: ""; display: inline-block; width: 74px; height: 49px; background: url(../img/base/pc/iconMailMagazine.gif); margin: 0 5px 0 0; vertical-align: top; }
+.mainCol .ckeditorWrap .kenkenMailMagazineLink p.kenkenLinkContLead { padding-left: 10px; }
+.mainCol .ckeditorWrap .kenkenMailMagazineLink p.kenkenBtn1 { position: absolute; right: 38px; top: 50%; margin-top: -26px; }
+.mainCol .ckeditorWrap .kenkenIndentList { margin: 0; }
+.mainCol .ckeditorWrap .kenkenIndentList li { text-indent: -1em; padding-left: 1em; list-style: none; }
+.mainCol .ckeditorWrap .kenkenIndentList li:before { display: none; }
+.mainCol .ckeditorWrap .kenkenLayoutModule1 { clear: both; margin: 0 0 40px; }
+.mainCol .ckeditorWrap .kenkenLayoutModule1:after { content: ""; clear: both; display: block; }
+.mainCol .ckeditorWrap .kenkenLayoutModule1 .kenkenLayoutModuleLeft { float: left; margin: 0 10px 10px; text-align: center; }
+.mainCol .ckeditorWrap .kenkenLayoutModule1 .kenkenLayoutModuleRight { float: right; margin: 0 0 10px 10px; text-align: center; }
+.mainCol .ckeditorWrap .kenkenLayoutModule1 .kenkenLayoutModuleCenter { text-align: center; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .kenkenCommonTable1 { margin: 0 0 40px; }
+.mainCol .ckeditorWrap .kenkenCommonTable1 th, .mainCol .ckeditorWrap .kenkenCommonTable1 td { border-bottom: 1px solid #ccc; padding: 10px; }
+.mainCol .ckeditorWrap .kenkenCommonTable1 th { white-space: nowrap; font-weight: bold; }
+.mainCol .ckeditorWrap .kenkenCommonTable2 { margin: 0 0 40px; border-left: 1px solid #ccc; border-top: 1px solid #ccc; }
+.mainCol .ckeditorWrap .kenkenCommonTable2 th, .mainCol .ckeditorWrap .kenkenCommonTable2 td { border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; }
+.mainCol .ckeditorWrap .kenkenCommonTable2 th { white-space: nowrap; font-weight: bold; background: #eee; }
+.mainCol .ckeditorWrap .kenkenCommonTriangleList { margin: 0 0 40px; }
+.mainCol .ckeditorWrap .kenkenCommonTriangleList li { text-indent: -1em; padding-left: 1em; list-style: none; }
+.mainCol .ckeditorWrap .kenkenCommonTriangleList li:before { content: ""; display: inline-block; width: 0; height: 0; border-style: solid; border-width: 3px 0 3px 6px; border-color: transparent transparent transparent #ea5413; vertical-align: middle; position: relative; margin: -3px 5px 0 0; }
+.mainCol .ckeditorWrap .kenkenCommonTagList { margin: 0 0 40px; }
+.mainCol .ckeditorWrap .kenkenCommonTagList li { display: inline-block; margin: 0 5px 5px 0; padding: 0; list-style: none; text-indent: 0; }
+.mainCol .ckeditorWrap .kenkenCommonTagList li:before { display: none; }
+.mainCol .ckeditorWrap .kenkenCommonTagList li a { display: block; border: 1px solid #E1E0DF; padding: 5px 15px; font-size: 86%; border-radius: 5px; }
+.mainCol .ckeditorWrap .kenkenCommonTagList li a:hover { text-decoration: none; background: #E1E0DF; }

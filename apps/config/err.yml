@@ -1,0 +1,118 @@
+EXISTED_PAGE_URL: パーマリンクが同一階層内で重複しています
+EXISTED_MAIL_ADDRESS: 既に別のアカウントで登録されているメールアドレスです。他のメールアドレスをご登録ください。
+EXISTED_MAIL_ADDRESS_INQ: 既に別のアカウントで登録されているメールアドレスです。他のメールアドレスをご利用のうえご応募をお願いします。<br>アカウントの登録状況確認をご希望の際は、<a href="%s" target="_blank">こちら</a>よりお問い合わせください。
+EXISTED_DIRECTORY_NAME: 既に登録済のディレクトリー名です。
+EXISTED_CATEGORY: カテゴリ名が同一階層内で重複しています
+NOT_COLLECT_OLDPASSWORD: パスワードが間違っています。
+SAME_NEW_AND_OLD: 現在のパスワードとは違うパスワードを設定してください。
+NOT_COLLECT_NEWPASSWORD: 新しいパスワードは正しくありません。
+NO_IMAGE: ファイルアップロードあるいは画像のURLを入力してください。
+INVALID_TIME1: <%time>は過去に出来ません。
+INVALID_TIME2: 時間の範囲をご確認ください。<%time1>は<%time2>より過去に出来ません。
+INVALID_PARAM1:「<%param2>」は「<%param1>」より大きい数字で設定して下さい。
+NOT_OWNER: 操作が失敗しました。
+NOT_CHOOSE: 必ず選択してください。
+NOT_SET: 必ず設定してください
+SAVE_ERROR: 保存した時にエラーが発生しました。
+admin-settings.user_settings_form.privacy_required_birthday: 年齢制限するときは、生年月日も必須です。
+BRAND_RESTRICTED_AGE_NOT_MATCH: 年齢制限を正しく入力してください。指定の年齢に設定する場合は開催中キャンペーンの基本設定を変更する必要があります。
+CP_RESTRICTED_AGE_NOT_MATCH: ファン登録の年齢制限を下回っています。年齢制限を正しく入力してください。
+auth.signup.restrictedAge: 規定の年齢に達していないためサインインできません。
+auth.restricted_age_not_match: %s歳未満なのでキャンペーンに参加することができません。
+auth.restricted_gender_not_match: このキャンペーンは、%sのみ参加することができます。
+auth.restricted_address_not_match: このキャンペーンは、%sにお住まいの方のみ参加することができます。
+NOT_EXIST_QUESTIONNAIRE: 設問を1つ以上設定してください。
+NOT_EXIST_CHOICE: 選択肢を1つ以上設定してください。
+INVALID_ALNUM: 半角英数字で入力してください。
+INVALID_OTHER_CHOICE: その他を選択した場合、内容を入力してください。
+INVALID_PASSWORD: メールアドレス、またはパスワードが間違っています。
+INVALID_CHOICE: 選択項目が不正です。
+INVALID_VALUE: 選択内容が不正です。
+INVITED_EMAIL: 既に登録されています。
+EXISTED_CONVERSION: 既に同じ名前のコンバージョンタグが存在します。
+EXISTED_REDIRECTOR: 既に同じ名前のリダイレクトリンクが存在します。
+NOT_MATCH_TYPE: 正しい形式で入力してください。
+INVALID_TEST_ID: テストページのアカウントのIDを入力してください。
+INVALID_TEST_PASS: テストページのアカウントのパスワードを入力してください。
+DUPLICATED_MAIL: このメールアドレスは、既に<a href="%s" target="_blank">アライドID</a>に登録されています。<br>アライドIDに登録されたメールアドレスとパスワードで、ファン登録してください。
+INVITE_CERTIFICATE_FAIL: パスワードが違います。
+PASSWORD_CONFIRMATION_FAIL: パスワードが一致しませんでした。
+NO_CHOICE: 選択肢を入力してください。
+NG_QUESTION: ご利用いただけない文字列が含まれています。<%ng_word>
+DUPLICATED_REFERENCE_URL: シェア用URLが重複しました。
+INVALID_REFERENCE_URL_FORMAT: シェア用URLを正しい形式で入力してください。
+
+RESERVATION_INVALID_DELIVERY_TYPE: 配信予定の値が不正です。
+RESERVATION_INVALID_SEND_MAIL_FLG: メール通知の値が不正です。
+RESERVATION_INVALID_DELIVERY_TIME: 予約配信日時は過去に設定できません。
+RESERVATION_INVALID_DELIVERY_TIME_LIMIT: 開催通知メールはキャンペーンの開催期間中以外に送信できません。
+RESERVATION_INVALID_DELIVERY_STATUS: ステータスの値が不正です。
+RESERVATION_INVALID_CURRENT_DELIVERY_STATUS: ステータスの値が不正です
+RESERVATION_INVALID_NOT_EXIST: 予約情報が存在しません。
+
+CP_INVALID_NOT_OWNER: 所有者権限がありません。
+CP_INVALID_NOT_EXIST: キャンペーンが存在しません。
+
+NOT_ALPHANUMERIC_CHARACTER: ローマ字あるいは数字を入力してください。
+
+INVALID_COUPON_CODE: (Code, Limit, Expire date)の形式を入力してください。
+INVALID_DATE: 日付の設定に誤りがあります。
+INVALID_LIMIT: 半角数字で0~99,999,999の範囲内で入力下さい。
+EMPTY_FILE: 空ファイルを入力しました。
+OPEN_FILE_ERROR: ファイルを処理したときにエラーが発生しました。
+DOUBLE_CODE: コードが重複しました。
+EXISTED_CODE: 既にコードを登録されています。
+NOT_ENOUGH_COUPON: クーポンが足りません。
+INVALID_IMAGE_SIZE: <%width%> × <%height%>px以上の画像を指定してください。
+
+NOT_EXIST_CODE: 正しいコードを入力して下さい
+EXPIRED_CODE: コード使用期限は終了しています
+DUPLICATED_CODE: コードが重複しました。
+CODE_TOO_LONG: コードは255文字以内で入力ください。
+
+ERROR_FILE_NOT_EXIST: ファイルを選択してください。
+ERROR_FILE_SIZE: ファイルサイズが不適切です。
+ERROR_FILE_SIZE_OVER: ファイルサイズは、10MBまでです。
+ERROR_FILE_IS_BROKEN: ファイルが壊れています。
+ERROR_FILE_NAME_IS_INVALID: ファイル名が不正です。
+ERROR_FILE_IS_NOT_UPLOADED: アップロードされたファイルではありません。
+ERROR_FILE_MIME_TYPE_IS_INVALID: mime_typeが不正です。
+ERROR_FILE_EXTENSION_IS_INVALID: ファイルの拡張子が不正です。jpg、png、gif 形式のファイルをアップロードしてください。
+ERROR_FILE_TYPE_IS_NOT_ALLOWED: 許可されたファイルではありません。
+ERROR_OTHER_ERROR: エラーが発生しました。
+ERROR_FILE_WITHIN_100: 画像のサイズは縦横100px以上にしてください。
+ERROR_FILE_SIZE_OVER_5MB: ファイルサイズは、5MBまでです。
+
+NOT_INPUT_TEXT: 必ず入力してください。
+INPUT_STRING: 文字列で入力してください。
+INPUT_URL: URL形式で入力してください。
+INPUT_WITHIN_15: 15字以内で入力してください。
+INPUT_WITHIN_30: 30字以内で入力してください。
+INPUT_WITHIN_33: 33字以内で入力してください。
+INPUT_WITHIN_50: 50字以内で入力してください。
+INPUT_WITHIN_80: 80字以内で入力してください。
+INPUT_WITHIN_255: 255字以内で入力してください。
+INPUT_WITHIN_512: 512字以内で入力してください。
+INPUT_WITHIN_1024: 1,024字以内で入力してください。
+INPUT_WITHIN_2000: 2,000字以内で入力してください。
+INPUT_WITHIN_20000: 20,000字以内で入力してください。
+INPUT_WITHIN_12_PER_LINE: 1行は12字以内で入力してください。
+INPUT_LESS_THAN: 適切な数値を入力して下さい。
+
+NOT_UPLOAD_IMAGE: 画像をアップロードして下さい。
+NOT_SAME_HASHTAG: 一度に同じタグは設定できません。
+OVER_HASHTAG: 設定可能なハッシュタグ数を超えています。
+INCLUDE_SPECIALCHAR: 設定できない文字が含まれています。
+HAHTAG_LENGTH_OVER: 30文字以内で入力してください。
+
+NOT_EXIST_CANDIDATE: 投票候補を2つ以上設定してください。
+INVALID_NOTALNUMSYMBOL: 全角文字 (ひらがな・カタカナ・漢字) で入力してください。
+
+EXISTED_SECTION: セクション名が同一階層内で重複しています。
+EXISTED_TEMPLATE: テンプレート名が同一階層内で重複しています。
+SAVE_ERROR_UNKNOWN: 保存した際にエラーが発生しました。時間をおいて再度お試しください。
+NOT_CHOOSE_MESSAGE: 転送するメッセージを選択してください。
+
+ACCESS_TOKEN_EXPIRED: エラーが発生しました。恐れ入りますが、<a href="%s">再ログイン</a>してもう一度お試しください。
+
+SEND_ACCOUNT_MERGE_MAIL: このメールアドレスは既に別のアカウントに登録されています。追加連携手続きを行うとキャンペーンの参加を行うことができます。<br>入力されたメールアドレスに、手続きに関する案内をお送りしています。お手数ですがご確認をお願いします。メールが届かない場合は<a href="%s" target="_blank">こちら</a>よりお問い合わせください。

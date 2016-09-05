@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_setting_user / admin-setting</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <div class="adminWrap">
+    <aside class="adminSideCol">
+      <nav class="adminSettingWrap">
+        <ul>
+          <li class="admin"><a href="#">管理者設定</a></li>
+          <li class="user"><span class="current">ユーザー設定</span></li>
+          <li class="page"><a href="#">ページ設定</a></li>
+          <li class="cvtag"><a href="#">コンバージョンタグ設定</a></li>
+          <li class="redirect"><a href="#">リダイレクトリンク設定</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <article class="adminMainCol">
+      <h1 class="hd1">ユーザー設定</h1>
+      <p class="btnPagePreview"><span class="btn1"><a href="#" class="middle1">プレビュー</a></span></p>
+
+      <div class="adminUserHead">
+        <h2 class="hd2">個人情報</h2>
+        <p class="iconHelp">
+          <span class="text">ヘルプ</span>
+          <span class="textBalloon1">
+            <span>
+              ここでは性別・生年月日・住所(都道府県)のみ<br>の取得がオススメです
+            </span>
+          <!-- /.textBalloon1 --></span>
+        <!-- /.iconHelp --></p>
+      <!-- /.iconHelp --></div>
+
+      <section class="adminUserDataWrap">
+        <p>会員登録時、必須入力にする個人情報の設定</p>
+        <ul class="adminUserData">
+          <li><label><input type="checkbox">氏名（ふりがな）</label></li>
+          <li><label><input type="checkbox">性別</label></li>
+          <li><label><input type="checkbox">生年月日</label></li>
+          <li><label><input type="checkbox">郵便番号</label></li>
+          <li class="jsCheckToggleWrap">
+            <label><input type="checkbox" class="jsCheckToggle">住所</label>
+            <ul class="jsCheckToggleTarget" style="display:none;">
+              <li><label><input type="radio" name="address">全て取得</label></li>
+              <li><label><input type="radio" name="address">都道府県のみを取得</label></li>
+            </ul>
+          </li>
+          <li><label><input type="checkbox">電話番号</label></li>
+          <li class="jsCheckToggleWrap">
+            <label><input type="checkbox" class="jsCheckToggle">年齢制限</label>
+            <select name="" id="">
+              <option value="#">20歳以上</option>
+              <option value="#">20歳以上</option>
+              <option value="#">20歳以上</option>
+              <option value="#">20歳以上</option>
+              <option value="#">20歳以上</option>
+            </select>
+            <ul class="jsCheckToggleTarget adminUserAuthentication" style=" display: none;">
+              <li>
+                <p><label><input type="checkbox">ページ来訪時にも年齢確認をする</label><a href="#" class="openNewWindow1 authenticationPagePrev">ページを確認</a>（<a href="#pageAuthenticationEditor" class="jsOpenModal">デザイン変更</a>）</p>
+                <p><label>年齢対象外の遷移URL<input type="text"></label></p>
+              </li>
+            </ul>
+          </li>
+        <!-- /.adminUserData --></ul>
+        <p class="btnSet">
+          <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+          <span class="btn3"><a href="#" class="middle1">保存</a></span>
+        <!-- /.btnSet --></p>
+
+      <!-- /.adminUserDataWrap --></section>
+
+
+      <h2 class="hd2">ファン登録時アンケート</h2>
+      <section class="adminUserDataWrap">
+        <ul class="adminUserData">
+
+          <li class="adminCustomProfile jsModuleContWrap">
+            <p class="label"><label><input type="checkbox">フリー項目1（選択回答UI）</label></p>
+            <div class="customProfileWrap">
+              <p class="title jsModuleContTile close"><label><span class="num">Q.</span><input type="text" placeholder="設問文を入力してください" value="設問サンプルテキスト設問サンプルテキスト"></label></p>
+              <div class="jsModuleContTarget">
+                <ul class="itemType">
+                  <li><label><input type="radio" name="itemType" checked="checked">選択回答（テキスト）</label></li><li><label><input type="radio" name="itemType" checked="checked">選択回答（プルダウン）</label></li><li><label><input type="radio" name="itemType">自由回答（文字入力）</label></li>
+                <!-- /.itemType --></ul>
+                <ul class="customProfileText">
+                  <li><label><span class="num">A1.</span><input type="text" placeholder="選択肢を入力してください" value="選択肢サンプルテキスト"></label></li>
+                  <li><label><span class="num">A2.</span><input type="text" placeholder="選択肢を入力してください" value="選択肢サンプルテキスト"></label></li>
+                  <li><label><span class="num">A99.</span><input type="text" placeholder="選択肢を入力してください" value="選択肢サンプルテキスト"><a href="#" class="iconBtnDelete">削除する</a></label></li>
+                  <li><a href="#" class="linkAdd">選択肢を追加する</a></li>
+                <!-- /.customProfileText --></ul>
+                <dl class="customProfileSetting">
+                  <dt>複数回答</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>回答必須</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>選択肢をランダムに表示する</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>その他の選択肢を使用する</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                <!-- /.customProfileSetting --></dl>
+                <p class="customItemDelete"><a href="#" class="linkDelete">設問を削除する</a></p>
+              <!-- /.jsModuleContTarget --></div>
+            <!-- /.customProfileWrap --></div>
+          <!-- /.adminCustomProfile--></li>
+
+          <li class="adminCustomProfile jsModuleContWrap">
+            <p class="label"><label><input type="checkbox">フリー項目2（プルダウンUI）</label></p>
+            <div class="customProfileWrap">
+              <p class="title jsModuleContTile close"><label><span class="num">Q.</span><input type="text" placeholder="設問文を入力してください" value="設問サンプルテキスト設問サンプルテキスト"></label></p>
+              <div class="jsModuleContTarget">
+                <ul class="itemType">
+                  <li><label><input type="radio" name="itemType">選択回答（テキスト）</label></li><li><label><input type="radio" name="itemType">選択回答（プルダウン）</label></li><li><label><input type="radio" name="itemType" checked="checked">自由回答（文字入力）</label></li>
+                <!-- /.itemType --></ul>
+                <p class="customProfilePulldown">
+                  <textarea>sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text&#13;sample text</textarea>
+                  <small>選択肢を1行に1つずつ入力ください</small>
+                <!-- /.customProfilePulldown --></p>
+                <dl class="customProfileSetting">
+                  <dt>回答必須</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>選択肢をランダムに表示する</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                <!-- /.customProfileSetting --></dl>
+                <p class="customItemDelete"><a href="#" class="linkDelete">設問を削除する</a></p>
+              <!-- /.jsModuleContTarget --></div>
+            <!-- /.customProfileWrap --></div>
+          <!-- /.adminCustomProfile--></li>
+
+          <li class="adminCustomProfile jsModuleContWrap">
+            <p class="label"><label><input type="checkbox">フリー項目3（自由回答UI）</label></p>
+            <div class="customProfileWrap">
+              <p class="title jsModuleContTile close"><label><span class="num">Q.</span><input type="text" placeholder="設問文を入力してください" value="設問サンプルテキスト設問サンプルテキスト"></label></p>
+              <div class="jsModuleContTarget">
+                <ul class="itemType">
+                  <li><label><input type="radio" name="itemType">選択回答（テキスト）</label></li><li><label><input type="radio" name="itemType">選択回答（プルダウン）</label></li><li><label><input type="radio" name="itemType" checked="checked">自由回答（文字入力）</label></li>
+                <!-- /.itemType --></ul>
+                <p class="supplement1">※メールアドレスなどの個人情報を取得することはできません。</p>
+                <dl class="customProfileSetting">
+                  <dt>回答必須</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                <!-- /.customProfileSetting --></dl>
+                <p class="customItemDelete"><a href="#" class="linkDelete">設問を削除する</a></p>
+              <!-- /.jsModuleContTarget --></div>
+            <!-- /.customProfileWrap --></div>
+          <!-- /.adminCustomProfile--></li>
+
+          <li class="adminCustomProfile jsModuleContWrap">
+            <p class="label"><label><input type="checkbox">フリー項目4（一度保存後は選択／自由回答を切り替えが不可になる）</label></p>
+            <div class="customProfileWrap">
+              <p class="title jsModuleContTile close"><label><span class="num">Q.</span><input type="text" placeholder="設問文を入力してください" value="設問サンプルテキスト設問サンプルテキスト"></label></p>
+              <div class="jsModuleContTarget">
+                <ul class="customProfileText">
+                  <li><label><span class="num">A1.</span><input type="text" placeholder="選択肢を入力してください" value="選択肢サンプルテキスト"></label></li>
+                  <li><label><span class="num">A2.</span><input type="text" placeholder="選択肢を入力してください" value="選択肢サンプルテキスト"></label></li>
+                  <li><label><span class="num">A99.</span><input type="text" placeholder="選択肢を入力してください" value="選択肢サンプルテキスト"><a href="#" class="iconBtnDelete">削除する</a></label></li>
+                  <li><a href="#" class="linkAdd">選択肢を追加する</a></li>
+                <!-- /.customProfileText --></ul>
+                <dl class="customProfileSetting">
+                  <dt>複数回答</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>回答必須</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>選択肢をランダムに表示する</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                  <dt>その他の選択肢を使用する</dt>
+                  <dd><a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a></dd>
+                <!-- /.customProfileSetting --></dl>
+                <p class="customItemDelete"><a href="#" class="linkDelete">設問を削除する</a></p>
+              <!-- /.jsModuleContTarget --></div>
+            <!-- /.customProfileWrap --></div>
+          <!-- /.adminCustomProfile--></li>
+
+          <li><a href="#" class="linkAdd">フリー項目を追加する</a></li>
+        <!-- /.adminUserData --></ul>
+
+        <p class="btnSet">
+          <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+          <span class="btn3"><a href="#" class="middle1">保存</a></span>
+        <!-- /.btnSet --></p>
+
+      <!-- /.adminUserDataWrap --></section>
+
+      <h2 class="hd2">利用規約</h2>
+      <section class="adminRuleSettingWrap">
+        <p>会員登録時に確認してもらう利用規約の入力</p>
+
+        <p>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+
+        <p class="adminRuleSetting"><textarea name="" id="" cols="30" rows="10"></textarea></p>
+
+        <p class="btnSet">
+          <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+          <span class="btn3"><a href="#" class="middle1">保存</a></span>
+        </p>
+
+      <!-- /.adminRuleSettingWrap --></section>
+      <p class="btnPagePreview"><span class="btn1"><a href="#" class="middle1">プレビュー</a></span></p>
+
+    </article>
+  </div>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="pageAuthenticationEditor">
+    <section class="modalCont-large jsModalCont">
+          <h1>年齢確認ページ</h1>
+          <div class="pagePartsSetting">
+            <div class="adminPageAuthenticationEdit">
+              <p>「はい」のリンク先（href）に ##LINKYES## のタグを挿入してください。（例：a href="##LINKYES##"）<br>
+              「いいえ」のリンク先（href）に ##LINKNO## のタグを挿入してください。（例：a href="##LINKNO##"）<br></p>
+              <div class="wysiwygArea">
+                <p class="adminPageAuthenticationPreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+                <div><img src="../../../../img/dummy/imgWyswigThin.png" width="815" height="470" alt="wyswig dummy" style="display: block; max-width: none;"></div>
+              <!-- /.wysiwygArea --></div>
+            <!-- /.adminPageAuthenticationEdit --></div>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsTextSetting --></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+
+</body>
+</html>

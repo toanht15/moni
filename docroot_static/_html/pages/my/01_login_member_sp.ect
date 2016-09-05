@@ -1,0 +1,38 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'pageStatus' : %>logout<% end %>
+
+<% block 'singleContents' : %>
+    <h1 class="hd1">GDOクラブ会員情報を使って新規登録・ログイン</h1>
+    <div class="loginThirdParty">
+      <p class="btnGDO"><a href="#"><span>GDOクラブ会員</span></a></p>
+      <p><small>※上記よりログインいただいた場合、氏名、メールアドレスをアライドアーキテクツ株式会社に提供することを承諾したものとみなします。</small></p>
+    <!-- /.loginThirdParty --></div>
+    <h1 class="hd1">お持ちのアカウントで新規登録・ログイン</h1>
+  <ul class="loginSns">
+    <li class="btnSnsFb1"><a href="#" class="login1"><span class="inner">Facebook</span></a></li>
+    <li class="btnSnsTw1"><a href="#" class="login1"><span class="inner">Twitter</span></a></li>
+    <li class="btnSnsIn1"><a href="#" class="login1"><span class="inner">LinkedIn</span></a></li>
+    <li class="btnSnsLn1"><a href="#" class="login1"><span class="inner">LINE</span></a></li>
+    <li class="btnSnsIg1"><a href="#" class="login1"><span class="inner">Instagram</span></a></li>
+    <li class="btnSnsGp1"><a href="#" class="login1"><span class="inner">Google</span></a></li>
+    <li class="btnSnsYh1"><a href="#" class="login1"><span class="inner">Yahoo! JAPAN ID</span></a></li>
+  <!-- /.loginSns --></ul>
+    <h1 class="hd1">メールアドレスで新規登録・ログイン</h1>
+    <div class="addressJoin">
+      <div class="mailEntryWrap">
+        <div class="accoutWrap">
+          <p class="address">sato.tetsuhiro@aainc.co.jp<a href="#" class="supplement1">[変更]</a></p>
+        <!-- /.accoutWrap --></div>
+
+        <form action="#">
+          <ul>
+            <li class="pass"><input type="password" placeholder="パスワードの登録"><small class="supplement1"><a href="#">パスワードをお忘れの方はこちら</a></small></li>
+            <li class="btn3"><a href="#" class="large1">応募する</a></li>
+          </ul>
+        <!-- /.inputAddress --></form>
+        <p class="loginAttention">※本サービスを利用するにあたり、<a href="#"><img src="../../img/icon/iconAlliedID2.png" alt="アライドID">アライドID</a>の情報を利用いたします。</p>
+        <p class="supplement1"><a href="#" class="openNewWindow1">アライドID利用規約</a>に同意の上、ご応募ください。</p>
+      <!-- /.mailEntryWrap --></div>
+    <!-- /.addressJoin --></div>
+<% end %>

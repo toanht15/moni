@@ -1,0 +1,15 @@
+.hd1_inquiry {
+  padding:0 10px;
+}
+.inquiryUserView {
+  width: auto;
+  margin: 0 10px;
+
+  .inquiryChat {
+    display: table-cell;
+    width: auto;
+    padding-bottom: 14px;
+    vertical-align: top;
+    text-align: left;
+  }
+}

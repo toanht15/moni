@@ -1,0 +1,490 @@
+﻿@charset "utf-8";
+/* ### parts.scss ### */
+//======================================================================================================================
+body {
+  min-width: 320px;
+}
+
+.pageWrap {
+  padding: 5px;
+}
+
+nav.sideNavi > ul > li:last-child {
+  display: none;
+}
+
+#kenkenHeader {
+  margin: 0 0 10px;
+  box-shadow: none;
+  background-size: 1px 50px;
+
+  #kenkenHeaderInner {
+    width: auto;
+    padding-top: 4px;
+    position: relative;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+
+    a {
+      display: inline-block;
+      line-height: 1.2;
+      font-size: 11px;
+      padding-left: 5px;
+
+      &:before {
+        display: none;
+      }
+      br {
+        display: inline;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 4px;
+      }
+    }
+    img {
+      display: block;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  button {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 34px;
+    height: 34px;
+    z-index: 1000;
+    background: url(../img/base/btnMenu.gif) 0 0 no-repeat;
+    background-size: 34px 34px;
+    border: 0;
+    outline: none;
+  }
+  ul {
+    display: none;
+    padding-left: 0;
+    letter-spacing: -.40em;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #EA5413;
+    padding-top: 50px;
+
+    li {
+      display: block;
+      letter-spacing: normal;
+      &:first-child {
+        a {
+          border-top: 1px solid #F1885A;
+        }
+      }
+    }
+    a {
+      display: block;
+      position: relative;
+      line-height: 1;
+      color: #fff;
+      font-size: 17px;
+      padding: 15px 0;
+      border-bottom: 1px solid #F1885A;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        &:before {
+          display: none;
+        }
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &.kenkenActive {
+    button {
+      background: url(../img/base/btnMenuClose.gif) 0 0 no-repeat;
+      background-size: 34px 34px;
+    }
+    ul {
+      display: block;
+    }
+  }
+}
+
+#kenkenFooter {
+  margin: 40px 0 0;
+  padding: 35px 10px;
+  color: #fff;
+  border: 0;
+
+  .kenkenFooterInner {
+    width: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #EE7642;
+    position: relative;
+  }
+  .links a:before {
+    border-left: 5px solid #fff;
+  }
+  .kenkenPagetop {
+    position: absolute;
+    top: -60px;
+    right: 0;
+
+    a {
+      display: block;
+      width: 117px;
+      height: 30px;
+      text-indent: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.mainCol .lpWrap .ckeditorWrap .kenkenWrap {
+  float: none;
+  width: auto;
+  padding: 0 5px;
+  margin: 0 0 40px;
+}
+
+.mainCol .ckeditorWrap {
+  .kenkenSideCont {
+    float: none;
+    width: auto;
+    .kenkenSideNav {
+    	margin: 0 0 10px;
+      li {
+        margin: 0;
+        a {
+          border: 0;
+          border-bottom: 1px solid #E1E0DF;
+          border-radius: 3px;
+          position: relative;
+          display: block;
+          padding: 10px 20px;
+          color: #202020;
+          font-size: 16px;
+          &:after {
+            content: "";
+            display: block;
+            width: 3px;
+            background: #EA4400 url(../img/base/bgSideNav.gif) 0 0 no-repeat;
+            background-size: 3px 25px;
+            position: absolute;
+            top: 4px;
+            left: 3px;
+            bottom: 4px;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 5px;
+            height: 9px;
+            background: url(../img/base/bgSideNavArrow.gif);
+            background-size: 5px 9px;
+            top: 50%;
+            margin-top: -4px;
+            right: 10px;
+          }
+          &:hover {
+            border: 0;
+            border-bottom: 1px solid #E1E0DF;
+            color: #202020;
+            background: none;
+            &:after {
+              background: #EA4400 url(../img/base/bgSideNav.gif) 0 0 no-repeat;
+              background-size: 3px 25px;
+            }
+          }
+        }
+      }
+    }
+    .kenkenSideBnr {
+      li {
+        margin: 0 0 5px;
+        text-align: center;
+      }
+    }
+  }
+
+  .entryOwned, .joinCommSite {
+    margin: 0 10px;
+  }
+
+  .kenkenHeadline1 {
+    left: -5px;
+    width: calc( 100% + 10px);
+    box-sizing: border-box;
+    font-size: 17px;
+    margin: 0 0 10px;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  .kenkenHeadline2 {
+    position: relative;
+    left: -15px;
+    width: calc( 100% + 30px);
+    box-sizing: border-box;
+    background: url(../img/base/bgHeadline3.gif) 0 50% repeat-x;
+    background-size: 1px 18px;
+    font-size: 19px;
+    margin: 0 0 10px;
+  }
+  .kenkenHeadline3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    &:before {
+      width: 3px;
+      background: #EB4A03 url(../img/base/bgHeadline4.gif) 0 0 repeat-x;
+      background-size: 3px 17px;
+    }
+  }
+  /* column headline */
+  .kenkenColumnHeadline1 {
+    font-size: 20px;
+  }
+  .kenkenColumnHeadline2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .kenkenColumnHeadline3 {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .kenkenTable1 {
+    th {
+      width: 68px;
+    }
+  }
+  .kenkenLinks {
+    background: #FAF9F7;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 0 #EAE7E1;
+    padding: 0 5px;
+    margin: 0 0 10px;
+
+    li {
+      border-bottom: 1px solid #EAE7E1;
+    }
+    a {
+      display: block;
+      padding: 15px;
+      color: #202020;
+      font-size: 14px;
+      position: relative;
+      background: none;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 7px;
+        background: url(../img/base/iconPageLink.gif);
+        background-size: 8px 7px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -3px;
+      }
+      &:hover {
+        color: #202020;
+        text-decoration: none;
+      }
+    }
+  }
+
+  table.kenkenTable2 tr {
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #B3B0AD;
+  }
+  table.kenkenTable2 th {
+    display: inline-block;
+    border-bottom: 0;
+    padding: 10px 0 0px;
+    font-size: 18px;
+  }
+  table.kenkenTable2 td {
+    display: block;
+    padding: 0 0 5px;
+    border: 0;
+    font-size: 13px;
+    color: #999;
+
+    &.kenkenTable2Null {
+      display: none;
+    }
+  }
+
+  .kenkenComingSoon {
+    height: auto;
+    background: none;
+    img {
+      display: block;
+    }
+  }
+
+  .kenkenCourseTable {
+    border-collapse: separate;
+    font-size: 14px;
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+      width: 100%;
+      padding: 20px 0;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px dotted #B3B0AD;
+      }
+
+      td {
+        border-left: 0;
+        padding: 0;
+        display: block;
+
+        &:first-child {
+          width: auto;
+          box-shadow: none;
+          font-size: 15px;
+          font-weight: bold;
+          color: #ea5616;
+          box-shadow: 0 0 0 1px #F19167 inset;
+          padding: 5px 10px;
+          margin: 0;
+        }
+        &:nth-child(2) {
+          width: auto;
+          padding-bottom: 15px;
+        }
+        &:nth-child(3) {
+          width: auto;
+          border-top: 1px dotted #B3B0AD;
+        }
+        &.kenkenCourseTable2ColCellTtl {
+          width: auto;
+          margin: 0 0 15px;
+        }
+        &.kenkenCourseTable2ColCellData {
+          width: auto;
+        }
+      }
+    }
+    .kenkenCourseTableLabel {
+      display: block;
+      margin: 0 0 10px;
+      padding-top: 15px;
+
+      span {
+        display: inline-block;
+        padding: 5px;
+        background: #F2F1F0;
+      }
+    }
+  }
+
+  .kenkenNewsList {
+    margin: 0 0 20px;
+    position: relative;
+
+    li {
+      padding: 10px 0;
+      text-indent: 0;
+
+      p {
+        margin: 0;
+        &.kenkenNewsListDate {
+          position: static;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .kenkenBtnMoreNewsList {
+    text-align: center;
+  }
+  .kenkenMailMagazineLink {
+    p {
+      margin-bottom: 10px;
+      &.kenkenLinkContTtl {
+        font-size: 16px;
+        color: #ea5413;
+        margin: -10px 0 0 -20px;
+        line-height: 42px;
+        
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 47px;
+          height: 31px;
+          background: url(../img/base/iconMailMagazine.gif);
+          background-size: 47px 31px;
+          margin: 0 5px 0 0;
+          vertical-align: top;
+        }
+      }
+      &.kenkenLinkContLead {
+        padding-left: 0;
+        font-size: 11px;
+      }
+      &.kenkenBtn1 {
+        position: static;
+        right: 38px;
+        top: 50%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  /* column page */
+  .kenkenLayoutModule1 {
+
+    .kenkenLayoutModuleLeft,
+    .kenkenLayoutModuleRight {
+      float: none;
+      margin: 0 0 10px;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+         height: auto;
+      }
+    }
+  }
+/* end ckeditor */}
+
+
+
+
+
+
+
+
+
+
+
+
+

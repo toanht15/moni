@@ -1,0 +1,165 @@
+/*
+  iconEditSetBase1
+    add, edit, delet, sort
+  edit btn set
+    add, edit, nonDisplay, size, fix, delete
+ */
+.iconSort2 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(sort);
+    color: $iconC3;
+  }
+}
+
+// edit btn set
+%iconBtnBase {
+  display: inline-block;
+  overflow: hidden;
+  width: 14px;
+  height: 14px;
+  color: #FFF;
+  vertical-align: middle;
+  line-height: 14px;
+
+  &:before {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+  }
+}
+.iconBtnAdd {
+  @extend %iconBtnBase;
+
+  &:before {
+    @include fontBase(plus);
+    background: $iconC3;
+  }
+}
+.iconBtnEdit {
+  @extend %iconBtnBase;
+
+  &:before {
+    @include fontBase(edit);
+    background: $iconC3;
+  }
+}
+.iconBtnNonDisplay {
+  @extend %iconBtnBase;
+
+  &:before {
+    @include fontBase(minus);
+    background: $iconC4;
+    border-radius: 50%;
+  }
+}
+.iconBtnDelete {
+  @extend %iconBtnBase;
+
+  &:before {
+    @include fontBase(delete);
+    background: $iconC4;
+    border-radius: 50%;
+  }
+}
+.stepClose {
+  @extend %iconBtnBase;
+  width: 25px;
+  height: 25px;
+
+  &:before {
+    @include fontBase(delete);
+    color: #ccc;
+    font-size: 25px;
+  }
+}
+.iconBtnSort {
+  @extend %iconBtnBase;
+
+  &:before {
+    @include fontBase(sort);
+    background: $iconC3;
+    border-radius: 3px;
+  }
+}
+
+%btnEditSet3 {
+  display: inline-block;
+  height: 14px;
+  vertical-align: middle;
+  line-height: 14px;
+
+  &:before {
+    color: #FFF;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+  }
+}
+.linkAdd {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(plus);
+    font-size: 14px;
+    background: $iconC3;
+  }
+}
+.linkEdit {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(edit);
+    font-size: 14px;
+    background: $iconC3;
+  }
+}
+.linkNonDisplay {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(minus);
+    background: $iconC4;
+    font-size: 14px;
+    border-radius: 50%;
+  }
+}
+.linkSize {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(resize);
+    background: $iconC3;
+    font-size: 14px;
+  }
+}
+.linkFix {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(fixed);
+    background: $iconC3;
+    font-size: 14px;
+  }
+}
+.linkDelete {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(delete);
+    background: $iconC4;
+    font-size: 14px;
+    border-radius: 50%;
+  }
+}
+.linkQuestion {
+  @extend %btnEditSet3;
+
+  &:before {
+    @include iconFontLeft(question);
+    background: $iconC3;
+    font-size: 14px;
+  }
+}

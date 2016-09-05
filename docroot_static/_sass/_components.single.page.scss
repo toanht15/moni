@@ -1,0 +1,24 @@
+.singleWrap {
+
+  .poweredByMonipla {
+    font-size: 12px;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #999;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+
+    img {
+      margin-left: 5px;
+    }
+  }
+  .entryText {
+    margin: 0 0 10px 0;
+    font-size: 11px;
+    color: #999;
+  }
+}

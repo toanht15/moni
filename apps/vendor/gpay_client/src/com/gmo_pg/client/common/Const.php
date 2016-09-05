@@ -1,0 +1,2 @@
+<?php
+define('USE_BIG_DECIMAL_AMOUNT_PAY_TYPES', '19,20');

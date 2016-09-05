@@ -1,0 +1,49 @@
+<% extend 'partial/layout/page.admin.modal' %>
+
+<% block 'mainContents' : %>
+    <header>
+      <h1>追加するコンテンツを選択してください</h1>
+    </header>
+    <section class="modalInner-cont">
+      <section class="editBRANDCo jsMenuArea" id="jsEditBRANDCo">
+        <h1>コンテンツ</h1>
+        <ul>
+          <li><a href="#modal2" class="jsOpenModal"><img src="../../img/icon/iconEditPage.png" width="80" height="80" alt="ページ"><span>ページ</span></a></li>
+          <li><a href="#modal2" class="jsOpenModal"><img src="../../img/icon/iconEditLink.png" width="80" height="80" alt="リンク"><span>リンク</span></a></li>
+          <li><a href="#modal2" class="jsOpenModal"><img src="../../img/icon/iconEditPhoto.png" width="80" height="80" alt="投稿フォト"><span>投稿フォト</span></a></li>
+        </ul>
+      </section>
+      <section class="editSNS jsMenuArea" id="jsEditSNS">
+        <h1>ソーシャルメディア</h1>
+        <ul>
+          <li class="fbAccount"><a href="03_modal_listSNSPost.html"><img src="../../img/dummy/01.png" alt="accout name dummy"><span>いぬねこてくてく...</span></a></li>
+          <li class="twAccount"><a href="#"><img src="../../img/dummy/01.png" alt="accout name dummy"><span>MONIPLA モニプ...</span></a></li>
+          <li class="fbAccount"><a href="#"><img src="../../img/dummy/01.png" alt="accout name dummy"><span>サンプルテキスト...</span></a></li>
+          <li class="twAccount"><a href="#"><img src="../../img/dummy/01.png" alt="accout name dummy"><span>サンプルテキスト...</span></a></li>
+          <li class="igAccount"><a href="#"><img src="../../img/dummy/01.png" alt="accout name dummy"><span>サンプルテキスト...</span></a></li>
+          <li class="ytAccount"><a href="#"><img src="../../img/icon/iconNoImage2.png" width="80" height="80" alt="no image"><span>サンプルテキスト...</span></a></li>
+          <li class="rssAccount"><a href="#"><img src="../../img/icon/iconNoImage2.png" width="80" height="80" alt="no image"><span>サンプルテキスト...</span></a></li>
+          <li class="addAccount"><a href="#modal1" class="jsOpenModal"><span class="linkAdd">追加する</span></a></li>
+        </ul>
+      </section>
+    </section>
+    <footer>
+      <p class="btn2"><a href="#closeModalFrame">閉じる</a></p>
+    </footer>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal2 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <h1>連携するSNSを選択してください的なテキスト</h1>
+      <ul class="linkSNSList">
+        <li><a href="03_modal_listFBpage.html"><img src="../../img/sns/iconSnsFB3.png" width="50" height="50" alt=""></a></li>
+        <li><a href="#"><img src="../../img/sns/iconSnsTW3.png" width="50" height="50" alt=""></a></li>
+        <li><a href="#"><img src="../../img/sns/iconSnsYT3.png" width="50" height="50" alt=""></a></li>
+        <li><a href="#"><img src="../../img/sns/iconSnsRss3.png" width="50" height="50" alt=""></a></li>
+        <li><a href="#"><img src="../../img/sns/iconSnsIG3.png" width="50" height="50" alt=""></a></li>
+      </ul>
+      <p class="btnSet"><span class="btn2"><a href="#closeModal" class="middle1">キャンセル</a></span></p>
+    </section>
+  </div>
+<% end %>

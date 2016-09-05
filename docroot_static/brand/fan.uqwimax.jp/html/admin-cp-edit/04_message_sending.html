@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>04_message_sending / admin-cp-edit</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">Setting</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+
+    <h1 class="hd1"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="campaign img" class="hdCampaignIcon"><span class="label2">登録完了</span><span class="hdInnerText">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が</span></h1>
+    <div class="campaignAction">
+      <ul class="data">
+        <li class="campaignTag">期間：2014/6/17 12:00 ~ 2014/6/17 23:59</li>
+        <li class="campaignTag">発表：2014/6/17</li>
+        <li class="campaignTag">当選数：90,000</li>
+        <li class="preview"><a href="#" class="font-open">キャンペーンページへ</a></li>
+      <!-- /.data --></ul>
+      <ul class="action">
+        <li><a href="#" class="font-fan">参加者一覧</a></li>
+        <li><a href="#" class="font-win">当選発表</a></li>
+        <li><a href="#modal3" class="font-download jsOpenModal">データダウンロード</a></li>
+      <!-- /.action --></ul>
+    <!-- /.campaignAction --></div>
+
+    <section class="campaignFlowWrap">
+      <div class="campaignFlowArea">
+        <div class="campaignFlow">
+          <ul class="campaignFlowCont">
+            <li class="flowDetail_finished">
+              <h1>STEP1-3
+                <span class="iconHelp">
+                      <span class="text">ヘルプ</span>
+                      <span class="textBalloon1">
+                        <span>
+                          STEPグループごとに編集画面が開きます
+                        </span>
+                      <!-- /.textBalloon1 --></span>
+                <!-- /.iconHelp --></span>
+              </h1>
+              <a href="#" class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">キャンペーン告知</dt>
+                  <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">モジュール</dt>
+                  <dd></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                  <dd></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></a>
+            <!-- /.flowDetail_finished --></li>
+            <li class="flowDetail_focus">
+              <h1>STEP4
+                <span class="iconHelp">
+                      <span class="text">ヘルプ</span>
+                      <span class="textBalloon1">
+                        <span>
+                          複数パターンの当選発表をする場合は<br>新たな当選通知を作成してください
+                        </span>
+                      <!-- /.textBalloon1 --></span>
+                <!-- /.iconHelp --></span>
+              </h1>
+              <div class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/win1.png" width="16" height="16" alt="結果発表" class="hdModuleIcon">結果発表</dt>
+                  <dd><span class="iconMail1"><strong class="num">--</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">--</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">--</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></div>
+            <!-- /.flowDetail --></li>
+          <!-- /.campaignFlowCont --></ul>
+        <!-- /.campaignFlow --></div>
+        <ul class="campaignFlowScroll">
+          <li class="flowPrev">←</li>
+          <li class="flowNext">→</li>
+        <!-- /.campaignFlowScroll --></ul>
+      <!-- /.campaignFlowArea --></div>
+      <p class="campaignSettingBase"><a href="#" class="font-gear">基本設定</a><a href="#" class="font-attract">集客設定</a><a href="#modal2" class="font-edit jsOpenModal">フロー編集</a></p>
+    <!-- /.campaignFlowWrap --></section>
+
+    <section class="campaignEditWrap">
+      <header class="campaignEditHeader_reserved">
+        <a href="#" class="campaignEditItem_finished">
+          <p class="messageEdit">
+            <span class="stepNum">1</span><span class="stepTitle">メッセージ作成</span>
+          <!-- /.messageEdit --></p>
+        <!-- /.campaignEditItem_finished --></a>
+        <a href="#" class="campaignEditItem_finished">
+          <p class="select">
+            <span class="stepNum">2</span><span class="stepTitle">対象ユーザー選択<small>当選者数 99,183,145人中<br>80人送信済み</small></span>
+          <!-- /.select--></p>
+          <p class="selectedUser">
+            <span>
+              <small>送信対象</small><br><span class="userNum">--</span>人
+            </span>
+          <!-- /.selectedUser --></p>
+        <!-- /.campaignEditItem_finished --></a>
+        <a href="#" class="campaignEditItem_finished">
+          <p class="option">
+            <span class="stepTitle">オプション設定<br><small>・即時送信<br>・メール通知あり</small></span>
+          <!-- /.option --></p>
+        <!-- /.campaignEditItem_finished --></a>
+        <p class="btn4_area"><span>配信中</span></p>
+      <!-- /.campaignEditHeader --></header>
+      <section class="campaignEditCont">
+        <div class="messageReserved">
+          <h1>メッセージ配信中</h1>
+          <p class="attention1">メッセージの配信中は編集できません。<br>配信はあと000分で終了予定です</p>
+          <dl>
+            <dt>配信対象</dt>
+            <dd><a href="#">100人</a></dd>
+            <dt>配信予定</dt>
+            <dd><a href="#">2014/08/31　12:24</a></dd>
+            <dt>メール通知</dt>
+            <dd>あり</dd>
+          </dl>
+        <!-- /.messageReserved --></div>
+      <!-- /.campaignEditCont --></section>
+    <!-- /.campaignEditWrap --></section>
+
+  </article>
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <h1>確認</h1>
+
+      <p><strong class="attention1">2014/07/03 17:12</strong>に送信されます</p>
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="middle1">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal" class="middle1">送信</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="modal3">
+    <section class="modalCont-small jsModalCont">
+      <h1>データダウンロード</h1>
+      <p>何か必要があればテキストを入れる。<br><span class="font-download">表示があるものは直接ダウンロードされます。</span></p>
+      <ul>
+        <li><a href="#">参加者情報</a></li>
+        <li><a href="#" class="download">日別既読件数</a></li>
+        <li><a href="#" class="download">日別流入元</a></li>
+        <li><a href="#" class="download">ギフト受信ユーザー一覧</a></li>
+        <li><a href="#" class="download">ギフト受信ユーザー配送先</a></li>
+        <li>
+          <span class="download labelModeClient">当選者配送先</span>
+          <select>
+            <option selected>選択して下さい</option>
+            <option>STEP1</option>
+            <option>STEP2</option>
+            <option>STEP3</option>
+            <option>STEP4</option>
+          </select>
+        </li>
+        <li>
+          <s class="download labelModeClient">当選者配送先</s>
+          <select disabled>
+            <option selected>選択して下さい</option>
+            <option>STEP1</option>
+            <option>STEP2</option>
+            <option>STEP3</option>
+            <option>STEP4</option>
+          </select>
+        </li>
+        <li><a href="#" class="download labelModeAllied">個人情報</a></li>
+      </ul>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="middle1">キャンセル</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+</body>
+</html>

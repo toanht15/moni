@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>07_movie_sp / message</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+
+    <link rel="stylesheet" href="../../css/style_sp.css">
+    <script src="../../js/_unit_sp.js"></script>
+</head>
+
+<body>
+
+    <article class="message_popupMovie">
+        <p class="movieWrap">
+            <video src="../../img/dummy/sampleVideo.mp4" controls width="100%" id="myVideo"></video>
+        <!-- /.movieWrap --></p>
+        <p class="movieSpeed"><span class="inner">再生速度</span><label><input type="radio" value="1.0" name="videoSpeed" onclick="changeVideoSpeed()" checked>標準</label><label><input type="radio" value="1.5" name="videoSpeed" onclick="changeVideoSpeed()">1.5倍速</label><label><input type="radio" value="2.0" name="videoSpeed" onclick="changeVideoSpeed()">2倍速</label></p>
+        <ul class="btnSet">
+            <li class="btn1"><a href="#">閉じる</a></li>
+        <!-- /.btnSet --></ul>
+    <!-- /.message_popupMovie --></article>
+
+    <script>
+    function changeVideoSpeed() {
+      var video = document.getElementById('myVideo');
+      var radio = document.getElementsByName('videoSpeed');
+      for(var i = 0; i < radio.length; i++) {
+        if(radio[i].checked) {
+          video.playbackRate = +radio[i].value;
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

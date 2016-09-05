@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>07_profile / admin-top</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/farbtastic.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/min/unit.min.js"></script>
+  <script src="../../../../js/farbtastic.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body class="modalInnerBody">
+  <article class="modalInner-large">
+    <header>
+      <h1>基本情報</h1>
+    </header>
+    <section class="modalInner-cont">
+
+      <dl class="editProfile">
+        <dt>ページタイトル</dt>
+        <dd><p class="supplement1">ページヘッダーやメール通知に表示される名称</p><input type="text"><br><small class="textLimit">（<span>0</span>文字／35文字）</small></dd>
+        <dt>プロフィール画像</dt>
+        <dd><p class="supplement1">ページヘッダーやメール通知に表示される名称</p><input type="file"><img src="../../../../img/dummy/02.jpg" width="80" height="80" alt="" class="thumbnail"><br><small>（推奨:400px × 400px 以上 / 必須:200px × 200px）</small></dd>
+        <dt>favicon（ファビコン）</dt>
+        <dd><p class="supplement1">ブラウザタブやアドレスバーに表示されるアイコン</p><input type="file"><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="" class="thumbnail-small"><br><small>（推奨:マルチアイコンファイル[.ico] / 必須:16px か 32pxのアイコンファイル[.ico]）</small></dd>
+      </dl>
+      <dl class="editProfile">
+        <dt><span class="editLabel">メインカラー</span></dt>
+        <dd><p class="supplement1">￼リンクパネルのヘッダー色</p><input type="text" id="color1" name="color1" value="#123456" class="colorPicker jsColorInput"><div id="picker1" class="jsFarbtastic"></div></dd>
+        <dt><span class="editLabel">リンクカラー</span></dt>
+        <dd><p class="supplement1">テキストリンク色</p><label for=""><input type="radio" name="siteLinkColor">黒</label><label for=""><input type="radio" name="siteLinkColor">白</label></dd>
+        <dt>背景</dt>
+        <dd><input type="text" id="color1" name="color1" value="#123456" class="colorPicker jsColorInput"><div id="picker1" class="jsFarbtastic"></div></dd>
+        <dd><input type="file"><img src="../../../../img/dummy/02.jpg" width="80" height="80" alt="" class="thumbnail"></dd>
+        <dd><label for=""><input type="checkbox" name="siteBgimgRepeat">横に繰り返す</label><label for=""><input type="checkbox" name="siteBgimgRepeat">縦に繰り返す</label></dd>
+      </dl>
+
+    <!-- /.modalInner-cont --></section>
+    <footer>
+      <p class="btnSet"><span class="btn2"><a href="#closeModalFrame">キャンセル</a></span><span class="btn3"><a href="#closeModalFrame">保存</a></span></p>
+    </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<% extend 'partial/layout/page.plain' %>
+
+<% block 'headCont' : %>true<% end %>
+
+<% block 'head' : %>
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+<% end %>
+
+<% block 'mainContents' : %>
+  <header class="prevHead">
+    <div class="wrap">
+      <p>プレビュー中：<span>スマートフォン<a href="#" class="toggle_switch right">表示切り替え</a>PC</span></p>
+    <!-- /.wrap --></div>
+  <!-- /.prevHead --></header>
+
+  <article class="adminPrevBody">
+    <div class="adminPrev_pc"><iframe src="../others/01_index.html" frameborder="0" name="page preview"></iframe></div>
+  <!-- /.adminPrevBody --></article>
+<% end %>

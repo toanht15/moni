@@ -1,0 +1,17 @@
+Google:
+  ClientID: 616825741925-mp5uqqplsfpvl223eb43jtefu2hsvbo3.apps.googleusercontent.com
+  ClientSecret: rB-hrTSMKiQqaXPa9fRZl83U
+  RedirectUri: auth/google_callback
+  ApiBaseUrl: https://www.googleapis.com/auth
+  Scope:
+    1: userinfo.email
+    2: userinfo.profile
+    3: youtube
+User:
+  ClientID: 616825741925-mp5uqqplsfpvl223eb43jtefu2hsvbo3.apps.googleusercontent.com
+  ClientSecret: rB-hrTSMKiQqaXPa9fRZl83U
+  RedirectUri: auth/google_callback
+  ApiBaseUrl: https://www.googleapis.com/auth
+  Scope:
+    1: userinfo.profile
+    2: youtube

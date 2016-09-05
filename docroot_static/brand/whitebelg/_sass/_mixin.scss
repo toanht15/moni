@@ -1,0 +1,499 @@
+﻿@charset "utf-8";
+/* ### mixin.scss ### */
+//======================================================================================================================
+
+// ###ベンダープリフィックス
+//======================================================================================================================
+// @include gradient();
+// (上の色, 下の色)
+//------------------------------------------------------------------------------
+@mixin gradient($from, $to) {
+    background-color: $from;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $from),color-stop(1, $to));
+    background-image: -o-linear-gradient(bottom, $from 0%, $to 100%);
+    background-image: -moz-linear-gradient(bottom, $from 0%, $to 100%);
+    background-image: -webkit-linear-gradient(bottom, $from 0%, $to 100%);
+    background-image: -ms-linear-gradient(bottom, $from 0%, $to 100%);
+    background-image: linear-gradient(to bottom, $from 0%, $to 100%);
+}
+
+// @include gradient-x();
+// (左の色, 右の色)
+//------------------------------------------------------------------------------
+@mixin gradient-x($from, $to) {
+    background-color: $from;
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(0, $from),color-stop(1, $to));
+    background-image: -o-linear-gradient(right, $from 0%, $to 100%);
+    background-image: -moz-linear-gradient(right, $from 0%, $to 100%);
+    background-image: -webkit-linear-gradient(right, $from 0%, $to 100%);
+    background-image: -ms-linear-gradient(right, $from 0%, $to 100%);
+    background-image: linear-gradient(to right, $from 0%, $to 100%);
+}
+
+// @include gradient-xy();
+// (左上の色, 右下の色)
+//------------------------------------------------------------------------------
+@mixin gradient-xy($from, $to) {
+    background-color: $from;
+    background-image: -webkit-gradient(linear,left top,right bottom,color-stop(0, $from),color-stop(1, $to));
+    background-image: -o-linear-gradient(right bottom, $from 0%, $to 100%);
+    background-image: -moz-linear-gradient(right bottom, $from 0%, $to 100%);
+    background-image: -webkit-linear-gradient(right bottom, $from 0%, $to 100%);
+    background-image: -ms-linear-gradient(right bottom, $from 0%, $to 100%);
+    background-image: linear-gradient(to right bottom, $from 0%, $to 100%);
+}
+
+// @include gradientRatio();
+// (上の色, 中の色, 下の色, 比率（0-100の値）)
+//------------------------------------------------------------------------------
+@mixin gradientRatio($from, $center, $to, $ratio) {
+    background-color: $from;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop($ratio/100, $center), color-stop(1, $to));
+    background-image: -webkit-linear-gradient(bottom, $from 0%, $center percentage($ratio/100), $to 100%);
+    background-image: -moz-linear-gradient(bottom, $from 0%, $center percentage($ratio/100), $to 100%);
+    background-image: linear-gradient(to bottom, $from 0%, $center percentage($ratio/100), $to 100%);
+}
+
+// @include opacity();
+// （0-100の値）
+//------------------------------------------------------------------------------
+@mixin opacity($i: 10) {
+    -moz-opacity : $i/100;
+    -khtml-opacity: $i/100;
+    opacity : $i/100;
+    -ms-filter: "alpha(opacity=#{$i})";
+    filter: alpha(opacity=#{$i});
+}
+
+// @include border-radius();
+//------------------------------------------------------------------------------
+@mixin border-radius($i: 10px) {
+    -webkit-border-radius: $i;
+    -moz-border-radius: $i;
+    -ms-border-radius: $i;
+    border-radius: $i;
+}
+
+// @include background-size();
+//------------------------------------------------------------------------------
+@mixin background-size($i) {
+    -webkit-background-size: $i;
+    -moz-background-size: $i;
+    -ms-background-size: $i;
+    background-size: $i;
+}
+
+// @include background-size-half();
+//------------------------------------------------------------------------------
+@mixin background-size-half($width, $height) {
+    -webkit-background-size: ($width/2) ($height/2);
+    -moz-background-size: ($width/2) ($height/2);
+    -ms-background-size: ($width/2) ($height/2);
+    background-size: ($width/2) ($height/2);
+}
+
+// @include box-shadow();
+//------------------------------------------------------------------------------
+@mixin box-shadow($i: 1px 1px 1px #000) {
+    -webkit-box-shadow: $i;
+    -moz-box-shadow: $i;
+    -ms-box-shadow: $i;
+    box-shadow: $i;
+}
+
+// @include box-sizing;
+//------------------------------------------------------------------------------
+@mixin box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// @include appearance();
+//------------------------------------------------------------------------------
+@mixin appearance {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+// ###CSSプロパティ
+//======================================================================================================================
+
+// @include font_size();
+// フォントサイズのパーセンテージ変換
+// ※デフォルトフォントサイズが13でない場合は変更する
+//------------------------------------------------------------------------------
+@mixin font_size($fontPxSize) {
+    font-size: round(percentage($fontPxSize / 13));
+}
+
+// @include indent();
+// 「※」などのテキストによるアイコン表現でのインデント調整
+// （余白の大きさ pxかemで指定）
+//------------------------------------------------------------------------------
+@mixin indent($num) {
+    padding-left: $num;
+    text-indent: -#{$num};
+}
+
+// @include break;
+// 表示範囲に合わせて改行する（文字数制限がある場合設定）
+//------------------------------------------------------------------------------
+@mixin break {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+// ###absolute
+//======================================================================================================================
+
+// @include absolute_left_top();
+// (左からの絶対位置, 上からの絶対位置)
+//------------------------------------------------------------------------------
+@mixin absolute_left_top($left: 0, $top: 0) {
+    position:absolute;
+    left:$left;
+    top:$top;
+}
+
+// @include absolute_right_top();
+// (右からの絶対位置, 上からの絶対位置)
+//------------------------------------------------------------------------------
+@mixin absolute_right_top($right: 0, $top: 0) {
+    position:absolute;
+    right:$right;
+    top:$top;
+}
+
+// @include absolute_left_bottom();
+// (左からの絶対位置, 上からの絶対位置)
+//------------------------------------------------------------------------------
+@mixin absolute_left_bottom($left: 0, $bottom: 0) {
+    position:absolute;
+    left:$left;
+    bottom:$bottom;
+}
+
+// @include gradient_right_bottom();
+// (右からの絶対位置, 上からの絶対位置)
+//------------------------------------------------------------------------------
+@mixin absolute_right_bottom($right: 0, $bottom: 0) {
+    position:absolute;
+    right:$right;
+    bottom:$bottom;
+}
+
+// ###汎用要素
+//======================================================================================================================
+
+// @include float_list();
+// 横並びの画像をfloatで敷き詰める 右の余白なしでボックスピッタリに
+// (要素全体の横幅, 要素間の横の余白, 要素間の縦の余白)
+//------------------------------------------------------------------------------
+@mixin float_list($width: 680px, $margin-right: 10px, $margin-bottom: 0) {
+    overflow: hidden;
+    width: $width + $margin-right;
+    margin: 0 -#{$margin-right} 0 0;
+    padding: 0;
+    list-style: none;
+    li {
+        float: left;
+        margin-right: $margin-right;
+        margin-bottom: $margin-bottom;
+    }
+}
+
+// @include two_column();
+// floatで2カラム
+// （左カラムの横幅, 右カラムの横幅）
+//------------------------------------------------------------------------------
+@mixin two_column($widthLeft: 200px, $widthRight: 600px) {
+    .blockLeft {
+        float: left;
+        width: $widthLeft;
+    }
+    .blockRight {
+        float: right;
+        width: $widthRight;
+    }
+}
+
+// @include box();
+// 画像枠のボックス
+// 上につける画像#{$name}Top
+// 下につける画像#{$name}Bottom
+// 後ろで繰り返す画像#{$name}
+// （クラス名, 拡張子, 横幅, 調整用padding）
+//------------------------------------------------------------------------------
+@mixin box($name: 'box', $extention: 'gif', $width: 680px, $padding: 10px) {
+    .#{$name}Wrap {
+        width: $width;
+        background: url(../img/base/#{$name}.#{$extention}) repeat-y;
+    }
+    .#{$name} {
+        background: url(../img/base/#{$name}Top.#{$extention}) no-repeat;
+    }
+    .#{$name}Cont {
+        background: url(../img/base/#{$name}Bottom.#{$extention}) 0 100% no-repeat;
+        padding: $padding;
+    }
+}
+
+// @include box_opacity();
+// 透過影付き画像枠のボックス
+// 上につける画像#{$name}Top
+// 下につける画像#{$name}Bottom
+// 後ろで繰り返す画像#{$name}
+// （クラス名, 拡張子, 横幅, 上につける画像の高さ, 下につける画像の高さ, 調整用padding）
+//------------------------------------------------------------------------------
+@mixin box_opacity($name: 'box', $extention: 'png', $width: 680px, $imgTop: 5px, $imgBottom: 5px, $padding: 10px) {
+    .#{$name}Wrap {
+        width: $width;
+        background: url(../img/base/#{$name}Top.#{$extention}) no-repeat;
+    }
+    .#{$name} {
+        background: url(../img/base/#{$name}Bottom.#{$extention}) 0 100% no-repeat;
+        padding: $imgTop 0 $imgBottom;
+    }
+    .#{$name}Cont {
+        background: url(../img/base/#{$name}.#{$extention}) repeat-y;
+        padding: $padding;
+    }
+}
+
+// @include after-icon();
+// 画像アイコン:after
+// （アイコンの画像パス, 横幅, 高さ）
+// ※別途absoluteで位置を指定すること
+//------------------------------------------------------------------------------
+@mixin after-icon($imgPass: '../img/base/icon.gif', $width: 10px, $height: 10px) {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        width: $width;
+        height: $height;
+        background: url($imgPass) no-repeat;
+        @include background-size($width $height);
+    }
+}
+
+// @include after-icon-left();
+// 左に画像アイコン:after
+// （アイコンの画像パス, 横幅, 高さ, 左からの位置）
+//------------------------------------------------------------------------------
+@mixin after-icon-left($imgPass: '../img/base/icon.gif', $width: 10px, $height: 10px, $left: 10px) {
+    position: relative;
+    padding-right: #{$left + $width + 5px};
+    padding-left: #{$left + $width + 5px};
+    &:after {
+        content: "";
+        display: block;
+        @include absolute_left_top($left, 50%);
+        width: $width;
+        height: $height;
+        margin-top: - floor($height / 2);
+        background: url($imgPass) no-repeat;
+        @include background-size($width $height);
+    }
+}
+
+// @include after-icon-right();
+// 右に画像アイコン:after
+// （アイコンの画像パス, 横幅, 高さ, 右からの位置）
+//------------------------------------------------------------------------------
+@mixin after-icon-right($imgPass: '../img/base/icon.gif', $width: 10px, $height: 10px, $right: 10px) {
+    position: relative;
+    padding-right: #{$right + $width + 5px};
+    padding-left: #{$right + $width + 5px};
+    &:after {
+        content: "";
+        display: block;
+        @include absolute_right_top($right, 50%);
+        width: $width;
+        height: $height;
+        margin-top: - floor($height / 2);
+        background: url($imgPass) no-repeat;
+        @include background-size($width $height);
+    }
+}
+
+// @include after-icon-border();
+// 縦線アイコン:after
+// （縦線の色, 横幅, 上と下の余白, 左の余白）
+//------------------------------------------------------------------------------
+@mixin after-icon-border($color: #fff, $width: 10px, $marginTopBottom: 10px, $marginLeft: 0) {
+    position: relative;
+    padding-right: #{$left + $width + 5px};
+    padding-left: #{$left + $width + 5px};
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: $marginLeft;
+        top: 0;
+        bottom: 0;
+        width: $width;
+        margin: $marginTopBottom 0;
+        background: $color;
+    }
+}
+
+// @include sprites-image();
+// フルードイメージ
+// （横幅, 縦幅, 背景位置x軸, 背景位置y軸）
+//------------------------------------------------------------------------------
+@mixin sprites-image ($width: 10px, $height: 10px, $x: 0, $y: 0) {
+    &:after {
+        content: "";
+        display: block;
+        width: $width;
+        height: $height;
+        background: url('../img/base/spritesImage.png') $x $y no-repeat;
+    }
+}
+
+@mixin sprites-image-sp ($width: 10px, $height: 10px, $x: 0, $y: 0) {
+    &:after {
+        content: "";
+        display: block;
+        width: ($width/2);
+        height: ($height/2);
+        background: url('../img/base/spritesImage.png') ($x/2) ($y/2) no-repeat;
+        background-size: ($widthsprites/2) ($heightsprites/2);
+    }
+}
+
+// ###メディアクエリ
+//======================================================================================================================
+// @include media(pc) {
+// }
+// @include media(sp) {
+// }
+// @include media(min-width: 569px) {
+// }
+@mixin media($mode) {
+    @if( $mode == pc ){
+        @media screen and (min-width: 569px) {
+            @content;
+        }
+    } @else if( $mode == sp ) {
+        @media screen and (max-width: 568px) {
+            @content;
+        }
+    } @else {
+        @media screen and ($mode) {
+            @content;
+        }
+    }
+}
+
+// ###アニメーション、変形系
+//======================================================================================================================
+
+// @include filter();
+@mixin filter ($i) {
+    -webkit-filter: $i;
+    -moz-filter: $i;
+    -ms-filter: $i;
+    -o-filter: $i;
+    filter: $i;
+}
+
+//------------------------------------------------------------------------------
+
+// @include transition();
+@mixin transition ($i) {
+    -webkit-transition: $i;
+    -moz-transition: $i;
+    -ms-transition: $i;
+    -o-transition: $i;
+    transition: $i;
+}
+
+//------------------------------------------------------------------------------
+
+// @include animation();
+@mixin animation($i: 'none') {
+    -webkit-animation: $i;
+    -moz-animation: $i;
+    -ms-animation: $i;
+    animation: $i;
+}
+
+// @include animation-name();
+@mixin animation-name($i: 'none') {
+    -webkit-animation-name: $i;
+    -moz-animation-name: $i;
+    -ms-animation-name: $i;
+    animation-name: $i;
+}
+
+// @include animation-duration();
+@mixin animation-duration($i: '0s') {
+    -webkit-animation-duration: $i;
+    -moz-animation-duration: $i;
+    -ms-animation-duration: $i;
+    animation-duration: $i;
+}
+
+// @include animation-timing-function();
+@mixin animation-timing-function($i: 'ease') {
+    -webkit-animation-timing-function: $i;
+    -moz-animation-timing-function: $i;
+    -ms-animation-timing-function: $i;
+    animation-timing-function: $i;
+}
+
+// @include animation-delay();
+@mixin animation-delay($i: '0s') {
+    -webkit-animation-delay: $i;
+    -moz-animation-delay: $i;
+    -ms-animation-delay: $i;
+    animation-delay: $i;
+}
+
+// @include animation-iteration-count();
+@mixin animation-iteration-count($i: '1') {
+    -webkit-animation-iteration-count: $i;
+    -moz-animation-iteration-count: $i;
+    -ms-animation-iteration-count: $i;
+    animation-iteration-count: $i;
+}
+
+// @include animation-direction();
+@mixin animation-direction($i: 'normal') {
+    -webkit-animation-direction: $i;
+    -moz-animation-direction: $i;
+    -ms-animation-direction: $i;
+    animation-direction: $i;
+}
+
+// @include animation-fill-mode();
+@mixin animation-fill-mode($i: 'none') {
+    -webkit-animation-fill-mode: $i;
+    -moz-animation-fill-mode: $i;
+    -ms-animation-fill-mode: $i;
+    animation-fill-mode: $i;
+}
+
+// @include keyframes() {}
+//------------------------------------------------------------------------------
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}

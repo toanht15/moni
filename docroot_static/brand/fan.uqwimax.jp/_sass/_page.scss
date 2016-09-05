@@ -1,0 +1,948 @@
+﻿@charset "utf-8";
+/* ### page.scss ### */
+//======================================================================================================================
+body {
+  min-width: 0;
+}
+.mainCol .ckeditorWrap {
+
+.uqwimaxTopPagePickup {
+	background: #FDEDF6;
+	padding: 0 0 15px;
+
+	.uqwimaxTopPagePickupSlider {
+		.uqwimaxTopPagePickupSlide {
+			width: 280px;
+			height: 120px;
+			box-sizing: border-box;
+			padding: 15px 5px 10px 130px;
+			background: #fff;
+			margin: 0 5px;
+			position: relative;
+
+			.uqwimaxTopPagePickupSlideImg {
+				width: 120px;
+				height: 120px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.uqwimaxTopPagePickupSlideTtl {
+				height: 70px;
+				overflow: hidden;
+				margin: 0 0 5px;
+				font-size: 14px;
+			}
+			.uqwimaxTopPagePickupSlideInfo {
+				position: relative;
+				font-size: 11px;
+
+				.uqwimaxTopPagePickupSlideDate {
+					padding: 3px 0;
+					color: #999;
+				}
+				.uqwimaxTopPagePickupSlideCommentsNum {
+					position: absolute;
+					right: 0;
+					top: 0;
+					background: #E2F1FB;
+					border-radius: 3px;
+					padding: 3px;
+					color: #6a717e;
+				}
+			}
+		}
+	}
+}
+/* トップページUQ通信 */
+.uqwimaxTopPageTsushin {
+	padding: 10px 0;
+
+  .uqwimaxTopPageTsushinSlider {
+    padding: 0 15px;
+
+    .uqwimaxTopPageTsushinSlide {
+      height: 120px;
+      box-sizing: border-box;
+      padding: 15px 5px 10px 130px;
+      background: #F2F2F2;
+      margin: 0 0 10px;
+      position: relative;
+
+      .uqwimaxTopPageTsushinSlideImg {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .uqwimaxTopPageTsushinSlideTtl {
+        height: 64px;
+        overflow: hidden;
+        margin: 0 0 5px;
+        font-size: 14px;
+      }
+      .uqwimaxTopPageTsushinSlideInfo {
+        border-top: 1px solid #ccc;
+        padding-top: 5px;
+        position: relative;
+        font-size: 11px;
+
+        .uqwimaxTopPageTsushinSlideDate {
+          padding: 3px 0;
+          color: #999;
+        }
+        .uqwimaxTopPageTsushinSlideCommentsNum {
+          position: absolute;
+          right: 0;
+          top: 5px;
+          background: #fff;
+          border-radius: 3px;
+          padding: 3px;
+          color: #6a717e;
+        }
+      }
+    }
+  }
+}
+/* クチコミ */
+.uqwimaxKuchikomi {
+  background: #EDF8FF;
+
+  .uqwimaxKuchikomiTab {
+    padding: 0 15px 15px;
+    vertical-align: top;
+  }
+  .uqwimaxKuchikomiSlider {
+    padding-top: 5px;
+  }
+  .uqwimaxKuchikomiSlide {
+    background: #fff;
+    margin: 0 0 3px;
+    text-align: left;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 8px;
+      background:#EDF8FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat;
+      background-size: 40px 8px;
+    }
+    .uqwimaxKuchikomiSlideComment {
+      padding: 15px;
+      height: 49px;
+      overflow: hidden;
+      font-size: 15px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    .uqwimaxKuchikomiSlideUserName {
+      padding: 0 15px 15px;
+      color: #0099ff;
+      font-size: 13px;
+    }
+  }
+}
+/* SNSまとめページ */
+.uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider { padding: 0; margin: 0 15px;}
+.uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { width: 100%; box-sizing: border-box;}
+.uqwimaxSnsPage {
+  .uqwimaxSnsTtl {
+    margin: 0 0 10px;
+  }
+  .uqwimaxSnsLead {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+}
+.uqwimaxMatomeSnsAccount {
+  padding: 0 15px 20px;
+  > ul {
+    li {
+      margin: 0 0 10px;
+    }
+  }
+}
+/* クチコミページ */
+.uqwimaxKuchikomiPage {
+  .uqwimaxKuchikomiLead {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+}
+.uqwimaxKuchikomiTab {
+  text-align: center;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 143px;
+    height: 40px;
+    margin: 0 5px;
+
+    &:hover {
+      opacity: .75;
+      cursor: pointer;
+    }
+    &#js--uqwimaxKuchikomiTab--wimax {
+      background: url(../img/kuchikomi/tabWimaxOff.gif);
+      background-size: contain;
+      &.uqwimaxKuchikomiTabOn {
+        background: url(../img/kuchikomi/tabWimax.gif);
+        background-size: contain;
+      }
+    }
+    &#js--uqwimaxKuchikomiTab--mobile {
+      background: url(../img/kuchikomi/tabMobileOff.gif);
+      background-size: contain;
+      &.uqwimaxKuchikomiTabOn {
+        background: url(../img/kuchikomi/tabMobile.gif);
+        background-size: contain;
+      }
+    }
+  }
+}
+.uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { border-radius: 5px; position: relative; width: 100%; box-sizing: border-box;
+  &:after { position: absolute; bottom: -8px; right: 0; content: ""; display: block; width: 100%; height: 8px; background: #E5F5FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px;}
+}
+.uqwimaxKuchikomiPage #js--uqwimaxKuchikomiCont--mobile .uqwimaxMatomeSlider .uqwimaxMatomeSlide {
+  &:after { background: #FDEDF6 url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px;}
+}
+.uqwimaxKuchikomiCont {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: taranslate(200%,0);
+  padding: 15px;
+  margin: 0 0 30px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &.uqwimaxKuchikomiContOn {
+    visibility: visible;
+    position: static;
+    transform: taranslate(0,0);
+  }
+  &#js--uqwimaxKuchikomiCont--wimax {
+    background: #E5F5FF;
+  }
+  &#js--uqwimaxKuchikomiCont--mobile {
+    background: #FDEDF6;
+    .uqwimaxKuchikomiReviewSlide:after {
+      background:#FDEDF6 url(../img/base/bgBaloon.gif) 100% 0 no-repeat;
+      background-size: 40px 8px;
+    }
+  }
+  .uqwimaxKuchikomiReviewTtl {
+    text-align: center;
+  }
+  .uqwimaxKuchikomiTweetsTtl {
+    text-align: center;
+  }
+  .uqwimaxKuchikomiReviewSlide {
+    margin: 0 0 15px;
+    width: 100%;
+
+
+    &:after {
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 8px;
+      background:#E5F5FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat;
+      background-size: 40px 8px;
+    }
+    .uqwimaxKuchikomiReviewSlideInner {
+      background: #fff;
+      position: relative;
+      border-radius: 5px;
+    }
+    .uqwimaxKuchikomiReviewSlideComment {
+      padding: 15px;
+      overflow: hidden;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .uqwimaxKuchikomiReviewSlideUserName {
+      padding: 0 15px 15px;
+      color: #0099ff;
+    }
+  }
+}
+
+.uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider {
+  padding: 0;
+  .uqwimaxMatomeSlide { background: #fff;}
+}
+
+.uqwimaxMatome {
+  padding: 10px 0;
+
+  .uqwimaxMatomeSlider {
+    padding: 0 15px;
+
+    .uqwimaxMatomeSlide {
+      background: #F2F2F2;
+      padding: 15px;
+      margin: 0 0 10px;
+
+
+      .uqwimaxMatomeSlideImg {
+        text-align: center;
+        margin: 0 0 10px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .uqwimaxMatomeSlideDate {
+        color: #999;
+        font-size: 11px;
+        margin: 0 0 5px;
+      }
+      .uqwimaxMatomeSlideText {
+        font-size: 15px;
+        color: #000;
+        margin: 0 0 5px;
+      }
+      .uqwimaxMatomeTwitterButton {
+        text-align: center;
+        margin: 0 0 5px;
+
+        li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+      .uqwimaxMatomeAuthor {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        font-size: 11px;
+      }
+
+      &.uqwimaxMatomeSlideTwitter {
+        .uqwimaxMatomeAuthor a {
+          display: block;
+          padding-left: 37px;
+          background: url(../img/base/iconTWUQ.gif) 0 50% no-repeat;
+          background-size: 27px 27px;
+          line-height: 27px;
+        }
+      }
+      &.uqwimaxMatomeSlideFacebook {
+        .uqwimaxMatomeAuthor a {
+          display: block;
+          padding-left: 26px;
+          background: url(../img/base/iconFB.gif) 0 50% no-repeat;
+          background-size: 16px 16px;
+          line-height: 16px;
+        }
+      }
+      &.uqwimaxMatomeSlideBlog {
+        .uqwimaxMatomeAuthor a {
+          display: block;
+          padding-left: 37px;
+          background: url(../img/base/iconBlog.gif) 0 50% no-repeat;
+          background-size: 27px 27px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
+/* 下部バナー */
+.uqwimaxFootBanner {
+  padding-top: 20px;
+  background: url(../img/base/stripe1.png) 0 0 repeat-x;
+  background-size: 33px 5px;
+  margin: 0 15px 20px;
+  font-size: 0;
+
+  li {
+    font-size: 16px;
+    display: inline-block;
+    padding: 0 5px 10px;
+    width: 33.3%;
+    box-sizing: border-box;
+
+    .uqwimaxDispPC {
+      display: none;
+    }
+  }
+}
+
+/* 初心者ページ */
+.uqwimaxBeginner {
+  .uqwimaxBeginnerHeader {
+    padding-bottom: 75px;
+    background: url(../img/beginner/bgLovesYou.gif) 100% 100% no-repeat;
+    background-size: 320px 80px;
+    margin: 0 0 20px;
+  }
+  .uqwimaxBeginnerCont {
+    padding: 0 15px 20px;
+    .uqwimaxBeginnerContLead {
+      text-align: center;
+      padding: 15px 0 0;
+    }
+    .uqwimaxBeginnerContInner {
+      padding: 15px;
+      > ul {
+        > li {
+          margin: 0 0 10px;
+        }
+      }
+      p {
+        margin: 0 0 1em;
+
+        &.uqwimaxBeginnerIndent {
+          padding-left: 1em;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+}/* end .mainCol .ckeditorWrap */
+
+
+/* for PC 
+================================================================================================================================================================================ */
+@media screen and (min-width: 641px) {
+body {
+  min-width: 980px;
+}
+.mainCol .ckeditorWrap {
+
+.uqwimaxTopPagePickup {
+  background: #FDEDF6;
+  padding: 0 0 15px;
+  position: relative;
+  margin-top: -28px;
+
+  .uqwimaxTopPagePickupSlider {
+    .uqwimaxTopPagePickupSlide {
+      width: 540px;
+      height: 240px;
+      box-sizing: border-box;
+      padding: 30px 20px 10px 260px;
+      background: #fff;
+      margin: 0 10px;
+      position: relative;
+
+      a:hover {
+        text-decoration: none;
+        opacity: .85;
+        display: block;
+      }
+      .uqwimaxTopPagePickupSlideImg {
+        width: 240px;
+        height: 240px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .uqwimaxTopPagePickupSlideTtl {
+        height: 114px;
+        overflow: hidden;
+        margin: 0 0 40px;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      .uqwimaxTopPagePickupSlideInfo {
+        position: relative;
+        font-size: 13px;
+
+        .uqwimaxTopPagePickupSlideDate {
+          padding: 3px 0;
+          color: #999;
+        }
+        .uqwimaxTopPagePickupSlideCommentsNum {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: #E2F1FB;
+          border-radius: 5px;
+          padding: 5px 10px;
+          color: #6a717e;
+        }
+      }
+    }
+  }
+}
+/* トップページUQ通信 */
+.uqwimaxTopPageTsushin {
+  padding: 10px 0;
+
+  .uqwimaxTopPageTsushinSlider {
+    padding: 0;
+    font-size: 0;
+
+    .uqwimaxTopPageTsushinSlide {
+      width: 470px;
+      height: 180px;
+      box-sizing: border-box;
+      padding: 15px 15px 10px 200px;
+      background: #F2F2F2;
+      margin: 0 0 20px;
+      position: relative;
+      display: inline-block;
+
+      &:nth-child(even){
+        margin: 0 0 20px 20px;
+      }
+      a {
+        display: block;
+        &:hover {
+          opacity: .85;
+          text-decoration: none;
+        }
+      }
+      .uqwimaxTopPageTsushinSlideImg {
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .uqwimaxTopPageTsushinSlideTtl {
+        height: 120px;
+        overflow: hidden;
+        margin: 0 0 5px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+/* クチコミ */
+.uqwimaxKuchikomi {
+  background: #EDF8FF;
+
+  .uqwimaxKuchikomiTabWrap {
+    padding: 0 10px 20px;
+    font-size: 0;
+  }
+  .uqwimaxKuchikomiTabTtlWimax {
+    height: 70px;
+    background: url(../img/index/pc/tabWimax.png) 50% no-repeat;
+
+    img {
+      display: none;
+    }
+  }
+  .uqwimaxKuchikomiTabTtlMobile {
+    height: 70px;
+    background: url(../img/index/pc/tabMobile.png) 50% no-repeat;
+    
+    img {
+      display: none;
+    }
+  }
+  .uqwimaxKuchikomiTab {
+    padding: 0;
+    font-size: 15px;
+    display: inline-block;
+    width: 450px;
+    margin: 0 10px;
+  }
+  .uqwimaxKuchikomiSlider {
+    padding-top: 5px;
+  }
+  .uqwimaxKuchikomiSlide {
+    background: #fff;
+    margin: 0 0 15px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 8px;
+      background:#EDF8FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat;
+      background-size: 40px 8px;
+    }
+  }
+}
+/* SNSまとめ */
+.uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider { margin: 0;}
+.uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { width: 290px; box-sizing: border-box;}
+.uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont { height: auto !important;}
+.uqwimaxSnsPage {
+
+  .uqwimaxSnsLead {
+    font-size: 16px;
+  }
+  .uqwimaxSnsLead {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+  .uqwimaxMatomeSnsAccount {
+    padding: 0;
+    margin: 0 0 60px;
+    > ul {
+      font-size: 0;
+      text-align: center;
+      li {
+        font-size: 13px;
+        display: inline-block;
+        margin: 0 32px 0 0;
+        &:nth-child(2n){
+          margin: 0;
+        }
+        img {
+          display: none;
+        }
+        a {
+          display: block;
+          width: 454px;
+          height: 90px;
+          &.uqwimaxMatomeSnsAccountFBBtn {
+            background: url(../img/sns/pc/btnFBAccount.gif);
+          }
+          &.uqwimaxMatomeSnsAccountTWBtn {
+            background: url(../img/sns/pc/btnTWAccount.gif);
+          }
+          &:hover {
+            opacity: .75;
+          }
+        }
+      }
+    }
+  }
+}
+.uqwimaxTopPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont {
+  height: 332px;
+  overflow: hidden;
+}
+.uqwimaxTopPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideTwitter .uqwimaxMatomeSlideCont {
+  height: 298px;
+}
+/* クチコミページ */
+.uqwimaxKuchikomiPage .uqwimaxKuchikomiReviewSlide { margin: 0 10px 20px !important; width: 290px !important; display: inline-block; vertical-align: top;}
+
+.uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont { height: auto !important;}
+.uqwimaxKuchikomiPage .uqwimaxMatomeSlide { margin: 0 10px 20px !important; width: 290px !important;}
+.uqwimaxKuchikomiPage {
+  .uqwimaxKuchikomiLead {
+    font-size: 16px;
+  }
+}
+.uqwimaxKuchikomiTab {
+
+  li {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 470px;
+    height: 70px;
+    margin: 0 20px 0 0;
+
+    &:nth-child(2){
+      margin: 0;
+    }
+    &:hover {
+      opacity: .75;
+      cursor: pointer;
+    }
+    &#js--uqwimaxKuchikomiTab--wimax {
+      background: url(../img/kuchikomi/pc/tabWimaxOff.gif);
+      background-size: contain;
+      &.uqwimaxKuchikomiTabOn {
+        background: url(../img/kuchikomi/pc/tabWimax.gif);
+        background-size: contain;
+      }
+    }
+    &#js--uqwimaxKuchikomiTab--mobile {
+      background: url(../img/kuchikomi/pc/tabMobileOff.gif);
+      background-size: contain;
+      &.uqwimaxKuchikomiTabOn {
+        background: url(../img/kuchikomi/pc/tabMobile.gif);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.uqwimaxKuchikomiCont {
+  padding: 20px 15px;
+
+  .uqwimaxKuchikomiReviewTtl {
+    height: 76px;
+    background: url(../img/kuchikomi/pc/ttlReview.png) 50% 0 no-repeat;
+    img {
+      display: none;
+    }
+  }
+  .uqwimaxKuchikomiTweetsTtl {
+    height: 76px;
+    background: url(../img/kuchikomi/pc/ttlTweets.png) 50% 0 no-repeat;
+    img {
+      display: none;
+    }
+  }
+}
+
+.uqwimaxMatome {
+  padding: 10px 0;
+  margin: 0 0 20px;
+
+  .uqwimaxMatomeSlider {
+    padding: 0;
+    font-size: 0;
+
+    .uqwimaxMatomeSlide {
+      background: #F2F2F2;
+      padding: 20px;
+      margin: 0 15px 10px;
+      box-sizing: border-box;
+      width: 290px;
+      display: inline-block;
+      vertical-align: top;
+      .uqwimaxMatomeSlideCont {
+        height: 320px;
+
+        a {
+          display: block;
+
+          &:hover {
+            text-decoration: none;
+            opacity: .85;
+          }
+        }
+      }
+      &.uqwimaxMatomeSlideTwitter .uqwimaxMatomeSlideCont {
+        height: 285px;
+      }
+      .uqwimaxMatomeSlideImg {
+        text-align: center;
+        margin: 0 0 10px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .uqwimaxMatomeSlideDate {
+        color: #999;
+        font-size: 11px;
+        margin: 0 0 5px;
+      }
+      .uqwimaxMatomeSlideText {
+        font-size: 15px;
+        color: #000;
+        margin: 0 0 5px;
+      }
+      .uqwimaxMatomeTwitterButton {
+        text-align: center;
+        margin: 0 0 5px;
+
+        li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+      .uqwimaxMatomeAuthor {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        font-size: 11px;
+      }
+
+      &.uqwimaxMatomeSlideTwitter {
+        .uqwimaxMatomeAuthor a {
+          display: block;
+          padding-left: 37px;
+          background: url(../img/base/iconTWUQ.gif) 0 50% no-repeat;
+          background-size: 27px 27px;
+          line-height: 27px;
+        }
+      }
+      &.uqwimaxMatomeSlideFacebook {
+        .uqwimaxMatomeAuthor a {
+          display: block;
+          padding-left: 26px;
+          margin: 6px 0 5px; 
+          background: url(../img/base/iconFB.gif) 0 50% no-repeat;
+          background-size: 16px 16px;
+          line-height: 16px;
+        }
+      }
+      &.uqwimaxMatomeSlideBlog {
+        .uqwimaxMatomeAuthor a {
+          display: block;
+          padding-left: 37px;
+          background: url(../img/base/iconBlog.gif) 0 50% no-repeat;
+          background-size: 27px 27px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
+/* 下部バナー */
+.uqwimaxFootBanner {
+  padding-top: 20px;
+  background: url(../img/base/pc/stripe1.png) 6px 0 repeat-x;
+  margin: 0 0 20px;
+  font-size: 0;
+
+  li {
+    font-size: 16px;
+    display: inline-block;
+    padding: 0;
+    margin: 0 30px 0 0;
+    width: 300px;
+    box-sizing: border-box;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      display: block;
+      width: 300px;
+      height: 90px;
+
+      .uqwimaxDispSP {
+        display: none;
+      }
+      .uqwimaxDispPC {
+        display: block;
+      }
+    }
+  }
+}
+
+/* 初心者ページ */
+.uqwimaxBeginner {
+  .uqwimaxBeginnerHeader {
+    padding-bottom: 165px;
+    background: url(../img/beginner/pc/bgLovesYou.gif) 100% 100% no-repeat;
+    margin: 0 0 20px;
+
+    .uqwimaxBeginnerHeadline {
+      background: url(../img/base/pc/stripe1.png) 6px 50% repeat-x;
+      text-align: center;
+      padding-top: 8px;
+      display: block;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 240px;
+        height: 73px;
+        background: url(../img/beginner/pc/ttl.gif);
+      }
+      img {
+        display: none;
+      }
+    }
+    .uqwimaxBeginnerLead {
+      background: url(../img/beginner/pc/txt.gif) 50% no-repeat;
+      height: 545px;
+      img {
+        display: none;
+      }
+    }
+  }
+  .uqwimaxBeginnerCont {
+    padding: 0 0 20px;
+
+    .uqwimaxBeginnerHeadline1 {
+      background: url(../img/beginner/pc/ttlHiroba.gif) 50% no-repeat;
+      height: 41px;
+
+      img {
+        display: none;
+      }
+    }
+    .uqwimaxBeginnerHeadline2 {
+      background: url(../img/beginner/pc/ttlSite.gif) 50% no-repeat;
+      height: 41px;
+
+      img {
+        display: none;
+      }
+    }
+    .uqwimaxBeginnerContLead {
+      text-align: center;
+      padding: 30px 0 0;
+      font-size: 16px;
+    }
+    .uqwimaxBeginnerContInner {
+      padding: 30px;
+
+      > ul {
+        position: relative;
+        height: 307px;
+
+        li {
+          position: absolute;
+
+          a {
+            display: block;
+            width: 298px;
+            height: 224px;
+
+            &:hover {
+              opacity: .75;
+            }
+          }
+          img {
+            display: none;
+          }
+
+          &.uqwimaxBeginnerLinkTsushin {
+            top: 0;
+            left: 0;
+            
+            a {
+              background: url(../img/beginner/pc/btnTsushin.gif);
+            }
+          }
+          &.uqwimaxBeginnerLinkKuchikomi {
+            top: 53px;
+            left: 298px;
+            
+            a {
+              background: url(../img/beginner/pc/btnKuchikomi.gif);
+            }
+          }
+          &.uqwimaxBeginnerLinkMatome {
+            top: 0;
+            right: 0;
+            
+            a {
+              background: url(../img/beginner/pc/btnMatome.gif);
+            }
+          }
+
+
+        }
+      }
+      p {
+        margin: 0 0 1em;
+        font-size: 16px;
+
+        &.uqwimaxBeginnerIndent {
+          padding-left: 1em;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+}/* end .mainCol .ckeditorWrap */
+
+}/* end for PC */

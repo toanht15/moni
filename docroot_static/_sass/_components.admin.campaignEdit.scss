@@ -1,0 +1,447 @@
+.campaignEditWrap {
+
+  header {
+  }
+  footer {
+  }
+}
+.campaignEditWrapShipping {
+  background: #fff;
+}
+.campaignEditHeader {
+  position: relative;
+  height: 70px;
+  border-bottom: none;
+  display: table;
+  width: 100%;
+
+  @at-root {
+    &+* {
+      margin-top: -1px;
+    }
+    #{&}_reserved {
+      @extend .campaignEditHeader;
+
+      &:before {
+        content: "";
+        background: rgb(68,68,68);
+        background: rgba(68, 68, 68, .3);
+        width: 810px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: 100;
+      }
+    }
+  }
+  %btnAreaBase {
+    width: 150px;
+    height: 70px;
+    line-height: 69px;
+    display: table-cell;
+
+    a {
+      height: 70px;
+    }
+    &:after {
+      content: none;
+    }
+  }
+  .btn3_area,
+  .btn4_area {
+    @extend %btnAreaBase;
+  }
+}
+.campaignEditHeaderShipping {
+  @extend .campaignEditHeader;
+  box-shadow: 0 3px #ccc inset;
+}
+
+.campaignEditItem {
+  display: table-cell;
+  vertical-align: top;
+  background: #FFF;
+  position: relative;
+  height: 69px;
+  border-right:  1px solid $borderC;
+  border-top:  1px solid $borderC;
+  overflow: hidden;
+  border-bottom: 1px solid $borderC;
+  box-shadow: 0 3px $borderC inset;
+
+  &:after {
+    @include fontBase(check2);
+    color: #aaa;
+    font-size: 14px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -7px;
+  }
+  &:first-child {
+    border-left: 1px solid $borderC;
+  }
+  .stepNum {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $borderC;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .stepTitle {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 30px;
+
+    &:before {
+      position: absolute;
+      color: $iconC2;
+      font-size: 25px;
+      left: 0;
+      top: 50%;
+      margin-top: -12.5px;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+  %campaignEditItemBase {
+    display: table-cell;
+    height: 69px;
+    vertical-align: middle;
+  }
+  .select {
+    width: 218px;
+    padding: 0 10px;
+    height: 69px;
+    border-right:  1px dotted $borderC;
+    display: table-cell;
+    vertical-align: middle;
+
+    .stepTitle {
+
+      &:before {
+        @include fontBase(fan);
+      }
+    }
+    small {
+      display: block;
+    }
+  }
+  .selectedUser {
+    width: 106px;
+    display: table-cell;
+
+    &>* {
+      padding: 0 10px;
+      display: table-cell;
+      width: 86px;
+      height: 69px;
+      vertical-align: middle;
+      text-align: center;
+    }
+    a {
+      color: #333;
+
+      &:hover {
+        text-decoration: none;
+        background: #f8f8f8;
+        box-shadow: 0 3px #F8F8F8 inset;
+      }
+    }
+  }
+  .messageEdit {
+    @extend %campaignEditItemBase;
+    width: 237px;
+    padding: 0 10px;
+
+    .stepTitle:before {
+      @include fontBase(write);
+    }
+  }
+  .option {
+    @extend %campaignEditItemBase;
+    width: 184px;
+    padding: 0 10px;
+
+    .stepTitle:before {
+      @include fontBase(mail-option);
+    }
+  }
+  @at-root {
+    a#{&} {
+      color: #aaa;
+
+      &:hover {
+        text-decoration: none;
+        background: #f8f8f8;
+      }
+    }
+    div#{&} {
+      box-shadow: 0 3px #fff inset;
+      border-bottom: 1px solid #fff;
+
+      .stepNum {
+        width: 28px;
+        height: 28px;
+        border: 3px solid $borderC;
+        line-height: 28px;
+      }
+
+      .stepTitle:before {
+        color: $iconC1;
+      }
+    }
+    #{&}_finished {
+      @extend .campaignEditItem;
+
+      &:after {
+        color: $iconC3;
+      }
+    }
+    div#{&}_single {
+      @extend .campaignEditItem;
+      border-bottom: 1px solid $borderC;
+
+      &:after {
+        right: 390px;
+        color: $iconC3;
+      }
+      .messageEdit {
+        width: 938px;
+        text-align: center;
+      }
+    }
+  }
+}
+.campaignEditItemElected {
+  @extend .campaignEditItem;
+  overflow: visible;
+
+  // .electedTitle {
+  //   position: absolute;
+  //   top: -24px;
+  //   left: 0;
+  //   width: 436px;
+  //   height: 24px;
+  //   background: #ffe23d;
+  //   text-align: center;
+  //   line-height: 24px;
+
+  //   &:after {
+  //     content: "";
+  //     width: 0;
+  //     height: 0;
+  //     border:  8px solid transparent;
+  //     border-top: 8px solid #ffe23d;
+  //     position: absolute;
+  //     top: 24px;
+  //     left: 50%;
+  //   }
+  // }
+  .selectedUser {
+
+    .userNum {
+      border: none;
+    }
+  }
+  .electedWrapBtn {
+    width: 105px;
+    padding-right: 30px;
+    display: table-cell;
+    vertical-align: middle;
+
+    .small1 {
+      height: 40px;
+      line-height: 40px;
+    }
+    .labelModeAllied {
+      padding: 8px 0;
+      display: block;
+      text-align: center;
+    }
+  }
+  &+.campaignEditItem {
+
+    .option {
+      width: 185px;
+    }
+
+    &+.btn3_area {
+      width: 100px;
+    }
+  }
+  @at-root {
+
+    #{&}_finished {
+      @extend .campaignEditItemElected;
+
+      &:after {
+        color: $iconC3;
+      }
+    }
+  }
+}
+
+.campaignEditItemShipping {
+  @extend .campaignEditItem;
+  width:346px;
+  display:block;
+
+  @at-root {
+
+    #{&}_finished {
+      @extend .campaignEditItemShipping;
+
+      &:after {
+        color: $iconC3;
+      }
+    }
+  }
+}
+.imgHowtoShipping {
+  text-align: center;
+}
+
+.campaignEditCont {
+  @include cf;
+  background: #fff;
+  border: 1px solid $borderC;
+
+  .tablink1 {
+    margin: 20px 0 20px;
+    padding: 0 10px;
+  }
+  &>.tablink1 {
+    margin-bottom: 0;
+  }
+  .moduleEditWrap {
+    margin: 0;
+    border: none;
+  }
+  %messageEditBase {
+    margin: 19px 14px;
+
+    h1 {
+      font-size: 16px;
+      margin-bottom: 15px;
+
+      &:before {
+        font-size: 15px;
+        color: $iconC2;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+  .sendDate {
+    @extend %messageEditBase;
+    float: left;
+    width: 451px;
+
+    h1:before {
+      @include fontBase(clock);
+    }
+    ul {
+
+    }
+    li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  .mailOption {
+    @extend %messageEditBase;
+    float: left;
+    border-left: 1px dotted $borderC;
+    width: 450px;
+    padding-left: 14px;
+    margin-left: 0;
+
+    h1:before {
+      @include fontBase(mail-close1);
+    }
+    ul {
+      @include cf;
+      margin-bottom: 10px;
+    }
+    li {
+      float: left;
+      margin-right: 10px;
+    }
+    textarea {
+      width: 438px;
+    }
+  }
+  .messageReserved {
+    @extend %messageEditBase;
+    width: 270px;
+    margin: 19px auto;
+
+    h1:before {
+      content: none;
+    }
+    dl{
+      @include cf;
+      margin-top: -10px;
+    }
+    dt {
+      clear: both;
+      float: left;
+      width: 80px;
+      margin-top: 10px;
+    }
+    dd {
+      margin-top: 10px;
+      float: left;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .howtoSend {
+    @extend %messageEditBase;
+
+    h1 {
+      text-align: center;
+
+      &:before {
+        content: none;
+      }
+    }
+    table {
+      border: 1px solid $borderC;
+      margin: 0 auto 30px;
+    }
+    th {
+      background: #eee;
+      border: 1px solid $borderC;
+      width: 80px;
+      text-align: center;
+      height: 30px;
+    }
+    td {
+      height: 30px;
+      border: 1px solid $borderC;
+      text-align: center;
+    }
+  }
+  .howtoCheck {
+    @extend %messageEditBase;
+    text-align: right;
+    margin-top: -20px;
+
+    label {
+      margin: 0;
+    }
+  }
+}

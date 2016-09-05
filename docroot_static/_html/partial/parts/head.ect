@@ -1,0 +1,100 @@
+<meta charset="UTF-8">
+<title><%- @title %> / <%- @htmlDir %></title>
+
+<link rel="stylesheet" href="../../css/style.css">
+
+<script src="../../js/brandco/Brandco.js"></script>
+<script src="../../js/brandco/Brandco.net.js"></script>
+<script src="../../js/brandco/Brandco.api.js"></script>
+<script src="../../js/brandco/Brandco.helper.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link rel="icon" href="../../img/base/favicon.ico">
+
+<% if @pageType == 'admin' : %>
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+<% else if @pageType == 'pc' : %>
+    <script src="../../js/bi/jquery-barIndicator.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/_unit.js"></script>
+<% if @header == 'true' : %>
+<% else : %>
+    <style>
+        /* site background */
+        body {
+            background-color: #f3f3f3;
+            background-image: url(../../img/dummy/01.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+        }
+
+        /* panel title color */
+        .contBoxMain h1 {
+            background-color: red;
+        }
+
+        /* site title color */
+        .gnavi h1 {
+            color: red;
+        }
+
+        /* nav link color */
+        .gnavi li a {
+            color: red;
+        }
+        body>footer, body>footer a {
+            color: red;
+        }
+    </style>
+<% end %>
+<% else if @pageType == 'sp' : %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../../css/style_sp.css">
+
+    <script src="../../js/bi/jquery-barIndicator.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/_unit_sp.js"></script>
+
+    <!-- syn -->
+    <script src="../../js/syn/synapse.min.js"></script>
+    <script src="../../js/syn/jquery.inview.min.js"></script>
+    <script src="../../js/syn/unit_syn.js"></script>
+    <!-- /.syn -->
+    <% if @header == 'true' : %>
+    <% else : %>
+    <style>
+        /* site background */
+        body {
+            background-color: #f3f3f3;
+            background-image: url(../../img/dummy/01.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+        }
+
+        /* panel title color */
+        .contBoxMain h1 {
+            background-color: red;
+        }
+
+        /* site title color */
+        .gnavi h1 {
+            color: red;
+        }
+
+        /* nav link color */
+        .gnavi li a {
+            color: red;
+        }
+        body>footer, body>footer a {
+            color: red;
+        }
+    </style>
+    <% end %>
+<% end %>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <% include 'partial/parts/head'%>
+
+  <link rel="stylesheet" href="../../css/style_sp.css">
+
+</head>
+<body class="popupAuth">
+  <article class="singleWrap">
+    <h1 class="singleWrapHd1">アカウント情報登録<span class="poweredByMonipla">powerd by<img src="../../img/base/imgLogo_lg.png" width="60" height="14" alt="モニプラ"></span></h1>
+    <section>
+      <p class="entryText">登録には、以下の情報の確認が必要です。</p>
+      <ul class="commonTableList1">
+        <li>
+          <p class="title1">
+            <span class="require1">ニックネーム</span>
+          <!-- /.title1 --></p>
+          <p class="itemEdit">
+            <span class="editInput">
+              <input type="text">
+            <!-- /.editInput --></span>
+          <!-- /.itemEdit --></p>
+        </li>
+        <li>
+          <p class="title1">
+            <span class="require1">メールアドレス</span>
+          <!-- /.title1 --></p>
+          <p class="itemEdit">
+            <span class="editInput">
+              <input type="email">
+            <!-- /.editInput --></span>
+            <small><label><input type="checkbox" checked="">モニプラ・アライドIDからのお知らせを受け取る</label></small>
+          <!-- /.itemEdit --></p>
+        </li>
+      </ul>
+      <ul class="btnSet">
+        <li class="btn3"><a href="#" class="large1">確認して次へ</a></li>
+      <!-- /.btnSet --></ul>
+    </section>
+  <!-- /.singleWrap --></article>
+
+  <% include 'partial/parts/globalFooter' %>
+</body>
+</html>

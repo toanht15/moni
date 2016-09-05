@@ -1,0 +1,497 @@
+// modal
+%modalBase {
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.modal1 {
+  @extend %modalBase;
+  position: absolute;
+  background: rgba(0,0,0,.8);
+}
+.modal2 {
+  @extend %modalBase;
+  position: fixed;
+  background: rgba(255,255,255,.7);
+}
+%modalSet {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  display: none;
+  box-sizing: border-box;
+  border: 1px solid $borderC;
+  border-radius: 3px;
+  background: #FFF;
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 16px;
+
+    img{
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  .modalCloseBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/base/btnClose1.png);
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .makeStepTypeCont {
+    display: block;
+    border-bottom: 1px solid $borderC;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+.modalCont-small {
+  @extend %modalSet;
+  margin-left: -175px;
+  padding: 19px;
+  width: 350px;
+
+  h2 {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+  }
+}
+.modalCont-auth {
+  @extend %modalSet;
+  margin-left: -175px;
+  width: 350px;
+  padding: 9px;
+
+  .singleWrapHd1 {
+    margin: -9px -9px 20px -9px;
+    font-size: 15px;
+  }
+}
+.modalCont-medium,
+.modalCont-ig {
+  @extend %modalSet;
+  margin-left: -280px;
+  padding: 19px;
+  width: 560px;
+}
+.modalCont-large {
+  @extend %modalSet;
+  top: -150px;
+  margin-left: -430px;
+  width: 860px;
+
+  iframe {
+    overflow: hidden;
+    min-height: 500px;
+    width: 100%;
+    border-radius: 3px;
+    vertical-align: top;
+  }
+  &>h1 {
+    margin: 10px;
+  }
+}
+.modalCont-large2 {
+  @extend %modalSet;
+  top: -150px;
+  margin-left: -430px;
+  width: 860px;
+  padding: 19px;
+
+  .modalImgPreview {
+
+    img {
+      vertical-align: top;
+      max-width: 100%;
+    }
+  }
+  &>h1 {
+    margin: 10px;
+  }
+}
+.modalInner-large {
+  padding: 0;
+  margin: auto;
+  width: 858px;
+  height: 100%;
+  background: #FFF;
+
+  .addNew {
+    padding: 10px;
+  }
+  &>header {
+    @include cf;
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    height: 19px;
+    border-top: 10px solid $borderC;
+    border-bottom: 1px solid #ddd;
+
+    h1 {
+      font-size: 16px;
+
+      img{
+        float: left;
+        margin-right: 10px;
+      }
+    }
+    .openLink,
+    .closeLink{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  .innerFB {
+    height: 66px;
+    border-top: 10px solid $fbC;
+  }
+  .innerFB-small {
+    border-top: 10px solid $fbC;
+  }
+  .innerTW {
+    height: 66px;
+    border-top: 10px solid $twC;
+  }
+  .innerTW-small {
+    border-top: 10px solid $twC;
+  }
+  .innerYT {
+    height: 66px;
+    border-top: 10px solid $ytC;
+  }
+  .innerYT-small {
+    border-top: 10px solid $ytC;
+  }
+  .innerRss {
+    height: 66px;
+  }
+  .innerIG {
+    height: 66px;
+    border-top: 10px solid $igC;
+  }
+  .innerIG-small {
+    border-top: 10px solid $igC;
+  }
+  &>footer {
+    margin: 0;
+    padding: 15px 0;
+    width: auto;
+    border: none;
+    background: #f8f8f8;
+    box-shadow: 0 1px 2px rgba(85,85,85,.2) inset;
+    text-align: center;
+
+    .btnSet {
+      margin-top: 0;
+    }
+  }
+  .menuAreaTitle {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+
+    &>span {
+      display: inline-block;
+      margin-right: 10px;
+      height: 64px;
+      vertical-align: middle;
+      line-height: 2.5;
+    }
+    input[type="text"] {
+      width: 460px;
+    }
+  }
+  .modalInner-cont {
+    @include cf;
+    overflow: auto;
+    padding: 10px 0 10px 10px;
+    height: 370px;
+
+    &>*:first-child {
+      margin-top: 0;
+    }
+  }
+  .scroll {
+    overflow-y: scroll;
+  }
+  .innerFB+.modalInner-cont,
+  .innerTW+.modalInner-cont,
+  .innerYT+.modalInner-cont,
+  .innerRss+.modalInner-cont,
+  .innerIG+.modalInner-cont, {
+    height: 322px;
+  }
+  .addNew+.modalInner-cont {
+    height: 320px;
+  }
+  .tenmplateTitl++.modalInner-cont {
+    height: 500px;
+  }
+  .menuAreaTitle+.addNew+.modalInner-cont {
+    height:  239px;
+  }
+
+  .editBRANDCo,
+  .editSNS {
+    margin-top: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid $borderC;
+  }
+}
+.modalAdminUser {
+
+  .userCheck {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  .adminUserImg {
+    width: 38px;
+    height: 38px;
+    border: 1px solid $borderC;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+.modalAdminCoupon {
+
+  textarea {
+    width: 100%;
+    height: 114px;
+  }
+}
+.modalImgPreview {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .title {
+    text-align: left;
+    margin: 0 10px 5px 0;
+    font-weight: bold;
+  }
+  img {
+    vertical-align: top;
+    max-width: 520px;
+    max-height: 520px;
+  }
+  &+& {
+    margin-top: 25px;
+  }
+}
+.modalMoviePreview {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .title {
+    text-align: left;
+    margin: 0 10px 5px 0;
+    font-weight: bold;
+  }
+  .movieWrap {
+    position: relative;
+    display: block;
+    margin: auto;
+    padding-top: 62%;
+    background: #eee;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &+* {
+    margin-top: 10px;
+  }
+}
+.modalMessageConfirm {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.modalIg {
+
+  iframe {
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: auto !important;
+  }
+  .panelComment {
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #eee;
+    padding: 10px;
+  }
+  .modalIgAttention {
+    text-align:center;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+.modalsettlement {
+  text-align: center;
+
+  h1 {
+    text-align: left;
+  }
+
+}
+.modalMail {
+  padding: 15px;
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid $borderC;
+  text-align: center;
+
+  p+p {
+    margin-top: 15px;
+  }
+  .mailAdress {
+    margin-bottom: 10px;
+    display:block;
+  }
+}
+.modalAction {
+  min-height: 134px;
+  text-align: center;
+
+  h1 {
+    height: 73px;
+    line-height: 85px;
+    font-size: 18px;
+  }
+}
+
+.modalGiftMessage {
+
+  dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  dd {
+    margin-bottom: 15px;
+  }
+  [type="text"],
+  textarea {
+    width: 100%;
+  }
+  textarea {
+    height: 120px;
+  }
+}
+.modalCampaignPhoto {
+  margin: 30px 10px 10px;
+
+  .photoPage {
+
+    figure {
+      width: 300px;
+    }
+    .postWrap {
+      width: -webkit-calc(100% - 320px);
+      width: calc(100% - 320px);
+    }
+    .postTitle {
+      font-size: 16px;
+    }
+  }
+  .photoData {
+    width: 100%;
+    margin-bottom: 20px;
+
+    tr {
+      border-top: 1px solid $borderC;
+      border-bottom: 1px solid $borderC;
+    }
+    th {
+      padding: 5px;
+    }
+    td {
+      padding: 5px;
+    }
+    .userImg {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+
+.modalUserRandomSelect {
+
+  .inputNum {
+    margin: 0 5px;
+  }
+  strong {
+    font-weight: bold;
+  }
+  .randomOption {
+    border-top: 1px solid $borderC;
+    border-bottom: 1px solid $borderC;
+    position: relative;
+    padding-top: 10px;
+    margin: 20px auto 10px;
+
+    dt {
+      padding: 0 10px;
+      display: inline-block;
+      background: #fff;
+      position: absolute;
+      top: -.6em;
+      left: 10px;
+    }
+    dd {
+      margin: 10px auto;
+    }
+  }
+}
+
+.userRatingModal {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+
+  .ratingBox {
+    display: inline-block;
+    position: relative;
+    top: inherit;
+    left: inherit;
+    box-shadow: none;
+  }
+  .starRating {
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}

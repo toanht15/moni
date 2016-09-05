@@ -1,0 +1,582 @@
+.adminSettingWrap {
+  padding-bottom: 10px;
+
+  ul {
+    border-top: 1px solid $borderC;
+  }
+  li {
+    border-bottom: 1px solid $borderC;
+
+    &>* {
+      display: block;
+      padding: 0 5px;
+      height: 40px;
+      line-height: 40px;
+
+      &:before {
+        font-size: 23px;
+        color: $iconC1;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 7px;
+      }
+    }
+    a {
+      color: #333;
+
+      &:hover {
+        background: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  .current {
+    background: #FFF;
+  }
+  .admin>*:before {
+    @include fontBase(gear);
+  }
+  .user>*:before {
+    @include fontBase(fan);
+  }
+  .mail>*:before {
+    @include fontBase(mail-close2);
+  }
+  .page>*:before {
+    @include fontBase(page);
+  }
+  .cvtag>*:before {
+    @include fontBase(conversion);
+  }
+  .redirect>*:before {
+    @include fontBase(redirect);
+  }
+  .contact>*:before {
+    @include fontBase(contact);
+  }
+  .login>*:before {
+    @include fontBase(login);
+  }
+}
+.adminUserAuthentication {
+
+  [type=text] {
+    width: 540px;
+  }
+  a.authenticationPagePrev {
+    display: inline-block;
+    margin: 0 20px 0 10px;
+  }
+  p {
+  margin-bottom: 5px;
+  }
+}
+.adminPageAuthenticationEdit {
+
+  p {
+    margin-bottom: 10px;
+  }
+  .wysiwygArea {
+     margin-bottom: 10px;
+  }
+  .adminPageAuthenticationPreview {
+    text-align: right;
+    margin: 0 0 5px;
+  }
+
+}
+
+.adminSettingBase {
+  margin: 0 0 40px 10px;
+
+  &>p {
+    margin-bottom: 15px;
+  }
+  .deleteContents {
+    text-align: right;
+  }
+}
+%adminSettingTableBase {
+  width: 100%;
+
+  thead {
+    background: #eee;
+
+    th,
+    td {
+      border-top: 1px solid $borderC;
+    }
+  }
+  tbody {
+
+    th {
+      min-width: 120px;
+    }
+  }
+  th,
+  td {
+    min-width: 80px;
+    padding: 10px;
+    border-bottom: 1px solid $borderC;
+    -ms-word-break: break-all;
+        word-break: break-all;
+  }
+  .csvBtn {
+    display: block;
+    margin-top: 5px;
+  }
+}
+%adminSettingEditBase {
+  @include cf;
+
+  dt {
+    width: 170px;
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+  }
+  dd {
+    width: 560px;
+    float: left;
+    margin-bottom: 10px;
+
+    input,
+    textarea {
+      width: 100%;
+
+    }
+    .urlParts {
+      width: 250px;
+    }
+    textarea {
+      height: 44px;
+      display: block;
+    }
+  }
+}
+
+.adminUserAttendWrap {
+  @extend .adminSettingBase;
+}
+.adminUserAttend {
+
+  strong {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  input {
+    margin-right: 20px;
+  }
+}
+
+.adminUserListWrap {
+  @extend .adminSettingBase;
+}
+.adminUserList {
+  margin-bottom: 40px;
+
+  li {
+    border-bottom: 1px solid $borderC;
+    padding: 10px 0;
+  }
+  .adminUserImg {
+    width: 38px;
+    height: 38px;
+    border: 1px solid $borderC;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .adminUserName,
+  .adminUserUrl {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+  }
+  .adminUserUrl {
+
+    &>.adminUserDelete {
+      float: right;
+    }
+  }
+
+  .adminUserRole {
+    display: inline-block;
+    width: 435px;
+  }
+  .adminUserDelete {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/base/btnClose1.png) no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+.noticeUserList {
+  @extend .adminUserList;
+
+  .adminUserUrl {
+    width: 220px;
+  }
+}
+.adminUserData {
+
+  li {
+    margin-top: 10px;
+
+    &>ul {
+      margin-left: 20px;
+    }
+  }
+}
+.adminUserSns {
+  margin: 15px auto;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+.adminRuleSetting {
+
+  textarea {
+    width: 100%;
+    height: 200px;
+  }
+  .openNewWindow1 {
+    display: block;
+    text-align: right;
+  }
+}
+
+.adminTagWrap {
+  @extend .adminSettingBase;
+}
+.adminTag {
+
+  textarea {
+    width: 100%;
+    height: 200px;
+  }
+  .openNewWindow1 {
+    display: block;
+    text-align: right;
+  }
+}
+
+.adminPageSettingWrap {
+  @include cf;
+  @extend .adminSettingBase;
+
+  .thumbnail1 {
+    background: #Fff;
+  }
+  .hd3 {
+
+    &>.iconHelp {
+      margin-left: 5px;
+    }
+  }
+  .editProfile {
+    margin-bottom: 40px;
+     float: left;
+     width: 50%;
+  }
+  .btnSet {
+    clear: both;
+  }
+}
+.adminPageSetting {
+  @include cf;
+  margin-bottom: 15px;
+  text-align: left;
+
+  li {
+    margin-bottom: 15px;
+  }
+  .adminOpenSettingWrap {
+    margin-bottom: 0;
+  }
+  .previewUrl+.iconCopy1 {
+    display: block;
+    margin-left: 65px;
+  }
+  .iconCopy1+small {
+    display: block;
+    margin-left: 65px;
+  }
+}
+
+.adminOpenSettingWrap {
+  margin-bottom: 40px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+
+  &>.adminPageSettingWrap {
+    margin-bottom: 0;
+  }
+  .hd2 {
+    margin-top: 0;
+  }
+  .btnSet {
+    margin-bottom: 0;
+  }
+  .iconError1 {
+    margin-bottom: 8px;
+  }
+  .errorGuide {
+    padding: 5px 8px;
+    margin-bottom: 20px;
+    color: $iconC4;
+    border: 1px solid $iconC4;
+    letter-spacing: -0.4em;
+
+    li {
+      padding-right: 20px;
+      letter-spacing: normal;
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        @include miniArrowBase(right, $iconC4, 4px);
+        position: absolute;
+        top: 5px;
+        right: 8px;
+        display: block;
+        content: "";
+      }
+      &:last-child {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+
+.adminPageMeta {
+  @extend %adminSettingEditBase;
+}
+.adminToppageWrap {
+  @extend .adminSettingBase;
+}
+.adminCvtagWrap {
+  @extend .adminSettingBase;
+}
+.adminCvtagTable {
+  @extend %adminSettingTableBase;
+}
+.adminCvtagSetting {
+  @extend %adminSettingEditBase;
+}
+.adminCvtagItem {
+
+  dt {
+    margin: 10px 0 5px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  dd {
+    margin: 5px 0;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+    vertical-align: top;
+  }
+}
+.adminRedirectWrap {
+  @extend .adminSettingBase;
+}
+.adminRedirectTable {
+  @extend %adminSettingTableBase;
+}
+.adminRedirectSetting {
+  @extend %adminSettingEditBase;
+}
+
+.adminManagerItem {
+  position: relative;
+  border-top: 1px dashed $borderC;
+  border-bottom: 1px dashed $borderC;
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  .itemLabel {
+    text-align: center;
+    width: 140px;
+    height: 16px;
+    line-height: 16px;
+    top: -8px;
+    left: -webkit-calc(50% - 70px);
+    left: calc(50% - 70px);
+    background: #F8F8F8;
+    position: absolute;
+  }
+  %adminSettingBase {
+    margin-bottom: 20px;
+  }
+}
+
+.manualList {
+  @extend %listBase;
+
+  li {
+    padding: 0 15px;
+  }
+}
+
+.adminSignUpMailWrap {
+  @extend .adminSettingBase;
+
+  [type=text] {
+    width: 100%;
+  }
+  [type=text] {
+
+    &.SenderName {
+      width: 400px;
+    }
+  }
+}
+
+// Todo: プロフィールアンケート改修後削除する
+.adminCustomProfile {
+
+  .label {
+
+  }
+}
+.customProfileWrap {
+  width: 430px;
+  overflow: hidden;
+  border: 1px solid $borderC;
+  background: #fff;
+  margin: 0 0 20px 20px;
+
+  .title {
+    position: relative;
+    padding: 10px;
+    font-weight: bold;
+
+    .num {
+      width: 15px;
+    }
+    &:after {
+      @include fontBase(arrow-top);
+      font-size: 13px;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -6.5px;
+      color: $iconC2;
+    }
+    .iconError1 {
+      display: block;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+  }
+  [type="text"] {
+    width: 360px;
+  }
+  .itemType {
+    border-top: 1px solid $borderC;
+    padding: 10px;
+
+    li {
+      margin-right: 15px;
+      margin-bottom: 0;
+      display: inline-block;
+    }
+  }
+  .close {
+
+    &:after {
+      @include fontBase(arrow-bottom);
+    }
+    &+.jsModuleContTarget {
+      display: none;
+    }
+  }
+  .supplement1 {
+    margin: 0 10px 10px;
+  }
+}
+.customProfileText {
+  margin-bottom: 10px;
+  padding: 10px 10px 0;
+  border-top: 1px solid $borderC;
+
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  label {
+    width: 100%;
+    display: inline-block;
+  }
+  .num {
+    display: inline-block;
+    width: 30px;
+  }
+  [type="text"] {
+    margin-left: 0;
+  }
+  .iconBtnDelete {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+}
+.customProfilePulldown {
+  margin-bottom: 10px;
+  padding: 10px 10px 0;
+  border-top: 1px solid $borderC;
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    display: block;
+  }
+}
+.customProfileSetting {
+  overflow: hidden;
+  padding: 10px 10px 0;
+  border-top: 1px solid $borderC;
+
+  dt {
+    float: left;
+    margin-bottom: 10px;
+    width: 336px;
+    height: 26px;
+    line-height: 26px;
+  }
+  dd {
+    float: right;
+    margin-bottom: 10px;
+    width: 74px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+
+    &>* {
+      margin: 0;
+    }
+  }
+}
+.customItemDelete {
+  margin: 0 10px 10px;
+}

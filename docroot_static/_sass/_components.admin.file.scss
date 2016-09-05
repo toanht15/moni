@@ -1,0 +1,122 @@
+.fileUploadWrap {
+  margin-bottom: 30px;
+
+  .uploadToggle {
+    margin-bottom: 10px;
+  }
+  .uploadcont {
+    display: none;
+  }
+}
+.fileUploadList {
+  border-top: 1px dotted $borderC;
+
+  li {
+    border-bottom: 1px dotted $borderC;
+    padding: 5px 0;
+
+    &>* {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .fileName {
+      width: 700px;
+      margin-right: 50px;
+    }
+    .status {
+      width: 110px;
+      margin-right: 50px;
+    }
+    .cancel {
+      text-align: right;
+      width: 50px;
+    }
+  }
+}
+.fileUploadAreaWrap {
+  margin: 20px auto;
+}
+.fileUploadArea {
+  border: 1px dotted $borderC;
+  height: 80px;
+  position: relative;
+  margin: 15px auto 10px;
+
+  p {
+    line-height: 80px;
+    text-align: center;
+  }
+  .or {
+    line-height: 20px;
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    background: #f8f8f8;
+  }
+  &.hover {
+    background: #fff9e8;
+  }
+}
+.fileList1 {
+  @extend %pageListBase1;
+
+  .thumb {
+    width: 80px;
+
+    img {
+      width: 80px;
+      height: 80px;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+  .edit {
+    width: 35px;
+  }
+  .fileName {
+    -ms-word-break: break-all;
+        word-break: break-all;
+
+    .iconCopy1 {
+      margin-left: 10px;
+    }
+    .supplement1 {
+      padding-top: 10px;
+      margin-top: 10px;
+      display: block;
+      border-top: 1px dotted $borderC;
+    }
+  }
+}
+.fileEdit1 {
+  @extend %pageEditBase;
+
+  .type {
+
+    img {
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+  .btn2 {
+    display: block;
+    margin-top: 10px;
+  }
+  .fileDescription {
+    width: 600px;
+    height: 4em;
+    vertical-align: top;
+  }
+}
+.fileEditCheck {
+  @extend %adminCheckBase;
+  margin-top: 20px;
+}

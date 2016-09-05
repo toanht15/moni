@@ -1,0 +1,26 @@
+<% extend 'partial/layout/page.admin.modal' %>
+
+<% block 'sidenav' : %>sidenav07<% end %>
+
+<% block 'mainContents' : %>
+    <header>
+      <h1>年齢確認ページ</h1>
+    </header>
+    <section class="modalInner-cont">
+      <div class="adminPageAuthenticationEdit">
+        <p>「はい」のリンク先（href）に ##LINKYES## のタグを挿入してください。（例：a href="##LINKYES##"）<br>
+        「いいえ」のリンク先（href）に ##LINKNO## のタグを挿入してください。（例：a href="##LINKNO##"）<br></p>
+        <div class="wysiwygArea">
+          <p class="adminPageAuthenticationPreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+          <div><img src="../../img/dummy/imgWyswigThin.png" width="800" height="470" alt="wyswig dummy" style="display: block;"></div>
+        <!-- /.wysiwygArea --></div>
+
+      <!-- /.adminPageAuthenticationEdit --></div>
+    </section>
+    <footer>
+        <p class="btnSet">
+          <span class="btn2"><a href="#modal1">キャンセル</a></span>
+          <span class="btn3"><a href="#modal1">保存</a></span>
+        </p>
+    </footer>
+<% end %>

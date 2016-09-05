@@ -1,0 +1,24 @@
+<% extend 'partial/layout/page.user.pc' %>
+
+<% block 'mainContents' : %>
+    <section class="mypageUserWrap">
+      <h1 class="mypageUser"><figure><img src="../../img/dummy/02.jpg" height="40" width="40" alt="user img"></figure><span class="nametext">サンプルテキストサンプルテキストサンプルテキストさん</span><span class="edit"><a href="#" class="jsMypageSetteing">設定変更</a></span></h1>
+      <div class="mypageSetting jsMypageSetteingTarget">
+        <div class="btnSet"><p class="btn3"><a href="#" class="large2">アカウントの設定</a></p></div>
+        <dl>
+          <dt>メッセージをメールで受け取る</dt>
+          <dd><label><input type="radio" name="radio1">受け取る</label></dd>
+          <dd><label><input type="radio" name="radio1">受け取らない</label></dd>
+        </dl>
+        <p class="withdraw"><a href="#">退会手続き</a></p>
+      <!-- /.mypageSetting --></div>
+    <!-- /.mypageUserWrap --></section>
+
+    <section class="messageWrap">
+
+      <h2>メッセージ</h2>
+      <p class="messageListNone">
+        <img src="../../img/base/imgMessageNone1.jpg" alt="メーッセージ無し">メッセージはまだ届いておりません。
+      <!-- /.messageListNone --></p>
+    <!-- /.messageWrap --></section>
+<% end %>

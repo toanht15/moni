@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>03_404_sp / others</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/style_sp.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!--<script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>-->
+  <script src="../../../../js/_unit_sp.js"></script>
+
+  <!-- syn -->
+  <script src="../../../../js/syn/synapse.min.js"></script>
+  <script src="../../../../js/syn/jquery.inview.min.js"></script>
+  <script src="../../../../js/syn/unit_syn.dev.js"></script>
+  <!-- /.syn -->
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #efefef;
+      /* background-image: url(../../img/dummy/01.png); */
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#side-menu"  class="syn-notice jsMenuTrigger">MENU</a></p>
+      <!-- /.companyName --></div>
+      <aside class="drawerNaviWrap close jsModalTarget-menu" id="side-menu">
+        <div class="drawerNavi">
+
+          <script src="http://i.socdm.com/sdk/js/adg-script-loader.js?id=31095&targetID=adg_31095&displayid=1&adType=FREE&async=false&tagver=2.0.0"></script>
+          <script>
+            // ロード完了時イベント
+            window.addEventListener($adg.listener.loaded, function (e) {
+              // inview は、オブジェクトの各辺が描画領域に入ると報告されるが、そのうち最初の1回だけ
+              // 受け取れるようにフラグを立てて管理する。
+              var firstInView = false;
+
+              $('#adg_div').css('display', 'block');
+              // jquery.inviewによるinview判定
+              $('#adg_div').on('inview', function(event, isInView){
+                if (isInView) {
+                  if (!firstInView) {
+                    $adg.ads.trackShowEvent(); // トラッキング
+                    firstInView = true;
+                  }
+                }
+              });
+            });
+            window.addEventListener($adg.listener.failed, function () {
+              //console.log('adFailed!');
+            });
+          </script>
+          <h2 class="hd2">ブランド名orモニプラ</h2>
+          <ul class="privateMenu">
+            <li class="home"><a href="http://www.aainc.co.jp/">トップページ</a></li>
+            <li><a href="#">ほめられ美脚なら♪</a></li>
+            <li><a href="#">脱ビール腹！大人の男磨きしよう！</a></li>
+            <li><a href="#">男のやせる専門店誕生</a></li>
+          </ul>
+
+          <div id='synapse-service-list-outer-box' style='display: none'>
+            <h2 class="hd2">おすすめサービス</h2>
+            <ul id='synapse-service-list'>
+            </ul>
+          </div>
+
+          <div id="synapse-logo-box" class="synapse_logo" style='display: none'></div>
+        </div>
+      </aside>
+      <div class="modalBase jsModalBase"></div>
+    <!-- /.company --></section>
+  </header>
+  <article>
+    <section class="singleWrap">
+      <h1 class="hd1">利用規約</h1>
+      <section class="agreementCont">
+      <p>第1条（目的）<br>
+アライドID利用規約は、アライドアーキテクツ株式会社が運営する「モニプラ」その他アライドアーキテクツ株式会社が提供するサービスの提供を受けるために必要なアライドIDの利用条件等を定めるものです。<br>
+<br>
+第2条（定義）<br>
+「本利用規約」とは、アライドID利用規約をいいます。<br>
+「当社」とは、アライドアーキテクツ株式会社をいいます。<br>
+「各サービス」とは、「モニプラ」その他当社が提供しているもののうち、当社が指定するサービスをいいます。<br>
+「アライドID」とは、各サービスの提供を受けるために必要なIDであり、本利用規約に定める利用条件等を承諾のうえ、当社が別途定める手続に従い、当社が登録ユーザーに発行する符号をいいます。<br>
+「パスワード」とは、アライドIDと組み合わせて、登録ユーザーとその他の者を識別するために用いられる符号をいい、各サービスの提供を受けるために必要なものです。<br>
+「アライドID等」とは、アライドID及びパスワードをいいます。<br>
+「アライドIDサービス」とは、各サービスを含めたアライドID等に関して当社より提供される一切のサービスをいいます。<br>
+「登録希望者」とは、アライドID等の付与を受けることを希望する者といいます。<br>
+「登録ユーザー」とは、アライドID等の付与を受けることを希望し、本利用規約に同意の上、アライドID等の付与の申し込みをした者のうち、当社が承認をした者をいいます。<br>
+「登録情報」とは、アライドID等の付与を受ける目的で、登録希望者又は登録ユーザーが当社に提供する一切の情報をいいます。<br>
+「個人情報」とは、アライドIDサービスの提供を通じて、当社が取得した登録ユーザー及び登録ユーザーに関する特定の個人を識別できる情報（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものを含みます）をいいます。<br>
+「個人情報等」とは、上記に定める登録情報及び個人情報をいいます。<br>
+「Cookie」とは、ウェブサイトの提供者が、ブラウザを介して訪問者のコンピュータに一時的に簡単なデータを書き込む仕組みをいいます（訪問者の識別や認証、訪問回数の記録などに利用します）。<br>
+「退会」とは、登録ユーザーが、本利用規約及び当社が定める方法により、登録情報を抹消し、アライドIDサービスの提供を受けることを終了することをいいます。<br>
+「パートナーサービス」とは、当社との間で契約を締結した第三者が企画運営するコンテンツやサービス等のことをいいます。<br>
+<br>
+第3条（本規約の適用範囲）<br>
+本利用規約は、当社が運営する各サービスの提供を受けるために必要なアライドIDの利用に関し、当社と登録ユーザーとの間に適用されるものです。また、本利用規約は各サービスにおける利用規約等の諸規程と共に重畳的に適用されます。ただし、各サービスの利用においては、別途、各サービスの利用規約等に同意して頂くことが必要な場合があります。</p>
+      <!-- /.agreementCont --></section>
+    <!-- /.agreementWrap --></section>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+</body>
+</html>

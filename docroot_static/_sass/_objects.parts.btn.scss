@@ -1,0 +1,379 @@
+/*
+  common btns
+    1:black 2:white 3:green 4:red
+  sns btn
+  edit btn
+  branch btn
+*/
+
+// common btns
+.btn1 {
+    @include btnSet1(#fff, #5e5e5e);
+}
+.btn2 {
+    @include btnSet1(#333, #f3f3f3);
+}
+.btn3 {
+    @include btnSet1(#fff, #2cb395);
+}
+.btn4 {
+    @include btnSet1(#fff, #f36766);
+}
+.btnSet {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0;
+
+  &>* {
+    margin: 0 5px;
+  }
+}
+.btnList {
+  text-align: center;
+  letter-spacing: -.4em;
+
+  li {
+    margin-bottom: 8px;
+    letter-spacing: normal;
+
+    &:nth-child(odd) {
+      margin-right: 8px;
+    }
+    &:last-child,
+    &:nth-last-child(2):nth-child(odd) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// sns btn
+.btnSnsFb1 {
+  @include btnSnsBase(#fff, $fbC, 'fb1');
+}
+.btnSnsTw1 {
+  @include btnSnsBase(#fff, $twC, 'tw2');
+}
+.btnSnsIn1 {
+  @include btnSnsBase(#fff, $inC, 'in1');
+}
+.btnSnsLn1 {
+  @include btnSnsBase(#fff, $lnC, 'ln2');
+}
+.btnSnsIg1 {
+  @include btnSnsBase(#fff, $igC, 'ig1');
+}
+.btnSnsGp1 {
+  @include btnSnsBase(#fff, $gpC, 'gp2');
+}
+.btnSnsYh1 {
+  @include btnSnsBase(#333, $yhC, 'yh1');
+
+  .login1::before {
+    color: #f00;
+  }
+  .arrow1::before {
+    color: #f00;
+  }
+  .square1 {
+
+    .inner::before {
+      color: #f00;
+    }
+  }
+}
+.btnMail1 {
+  @include btnSnsBase(#333, #ddd, 'mail-close2');
+}
+
+%snsBtnBase1 {
+
+  &>* {
+    border-radius: 3px;
+    width: 300px;
+    height: 37px;
+    line-height: 37px;
+
+    &:before {
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      display: block;
+      color: #FFF;
+      font-size: 25px;
+    }
+  }
+  &>a:hover:before,
+  &>a:active:before {
+    opacity: 0.7;
+  }
+}
+.btnGDO {
+  @include btnBase1(#3493d6, #fff);
+  @extend %snsBtnBase1;
+
+  &>*:before {
+    width: 25px;
+    height: 25px;
+    content: "";
+    background: url(../img/thirdParty/iconGDO1.png) no-repeat;
+  }
+}
+
+.btnTwTweet {
+  @include btnBase1(#fff, #55ACEE);
+
+  &>* {
+    position: relative;
+    width: 200px;
+    height: 37px;
+    border-radius: 3px;
+    line-height: 37px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+
+    &:before {
+      @include iconFontLeft(tw2);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      font-size: 15px;
+      width: 15px;
+      height: 15px;
+      color: #fff;
+    }
+  }
+}
+.btnTwRetweet {
+  @include btnBase1(#fff, #55ACEE);
+
+  &>* {
+    position: relative;
+    width: 200px;
+    height: 37px;
+    border-radius: 3px;
+    line-height: 37px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+
+    &:before {
+      @include iconFontLeft(retweet-action);
+      font-size: 18px;
+    }
+  }
+}
+
+%btnFollowBase {
+
+  &>* {
+    text-align: left;
+    position: relative;
+    width: 130px;
+    height: 27px;
+    border-radius: 3px;
+    line-height: 27px;
+    font-size: 13px;
+    text-align: center;
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      font-size: 15px;
+      color: #fff;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+.btnTwFollow {
+  @include btnBase1(#fff, $twC);
+  @extend %btnFollowBase;
+
+  &>* {
+    font-weight: normal;
+
+    &:before {
+      @include iconFontLeft(tw2);
+    }
+  }
+  .large1 {
+    width: 200px;
+    height: 37px;
+    font-size: 15px;
+    line-height: 37px;
+  }
+}
+.btnYtFollow {
+  @include btnBase1(#fff, $ytC);
+  @extend %btnFollowBase;
+
+  &>* {
+    font-weight: normal;
+
+    &:before {
+      @include iconFontLeft(youtube);
+    }
+  }
+}
+
+.btnShareFb,
+.btnLikeFb {
+  @include btnShareBase(#fff, $fbC);
+
+  &>*:before {
+    @include iconFontLeft(fb1);
+    margin-right: 10px;
+  }
+}
+.btnShareTw {
+  @include btnShareBase(#fff, $twC);
+
+  &>*:before {
+    @include iconFontLeft(tw2);
+    margin-right: 10px;
+  }
+}
+
+// edit btn
+@mixin btnEditBase1($color, $btnC) {
+  $bgLight: mix($btnC, #fff, 80%);
+  $bgDark: mix($bgLight, #000, 90%);
+  $shadow: calc-color-bright($btnC, -25);
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+  border-radius: 3px;
+  background: $btnC;
+  // box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.35) inset;
+  color: $color;
+  text-align: center;
+  line-height: 28px;
+  box-shadow: 0 -3px 0 0 $shadow inset;
+
+  [type="text"],
+  [type="text"]:disabled {
+    padding: 0;
+    width: 140px;
+    height: 24px;
+    background: $bgLight;
+    color: $color;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid $bgDark;
+  }
+}
+
+.btn1Edit {
+  @include btnEditBase1(#fff, #5e5e5e);
+}
+.btn2Edit {
+  @include btnEditBase1(#333, #f8f8f8);
+}
+.btn3Edit {
+  @include btnEditBase1(#fff, #2cb395);
+}
+.btn4Edit {
+  @include btnEditBase1(#fff, #f36766);
+}
+
+.btnArrowB1 {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #888;
+  vertical-align: middle;
+  border-radius: 2px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:after {
+    @include miniArrowBase(bottom, #333, 4px);
+    border-top: 4px solid #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -4px;
+    content: "";
+  }
+}
+
+// branch btn
+%btnBranchBase {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:before {
+    top: 0;
+    left: 0;
+    font-size: 21px;
+    color: #fff;
+    display: block;
+    position: absolute;
+  }
+  span {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    display: none;
+    margin-left: -35px;
+    width: 70px;
+    height: 28px;
+    border-radius: 4px;
+    background: #404040;
+    color: #FFF;
+    text-align: center;
+    line-height: 28px;
+
+    &:after {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      margin-left: -6px;
+      border: 6px solid transparent;
+      border-top: 6px solid #404040;
+      border-bottom: 0 solid transparent;
+      content: "";
+    }
+  }
+  &:hover span {
+    display: block;
+  }
+}
+.btnBranch1 {
+  @extend %btnBranchBase;
+
+  &:before {
+    @include fontBase(branch-parallel);
+  }
+}
+.btnBranch2 {
+  @extend %btnBranchBase;
+
+  &:before {
+    @include fontBase(branch-serial);
+  }
+}
+
+.boxCloseBtn {
+
+  a {
+    float: right;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/base/btnClose1.png);
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

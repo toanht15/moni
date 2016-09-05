@@ -1,0 +1,6 @@
+AmazonS3:
+  AccessKey: AKIAJTUYNFLTGJBZLOUA
+  SecretKey: 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
+  BucketName: parts.brandco.jp
+  TmpPath: tmp/
+  ImagePath: image/

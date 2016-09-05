@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_input / auth</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="btn3"><a href="#" class="small1">新規登録</a></li><li class="login"><a href="#">ログイン</a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#" class="jsSpOpenLink">MENU</a></p>
+      <!-- /.companyName --></div>
+      <nav class="gnavi">
+        <ul class="jsGnavi">
+          <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+        </ul>
+        <a href="#" class="openLink">0</a>
+      <!-- /.gnavi --></nav>
+    <!-- /.company --></section>
+  </header>
+  <article class="singleWrap">
+    <h1 class="singleWrapHd1">アカウント情報入力</h1>
+    <section class="cooperation">
+      <p>ケンタッキーフライドチキンBRANDCoページを利用するにあたり、AAiDのデータを利用します。サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <ul class="accountLink">
+        <li class="linked"><img src="../../../../img/dummy/02.jpg" width="62" height="62" alt="AAID"></li><li><img src="../../../../img/dummy/02.jpg" width="62" height="62" alt="dummy company"></li>
+      <!-- /.accountList --></ul>
+    <!-- /.cooperation --></section>
+    <section class="cooperation">
+      <p>ケンタッキーフライドチキンBRANDCoページを利用するにあたり、AAiDのデータを利用します。サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <ul class="accountLink">
+        <li><img src="../../../../img/dummy/02.jpg" width="62" height="62" alt="AAID"></li><li><img src="../../../../img/dummy/02.jpg" width="62" height="62" alt="dummy company"></li>
+      <!-- /.accountLink --></ul>
+    <!-- /.cooperation --></section>
+    <p class="attention1">※登録は15歳以上の方のみとさせていただいています</span><br>※登録は女性のみとさせていただいています</p>
+    <ul class="commonTableList1">
+      <li>
+        <p class="title1">
+          <span class="require1">氏名（かな）</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <label class="editName"><span>姓</span><input type="text" class="name"></label><label class="editName"><span>名</span><input type="text" class="name"></label>
+          </span>
+          <span class="editInput">
+            <label class="editName"><span>せい</span><input type="text" class="name"></label><label class="editName"><span>めい</span><input type="text" class="name"></label>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">性別</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <input type="radio" id="radio01" class="customRadio" name="radio"><label for="radio01">男性</label><input type="radio" id="radio02" class="customRadio" name="radio"><label for="radio02">女性</label>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">生年月日</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <label>西暦<input type="number" autocorrect=”off” autocapitalize=”off” class="inputNum">年</label><label><input type="number" autocorrect=”off” autocapitalize=”off” class="inputNum">月</label><label><input type="number" autocorrect=”off” autocapitalize=”off” class="inputNum">日</label>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">郵便番号</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <input type="text" autocorrect=”off” autocapitalize=”off” class="inputNum">－<input type="text" autocorrect=”off” autocapitalize=”off” class="inputNum">
+            <a href="#">住所検索</a><span class="supplement1">※半角数字</span>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">都道府県</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <select name="" id="">
+              <option value="1">北海道</option>
+              <option value="2">青森県</option>
+              <option value="3">岩手県</option>
+              <option value="4">宮城県</option>
+              <option value="5">秋田県</option>
+              <option value="6">山形県</option>
+              <option value="7">福島県</option>
+              <option value="8">茨城県</option>
+              <option value="9">栃木県</option>
+              <option value="10">群馬県</option>
+              <option value="11">埼玉県</option>
+              <option value="12">千葉県</option>
+              <option value="13" selected="selected">東京都</option>
+              <option value="14">神奈川県</option>
+              <option value="15">新潟県</option>
+              <option value="16">富山県</option>
+              <option value="17">石川県</option>
+              <option value="18">福井県</option>
+              <option value="19">山梨県</option>
+              <option value="20">長野県</option>
+              <option value="21">岐阜県</option>
+              <option value="22">静岡県</option>
+              <option value="23">愛知県</option>
+              <option value="24">三重県</option>
+              <option value="25">滋賀県</option>
+              <option value="26">京都府</option>
+              <option value="27">大阪府</option>
+              <option value="28">兵庫県</option>
+              <option value="29">奈良県</option>
+              <option value="30">和歌山県</option>
+              <option value="31">鳥取県</option>
+              <option value="32">島根県</option>
+              <option value="33">岡山県</option>
+              <option value="34">広島県</option>
+              <option value="35">山口県</option>
+              <option value="36">徳島県</option>
+              <option value="37">香川県</option>
+              <option value="38">愛媛県</option>
+              <option value="39">高知県</option>
+              <option value="40">福岡県</option>
+              <option value="41">佐賀県</option>
+              <option value="42">長崎県</option>
+              <option value="43">熊本県</option>
+              <option value="44">大分県</option>
+              <option value="45">宮崎県</option>
+              <option value="46">鹿児島県</option>
+              <option value="47">沖縄県</option>
+            </select>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">市区町村</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <input type="text"><span class="supplement1">注意書きサンプルテキストサンプルテキスト</span>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">番地</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <input type="number" autocorrect=”off” autocapitalize=”off”><span class="supplement1">注意書きサンプルテキストサンプルテキスト</span>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          建物
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <input type="text"><span class="supplement1">注意書きサンプルテキストサンプルテキスト</span>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">電話番号</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <input type="tel" class="inputNum">－<input type="tel" class="inputNum">－<input type="tel" class="inputNum">
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">ラジオの項目</span>
+        <!-- /.title1 --></p>
+        <ul class="itemEdit">
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio21"><label for="radio21">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio22"><label for="radio22">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio23"><label for="radio23">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio24"><label for="radio24">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="radio" name="radioItem3" class="customRadio" id="radio25"><label for="radio25">その他</label><textarea name="" id="" cols="30" rows="10"></textarea></li>
+        <!-- /.itemEdit --></ul>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">チェックの項目</span>
+        <!-- /.title1 --></p>
+        <ul class="itemEdit">
+          <li><input type="checkbox" class="customCheck" id="check11"><label for="check11">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check12"><label for="check12">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check13"><label for="check13">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check14"><label for="check14">サンプルテキストサンプルテキスト</label></li>
+          <li><input type="checkbox" class="customCheck" id="check15"><label for="check15">その他</label><textarea name="" id="" cols="30" rows="10"></textarea></li>
+        <!-- /.itemEdit --></ul>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">テキストエリア</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <span class="editInput">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          <!-- /.editInput --></span>
+        <!-- /.itemEdit --></p>
+      </li>
+      <li>
+        <p class="title1">
+          <span class="require1">プルダウン</span>
+        <!-- /.title1 --></p>
+        <p class="itemEdit">
+          <select>
+            <option value="#">サンプルテキストサンプルテキストサンプルテキストサンプ</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+            <option value="#">サンプルテキストサンプルテキスト</option>
+          </select>
+        <!-- /.itemEdit --></p>
+      </li>
+    <!-- /.commonTableList1 --></ul>
+    <h2 class="hd2">利用規約</h2>
+    <section class="ruleAreaWrap1">
+      <div class="ruleArea">
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <!-- /.ruleArea --></div>
+      <p class="supplement1">アカウントを作成するに当たり、<a href="#" class="openNewWindow1">AAID利用規約</a>、<a href="#" class="openNewWindow1">BRANDCo利用規約</a>に同意したものとみなします</p>
+    <!-- /.ruleAreaWrap1 --></section>
+    <p class="btnSet"><span class="btn3"><a href="06_signup_iframe_confirm.html">確認画面へ</a></span></p>
+  <!-- /.singleWrap --></article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+</body>
+</html>

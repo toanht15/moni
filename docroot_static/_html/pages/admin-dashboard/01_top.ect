@@ -1,0 +1,209 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1">Dashboard</h1>
+
+    <div class="dashboardFliter">
+      <h2>2015/03/30 まで</h2>
+      <div class="filter">
+        <ul class="type">
+          <li><label><input type="radio" name="type1" checked="checked">累計</label></li
+          ><li><label><input type="radio" name="type1">期間指定</label></li>
+        <!-- /.type --></ul
+        ><p class="term">
+          <select>
+            <option value="">昨日まで</option>
+            <option value="">今日まで</option>
+            <option value="">カスタム</option>
+          </select
+          ><span><input type="text" class="jsDate inputDate" placeholder="年/月/日"></span>
+        <!-- /.term --></p
+        ><p class="btn3"><a href="#" class="small1">適用</a></p>
+      <!-- /.filter --></div>
+    <!-- /.dashboardFliter --></div>
+
+    <div class="dashboardFliter">
+      <h2>2015/01/01〜2015/03/30</h2>
+      <div class="filter">
+        <ul class="type">
+          <li><label><input type="radio" name="type2">累計</label></li
+          ><li><label><input type="radio" name="type2" checked="checked">期間指定</label></li>
+        <!-- /.type --></ul
+        ><p class="term">
+          <select>
+            <option value="">過去7日間</option>
+            <option value="">過去30日間</option>
+            <option value="">先月</option>
+            <option value="">前週</option>
+            <option value="">カスタム</option>
+          </select
+          ><span><input type="text" class="jsDate inputDate" placeholder="年/月/日"><span class="dash">〜</span><input type="text" class="jsDate inputDate" placeholder="年/月/日"></span>
+        <!-- /.term --></p
+        ><p class="iconError1">エラーテキスト</p
+        ><p class="btn3"><a href="#" class="small1">適用</a></p>
+      <!-- /.filter --></div>
+    <!-- /.dashboardFliter --></div>
+
+    <div class="dashboardGrafWrap jsMasonry">
+      <section class="dashboardGraf_fan jsPanel">
+        <h1>ファン数</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+      <!-- /.dashboardGraf_fan --></section>
+
+      <section class="dashboardGraf_account jsPanel">
+        <h1>連携済みアカウント</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+      <!-- /.dashboardGraf_account --></section>
+
+      <section class="dashboardGraf_sex jsPanel">
+        <h1>男女比</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+      <!-- /.dashboardGraf_sex --></section>
+
+      <section class="dashboardGraf_address jsPanel">
+        <h1>都道府県</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#modal1" class="jsOpenModal">もっと見る</a></p>
+      <!-- /.dashboardGraf_address --></section>
+
+      <section class="dashboardGraf_age jsPanel">
+        <h1>年齢比</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+      <!-- /.dashboardGraf_age --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ちいさいぱねる<br>ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ちいさいぱねる<br>ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ちいさいぱねる<br>ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_medium jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ちゅうくらいのぱねる<br>ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_medium jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ちゅうくらいのぱねる<br>ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_large jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          おおきいぱねる<br>ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData" style="height: 200px;">
+          <p class="loading"><img src="../../img/base/amimeLoading.gif" width="50" height="50" alt="loading..."></p>
+        <!-- /.grafData --></div>
+        <!-- <p class="moreData"><a href="#">もっと見る</a></p> -->
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_small jsPanel">
+        <h1>カスタム</h1>
+        <div class="grafData">
+          ここにぐらふサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        <!-- /.grafData --></div>
+        <p class="moreData"><a href="#">もっと見る</a></p>
+      <!-- /.dashboardGraf --></section>
+
+      <section class="dashboardGraf_pv jsPanel">
+        <h1>PV数</h1>
+        <div class="grafData">
+          ここにぐらふ
+        <!-- /.grafData --></div>
+      <!-- /.dashboardGraf_pv --></section>
+    <!-- /.dashboardGrafWrap --></div>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-large jsModalCont">
+      <h1>都道府県（などのタイトルが入る）</h1>
+      <div>ここに都道府県とかの項目が多いグラフが入る</div>
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script src="../../js/masonry.pkgd.min.js"></script>
+  <script src="../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    jQuery(function($) {
+      $.datepicker.setDefaults($.datepicker.regional['ja']);
+      $(".jsDate").datepicker();
+      $('.jsMasonry').masonry({
+          // options
+          itemSelector: '.jsPanel',
+          gutter: 12,
+          columnWidth: 150
+      });
+    });
+  </script>
+<% end %>

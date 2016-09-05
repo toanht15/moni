@@ -1,0 +1,193 @@
+﻿@charset "utf-8";
+/* ### parts.scss ### */
+//======================================================================================================================
+.mainCol .ckeditorWrap {
+
+.uqwimaxHeadline1 {
+  background: url(../img/base/stripe1.png) 50% 50% repeat-x;
+  background-size: 33px 5px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.uqwimaxHeadline2 {
+  padding: 0 0 10px;
+  border-bottom: 3px solid #99D6FF;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.uqwimaxButton1 {
+  text-align: center;
+  padding: 0 25px;
+  margin: 0 0 25px;
+
+  a {
+    border-radius: 5px;
+    display: block;
+    padding: 15px 0;
+    position: relative;
+    background: #E4007F;
+    box-shadow: 0 5px 0 0 #B50065;
+    color: #fff;
+    font-size: 13px;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 9px;
+      background: url(../img/base/arrowPink1.gif);
+      background-size: contain;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      margin-top: -5px;
+      font-size: 12px;
+    }
+  }
+  &.uqwimaxMoreButton1 {
+    a:before {
+      position:static;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px 2px 0;
+      background: url(../img/base/circlePink1.png);
+      background-size: contain;
+      width: 14px;
+      height: 15px;
+    }
+  }
+}
+}/* end .mainCol .ckeditorWrap */
+
+/* for PC 
+================================================================================================================================================================================ */
+@media screen and (min-width: 641px) {
+.mainCol .ckeditorWrap {
+
+.uqwimaxHeadline1 {
+  background: url(../img/base/pc/stripe1.png) 6px 50% repeat-x;
+  text-align: center;
+  padding-top: 8px;
+  display: block;
+
+  img {
+    display: none;
+  }
+  &.uqwimaxTopPagePickupTtl {
+    padding: 30px 0 20px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 240px;
+      height: 73px;
+      background: url(../img/index/pc/ttlPickup.png) 50% 0 no-repeat;
+    }
+  }
+  &.uqwimaxTopPageTsushinTtl {
+    padding: 30px 0 20px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 240px;
+      height: 73px;
+      background: url(../img/index/pc/ttlTsushin.png) 50% 0 no-repeat;
+    }
+  }
+  &.uqwimaxTopPageKuchikomiTtl {
+    padding: 30px 0 20px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 280px;
+      height: 73px;
+      background: url(../img/index/pc/ttlKuchikomi.png) 50% 0 no-repeat;
+    }
+  }
+  &.uqwimaxMatomeTtl {
+    padding: 30px 0 20px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 240px;
+      height: 73px;
+      background: url(../img/index/pc/ttlMatome.png) 50% 0 no-repeat;
+    }
+  }
+  &.uqwimaxKuchikomiTtl {
+    padding: 30px 0 20px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 280px;
+      height: 73px;
+      background: url(../img/index/pc/ttlKuchikomi.png) 50% 0 no-repeat;
+    }
+  }
+}
+.uqwimaxHeadline2 {
+  padding: 0 0 15px;
+  border-bottom: 4px solid #99D6FF;
+  
+  img {
+    display: none;
+  }
+  &.uqwimaxSnsAccountTtl {
+    height: 25px;
+    background: url(../img/sns/pc/ttlSnsAccount.gif) 50% 0 no-repeat;
+  }
+}
+
+.uqwimaxButton1 {
+  text-align: center;
+  padding: 0 25px;
+  margin: 0 0 25px;
+
+  a {
+    display: inline-block;
+    padding: 15px 80px;
+    font-size: 15px;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 7px;
+      height: 13px;
+      background: url(../img/base/arrowPink1.gif);
+      background-size: contain;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      margin-top: -5px;
+    }
+    &:hover {
+      text-decoration: none;
+      background: #EF53AA;
+      transition: all .2s;
+    }
+    &:active {
+      transition: all 0s;
+      background: #CC0072;
+      box-shadow: 0 -5px 0 0 #B50065;
+      transform: translate(0,5px);
+    }
+  }
+  &.uqwimaxMoreButton1 {
+    a:before {
+      background: url(../img/base/circlePink1.png);
+      background-size: contain;
+      width: 28px;
+      height: 29px;
+      margin: 0 15px 4px 0;
+    }
+  }
+}
+
+}/* end .mainCol .ckeditorWrap */
+}

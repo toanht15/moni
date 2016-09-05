@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_file_edit / admin-others</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+
+    <article>
+        <h1 class="hd1">ファイル編集</h1>
+
+        <dl class="fileEdit1">
+            <dt><label class="require1" for="field1">ファイル名</label></dt>
+            <dd><input type="text" class="categoryName" id="field1"><small class="textLimit">（<span>0</span>文字／50文字）</small><br><small>※ページに埋め込み済のファイルは、リンク切れにご注意ください</small><br><span class="iconError1">必須項目です的な文言</span></dd>
+            <dt><label for="field2">ファイルの説明</label></dt>
+            <dd>
+                <textarea name="" id="field2" cols="30" rows="2" class="fileDescription"></textarea>
+            </dd>
+            <dt>ファイルの種類</dt>
+            <dd class="type">画像
+                <img src="../../img/dummy/01.png" width="40" height="40" alt="画像ファイル">
+            </dd>
+            <dt>大きさ</dt>
+            <dd>100 × 100 - 200KB</dd>
+            <dt>URL</dt>
+            <dd><span class="url">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css</span><a href="#" class="iconCopy1">URLをコピー</a></dd>
+        <!-- /.fileEdit1 --></dl>
+
+        <div class="fileEditCheck">
+            <ul>
+                <li class="btn3"><a href="#">保存</a></li>
+                <li class="btn4"><a href="#modal1" class="small1 jsOpenModal">削除</a></li>
+            </ul>
+        <!-- /.fileEditCheck --></div>
+
+        <section class="backPage">
+            <p><a href="#" class="iconPrev1">ファイル一覧へ</a></p>
+        <!-- /.backPage --></section>
+    </article>
+
+    <div class="modal1 jsModal" id="modal1">
+        <section class="modalCont-small jsModalCont">
+            <h1>本当に削除しますか？</h1>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p class="btnSet">
+                <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+            </p>
+        </section>
+    <!-- /.modal1 --></div>
+
+</body>
+
+</html>

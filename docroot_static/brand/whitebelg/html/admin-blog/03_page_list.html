@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>03_page_list / admin-blog</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <nav class="categoryNav">
+      <ul class="tablink1">
+        <li class="current"><span>ページ一覧</span></li>
+        <li><a href="#">ページ作成</a></li>
+        <li><a href="#">カテゴリ</a></li>
+        <li><a href="#">ファイル</a></li>
+      <!-- /.tablink1 --></ul>
+    <!-- /.categoryNav --></nav>
+    <h1 class="hd1">ページ一覧<span class="btn3"><a href="#" class="small1">新規作成</a></span></h1>
+    <p class="batchAction">
+      <label><input type="checkbox">全選択</label>
+      <label><input type="radio" value="" name="1" checked="checked">承認</label>
+      <label><input type="radio" value="" name="1">非承認</label>
+      <label><input type="checkbox" value="">TOPパネルに表示</label>
+      <span class="btn3"><a href="#" class="small1">適用</a></span>
+    <!-- /.batchAction --></p>
+    <table class="pageList1">
+      <thead>
+        <tr>
+          <th class="check"><input type="checkbox"></th>
+          <th class="pageTitle">タイトル</th>
+          <th class="mainCategory">メインカテゴリ</th>
+          <th class="layout">レイアウト</th>
+          <th class="limit">制限</th>
+          <th class="user">最終編集者</th>
+          <th class="lastUpdate">最終更新</th>
+          <th class="releaseDate">公開日時</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconDraft1">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn1.png" width="20" height="15" alt="960px"></td>
+          <td class="limit"><img src="../../../../img/icon/iconLock3.png" width="14" height="13" alt="公開制限"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconDraft1">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が長くなるとどうなる…</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconDraft1">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn3.png" width="20" height="15" alt="960px（ヘッダーなし）"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"><img src="../../../../img/icon/iconLock3.png" width="14" height="13" alt="公開制限"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"><img src="../../../../img/icon/iconLock3.png" width="14" height="13" alt="公開制限"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"><img src="../../../../img/icon/iconLock3.png" width="14" height="13" alt="公開制限"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn1.png" width="20" height="15" alt="960px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn1.png" width="20" height="15" alt="960px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が長くなるとどうなる…</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn1.png" width="20" height="15" alt="960px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn1.png" width="20" height="15" alt="960px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">2014/10/20</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+        <tr>
+          <td class="check"><input type="checkbox"></td>
+          <td class="pageTitle"><a href="#" class="iconCheck3">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ</a></td>
+          <td class="mainCategory">カテゴリ名が入る</td>
+          <td class="layout"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px"></td>
+          <td class="limit"></td>
+          <td class="user">atsuko.a</td>
+          <td class="lastUpdate">18:56</td>
+          <td class="releaseDate">2015/06/11<br>20:32</td>
+        </tr>
+      </tbody>
+    <!-- /.pageList1 --></table>
+
+    <div class="pager1">
+      <p>99,999件中101件～120件表示しています</p>
+        <ul>
+          <li class="first"><a href="#">最初のページヘ</a></li>
+          <li class="prev"><a href="#">前のページへ</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><span>6</span></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">99</a></li>
+          <li class="next"><a href="#">次のページへ</a></li>
+          <li class="last"><a href="#">最後のページヘ</a></li>
+      </ul>
+    <!-- /.pager1 --></div>
+  </article>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+
+</body>
+</html>

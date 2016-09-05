@@ -1,0 +1,750 @@
+.customaudienceWrap {
+    position: relative;
+    margin-bottom: 30px;
+
+    .customaudiencePreview {
+        position: absolute;
+    }
+    .segmentPreviewWrap .customaudiencePreview {
+        position: relative;
+    }
+    .btnSet {
+
+        &+.backPage {
+            margin-top: 50px;
+        }
+    }
+}
+.adAccountWrap {
+    margin-bottom: 50px;
+}
+
+.customaudienceTable {
+    width: 100%;
+    margin-bottom: 20px;
+
+    th,
+    td {
+        padding: 10px 5px;
+        vertical-align: middle;
+        text-align: center;
+        background: #fff;
+        border-bottom: 1px dotted $borderC;
+        position: relative;
+    }
+    th {
+        font-size: 15px;
+        text-align: left;
+
+        &.customaudienceName {
+            width: 260px;
+        }
+    }
+    tr:last-child {
+
+        td {
+            border: none;
+       }
+    }
+    thead {
+
+        th {
+            padding: 10px 15px;
+            white-space: nowrap;
+            background: #eee;
+            font-size: 13px;
+            border: none;
+        }
+    }
+    strong {
+        font-weight: bold;
+        font-size:16px;
+
+        span {
+          font-size: 13px;
+          font-weight: normal;
+        }
+    }
+    .btnArrowB1 {
+        margin-left: 5px;
+    }
+    .sortBox {
+        top: 40px;
+
+        ul li {
+            margin: 5px 0;
+        }
+    }
+    .iconTW1_2:before,
+    .iconFB1:before {
+        font-size: 20px;
+    }
+    .itemSelect,
+    .nameSet {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .itemSelect {
+        padding: 10px;
+    }
+    .num {
+        text-align: right;
+    }
+    .sns {
+        &>* {
+            width: 20px;
+            height: 20px;
+
+            &:before {
+                font-size: 20px;
+            }
+        }
+    }
+    .accountName {
+        font-size: 16px;
+        text-align: left;
+    }
+    .choices {
+        margin-top: 2px;
+        display: block;
+        font-size: 11px;
+    }
+    .notyet {
+        color: #d13646;
+    }
+    .disabled {
+        color: #ccc;
+    }
+    .error {
+        display: block;
+        font-size: 11px;
+        color: #b20000;
+    }
+    .success {
+        display: block;
+        font-size: 11px;
+        color: #ccc;
+    }
+}
+.customaudienceDelete {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.customaudienceDetail {
+    width: 740px;
+    margin-right: 20px;
+}
+
+.customaudienceEdit {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.customaudienceTableHeader {
+    @include cf;
+    margin-bottom: 10px;
+
+    .hd2 {
+        display: inline-block;
+        margin: 0;
+    }
+    .manualSend {
+        float: left;
+
+        span {
+            margin-left: 5px;
+        }
+    }
+    .create {
+        float: right;
+    }
+}
+
+.customaudiencePreview {
+    top: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid $borderC;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 9px;
+
+    .selectedStatus {
+        margin-bottom: 20px;
+
+        strong {
+            font-weight: bold;
+        }
+        dt {
+            margin-bottom: 5px;
+        }
+        dd {
+            margin-bottom: 20px;
+        }
+    }
+    .selectedRefinement {
+        max-height: 200px;
+        margin-bottom: 20px;
+        overflow: auto;
+
+        li {
+            margin: 5px 0;
+            padding: 5px 20px 5px 5px;
+            position: relative;
+            border: 1px dotted $borderC;
+            background: #F7F7F7;
+            position: relative;
+        }
+        .iconBtnDelete {
+            position: absolute;
+            top: 50%;
+            right: 3px;
+            margin-top: -7px;
+        }
+        .or {
+            padding-left: 20px;
+            margin-top: -6px;
+        }
+        .not {
+            padding-left: 20px;
+        }
+    }
+    .downloadData {
+        max-height: 200px;
+        margin-bottom: 20px;
+        overflow: auto;
+        box-sizing: border-box;
+        overflow: auto;
+        padding: 5px 0 5px 5px;
+        border: 1px solid $borderC;
+
+        li {
+            margin-top: 5px 0;
+        }
+        label {
+            margin: 0;
+            max-width: 100%;
+            -ms-word-break: break-all;
+                word-break: break-all;
+        }
+    }
+    .btnSet {
+        background: #eee;
+        border: 1px solid $borderC;
+        padding: 9px 4px;
+
+        .iconError1 {
+            font-size: 13px;
+        }
+        &>* {
+            margin-top: 10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    .selectedUser strong {
+        font-size: 24px;
+    }
+    .savedUser strong {
+        font-size: 16px;
+    }
+}
+.customaudienceTooltip {
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-right: 10px solid #ccc;
+        z-index: 1;
+        position: absolute;
+        top: 29px;
+        left: -20px;
+    }
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-right: 10px solid #fff;
+        z-index: 2;
+        position: absolute;
+        top: 29px;
+        left: -19px;
+    }
+    .customaudiencePreview {
+        width: 230px;
+        font-size: 12px;
+
+        .selectedRefinement {
+            margin: 0;
+
+            li {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+.customaudienceData {
+    @include cf;
+
+    dt {
+        width: 170px;
+        float: left;
+        clear: both;
+        margin-bottom: 10px;
+    }
+    dd {
+        width: 570px;
+        float: left;
+        margin-bottom: 10px;
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+        }
+        .urlParts {
+            width: 250px;
+        }
+        textarea {
+            height: 44px;
+            display: block;
+        }
+        .sub {
+            margin-top: 10px;
+            display: block;
+        }
+    }
+}
+
+.customaudienceRefinementClear {
+
+    .label {
+        display: inline-block;
+        vertical-align: middle;
+        width: -webkit-calc(100% - 80px);
+        width: calc(100% - 80px);
+    }
+    .btn2 {
+    }
+}
+.customaudienceRefinement  {
+    margin: 5px 0;
+
+    .categoryLabel {
+        position: relative;
+        padding: 7px 10px;
+        border: 1px solid $borderC;
+        background: #ccc;
+        font-weight: bold;
+        box-sizing: border-box;
+
+        &:hover {
+            cursor: pointer;
+        }
+        &:after {
+            @include fontBase(arrow-top);
+            font-size: 12px;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin-top: -6px;
+            color: #fff;
+        }
+        &.close:after {
+            @include fontBase(arrow-bottom);
+        }
+        p {
+            display: inline-block;
+        }
+        .iconHelp {
+            margin-left: 5px;
+        }
+        .textBalloon1 {
+            top: 30px;
+            text-align: left;
+
+            &>span {
+                font-size: 13px;
+            }
+            .label {
+                width: 100px;
+            }
+            .label,
+            .sample {
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: 5px;
+            }
+            .inputNum {
+                display: inline-block;
+                width: 40px;
+                background: #fff;
+                border-radius: 3px;
+                border: 1px solid $borderC;
+                color: #333;
+                padding: 5px;
+            }
+        }
+    }
+    .close+.refinementWrap {
+        display: none;
+    }
+    .refinementWrap {
+        border: 1px solid $borderC;
+        border-top: none;
+        box-sizing: border-box;
+        background: #fff;
+
+        &>*:last-child {
+            border-bottom: none;
+        }
+    }
+    .setting {
+        @include cf;
+        padding: 10px 0;
+    }
+    .refinementItem {
+        margin: 20px 10px 0 10px;
+        width: 349px;
+        float: left;
+
+        &:first-child,
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+    }
+    .nps {
+        @include cf;
+
+        li {
+            width: 15%;
+            float: left;
+        }
+    }
+    .kind {
+        @include cf;
+
+        li {
+            width: 30%;
+            float: left;
+        }
+    }
+    .inputDate,
+    .inputNum {
+
+        &+.dash {
+            margin-left: -5px;
+        }
+    }
+    .settingLabel {
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        .option {
+            margin: 0;
+            font-weight: normal;
+            float: right;
+        }
+    }
+    .inputNo {
+        width: 100px;
+    }
+    .otherItem {
+        border-bottom: 1px solid $borderC;
+        padding: 10px;
+
+        ul {
+            @include cf;
+        }
+        li {
+            width: 50%;
+            float: left;
+        }
+    }
+    .checked {
+        background: #fff6de;
+        box-shadow: 0 0 0 5px #FFF6DE;
+    }
+}
+.customaudienceSnsConnect {
+    @include cf;
+    border-top: 1px solid $borderC;
+    border-bottom: 1px solid $borderC;
+    text-align: center;
+
+    .inputNum {
+        width: 40px;
+    }
+    .itemLabel {
+        width: 60px;
+        float: left;
+
+        li {
+            padding: 5px 0;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px dotted $borderC;
+
+            &:first-child {
+                border-bottom-style: solid;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    .snsAccount {
+        display: table;
+        float: left;
+        width: -webkit-calc(100% - 60px);
+        width: calc(100% - 60px);
+
+        li {
+            display: table-cell;
+            border-left: 1px dotted $borderC;
+        }
+        dt,
+        dd {
+            padding: 5px 10px;
+            height: 30px;
+            line-height: 30px;
+        }
+        dt {
+            border-bottom: 1px solid $borderC;
+
+            &>* {
+                margin: 0;
+            }
+        }
+        dd {
+            border-bottom: 1px dotted $borderC;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        input {
+            margin: 0;
+        }
+        &.checked {
+            box-shadow: none;
+        }
+    }
+}
+.refinementCampaign {
+    padding: 10px;
+
+    .campaignList {
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .campaignStep {
+        @include cf;
+
+        &>dt {
+            width: 110px;
+            padding: 10px 0;
+            float: left;
+            text-align: center;
+            border-top: 1px dotted $borderC;
+
+            &:nth-of-type(1) {
+                border-top: none;
+                padding-top: 0;
+            }
+            &:nth-last-of-type(1) {
+                padding-bottom: 0;
+            }
+        }
+        &>dd {
+            margin-left: 110px;
+            border-top: 1px dotted $borderC;
+
+            &:nth-of-type(1) {
+                border-top: none;
+
+                .checked {
+                    box-shadow: 5px -5px 0 0 #fff6de, -5px -5px 0 0 #fff6ed, 5px 0 0 0 #fff6de, -5px 0 0 0 #fff6ed;
+                }
+                dt,
+                dd {
+                    padding-top: 0;
+                }
+            }
+            &:nth-last-of-type(1) {
+
+                dt,
+                dd {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    .moduleLabel {
+        width: 150px;
+    }
+    .stepSetting {
+        font-size: 0;
+
+        &>dt {
+            display: inline-block;
+            vertical-align: top;
+            width: 140px;
+            padding: 10px 0;
+            font-size: 13px;
+        }
+        &>dd {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px 0;
+            font-size: 13px;
+            width: 458px;
+            margin-left: 10px;
+        }
+        &.checked {
+            box-shadow: 5px 0 0 0 #fff6de, -5px 0 0 0 #fff6ed;
+        }
+    }
+    .subStatus {
+        text-align: right;
+    }
+    .status {
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: 25%;
+        }
+    }
+    .stepEnquete {
+
+        .settingLabel {
+            margin-top: 20px;
+        }
+        li {
+            margin-top: 10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.customaudienceCheck {
+    width: 100%;
+    border-bottom: 1px solid $borderC;
+
+    th,
+    td {
+        border-top: 1px solid $borderC;
+        padding: 5px;
+    }
+    th {
+        background: #eee;
+        white-space: nowrap;
+    }
+}
+
+.customaudienceDataSetting {
+    @include cf;
+
+    dt {
+        width: 180px;
+        float: left;
+        clear: both;
+        margin-bottom: 10px;
+    }
+    dd {
+        width: 570px;
+        float: left;
+        margin-bottom: 10px;
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+        }
+        .urlParts {
+            width: 250px;
+        }
+        textarea {
+            height: 44px;
+            display: block;
+        }
+        .sub {
+            margin-top: 10px;
+            display: block;
+        }
+        .addAcount {
+            margin-bottom: 20px;
+        }
+        &.spreadWidth {
+            width: calc(100% - 180px);
+            width: -webkit-calc(100% - 180px);
+
+            .segmentPreviewWrap .customaudienceTooltip {
+              right: -20px;
+            }
+        }
+    }
+}
+
+.customaudienceInitial {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    letter-spacing: normal;
+
+    &>* {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 27px;
+    }
+}
+.customaudienceWrap {
+
+    .segmentList {
+
+        .segmentItem {
+            padding-left: 0;
+        }
+        .segmentItemInner {
+            padding: 10px 10px 0 10px;
+        }
+        .metricBoxWrap {
+            width: 758px;
+        }
+    }
+}
+.segmentTotal {
+    margin-bottom: 10px;
+
+    strong {
+        font-weight: 700;
+        font-size: 20px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+}
+.sendHistory {
+    margin-top: 50px;
+
+    .conditionSegmentMeta dd {
+        width: 292px;
+    }
+    .customaudienceTable thead th {
+        text-align: center;
+    }
+}

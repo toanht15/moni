@@ -1,0 +1,131 @@
+<% extend 'partial/layout/page.plain' %>
+
+<% block 'headCont' : %>true<% end %>
+
+<% block 'head' : %>
+    <!-- site base setting -->
+    <style>
+        /* site background */
+        body {
+            background-color: #f3f3f3;
+            background-image: url(../../img/dummy/01.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+        }
+
+        /* panel title color */
+        .contBoxMain h1 {
+            background-color: red;
+        }
+
+        /* site title color */
+        .gnavi h1 {
+            color: red;
+        }
+
+        /* nav link color */
+        .gnavi li a {
+            color: red;
+        }
+        body>footer, body>footer a {
+            color: red;
+        }
+    </style>
+
+    <script src="../../js/_unit.js"></script>
+<% end %>
+
+<% block 'mainContents' : %>
+  <% include 'partial/parts/snsScript' %>
+
+  <article class="mainCol">
+
+    <section class="lpWrap">
+      <header>
+        <h1>ページタイトルページタイトルページタイトルページタイトルページタイトル(35L)</h1>
+        <ul class="snsBtns-btn">
+          <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+          ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+          ><li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li
+          >
+        <!-- /.snsBtns-btn --></ul>
+      </header>
+      <div class="ckeditorWrap">
+          <h1>h1サンプルテキストサンプルテキストサンプルテキスト</h1>
+          <h2>h2サンプルテキストサンプルテキストサンプルテキスト</h2>
+          <h3>h3サンプルテキストサンプルテキストサンプルテキスト</h3>
+          <h4>h4サンプルテキストサンプルテキストサンプルテキスト</h4>
+          <h5>h5サンプルテキストサンプルテキストサンプルテキスト</h5>
+          <h6>h6サンプルテキストサンプルテキストサンプルテキスト</h6>
+
+          <p><strong>Lorem ipsum</strong></p>
+
+          <p><em>Lorem ipsum</em> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <del>Excepteur</del> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/https://monipla.com/</a></p>
+
+          <p><em><strong>Lorem ipsum dolor sit amet, consectetur</strong></em></p>
+
+          <p><img src="../../img/dummy/CPmain.jpg" alt="alt text"></p>
+
+          <hr>
+
+          <ol>
+            <li>Lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+          </ol>
+
+          <ul>
+            <li>Lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+          </ul>
+
+          <ol>
+            <li>Lorem</li>
+            <li>ipsum</li>
+            <li>dolor
+            <ol>
+              <li>sit</li>
+              <li>amet</li>
+            </ol>
+            </li>
+          </ol>
+
+          <ul>
+            <li>Lorem</li>
+            <li>ipsum</li>
+            <li>dolor
+            <ul>
+              <li>sit</li>
+              <li>amet</li>
+            </ul>
+            </li>
+          </ul>
+
+          <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </blockquote>
+      <!-- /.ckeditorWrap --></div>
+
+      <div class="joinCommSite">
+        <p><span class="btn3"><a href="#" class="large1">続きを読む</a></span></p>
+        <p class="loginAttention"><small>登録（無料）すると、続きをお読みいただけます</small></p>
+      <!-- /.joinCommSite --></div>
+
+      <footer>
+        <ul class="snsBtns-box">
+          <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+          ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+          ><li><div class="g-plusone" data-size="tall"></div></li
+          ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+        <!-- /.snsBtns-box --></ul>
+      </footer>
+    <!-- /.lpWrap --></section>
+
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  <!-- /.mainCol --></article>
+
+  <% include 'partial/parts/globalFooter' %>
+<% end %>

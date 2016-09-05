@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_account_add / admin-cp-customaudience</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+                <!-- /.editMenuInner --></ul>
+              </li>
+              <li class="actionCampaign">
+                <a href="#">Campaign</a>
+              </li>
+              <li class="actionMessage">
+                <a href="#">Message</a>
+              </li>
+              <li class="actionCommunication">
+                <a href="#">Communication</a>
+              </li>
+              <li class="actionFan">
+                <a href="#">Fan</a>
+                <span class="badge1">+99</span>
+              </li>
+              <li class="actionDashboard">
+                <a href="#">Dashboard</a>
+              </li>
+              <li class="actionInfo">
+                <a href="#">Information</a>
+              </li>
+              <li class="actionSetting">
+                <a href="#">Setting</a>
+                <ul class="editMenuInner">
+                  <li><a href="#">管理者設定</a></li>
+                  <li><a href="#">ユーザー設定</a></li>
+                  <li><a href="#">ページ設定</a></li>
+                  <li><a href="#">CVタグ設定</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- /.editMenu --></nav>
+            <!-- /.wrap --></div>
+            <!-- /.editHead --></section>
+
+            <section class="account">
+              <ul>
+                <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+              </ul>
+            <!-- /.account --></section>
+          <!-- /.editHeadWrap --></header>
+
+              <article>
+                <h1 class="hd1">条件セグメント</h1>
+                <div class="conditionSegmentWrap">
+                  <div class="segmentWaap">
+                    <ul class="segmentList">
+                      <li class="segmentItem">
+                        <div class="segmentItemInner">
+                          <div class="segmentNames">
+                            <p><span class="segmentName">条件セグメント1</span><span class="edit jsTextareaToggle">編集する</span></p>
+                            <p class="segmentMember">50人</p>
+                          <!-- /.segmentNames --></div>
+                          <div class="metricBoxWrap jsSyncTarget">
+                            <ul class="metricBoxs">
+                              <li>
+                                <div class="metricBox jsAreaToggleWrap">
+                                  <p class="metricName" title="Q1.モニプラのWebサイト（http://cp.monipla.com）はご覧になっていますか?">Q1.モニプラのWebサイト（http://cp.monipla.com）はご覧になっていますか?</p>
+                                  <div class="input">入る予定だよ <a href="#" class="btnArrowB1 jsCloneToggle">絞り込む</a>
+                                    <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                      <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                      <p class="metricDetailTitle" title="Q1.モニプラのWebサイト（http://cp.monipla.com）はご覧になっていますか?">Q1.モニプラのWebサイト（http://cp.monipla.com）はご覧になっていますか?</p>
+                                      <p>値を選択してください。</p>
+                                      <div class="range">
+                                        <p><select name="" id="">
+                                              <option value="#">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#" selected="">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                        </select>回<span class="dash">～</span>
+                                              <select name="" id="">
+                                              <option value="#" selected="">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                            </select>回</p>
+                                        <!-- /.range --></div>
+                                        <p class="btnSet">
+                                          <span class="btn3"><a href="#" class="small1 jsAreaToggle">確定</a></span>
+                                        </p>
+                                      <!-- /.sortBox --></div>
+                                    </div>
+                                    <p class="delete"><a href="#">削除する</a></p>
+                                    <p class="or"><a href="#metricDtaileSetting2" class="jsOpenModal">or</a></p>
+                                <!-- /.metricBox --></div>
+                              </li>
+                              <li>
+                                <div class="metricBox jsAreaToggleWrap">
+                                  <p class="metricName" titler="Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。">Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。</p>
+                                  <div class="input">3回以上<a href="#" class="btnArrowB1 jsCloneToggle">絞り込む</a>
+                                    <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                      <div class="sortBoxInner">
+                                        <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                        <p class="metricDetailTitle" titler="Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。">Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。</p>
+                                        <p>値を選択してください。</p>
+                                        <div class="range">
+                                          <p><select name="" id="">
+                                              <option value="#">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#" selected="">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                          </select>回<span class="dash">～</span>
+                                              <select name="" id="">
+                                              <option value="#" selected="">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                            </select>回</p>
+                                        <!-- /.range --></div>
+                                        <p class="btnSet">
+                                          <span class="btn3"><a href="#" class="small1 jsAreaToggle">確定</a></span>
+                                        </p>
+                                      <!-- /.sortBoxInner --></div>
+                                    <!-- /.sortBox --></div>
+                                  <!-- /.segmentItemInner --></div>
+                                  <p class="delete"><a href="#">削除する</a></p>
+                                <!-- /.metricBox --></div>
+                                <div class="metricBox jsAreaToggleWrap">
+                                  <p class="metricName" title="Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。">Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。</p>
+                                  <p class="labelOr"><span>or</span></p>
+                                  <div class="input">回答の内容だよ<a href="#" class="btnArrowB1 jsCloneToggle">絞り込む</a>
+                                  <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                    <div class="sortBoxInner">
+                                      <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                      <p class="metricDetailTitle" title="Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。">Q2.あなたは普段、どのようにしてモニプラのキャンペーンに参加していますか？利用されているものをすべてお選びください。</p>
+                                      <p>値を選択してください。</p>
+                                      <div class="range">
+                                        <p><select name="" id="">
+                                              <option value="#">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#" selected="">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                        </select>回<span class="dash">～</span>
+                                              <select name="" id="">
+                                              <option value="#" selected="">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                            </select>回</p>
+                                      <!-- /.range --></div>
+                                      <p class="btnSet">
+                                        <span class="btn3"><a href="#" class="small1 jsAreaToggle">確定</a></span>
+                                      </p>
+                                    <!-- /.sortBoxInner --></div>
+                                  <!-- /.sortBox --></div>
+                                </div>
+                                <p class="delete"><a href="#">削除する</a></p>
+                                <p class="or"><a href="#metricDtaileSetting2" class="jsOpenModal">or</a></p>
+                              <!-- /.metricBox --></div>
+                              </li>
+                              <li>
+                                <div class="metricBox jsAreaToggleWrap">
+                                  <p class="metricName" title="Q3.あなたは普段、モニプラにはどの端末を使ってアクセスしていますか？よくアクセスするものをすべてお選びください。">Q3.あなたは普段、モニプラにはどの端末を使ってアクセスしていますか？よくアクセスするものをすべてお選びください。</p>
+                                  <div class="input">3回以上<a href="#" class="btnArrowB1 jsCloneToggle">絞り込む</a>
+                                    <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                      <div class="sortBoxInner">
+                                        <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                        <p class="metricDetailTitle" title="Q3.あなたは普段、モニプラにはどの端末を使ってアクセスしていますか？よくアクセスするものをすべてお選びください。">Q3.あなたは普段、モニプラにはどの端末を使ってアクセスしていますか？よくアクセスするものをすべてお選びください。</p>
+                                        <p>値を選択してください。</p>
+                                        <div class="range">
+                                          <p><select name="" id="">
+                                              <option value="#">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#" selected="">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                          </select>回<span class="dash">～</span>
+                                              <select name="" id="">
+                                              <option value="#" selected="">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                            </select>回</p>
+                                        <!-- /.range --></div>
+                                        <p class="btnSet">
+                                          <span class="btn3"><a href="#" class="small1 jsAreaToggle">確定</a></span>
+                                        </p>
+                                      <!-- /.sortBoxInner --></div>
+                                    <!-- /.sortBox --></div>
+                                  <!-- /.segmentItemInner --></div>
+                                  <p class="delete"><a href="#">削除する</a></p>
+                                  <p class="or"><a href="#metricDtaileSetting2" class="jsOpenModal">or</a></p>
+                                <!-- /.metricBox --></div>
+                              </li>
+                              <li>
+                                <div class="metricBox jsAreaToggleWrap">
+                                  <p class="metricName" title="Q4.あなたは普段、どのようにキャンペーンを検索していますか？">Q4.あなたは普段、どのようにキャンペーンを検索していますか？</p>
+                                  <div class="input">3回以上<a href="#" class="btnArrowB1 jsCloneToggle">絞り込む</a>
+                                    <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                      <div class="sortBoxInner">
+                                        <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                        <p class="metricDetailTitle" title="Q4.あなたは普段、どのようにキャンペーンを検索していますか？">Q4.あなたは普段、どのようにキャンペーンを検索していますか？</p>
+                                        <p>値を選択してください。</p>
+                                        <div class="range">
+                                          <p><select name="" id="">
+                                              <option value="#">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#" selected="">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                          </select>回<span class="dash">～</span>
+                                              <select name="" id="">
+                                              <option value="#" selected="">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                            </select>回</p>
+                                        <!-- /.range --></div>
+                                        <p class="btnSet">
+                                          <span class="btn3"><a href="#" class="small1 jsAreaToggle">確定</a></span>
+                                        </p>
+                                      <!-- /.sortBoxInner --></div>
+                                    <!-- /.sortBox --></div>
+                                  <!-- /.segmentItemInner --></div>
+                                  <p class="delete"><a href="#">削除する</a></p>
+                                  <p class="or"><a href="#metricDtaileSetting2" class="jsOpenModal">or</a></p>
+                                <!-- /.metricBox --></div>
+                              </li>
+                              <li>
+                                <div class="metricBox jsAreaToggleWrap">
+                                  <p class="metricName" title="Q5.PC版モニプラのWebサイトの総合的な使い勝手に関して、最もあてはまるものをお選びください。">Q5.PC版モニプラのWebサイトの総合的な使い勝手に関して、最もあてはまるものをお選びください。</p>
+                                  <p class="labelNot"><span>not</span></p>
+                                  <div class="input">3回以上<a href="#" class="btnArrowB1 jsCloneToggle">絞り込む</a>
+                                    <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                      <div class="sortBoxInner">
+                                        <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                        <p class="metricDetailTitle" title="Q5.PC版モニプラのWebサイトの総合的な使い勝手に関して、最もあてはまるものをお選びください。">Q5.PC版モニプラのWebサイトの総合的な使い勝手に関して、最もあてはまるものをお選びください。</p>
+                                        <p>値を選択してください。</p>
+                                        <div class="range">
+                                          <p><select name="" id="">
+                                              <option value="#">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#" selected="">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                          </select>回<span class="dash">～</span>
+                                              <select name="" id="">
+                                              <option value="#" selected="">0</option>
+                                              <option value="#">1</option>
+                                              <option value="#">2</option>
+                                              <option value="#">3</option>
+                                              <option value="#">4</option>
+                                              <option value="#">5</option>
+                                              <option value="#">6</option>
+                                              <option value="#">7</option>
+                                              <option value="#">8</option>
+                                              <option value="#">9</option>
+                                              <option value="#">10</option>
+                                            </select>回</p>
+                                        <!-- /.range --></div>
+                                        <p class="btnSet">
+                                          <span class="btn3"><a href="#" class="small1 jsAreaToggle">確定</a></span>
+                                        </p>
+                                      <!-- /.sortBoxInner --></div>
+                                    <!-- /.sortBox --></div>
+                                  <!-- /.segmentItemInner --></div>
+                                  <p class="delete"><a href="#">削除する</a></p>
+                                  <p class="or"><a href="#metricDtaileSetting2" class="jsOpenModal">or</a></p>
+                                <!-- /.metricBox --></div>
+                              </li>
+                              <li class="metricBoxAddWrap">
+                                <p class="metricBoxAdd"><span><a href="#metricDtaileSetting" class="jsOpenModal">追加する</a></span></p>
+                              <!-- /.metricBoxAddWrap --></li>
+                            <!-- /.metricBoxs --></ul>
+                            <div class="jsAreaToggleWrap">
+                              <p class="option">
+                                <a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                                <div class="sortBox jsAreaToggleTarget" style="display: none;">
+                                  <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                  <ul class="btnSet">
+                                    <li class="btn2"><a href="#" class="small1 jsAreaToggle">削除</a></li>
+                                  </ul>
+                                <!-- /.sortBox --></div>
+                              <!-- /.option --></p>
+                            <!-- /.jsAreaToggleWrap --></div>
+                          <!-- /.metricBoxWrap --></div>
+                        <!-- /.segmentItemInner --></div>
+                      <!-- /.segmentItem --></li>
+                  <!-- /.segmentWaap --></div>
+
+                  <div class="sideAction">
+                    <p class="btn">
+                      <span class="btn1"><a href="#">下書き保存</a></span>
+                      <span class="btn3"><a href="#metricDtaileSetting4" class="jsOpenModal">確定</a></span>
+                    </p>
+                  <!-- /.sideAction --></div>
+                  <ul class="pager2">
+                    <li class="prev"><a href="#" class="iconPrev1">セグメント一覧</a></li>
+                  <!-- /.pager2 --></ul>
+                <!-- /.conditionSegmentWrap --></div>
+              </article>
+
+              <footer>
+                <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+                <ul class="links">
+                  <li><a href="#">ログアウト</a></li>
+                  <li><a href="#">BRANDCo開設規約</a></li>
+                  <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+                  <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+                  <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+                <!-- /.links --></ul>
+              </footer>
+
+              <div class="modal1 jsModal" id="modal1">
+                <section class="modalCont-medium jsModalCont">
+                  <h1>以下の内容でFacebookにカスタムオーディエンスを送信します</h1>
+                  <table class="customaudienceCheck">
+                    <tbody>
+                      <tr>
+                        <th>カスタムオーディエンス名</th>
+                        <td>ファシオ アイメイクセルフィ投稿キャンペーン（Instagram）</td>
+                      </tr>
+                      <tr>
+                        <th>ユーザー数</th>
+                        <td>185名</td>
+                      </tr>
+                      <tr>
+                        <th>Info 1</th>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <th>Info 2</th>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="btnSet">
+                    <span class="btn2"><a href="#closeModal" class="large1">キャンセル</a></span>
+                    <span class="btn3"><a href="#closeModal" class="large1">送信</a></span>
+                  </p>
+                </section>
+              <!-- /.modal1 --></div>
+
+              <div class="modal1 jsModal" id="metricDtaileSetting">
+                <section class="metricSettingBox modalCont-medium jsModalCont">
+                      <h1>AND条件</h1>
+                      <p class="option"><label><input type="checkbox" name="user">除外条件（NOT）に設定</label></p>
+                      <div class="pagePartsSetting">
+                        <div class="pagePartsSettingCont">
+                        <dl class="metricSettingList">
+                          <dt>項目</dt>
+                          <dd><select name="" id="">
+                                <option value="#" selected="">使用時の感想</option>
+                                <option value="#">購入率</option>
+                                <option value="#">NPS</option>
+                                <option value="#">Facebookページにいいねをしている</option>
+                              </select></dd>
+                          <dt>値</dt>
+                          <dd>
+                          <div class="range">
+                            <p><select name="" id="">
+                                <option value="#">0</option>
+                                <option value="#">1</option>
+                                <option value="#">2</option>
+                                <option value="#" selected="">3</option>
+                                <option value="#">4</option>
+                                <option value="#">5</option>
+                                <option value="#">6</option>
+                                <option value="#">7</option>
+                                <option value="#">8</option>
+                                <option value="#">9</option>
+                                <option value="#">10</option>
+                            </select>回<span class="dash">～</span>
+                                <select name="" id="">
+                                <option value="#" selected="">0</option>
+                                <option value="#">1</option>
+                                <option value="#">2</option>
+                                <option value="#">3</option>
+                                <option value="#">4</option>
+                                <option value="#">5</option>
+                                <option value="#">6</option>
+                                <option value="#">7</option>
+                                <option value="#">8</option>
+                                <option value="#">9</option>
+                                <option value="#">10</option>
+                            </select>回</p>
+                          <!-- /.range --></div>
+                          </dd>
+                          <dt>集計期間</dt>
+                          <dd><input type="text" class="jsDate inputDate" placeholder="年/月/日"><span class="dash">～</span><input type="text" class="jsDate inputDate" placeholder="年/月/日"></dd>
+                        </dl>
+                        <!-- /.pagePartsSettingCont --></div>
+                        <p class="btnSet">
+                          <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                          <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+                        </p>
+                      <!-- /.pagePartsSetting --></div>
+                </section>
+              <!-- /#metricDtaileSetting --></div>
+
+              <div class="modal1 jsModal" id="metricDtaileSetting2">
+                <section class="metricSettingBox modalCont-medium jsModalCont">
+                      <h1>OR条件</h1>
+                      <div class="pagePartsSetting">
+                        <div class="pagePartsSettingCont">
+                        <dl class="metricSettingList">
+                          <dt>項目</dt>
+                          <dd><select name="" id="">
+                                <option value="#" selected="">使用時の感想</option>
+                                <option value="#">購入率</option>
+                                <option value="#">NPS</option>
+                                <option value="#">Facebookページにいいねをしている</option>
+                              </select></dd>
+                          <dt>値</dt>
+                          <dd>
+                          <div class="range">
+                            <p><select name="" id="">
+                                <option value="#">0</option>
+                                <option value="#">1</option>
+                                <option value="#">2</option>
+                                <option value="#" selected="">3</option>
+                                <option value="#">4</option>
+                                <option value="#">5</option>
+                                <option value="#">6</option>
+                                <option value="#">7</option>
+                                <option value="#">8</option>
+                                <option value="#">9</option>
+                                <option value="#">10</option>
+                            </select>回<span class="dash">～</span>
+                                <select name="" id="">
+                                <option value="#" selected="">0</option>
+                                <option value="#">1</option>
+                                <option value="#">2</option>
+                                <option value="#">3</option>
+                                <option value="#">4</option>
+                                <option value="#">5</option>
+                                <option value="#">6</option>
+                                <option value="#">7</option>
+                                <option value="#">8</option>
+                                <option value="#">9</option>
+                                <option value="#">10</option>
+                            </select>回</p>
+                          <!-- /.range --></div>
+                          </dd>
+                          <dt>集計期間</dt>
+                          <dd><input type="text" class="jsDate inputDate" placeholder="年/月/日"><span class="dash">～</span><input type="text" class="jsDate inputDate" placeholder="年/月/日"></dd>
+                        </dl>
+                        <!-- /.pagePartsSettingCont --></div>
+                        <p class="btnSet">
+                          <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                          <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+                        </p>
+                      <!-- /.pagePartsSetting --></div>
+                </section>
+              <!-- /#metricDtaileSetting --></div>
+
+              <div class="modal1 jsModal" id="metricDtaileSetting3">
+                <section class="metricSettingBox modalCont-medium jsModalCont">
+                      <h1>除外条件</h1>
+                      <div class="pagePartsSetting">
+                        <div class="pagePartsSettingCont">
+                        <dl class="metricSettingList">
+                          <dt>項目</dt>
+                          <dd><select name="" id="">
+                                <option value="#" selected="">使用時の感想</option>
+                                <option value="#">購入率</option>
+                                <option value="#">NPS</option>
+                                <option value="#">Facebookページにいいねをしている</option>
+                              </select></dd>
+                          <dt>値</dt>
+                          <dd>
+                          <div class="range">
+                            <p><select name="" id="">
+                                <option value="#">0</option>
+                                <option value="#">1</option>
+                                <option value="#">2</option>
+                                <option value="#" selected="">3</option>
+                                <option value="#">4</option>
+                                <option value="#">5</option>
+                                <option value="#">6</option>
+                                <option value="#">7</option>
+                                <option value="#">8</option>
+                                <option value="#">9</option>
+                                <option value="#">10</option>
+                            </select>回<span class="dash">～</span>
+                                <select name="" id="">
+                                <option value="#" selected="">0</option>
+                                <option value="#">1</option>
+                                <option value="#">2</option>
+                                <option value="#">3</option>
+                                <option value="#">4</option>
+                                <option value="#">5</option>
+                                <option value="#">6</option>
+                                <option value="#">7</option>
+                                <option value="#">8</option>
+                                <option value="#">9</option>
+                                <option value="#">10</option>
+                            </select>回</p>
+                          <!-- /.range --></div>
+                          </dd>
+                          <dt>集計期間</dt>
+                          <dd><input type="text" class="jsDate inputDate" placeholder="年/月/日"><span class="dash">～</span><input type="text" class="jsDate inputDate" placeholder="年/月/日"></dd>
+                        </dl>
+                        <!-- /.pagePartsSettingCont --></div>
+                        <p class="btnSet">
+                          <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                          <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+                        </p>
+                      <!-- /.pagePartsSetting --></div>
+                </section>
+              <!-- /#metricDtaileSetting --></div>
+
+              <div class="modal1 jsModal" id="metricDtaileSetting4">
+                <section class="modalCont-medium jsModalCont">
+                  <h1>クラスタを確定すると集計が開始されます。<br>集計を開始してよろしいですか？</h1>
+                  <p class="supplement1">
+                  ・条件の変更を行うには集計を停止する必要があります。<br>
+                  ・条件を途中で変更すると集計したデータは上書きされます。
+                  <!-- /.suplement --></p>
+                  <ul class="btnSet">
+                    <li class="btn3 disableButton"><a href="03_relation_segment_save.html" class="large1">OK</a></li>
+                    <li class="btn2"><a href="#closeModal" class="large1">キャンセル</a></li>
+                  </ul>
+                </section>
+              <!-- /#metricDtaileSetting --></div>
+  <script>
+    $.datepicker.setDefaults($.datepicker.regional['ja']);
+    $(".jsDate").datepicker();
+
+    //cloneModal
+    $(function(){
+      $('.jsCloneToggle').click(function(){
+        var clone = $(this).next().clone().css({
+          top: $(this).offset().top + 15,
+          left: $(this).offset().left - 98
+        }).stop(true, true).fadeToggle(200);
+
+        clone.find('.jsAreaToggle').click(function(){
+          clone.fadeOut().queue(function(){
+            clone.remove();
+          });
+          return false;
+        });
+        $('body').append(clone);
+        return false;
+      });
+    });
+  </script>
+  <script>
+
+
+//scroll sync
+$(function(){
+  var containers = $('.jsSyncTarget');
+  var horizontalSync = function (e) {
+    var self = containers.not(this).off('scroll');
+
+    for(i=0; i < self.length; i++){
+      self[i].scrollLeft = this.scrollLeft;
+      setTimeout(function () { self.on('scroll', horizontalSync); }, 10);
+    }
+  }
+  containers.on('scroll', horizontalSync);
+ });
+</script>
+<script>
+  if($('.metricBoxs').length>0){
+    var skeleton = $('.metricBoxs');
+    for (var i = skeleton.length - 1; i >= 0; i--) {
+      var target = $(skeleton[i]);
+      var targetWidth = 0;
+      targetWidth += 170 * (target.find('li').length - 1);
+      targetWidth += 73;
+      targetWidth += 10 * (target.children('li').length);
+      if(targetWidth > target.parent().width()){
+        target.width(targetWidth);
+      }
+    };
+  }
+</script>
+<script>
+  $(function(){
+    $('.jsTextareaToggle').click(function(){
+      var target = $(this).prev('.segmentName');
+      var txt = target.text();
+      target.html('<input type="text" value="'+txt+'" />');
+      $(this).css({display:'none'});
+      console.log(txt);
+    });
+  });
+
+</script>
+              </body>
+              </html>

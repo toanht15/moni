@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_edit_mode / others</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/brandco/services/BrandcoMasonryTopService.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #F7F4F9;
+      background-image: url(../../img/dummy/04.jpg);
+      /*background-repeat: no-repeat;*/
+      background-repeat: repeat-x;
+      /*background-repeat: repeat-y;*/
+      /*background-repeat: repeat;*/
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: green;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: green;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: green;
+    }
+    body>footer, body>footer a {
+      color: green;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="BRANDCo"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+  <div class="privateMode">
+    <p>ページは現在非公開です<a href="#">設定</a></p>
+  <!-- /.privateMode --></div>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo jsEditAreaWrap">
+          <a href="#"><img src="../../../../img/icon/iconNoImage1.png" alt="サンプルテキストサンプルテキストサンプルテキストサンプルテキ"></a>
+          <span class="editArea"><a href="#editProfile" class="jsOpenModal"><span>編集する</span></a></span>
+        </p>
+        <h1 class="jsEditAreaWrap">サンプルテキストサンプルテキストサンプルテキストサンプルテキ<span class="editArea"><a href="#editProfile" class="jsOpenModal"><span>編集する</span></a></span></h1>
+        <p class="spGnavBtn"><a href="#" class="jsSpOpenLink">MENU</a></p>
+      <!-- /.companyName --></div>
+      <nav class="gnavi jsEditAreaWrap">
+        <ul class="jsGnavi">
+          <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキストサンプル</a></li>
+          <li><a href="#">サンプルテキスト</a></li>
+        </ul>
+        <a href="#" class="openLink">0</a>
+        <p class="editArea"><a href="#globalMenus" class="jsOpenModal"><span>編集する</span></a></p>
+      <!-- /.gnavi --></nav>
+    <!-- /.company --></section>
+  </header>
+
+<!-- whitebelg header -->
+<link rel="stylesheet" href="../../css/style.css">
+<script type="text/javascript">
+  (function(){
+    var isSp = function () {
+      return /iPhone|Windows Phone|Opera Mobi|Fennec|Android.*Mobile/i.test(navigator.userAgent);
+    }
+    if( isSp() ){
+        document.write('<link rel="stylesheet" href="//s0.monipla.com/css/style_sp.css?1452137551">');
+        document.write('<link href="../../css/style_sp.css" media="screen" rel="stylesheet" />');
+    }
+    })();
+</script>
+<script src="../../js/util.js"></script>
+
+<header id="whitebelgHeader">
+    <h1><a href="/"><img src="../../img/base/logo.png" width="252" alt="ようこそ！ホワイトベルグゼミへ！ WHITE BELG SMINAR"></a></h1>
+    <nav>
+      <a href="#" id="whitebelgBtnToggleNav">閉じる</a>
+      <ul>
+        <li class="whitebelgNavSeminar"><a href="/"><img src="../../img/base/btnWhitebelgNavSeminar.gif" alt="ホワイトベルグゼミとは？"></a></li>
+        <li class="whitebelgNavScholarship"><a href="/"><img src="../../img/base/btnWhitebelgNavScholarship.gif" alt="ホワイトベルグ奨学金"></a></li>
+        <li class="whitebelgNavHowto"><a href="/"><img src="../../img/base/btnWhitebelgNavHowto.gif" alt="ホワイトベルグの楽しみ方"></a></li>
+        <li class="whitebelgNavSpecialLecture"><a href="/"><img src="../../img/base/btnWhitebelgNavSpecialLecture.gif" alt="ホワイトベルガーによる特別講義"></a></li>
+        <li class="whitebelgNavStudyGroup"><a href="/"><img src="../../img/base/btnWhitebelgNavStudyGroup.gif" alt="新ベルグ開発研究"></a></li>
+        <li class="whitebelgNavSecretParty"><a href="/"><img src="../../img/base/btnWhitebelgNavSecretParty.gif" alt="シークレットパーティー"></a></li>
+        <li class="whitebelgNavClose"><a href="#"><img src="../../img/base/btnCloseNav.png" alt="閉じる"></a></li>
+      </ul>
+    </nav>
+<!-- /#whitebelgHeader --></header>
+
+  <article>
+    <section class="freeAreaWrap">
+      <section class="addArea">
+        <a href="#freeAreaEntries" class="jsOpenModal"><span>追加する</span></a>
+      </section>
+    </section>
+    <section class="freeAreaWrap jsEditAreaWrap">
+      <div class="freeArea">
+        <div>free area</div>
+        <section class="editArea">
+          <a href="#freeAreaEntries" class="jsOpenModal"><span>編集する</span></a>
+        </section>
+      </div>
+    </section>
+    <section class="addPanel">
+      <ul>
+        <li><span class="addArea"><a href="#selectPanelKind" class="jsOpenModal"><span>追加する</span></a></span></li>
+        <li>
+          <a href="#editPanelForm" class="jsPostPanel jsOpenModal">
+            <img src="../../../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconFB1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#modal5" class="jsPostPanel jsOpenModal">
+            サンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト[...]
+            <span class="postData jsPostData"><span class="iconTW1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconYT1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconRss1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconFB1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconTW1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <article class="mainCol" id="sortable">
+
+      <div class="jsPanelWrap" id="jsTopSortable">
+        <section class="jsPanel contBoxMain boxSizeSmall contFixed">
+          <h1>box titleサンプルテキストサンプルテキスト</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeMiddle contFixed">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="180" alt="dummy"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall contFixed">
+          <h1>灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="200" alt="dummy"></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+      <!-- /#jsTopSortable --></div>
+
+      <div class="jsPanelWrap" id="jsNormalSortable">
+
+        <section class="jsPanel contBoxMain-free boxSizeLarge">
+          <div class="ckeditorWrap">
+            <p><strong>Lorem ipsum</strong></p>
+
+            <p><em>Lorem ipsum</em> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <del>Excepteur</del> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <!-- /.ckeditorWrap --></div>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-fb boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-tw boxSizeSmall">
+          <header>
+            <a href="#">
+              <h1><img src="../../../../img/dummy/01.png" alt="dummy"><span>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト@sample_sample</span></h1>
+            </a>
+          </header>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<img src="../../../../img/dummy/02.jpg" height="150" alt=""></span></p>
+          </a>
+          <footer>
+            <ul class="twActions">
+              <li><a href="#" class="twFollow">フォローする</a></li>
+              <li><a href="#" class="twReply">リプライ</a></li>
+              <li><a href="#" class="twRetweet">リツイート</a></li>
+              <li><a href="#" class="twFavo">お気に入り</a></li>
+            <!-- /.twActions --></ul>
+          </footer>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain-tw--></section>
+        <section class="jsPanel contBoxMain-tw boxSizeSmall">
+          <header>
+            <a href="#">
+              <h1><img src="../../../../img/dummy/01.png" alt="dummy"><span>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト@sample_sample</span></h1>
+            </a>
+          </header>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <footer>
+            <ul class="twActions">
+              <li><a href="#" class="twFollow">フォローする</a></li>
+              <li><a href="#" class="twReply">リプライ</a></li>
+              <li><a href="#" class="twRetweet">リツイート</a></li>
+              <li><a href="#" class="twFavo">お気に入り</a></li>
+            <!-- /.twActions --></ul>
+          </footer>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-ig boxSizeSmall">
+          <h1>instagram account name</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/01.png" alt="dummy"><span>box contents サンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキスト</span></p>
+            <p class="panelComment">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>http://www.eshop.jillstuart-beauty.com/</p>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-photo boxSizeSmall">
+          <h1>学生時代最高の思い出を！学生旅行フォトコンテスト！</h1>
+          <a href="#" class="contInner">
+            <p class="contText">
+              <img src="../../../../img/dummy/02.jpg" height="180" alt="dummy"><span>「タイトルが入りますよサンプルテキストサンプルテキスト」</span>
+              <span class="postDate"><img src="../../../../img/base/imgUser1.jpg" width="20" height="20" alt="user name">2015/04/30</span>
+            </p>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-yt boxSizeSmall">
+          <h1>box title</h1>
+          <div class="videoInner">
+            <iframe src="http://www.youtube.com/embed/NRsACrOzh7Q" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <p class="contText"><span>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain-yt--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="150" alt="dummy"></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeMiddle">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="180" alt="dummy"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <h1>灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑</h1>
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="220" alt="dummy"></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="240" alt="dummy"></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/02.jpg" height="100" alt="dummy"></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <h1>box title</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><span>box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span></p>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-ig boxSizeSmall">
+          <h1>instagram account name</h1>
+          <a href="#" class="contInner">
+            <p class="contText"><img src="../../../../img/dummy/01.png" alt="dummy"></p>
+            <p class="panelComment">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>http://www.eshop.jillstuart-beauty.com/</p>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+
+      <!-- /#jsNormalSortable --></div>
+      <aside class="sideCol jsStamp">
+        <section class="contBoxSide boxSizeSmall">
+          <div class="fanCounter">
+            <h1><strong>99,999,999</strong>人</h1>
+          <!-- /.fanCounter --></div>
+          <ul class="snsBtns-btn">
+            <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></li
+            ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+            ><li><div class="g-plusone" data-size="tall" data-annotation="none"></div></li
+            ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});</script></span></li>
+          <!-- /.snsBtns-btn --></ul>
+        <!-- /.contBoxSide--></section>
+        <section class="contBoxSide-snsList boxSizeSmall jsEditAreaWrap">
+          <h1>公式SNSアカウント</h1>
+          <ul>
+            <li><a href="#"><span class="snsIcon"><img src="../../../../img/sns/iconSnsFB1.png" alt="facebook" width="22"></span><span class="snsTitle">サンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../../../img/sns/iconSnsTW1.png" alt="twitter" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../../../img/sns/iconSnsYT1.png" alt="Youtube" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../../../img/sns/iconSnsRss1.png" alt="RSS" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../../../img/sns/iconSnsIG1.png" alt="instagram" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+          </ul>
+          <section class="editArea">
+            <a href="#"><span>編集する</span></a>
+          </section>
+        <!-- /.contBoxSide--></section>
+        <nav class="sideNavi boxSizeSmall jsEditAreaWrap">
+          <h1>menu title</h1>
+          <ul>
+            <li><a href="#">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+          </ul>
+          <section class="editArea">
+            <a href="#sidelMenus" class="jsOpenModal"><span>編集する</span></a>
+          </section>
+        </nav>
+        <section class="contBoxSide boxSizeSmall jsEditAreaWrap">
+          <a href="#" class="bannerArea"><img src="../../../../img/dummy/02.jpg" alt="dummy" height="60"></a>
+          <section class="editArea">
+            <a href="#"><span>編集する</span></a>
+          </section>
+        <!-- /.contBoxSide--></section>
+        <section class="contBoxSide boxSizeSmall jsEditAreaWrap">
+          <a href="#" class="bannerArea"><img src="../../../../img/dummy/02.jpg" alt="dummy" height="60"></a>
+          <section class="editArea">
+            <a href="#"><span>編集する</span></a>
+          </section>
+        <!-- /.contBoxSide--></section>
+      <!-- /.sideCol --></aside>
+    <!-- /.mainCol --></article>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <p>
+        small modal<br>
+        <span class="btn1 small1"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn2 small1"><a href="#closeModal">sample</a></span>
+      </p>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="modal2">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/02_post_list.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="selectPanelKind">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/01_contents_add.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="editPanelForm">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/02_post_detail.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="modal5">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/02_post_detail_tw.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="editProfile">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/07_profile.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="globalMenus">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/04_menu.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="freeAreaEntries">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/05_freearea_list.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="sidelMenus">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="../admin-top/04_menu_add.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <script>
+  jQuery(function($) {
+      BrandcoMasonryTopService.goMason(true);
+
+      $('#sortable').imagesLoaded(function() {
+        BrandcoMasonryTopService.goMason(true);
+      });
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+html, body {
+  min-height: 100%;
+  font-size: 13px;
+  font-family: "游ゴシック",YuGothic,"メイリオ",Meiryo,"Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",Verdana;
+  line-height: 150%;
+}
+body {
+  min-width: 960px;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  background-position: center top;
+
+  &.modalInnerBody {
+    min-width: 858px;
+  }
+  &.ownedPageBody {
+    min-width: auto;
+  }
+}
+
+a {
+  color: #06A;
+  text-decoration: none;
+
+  img {
+    vertical-align: top;
+  }
+  &:hover {
+    text-decoration: underline;
+
+    img {
+      opacity: .7;
+    }
+  }
+}
+
+// clearfix
+.cf {
+  @include cf;
+}
+// contents wrap
+.wrap {
+  @include wrap;
+}
+
+article {
+  @include wrap;
+  @include cf;
+  padding-top: 10px;
+}
+.mainCol {
+}
+.sideCol {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 234px;
+}
+.oneCol {
+  padding: 20px;
+  width: 674px;
+  border: 1px solid $borderC;
+  background: #FFF;
+}
+.mainContWrap {
+  width: 718px;
+}
+.moniplaEmbedPage {
+  background: transparent;
+}

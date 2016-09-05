@@ -1,0 +1,1 @@
+<?php write_html($this->scriptTag("user/UserActionAnnounceDeliveryService")); ?>

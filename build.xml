@@ -1,0 +1,68 @@
+<project name="bc" description="PHPUnit" default="normal">
+    <target name="setup">
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/app.yml" tofile="apps/config/app.yml" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/define.php" tofile="apps/config/define.php" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/web.yml" tofile="apps/config/web.yml" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/google.yml" tofile="apps/config/google.yml" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/redis.yml" tofile="apps/config/redis.yml" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/instagram.yml" tofile="apps/config/instagram.yml" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/facebook.yml" tofile="apps/config/facebook.yml" overwrite="true" />
+        <copy file="docs/settings/develop/vagrant/cookbooks/aa_brandco/files/default/MoniplaCoreSettings.php" tofile="apps/vendor/cores/MoniplaCoreSettings.php" overwrite="true" />
+        <copy file="docs/settings/develop/brandco/database.php" tofile="tools/deploy/laravel/app/config/database.php" overwrite="true" />
+        <copy file="apps/config/logger_config.php.testing" tofile="apps/config/logger_config.php" overwrite="true" />
+    </target>
+    <target name="normal" depends="setup">
+        <phpunit haltonfailure="true" haltonerror="true" printsummary="true" bootstrap="./apps/t/BootStrap.php">
+            <formatter type="plain" usefile="false" />
+            <batchtest>
+                <fileset dir="apps/t/testcases">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+    <target name="normal-report" depends="setup">
+        <delete dir="reports"/>
+        <mkdir dir="reports/tests"/>
+        <mkdir dir="reports/coverage"/>
+        <coverage-setup database="reports/coverage.db">
+            <fileset dir="apps/t/testcases">
+                <include name="**/*Test.php"/>
+            </fileset>
+        </coverage-setup>
+        <phpunit codecoverage="true" bootstrap="./apps/t/BootStrap.php">
+            <formatter type="xml" todir="reports"/>
+            <batchtest>
+                <fileset dir="apps/t/testcases">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+        <phpunitreport infile="reports/testsuites.xml" format="frames" todir="reports/tests"/>
+        <coverage-report outfile="reports/coverage.xml">
+            <report todir="reports/coverage" title="Demo"/>
+        </coverage-report>
+    </target>
+    <target name="normal-curely-report" depends="setup">
+        <delete dir="reports"/>
+        <mkdir dir="reports/tests"/>
+        <mkdir dir="reports/coverage"/>
+        <coverage-setup database="reports/coverage.db">
+            <fileset dir="apps/t/curely/curely">
+                <include name="**/*Test.php"/>
+            </fileset>
+        </coverage-setup>
+        <phpunit codecoverage="true" bootstrap="./apps/t/BootStrap.php">
+            <formatter type="xml" todir="reports"/>
+            <batchtest>
+                <fileset dir="apps/t/curely/curely">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+        <phpunitreport infile="reports/testsuites.xml" format="frames" todir="reports/tests"/>
+        <coverage-report outfile="reports/coverage.xml">
+            <report todir="reports/coverage" title="Demo"/>
+        </coverage-report>
+    </target>
+</project>

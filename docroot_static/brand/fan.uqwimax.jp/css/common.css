@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* ### setting.scss ### */
+/* ### mixin.scss ### */
+/* ### parts.scss ### */
+.mainCol .ckeditorWrap .uqwimaxHeadline1 { background: url(../img/base/stripe1.png) 50% 50% repeat-x; background-size: 33px 5px; text-align: center; padding-top: 8px; }
+.mainCol .ckeditorWrap .uqwimaxHeadline2 { padding: 0 0 10px; border-bottom: 3px solid #99D6FF; text-align: center; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxButton1 { text-align: center; padding: 0 25px; margin: 0 0 25px; }
+.mainCol .ckeditorWrap .uqwimaxButton1 a { border-radius: 5px; display: block; padding: 15px 0; position: relative; background: #E4007F; box-shadow: 0 5px 0 0 #B50065; color: #fff; font-size: 13px; }
+.mainCol .ckeditorWrap .uqwimaxButton1 a:before { content: ""; display: block; width: 5px; height: 9px; background: url(../img/base/arrowPink1.gif); background-size: contain; position: absolute; left: 10px; top: 50%; margin-top: -5px; font-size: 12px; }
+.mainCol .ckeditorWrap .uqwimaxButton1.uqwimaxMoreButton1 a:before { position: static; display: inline-block; vertical-align: middle; margin: 0 10px 2px 0; background: url(../img/base/circlePink1.png); background-size: contain; width: 14px; height: 15px; }
+
+/* end .mainCol .ckeditorWrap */
+/* for PC 
+================================================================================================================================================================================ */
+@media screen and (min-width: 641px) { .mainCol .ckeditorWrap .uqwimaxHeadline1 { background: url(../img/base/pc/stripe1.png) 6px 50% repeat-x; text-align: center; padding-top: 8px; display: block; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1 img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxTopPagePickupTtl { padding: 30px 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxTopPagePickupTtl:before { content: ""; display: inline-block; width: 240px; height: 73px; background: url(../img/index/pc/ttlPickup.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxTopPageTsushinTtl { padding: 30px 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxTopPageTsushinTtl:before { content: ""; display: inline-block; width: 240px; height: 73px; background: url(../img/index/pc/ttlTsushin.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxTopPageKuchikomiTtl { padding: 30px 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxTopPageKuchikomiTtl:before { content: ""; display: inline-block; width: 280px; height: 73px; background: url(../img/index/pc/ttlKuchikomi.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxMatomeTtl { padding: 30px 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxMatomeTtl:before { content: ""; display: inline-block; width: 240px; height: 73px; background: url(../img/index/pc/ttlMatome.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxKuchikomiTtl { padding: 30px 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline1.uqwimaxKuchikomiTtl:before { content: ""; display: inline-block; width: 280px; height: 73px; background: url(../img/index/pc/ttlKuchikomi.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline2 { padding: 0 0 15px; border-bottom: 4px solid #99D6FF; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline2 img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxHeadline2.uqwimaxSnsAccountTtl { height: 25px; background: url(../img/sns/pc/ttlSnsAccount.gif) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxButton1 { text-align: center; padding: 0 25px; margin: 0 0 25px; }
+  .mainCol .ckeditorWrap .uqwimaxButton1 a { display: inline-block; padding: 15px 80px; font-size: 15px; }
+  .mainCol .ckeditorWrap .uqwimaxButton1 a:before { content: ""; display: block; width: 7px; height: 13px; background: url(../img/base/arrowPink1.gif); background-size: contain; position: absolute; left: 20px; top: 50%; margin-top: -5px; }
+  .mainCol .ckeditorWrap .uqwimaxButton1 a:hover { text-decoration: none; background: #EF53AA; transition: all .2s; }
+  .mainCol .ckeditorWrap .uqwimaxButton1 a:active { transition: all 0s; background: #CC0072; box-shadow: 0 -5px 0 0 #B50065; transform: translate(0, 5px); }
+  .mainCol .ckeditorWrap .uqwimaxButton1.uqwimaxMoreButton1 a:before { background: url(../img/base/circlePink1.png); background-size: contain; width: 28px; height: 29px; margin: 0 15px 4px 0; }
+  /* end .mainCol .ckeditorWrap */ }
+/* ### page.scss ### */
+.mainCol .ckeditorWrap { /* トップページUQ通信 */ /* クチコミ */ /* SNSまとめページ */ /* クチコミページ */ /* 下部バナー */ /* 初心者ページ */ }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup { background: #FDEDF6; padding: 0 0 15px; }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide { width: 280px; height: 120px; box-sizing: border-box; padding: 15px 5px 10px 130px; background: #fff; margin: 0 5px; position: relative; }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideImg { width: 120px; height: 120px; position: absolute; left: 0; top: 0; }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideTtl { height: 70px; overflow: hidden; margin: 0 0 5px; font-size: 14px; }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideInfo { position: relative; font-size: 11px; }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideInfo .uqwimaxTopPagePickupSlideDate { padding: 3px 0; color: #999; }
+.mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideInfo .uqwimaxTopPagePickupSlideCommentsNum { position: absolute; right: 0; top: 0; background: #E2F1FB; border-radius: 3px; padding: 3px; color: #6a717e; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin { padding: 10px 0; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider { padding: 0 15px; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide { height: 120px; box-sizing: border-box; padding: 15px 5px 10px 130px; background: #F2F2F2; margin: 0 0 10px; position: relative; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideImg { width: 120px; height: 120px; position: absolute; left: 0; top: 0; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideTtl { height: 64px; overflow: hidden; margin: 0 0 5px; font-size: 14px; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideInfo { border-top: 1px solid #ccc; padding-top: 5px; position: relative; font-size: 11px; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideInfo .uqwimaxTopPageTsushinSlideDate { padding: 3px 0; color: #999; }
+.mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideInfo .uqwimaxTopPageTsushinSlideCommentsNum { position: absolute; right: 0; top: 5px; background: #fff; border-radius: 3px; padding: 3px; color: #6a717e; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi { background: #EDF8FF; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTab { padding: 0 15px 15px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlider { padding-top: 5px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlide { background: #fff; margin: 0 0 3px; text-align: left; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlide:after { content: ""; display: block; width: 100%; height: 8px; background: #EDF8FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlide .uqwimaxKuchikomiSlideComment { padding: 15px; height: 42px; overflow: hidden; font-size: 13px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlide .uqwimaxKuchikomiSlideUserName { padding: 0 15px 15px; color: #0099ff; font-size: 13px; }
+.mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider { padding: 0; margin: 0 15px; }
+.mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { width: 100%; box-sizing: border-box; }
+.mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxSnsTtl { margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxSnsLead { text-align: center; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxMatomeSnsAccount { padding: 0 15px 20px; }
+.mainCol .ckeditorWrap .uqwimaxMatomeSnsAccount > ul li { margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxKuchikomiLead { text-align: center; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab { text-align: center; font-size: 0; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab li { display: inline-block; text-indent: -9999px; overflow: hidden; width: 143px; height: 40px; margin: 0 5px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab li:hover { opacity: .75; cursor: pointer; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--wimax { background: url(../img/kuchikomi/tabWimaxOff.gif); background-size: contain; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--wimax.uqwimaxKuchikomiTabOn { background: url(../img/kuchikomi/tabWimax.gif); background-size: contain; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--mobile { background: url(../img/kuchikomi/tabMobileOff.gif); background-size: contain; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--mobile.uqwimaxKuchikomiTabOn { background: url(../img/kuchikomi/tabMobile.gif); background-size: contain; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { border-radius: 5px; position: relative; width: 100%; box-sizing: border-box; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide:after { position: absolute; bottom: -8px; right: 0; content: ""; display: block; width: 100%; height: 8px; background: #E5F5FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiPage #js--uqwimaxKuchikomiCont--mobile .uqwimaxMatomeSlider .uqwimaxMatomeSlide:after { background: #FDEDF6 url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont { visibility: hidden; position: absolute; left: 0; top: 0; transform: taranslate(200%, 0); padding: 15px; margin: 0 0 30px; width: 100%; box-sizing: border-box; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont.uqwimaxKuchikomiContOn { visibility: visible; position: static; transform: taranslate(0, 0); }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont#js--uqwimaxKuchikomiCont--wimax { background: #E5F5FF; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont#js--uqwimaxKuchikomiCont--mobile { background: #FDEDF6; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont#js--uqwimaxKuchikomiCont--mobile .uqwimaxKuchikomiReviewSlide:after { background: #FDEDF6 url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewTtl { text-align: center; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiTweetsTtl { text-align: center; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewSlide { margin: 0 0 15px; width: 100%; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewSlide:after { position: absolute; bottom: -8px; right: 0; content: ""; display: block; width: 100%; height: 8px; background: #E5F5FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewSlide .uqwimaxKuchikomiReviewSlideInner { background: #fff; position: relative; border-radius: 5px; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewSlide .uqwimaxKuchikomiReviewSlideComment { padding: 15px; overflow: hidden; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewSlide .uqwimaxKuchikomiReviewSlideUserName { padding: 0 15px 15px; color: #0099ff; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider { padding: 0; }
+.mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { background: #fff; }
+.mainCol .ckeditorWrap .uqwimaxMatome { padding: 10px 0; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider { padding: 0 15px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { background: #F2F2F2; padding: 15px; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideImg { text-align: center; margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideImg img { max-width: 100%; height: auto; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideDate { color: #999; font-size: 11px; margin: 0 0 5px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideText { font-size: 15px; color: #000; margin: 0 0 5px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeTwitterButton { text-align: center; margin: 0 0 5px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeTwitterButton li { display: inline-block; margin: 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeAuthor { border-top: 1px solid #ccc; padding-top: 10px; font-size: 11px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideTwitter .uqwimaxMatomeAuthor a { display: block; padding-left: 37px; background: url(../img/base/iconTWUQ.gif) 0 50% no-repeat; background-size: 27px 27px; line-height: 27px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideFacebook .uqwimaxMatomeAuthor a { display: block; padding-left: 26px; background: url(../img/base/iconFB.gif) 0 50% no-repeat; background-size: 16px 16px; line-height: 16px; }
+.mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideBlog .uqwimaxMatomeAuthor a { display: block; padding-left: 37px; background: url(../img/base/iconBlog.gif) 0 50% no-repeat; background-size: 27px 27px; line-height: 27px; }
+.mainCol .ckeditorWrap .uqwimaxFootBanner { padding-top: 20px; background: url(../img/base/stripe1.png) 0 0 repeat-x; background-size: 33px 5px; margin: 0 15px 20px; font-size: 0; }
+.mainCol .ckeditorWrap .uqwimaxFootBanner li { font-size: 16px; display: inline-block; padding: 0 5px 10px; width: 33.3%; box-sizing: border-box; }
+.mainCol .ckeditorWrap .uqwimaxFootBanner li .uqwimaxDispPC { display: none; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader { padding-bottom: 75px; background: url(../img/beginner/bgLovesYou.gif) 100% 100% no-repeat; background-size: 320px 80px; margin: 0 0 20px; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont { padding: 0 15px 20px; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContLead { text-align: center; padding: 15px 0 0; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner { padding: 15px; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul > li { margin: 0 0 10px; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner p { margin: 0 0 1em; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner p.uqwimaxBeginnerIndent { padding-left: 1em; }
+.mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner p a { text-decoration: underline; }
+
+/* end .mainCol .ckeditorWrap */
+/* for PC 
+================================================================================================================================================================================ */
+@media screen and (min-width: 641px) { .mainCol .ckeditorWrap { /* トップページUQ通信 */ /* クチコミ */ /* SNSまとめ */ /* クチコミページ */ /* 下部バナー */ /* 初心者ページ */ }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup { background: #FDEDF6; padding: 0 0 15px; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide { width: 540px; height: 240px; box-sizing: border-box; padding: 30px 20px 10px 260px; background: #fff; margin: 0 10px; position: relative; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide a:hover { text-decoration: none; opacity: .85; display: block; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideImg { width: 240px; height: 240px; position: absolute; left: 0; top: 0; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideTtl { height: 114px; overflow: hidden; margin: 0 0 40px; font-size: 20px; line-height: 1.5; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideInfo { position: relative; font-size: 13px; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideInfo .uqwimaxTopPagePickupSlideDate { padding: 3px 0; color: #999; }
+  .mainCol .ckeditorWrap .uqwimaxTopPagePickup .uqwimaxTopPagePickupSlider .uqwimaxTopPagePickupSlide .uqwimaxTopPagePickupSlideInfo .uqwimaxTopPagePickupSlideCommentsNum { position: absolute; right: 0; top: 0; background: #E2F1FB; border-radius: 5px; padding: 5px 10px; color: #6a717e; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin { padding: 10px 0; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider { padding: 0; font-size: 0; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide { width: 470px; height: 180px; box-sizing: border-box; padding: 15px 15px 10px 200px; background: #F2F2F2; margin: 0 0 20px; position: relative; display: inline-block; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide:nth-child(even) { margin: 0 0 20px 20px; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide a { display: block; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide a:hover { opacity: .85; text-decoration: none; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideImg { width: 180px; height: 180px; position: absolute; left: 0; top: 0; }
+  .mainCol .ckeditorWrap .uqwimaxTopPageTsushin .uqwimaxTopPageTsushinSlider .uqwimaxTopPageTsushinSlide .uqwimaxTopPageTsushinSlideTtl { height: 120px; overflow: hidden; margin: 0 0 5px; font-size: 16px; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi { background: #EDF8FF; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTabWrap { padding: 0 10px 20px; font-size: 0; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTabTtlWimax { height: 70px; background: url(../img/index/pc/tabWimax.png) 50% no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTabTtlWimax img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTabTtlMobile { height: 70px; background: url(../img/index/pc/tabMobile.png) 50% no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTabTtlMobile img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiTab { padding: 0; font-size: 15px; display: inline-block; width: 450px; margin: 0 10px; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlider { padding-top: 5px; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlide { background: #fff; margin: 0 0 15px; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomi .uqwimaxKuchikomiSlide:after { content: ""; display: block; width: 100%; height: 8px; background: #EDF8FF url(../img/base/bgBaloon.gif) 100% 0 no-repeat; background-size: 40px 8px; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider { margin: 0; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { width: 290px; box-sizing: border-box; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont { height: auto !important; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxSnsLead { font-size: 16px; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxSnsLead { text-align: center; margin: 0 0 10px; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount { padding: 0; margin: 0 0 60px; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul { font-size: 0; text-align: center; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li { font-size: 13px; display: inline-block; margin: 0 32px 0 0; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li:nth-child(2n) { margin: 0; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li a { display: block; width: 454px; height: 90px; }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li a.uqwimaxMatomeSnsAccountFBBtn { background: url(../img/sns/pc/btnFBAccount.gif); }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li a.uqwimaxMatomeSnsAccountTWBtn { background: url(../img/sns/pc/btnTWAccount.gif); }
+  .mainCol .ckeditorWrap .uqwimaxSnsPage .uqwimaxMatomeSnsAccount > ul li a:hover { opacity: .75; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxKuchikomiReviewSlide { margin: 0 10px 20px !important; width: 290px !important; display: inline-block; vertical-align: top; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont { height: auto !important; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxMatomeSlide { margin: 0 10px 20px !important; width: 290px !important; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiPage .uqwimaxKuchikomiLead { font-size: 16px; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li { display: inline-block; text-indent: -9999px; overflow: hidden; width: 470px; height: 70px; margin: 0 20px 0 0; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li:nth-child(2) { margin: 0; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li:hover { opacity: .75; cursor: pointer; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--wimax { background: url(../img/kuchikomi/pc/tabWimaxOff.gif); background-size: contain; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--wimax.uqwimaxKuchikomiTabOn { background: url(../img/kuchikomi/pc/tabWimax.gif); background-size: contain; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--mobile { background: url(../img/kuchikomi/pc/tabMobileOff.gif); background-size: contain; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiTab li#js--uqwimaxKuchikomiTab--mobile.uqwimaxKuchikomiTabOn { background: url(../img/kuchikomi/pc/tabMobile.gif); background-size: contain; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiCont { padding: 20px 15px; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewTtl { height: 76px; background: url(../img/kuchikomi/pc/ttlReview.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiReviewTtl img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiTweetsTtl { height: 76px; background: url(../img/kuchikomi/pc/ttlTweets.png) 50% 0 no-repeat; }
+  .mainCol .ckeditorWrap .uqwimaxKuchikomiCont .uqwimaxKuchikomiTweetsTtl img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxMatome { padding: 10px 0; margin: 0 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider { padding: 0; font-size: 0; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide { background: #F2F2F2; padding: 20px; margin: 0 15px 10px; box-sizing: border-box; width: 290px; display: inline-block; vertical-align: top; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont { height: 320px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont a { display: block; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideCont a:hover { text-decoration: none; opacity: .85; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideTwitter .uqwimaxMatomeSlideCont { height: 285px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideImg { text-align: center; margin: 0 0 10px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideImg img { max-width: 100%; height: auto; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideDate { color: #999; font-size: 11px; margin: 0 0 5px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeSlideText { font-size: 15px; color: #000; margin: 0 0 5px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeTwitterButton { text-align: center; margin: 0 0 5px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeTwitterButton li { display: inline-block; margin: 0 10px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide .uqwimaxMatomeAuthor { border-top: 1px solid #ccc; padding-top: 10px; font-size: 11px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideTwitter .uqwimaxMatomeAuthor a { display: block; padding-left: 37px; background: url(../img/base/iconTWUQ.gif) 0 50% no-repeat; background-size: 27px 27px; line-height: 27px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideFacebook .uqwimaxMatomeAuthor a { display: block; padding-left: 26px; margin: 6px 0 5px; background: url(../img/base/iconFB.gif) 0 50% no-repeat; background-size: 16px 16px; line-height: 16px; }
+  .mainCol .ckeditorWrap .uqwimaxMatome .uqwimaxMatomeSlider .uqwimaxMatomeSlide.uqwimaxMatomeSlideBlog .uqwimaxMatomeAuthor a { display: block; padding-left: 37px; background: url(../img/base/iconBlog.gif) 0 50% no-repeat; background-size: 27px 27px; line-height: 27px; }
+  .mainCol .ckeditorWrap .uqwimaxFootBanner { padding-top: 20px; background: url(../img/base/pc/stripe1.png) 6px 0 repeat-x; margin: 0 0 20px; font-size: 0; }
+  .mainCol .ckeditorWrap .uqwimaxFootBanner li { font-size: 16px; display: inline-block; padding: 0; margin: 0 30px 0 0; width: 300px; box-sizing: border-box; }
+  .mainCol .ckeditorWrap .uqwimaxFootBanner li:last-child { margin-right: 0; }
+  .mainCol .ckeditorWrap .uqwimaxFootBanner li a { display: block; width: 300px; height: 90px; }
+  .mainCol .ckeditorWrap .uqwimaxFootBanner li a .uqwimaxDispSP { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxFootBanner li a .uqwimaxDispPC { display: block; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader { padding-bottom: 165px; background: url(../img/beginner/pc/bgLovesYou.gif) 100% 100% no-repeat; margin: 0 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader .uqwimaxBeginnerHeadline { background: url(../img/base/pc/stripe1.png) 6px 50% repeat-x; text-align: center; padding-top: 8px; display: block; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader .uqwimaxBeginnerHeadline:before { content: ""; display: inline-block; width: 240px; height: 73px; background: url(../img/beginner/pc/ttl.gif); }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader .uqwimaxBeginnerHeadline img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader .uqwimaxBeginnerLead { background: url(../img/beginner/pc/txt.gif) 50% no-repeat; height: 545px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerHeader .uqwimaxBeginnerLead img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont { padding: 0 0 20px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerHeadline1 { background: url(../img/beginner/pc/ttlHiroba.gif) 50% no-repeat; height: 41px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerHeadline1 img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerHeadline2 { background: url(../img/beginner/pc/ttlSite.gif) 50% no-repeat; height: 41px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerHeadline2 img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContLead { text-align: center; padding: 30px 0 0; font-size: 16px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner { padding: 30px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul { position: relative; height: 307px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li { position: absolute; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li a { display: block; width: 298px; height: 224px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li a:hover { opacity: .75; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li img { display: none; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li.uqwimaxBeginnerLinkTsushin { top: 0; left: 0; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li.uqwimaxBeginnerLinkTsushin a { background: url(../img/beginner/pc/btnTsushin.gif); }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li.uqwimaxBeginnerLinkKuchikomi { top: 53px; left: 298px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li.uqwimaxBeginnerLinkKuchikomi a { background: url(../img/beginner/pc/btnKuchikomi.gif); }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li.uqwimaxBeginnerLinkMatome { top: 0; right: 0; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner > ul li.uqwimaxBeginnerLinkMatome a { background: url(../img/beginner/pc/btnMatome.gif); }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner p { margin: 0 0 1em; font-size: 16px; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner p.uqwimaxBeginnerIndent { padding-left: 1em; }
+  .mainCol .ckeditorWrap .uqwimaxBeginner .uqwimaxBeginnerCont .uqwimaxBeginnerContInner p a { text-decoration: underline; }
+  /* end .mainCol .ckeditorWrap */ }
+/* end for PC */

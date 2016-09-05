@@ -1,0 +1,12 @@
+担当者様
+
+<#MAIL_TITLE>。
+
+キャンペーン名：<#CP_TITLE>
+キャンペーンURL：<#CP_URL>
+公開 / 限定：<#CP_JOIN_LIMIT>
+開始日時：<#CP_START_DATE>
+終了日時：<#CP_END_DATE>
+
+TableauレポートURL(β)：
+<#TABLEAU_REPORT_URL>

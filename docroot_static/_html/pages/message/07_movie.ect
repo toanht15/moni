@@ -1,0 +1,27 @@
+<% extend 'partial/layout/page.plain' %>
+
+<% block 'headCont' : %>true<% end %>
+
+<% block 'mainContents' : %>
+  <article class="message_popupMovie">
+    <p class="movieWrap">
+      <video src="../../img/dummy/sampleVideo.mp4" controls width="100%" id="myVideo"></video>
+    <!-- /.movieWrap --></p>
+    <p class="movieSpeed"><span class="inner">再生速度</span><label><input type="radio" value="1.0" name="videoSpeed" onclick="changeVideoSpeed()" checked>標準</label><label><input type="radio" value="1.5" name="videoSpeed" onclick="changeVideoSpeed()">1.5倍速</label><label><input type="radio" value="2.0" name="videoSpeed" onclick="changeVideoSpeed()">2倍速</label></p>
+    <ul class="btnSet">
+      <li class="btn1"><a href="#">閉じる</a></li>
+    <!-- /.btnSet --></ul>
+  <!-- /.message_popupMovie --></article>
+
+  <script>
+    function changeVideoSpeed() {
+      var video = document.getElementById('myVideo');
+      var radio = document.getElementsByName('videoSpeed');
+      for(var i = 0; i < radio.length; i++) {
+        if(radio[i].checked) {
+          video.playbackRate = +radio[i].value;
+        }
+      }
+    }
+  </script>
+<% end %>

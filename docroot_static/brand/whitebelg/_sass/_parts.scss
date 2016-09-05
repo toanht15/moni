@@ -1,0 +1,238 @@
+﻿@charset "utf-8";
+/* ### parts.scss ### */
+//======================================================================================================================
+.ckeditorWrap {
+.whitebelgSerif { font-weight: bold; font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif; font-size: 15px; line-height: 1.5; text-shadow: 1px 1px 2px #000; color: #fff;}
+.whitebelgSerif b { font-size: 20px; font-weight: bold;}
+.whitebelgSerif span { display: inline-block; font-weight: bold; font-size: 15px;}
+.whitebelgYellow { color: #fdd000;}
+
+.whitebelgLayoutWrap {
+	@extend %cf;
+	margin: 0 0 20px;
+
+	.whitebelgRightImg {
+		float: right;
+		margin: 0 0 10px 10px;
+		max-width: 110px;
+		display: inline-block;
+		text-align: center;
+
+		img {
+			display: block;
+		}
+	}
+	.whitebelgLeftImg {
+		float: left;
+		margin: 0 10px 10px 0;
+		max-width: 110px;
+		display: inline-block;
+		text-align: center;
+
+		img {
+			display: block;
+		}
+	}
+}
+
+.whitebelgSimpleSliderDirectionBtn {
+	clear: both;
+	padding: 5px 10px 30px;
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+
+	li {
+		width: 50%;
+		display: table-cell;
+
+		&.whitebelgSimpleSliderDirectionBtnPrev {
+			text-align: left;
+			padding: 0 30px 0 0;
+		}
+		&.whitebelgSimpleSliderDirectionBtnNext {
+			text-align: right;
+			padding: 0 0 0 30px;
+		}
+		a {
+			visibility: hidden;
+			opacity: 0;
+
+			&.whitebelgBtnActive {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+}
+
+/* simple slider modal */
+#mpSimpleSliderOverlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+#mpSimpleSliderModal {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+}
+#mpSimpleSliderModalInner {
+	width: 100%;
+	background: #fff;
+	padding: 20px 20px 40px;
+	position: relative;
+	box-sizing: border-box;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	.mpSimpleSliderEntryPhoto {
+		margin: 0 0 10px;
+		background: none !important;
+
+		img {
+			display: none;
+		}
+		img.mpSimpleSliderEntryPhotoImage {
+			display: block;
+			margin: 0 auto 10px;
+		}
+		.mpSimpleSliderEntryTitle {
+			font-weight: bold;
+		}
+	}
+}
+
+#mpSimpleSliderModalCloseButton {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/base/btnCloseModal.gif) 0 0 no-repeat;
+	background-size: 20px 20px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+
+
+/* for PC */
+@media screen and (min-width: 641px) {
+.ckeditorWrap {
+
+.whitebelgSerif { font-size: 18px;}
+.whitebelgSerif b { font-size: 24px;}
+.whitebelgSerif span { font-size: 18px;}
+
+.whitebelgLayoutWrap {
+	margin: 0 0 35px;
+
+	.whitebelgRightImg {
+		float: right;
+		margin: 0 0 10px 20px;
+		max-width: 240px;
+	}
+	.whitebelgLeftImg {
+		float: left;
+		margin: 0 20px 10px 0;
+		max-width: 240px;
+	}
+}
+
+.whitebelgSimpleSliderDirectionBtn {
+	clear: both;
+	padding: 20px 0 30px;
+	display: table;
+	width: 828px;
+	margin: 0 auto 40px;
+	box-sizing: border-box;
+
+	li {
+		width: 50%;
+		display: table-cell;
+
+		&.whitebelgSimpleSliderDirectionBtnPrev {
+
+			img {
+				display: none;
+			}
+			a {
+				display: inline-block;
+				width: 78px;
+				height: 32px;
+				background: url(../img/index/pc/btnThumbPrev.png);
+				visibility: hidden;
+				opacity: 0;
+
+				&.whitebelgBtnActive {
+					visibility: visible;
+					opacity: 1;
+
+					&:hover {
+						opacity: .75;
+					}
+				}
+			}
+		}
+		&.whitebelgSimpleSliderDirectionBtnNext {
+			img {
+				display: none;
+			}
+			a {
+				display: inline-block;
+				width: 78px;
+				height: 32px;
+				background: url(../img/index/pc/btnThumbNext.png);
+				visibility: hidden;
+				opacity: 0;
+
+				&.whitebelgBtnActive {
+					visibility: visible;
+					opacity: 1;
+
+					&:hover {
+						opacity: .75;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+/* end ckeditop */}
+
+#mpSimpleSliderModal {
+	left: 50%; right: auto;
+	.mpSimpleSliderhowEntryPhoto {
+	}
+}
+#mpSimpleSliderModalInner {
+	width: 720px;
+	margin-left: -360px;
+	padding-bottom: 90px;
+}
+#mpSimpleSliderModalCloseButton {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -20px;
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+}
+

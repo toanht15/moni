@@ -1,0 +1,5 @@
+<ul class="status">
+    <li><label><input type="checkbox" name='search_profile_sex/<?php assign(UserAttributeService::ATTRIBUTE_SEX_MAN) ?>' <?php assign($data['condition_data']['search_profile_sex/'.UserAttributeService::ATTRIBUTE_SEX_MAN] ? 'checked' : '')?>><span class="iconSexM">男性</span>男性</label></li>
+    <li><label><input type="checkbox" name='search_profile_sex/<?php assign(UserAttributeService::ATTRIBUTE_SEX_WOMAN) ?>' <?php assign($data['condition_data']['search_profile_sex/'.UserAttributeService::ATTRIBUTE_SEX_WOMAN] ? 'checked' : '')?>><span class="iconSexF">女性</span>女性</label></li>
+    <li><label><input type="checkbox" name='search_profile_sex/<?php assign(UserAttributeService::ATTRIBUTE_SEX_UNKWOWN) ?>' <?php assign($data['condition_data']['search_profile_sex/'.UserAttributeService::ATTRIBUTE_SEX_UNKWOWN] ? 'checked' : '')?>><span class="iconSexN">未設定</span>未設定</label></li>
+    <!-- /.status --></ul>

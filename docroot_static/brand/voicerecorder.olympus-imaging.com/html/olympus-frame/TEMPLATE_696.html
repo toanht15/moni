@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>###</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keyword" content="">
+    <!--<base href="https://monipla.com/###/" data-static-href="//s0.monipla.com">-->
+    
+            <meta property="og:title" content="###">
+                    <meta property="og:url" content="###">
+                    <meta property="og:site_name" content="###">
+                    <meta property="og:image" content="###">
+                    <meta property="og:description" content="###">
+                    <meta name="description" content="###">
+                    <meta property="og:type" content="article">
+            
+    <link rel="stylesheet" href="//s0.monipla.com/css/style.css?1447826644">
+    
+    
+    <!--[if lt IE 9]>
+    <script src="//s0.monipla.com/js/html5shiv-printshiv.js?1409630269"></script>
+    <![endif]-->
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+    <script src="//s0.monipla.com/js/min/imagesloaded.pkgd.min.js?1409630269"></script>
+    <script src="//s0.monipla.com/js/jquery.form.js?1432489529"></script>
+                <link rel="icon" href="//s0.monipla.com/img/base/favicon.ico?1439521692">
+        </head>
+<body>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '749555551767856',
+            xfbml      : true,
+            version    : 'v2.1'
+        });
+
+        FB.XFBML.parse();
+
+        FB.Event.subscribe('edge.create',
+            function (url, html_element) {
+                var action_url = '';
+                var status = 1;
+                if ($('.executeFbLikeActionForm').size() > 0) {
+                    UserActionFacebookLikeService.executeFBLikeLogAction(html_element, action_url, status);
+                } else {
+                    action_url = 'https://monipla.com/output_demo1/messages/api_execute_fb_like_action.json';
+                    UserActionEngagementService.executeFBLikeAction(html_element, action_url, status);
+                }
+            }
+        );
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+
+<!-- site base setting -->
+<style>
+    /* site background */
+    body {
+        background-color: #f3f3f3;
+                background-repeat: no-repeat;
+        }
+
+    /* panel title color */
+    .contBoxMain h1 {
+        background-color: #CCCCCC;
+        color: #333333;
+    }
+    /* message box for smartphone*/
+    
+    /* site title color */
+    .companyName h1 {
+        color: #333333;
+    }
+
+    /* nav link color */
+    .gnavi li, .gnavi li a {
+        color: #333333;
+    }
+    body>footer, body>footer a {
+        color: #333333;
+    }
+
+    
+</style>
+<!-- olympus files -->
+<link rel="stylesheet" href="./css/jquery.bxslider.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<script src="./js/jquery.bxslider.min.js"></script>
+<script src="./js/util.js"></script>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+olympus header
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<header id="olympusHeader"><div id="olympusHeaderInner">
+<div id="olympusHeaderContent">
+    <p id="logoOlympus">
+        <img src="./img/olympus-imaging.jp/000000002.svg" alt="OLYMPUS" class="svg" />
+        <img src="./img/olympus-imaging.jp/000000003.svg" alt="" class="svgSp" />
+        <img src="./img/olympus-imaging.jp/000000004.gif" alt="" class="image" />
+    </p>
+    <div id="logoOlympusSub">
+        <p><a href="http://www.olympus.co.jp/">Olympus Japan</a></p>
+        <p><a href="http://www.olympus-global.com/en/network/"><img src="./img/olympus-imaging.jp/000000017.gif" alt="OLYMPUS" /></a></p>
+    </div>
+    <p id="logoOlympusImaging">
+        <a href="http://olympus-imaging.jp/">
+            <img src="./img/olympus-imaging.jp/000000005.svg" alt="OLYMPUS IMAGING" class="svg" />
+            <img src="./img/olympus-imaging.jp/000000006.gif" alt="OLYMPUS IMAGING" class="image" />
+        </a>
+    </p>
+</div><!-- /#olympusHeaderContent -->
+
+</div><!-- /#olympusHeaderInner -->
+
+<div id="olympusVoiceRecorderHeader">
+    <h1><img src="./img/common/logo.gif" width="223"></h1>
+    <button id="btnOlympusMenu"><img src="./img/common/btnMenu.gif" width="45"></button>
+    <nav id="olympusGlobalNav">
+        <ul>
+            <li><a href="###brandUrl###" class="nav1"><img src="./img/common/btnGlobalNav1.gif" alt="TOP"></a></li>
+            <li><a href="###brandUrl###/page/introduce" class="nav2"><img src="./img/common/btnGlobalNav2.gif" alt="なぜレコーダーが選ばれるの？"></a></li>
+            <li><a href="###brandUrl###/categories/use" class="nav3"><img src="./img/common/btnGlobalNav3.gif" alt="ボイスレコーダー活用術"></a></li>
+            <li><a href="###brandUrl###/page/type" class="nav4"><img src="./img/common/btnGlobalNav4.gif" alt="レコーダーのタイプ"></a></li>
+            <li><a href="###brandUrl###/page/original" class="nav5"><img src="./img/common/btnGlobalNav5.gif" alt="オリンパスのボイスレコーダーはここがすごい！"></a></li>
+            <li><a href="###brandUrl###/page/navigation" class="nav6"><img src="./img/common/btnGlobalNav6.gif" alt="どれ買うナビ"></a></li>
+            <li><a href="###brandUrl###/categories/number" class="nav7"><img src="./img/common/btnGlobalNav7.gif" alt="レビュー"></a></li>
+            <li><a href="#" id="olympusGlobalNavClose"><img src="./img/common/btnGlobalNav8.gif" alt="閉じる"></a></li>
+        </ul>
+    </nav>
+<!-- /#olympusMainVisual --></div>
+
+<!-- /#olympusHeader --></header>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+/olympus header
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    
+<article class="mainCol" >
+    <div class="mainContWrap">
+        <section class="pageWrap">
+            <header>
+                <ul class="snsBtns-btn">
+                    <li><div class="fb-like" data-href="https://monipla.com/output_demo1/page/564db00a2c292" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+                    <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+                <!-- /.snsBtns-btn --></ul>
+            </header>
+
+            <div class="ckeditorWrap">
+                <h2 class="olympusHeadline1">h2 大見出し</h2>
+                <p><img src="./img/dummy/1.gif"></p>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="olympusHeadline2">h3 中見出し</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="olympusHeadline3">h4 小見出し</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="olympusHeadline4">h5 極小見出し</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                <h2 class="olympusHeadline1">h2 大見出し2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行</h2>
+                <p><img src="./img/dummy/1.gif"></p>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="olympusHeadline2">h3 中見出し2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="olympusHeadline3">h4 小見出し2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <h2 class="olympusHeadline4">h5 極小見出し2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行2行</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                <p class="olympusTextLink"><a href="#">テキストリンク</a></p>
+
+                <div class="olympusLinkModule1">
+                    <h2 class="olympusHeadline4">h5 極小見出し</h2>
+                    <ul>
+                        <li><a href="#">テキストリンク</a></li>
+                        <li><a href="#">テキストリンク</a></li>
+                        <li><a href="#">テキストリンク</a></li>
+                    </ul>
+                <!-- /.olympusLinkModule1 --></div>
+
+                <h2 class="olympusHeadline2">レイアウトパターン</h2>
+                <h2 class="olympusHeadline3">1：1</h2>
+                <div class="olympusLayoutModule1">
+                    <figure><img src="./img/dummy/2.gif"></figure>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                <!-- /.olympusLayoutModule1 --></div>
+
+                <h2 class="olympusHeadline3">1：1</h2>
+                <div class="olympusLayoutModule1">
+                    <figure><img src="./img/dummy/2.gif"></figure>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                <!-- /.olympusLayoutModule1 --></div>
+
+                <h2 class="olympusHeadline3">2：1</h2>
+                <div class="olympusLayoutModule1">
+                    <figure><img src="./img/dummy/3.gif"></figure>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                <!-- /.olympusLayoutModule1 --></div>
+
+                <h2 class="olympusHeadline3">2：1</h2>
+                <div class="olympusLayoutModule1">
+                    <figure><img src="./img/dummy/3.gif"></figure>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                <!-- /.olympusLayoutModule1 --></div>
+
+                <h2 class="olympusHeadline3">1：2</h2>
+                <div class="olympusLayoutModule1">
+                    <figure><img src="./img/dummy/4.gif"></figure>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                <!-- /.olympusLayoutModule1 --></div>
+
+                <h2 class="olympusHeadline3">1：2</h2>
+                <div class="olympusLayoutModule1">
+                    <figure><img src="./img/dummy/4.gif"></figure>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                <!-- /.olympusLayoutModule1 --></div>
+
+                <h2 class="olympusHeadline3">2列</h2>
+                <div class="olympusLayoutModule2Col">
+                    <div>
+                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p><img src="./img/dummy/2.gif"></p>
+                    </div>
+                    <div>
+                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p><img src="./img/dummy/2.gif"></p>
+                    </div>
+                <!-- /.olympusLayoutModule2Col --></div>
+                
+
+                <h2 class="olympusHeadline3">チェックの色パターン（コンテンツごとに色が変わります）</h2>
+                <h2 class="olympusHeadline4">なぜレコーダーが選ばれるの？</h2>
+                <p class="olympusIconCheckPink">CHECK!</p>
+
+                <h2 class="olympusHeadline4">ボイスレコーダー活用術</h2>
+                <p class="olympusIconCheckOrange">CHECK!</p>
+
+                <h2 class="olympusHeadline4">レコーダーのタイプ</h2>
+                <p class="olympusIconCheckBrown">CHECK!</p>
+
+                <h2 class="olympusHeadline3">製品リンク</h2>
+                <ul class="olympusProductLink">
+                    <li><a href="#">
+                        <figure><img src="./img/dummy/product1.jpg"></figure>
+                        <span>ICレコーダー Voice-Trek DS-901</span>
+                    </a></li>
+                    <li><a href="#">
+                        <figure><img src="./img/dummy/product2.jpg"></figure>
+                        <span>ICレコーダー Voice-Trek DS-901</span>
+                    </a></li>
+                <!-- /.olympusProductLink --></ul>
+
+            <!-- /.ckeditorWrap --></div>
+        <!-- /.contBoxMain--></section>
+
+            
+                    <nav class="bredlink1">
+    <ul>
+        <li class="home"><a href="https://monipla.com/output_demo1/">HOME</a></li>
+                                    <li class="current"><span>696</span></li>
+            </ul>
+<!-- /.bredlink1 --></nav>        
+            <!-- /.mainContWrap--></div>
+    
+            <aside class="sideCol jsStamp">
+
+    <nav class="sideNavi">
+    <ul>
+        <ul class="sideNaviInner">
+            <li><a href="#">ボイスレコーダー活用術(4)</a></li>
+        </ul>
+        <ul class="sideNaviInner">
+            <li><a href="https://monipla.com/output_demo1/categories/thumbSlideshow">連載(1)</a></li>
+        </ul>
+    </ul>
+<!-- /.sideNavi --></nav>
+
+    
+
+            <section class="contBoxSide">
+                            <div class="fanCounter">
+                    
+                                            <p>登録すると最新情報やキャンペーン情報などをいち早く手に入れられます</p>
+                        <p class="btnSet"><span class="btn3"><a href="https://monipla.com/output_demo1/my/signup">新規登録（無料）</a></span></p>
+                                    </div>
+            
+            
+        <!-- /.contBoxSide--></section>
+    
+    
+<!-- /.sideCol --></aside>    
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+    <!-- /.mainCol --></article>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+olympus footer
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<footer id="olympusFooter">
+
+    <ul class="snsBtns-btn">
+        <li><div id="fb-root" data-appid = "749555551767856"></div>
+        <div class="fb-like" data-href="https://http://monipla.com/output_demo1/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+        </li><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a>
+        </li>
+    <!-- /.snsBtns --></ul>
+
+    <p class="copyright">© <script type="text/javascript">
+<!--
+myD = new Date();
+myYear = myD.getYear();
+myYears = (myYear < 2000) ? myYear + 1900 : myYear;
+document.write(myYears);
+-->
+</script> Olympus Corporation</p>
+    <ul class="olympusLinks">
+        <li><a href="###">ご利用条件</a></li>
+        <li><a href="###" target="_blank">お問い合わせ</a></li>
+        <li><a href="###" target="_blank">会社概要</a></li>
+        <li><a href="###" target="_blank">本サイトについて</a></li>
+    </ul>
+    <ul class="olympusMoniplaLinks">
+        <li><a href="###brandUrl###/inquiry/">モニプラお問い合わせ</a></li>
+        <li><a href="//allied-id.com/agreement" target="_blank">利用規約</a></li>
+        <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+        <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    </ul>
+<!-- /#olympusFooter --></footer>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+/olympus footer
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<img id="ajaxReloadBox" src="//s0.monipla.com/img/base/ajax-loader.gif?1409630269" width="30" height="30" style="display:none" />
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+    <script type="text/javascript" src="//s0.monipla.com/js/brandco/dest/lib-all.js?1448856948"></script>
+
+
+
+<script type="text/javascript" src="//s0.monipla.com/js/min/html5shiv-printshiv.min.js?1448856956"></script>
+    <script src="//s0.monipla.com/js/masonry.pkgd.min.js?1409630269"></script>
+            <script type="text/javascript" src="//s0.monipla.com/js/brandco/dest/BrandcoMasonryTopService.min.js?1448856956"></script>        <script type="text/javascript" src="//s0.monipla.com/js/min/unit.min.js?1448856955"></script>
+<script type="text/javascript" src="//s0.monipla.com/js/min/jquery.blockUI.min.js?1448856956"></script>
+
+            <script type="text/javascript" src="//s0.monipla.com/js/brandco/dest/PageService.min.js?1448856960"></script>    
+
+
+
+
+
+</body>
+</html>

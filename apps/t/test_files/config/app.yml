@@ -1,0 +1,64 @@
+Protocol:
+  Secure: https
+  Normal: http
+Domain:
+  user: curely.com
+  brandco: brandcotest.com
+  brandco_manager: manager.brandcotest.com
+  brandco_api: api.brandcotest.com
+  aaid: allied-id.moniplatest.com
+  brandco_static_track: static-track.brandcotest.com
+  brandco_tracker: track.brandcotest.com
+  monipla: platform.moniplatest.com
+DomainMapping:
+  99: test.com
+DBInfo:
+  main:
+    w: mysql://brandco:changeme@127.0.0.1/db_brandco_unittest
+    r: mysql://brandco:changeme@127.0.0.1/db_brandco_unittest
+  tracker:
+    w: mysql://brandco:changeme@127.0.0.1/db_brandco_track
+    r: mysql://brandco:changeme@127.0.0.1/db_brandco_track
+# 以下のSQLをroot権限で叩いてね！
+# grant all on monipla_account.* TO 'brandco'@'localhost';
+  ut_monipla_account:
+    w: mysql://brandco:changeme@127.0.0.1/monipla_account
+    r: mysql://brandco:changeme@127.0.0.1/monipla_account
+DB:
+  SQLLib: ${AAFW_DIR}/plugins/db_sql
+Store:
+  SchemaCacheInterval: 30
+Static:
+  Url: //static-brandcotest.com
+ManagerIps:
+  0: "124.35.221.2"
+  1: "210.138.60.124"
+  2: "124.33.221.200/29"
+DeclineIP:
+  0: "124.35.221.2"
+  1: "210.138.60.124"
+  2: "124.33.221.200/29"
+ShortenURL:
+  user: aainc
+  apiKey: R_29ee7cfeb0396c22b965dfd315d34b02
+Mail:
+  Default:
+    FromAddress: dummy@aainc.co.jp
+    BccAddress: dummy@aainc.co.jp
+    Envelope: dummy@aainc.co.jp
+    Charset: ISO-2022-JP
+    RealCharset: ISO-2022-JP-MS
+  Support: dummy@aainc.co.jp
+  KPI:
+    ToAddress: dummy@aainc.co.jp
+    CcAddress: dummy@aainc.co.jp
+M17N:
+  DefaultLanguage: ja_JP
+  DefaultCountry: JP
+  Mail:
+    ja_JP:
+      Charset: ISO-2022-JP
+      RealCharset: ISO-2022-JP-MS
+# MoniplaのPRをして良いかどうかの定義
+MoniplaPR:
+  MoniplaLinkCpId: 2

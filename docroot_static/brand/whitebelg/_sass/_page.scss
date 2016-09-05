@@ -1,0 +1,1457 @@
+﻿@charset "utf-8";
+/* ### page.scss ### */
+//======================================================================================================================
+body > article {
+  padding: 5px !important;
+  background: transparent;
+  width: auto !important;
+}
+
+.ckeditorWrap {
+.whitebelgSPHidden {
+	display: none;
+}
+
+/* top page */
+.whitebelgTopPage {
+	position: relative;
+}
+.whitebelgTopPageScholarshipBnr {
+	margin: 0 0 15px;
+}
+.whitebelgTopPageTheme {
+	margin: 0 0 20px;
+
+	p {
+		padding: 0 5px;
+		margin-bottom: 10px;
+	}
+	h3 {
+		margin: 0 0 10px;
+	}
+	.whitebelgBtnPostPhoto {
+		margin: 0 75px 20px;
+	}
+}
+
+.whitebelgPostedPhotoList {
+	margin: 0 5px 20px;
+	text-align: center;
+}
+.whitebelgPostedPhotoDirectionBtn {
+	clear: both;
+	padding: 5px 10px 30px;
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+
+	li {
+		width: 50%;
+		display: table-cell;
+
+		&.whitebelgPostedPhotoDirectionBtnPrev {
+			text-align: left;
+			padding: 0 30px 0 0;
+		}
+		&.whitebelgPostedPhotoDirectionBtnNext {
+			text-align: right;
+			padding: 0 0 0 30px;
+		}
+	}
+}
+
+.whitebelgTopPageSpecialLecture {
+
+	h2 {
+		margin: 0 0 10px;
+	}
+	p {
+		margin: 0 10px 5px;
+	}
+}
+.whitebelgTopPageSpecialLectureInner {
+	padding: 10px 25px 30px;
+}
+
+.whitebelgTopPageSpecialLectureList {
+
+	li {
+		margin: 0 0 15px;
+	}
+}
+
+.whitebelgTopPageBrandSiteBnr {
+	margin: 0 5px 20px;
+}
+
+
+/* society */
+.whitebelgSocietyLeadTtl {
+	font-size: 20px;
+	text-align: center;
+	margin: 10px 0;
+}
+.whitebelgSocietyTtl {
+	margin: 5px 0 20px;
+}
+.whitebelgSocietyCampaign1 {
+	margin: 0 0 25px;
+}
+.whitebelgSocietyCampaignDate {
+	color: #fff;
+	text-align: center;
+	margin: 15px 0 5px;
+	font-size: 16px;
+}
+
+.whitebelgSocietyMonitor {
+	margin: 0 0 20px;
+
+	h2 {
+		margin: 0 0 10px;
+	}
+}
+#moniplaPage--photoOutputMonitor--entries {
+	padding: 0 5px 10px;
+
+	.mpSimpleSliderEntry {
+		cursor: pointer;
+		clear: both;
+		position: relative;
+		border: solid;
+		border-width: 3px 3px 3px 3px;
+		margin: 10px auto 13px;
+		border-image: url(../img/base/bgFrame.png) 3 3 3 3 repeat repeat;
+		-moz-border-image: url(../img/base/bgFrame.png) 3 3 3 3 repeat repeat;
+		-webkit-border-image: url(../img/base/bgFrame.png) 3 3 3 3 repeat repeat;
+		box-sizing: border-box;
+		color: #fff;
+		padding: 10px;
+
+		.mpSimpleSliderEntryPhoto {
+			float: right;
+			width: 90px;
+			margin: 0 0 0 5px;
+		}
+		.mpSimpleSliderEntryPhotoImage {
+			display: none;
+		}
+		&:after {
+			clear: both;
+			content: "";
+			position: absolute;
+			left: 5px;
+			bottom: -13px;
+			width: 14px;
+			height: 13px;
+			background: url(../img/society/baloonBottom1.png);
+			background-size: 14px 13px;
+		}
+		.mpSimpleSliderEntryInner:after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	}
+}
+
+#moniplaPage--photoOutputHowToEnjoy--entries {
+	padding: 5px 5px 10px;
+	.mpSimpleSliderEntry {
+		cursor: pointer;
+		clear: both;
+		position: relative;
+		background: #fff;
+		padding: 10px;
+		margin: 0 0 17px;
+		line-height: 1.5;
+
+		&:after {
+			clear: both;
+			content: "";
+			position: absolute;
+			left: 5px;
+			bottom: -7px;
+			width: 14px;
+			height: 7px;
+			background: url(../img/society/baloonBottom2.png);
+			background-size: 14px 7px;
+		}
+	}
+}
+
+.whitebelgSocietyLearning {
+
+	p {
+		color: #fff;
+	}
+	sup {
+		vertical-align: super;
+    	font-size: smaller;
+	}
+	small {
+		font-size: 11px;
+	}
+}
+.whitebelgSocietyLearningList {
+	padding: 10px 5px 0;
+
+	li {
+		margin: 0 0 15px;
+	}
+	.ttlWhitebelgLearningQuestion {
+		margin: 0 0 5px;
+	}
+}
+.whitebelgSocietyBrandSiteBnr {
+	text-align: center;
+	margin: 30px 10px;
+}
+
+/* about seminar */
+.whitebelgAboutSeminarHeader {
+	margin: 0 0 10px;
+}
+.whitebelgJoinSeminarBtn {
+	margin: 10px 25px;
+}
+
+.whitebelgAboutSeminarMemberComment {
+	position: relative;
+	border: solid;
+	border-width: 2px 2px 2px 2px;
+	margin: 10px auto 13px;
+	border-image: url(../img/base/bgFrame.png) 2 2 2 2 repeat repeat;
+	-moz-border-image: url(../img/base/bgFrame.png) 2 2 2 2 repeat repeat;
+	-webkit-border-image: url(../img/base/bgFrame.png) 2 2 2 2 repeat repeat;
+	box-sizing: border-box;
+	color: #fff;
+	padding: 10px;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 22px;
+		height: 16px;
+		background: url(../img/about/baloonTop.png) 0 0 no-repeat;
+		background-size: 22px 16px;
+		position: absolute;
+		right: 5px;
+		top: -16px;
+	}
+
+	p {
+		margin: 0 0 1em;
+	}
+	b {
+		font-size: 120%;
+	}
+}
+
+.whitebelgAboutSeminarMemberProf {
+	margin: 0 0 15px;
+}
+.whitebelgAboutSeminarMemberProfData {
+	color: #fff;
+
+	dt {
+		display: block;
+		font-weight: bold;
+		margin: 10px 0 0;
+
+		&:after {
+			content: "：";
+		}
+		&:first-child {
+			display: inline-block;
+		}
+	}
+	dd {
+		display: inline-block;
+	}
+}
+
+.whitebelgAboutSeminarCecilReco {
+	background: url(../img/about/lineDouble.gif) 0 100% repeat-x; background-size: 300px 10px;
+	padding-bottom: 15px;
+	margin: 0 0 30px;
+
+	.whitebelgAboutSeminarCecilRecoTtl {
+		margin: 0 0 15px;
+	}
+	.whitebelgAboutSeminarCecilRecoList {
+		li {
+			color: #fff;
+			margin: 0 0 10px;
+		}
+	}
+}
+
+.whitebelgAboutSeminarBnr {
+}
+.whitebelgAboutSeminarBnrList > li {
+	margin: 0 0 20px;
+	padding: 0 0 20px;
+	background: url(../img/about/line.png) 0 100% repeat-x;
+	background-size: 300px 2px;
+	color: #fff;
+	
+	.whitebelgAboutSeminarBnrListImg {
+		margin: 0 45px 10px;
+	}
+	.whitebelgAboutSeminarBnrListBtn {
+		margin: 10px 60px 0;
+	}
+}
+
+/* stamp */
+.whitebelgScholarshipTtl {
+  margin: 0 0 10px;
+}
+.whitebelgScholarshipLead {
+  margin: 0 0 20px;
+  color: #fff;
+
+  b {
+  	font-weight: bold;
+  	font-size: 110%;
+  }
+}
+.whitebelgShcorarshipCampaignDateCaution {
+	text-align: center;
+	color: #fff;
+	margin: 0 0 5px;
+  	font-weight: bold;
+  	font-size: 110%;
+}
+
+.whitebelgScholarshipOutline {
+	padding: 10px;
+	color: #fff;
+
+	.whitebelgScholarshipOutlineTtl1 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0 0 15px;
+	}
+	.whitebelgScholarshipOutlineTtl2 {
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0 0 15px;
+	}
+	p {
+		margin: 0 0 1em;
+	}
+	.whitebelgScholarshipOutlineCaution {
+		background: #fff;
+		padding: 15px;
+		color: #000;
+		margin: 0 0 2em;
+
+		li {
+			text-indent: -1em;
+			padding-left: 1em;
+			margin: 0 0 .5em;
+		}
+	}
+	.whitebelgScholarshipIncentive {
+		background: #fff;
+		border-left: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		width: 100%;
+		color: #000;
+		margin: 0 0 2em;
+
+		thead {
+			th {
+				text-align: center;
+				background: #F2F2F2;
+				word-break: break-word;
+			}
+		}
+		th {
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 15px;
+			font-weight: bold;
+			word-break: keep-all;
+		}
+		td {
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 15px;
+		}
+	}
+	.whitebelgScholarshipOutlineNotes {
+		li {
+			text-indent: -1em;
+			padding-left: 1em;
+			margin: 0 0 .5em;
+		}
+	}
+}
+
+/* lecture */
+.whitebelgLectureHeader {
+	margin: 0 0 20px;
+}
+.whitebelgLectureLead {
+	border: solid;
+	border-width: 10px 10px 10px 10px;
+	margin: 0 auto 20px;
+	border-image: url(../img/base/bgDoubleLine.png) 10 repeat repeat;
+	-moz-border-image: url(../img/base/bgDoubleLine.png) 10 repeat repeat;
+	-webkit-border-image: url(../img/base/bgDoubleLine.png) 10 repeat repeat;
+	box-sizing: border-box;
+	color: #fff;
+	padding: 15px;
+}
+.whitebelgLectureCont {
+	padding: 5px;
+	background: #fff;
+	box-sizing: border-box;
+
+	.whitebelgLectureContTtl1 {
+		color: #375c4a;
+		font-size: 15px;
+		font-weight: bold;
+		margin: 0 0 5px;
+	}
+}
+.whitebelgLectureContInner {
+	padding: 10px;
+}
+.whitebelgLectureContAuthor1 {
+	display: inline-block;
+	margin: 0 5px 0 0;
+	background: #375c4a;
+	padding: 0 5px;
+	color: #fff;
+}
+.whitebelgLectureContAuthor2 {
+	display: inline-block;
+	margin: 0 5px 0 0;
+	background: #FDD000;
+	padding: 0 5px;
+	color: #375c4a;
+}
+.whitebelgLectureContGuest {
+	background: #EBEBEB;
+	padding: 15px;
+
+	.whitebelgLectureContGuestHeader {
+		display: table;
+	}
+	.whitebelgLectureContGuestProfImg {
+		display: table-cell;
+		vertical-align: middle;
+		width: 65px;
+		padding: 0 10px 0 0;
+	}
+	.whitebelgLectureContGuestProf {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.whitebelgLectureContGuestProfLabel {
+		display: inline-block;
+		margin: 0 0 5px;
+		background: #FDD000;
+		padding: 2px 5px;
+		color: #303030;
+	}
+	.whitebelgLectureContGuestProfName {
+		font-weight: bold;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	.whitebelgLectureContGuestProfPosition {
+		font-size: 12px;
+	}
+	.whitebelgLectureContGuestComment {
+		clear: both;
+		padding-top: 10px;
+	}
+}
+
+}/* end ckeditorWrap */
+
+.pagePartsWrap {
+.whitebelgScholarshipCurrentCampaignBtn {
+	padding: 0 35px 20px;
+}
+}
+
+
+/* for PC 
+================================================================================================================================================================================ */
+@media screen and (min-width: 641px) {
+body > article {
+  border: solid;
+  border-width: 6px;
+  border-image: url(../img/base/bgFrame.png) 6 6 6 6 repeat repeat;
+  -moz-border-image: url(../img/base/bgFrame.png) 6 6 6 6 repeat repeat;
+  -webkit-border-image: url(../img/base/bgFrame.png) 6 6 6 6 repeat repeat;
+  box-sizing: border-box;
+  padding: 0 !important;
+  background: transparent;
+  width: 960px !important;
+}
+
+.ckeditorWrap {
+
+.whitebelgSPHidden {
+	display: block;
+}
+
+.whitebelgTopPageSlider {
+
+	img {
+		display: none;
+	}
+	a {
+		display: block;
+		width: 850px;
+		height: 460px;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+	.whitebelgTopPageSlider1 a {
+		background: url(../img/index/pc/slide/slide1.jpg) 0 0 no-repeat;
+	}
+	.whitebelgTopPageSlider2 a {
+		background: url(../img/index/pc/slide/slide2.jpg) 0 0 no-repeat;
+	}
+	.whitebelgTopPageSlider3 a {
+		background: url(../img/index/pc/slide/slide3.jpg) 0 0 no-repeat;
+	}
+	.whitebelgTopPageSlider4 a {
+		background: url(../img/index/pc/slide/slide4.jpg) 0 0 no-repeat;
+	}
+	.whitebelgTopPageSlider5 a {
+		background: url(../img/index/pc/slide/slide5.jpg) 0 0 no-repeat;
+	}
+}
+
+.whitebelgTopPageScholarshipBnr {
+	margin: 0 0 30px;
+
+	img {
+		display: none;
+	}
+	li {
+		width: 910px;
+		height: 233px;
+		display: block;
+	}
+	a {
+		display: block;
+		width: 910px;
+		height: 233px;
+		background: url(../img/index/pc/bnrScholarship.png) 0 0 no-repeat;
+		margin: 0 auto;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
+.whitebelgTopPageTheme {
+	text-align: center;
+
+	h2 {
+		width: 828px;
+		height: 77px;
+		background: url(../img/index/pc/ttlTheme.png) 0 0 no-repeat;
+		margin: 0 auto 10px;
+		img {
+			display: none;
+		}
+	}
+	p {
+		margin: 0 0 20px;
+	}
+	h3.whitebelgTopPageThemeTtl1 {
+		width: 600px;
+		height: 72px;
+		background: url(../img/index/pc/ttlTheme1.png) 0 0 no-repeat;
+		margin: 0 auto 10px;
+
+		img {
+			display: none;
+		}
+	}
+	.whitebelgBtnPostPhoto {
+
+		a {
+			display: block;
+			margin: 0 auto 20px;
+			width: 230px;
+			height: 48px;
+			background: url(../img/index/pc/btnPostPhoto.png) 0 0 no-repeat;
+
+			&:hover {
+				opacity: .65;
+			}
+		}
+
+		img {
+			display: none;
+		}
+	}
+}
+
+.whitebelgPostedPhotoDirectionBtn {
+	clear: both;
+	padding: 20px 0 30px;
+	display: table;
+	width: 828px;
+	margin: 0 auto 40px;
+	box-sizing: border-box;
+
+	li {
+		width: 50%;
+		display: table-cell;
+
+		&.whitebelgPostedPhotoDirectionBtnPrev {
+
+			img {
+				display: none;
+			}
+			a {
+				display: inline-block;
+				width: 78px;
+				height: 32px;
+				background: url(../img/index/pc/btnThumbPrev.png);
+				visibility: hidden;
+				opacity: 0;
+
+				&.whitebelgBtnActive {
+					visibility: visible;
+					opacity: 1;
+
+					&:hover {
+						opacity: .75;
+					}
+				}
+			}
+		}
+		&.whitebelgPostedPhotoDirectionBtnNext {
+			img {
+				display: none;
+			}
+			a {
+				display: inline-block;
+				width: 78px;
+				height: 32px;
+				background: url(../img/index/pc/btnThumbNext.png);
+				visibility: hidden;
+				opacity: 0;
+
+				&.whitebelgBtnActive {
+					visibility: visible;
+					opacity: 1;
+
+					&:hover {
+						opacity: .75;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.whitebelgTopPageSpecialLecture {
+	text-align: center;
+
+	h2 {
+		
+		width: 828px;
+		height: 77px;
+		background: url(../img/index/pc/ttlSpecialLecture.png) 0 0 no-repeat;
+		margin: 0 auto 10px;
+		img {
+			display: none;
+		}
+	}
+	p {
+		margin: 0 10px 5px;
+	}
+}
+.whitebelgTopPageSpecialLectureInner {
+	padding: 10px 25px 30px;
+}
+
+.whitebelgTopPageSpecialLectureList {
+
+	font-size: 0;
+	text-align: center;
+	li {
+		font-size: 13px;
+		display: inline-block;
+		margin: 0 22px 22px;
+		img {
+			display: none;
+		}
+		a,
+		span {
+			display: block;
+			width: 348px;
+			height: 225px;
+		}
+		a:hover {
+			opacity: .75;
+		}
+		&.whitebelgTopPageSpecialLectureList1 a,
+		&.whitebelgTopPageSpecialLectureList1 span {
+			background: url(../img/index/pc/btnSpecialLecture1.png) 0 0 no-repeat;
+		}
+		&.whitebelgTopPageSpecialLectureList2 a,
+		&.whitebelgTopPageSpecialLectureList2 span {
+			background: url(../img/index/pc/btnSpecialLecture2.png) 0 0 no-repeat;
+		}
+		&.whitebelgTopPageSpecialLectureList3 a,
+		&.whitebelgTopPageSpecialLectureList3 span {
+			background: url(../img/index/pc/btnSpecialLecture3.png) 0 0 no-repeat;
+		}
+		&.whitebelgTopPageSpecialLectureList4 a,
+		&.whitebelgTopPageSpecialLectureList4 span {
+			background: url(../img/index/pc/btnSpecialLecture4.png) 0 0 no-repeat;
+		}
+	}
+}
+
+.whitebelgTopPageBrandSiteBnr {
+	position: absolute;
+	bottom: -190px;
+	left: 50%;
+	margin-left: -200px;
+
+	img {
+		display: none;
+	}
+	a {
+		display: block;
+		width: 400px;
+		height: 116px;
+		background: url(../img/index/pc/bnrFootBrandSite.png) 0 0 no-repeat;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
+/* society */
+.whitebelgSocietyHeader {
+	margin: 30px 0 40px;
+	text-align: center;
+
+	img {
+		display: none;
+	}
+	.whitebelgSocietyTtl {
+		background: url(../img/society/pc/ttlSociety.png) 50% 0 no-repeat;
+		height: 461px;
+	}
+	.whitebelgSocietyTtl1 {
+		position: relative;
+		margin: -40px 0 0;
+		background: url(../img/society/pc/ttlSociety1.png) 170px 0 no-repeat;
+		height: 156px;
+	}
+}
+
+.whitebelgSocietyLeadTtl {
+	font-size: 28px;
+	text-align: center;
+	margin: 10px 0;
+}
+.whitebelgSocietyTtl {
+	margin: 5px 0 20px;
+}
+.whitebelgSocietyCampaign1 {
+	margin: 0 0 5px;
+
+	a {
+		display: block;
+		width: 837px;
+		height: 133px;
+		margin: 0 auto;
+		background: url(../img/society/pc/btnSociety1.png) 0 0 no-repeat;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+.whitebelgSocietyCampaignDate {
+	font-size: 18px;
+	margin: 20px 0 0;
+}
+
+.whitebelgSocietyMonitor {
+	margin: 0 0 20px;
+
+	.whitebelgSocietyMonitorTtl {
+		margin: 0 0 10px;
+		background: url(../img/society/pc/ttlMonitor.png) 50% 0 no-repeat;
+		height: 80px;
+
+		img {
+			display: none;
+		}
+	}
+}
+#moniplaPage--photoOutputMonitor--entries {
+	padding: 5px 5px 10px;
+	margin-left: 28px;
+
+	.mpSimpleSliderEntry {
+		clear: none;
+		position: relative;
+		border: solid;
+		border-width: 2px 2px 2px 2px;
+		margin: 0 2px;
+		border-image: url(../img/base/bgFrame.png) 2 2 2 2 repeat repeat;
+		-moz-border-image: url(../img/base/bgFrame.png) 2 2 2 2 repeat repeat;
+		-webkit-border-image: url(../img/base/bgFrame.png) 2 2 2 2 repeat repeat;
+		box-sizing: border-box;
+		color: #fff;
+		padding: 10px;
+		width: 216px;
+		float: left;
+
+		.mpSimpleSliderEntryPhoto {
+			display: block;
+			height: 144px;
+			width: 192px;
+			float: none;
+			background: #ccc;
+			margin: 0 0 5px;
+		}
+		img {
+			display: none;
+		}
+		&:after {
+			clear: both;
+			content: "";
+			position: absolute;
+			left: 5px;
+			bottom: -12px;
+			width: 14px;
+			height: 13px;
+			background: url(../img/society/baloonBottom1.png);
+			background-size: 14px 13px;
+		}
+		.mpSimpleSliderEntryComment {
+			height: 48px;
+		}
+	}
+}
+
+.whitebelgSocietyHowToEnjoy {
+	margin: 0 0 20px;
+
+	.whitebelgSocietyHowToEnjoyTtl {
+		margin: 0 0 10px;
+		background: url(../img/society/pc/ttlWhitebelgHowToEnjoy.png) 50% 0 no-repeat;
+		height: 80px;
+
+		img {
+			display: none;
+		}
+	}
+}
+
+#moniplaPage--photoOutputHowToEnjoy--entries {
+	padding: 5px 5px 10px;
+	margin-left: 34px;
+
+	.mpSimpleSliderEntry {
+		clear: none;
+		position: relative;
+		background: #fff;
+		padding: 10px;
+		margin: 0 2px 11px;
+		width: 214px;
+		float: left;
+		box-sizing: border-box;
+		height: 150px;
+
+		&:after {
+			clear: both;
+			content: "";
+			position: absolute;
+			left: 5px;
+			bottom: -7px;
+			width: 14px;
+			height: 7px;
+			background: url(../img/society/baloonBottom2.png);
+			background-size: 14px 7px;
+		}
+	}
+}
+
+.whitebelgSocietyLearning {
+
+	p {
+		color: #fff;
+	}
+}
+.whitebelgSocietyLearningList {
+	padding: 10px 5px 0;
+
+	li {
+		margin: 0 0 15px;
+	}
+	.ttlWhitebelgLearningQuestion {
+		margin: 0 0 5px;
+	}
+}
+.whitebelgSocietyBrandSiteBnr {
+	text-align: center;
+	margin: 30px 10px;
+}
+.whitebelgSocietyLearning {
+	border: solid;
+	border-width: 9px 9px 9px 9px;
+	margin: 0 55px 40px;
+	border-image: url(../img/society/pc/bgLearning.png) 9 9 9 9 repeat repeat;
+	-moz-border-image: url(../img/society/pc/bgLearning.png) 9 9 9 9 repeat repeat;
+	-webkit-border-image: url(../img/society/pc/bgLearning.png) 9 9 9 9 repeat repeat;
+	box-sizing: border-box;
+	position: relative;
+	padding:50px 5px 94px 386px;
+
+	&:before {
+		content:"";
+		display: block;
+		width: 321px;
+		height: 678px;
+		background: url(../img/society/pc/imgLearning.png) 0 0 no-repeat;
+		position: absolute;
+		left: -60px;
+		bottom: -6px;
+	}
+	img {
+		display: none;
+	}
+	.whitebelgSocietyLearningTtl {
+		position: absolute;
+		top: -32px;
+		left: 0;
+		right: 0;
+		height: 56px;
+		background: url(../img/society/pc/ttlLearning.png) 50% 0 no-repeat;
+	}
+	.ttlWhitebelgLearningQuestion {
+		position: absolute;
+		right: 450px;
+	}
+	.whitebelgSocietyLearningList small {
+		font-size: 12px;
+	}
+	.whitebelgSocietyLearningList1 .ttlWhitebelgLearningQuestion {
+		width: 195px;
+		height: 136px;
+		top: 59px;
+		background: url(../img/society/pc/ttlQ1.png) 0 0 no-repeat;
+	}
+	.whitebelgSocietyLearningList2 .ttlWhitebelgLearningQuestion {
+		width: 198px;
+		height: 111px;
+		top: 237px;
+		background: url(../img/society/pc/ttlQ2.png) 0 0 no-repeat;
+	}
+	.whitebelgSocietyLearningList3 .ttlWhitebelgLearningQuestion {
+		width: 224px;
+		height: 137px;
+		top: 424px;
+		background: url(../img/society/pc/ttlQ3.png) 0 0 no-repeat;
+	}
+	.txtWhitebelgLearningAnswer {
+		font-size: 15px;
+		line-height: 1.4;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 111px;
+			height: 27px;
+			background: url(../img/society/pc/txtBecause.png) 0 0 no-repeat;
+		}
+	}
+	.whitebelgSocietyBrandSiteBnr {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		background: url(../img/society/pc/bgBnrBrandSite.png) 0 0 no-repeat;
+		width: 587px;
+		margin: 0;
+		height: 101px;
+
+		a {
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			right: 0;
+			width: 266px;
+			height: 81px;
+			background: url(../img/society/pc/bnrBrandSite.png) 0 0 no-repeat;
+
+			&:hover {
+				opacity: .75;
+			}
+		}
+	}
+}
+
+/* about seminar */
+.whitebelgAboutSeminarHeader {
+	margin: 30px 0 0;
+
+	img {
+		display: none;
+	}
+	.whitebelgAboutTtl {
+		height: 469px;
+		background: url(../img/about/pc/ttlAbout.png) 50% 0 no-repeat;
+		margin: 0 0 40px;
+	}
+}
+.whitebelgAboutSeminarLead {
+	width: 570px;
+	margin: 0 auto 40px;
+	background: url(../img/about/pc/imgLead.png) 10px 25% no-repeat;
+	padding-left: 290px;
+
+	.whitebelgSerif {
+		font-size: 16px;
+		line-height: 1.4;
+
+		b {
+			font-size: 20px;
+		}
+	}
+}
+
+.whitebelgJoinSeminarBtn {
+	margin: 30px 0 0 -20px;
+
+	a {
+		display: block;
+		width: 355px;
+		height: 58px;
+		background: url(../img/about/pc/btnJoin.png) 0 0 no-repeat;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
+.whitebelgAboutSeminarMember {
+	position: relative;
+	width: 844px;
+	margin: 0 auto 40px;
+	padding-top: 180px;
+
+	img {
+		display: none;
+	}
+	.whitebelgAboutSeminarMemberTtl {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../img/about/pc/imgCecil.png) 0 0 no-repeat;
+		height: 356px;
+		width: 844px;
+	}
+}
+
+.whitebelgAboutSeminarMemberComment {
+	position: relative;
+	border: solid;
+	border-width: 4px;
+	margin: 0 0 40px;
+	width: 490px;
+	float: left;
+	border-image: url(../img/base/bgFrameRad.png) 4 repeat repeat;
+	-moz-border-image: url(../img/base/bgFrameRad.png) 4 repeat repeat;
+	-webkit-border-image: url(../img/base/bgFrameRad.png) 4 repeat repeat;
+	box-sizing: border-box;
+	color: #fff;
+	padding: 20px;
+	font-size: 15px;
+	line-height: 1.3;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 46px;
+		height: 34px;
+		background: url(../img/about/pc/baloonTop.png) 0 0 no-repeat;
+		position: absolute;
+		right: -40px;
+		top: 20px;
+	}
+
+	p {
+		margin: 0 0 1em;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+	b {
+		font-size: 120%;
+	}
+}
+
+.whitebelgAboutSeminarMemberProf {
+	margin: 0 0 40px;
+	float: right;
+	width: 308px;
+	padding-top: 180px;
+}
+.whitebelgAboutSeminarMemberProfData {
+	color: #fff;
+
+	dt {
+		display: block;
+		font-weight: bold;
+
+		&:after {
+			content: "：";
+		}
+		&:first-child {
+			display: inline-block;
+		}
+	}
+}
+
+.whitebelgAboutSeminarCecilReco {
+	clear: both;
+	background: none;
+	padding: 20px 50px;
+	margin: 0 auto 80px;
+	position: relative;
+	border: solid;
+	border-width: 3px 3px 3px 3px;
+	border-image: url(../img/base/bgFrameDot.png) 3 3 3 3 repeat repeat;
+	-moz-border-image: url(../img/base/bgFrameDot.png) 3 3 3 3 repeat repeat;
+	-webkit-border-image: url(../img/base/bgFrameDot.png) 3 3 3 3 repeat repeat;
+	width: 835px;
+	box-sizing: border-box;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+		width: 837px;
+		height: 324px;
+		background: url(../img/about/pc/bgReco.png) 0 0 no-repeat;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -32px;
+	}
+	img {
+		display: none;
+	}
+	.whitebelgAboutSeminarCecilRecoTtl {
+		margin: 0 0 20px;
+		height: 47px;
+		background: url(../img/about/pc/ttlHowToEnjoy.png) 50% 0 no-repeat;
+	}
+	.whitebelgAboutSeminarCecilRecoList {
+
+		&:after {
+			display: block;
+			clear: both;
+			content: '';
+		}
+		li {
+			color: #fff;
+			margin: 0 0 20px;
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+			padding-right: 30px;
+			font-size: 15px;
+
+			&:nth-child(odd){
+				clear: left;
+			}
+			h3 {
+				height: 26px;
+
+				&.whitebelgAboutSeminarCecilRecoListTtl1 {
+					background: url(../img/about/pc/reco1.png) 0 0 no-repeat;
+				}
+				&.whitebelgAboutSeminarCecilRecoListTtl2 {
+					background: url(../img/about/pc/reco2.png) 0 0 no-repeat;
+				}
+				&.whitebelgAboutSeminarCecilRecoListTtl3 {
+					background: url(../img/about/pc/reco3.png) 0 0 no-repeat;
+				}
+				&.whitebelgAboutSeminarCecilRecoListTtl4 {
+					background: url(../img/about/pc/reco4.png) 0 0 no-repeat;
+				}
+				&.whitebelgAboutSeminarCecilRecoListTtl5 {
+					background: url(../img/about/pc/reco5.png) 0 0 no-repeat;
+				}
+				&.whitebelgAboutSeminarCecilRecoListTtl6 {
+					background: url(../img/about/pc/reco6.png) 0 0 no-repeat;
+				}
+				&.whitebelgAboutSeminarCecilRecoListTtl7 {
+					background: url(../img/about/pc/reco7.png) 0 0 no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.whitebelgAboutSeminarBnr {
+	padding-left: 60px;
+}
+.whitebelgAboutSeminarBnrList > li {
+	margin: 0 28px 45px 0;
+	padding: 0 0 20px;
+	background: none;
+	width: 404px;
+	float: left;
+	font-size: 15px;
+	position: relative;
+	padding-bottom: 60px;
+	
+	.whitebelgAboutSeminarBnrListImg {
+		margin: 0 0px 10px;
+	}
+	.whitebelgAboutSeminarBnrListBtn {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -86px;
+
+		img {
+			display: none;
+		}
+		a {
+			display: block;
+			width: 174px;
+			height: 42px;
+			background: url(../img/about/pc/btnDetail.png) 0 0 no-repeat;
+
+			&:hover {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+/* stamp */
+.whitebelgScholarshipTtl {
+  margin: 0 0 20px;
+  height: 230px;
+  background: url(../img/scholarship/pc/ttlScholarship.png) 50% 0 no-repeat;
+
+  img {
+  	display: none;
+  }
+}
+.whitebelgScholarshipLead {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 15px;
+
+  b {
+  	font-weight: bold;
+  	font-size: 18px;
+  }
+}
+.whitebelgShcorarshipCampaignDateCaution {
+	font-size: 15px;
+	margin: 0 0 10px;
+}
+
+.whitebelgScholarshipOutline {
+	border: 1px solid #fff;
+	padding: 20px;
+	color: #fff;
+	width: 850px;
+	margin: 0 auto 40px;
+	font-size: 15px;
+
+	.whitebelgScholarshipOutlineTtl1 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0 0 15px;
+		font-size: 18px;
+	}
+}
+
+/* lecture */
+.whitebelgLectureHeader {
+	margin: 30px auto 35px;
+	width: 828px;
+
+	img {
+		display: none;
+	}
+	.whitebelgLectureTtl1 {
+		background: url(../img/lecture1/pc/ttlLecture1.png);
+		height: 363px;
+	}
+}
+.whitebelgLectureLead {
+	width: 800px;
+	border: solid;
+	border-width: 10px 10px 10px 10px;
+	margin: 0 auto 35px;
+	border-image: url(../img/base/pc/bgDoubleLine.png) 10 repeat repeat;
+	-moz-border-image: url(../img/base/pc/bgDoubleLine.png) 10 repeat repeat;
+	-webkit-border-image: url(../img/base/pc/bgDoubleLine.png) 10 repeat repeat;
+	box-sizing: border-box;
+	color: #fff;
+	padding: 15px 60px;
+	font-size: 15px;
+}
+.whitebelgLectureCont {
+	width: 800px;
+	margin: 0 auto 35px;
+	padding: 5px;
+	background: #fff;
+	font-size: 14px;
+	line-height: 1.5;
+
+	.whitebelgLectureContTtl1 {
+		font-size: 22px;
+		margin: 0 0 15px;
+	}
+}
+.whitebelgLectureContInner {
+	padding: 45px;
+}
+.whitebelgLectureContAuthor1 {
+	margin: 0 10px 0 0;
+	padding: 2px 8px;
+}
+.whitebelgLectureContAuthor2 {
+	margin: 0 10px 0 0;
+	padding: 2px 8px;
+}
+.whitebelgLectureContGuest {
+	background: #EBEBEB;
+	padding: 15px;
+
+	.whitebelgLectureContGuestHeader {
+		display: table;
+	}
+	.whitebelgLectureContGuestProfImg {
+		display: table-cell;
+		vertical-align: middle;
+		width: 65px;
+		padding: 0 10px 0 0;
+	}
+	.whitebelgLectureContGuestProf {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.whitebelgLectureContGuestProfLabel {
+		display: inline-block;
+		margin: 0 0 5px;
+		background: #FDD000;
+		padding: 2px 5px;
+		color: #303030;
+	}
+	.whitebelgLectureContGuestProfName {
+		font-weight: bold;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	.whitebelgLectureContGuestProfPosition {
+		font-size: 12px;
+	}
+	.whitebelgLectureContGuestComment {
+		clear: both;
+		padding-top: 10px;
+	}
+}
+
+}/* end ckeditroWrap */
+
+.pagePartsWrap {
+.whitebelgScholarshipCurrentCampaignBtn {
+	padding: 0 35px 35px;
+
+	a {
+		display: block;
+		width: 495px;
+		height: 78px;
+		margin: auto;
+		background: url(../img/scholarship/pc/btnCurrentStamp.png) 0 0 no-repeat;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+	img {
+		display: none;
+	}
+}
+}/* pagePartsWrap */
+}/* end for PC */
+
+/* plugin setting base */
+#moniplaPage--photoOutput--entries {}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntry { display: block; float: left; width: 33.3%; box-sizing: border-box; padding: 0 3px 6px;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntry img { display: block; width: 100%; height: auto;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntryPhoto a { display: block;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntryPhoto img.mpSimpleThumbSlideshowEntryPhotoImage { display: none;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntryTitle { display: none;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntryComment { display: none;}
+
+#moniplaPage--photoOutput--button { display: block; padding: 20px; width: 100%; box-sizing: border-box; margin: 0 auto; border: 0; box-shadow: none; background: rgba(0,0,0,.8); color: #fff; font-size:24px;}
+
+#mpSimpleThumbSlideshowOverlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.75);}
+#mpSimpleThumbSlideshowModal { position: absolute; left: 20px; right: 20px;}
+#mpSimpleThumbSlideshowModalInner { width: 100%; background: #fff; padding: 10px 10px 40px; position: relative; box-sizing: border-box;}
+#mpSimpleThumbSlideshowModal img { max-width: 100%; height: auto;}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryPhoto { margin: 0 0 10px;}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryPhoto img.mpSimpleThumbSlideshowEntryPhotoImage { display: block; margin: 0 auto 10px;}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryDate {}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryTitle { font-weight: bold;}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryComment {}
+
+#mpSimpleThumbSlideshowModalCloseButton { position: absolute; bottom: 10px; left: 50%; margin-left: -10px; width: 20px; height: 20px; background: url(../img/base/btnCloseModal.gif) 0 0 no-repeat; background-size: 20px 20px; text-indent: -9999px; overflow: hidden;}
+
+/* plugin setting pc */
+@media screen and (min-width: 641px) {
+#moniplaPage--photoOutput--entries { width: 840px; margin: 0 auto;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntry { width: 140px; padding: 0 6px;}
+#moniplaPage--photoOutput--entries .mpSimpleThumbSlideshowEntryPhoto { box-shadow: 0 0 4px rgba(0,0,0,.3);}
+
+#moniplaPage--photoOutput--button { width: 828px;}
+
+#mpSimpleThumbSlideshowModal { left: 50%; right: auto;}
+#mpSimpleThumbSlideshowModalInner { width: 720px; margin-left: -360px; padding-bottom: 90px;}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryPhoto img { display: none;}
+#mpSimpleThumbSlideshowModal .mpSimpleThumbSlideshowEntryPhoto img.mpSimpleThumbSlideshowEntryPhotoImage { display: block;}
+#mpSimpleThumbSlideshowModalCloseButton { position: absolute; bottom: 30px; left: 50%; margin-left: -20px; width: 40px; height: 40px; background-size: 40px 40px; text-indent: -9999px; overflow: hidden;}
+
+
+
+}
+
+
+
+  

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_userSurvey_list / admin-others</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+
+  <script src="../../js/brandco/Brandco.js"></script>
+  <script src="../../js/brandco/Brandco.net.js"></script>
+  <script src="../../js/brandco/Brandco.api.js"></script>
+  <script src="../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../js/_unit.js"></script>
+  <script src="../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">Setting</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <h1 class="hd1">アンケート設定</h1>
+
+    <div class="userSurveyWrap">
+      <div class="userSurveyColWrap">
+        <div class="userSurveySettingCol">
+          <div class="userSurveyColHeader">
+            <h2 class="hd2">設問一覧から選ぶ</h2>
+          <!-- /.userSurveyColHeader --></div>
+
+          <div class="userSurveyNonselected">
+            <div class="nonselectedItemsList">
+              <ul class="userSurveyList">
+                <li class="userSurveyItem selected">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsRecommend">おすすめ</small>
+                      <small class="itemTagsType">単一回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>あなたの家族構成を教えてください。</strong></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><span class="added">アンケートに追加済み</span></p>
+                <!-- /.userSurveyItem selected --></li>
+                <li class="userSurveyItem selected" data-tooltip="#tooltip01">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsRecommend">おすすめ</small>
+                      <small class="itemTagsType">複数回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>あなたの年収はいくらですか？</strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><span class="added">アンケートに追加済み</span></p>
+                <!-- /.userSurveyItem selected --></li>
+                <li class="userSurveyItem jsUserSurveyItem">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsRecommend">おすすめ</small>
+                      <small class="itemTagsType">単一回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>この商品の感想を教えてください。</strong></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><a href="#" class="addSelected">アンケートに追加する</a></p>
+                <!-- /.userSurveyItem --></li>
+                <li class="userSurveyItem jsUserSurveyItem">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsRecommend">おすすめ</small>
+                      <small class="itemTagsType">単一回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>AAIDの設問が入ります</strong></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><a href="#" class="addSelected">アンケートに追加する</a></p>
+                <!-- /.userSurveyItem --></li>
+                <li class="userSurveyItem jsUserSurveyItem">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsRecommend">おすすめ</small>
+                      <small class="itemTagsType">単一回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>AAIDの設問が入ります</strong></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><a href="#" class="addSelected">アンケートに追加する</a></p>
+                <!-- /.userSurveyItem --></li>
+                <li class="userSurveyItemMoreread"><a href="#">おすすめの設問をもっと見る</a></li>
+              <!-- /.userSurveyList --></ul>
+
+              <ul class="userSurveyList">
+                <li class="userSurveyItem jsUserSurveyItem">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsType">単一回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>あなたの家族構成を教えてください。</strong></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><a href="#" class="addSelected">アンケートに追加する</a></p>
+                <!-- /.userSurveyItem --></li>
+                <li class="userSurveyItem jsUserSurveyItem" data-tooltip="#tooltip01">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsType">複数回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>あなたの年収はいくらですか？</strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><a href="#" class="addSelected">アンケートに追加する</a></p>
+                <!-- /.userSurveyItem --></li>
+                <li class="userSurveyItem jsUserSurveyItem" data-tooltip="#tooltip02">
+                  <div class="itemInner">
+                    <p class="itemTags">
+                      <small class="itemTagsType">複数回答</small>
+                    <!-- /.itemTags --></p>
+                    <p class="itemText"><strong>過去使用した設問が入りますサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</strong><small class="choices">選択肢：選択肢テキスト…/選択肢テキスト…/選択肢テキスト…</small></p>
+                  <!-- /.itemInner --></div>
+                  <p class="surveyItemAction"><a href="#" class="addSelected">アンケートに追加する</a></p>
+                <!-- /.userSurveyItem --></li>
+                <li class="userSurveyItemMoreread"><a href="#">過去の設問をもっと見る</a></li>
+              <!-- /.userSurveyList --></ul>
+            <!-- /.nonselectedItemsList --></div>
+
+            <div class="userSurveyItemTooltip" id="tooltip01">
+              <div class="tooltipInner">
+                <p class="tooltipTitle"><strong>Q.あなたの年収はいくらですか？</strong></p>
+                <ul class="tooltipChoices">
+                  <li>300万円未満</li>
+                  <li>300万以上~400万円未満</li>
+                  <li>400万以上~500万円未満</li>
+                  <li>500万以上~600万円未満</li>
+                  <li>300万円未満</li>
+                  <li>300万以上~400万円未満</li>
+                  <li>400万以上~500万円未満</li>
+                  <li>500万以上~600万円未満</li>
+                  <li>300万円未満</li>
+                  <li>300万以上~400万円未満</li>
+                  <li>400万以上~500万円未満</li>
+                  <li>500万以上~600万円未満</li>
+                <!-- /.tooltipChoices --></ul>
+              <!-- /.tooltipInner --></div>
+            <!-- /.userSurveyItemtooltip --></div>
+
+            <div class="userSurveyItemTooltip" id="tooltip02">
+              <div class="tooltipInner">
+                <p class="tooltipTitle"><strong>Q.過去使用した設問が入りますサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</strong></p>
+                <ul class="tooltipChoices">
+                  <li>選択肢テキスト</li>
+                  <li>選択肢テキスト選択肢テキスト選択肢テキスト</li>
+                  <li>選択肢テキスト選択肢テキスト</li>
+                  <li>選択肢テキスト</li>
+                  <li>選択肢テキスト選択肢テキスト</li>
+                <!-- /.tooltipChoices --></ul>
+              <!-- /.tooltipInner --></div>
+            <!-- /.userSurveyItemtooltip --></div>
+          <!-- /.userSurveyNonselected --></div>
+        <!-- /.userSurveySettingCol --></div>
+
+        <div class="userSurveyPreviewCol">
+          <div class="userSurveyColHeader">
+            <h2 class="hd2">プロフィール・アンケート</h2>
+            <p class="surveyPreview"><a href="#">プレビュー</a></p>
+          <!-- /.userSurveyColHeader --></div>
+
+          <div class="userSurveyPreviewInner">
+            <ul class="userSurveyList">
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                    <small class="itemTagsRequire">必須</small>
+                    <small class="itemTagsType">再取得</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの家族構成を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">複数回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの年収はいくらですか？</a></strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">この商品の感想を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                    <small class="itemTagsRequire">必須</small>
+                    <small class="itemTagsType">再取得</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの家族構成を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">複数回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの年収はいくらですか？</a></strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">この商品の感想を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                    <small class="itemTagsRequire">必須</small>
+                    <small class="itemTagsType">再取得</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの家族構成を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">複数回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの年収はいくらですか？</a></strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">この商品の感想を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                    <small class="itemTagsRequire">必須</small>
+                    <small class="itemTagsType">再取得</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの家族構成を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">複数回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">あなたの年収はいくらですか？</a></strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItem">
+                <p class="surveyItemMove">順番を入れ替える</p>
+                <div class="itemInner">
+                  <p class="itemTags">
+                    <small class="itemTagsType">単一回答</small>
+                  <!-- /.itemTags --></p>
+                  <p class="itemText"><strong><a href="#">この商品の感想を教えてください。</a></strong></p>
+                <!-- /.itemInner --></div>
+                <p class="surveyItemAction"><a href="#modal1" class="iconBtnDelete jsOpenModal">削除する</a></p>
+              <!-- /.userSurveyItem --></li>
+              <li class="userSurveyItemPlaceholder">[+]ここに追加されます</li>
+              <li class="userSurveyItemNew"><a href="#">新規の設問を作成</a></li>
+            <!-- /.userSurveyList --></ul>
+          <!-- /.userSurveyPreviewInner --></div>
+
+          <p class="btnSet">
+            <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+            <span class="btn3"><a href="#" class="middle1">保存</a></span>
+          <!-- /.btnSet --></p>
+        <!-- /.userSurveyPreviewCol --></div>
+      <!-- /.userSurveyColWrap --></div>
+    <!-- /.userSurveyWrap --></div>
+
+  </article>
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <h1>本当に削除しますか？</h1>
+      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+        <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <script>
+    jQuery(function($) {
+      $('.nonselectedItemsList').height($('.nonselectedItemsList').height());
+      $('.userSurveyPreviewInner').height($('.nonselectedItemsList').height() - 77);
+
+      $(document).on({
+        'mouseenter': function(e) {
+          var trigger = e.currentTarget;
+          var target = $(trigger).data('tooltip');
+          $('.userSurveyItemTooltip').not(target).stop(true, true).fadeOut(200);
+          $(target).css({
+            top: $(trigger).position().top
+          }).stop(true, true).fadeIn(200);
+          $('.userSurveyItemPlaceholder').stop(true, false).slideDown(200);
+        },
+        'mouseleave': function(e) {
+          $('.userSurveyItemPlaceholder').stop(true, false).slideUp(200);
+        }
+      }, '.jsUserSurveyItem');
+
+      $(document).on({
+        'mouseleave': function(e) {
+          $('.userSurveyItemTooltip').stop(true, true).fadeOut(200);
+        }
+      }, '.userSurveyNonselected');
+
+    });
+  </script>
+
+</body>
+</html>

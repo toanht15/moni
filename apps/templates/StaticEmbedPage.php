@@ -1,0 +1,2 @@
+<iframe src="<?php assign($data['page_url'])?>" frameborder="0" height="100%" scrolling="no" width="100%" class="moniplaEmbedPage jsMoniplaEmbedPage"></iframe>
+<script src="<?php assign($this->setVersion('/js/brandco/services/admin-blog/PageEmbedService.js')); ?>"></script>

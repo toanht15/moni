@@ -1,0 +1,101 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1">コメント機能設定</h1>
+    <section class="commentPluginWrap">
+      <div class="cf">
+        <dl class="commentPluginEdit">
+          <dt>
+            <label for="input1" class="require1">名前</label>
+            <span class="iconHelp">
+              <span class="text">ヘルプ</span>
+              <span class="textBalloon1">
+                <span>
+                  プラグインを識別できる名称を<br>入れてください。
+                </span>
+              <!-- /.textBalloon1 --></span>
+            <!-- /.iconHelp --></span>
+          </dt>
+          <dd><input type="text" placeholder="識別用キーワード" id="input1"></dd>
+          <dt>投稿時のログイン</dt>
+          <dd>
+            <label><input type="radio" name="commnetRadio3" checked="checked">必須</label>
+            <label><input type="radio" name="commnetRadio3">任意</label>
+          </dd>
+          <dt>投稿時のシェア</dt>
+          <dd>
+            <label><input type="checkbox" name="commnetCheck" checked="checked">Facebook</label>
+            <label><input type="checkbox" name="commnetCheck">Twitter</label>
+            <p class="shareUrl">シェア用URL<span class="iconHelp">
+              <span class="text">ヘルプ</span>
+              <span class="textBalloon1">
+                <span>
+                  シェアした投稿に含まれるURLです。
+                </span>
+              <!-- /.textBalloon1 --></span>
+            <!-- /.iconHelp --></span>
+            <input type="text">
+            <p>
+          </dd>
+        <!-- /.commentPluginEdit --></dl>
+
+        <div class="embedTag">
+          <p>埋め込みタグ</p>
+          <textarea name="" id="" disabled="disabled" cols="30" rows="5">設定を作成・保存すると、埋め込み用のコードが表示されます。</textarea>
+        <!-- /.embedTag --></div>
+      <!-- /.cf --></div>
+
+      <div class="freeArea jsSettingContWrap">
+        <div class="cf">
+          <dl class="commentPluginEdit">
+            <dt>フリーエリア
+              <span class="iconHelp">
+                <span class="text">ヘルプ</span>
+                <span class="textBalloon1">
+                  <span>
+                  コメント機能の上下に自由に画像、テキストを<br>入れる事できます。
+                  </span>
+                <!-- /.textBalloon1 --></span>
+              <!-- /.iconHelp --></span>
+            </dt>
+            <dd class="freeAreaAction">
+              <p class="freeAreaSetting jsSettingContTile close">設定する</p>
+              <p class="previewAction"><a href="#">プレビュー</a></p>
+            </dd>
+          </dl>
+        <!-- /.cf --></div>
+        <div class="freeAreaEdit jsSettingContTarget" style="display: none;">
+          <img src="../../img/dummy/imgWyswig.png" width="960" height="580" alt="wyswig dummy" style="display: block;">
+          <p><a href="#" class="linkAdd">コメントプラグインの下にフリーエリアを追加</a></p>
+        <!-- /.jsModuleContTarget --></div>
+      <!-- /.freeArea --></div>
+
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#">キャンセル</a></span>
+        <span class="btn3"><a href="#">作成</a></span>
+      </p>
+      <ul class="pager2">
+        <li class="prev"><a href="#" class="iconPrev1">プラグイン一覧へ</a></li>
+      <!-- /.pager2 --></ul>
+    <!-- /.commentPluginWrap --></section>
+<% end %>
+
+<% block 'script' : %>
+    <script>
+      $('.jsSettingContTile').click(function(){
+          var trigger = $(this);
+          var target = trigger.parents('.jsSettingContWrap').find('.jsSettingContTarget');
+
+          if(trigger.hasClass('close')) {
+              target.slideDown(200, function() {
+                  trigger.removeClass('close');
+              });
+          }else{
+              target.slideUp(200, function() {
+                  trigger.addClass('close');
+              });
+          }
+      });
+    </script>
+<% end %>

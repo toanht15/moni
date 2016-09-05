@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>03_setting_page / admin-setting</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <div class="adminWrap">
+    <aside class="adminSideCol">
+      <nav class="adminSettingWrap">
+        <ul>
+          <li class="admin"><a href="#">管理者設定</a></li>
+          <li class="user"><a href="#">ユーザー設定</a></li>
+          <li class="page"><span class="current">ページ設定</span></li>
+          <li class="cvtag"><a href="#">コンバージョンタグ設定</a></li>
+          <li class="redirect"><a href="#">リダイレクトリンク設定</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <article class="adminMainCol">
+      <h1 class="hd1">ページ設定</h1>
+
+    <div class="adminOpenSettingWrap">
+      <h2 class="hd2">公開設定</h2>
+      <section class="adminPageSettingWrap">
+        <p style="margin-bottom:15px;">公開に設定すると、インターネット上に公開されます。</p>
+
+        <ul class="adminPageSetting">
+          <li><label><input type="radio" name="pageSetting1">公開</label></li>
+          <li><label><input type="radio" name="pageSetting1">非公開</label>
+          <span class="previewUrl">https://monipla.com/aacreative/campaigns/4255</span>
+          <a href="#" class="iconCopy1">URLをコピー</a>
+          <small>※非公開時には上記のURLからページをご確認ください。</small></li>
+        <!-- /.adminPageSetting --></ul>
+          <p class="iconError1"><a href="#section1" style="color:#b20000;"><strong>ページタイトル</strong>が入力されていません。</a></p>
+          <ol class="errorGuide">
+            <li>setting</li>
+            <li>ページ設定</li>
+            <li>基本情報設定</li>
+            <li>ページタイトル</li>
+          </ol>
+          <p class="iconError1"><a href="#section2" style="color:#b20000;"><strong>プロフィール画像</strong>が入力されていません。</a></p>
+          <ol class="errorGuide">
+            <li>setting</li>
+            <li>ページ設定</li>
+            <li>基本情報設定</li>
+            <li>プロフィール画像</li>
+          </ol>
+          <p class="iconError1"><a href="./06_setting_inquiry.html" style="color:#b20000;"><strong>問い合わせ先メールアドレス</strong>が入力されていません。</a></p>
+          <ol class="errorGuide">
+            <li>setting</li>
+            <li>ページ設定</li>
+            <li>基本情報設定</li>
+            <li>ページタイトル</li>
+          </ol>
+          <p class="btnSet">
+            <span class="btn3"><a href="#modal1" class="jsOpenModal">保存</a></span>
+          </p>
+
+      <!-- /.adminPageSettingWrap --></section>
+      <!-- /. --></div>
+
+      <h2 class="hd2">基本情報設定</h2>
+      <section class="adminPageSettingWrap">
+        <dl class="editProfile">
+            <dt><label for="#" class="">ページタイトル</label></dt>
+            <dd>
+                <input type="text" name="name" value="Allied Architects クリエイター" maxlength="35" id="profile_name">                        <br><small class="textLimit">（24/35文字）</small>
+                                        <br><span class="attention1">ページタイトルを入力して下さい</span>
+                                    </dd>
+            <dt>プロフィール画像</dt>
+            <dd><input type="file" name="profile_img_file" id="input_image"><img src="https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/image/brand/e4da3b7fbbce2345d7772b0674a318d5/profile/58ee3b672b87884358e9faddc6331981.png" width="80" height="80" alt="" class="thumbnail">
+                <br><small>（推奨:400px × 400px 以上 / 必須:200px × 200px）</small>
+                                    </dd>
+            <dt>favicon（ファビコン）</dt>
+            <dd><p class="supplement1">ブラウザタブやアドレスバーに表示されるアイコン</p><input type="file" name="favicon_img_file" id="favicon_img_file"><img src="https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/image/brand/e4da3b7fbbce2345d7772b0674a318d5/favicon/0df5079007a2a59d503895871f552b81.ico" width="16" height="16" alt="" class="thumbnail-small">
+                <br><small>（推奨:マルチアイコンファイル[.ico] / 必須:16px か 32pxのアイコンファイル[.ico]）</small>
+                                    </dd>
+        </dl>
+        <dl class="editProfile">
+            <dt><span class="editLabel">メインカラー</span></dt>
+                <dd>
+                    <input type="text" name="color_main" value="#ff0000" id="color_main" maxlength="7" class="colorPicker jsColorInput" style="color: rgb(255, 255, 255); background-color: rgb(255, 0, 0);">                            <div id="pickerColorMain" class="jsFarbtastic"><div class="farbtastic"><div class="color" style="background-color: rgb(255, 0, 0);"></div><div class="wheel"></div><div class="overlay"></div><div class="h-marker marker" style="left: 97px; top: 13px;"></div><div class="sl-marker marker" style="left: 47px; top: 97px;"></div></div></div>
+                </dd>
+            <dt><span class="editLabel">リンクカラー</span></dt>
+            <dd><input type="radio" id="color_text_#333333" name="color_text" value="#333333" checked="checked"><label for="color_text_#333333">黒</label>&nbsp;<input type="radio" id="color_text_#FFFFFF" name="color_text" value="#FFFFFF"><label for="color_text_#FFFFFF">白</label>&nbsp;</dd>
+            <dt>背景</dt>
+            <dd>
+                <input type="text" name="color_background" value="#ffffff" id="color_background" maxlength="7" class="colorPicker jsColorInput" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">                        <div id="pickerColorBackground" class="jsFarbtastic"><div class="farbtastic"><div class="color" style="background-color: rgb(255, 0, 0);"></div><div class="wheel"></div><div class="overlay"></div><div class="h-marker marker" style="left: 97px; top: 13px;"></div><div class="sl-marker marker" style="left: 147px; top: 47px;"></div></div></div>
+                                    </dd>
+                                <dd><input type="file" name="background_img_file" class="background_img_file" id="background_img_file"><img src="" width="80" height="80" alt="" class="thumbnail1">
+                <input type="checkbox" id="background_img_delete_flg_1" name="background_img_delete_flg" value="1" disabled="disabled"><label for="background_img_delete_flg_1">背景画像の削除</label>&nbsp;                                            </dd>
+            <dd>
+                <input type="checkbox" id="background_img_repeat_x" name="background_img_repeat[]" value="x" disabled="disabled"><label for="background_img_repeat_x">横に繰り返す</label>&nbsp;<input type="checkbox" id="background_img_repeat_y" name="background_img_repeat[]" value="y" disabled="disabled"><label for="background_img_repeat_y">縦に繰り返す</label>&nbsp;                    </dd>
+        </dl>
+        <p class="btnSet">
+          <span class="btn3"><a href="#modal1" class="jsOpenModal">保存</a></span>
+        </p>
+      <!-- /.adminPageSettingWrap --></section>
+
+
+        <h2 class="hd2">トップページレイアウト設定</h2>
+        <section class="adminPageSettingWrap">
+          <h3 class="hd3">SNS連携<span class="iconHelp">
+            <span class="text">ヘルプ</span>
+            <span class="textBalloon1">
+                <span><img src="../../../../img/setting/imgTopGuideContPan.png" height="420" width="350" alt="コンテンツパネルの位置"></span>
+            <!-- /.textBalloon1 --></span>
+          <!-- /.iconHelp --></span></h3>
+          <p>TOPページのコンテンツパネルに表示するSNSの連携設定ができます。<br>
+          フォロー対象設定などのキャンペーン用連携も同様に扱われ、パネルに表示をすることができます。</p>
+          <p class="btn3"><a href="#selectPanelKind" class="jsOpenModal small1"><span>編集する</span></a></p>
+        <!-- /.adminPageSettingWrap --></section>
+
+        <section class="adminPageSettingWrap">
+          <h3 class="hd3">グローバルメニュー<span class="iconHelp">
+            <span class="text">ヘルプ</span>
+            <span class="textBalloon1">
+                <span><img src="../../../../img/setting/imgTopGuideGNav.png" height="250" width="350" alt="グローバルメニューの位置"></span>
+            <!-- /.textBalloon1 --></span>
+          <!-- /.iconHelp --></span></h3>
+          <p>ヘッダー位置に表示されるナビゲーションを設定できます。<br>
+          スマホでは、ページ右上のメニューボタン内に格納されます。</p>
+          <p class="btn3"><a href="#globalMenus" class="jsOpenModal small1"><span>編集する</span></a></p>
+        <!-- /.adminPageSettingWrap --></section>
+
+        <section class="adminPageSettingWrap">
+          <h3 class="hd3">フリーエリア<span class="iconHelp">
+            <span class="text">ヘルプ</span>
+            <span class="textBalloon1">
+                <span><img src="../../../../img/setting/imgTopGuideFreeArea.png" height="250" width="350" alt="フリーエリアの位置"></span>
+            <!-- /.textBalloon1 --></span>
+          <!-- /.iconHelp --></span></h3>
+          <p>グローバルメニューの下のエリアにHTMLを使って自由にコンテンツを表示させることができます。<br>
+          このエリアはPC限定の表示エリアとなります。</p>
+          <p class="btn3"><a href="#freeAreaEntries" class="jsOpenModal small1"><span>編集する</span></a></p>
+        <!-- /.adminPageSettingWrap --></section>
+
+        <section class="adminPageSettingWrap">
+          <h3 class="hd3">サイドメニュー<span class="iconHelp">
+            <span class="text">ヘルプ</span>
+            <span class="textBalloon1">
+                <span><img src="../../../../img/setting/imgTopGuideSideMenu.png" height="280" width="350" alt="サイドメニューの位置"></span>
+            <!-- /.textBalloon1 --></span>
+          <!-- /.iconHelp --></span></h3>
+          <p>トップページ右側のサイドメニューにリンクを設定できます。<br>
+          スマホではページ下部に表示されます。</p>
+          <p class="btn3"><a href="#selectPanelKind" class="jsOpenModal small1"><span>編集する</span></a></p>
+        <!-- /.adminPageSettingWrap --></section>
+
+      <h2 class="hd2">トップページmeta情報設定</h2>
+      <section class="adminPageSettingWrap">
+        <dl class="adminPageMeta">
+          <dt class="require1">title</dt>
+          <dd><input type="text"><small>（24文字/32文字）</small></dd>
+          <dt class="require1">description</dt>
+          <dd><textarea name="" id="" cols="30" rows="10"></textarea><small>（75文字/124文字）</small></dd>
+          <dt class="require1">keyword</dt>
+          <dd><textarea name="" id="" cols="30" rows="10"></textarea><small>複数のキーワードを記入する際は半角のカンマ(,)区切りで入力してください （0文字/511文字）</small></dd>
+          <dt>ogimage</dt>
+          <dd><input type="file"></dd>
+        <!-- /.adminPageMeta --></dl>
+
+        <p class="btnSet">
+          <span class="btn3"><a href="#modal1" class="jsOpenModal">保存</a></span>
+        </p>
+      <!-- /.adminPageSettingWrap --></section>
+
+      <h2 class="hd2">フッタータグ管理</h2>
+      <section class="adminTagWrap">
+        <p>こちらに記載すると、全ページのフッター部分に表示されます。トラッキングタグなどはこちらに記載してください。</p>
+
+        <p class="adminTag"><textarea name="" id="" cols="30" rows="10"><script>
+  (function(i,s,o,g,r,a,m){i[’GoogleAnalyticsObject’]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,’script’,’//www.google-analytics.com/analytics.js’,’ga’);
+
+  ga(’create’, ‘UA-31506994-1’, ‘auto’);
+  ga(’send’, ‘pageview’);
+
+</script></textarea><a href="#" class="openNewWindow1">確認する</a></p>
+
+        <p class="btnSet">
+          <span class="btn3"><a href="#">保存</a></span>
+        </p>
+
+      <!-- /.adminTagWrap --></section>
+
+      <div class="adminManagerItem">
+        <p class="itemLabel"><span class="labelModeAllied">マネージャー設定項目</span></p>
+        <h2 class="hd2">トップページ差替え</h2>
+        <section class="adminToppageWrap">
+
+          <p><input type="text" placeholder="/kanebako/campaigns/10"><br><small>ページ内のurlを入力してください</small></p>
+
+          <p class="btnSet">
+            <span class="btn3"><a href="#modal1" class="jsOpenModal">保存</a></span>
+          </p>
+        <!-- /.adminToppageWrap --></section>
+      <!-- /.adminManagerItem --></div>
+
+    </article>
+  </div>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+        <h1>公開確認</h1>
+        <p>公開設定を変更します。よろしいですか？</p>
+        <p class="btnSet">
+            <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+            <span class="btn3"><a href="#closeModal" onclick="document.forms.frmPublicRadio.submit();return false;">保存</a></span>
+        </p>
+    </section>
+  <!-- /.modal1 --></div>
+  <div class="modal1 jsModal" id="editProfile">
+      <section class="modalCont-large jsModalCont">
+          <iframe data-src="https://monipla.com/aacreative/admin-top/edit_profile_form" frameborder="0"></iframe>
+      </section>
+  </div>
+  <div class="modal1 jsModal" id="selectPanelKind">
+      <section class="modalCont-large jsModalCont">
+          <iframe data-src="https://monipla.com/aacreative/admin-top/select_panel_kind" frameborder="0"></iframe>
+      </section>
+  </div>
+  <div class="modal1 jsModal" id="globalMenus">
+      <section class="modalCont-large jsModalCont">
+          <iframe data-src="https://monipla.com/aacreative/admin-top/global_menus" frameborder="0"></iframe>
+      </section>
+  </div>
+  <div class="modal1 jsModal" id="freeAreaEntries">
+      <section class="modalCont-large jsModalCont">
+          <iframe data-src="https://monipla.com/aacreative/admin-top/free_area_entries" frameborder="0"></iframe>
+      </section>
+  </div>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+
+      <h1>公開確認</h1>
+
+      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal" class="">OK</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+
+</body>
+</html>

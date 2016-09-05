@@ -1,0 +1,9 @@
+StoreSession:
+  Host: localhost
+  Port: 6379
+  DbId: 1
+StoreCache:
+  Host: localhost
+  Port: 6379
+  DbId: 1
+  TrackerDbId: 2

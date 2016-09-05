@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>05_ranking_sp</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/style_sp.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/_unit_sp.js"></script>
+
+  <!-- syn -->
+  <script src="../../../../js/syn/synapse.min.js"></script>
+  <script src="../../../../js/syn/jquery.inview.min.js"></script>
+  <script src="../../../../js/syn/unit_syn.dev.js"></script>
+  <!-- /.syn -->
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="btn3"><a href="#" class="small1">新規登録</a></li><li class="login"><a href="#">ログイン</a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#side-menu"  class="syn-notice jsMenuTrigger">MENU</a></p>
+      <!-- /.companyName --></div>
+      <aside class="drawerNaviWrap close jsModalTarget-menu" id="side-menu">
+        <div class="drawerNavi">
+          <div id="adg_div">
+            <script src="http://i.socdm.com/sdk/js/adg-script-loader.js?id=31095&targetID=adg_31095&displayid=1&adType=FREE&async=false&tagver=2.0.0"></script>
+          </div>
+          <script>
+            // ロード完了時イベント
+            window.addEventListener($adg.listener.loaded, function (e) {
+              // inview は、オブジェクトの各辺が描画領域に入ると報告されるが、そのうち最初の1回だけ
+              // 受け取れるようにフラグを立てて管理する。
+              var firstInView = false;
+
+              $('#adg_div').css('display', 'block');
+              // jquery.inviewによるinview判定
+              $('#adg_div').on('inview', function(event, isInView){
+                if (isInView) {
+                  if (!firstInView) {
+                    $adg.ads.trackShowEvent(); // トラッキング
+                    firstInView = true;
+                  }
+                }
+              });
+            });
+            window.addEventListener($adg.listener.failed, function () {
+              //console.log('adFailed!');
+            });
+          </script>
+          <h2 class="hd2">ブランド名orモニプラ</h2>
+          <ul class="privateMenu">
+            <li class="home"><a href="http://www.aainc.co.jp/">トップページ</a></li>
+            <li><a href="#">ほめられ美脚なら♪</a></li>
+            <li><a href="#">脱ビール腹！大人の男磨きしよう！</a></li>
+            <li><a href="#">男のやせる専門店誕生</a></li>
+          </ul>
+
+          <div id='synapse-service-list-outer-box' style='display: none'>
+            <h2 class="hd2">おすすめサービス</h2>
+            <ul id='synapse-service-list'>
+            </ul>
+          </div>
+
+          <div id="synapse-logo-box" class="synapse_logo" style='display: none'></div>
+        </div>
+      </aside>
+      <div class="modalBase jsModalBase"></div>
+    <!-- /.company --></section>
+  </header>
+
+  <article>
+    <section class="messageWrap">
+      <section class="campaign">
+        <p class="campaignImg"><img src="../../../../img/dummy/CPmain.jpg" width="690" height="280" alt="img text"></p>
+
+        <div class="uploadCont">
+          <div class="votedItem">
+            <figure class="itemCont">
+              <figcaption class="itemTitle">「レモン水」に投票しました！</figcaption>
+              <span class="contImg"><img src="../../../../img/dummy/card2.png" alt="image title"></span>
+            </figure>
+            <p class="itemText">レモンにはビタミンCが多く含まれていて、美白効果はもちろん免疫力もアップで健康的なお肌になります！</p>
+          <!-- /.votedItem --></div>
+
+        <ul class="btnSet">
+          <li class="btn1"><a href="#" class="large1">参加はこちら</a></li>
+        <!-- /.btnSet --></ul>
+        <div class="messageRankingPreview">
+          <p class="rankingTheme">美白のために今後気にして食べたい食材はどれ？</p>
+          <p class="rankingLabel"><strong>現在の投票結果</strong></p>
+          <ol class="messageRankingItem">
+            <li class="rank1st">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">フルーツヨーグルト</figcaption>
+                <span class="contImg"><img src="../../../../img/dummy/card1.png" alt="image title"></span>
+              </figure>
+              <p class="itemText">沢山のフルーツをヨーグルトに混ぜてビタミンCな...</p>
+              <a href="#modalRankingImg" class="imgPreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank1st --></li>
+            <li class="rank1st">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">レモン水</figcaption>
+                <span class="contImg"><img src="../../../../img/dummy/card2.png" alt="image title"></span>
+              </figure>
+              <p class="itemText">沢山のフルーツをヨーグルトに混ぜてビタミンCな...</p>
+              <a href="#modalRankingImg" class="imgPreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank1st --></li>
+            <li class="rank2nd">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">トマト</figcaption>
+                <span class="contImg"><img src="../../../../img/dummy/card3.png" alt="image title"></span>
+              </figure>
+              <p class="itemText">沢山のフルーツをヨーグルトに混ぜてビタミンCな...</p>
+              <a href="#modalRankingImg" class="imgPreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank2nd --></li>
+            <li class="rank3rd">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">フルーツヨーグルト</figcaption>
+                <span class="contImg"><img src="../../../../img/dummy/card4.png" alt="image title"></span>
+              </figure>
+              <p class="itemText">沢山のフルーツをヨーグルトに混ぜてビタミンCな...</p>
+              <a href="#modalRankingImg" class="imgPreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank3rd --></li>
+            <li>
+              <figure class="itemCont">
+                <figcaption class="itemTitle">フルーツヨーグルト</figcaption>
+                <span class="contImg"><img src="../../../../img/dummy/card1.png" alt="image title"></span>
+              </figure>
+              <p class="itemText">沢山のフルーツをヨーグルトに混ぜてビタミンCな...</p>
+              <a href="#modalRankingImg" class="imgPreview jsOpenModal">拡大表示する</a>
+            </li>
+          <!-- /.messageRankingItem --></ol>
+        <!-- /.messageRankingPreview --></div>
+
+        <!-- /.uploadCont --></div>
+      <!-- /.campaign --></section>
+
+      <section class="campaign">
+        <p class="campaignImg"><img src="../../../../img/dummy/CPmain.jpg" width="690" height="280" alt="img text"></p>
+        <div class="uploadCont">
+          <div class="votedItem">
+            <figure class="itemCont">
+              <figcaption class="itemTitle">「レモン水」に投票しました！</figcaption>
+              <span class="contImg"><img src="../../../../img/dummy/card2.png" alt="image title"></span>
+            </figure>
+            <p class="itemText">レモンにはビタミンCが多く含まれていて、美白効果はもちろん免疫力もアップで健康的なお肌になります！</p>
+          <!-- /.votedItem --></div>
+        <!-- /.uploadCont --></div>
+
+        <ul class="btnSet">
+          <li class="btn1"><a href="#" class="large1">参加はこちら</a></li>
+        <!-- /.btnSet --></ul>
+
+        <div class="messageRankingPreview">
+          <p class="rankingTheme">美白のために今後気にして食べたい食材はどれ？</p>
+          <p class="rankingLabel"><strong>現在の投票結果</strong></p>
+          <ol class="messageRankingItem">
+            <li class="rank1st">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">雪肌精「明る い、すっぴん。」篇（メイキング）</figcaption>
+                <span class="contImg"><img src="http://i.ytimg.com/vi/jLHWsUoDy-4/mqdefault.jpg" alt="movie title"></span>
+              </figure>
+              <p class="itemText">雪肌精「明るい、すっぴん。」篇（メイキング）</p>
+              <a href="#modalRankingMovie" class="moviePreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank1st --></li>
+            <li class="rank2nd">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">新垣結衣さん×雪肌精「SETSUKOの部屋」</figcaption>
+                <span class="contImg"><img src="http://i.ytimg.com/vi/jLHWsUoDy-4/mqdefault.jpg" alt="movie title"></span>
+              </figure>
+              <p class="itemText">新垣結衣さん×雪肌精「SETSUKOの部屋」</p>
+              <a href="#modalRankingMovie" class="moviePreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank2nd --></li>
+            <li class="rank3rd">
+              <figure class="itemCont">
+                <figcaption class="itemTitle">雪肌精「明るい、すっぴん。」篇（メイキング）</figcaption>
+                <span class="contImg"><img src="http://i.ytimg.com/vi/jLHWsUoDy-4/mqdefault.jpg" alt="movie title"></span>
+              </figure>
+              <p class="itemText">雪肌精「明るい、すっぴん。」篇（メイキング）</p>
+              <a href="#modalRankingMovie" class="moviePreview jsOpenModal">拡大表示する</a>
+            <!-- /.rank3rd --></li>
+            <li>
+              <figure class="itemCont">
+                <figcaption class="itemTitle">新垣結衣さん×雪肌精「SETSUKOの部屋」</figcaption>
+                <span class="contImg"><img src="http://i.ytimg.com/vi/jLHWsUoDy-4/mqdefault.jpg" alt="movie title"></span>
+              </figure>
+              <p class="itemText">新垣結衣さん×雪肌精「SETSUKOの部屋」</p>
+              <a href="#modalRankingMovie" class="moviePreview jsOpenModal">拡大表示する</a>
+            </li>
+          <!-- /.messageRankingItem --></ol>
+        <!-- /.messageRankingPreview --></div>
+      <!-- /.campaign --></section>
+    <!-- /.messageWrap --></section>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modalRankingImg">
+    <section class="modalCont-medium jsModalCont">
+      <figure class="modalImgPreview">
+        <figcaption class="title">画像タイトル画像タイトル画像タイトル画像タイトル画像タイトル（タイトル省略なし）</figcaption>
+        <img src="../../../../img/dummy/card1.png" alt="img title">
+      <!-- /.modalImgPreview --></figure>
+      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    <!-- /.modalCont-medium.jsModalCont --></section>
+  <!-- /#modal1.modal1.jsModal --></div>
+
+  <div class="modal1 jsModal" id="modalRankingMovie">
+    <section class="modalCont-medium jsModalCont">
+      <figure class="modalMoviePreview">
+        <figcaption class="title">動画タイトル動画タイトル動画タイトル動画タイトル動画タイトル（タイトル省略なし）</figcaption>
+        <p class="movieWrap"><iframe src="//www.youtube.com/embed/jLHWsUoDy-4" frameborder="0" allowfullscreen></iframe></p>
+      <!-- /.modalMoviePreview --></figure>
+      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    <!-- /.modalCont-medium.jsModalCont --></section>
+  <!-- /#modal1.modal1.jsModal --></div>
+    <script>
+    $(function(){
+      $('.drawerNaviWrap').css('position','fixed');
+    });
+    </script>
+</body>
+</html>

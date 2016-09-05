@@ -1,0 +1,116 @@
+Stage: staging
+Protocol:
+  Secure: https
+  Normal: http
+Domain:
+  brandco: stg.monipla.com
+  brandco_manager: manager.stg.monipla.com
+  brandco_api: stg-api.monipla.com
+  aaid: stg.allied-id.com
+  brandco_static_track: stg-t0s.monipla.com
+  brandco_tracker: track.stg.brandco.jp
+  monipla: stg1-cp.monipla.com
+  old_monipla_api: stg1-platform.monipla.jp
+  media_api: stg1-cp-privateapi.monipla.com
+  monipla_media: stg1-cp.monipla.com
+DBInfo:
+  main:
+    w: mysql://bc_stg_user:j8rm3wzfc@192.168.4.247/stg_db_brandco
+    r: mysql://bc_stg_user:j8rm3wzfc@192.168.4.247/stg_db_brandco
+  tracker:
+    w: mysql://bc_stg_user:j8rm3wzfc@192.168.4.247/stg_db_brandco_track
+    r: mysql://bc_stg_user:j8rm3wzfc@192.168.4.247/stg_db_brandco_track
+  maintedb:
+    w: mysql://bc_stg_user:j8rm3wzfc@192.168.4.247/stg_db_brandco
+    r: mysql://bc_stg_user:j8rm3wzfc@192.168.4.247/stg_db_brandco
+DB:
+  SQLLib: ${AAFW_DIR}/plugins/db_sql
+Store:
+  SchemaCacheInterval: 2
+ManagerIps:
+  0: "124.35.221.2"
+  1: "210.138.60.124"
+  2: "124.33.221.200/29"
+Log4php:
+  configFileName: logger_config.php
+  loggers:
+    app:
+      level: INFO
+    sql:
+      level: INFO
+    cv:
+      level: INFO
+    hipchat:
+      level: INFO
+  appenders:
+    app:
+      name: /var/log/brandco/brandco_app_%s.log
+    sql:
+      name: /var/log/brandco/brandco_sql_%s.log
+    cv:
+      name: /var/log/brandco/brandco_cv_%s.log
+    hipchat:
+      name: /var/log/brandco/brandco_hipchat_%s.log
+    emailTracker:
+      name: /var/log/brandco/brandco-tracker_email_%s.log
+ShortenURL:
+  user: aainc
+  apiKey: R_29ee7cfeb0396c22b965dfd315d34b02
+TemporaryDirectory: /tmp/
+UseCore: 1
+NewRelic:
+  use: 1
+  consoleApplicationName: brandco.dev.jp
+Analytics:
+  Status: Off
+  ID:
+  Domain:
+Static:
+  Url: //stg-s0.monipla.com
+Mail:
+  Default:
+    FromAddress: BRANDCo-STG<dummy@aainc.co.jp>
+    BccAddress: dummy@aainc.co.jp
+    Envelope: dummy@aainc.co.jp
+    Charset: ISO-2022-JP
+    RealCharset: ISO-2022-JP-MS
+  Support: dummy@aainc.co.jp
+  KPI:
+    ToAddress: dummy@aainc.co.jp
+    CcAddress: tsuji.toshihiro@aainc.co.jp
+  ALERT:
+    ToAddress: tan.kin.piow@aainc.co.jp
+    CcAddress: tan.kin.piow@aainc.co.jp
+  Tableau: dummy@aainc.co.jp
+M17N:
+  DefaultLanguage: ja_JP
+  DefaultCountry: JP
+  Mail:
+    ja_JP:
+      Charset: ISO-2022-JP
+      RealCharset: ISO-2022-JP-MS
+BasicCertification : 0
+Maintenance: 0
+DeclineIP:
+  0: "124.35.221.2"
+  1: "210.138.60.124"
+  2: "124.33.221.200/29"
+PersonalMachineIp:
+  0: "210.138.216.67"
+UtilityAPI: Off
+AdEbis:
+  Status: Off
+  Domain:
+HipChat:
+  Token:
+  Rooms:
+platform:
+  client_secret:
+SyncCoreUserDataPartitioningFactor: 4
+MoniplaLottery:
+  isBeingHeld: Off
+Monipla:
+  BrandId: 51
+SynBrandId: 30
+ThirdPartyKeys:
+  0: "noid"

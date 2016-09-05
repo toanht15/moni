@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_setting_basic / admin-cp-create</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <script src="../../../../js/brandco/Brandco.message.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/admin_unit.js"></script>
+  <script src="../../../../js/brandco/services/admin-cp/EditSettingBasicService.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+  <!-- olympus files -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../js/util.js"></script>
+
+  <!-- olympus header  -->
+  <header id="olympusHeader"><div id="olympusHeaderInner">
+    <div id="olympusHeaderContent">
+      <p id="logoOlympus">
+        <img src="../../img/olympus-imaging.jp/000000002.svg" alt="OLYMPUS" class="svg" />
+        <img src="../../img/olympus-imaging.jp/000000003.svg" alt="" class="svgSp" />
+        <img src="../../img/olympus-imaging.jp/000000004.gif" alt="" class="image" />
+      <!-- /#logoOlympus --></p>
+      <div id="logoOlympusSub">
+        <p><a href="http://www.olympus.co.jp/">Olympus Japan</a></p>
+        <p><a href="http://www.olympus-global.com/en/network/"><img src="../../img/olympus-imaging.jp/000000017.gif" alt="OLYMPUS" /></a></p>
+      <!-- /#logoOlympusSub --></div>
+      <p id="logoOlympusImaging">
+        <a href="http://olympus-imaging.jp/">
+          <img src="../../img/olympus-imaging.jp/000000005.svg" alt="OLYMPUS IMAGING" class="svg" />
+          <img src="../../img/olympus-imaging.jp/000000006.gif" alt="OLYMPUS IMAGING" class="image" />
+        </a>
+      </p>
+    <!-- /#olympusHeaderContent --></div>
+    <!-- /#olympusHeaderInner --></div>
+
+    <div id="olympusVoiceRecorderHeader">
+      <h1><img src="../../img/common/logo.gif" width="223"></h1>
+      <button id="btnOlympusMenu"><img src="../../img/common/btnMenu.gif" width="45"></button>
+      <nav id="olympusGlobalNav">
+        <ul>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/" class="nav1"><img src="../../img/common/btnGlobalNav1.gif" alt="TOP"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/introduce" class="nav2"><img src="../../img/common/btnGlobalNav2.gif" alt="なぜレコーダーが選ばれるの？"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/categories/use" class="nav3"><img src="../../img/common/btnGlobalNav3.gif" alt="ボイスレコーダー活用術"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/type" class="nav4"><img src="../../img/common/btnGlobalNav4.gif" alt="レコーダーのタイプ"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/original" class="nav5"><img src="../../img/common/btnGlobalNav5.gif" alt="オリンパスのボイスレコーダーはここがすごい！"></a></li>
+          <li><span class="nav6"><img src="../../img/common/btnGlobalNav6_disable.gif" alt="どれ買うナビ"></span></li>
+          <li><span class="nav7"><img src="../../img/common/btnGlobalNav7_disable.gif" alt="レビュー"></span></li>
+          <li><a href="#" id="olympusGlobalNavClose"><img src="../../img/common/btnGlobalNav8.gif" alt="閉じる"></a></li>
+        </ul>
+      </nav>
+    <!-- /#olympusVoiceRecorderHeader --></div>
+  <!-- /#olympusHeader --></header>
+  <!-- / olympus header  -->
+
+  <!-- /.editHeadWrap --></header>
+  <article>
+
+    <section class="skeletonSet">
+      <div class="stepListWrap">
+        <ul class="stepList">
+          <li class="stepDetail_base">
+            <h1>基本情報<span class="attention1">*</span></h1>
+            <ul class="moduleList">
+              <li class="moduleDetail1"><span class="current"><img src="../../../../img/module/setting1.png" width="25" height="25" alt="基本設定"><span class="textBalloon1"><span>基本設定</span></span></span></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/attract1.png" width="25" height="25" alt="集客設定"><span class="textBalloon1"><span>集客設定</span></span></a></li>
+            <!-- /.moduleList --></ul>
+          <!-- /.stepDetail_base --></li>
+          <li class="stepDetail_require">
+            <h1>STEP1<span class="attention1">*</span></h1>
+            <ul class="moduleList">
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知"><span class="textBalloon1"><span>キャンペーン告知</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/dummy/02.jpg" width="25" height="25" alt="dummy"><span class="textBalloon1"><span>dummy</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了"><span class="textBalloon1"><span>参加完了</span></span></a></li>
+            <!-- /.moduleList --></ul>
+          <!-- /.stepDetail_require --></li>
+          <li class="stepDetail">
+            <h1>STEP2</h1>
+            <ul class="moduleList">
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/win1.png" width="25" height="25" alt=""><span class="textBalloon1"><span>当選通知</span></span></a></li>
+            <!-- /.moduleList --></ul>
+          <!-- /.stepDetail_require --></li>
+          <li class="stepDetail">
+            <h1>STEP3</h1>
+            <ul class="moduleList">
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト"><span class="textBalloon1"><span>フォト</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ"><span class="textBalloon1"><span>メッセージ</span></span></a></li>
+            <!-- /.moduleList --></ul>
+          <!-- /.stepDetail --></li>
+          <li class="stepDetail">
+            <h1>STEP4</h1>
+            <ul class="moduleList">
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート"><span class="textBalloon1"><span>アンケート</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/check-in1.png" width="25" height="25" alt="チェックイン"><span class="textBalloon1"><span>チェックイン</span></span></a></li>
+            <!-- /.moduleList --></ul>
+          <!-- /.stepDetail --></li>
+          <li class="stepDetail">
+            <h1>STEP5</h1>
+            <ul class="moduleList">
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト"><span class="textBalloon1"><span>フォト</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート"><span class="textBalloon1"><span>アンケート</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ"><span class="textBalloon1"><span>メッセージ</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト"><span class="textBalloon1"><span>フォト</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート"><span class="textBalloon1"><span>アンケート</span></span></a></li>
+              <li class="moduleDetail1"><a href="#"><img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ"><span class="textBalloon1"><span>メッセージ</span></span></a></li>
+            <!-- /.moduleList --></ul>
+          <!-- /.stepDetail --></li>
+        <!-- /.stepList --></ul>
+      <!-- /.stepListWrap --></div>
+      <ul class="openButtons">
+        <li class="demoOpen">
+          <span class="btn1"><span class="round1">デモ公開</span></span>
+        <!-- /.demoOpen --></li
+        ><li class="flowOpen">
+          <span class="btn3"><span class="round2">未公開</span></span>
+          <small class="attention1">STEP1までを<br>完了してください</small>
+        <!-- /.flowOpen --></li>
+      <!-- /.openButtons --></ul>
+    <!-- /.skeletonSet --></section>
+
+    <h1 class="hd1"><img src="../../../../img/module/setting1.png" width="25" height="25" alt="基本情報" class="hdModuleIcon">基本設定<span class="progress">基本情報1/2 STEP1 0/3</span></h1>
+    <p class="supplement1">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+
+    <section class="moduleEditWrap">
+      <section class="moduleBasicSetting1">
+        <dl>
+          <dt>タイトル</dt
+          ><dd><input type="text" class="inputTitle"><br><small class="textLimit">（<span>0</span>文字／80文字）</small></dd
+          ><dt>サムネイル画像</dt
+          ><dd class="jsCheckToggleWrap">
+            <label><input type="checkbox" class="jsCheckToggle">横長サイズ画像も登録（moniplaのトップページ掲載に最適なサイズです）</label>
+            <p class="thumbImg">
+              <img src="../../../../img/base/imgCpDummy360.png" wdth="160" height="160" alt="360*360">
+              <input type="file">
+              <small>※JPEG,GIF,PNGの360*360ピクセル</small>
+            </p
+            ><p class="thumbImg jsCheckToggleTarget" style="display:none;">
+              <img src="../../../../img/base/imgCpDummy1000.png" wdth="304" height="160" alt="1000*524">
+              <input type="file">
+              <small>※JPEG,GIF,PNGの1000*524ピクセル</small>
+            </p>
+          </dd
+          ><dt>開始日時</dt
+          ><dd>
+            <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+            <select name="openTimeHH" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select
+            ><span class="coron">:</span
+            ><select name="openTimeMM" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+            </select>
+          </dd
+          ><dt>応募日時</dt
+          ><dd class="jsAreaToggleWrap">
+            <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+            <select name="openTimeHH" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select
+            ><span class="coron">:</span
+            ><select name="openTimeMM" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+            </select
+            ><span class="dash">～</span
+            ><input type="text" class="jsDate inputDate" placeholder="年/月/日"><span class="closeTimeDate">（終日）<label class="settingClose jsAreaToggle"><input type="checkbox"><span class="textBalloon1"><span>時間の設定</span></span></label></span>
+            <span class="closeTimeSet"><select name="closeTimeHH" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23" selected>23</option>
+            </select
+            ><span class="coron">:</span
+            ><select name="closeTimeMM" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59" selected>59</option>
+            </select><a href="#" class="iconBtnDelete">設定しない</a></span>
+          </dd
+          ><dt>当選発表日時</dt
+          ><dd>
+            <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+            <select name="openTimeHH" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select
+            ><span class="coron">:</span
+            ><select name="openTimeMM" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+            </select>
+          </dd
+          ><dt>発表方法</dt
+          ><dd><label><input type="radio" name="prize">メッセージで発表</label><label><input type="radio" name="prize">商品の発送をもって発表</label></dd
+          ><dt>当選者数</dt
+          ><dd>
+            <ul class="prizeSetting">
+              <li class="prizeNum"><input type="number" class="num">名</li>
+              <li class="showNum jsCheckToggleWrap"><label><input type="checkbox" class="jsCheckToggle">当選者数表示の変更</label><input type="text" placeholder="（例）○組○名様" class="jsCheckToggleTarget"></li>
+              <!-- <li class="prizeCheck jsCheckToggleWrap">
+                <label><input type="checkbox" class="jsCheckToggle">賞毎に設定する</label>
+                <ul class="jsCheckToggleTarget">
+                  <li><input type="text" placeholder="A賞" class="prizeName"><input type="text" class="num">名</li>
+                  <li><input type="text" placeholder="B賞" class="prizeName"><input type="text" class="num">名</li>
+                  <li><input type="text" placeholder="C賞" class="prizeName"><input type="text" class="num">名<a href="#" class="iconBtnDelete">削除する</a></li>
+                  <li><a href="#" class="linkAdd">景品を追加する</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </dd
+          ><dt>参加可能SNS</dt
+          ><dd class="jsCheckToggleWrap">
+            <label><input type="checkbox" class="jsCheckToggle">限定する</label>
+            <ul class="joinAccount jsCheckToggleTarget">
+              <li><input type="checkbox">Facebook</li>
+              <li><input type="checkbox">Twitter</li>
+              <li><input type="checkbox">Yahoo!</li>
+              <li><input type="checkbox">Google</li>
+              <li><input type="checkbox">メールアドレス</li>
+            </ul>
+          </dd
+          ><dt>デモグラ制限</dt
+          ><dd>
+            <ul class="prizeSetting">
+              <li class="showNum jsCheckToggleWrap"><label><input type="checkbox" class="jsCheckToggle">年齢</label><input type="text" placeholder="年齢" class="jsCheckToggleTarget"></li>
+              <li class="showNum jsCheckToggleWrap"><label><input type="checkbox" class="jsCheckToggle">性別</label><input type="text" class="jsCheckToggleTarget"></li>
+              <li class="showNum jsCheckToggleWrap"><label><input type="checkbox" class="jsCheckToggle">都道府県</label>
+            <div class="attentionWrap jsCheckToggleTarget">
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">北海道・東北</label></dt>
+                <dd class="local"><label><input type="checkbox" value="北海道">北海道</label><label><input type="checkbox" value="青森県">青森県</label><label><input type="checkbox" value="岩手県">岩手県</label><label><input type="checkbox" value="秋田県">秋田県</label><label><input type="checkbox" value="宮城県">宮城県</label><label><input type="checkbox" value="山形県">山形県</label><label><input type="checkbox" value="福島">福島</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">関東</label></dt>
+                <dd><label><input type="checkbox" value="東京都">東京都</label><label><input type="checkbox" value="神奈川県">神奈川県</label><label><input type="checkbox" value="岩手県">岩手県</label><label><input type="checkbox" value="秋田県">秋田県</label><label><input type="checkbox" value="宮城県">宮城県</label><label><input type="checkbox" value="山形県">山形県</label><label><input type="checkbox" value="福島県">福島県</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">中部</label></dt>
+                <dd><label><input type="checkbox" value="新潟県">新潟県</label><label><input type="checkbox" value="富山県">富山県</label><label><input type="checkbox" value="石川県">石川県</label><label><input type="checkbox" value="福井県">福井県</label><label><input type="checkbox" value="山梨県">山梨県</label><label><input type="checkbox" value="長野県">長野県</label><label><input type="checkbox" value="岐阜県">岐阜県</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">東海</label></dt>
+                <dd><label><input type="checkbox" value="三重県">三重県</label><label><input type="checkbox" value="静岡県">静岡県</label><label><input type="checkbox" value="愛知県">愛知県</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">近畿</label></dt>
+                <dd><label><input type="checkbox" value="大阪府">大阪府</label><label><input type="checkbox" value="兵庫県">兵庫県</label><label><input type="checkbox" value="京都府">京都府</label><label><label><input type="checkbox" value="滋賀県">滋賀県</label></label><label><input type="checkbox" value="奈良県">奈良県</label><label><input type="checkbox" value="和歌山県">和歌山県</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">中国</label></dt>
+                <dd><label><input type="checkbox" value="新潟県">新潟県</label><label><input type="checkbox" value="広島県">広島県</label><label><input type="checkbox" value="鳥取県">鳥取県</label><label><input type="checkbox" value="島根県">島根県</label><label><input type="checkbox" value="岡山県">岡山県</label><label><input type="checkbox" value="山口県">山口県</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">四国</label></dt>
+                <dd><label><input type="checkbox" value="徳島県">徳島県</label><label><input type="checkbox" value="香川県">香川県</label><label><input type="checkbox" value="愛媛県">愛媛県</label><label><input type="checkbox" value="告知県">告知県</label></dd>
+              </dl>
+
+              <dl class="areaSelectList">
+                <dt><label><input type="checkbox" class="jsAllCheack">九州・沖縄</label></dt>
+                <dd><label><input type="checkbox" value="福岡県">福岡県</label><label><input type="checkbox" value="佐賀県">佐賀県</label><label><input type="checkbox" value="熊本県">熊本県</label><label><input type="checkbox" value="大分県">大分県</label><label><input type="checkbox" value="宮崎県">宮崎県</label><label><input type="checkbox" value="鹿児島県">鹿児島県</label><label><input type="checkbox" value="沖縄県">沖縄県</label></dd>
+              </dl>
+            </div>
+            </ul>
+          </dd
+          ><dt>その他</dt
+          ><dd class="jsCheckToggleWrap">
+            <label><input type="checkbox" class="jsCheckToggle">注意事項の編集</label>
+            <div class="attentionWrap jsCheckToggleTarget">
+              <textarea cols="30" rows="10">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</textarea>
+            </div>
+          </dd
+          ><dt class="labelModeAllied">Salesforce契約ID</dt
+          ><dd><input type="text" class="inputId"></dd
+          ><dt class="labelModeAllied">シェア等の<br>URL差し替え</dt
+          ><dd><input type="text" class="inputId"><br><small class="cautionList">※シェア、モニプラメディアの遷移先が変更になります。<br>※シェアモジュール内のサムネイルは指定先のOGPに従います。<br>※ページ作成より作ったページ（https://monipla.com/xxxxxxxxx/page/xxxxx）のみ指定可能です。<br>※ボックス内には「https://monipla.com/」以降を入力してください。</small></dd>
+        </dl>
+      <!-- /.basicSetting1 --></section>
+    <!-- /.moduleEditWrap --></section>
+
+    <div class="moduleCheck">
+      <ul>
+        <li class="btn2"><a href="#" class="small1">下書き保存</a></li>
+        <li class="btn3"><a href="#" class="">内容確定</a></li>
+      </ul>
+    <!-- /.moduleCheck --></div>
+    <ul class="pager2">
+      <li class="next"><a href="#" class="iconNext1">集客設定へ</a></li>
+    <!-- /.pager2 --></ul>
+
+  <!-- /.wrap --></article>
+  <!-- olympus footer  -->
+  <footer id="olympusFooter">
+    <ul class="snsBtns-btn">
+      <li>
+        <div id="fb-root" data-appid = "749555551767856"></div>
+        <div class="fb-like" data-href="http://www.voicerecorder.olympus-imaging.com/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+      </li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+    <!-- /.snsBtns --></ul>
+
+    <ul class="olympusLinks">
+      <li><a href="http://olympus-imaging.jp/notice/policy.html" target="_blank">ご利用条件</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">お問い合わせ</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">会社概要</a></li>
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/page/site">本サイトについて</a></li>
+    </ul>
+    <p class="copyright">© <script type="text/javascript">
+    <!--
+    myD = new Date();
+    myYear = myD.getYear();
+    myYears = (myYear < 2000) ? myYear + 1900 : myYear;
+    document.write(myYears);
+    -->
+    </script> Olympus Corporation<br>Powered by monipla</p>
+    <ul class="olympusMoniplaLinks">
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/inquiry/">モニプラお問い合わせ</a></li>
+      <li><a href="//allied-id.com/agreement" target="_blank">利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    </ul>
+  <!-- /#olympusFooter --></footer>
+  <!-- / olympus footer  -->
+
+  <script>
+
+    jQuery(function(){
+      $.datepicker.setDefaults($.datepicker.regional['ja']);
+      $(".jsDate").datepicker();
+    });
+
+  </script>
+
+</body>
+</html>

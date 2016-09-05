@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "<%= fontName %>";
+    src: url('<%= fontPath %><%= fontName %>.eot#{$queryParameters}');
+    src: url('<%= fontPath %><%= fontName %>.eot?#iefix#{$queryParameters}') format('eot'),
+         url('<%= fontPath %><%= fontName %>.woff#{$queryParameters}') format('woff'),
+         url('<%= fontPath %><%= fontName %>.ttf#{$queryParameters}') format('truetype'),
+         url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>#{$queryParameters}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$icons: (<% _.each(glyphs, function(glyph) { %>
+    <%= glyph.name %>: "\<%= glyph.codepoint.toString(16).toUpperCase() %>",<% }); %>
+);
+@each $name, $content in $icons {
+    .<%= className %>-#{$name}:before {
+        @include iconFontLeft($name);
+    }
+}

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_category_detail / admin-blog</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+
+</head>
+
+<body>
+    <header class="editHeadWrap">
+        <section class="editHead">
+            <div class="wrap">
+                <h1><a href="#"><img src="../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+                <nav class="editMenu">
+                    <ul>
+                        <li class="actionCampaign">
+                            <a href="#">キャンペーン</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">作成</a></li>
+                                <li><a href="#">クーポン設定</a></li>
+                            </ul>
+                        </li>
+                        <li class="actionMessage">
+                            <a href="#">メッセージ</a>
+                        </li>
+                        <li class="actionContents">
+                            <a href="#">コンテンツ</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">ページ</a></li>
+                                <li><a href="#">コメント</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                        <li class="actionFan">
+                            <a href="#">ファン<span class="badge1">+99</span></a>
+                        </li>
+                        <li class="actionDashboard">
+                            <a href="#">ダッシュボード</a>
+                        </li>
+                        <li class="actionInfo">
+                            <a href="#">お知らせ<span class="badge1">+3</span></a>
+                        </li>
+                        <li class="actionContact">
+                            <a href="#">お問い合わせ</a>
+                        </li>
+                        <li class="actionSetting">
+                            <a href="#">設定</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">管理者設定</a></li>
+                                <li><a href="#">ユーザー設定</a></li>
+                                <li><a href="#">ページ設定</a></li>
+                                <li><a href="#">CVタグ設定</a></li>
+                                <li><a href="#">リダイレクト設定</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                    </ul>
+                <!-- /.editMenu --></nav>
+            <!-- /.wrap --></div>
+        <!-- /.editHead --></section>
+
+        <section class="account">
+            <ul>
+                <li class="accountCompany">
+                    <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li>
+                <li class="preview"><a href="#">プレビュー</a></li>
+                <li class="accountName">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+                <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+            </ul>
+        <!-- /.account --></section>
+
+    <!-- /.editHeadWrap --></header>
+
+    <article>
+        <nav class="categoryNav">
+            <ul class="tablink1">
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">ページ作成</a></li>
+                <li class="current"><span>カテゴリ</span></li>
+            <!-- /.tablink1 --></ul>
+        <!-- /.categoryNav --></nav>
+        <h1 class="hd1">カテゴリ作成</h1>
+
+        <dl class="categoryEdit1">
+            <dt><label class="require1" for="field1">カテゴリ名</label></dt>
+            <dd><input type="text" class="categoryName" id="field1"><small class="textLimit">（<span>0</span>文字／35文字）</small><br><span class="iconError1">カテゴリ名が同一階層内で重複しています</span></dd>
+            <dt><label class="require1" for="field2">ディレクトリ名</label></dt>
+            <dd>http://monipla.com/cliantname/pages/<input type="text" id="field2" class="directoryName"><br><span class="iconError1">ディレクトリ名が同一階層内で重複しています</span></dd>
+            <dt>親カテゴリ</dt>
+            <dd>
+                <select name="display" id="display">
+                    <option value="">なし</option>
+                    <option value="">親カテゴリ1</option>
+                    <option value="">親カテゴリ2</option>
+                    <option value="">親カテゴリ3</option>
+                    <option value="">　親カテゴリ3-1</option>
+                    <option value="">　親カテゴリ3-2</option>
+                    <option value="">　　親カテゴリ3-2-1</option>
+                    <option value="">　親カテゴリ3-3</option>
+                    <option value="">親カテゴリ4</option>
+                </select>
+            </dd>
+            <dt>デザイン</dt>
+            <dd class="jsCheckToggleWrap">
+                <label><input type="checkbox" class="jsCheckToggle">カスタマイズ</label><span class="btn2"><a href="#" class="small1">プレビュー</a></span>
+                <div class="viewCustom jsCheckToggleTarget">
+                    <img src="../../img/dummy/imgWyswig.png" width="960" height="580" alt="wyswig dummy" style="display: block;">
+                </div>
+            </dd>
+            <dt>SNSプラグインの表示</dt>
+            <dd>
+                <ul>
+                    <li><label><input type="checkbox">Facebook「いいね！」</label></li>
+                    <li><label><input type="checkbox">Twitter「ツイート」</label></li>
+                    <li><label><input type="checkbox">Google+</label></li>
+                    <li>
+                        <textarea name="" id="" cols="30" rows="2"></textarea>
+                    </li>
+                    <li><a href="#" class="linkAdd">追加</a></li>
+                </ul>
+            </dd>
+            <dt>meta情報</dt>
+            <dd>
+                <dl>
+                    <dt>description</dt>
+                    <dd>
+                        <textarea name="" id="" cols="30" rows="2" class="metaText"></textarea>
+                    </dd>
+                    <dt>keyword(,カンマ区切り)</dt>
+                    <dd>
+                        <textarea name="" id="" cols="30" rows="2" class="metaText"></textarea>
+                    </dd>
+                    <dt>OG Image</dt>
+                    <dd><label><input type="radio" name="ogImage">アップロード</label><input type="file"></dd>
+                    <dd><label><input type="radio" name="ogImage">URL</label><input type="text" class="categoryImg"></dd>
+                </dl>
+            </dd>
+        <!-- /.categoryEdit1 --></dl>
+
+        <div class="categoryEditCheck">
+            <ul>
+                <li class="btn2"><a href="#" class="small1">削除</a></li>
+                <li class="btn3"><a href="#" class="">保存</a></li>
+            </ul>
+        <!-- /.categoryEditCheck --></div>
+
+        <section class="backPage">
+            <p><a href="#" class="iconPrev1">カテゴリ一覧へ</a></p>
+        <!-- /.backPage --></section>
+    </article>
+
+    <footer>
+        <div class="copyright">
+            <ul class="links">
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+            </ul>
+            <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+        <!-- /.copyright --></div>
+        <ul class="links">
+            <li><a href="#">モニプラ出展利用規約</a></li>
+            <li><a href="#">アライドID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+        <p class="poweredBy"><small>Powered by monipla</small></p>
+    </footer>
+
+</body>
+
+</html>

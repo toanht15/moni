@@ -1,0 +1,18 @@
+<?php
+//error_reporting ( E_ALL - E_NOTICE );
+error_reporting ( E_ERROR );
+define( 'DEBUG', 0 );
+define( 'SQL_DEBUG_LOGGING', 0);
+define( 'AAFW_DIR'  , dirname( __FILE__ ) . '/..' );
+ini_set( 'include_path',  ini_get('include_path'). PATH_SEPARATOR . AAFW_DIR );
+ini_set( 'include_path',  ini_get('include_path'). PATH_SEPARATOR . AAFW_DIR . '/lib' );
+ini_set( 'include_path',  ini_get('include_path'). PATH_SEPARATOR . AAFW_DIR . '/lib/base' );
+ini_set( 'include_path',  ini_get('include_path'). PATH_SEPARATOR . AAFW_DIR . '/vendor' );
+date_default_timezone_set ( 'Asia/Tokyo' );
+ini_set( 'display_errors', DEBUG );
+require_once 'AAFW.php';
+require_once 'aafwFunctions.php';
+require_once 'aafwAutoLoader.php';
+AAFW::import('jp.aainc.aafw.web.aafwApplicationConfig');
+AAFW::import('jp.aainc.classes.Helpers');
+AAFW::start();

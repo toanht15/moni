@@ -1,0 +1,9 @@
+diff a/docroot_static/brand/voicerecorder.olympus-imaging.com/html/olympus-frame/header-footer-comingsoon_sp.html b/docroot_static/brand/voicerecorder.olympus-imaging.com/html/olympus-frame/header-footer-comingsoon_sp.html	(rejected hunks)
+@@ -7,7 +7,6 @@
+ 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+-  <meta name="google-site-verification" content="2QdAc8kjJ9_uaZDZ-JGUdSWKE2CDBDIOXn1bqwgyd2A">
+   <link rel="stylesheet" href="../../../../css/style.css">
+   <link rel="stylesheet" href="../../../../css/style_sp.css">
+ 

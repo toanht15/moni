@@ -1,0 +1,20 @@
+Admin:
+  AppId: 749555551767856
+  AppSecretKey: 2f1bf72f8d041aecbadf80dfba33d924
+  Scope:
+    1: manage_pages
+  TokenExpiredCheck: 0
+User:
+  AppId: 179667952056095
+  AppSecretKey: 052eb4a3febccafbb241b3fc125853c4
+  Scope:
+    1:
+MarketingAdmin:
+  AppId: 179667952056095
+  AppSecretKey: 052eb4a3febccafbb241b3fc125853c4
+  Scope:
+    1: manage_pages
+    2: ads_management
+  ApiVersion: 2.6
+AaIdFacebookTest:
+  userId: 764923

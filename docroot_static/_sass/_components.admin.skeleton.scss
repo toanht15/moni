@@ -1,0 +1,649 @@
+.makeStepTypeWrap {
+
+}
+.makeStepType {
+  border: 1px solid $borderC;
+  margin-bottom: 20px;
+  background: #FFF;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &>h1 {
+    font-size: 14px;
+    background: #666666;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+
+    label {
+      padding: 0 10px;
+      display: block;
+      margin: 0;
+    }
+  }
+}
+.makeStepTypeCont {
+
+  .pager1 {
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-top: 1px solid $borderC;
+    border-bottom: 1px solid $borderC;
+  }
+  @at-root {
+    h1 + & {
+      display: none;
+    }
+  }
+}
+.skeltonRecommendWrap {
+  margin: 10px;
+  display: table;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  border: 1px solid $borderC;
+}
+.skeltonSetDetailWrap {
+    padding: 20px;
+    width: 430px;
+    height: 356px;
+    overflow: auto;
+    box-sizing: border-box;
+
+    .stepList {
+      margin-top: 30px;
+    }
+}
+.skeltonSetList, .skeltonSetDetail {
+  display:table-cell;
+  vertical-align: top;
+}
+.skeltonSetList {
+
+  ul {
+    height: 356px;
+    overflow-y:scroll;
+  }
+
+  li {
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid $borderC;
+    vertical-align: middle;
+    text-align: left;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+    a {
+      display: block;
+      color: #333;
+      font-size: 13px;
+
+      &:hover {
+        text-decoration: none;
+        background: #eaeaea;
+      }
+    }
+    &.current {
+      background: #eaeaea;
+    }
+  }
+  span {
+    width: 50px;
+    height: 50px;
+    background: #eaeaea;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+  p {
+    padding: 10px 5px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left;
+  }
+}
+.skeltonSetDetail {
+  width: 430px;
+
+  .moduleDetail1 {
+    width: 48px;
+    height: 48px;
+
+    &> * {
+      padding: 14px;
+    }
+  }
+  .actionWrap {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+.skeltonExplainWrap {
+  padding-bottom: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid $borderC;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.skeletonWrap {
+  border-top: 1px solid $borderC;
+
+  &:first-child {
+    border-top: none;
+  }
+  .stepList {
+    padding: 10px;
+  }
+}
+.skeltonDetail {
+  padding: 10px;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed $borderC;
+
+  &>* {
+    display: inline-block;
+  }
+  .name {
+    height: 30px;
+    margin-right: 20px;
+    font-size: 14px;
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 5px;
+    }
+  }
+  .actionWrap {
+    float: right;
+
+    &>* {
+      margin-left: 10px;
+    }
+  }
+}
+.skeletonSet {
+  @include cf;
+
+  .stepListWrap {
+    width: 804px;
+    float: left;
+    height: -webkit-calc(82px + 45px);
+    height: calc(82px + 45px);
+  }
+  .openButtons {
+    float: right;
+    font-size: 0;
+    width: 146px;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+    }
+  }
+  .demoOpen {
+    margin-top: 10px;
+  }
+  .flowOpen{
+    margin-left: 5px;
+  }
+  .attention1 {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+.stepListWrap {
+  @include cf;
+  overflow: auto;
+  min-height: 0%;
+}
+
+.stepListEdit {
+  border-bottom: 1px dotted $borderC;
+  font-size: 0;
+  position: relative;
+
+  .stepListWrap {
+    padding-right: 85px;
+  }
+  .stepList {
+    padding-bottom: 30px;
+  }
+  .deleteModule {
+    position: absolute;
+    font-size: 0;
+    width: 85px;
+    height: 112px;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 100;
+
+    p {
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      margin: auto;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 43px;
+        background: url("../img/icon/iconTrashbox1.png") no-repeat;
+        background-position: bottom left;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    .selected {
+      border: 1px dashed #bd3845;
+
+        &:after {
+          background-position: bottom right;
+        }
+    }
+  }
+  .supplement1 {
+    padding-left: 10px;
+  }
+}
+.modalInner-large {
+
+  .stepList {
+    padding-bottom: 50px;
+  }
+}
+
+.stepList {
+  @include cf;
+  box-sizing: border-box;
+
+  li:first-child .moduleDetail1:first-child .textBalloon1 {
+    left: 0;
+
+    &>span {
+      left: 0;
+
+      &:after {
+        left: 21px;
+        margin-left: 0;
+      }
+    }
+  }
+  li:last-child .moduleDetail1:last-child .textBalloon1 {
+    right: 0;
+
+    &>span {
+      right: 0;
+      left: auto;
+      position: absolute;
+
+      &:after {
+        right: 21px;
+        left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}
+%stepDetailBase {
+  float: left;
+  position: relative;
+  margin-left: 20px;
+
+  h1 {
+    margin-bottom: 7px;
+    padding: 0 3px;
+    height: 20px;
+    background: #999;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 20px;
+
+    .attention1 {
+      color: red;
+      display: inline-block;
+    }
+  }
+  &:before {
+    @include miniArrowBase(right, #333, 4px);
+    position: absolute;
+    top: 51px;
+    left: -10px;
+    display: block;
+    content: "";
+  }
+  &:first-child {
+    margin-left: 0;
+
+    &:before {
+      content: none;
+    }
+  }
+}
+.stepDetail {
+  @extend %stepDetailBase;
+
+  @at-root {
+    #{&}_base {
+      @extend %stepDetailBase;
+      margin-right: 20px;
+
+      h1 {
+        background: #383838;
+      }
+      &+.stepDetail:before,
+      &+.stepDetail_require:before ,
+      &+.stepDetail_base:before {
+        content: none;
+      }
+    }
+    #{&}_require {
+      @extend %stepDetailBase;
+
+      h1 {
+        background: #404040;
+      }
+    }
+  }
+}
+.moduleList {
+  @include cf;
+
+  .moduleDetail1:first-child {
+    margin-left: 0;
+  }
+}
+.selectModuleList {
+  @include cf;
+  margin: 30px 9px 10px;
+  padding: 10px 5px 0;
+  position: relative;
+  background: #eee;
+
+  &:before {
+    top: -20px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    content: "";
+    border: 25px solid transparent;
+    border-top: 0 solid transparent;
+    border-bottom: 20px solid #eee;
+  }
+  &:after {
+
+  }
+}
+.moduleDetail1 {
+  float: left;
+  width: 53px;
+  height: 53px;
+  border: 1px solid $borderC;
+  background: #FFF;
+  margin-left: -1px;
+  position: relative;
+  z-index: auto;
+
+  .moduleIcon {
+    padding: 14px;
+    display: block;
+    position: relative;
+    z-index: auto;
+
+    &:hover {
+
+      .textBalloon1 {
+        top: 53px;
+        bottom: auto;
+        display: block;
+        z-index: 100;
+      }
+      img {
+        opacity: .7;
+      }
+    }
+  }
+  img {
+    opacity: .7;
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    @at-root {
+      .stepDetail_base #{&},
+      .stepDetail_require #{&} {
+        opacity: 1;
+      }
+    }
+  }
+  .finished:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: no-repeat bottom 3px right 3px rgba(255, 255, 255, 0.5);
+    content: "";
+  }
+  .finished:after {
+    @include fontBase(check2);
+    color: $iconC3;
+    font-size: 20px;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    display: block;
+  }
+  .current {
+    padding: 14px;
+    display: block;
+    position: relative;
+    z-index: auto;
+    background: #F9F9E0;
+  }
+  .lock {
+    background: #eee;
+
+    img,
+    &:hover img {
+      opacity: .5;
+    }
+  }
+  .new {
+    border: 2px solid #d13646;
+    padding: 12px;
+
+    &:before {
+      content: "new";
+      color: #d13646;
+      display: block;
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+  %addModuleBase {
+    position: absolute;
+    bottom: -16px;
+    z-index: 90;
+    display: block;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fff;
+
+    &:before {
+      @include fontBase(plus);
+      position: absolute;
+      font-size: 14px;
+      background: $iconC3;
+      display: block;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+    &:after {
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      margin-left: -3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      content: "";
+    }
+  }
+  .addModuleR {
+    @extend %addModuleBase;
+    right: -8px;
+  }
+  .addModuleL {
+    @extend %addModuleBase;
+    left: -8px;
+  }
+}
+.moduleDetail2 {
+  width: 145px;
+  float: left;
+  margin: 0 5px 10px;
+
+  .hdModuleIcon {
+    width: 68px;
+    height: 68px;
+    display: table-cell;
+    background: #FFF;
+    vertical-align: middle;
+    border: 1px solid $borderC;
+
+    img {
+      margin: auto;
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
+    &:hover {
+      cursor: move;
+    }
+  }
+  .moduleName {
+    width: 70px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 5px;
+    word-break: break-all;
+    font-size: 11px;
+  }
+}
+.addModuleDetail1 {
+  float: left;
+  width: 55px;
+  height: 55px;
+  background: rgba(6, 19, 9, 0.8);
+  margin-left: -1px;
+  position: relative;
+  z-index: auto;
+
+  &>* {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: auto;
+    display: block;
+    padding: 0;
+    margin: -8px 0 0 -8px;
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    background: $iconC3;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 3px;
+
+    &:before {
+      @include fontBase(plus);
+      display: block;
+      position: absolute;
+      font-size: 14px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.makeNewStepList {
+  padding: 10px;
+
+  .actionWrap {
+    text-align: right;
+  }
+}
+.newStepDetail {
+  @include cf;
+
+  dt {
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    clear: both;
+    border-top: 1px solid $borderC;
+    padding: 10px 0;
+
+    &:nth-of-type(1) {
+      border-top: none;
+    }
+  }
+  dd {
+    width: -webkit-calc(100% - 80px);
+    width: calc(100% - 80px);
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    border-top: 1px solid $borderC;
+    padding: 10px 0;
+
+    &:nth-of-type(1) {
+      border-top: none;
+    }
+    label {
+      margin-right: 10px;
+    }
+  }
+  .moduleSetType {
+    height: auto;
+    line-height: 1.5;
+    padding-bottom: 0;
+  }
+}

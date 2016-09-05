@@ -1,0 +1,259 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1">ユーザーからのお問い合わせ一覧</h1>
+
+    <section class="inquirySearch">
+      <table class="inquiryTable1">
+        <tbody>
+          <tr class="jsCheckToggleWrap">
+              <th class="title1">期間<span class="range"><label class="check"><input type="checkbox" class="jsCheckToggle" name="">範囲</label></span></th>
+              <td class="edit1">
+                <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+                <span class="jsCheckToggleTarget" style="display:none;">
+                <span class="dash">～</span>
+                <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+              </td>
+              <th class="title2">担当者</th>
+              <td><input type="text" placeholder="例)新井戸" class="widthFull"></td>
+            </tr>
+            <tr>
+              <th class="title1">カテゴリ</th>
+              <td colspan="3">
+                <select name="" id="" class="select1">
+                  <option value="#" selected="selected">選択してください</option>
+                  <option value="#">アカウント登録について</option>
+                  <option value="#">登録内容変更について</option>
+                  <option value="#">メール配信について</option>
+                  <option value="#">キャンペーンについて</option>
+                  <option value="#">プレゼント賞品について</option>
+                  <option value="#">ご意見・ご要望について</option>
+                  <option value="#">不具合・エラーについて</option>
+                  <option value="#">退会について</option>
+                  <option value="#">その他</option>
+                </select>
+              </td>
+            <tr>
+              <th class="title1">対応状況</th>
+              <td colspan="3">
+                <label><input type="checkbox" id="" name="" value="1" class="jsCheckToggle" checked="checked"><label for="join_limit_sns_flg_1">未対応</label>&nbsp;</label>
+                <label><input type="checkbox" id="" name="" value="2" class="jsCheckToggle" checked="checked"><label for="join_limit_sns_flg_2">対応中（社内）</label>&nbsp;</label>
+                <label><input type="checkbox" id="" name="" value="3" class="jsCheckToggle"><label for="join_limit_sns_flg_3">完了</label>&nbsp;</label>
+                <label><input type="checkbox" id="" name="" value="4" class="jsCheckToggle"><label for="join_limit_sns_flg_4">転送済</label>&nbsp;</label>
+              </td>
+            </tr>
+            <tr>
+              <th class="title1"> メールアドレス</th>
+              <td colspan="3"><input type="email" placeholder="例)sample@aainc.co.jp" class="widthFull"></td>
+            </tr>
+            <tr>
+              <th class="title1">フリーワード</th>
+              <td colspan="3"><input type="text" placeholder="" class="widthFull"></td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <span class="btnSet">
+                  <span class="btn3"><a href="#">検索する</a></span>
+                  <span class="btn3"><a href="#">CSV出力</a></span>
+                <!-- /.btnSet --></span>
+              </td>
+            </tr>
+        </tbody>
+      <!-- /.inquiryTable1 --></table>
+    <!-- /.inquirySearch --></section>
+
+    <section class="inquiryUserList">
+      <section class="userListWrap">
+        <div class="pager1">
+          <p><strong>40</strong>件中<strong>1</strong>件～<strong>40</strong>件表示しています</p>
+          <ul>
+            <li class="first"><a href="#">最初のページヘ</a></li>
+            <li class="prev"><a href="#">前のページへ</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><span>6</span></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">99</a></li>
+            <li class="next"><a href="#">次のページへ</a></li>
+            <li class="last"><a href="#">最後のページヘ</a></li>
+          </ul>
+        </div>
+        <table class="itemTable" style="">
+          <thead>
+            <tr>
+              <th>受信日時</th>
+              <th>名前</th>
+              <th>カテゴリ</th>
+              <th>問い合わせ元</th>
+              <th>最新の内容</th>
+              <th>備考メモ</th>
+              <th>ステータス</th>
+              <th>担当者</th>
+              <th>詳細</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2015/9/14(月) 17:50</td>
+              <td>佐藤 哲裕</td>
+              <td>アカウント登録について</td>
+              <td>伊勢半</td>
+              <td title="ここにフルでいれる">先程問い合わせさせていただきました、渡邊…</td>
+              <td title="ここにフルでいれる">備考メモが入ります。12文字…</td>
+              <td>未対応</td>
+              <td>塚田</td>
+              <td><span class="btn3"><a href="#" class="small1">詳細</a></span></td>
+            </tr>
+            <tr>
+              <td>2015/9/14(月) 17:50</td>
+              <td>Sato Masakichi</td>
+              <td>プレゼント賞品について</td>
+              <td>キンレイ</td>
+              <td title="ここにフルでいれる">先程問い合わせさせていただきました、渡邊…</td>
+              <td title="ここにフルでいれる">備考メモが入ります。12文字…</td>
+              <td>未対応</td>
+              <td>天野</td>
+              <td><span class="btn3"><a href="#" class="small1">詳細</a></span></td>
+            </tr>
+            <tr>
+              <td>2015/9/14(月) 17:50</td>
+              <td>Himei Norit...</td>
+              <td>ご意見・ご要望について</td>
+              <td>ミス・パリ・グループ</td>
+              <td title="ここにフルでいれる">先程問い合わせさせていただきました、渡邊…</td>
+              <td title="ここにフルでいれる">備考メモが入ります。12文字…</td>
+              <td>未対応</td>
+              <td>塚田</td>
+              <td><span class="btn3"><a href="#" class="small1">詳細</a></span></td>
+            </tr>
+            <tr>
+              <td>2015/9/14(月) 17:50</td>
+              <td>佐藤 哲裕</td>
+              <td>アカウント登録について</td>
+              <td>伊勢半</td>
+              <td title="ここにフルでいれる">先程問い合わせさせていただきました、渡邊…</td>
+              <td title="ここにフルでいれる">備考メモが入ります。12文字…</td>
+              <td>未対応</td>
+              <td>塚田</td>
+              <td><span class="btn3"><a href="#" class="small1">詳細</a></span></td>
+            </tr>
+            <tr>
+              <td>2015/9/14(月) 17:50</td>
+              <td>Sato Masakichi</td>
+              <td>プレゼント賞品について</td>
+              <td>キンレイ</td>
+              <td title="ここにフルでいれる">先程問い合わせさせていただきました、渡邊…</td>
+              <td title="ここにフルでいれる">備考メモが入ります。12…</td>
+              <td>未対応</td>
+              <td>天野</td>
+              <td><span class="btn3"><a href="#" class="small1">詳細</a></span></td>
+            </tr>
+            <tr>
+              <td>2015/9/14(月) 17:50</td>
+              <td>Himei Norit...</td>
+              <td>ご意見・ご要望について</td>
+              <td>ミス・パリ・グループ</td>
+              <td title="ここにフルでいれる">先程問い合わせさせていただきました、渡邊…</td>
+              <td title="ここにフルでいれる">備考メモが入ります。12…</td>
+              <td>未対応</td>
+              <td>塚田</td>
+              <td><span class="btn3"><a href="#" class="small1">詳細</a></span></td>
+            </tr>
+          </tbody>
+        <!-- /.itemTable --></table>
+        <table class="itemTable" style="">
+          <thead>
+            <tr>
+              <th>受信日時</th>
+              <th>名前</th>
+              <th>カテゴリ</th>
+              <th>問い合わせ元</th>
+              <th>最新の内容</th>
+              <th>備考メモ</th>
+              <th>ステータス</th>
+              <th>担当者</th>
+              <th>詳細</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="9" class="noList">ゼロ件です。お問い合わせがまだ無いか、検索条件を再度変更ください。</td>
+            </tr>
+          </tbody>
+        <!-- /.itemTable --></table>
+        <div class="pager1">
+          <p><strong>40</strong>件中<strong>1</strong>件～<strong>40</strong>件表示しています</p>
+          <ul>
+            <li class="first"><a href="#">最初のページヘ</a></li>
+            <li class="prev"><a href="#">前のページへ</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><span>6</span></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">99</a></li>
+            <li class="next"><a href="#">次のページへ</a></li>
+            <li class="last"><a href="#">最後のページヘ</a></li>
+          </ul>
+        </div>
+      </section>
+    <!-- /.inquiryUserList --></section>
+
+    <section class="inquirySetting">
+      <dl class="moduleSettingList jsModuleContTarget">
+        <dt class="moduleSettingTitle jsModuleContTile close">セクション/テンプレート設定</dt>
+        <dd class="moduleSettingDetail jsModuleContTarget" style="display: none;">
+          <section>
+            <h3 class="hd3">セクション</h3>
+              <ul class="inquirySetting">
+                <li>
+                  <span class="label">大：</span
+                  ><select>
+                    <option value="">投稿申請不可（指定タグ関連）</option>
+                    <option value="">ほげ</option>
+                    <option value="">ふが</option>
+                  </select>
+                </li>
+                <li>
+                  <span class="label">中：</span
+                  ><select>
+                    <option value="">その他</option>
+                    <option value="">ほげ</option>
+                    <option value="">ふが</option>
+                  </select>
+                </li>
+                <li>
+                  <span class="label">小：</span
+                  ><select>
+                    <option value="">その他</option>
+                    <option value="">ほげ</option>
+                    <option value="">ふが</option>
+                  </select>
+                </li>
+                <li><a href="#" class="linkAdd">新しいセクションを追加する</a></li>
+                <li><a href="#" class="linkDelete">セクションを削除する</a></li>
+              <!-- /.inquirySetting --></ul>
+          <!-- /.inquiryCont1 --></section>
+          <section>
+            <h3 class="hd3">テンプレート</h3>
+            <p class="tenmplateEdit"><a href="#">テンプレートを編集</a></p>
+          <!-- /.inquiryCont1 --></section>
+        <!-- /.moduleSettingDetail --></dd>
+      <!-- /.moduleSettingList --></dl>
+    </section>
+<% end %>
+
+<% block 'script' : %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    jQuery(function($) {
+      $.datepicker.setDefaults($.datepicker.regional['ja']);
+      $(".jsDate").datepicker();
+      $('.jsMasonry').masonry({
+          // options
+          itemSelector: '.jsPanel',
+          gutter: 12,
+          columnWidth: 150
+      });
+    });
+  </script>
+<% end %>

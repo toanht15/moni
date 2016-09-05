@@ -1,0 +1,207 @@
+.mypageUserWrap {
+  margin-bottom: 30px;
+  background: #FFF;
+}
+.mypageUser {
+  padding: 9px 0;
+  border: 1px solid $borderC;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+
+  &>* {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  figure {
+    width: 30px;
+    padding: 0 9px;
+
+    img {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .nametext {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+  }
+  .edit {
+    width: 20px;
+    padding: 0 9px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 25px;
+      height: 25px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:before {
+        @include fontBase(gear);
+        position: absolute;
+        font-size: 15px;
+        color: $iconC2;
+        display: block;
+        top: 5px;
+        left: 5px;
+      }
+    }
+  }
+}
+.mypageSetting {
+  display: none;
+  border: 1px solid $borderC;
+  border-top: none;
+  padding: 9px;
+  background: #eee;
+
+  .btnSet {
+    margin: 0;
+  }
+  dl {
+    text-align: center;
+    margin-top: 20px;
+  }
+  dt {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  dd {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .supplement1 {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .withdraw {
+    text-align: right;
+  }
+}
+
+.withdrawSite {
+  margin-bottom: 20px;
+
+  strong {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
+.refineSelect {
+  width: 600px;
+  margin: auto auto 10px auto;
+  text-align: right;
+
+  select {
+    margin-left: 5px;
+  }
+}
+
+.messageList {
+  width: 600px;
+  margin: 0 auto 15px;
+
+  &>li {
+    border: 1px solid $borderC;
+    border-top: none;
+    background: #FFF;
+
+    &:first-child {
+      border-top: 1px solid $borderC;
+    }
+  }
+  a {
+    width: 100%;
+    display: table;
+    padding: 10px 0;
+  }
+}
+.messageListInner {
+
+  li {
+    @include cf;
+    margin-left: 60px;
+    border-top: 1px solid $borderC;
+
+    &:first-child {
+      margin-left: 0;
+      border-top: none;
+    }
+  }
+  .notRead {
+    font-weight: bold;
+  }
+  figure {
+    width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: top;
+  }
+  .book {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+  .title {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .timestamp {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .showAll {
+    border-top: none;
+    text-align: center;
+    margin: 0 5px 5px 70px;
+
+    a {
+      padding: 5px 0;
+      background: #EEE;
+      border-radius: 6px;
+    }
+    &+* {
+      border-top: none;
+    }
+  }
+  .readed {
+    display: none;
+  }
+}
+.messageListNone {
+  width: 600px;
+  margin: 0 auto 15px;
+  border: 1px solid $borderC;
+  text-align: center;
+  padding: 35px 0 50px;
+  background: #FFF;
+
+  img {
+    display: block;
+    margin: 0 auto 30px;
+    width: auto;
+    height: 95px;
+  }
+}
+.messageListFooter {
+  width: 600px;
+  margin: auto;
+}

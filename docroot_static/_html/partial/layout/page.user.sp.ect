@@ -1,0 +1,60 @@
+<%
+  if content 'pageStatus'
+    pageStatus = content 'pageStatus'
+  else
+    pageStatus = 'login'
+
+  if content 'pageMenu'
+    pageMenu = content 'pageMenu'
+  else
+    pageMenu = true
+
+  if content 'noHeader'
+    noHeader = content 'noHeader'
+  else
+    noHeader = true
+%>
+
+<% pageInfo = {
+    pageType: 'sp',
+    title: @title,
+    htmlDir: @htmlDir,
+    status: pageStatus,
+    menu: pageMenu,
+    header: noHeader
+} %>
+<!doctype html>
+<html lang="ja">
+<head>
+  <% include 'partial/parts/head', pageInfo %>
+
+  <% content 'head' %>
+</head>
+<body>
+  <% include 'partial/parts/snsScript' %>
+
+  <% content 'customHeader' %>
+
+  <% include 'partial/parts/globalHeader', pageInfo %>
+
+  <% if content 'simpleContents' : %>
+    <article>
+      <% content 'simpleContents' %>
+  <% else if content 'singleContents' : %>
+    <article class="singleWrap">
+      <% content 'singleContents' %>
+  <% else : %>
+    <article class="mainCol">
+      <% content 'mainContents' %>
+  <% end %>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <% content 'customFooter' %>
+
+  <% include 'partial/parts/globalFooter' %>
+
+  <% content 'modal' %>
+
+  <% content 'script' %>
+</body>
+</html>

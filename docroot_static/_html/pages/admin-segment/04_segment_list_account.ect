@@ -1,0 +1,378 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1">セグメント一覧</h1>
+    <ul class="segmentMakeWrap">
+      <li class="btn1"><a href="#" class="large2">条件セグメントの作成
+        <span class="iconHelp">
+          <span class="textBalloon1">
+            <span>
+              条件に基づいたセグメントを作成できます。
+            </span>
+          <!-- /.textBalloon1 --></span>
+        <!-- /.iconHelp --></span></a></li>
+      <li class="btn1"><a href="#" class="large2">セグメントグループの作成
+        <span class="iconHelp">
+          <span class="textBalloon1">
+            <span>
+              条件に基づいたセグメントを<br>複数作成しグループ化できます。<br>作成したセグメントに序列を付け<br>ユーザーを重複なく割り振れます。
+            </span>
+          <!-- /.textBalloon1 --></span>
+        <!-- /.iconHelp --></span>
+      </a></li>
+    </ul>
+
+    <section class="segmentCont">
+      <p class="actionWrap">チェックしたセグメントに<span class="btn3"><a href="#actionSet" class="small1 jsOpenModal">アクション</a></span></p>
+      <div class="segmentWrap">
+        <ul class="segmentTypeList">
+          <li class="segmentAll">
+            <span class="current">すべてのセグメント<span class="number"><strong>2</strong>/10</span></span>
+          <!-- /.segmentAll --></li>
+          <li class="segmentTerms">
+            <a href="#">条件セグメント<span class="number"><strong>2</strong>/10</span></a>
+          <!-- /.segmentTerms --></li>
+          <li class="segmentGroup">
+            <a href="#">セグメントグループ<span class="number"><strong>2</strong>/10</span></a>
+          <!-- /.segmentGroup --></li>
+          <li class="userTag">
+            <a href="#">ユーザータグ</a>
+          <!-- /.userTag --></li>
+        <!-- /.segmentTypeList --></ul>
+        <div class="segmentItemList">
+          <ul class="segmentItemListInner">
+            <li class="segmentItem jsClusteToggleWrap">
+              <div class="segmentItemInner" data-tooltip="#tooltip01">
+                <label class="itemSelect"><input type="checkbox" class="jsClusteCheack"></label>
+                <p class="segmentName">
+                  <span class="labelRelation">セグメントグループ</span>
+                  <span class="name"><span class="arrowToggle jsClusteToggle">開閉</span><a href="#">SSSの超優良ユーザー</a></span>
+                  <span class="detail">メモがあればここに表示させる...</span>
+                <!-- /.segmentName --></p>
+                <p class="status"><span class="up"><span class="segmentNum">185</span>名<span class="diff"><span>前日比</span>(+10)</span></span><!-- /.status --></p>
+                <div class="option jsAreaToggleWrap">
+                  <p><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a></p>
+                  <div class="optionAction jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnList">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">コピー</a></li>
+                      <li class="btn2"><a href="#archiveSet" class="small1 jsAreaToggle jsOpenModal">アーカイブ</a></li>
+                    <!-- /.btnList --></ul>
+                  <!-- /.optionAction --></div>
+                <!-- /.option --></div>
+              <!-- /.segmentItemInner --></div>
+              <ul class="subSegment jsClusteToggleTarget">
+                <li class="segmentItem">
+                  <div class="segmentItemInner" data-tooltip="#tooltip02">
+                    <label class="itemSelect"><input type="checkbox"></label>
+                    <p class="segmentName">
+                      <span class="name"><a href="#">Sクラスタ</a></span>
+                      <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                    <!-- /.segmentName --></p>
+                    <p class="status"><span class="up"><span class="segmentNum">15</span>名<span class="diff"><span>前日比</span>(+2)</span></span><!-- /.status --></p>
+                  <!-- /.segmentItemInner --></div>
+                </li>
+                <li class="segmentItem">
+                  <div class="segmentItemInner" data-tooltip="#tooltip03">
+                    <label class="itemSelect"><input type="checkbox"></label>
+                    <p class="segmentName">
+                      <span class="name"><a href="#">Aクラスタ</a></span>
+                      <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                    <!-- /.segmentName --></p>
+                    <p class="status"><span class="segmentNum">-</span>名<!-- /.status --></p>
+                  <!-- /.segmentItemInner --></div>
+                </li>
+                <li class="segmentItem">
+                  <div class="segmentItemInner" data-tooltip="#tooltip02">
+                    <label class="itemSelect"><input type="checkbox"></label>
+                    <p class="segmentName">
+                      <span class="name"><a href="#">N/A</a></span>
+                      <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                    <!-- /.segmentName --></p>
+                    <p class="status"><span class="up"><span class="segmentNum">100</span>名<span class="diff"><span>前日比</span>(+4)</span></span><!-- /.status --></p>
+                  <!-- /.segmentItemInner --></div>
+                </li>
+              <!-- /.subSegment --></ul>
+            <!-- /.segmentItem --></li>
+            <li class="segmentItem">
+              <div class="segmentItemInner" data-tooltip="#tooltip03">
+                <label class="itemSelect"><input type="checkbox"></label>
+                <p class="segmentName">
+                  <span class="labelDynamic">条件セグメント</span>
+                  <span class="name"><a href="#">クラスタの名前</a></span>
+                  <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                <!-- /.segmentName --></p>
+                <p class="status"><span class="segmentNum">100</span>名<!-- /.status --></p>
+                <div class="option jsAreaToggleWrap">
+                  <p><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a></p>
+                  <div class="optionAction jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnList">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">コピー</a></li>
+                      <li class="btn2"><a href="#archiveSet" class="small1 jsAreaToggle jsOpenModal">アーカイブ</a></li>
+                    <!-- /.btnList --></ul>
+                  <!-- /.optionAction --></div>
+                <!-- /.option --></div>
+              <!-- /.segmentItemInner --></div>
+            <!-- /.segmentItem --></li>
+            <li class="segmentItem">
+              <div class="segmentItemInner" data-tooltip="#tooltip02">
+                <label class="itemSelect"><input type="checkbox"></label>
+                <p class="segmentName">
+                  <span class="labelDynamic">条件セグメント</span>
+                  <span class="name"><a href="#">クラスタの名前</a></span>
+                  <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                <!-- /.segmentName --></p>
+                <p class="status"><span class="iconDraft1">下書き</span><!-- /.status --></p>
+                <div class="option jsAreaToggleWrap">
+                  <p><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a></p>
+                  <div class="optionAction jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnList">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">コピー</a></li>
+                      <li class="btn2"><a href="#archiveSet" class="small1 jsAreaToggle jsOpenModal">アーカイブ</a></li>
+                    <!-- /.btnList --></ul>
+                  <!-- /.optionAction --></div>
+                <!-- /.option --></div>
+              <!-- /.segmentItemInner --></div>
+            <!-- /.segmentItem --></li>
+            <li class="segmentItem">
+              <div class="segmentItemInner" data-tooltip="#tooltip03">
+                <label class="itemSelect"><input type="checkbox"></label>
+                <p class="segmentName">
+                  <span class="labelDynamic">条件セグメント</span>
+                  <span class="name"><a href="#">クラスタの名前</a></span>
+                  <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                <!-- /.segmentName --></p>
+                <p class="status"><span class="segmentNum">123</span>名<!-- /.status --></p>
+                <div class="option jsAreaToggleWrap">
+                  <p><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a></p>
+                  <div class="optionAction jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnList">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">コピー</a></li>
+                      <li class="btn2"><a href="#archiveSet" class="small1 jsAreaToggle jsOpenModal">アーカイブ</a></li>
+                    <!-- /.btnList --></ul>
+                  <!-- /.optionAction --></div>
+                <!-- /.option --></div>
+              <!-- /.segmentItemInner --></div>
+            <!-- /.segmentItem --></li>
+            <li class="segmentItem">
+              <div class="segmentItemInner" data-tooltip="#tooltip02">
+                <label class="itemSelect"><input type="checkbox"></label>
+                <p class="segmentName">
+                  <span class="labelDynamic">条件セグメント</span>
+                  <span class="name"><a href="#">クラスタの名前</a></span>
+                  <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                <!-- /.segmentName --></p>
+                <p class="status"><span class="iconDraft1">下書き</span><!-- /.status --></p>
+                <div class="option jsAreaToggleWrap">
+                  <p><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a></p>
+                  <div class="optionAction jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnList">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">コピー</a></li>
+                      <li class="btn2"><a href="#archiveSet" class="small1 jsAreaToggle jsOpenModal">アーカイブ</a></li>
+                    <!-- /.btnList --></ul>
+                  <!-- /.optionAction --></div>
+                <!-- /.option --></div>
+              <!-- /.segmentItemInner --></div>
+            <!-- /.segmentItem --></li>
+            <li class="segmentItem jsClusteToggleWrap">
+              <div class="segmentItemInner" data-tooltip="#tooltip01">
+                <label class="itemSelect"><input type="checkbox" class="jsClusteCheack"></label>
+                <p class="segmentName">
+                  <span class="labelRelation">セグメントグループ</span>
+                  <span class="name"><span class="arrowToggle jsClusteToggle">開閉</span><a href="#">SSSの超優良ユーザー</a></span>
+                  <span class="detail">メモがあればここに表示させる...</span>
+                <!-- /.segmentName --></p>
+                <p class="status"><span class="iconDraft1">下書き</span><!-- /.status --></p>
+                <div class="option jsAreaToggleWrap">
+                  <p><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a></p>
+                  <div class="optionAction jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <ul class="btnList">
+                      <li class="btn2"><a href="#" class="small1 jsAreaToggle">コピー</a></li>
+                      <li class="btn2"><a href="#archiveSet" class="small1 jsAreaToggle jsOpenModal">アーカイブ</a></li>
+                    <!-- /.btnList --></ul>
+                  <!-- /.optionAction --></div>
+                <!-- /.option --></div>
+              <!-- /.segmentItemInner --></div>
+              <ul class="subSegment jsClusteToggleTarget">
+                <li class="segmentItem">
+                  <div class="segmentItemInner" data-tooltip="#tooltip02">
+                    <label class="itemSelect"><input type="checkbox"></label>
+                    <p class="segmentName">
+                      <span class="name"><a href="#">Sクラスタ</a></span>
+                      <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                    <!-- /.segmentName --></p>
+                    <p class="status"><span class="iconDraft1">下書き</span><!-- /.status --></p>
+                  <!-- /.segmentItemInner --></div>
+                <!-- /.segmentItem --></li>
+                <li class="segmentItem">
+                  <div class="segmentItemInner" data-tooltip="#tooltip03">
+                    <label class="itemSelect"><input type="checkbox"></label>
+                    <p class="segmentName">
+                      <span class="name"><a href="#">Aクラスタ</a></span>
+                      <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                    <!-- /.segmentName --></p>
+                    <p class="status"><span class="iconDraft1">下書き</span><!-- /.status --></p>
+                  <!-- /.segmentItemInner --></div>
+                <!-- /.segmentItem --></li>
+                <li class="segmentItem">
+                  <div class="segmentItemInner" data-tooltip="#tooltip02">
+                    <label class="itemSelect"><input type="checkbox"></label>
+                    <p class="segmentName">
+                      <span class="name"><a href="#">N/A</a></span>
+                      <span class="detail">Instagram:連携済/ログイン回数:5〜20/カスタムプロフィール:取得済/…</span>
+                    <!-- /.segmentName --></p>
+                    <p class="status"><span class="iconDraft1">下書き</span><!-- /.status --></p>
+                  <!-- /.segmentItemInner --></div>
+                <!-- /.segmentItem --></li>
+              </ul>
+            </li>
+          <!-- /.segmentItemListInner --></ul>
+
+          <div class="customaudienceTooltip" id="tooltip01">
+            <div class="customaudiencePreview">
+              <dl class="selectedStatus">
+                <dt>現在のユーザー</dt>
+                <dd class="selectedUser"><strong>185</strong>名</dd>
+              <!-- /.selectedStatus --></dl>
+              <p>メモ</p>
+              <p>あればここにメモを入れる。</p>
+            <!-- /.customaudiencePreview --></div>
+          <!-- /.customaudienceTooltip --></div>
+
+          <div class="customaudienceTooltip" id="tooltip02">
+            <div class="customaudiencePreview">
+              <dl class="selectedStatus">
+                <dt>現在のユーザー</dt>
+                <dd class="selectedUser"><strong>100</strong>名</dd>
+              <!-- /.selectedStatus --></dl>
+              <p>設定した条件</p>
+              <ul class="selectedRefinement">
+                <li>Instagram　連携済</li>
+                <li class="or"><p class="labelOr"><span>or</span></p><p class="labelNot"><span>not</span></p>ログイン回数　5〜20</li>
+                <li class="not"><p class="labelNot"><span>not</span></p>カスタムプロフィール　取得済</li>
+                <li>カスタムプロフィール　Q1/A2</li>
+                <li>ファシオ　アイメイクセルフィ投稿キャンペーン（参加完了：131名）</li>
+                <li>参加したが当選していない</li>
+                <li class="iconFB1">連携済み</li>
+                <li class="iconFB1">友達数1,546</li>
+              <!-- /.selectedRefinement --></ul>
+            <!-- /.customaudiencePreview --></div>
+          <!-- /.customaudienceTooltip --></div>
+
+          <div class="customaudienceTooltip" id="tooltip03">
+            <div class="customaudiencePreview">
+              <dl class="selectedStatus">
+                <dt>現在のユーザー</dt>
+                <dd class="selectedUser"><strong>100</strong>名</dd>
+              <!-- /.selectedStatus --></dl>
+              <p>設定した条件</p>
+              <ul class="selectedRefinement">
+                <li>Instagram　連携済</li>
+                <li class="or"><p class="labelOr"><span>or</span></p><p class="labelNot"><span>not</span></p>ログイン回数　5〜20</li>
+                <li class="not"><p class="labelNot"><span>not</span></p>カスタムプロフィール　取得済</li>
+                <li>カスタムプロフィール　Q1/A2</li>
+                <li>ファシオ　アイメイクセルフィ投稿キャンペーン（参加完了：131名）</li>
+                <li>参加したが当選していない</li>
+                <li class="iconFB1">連携済み</li>
+                <li class="iconFB1">友達数1,546</li>
+              <!-- /.selectedRefinement --></ul>
+            <!-- /.customaudiencePreview --></div>
+          <!-- /.customaudienceTooltip --></div>
+        <!-- /.segmentItemList --></div>
+      <!-- /.segmentWrap --></div>
+      <p class="actionWrap">チェックしたセグメントに<span class="btn3"><a href="#" class="small1">アクション</a></span></p>
+
+    <!-- /.segmentCont --></section>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="archiveSet">
+    <section class="modalCont-medium jsModalCont">
+      <h1>アーカイブ</h1>
+      <p class="supplement1">
+      アーカイブすると条件セグメントを停止します。アーカイブしますか？
+      <!-- /.suplement --></p>
+      <ul class="btnSet">
+        <li class="btn2"><a href="#closeModal" class="large1">キャンセル</a></li>
+      </ul>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="actionSet">
+    <section class="modalCont-medium jsModalCont">
+      <h1>アクション</h1>
+      <ul class="actionMenu">
+        <li class="actionMessage"><a href="#">メッセージを送る</a></li>
+        <li class="actionCampaign"><a href="#">キャンペーンに<br>誘導する</a></li>
+        <li class="actionAd"><a href="#dataLinkSetting" class="jsOpenModal">SNS広告と<br>データ連携する</a></li>
+        <li class="actionCsv"><a href="#">CSVダウンロード</a></li>
+      </ul>
+      <ul class="btnSet">
+        <li class="btn2"><a href="#closeModal" class="large1">キャンセル</a></li>
+      </ul>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="actionSet" style="height: 1449px; display: block;">
+    <section class="modalCont-large jsModalCont" style="display: block; opacity: 1; top: 30px;">
+      <div class="modalInner-large">
+        <header class="innerFB-small">
+          <h1>田中一光さんが管理しているFacebook広告アカウント</h1>
+        </header>
+        <section class="modalInner-cont">
+          <section class="editContList">
+            <ul>
+              <li><label><input type="checkbox">雪肌精のページ用広告アカウント</label></li>
+              <li><label><input type="checkbox">アスタブラン用の広告アカウント</label></li>
+            </ul>
+            <div class="pager1">
+              <p>99,999件中101件～120件表示しています</p>
+                <ul>
+                  <li class="first"><a href="#">最初のページヘ</a></li>
+                  <li class="prev"><a href="#">前のページへ</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><span>6</span></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">99</a></li>
+                  <li class="next"><a href="#">次のページへ</a></li>
+                  <li class="last"><a href="#">最後のページヘ</a></li>
+              </ul>
+            <!-- /.pager1 --></div>
+          <!-- /.editContList --></section>
+        </section>
+        <footer>
+          <p class="btnSet"><span class="btn2"><a href="#closeModalFrame">戻る</a></span><span class="btn3"><a href="#closeModalFrame">連携</a></span></p>
+        </footer>
+      </div>
+    </section>
+  <!-- /.modal1 --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script>
+    jQuery(function($) {
+      $(document).on({
+        'mouseenter': function(e) {
+          var trigger = e.currentTarget;
+          var target = $(trigger).data('tooltip');
+          $('.customaudienceTooltip').not(target).stop(true, true).fadeOut(200);
+          $(target).css({
+            top: $(trigger).position().top
+          }).stop(true, true).fadeIn(200);
+        }
+      }, '.segmentItemInner, .listItem');
+
+      $(document).on({
+        'mouseleave': function() {
+          $('.customaudienceTooltip').stop(true, true).fadeOut(200);
+        }
+      },'.segmentItemList, .segmentPreviewWrap');
+    });
+  </script>
+<% end %>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_login_error_sp / my</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/style_sp.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit_sp.js"></script>
+
+  <!-- syn -->
+  <script src="../../../../js/syn/synapse.min.js"></script>
+  <script src="../../../../js/syn/jquery.inview.min.js"></script>
+  <script src="../../../../js/syn/unit_syn.dev.js"></script>
+  <!-- /.syn -->
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="btn3"><a href="#" class="loginBtn">無料登録・ログイン</a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#side-menu"  class="syn-notice jsMenuTrigger">MENU</a></p>
+      <!-- /.companyName --></div>
+      <aside class="drawerNaviWrap close jsModalTarget-menu" id="side-menu">
+        <div class="drawerNavi">
+          <div id="adg_div">
+            <script src="http://i.socdm.com/sdk/js/adg-script-loader.js?id=31095&targetID=adg_31095&displayid=1&adType=FREE&async=false&tagver=2.0.0"></script>
+          </div>
+          <script>
+            // ロード完了時イベント
+            window.addEventListener($adg.listener.loaded, function (e) {
+              // inview は、オブジェクトの各辺が描画領域に入ると報告されるが、そのうち最初の1回だけ
+              // 受け取れるようにフラグを立てて管理する。
+              var firstInView = false;
+
+              $('#adg_div').css('display', 'block');
+              // jquery.inviewによるinview判定
+              $('#adg_div').on('inview', function(event, isInView){
+                if (isInView) {
+                  if (!firstInView) {
+                    $adg.ads.trackShowEvent(); // トラッキング
+                    firstInView = true;
+                  }
+                }
+              });
+            });
+            window.addEventListener($adg.listener.failed, function () {
+              //console.log('adFailed!');
+            });
+          </script>
+          <h2 class="hd2">ブランド名orモニプラ</h2>
+          <ul class="privateMenu">
+            <li class="home"><a href="http://www.aainc.co.jp/">トップページ</a></li>
+            <li><a href="#">ほめられ美脚なら♪</a></li>
+            <li><a href="#">脱ビール腹！大人の男磨きしよう！</a></li>
+            <li><a href="#">男のやせる専門店誕生</a></li>
+          </ul>
+
+          <div id='synapse-service-list-outer-box' style='display: none'>
+            <h2 class="hd2">おすすめサービス</h2>
+            <ul id='synapse-service-list'>
+            </ul>
+          </div>
+
+          <div id="synapse-logo-box" class="synapse_logo" style='display: none'></div>
+        </div>
+      </aside>
+      <div class="modalBase jsModalBase"></div>
+    <!-- /.company --></section>
+  </header>
+  <article class="singleWrap">
+    <h1 class="singleWrapHd1">ログイン</h1>
+    <section>
+      <h1 class="hd1">お持ちのアカウントでログイン</h1>
+      <ul class="loginSns">
+        <li class="btnSnsFb1"><a href="#" class="login1">Facebook</a></li>
+        <li class="btnSnsTw1"><a href="#" class="login1">Twitter</a></li>
+        <li class="btnSnsLn1"><a href="#" class="login1">LINE</a></li>
+        <li class="btnSnsIg1"><a href="#" class="login1">Instagram</a></li>
+        <li class="btnSnsGp1"><a href="#" class="login1">Google</a></li>
+        <li class="btnSnsYh1"><a href="#" class="login1">Yahoo! JAPAN ID</a></li>
+      </ul>
+      <h1 class="hd1">メールアドレスでログイン</h1>
+      <form action="">
+        <ul class="addressJoin">
+          <li class="address"><span class="iconError1">入力してください</span><br><input type="email" placeholder="メールアドレス"></li>
+          <li class="pass"><span class="iconError1">正しくありません</span><br><input type="password" placeholder="パスワード"><small class="supplement1"><a href="#">パスワードを忘れた方はこちら</a></small></li>
+          <li class="btn3"><a href="#" class="large1">ログイン</a></li>
+        </ul>
+      </form>
+      <p class="loginAttention">※本サービスは<a href="#"><img src="../../../../img/icon/iconAlliedID2.png" width="16" height="16" alt="Allied ID">Allied ID</a>をアカウント管理システムとして利用しています。</p>
+    </section>
+  <!-- /.singleWrap --></article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+</body>
+</html>

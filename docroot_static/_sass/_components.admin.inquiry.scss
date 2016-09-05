@@ -1,0 +1,592 @@
+.inquiryTable1 {
+  width: 100%;
+  border: 1px solid $borderC;
+  margin-bottom: 20px;
+  background:#fff;
+
+  th,
+  td {
+    padding: 9px;
+    border-bottom: 1px solid $borderC;
+    border-left: 1px solid $borderC;
+    vertical-align: middle;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .title1 {
+      width: 172px;
+  }
+  .title2 {
+      width: 120px;
+  }
+  .edit1 {
+    width: 300px;
+  }
+  .select1 {
+    width: 300px;
+  }
+  .widthFull {
+    width: 100%;
+  }
+  .range {
+    float: right;
+  }
+  th {
+    line-height: 30px;
+    font-weight: bold;
+    background: #eee;
+  }
+  .btnSet {
+    margin: 10px auto;
+    display: block;
+  }
+  .inquiryTableWrap {
+  }
+
+  .commonTableList1 {
+    background: #fff;
+
+    .title1 {
+      width: 190px;
+
+      span + span {
+        float: right;
+      }
+    }
+    .title2 {
+      width: 135px;
+    }
+    .itemEdit {
+      width: auto;
+    }
+    .itemEdit2 {
+      width: 360px;
+      padding: 10px;
+      text-align: left;
+
+      input {
+        width: 100px;
+      }
+      .dash {
+        display: inline-block;
+      }
+      span {
+        margin-bottom: 0;
+        display: inline-block;
+      }
+    }
+    .btnSet　{
+      margin: 20px 0;
+    }
+  }
+}
+.agencyLogin {
+  padding-left: 20px;
+
+  a {
+
+    &:before {
+      @include iconFontLeft(login);
+      color: #333;
+    }
+  }
+}
+
+.tenmplateEdit {
+
+  a {
+
+    &:before {
+      @include iconFontLeft(edit);
+    }
+  }
+}
+
+.inquirySetting {
+
+  .moduleSettingDetail {
+
+    p {
+      margin-top: 5px;
+    }
+  }
+}
+
+.inquiryUserList {
+  background: #fff;
+  border: 1px solid $borderC;
+
+  .itemTable {
+    margin:0 0 10px 0;
+    width:100%;
+    float: none;
+
+    td,th {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    td {
+      padding: 5px;
+      text-align: left;
+      white-space: normal;
+      height: auto;
+
+      &.noList {
+        height:130px;
+        text-align:center;
+        vertical-align:middle;
+      }
+    }
+    th {
+      height:25px;
+
+      &:first-child {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.inquiryEditWrap {
+  display: table;
+  box-sizing: border-box;
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  table-layout: fixed;
+  margin-bottom: 10px;
+}
+.inquiryUserView {
+  width: 630px;
+  margin: 0 auto;
+}
+.pager2 {
+  margin-bottom: 30px;
+}
+.inquiryEdit1 {
+  display: table-cell;
+  padding: 14px 0;
+  min-height: 508px;
+  max-width: 328px;
+  width: 328px;
+  background: #ccc;
+  vertical-align: top;
+
+  h1 {
+    position: relative;
+    padding: 3px 0;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:after {
+      @include fontBase(arrow-top);
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -6px;
+      color: #FFF;
+    }
+  }
+  .close {
+
+    &:after {
+      @include fontBase(arrow-bottom);
+    }
+  }
+}
+.inquirySettingWrap {
+  margin-top: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  [type="text"] {
+    width: 100%;
+    margin-left: 0;
+  }
+  label {
+    margin-right: 0;
+    vertical-align: middle;
+
+    &+[type="text"] {
+      width: 279px;
+    }
+  }
+  select {
+    width: 100%;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 150px;
+  }
+  .iconError1 {
+    display: block;
+    font-weight: normal;
+    margin: 5px 0;
+  }
+  &>*:first-child {
+    margin-top: 0;
+  }
+}
+.inquirySetting {
+
+  li {
+    margin-top: 5px;
+    padding-left: 18px;
+    text-indent: -18px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    * {
+      text-indent: 0;
+    }
+  }
+  .label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+
+    &+select {
+      width: -webkit-calc(100% - 12px);
+      width: calc(100% - 12px);
+    }
+  }
+}
+.inquiryCont1 {
+  width: 310px;
+  margin: 0 auto 15px;
+}
+
+.inquiryChat {
+  display: table-cell;
+  width: 630px;
+  padding-bottom: 14px;
+  vertical-align: top;
+  text-align: left;
+
+  .chatTimestamp {
+    padding: 10px;
+    background: #eee;
+    text-align: right;
+    border-bottom: 1px solid $borderC;
+  }
+}
+.inquiryChatBody {
+  height: 560px;
+  padding: 20px;
+  overflow: auto;
+
+  li {
+    @include cf;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .inquiryUser {
+    margin-top: 5px;
+
+    img {
+      vertical-align: top;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .inquiryMessage {
+    border-radius: 4px;
+    width: -webkit-calc(100% - 50px);
+    width: calc(100% - 50px);
+    padding: 10px;
+    margin: 5px auto;
+    box-sizing: border-box;
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &:after {
+      content: "";
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      display: block;
+      position: absolute;
+      top: 15px;
+    }
+  }
+  .messageTransmit {
+    clear: both;
+    text-align: right;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    font-size: smaller;
+
+    .iconCheck3 {
+      float: left;
+    }
+    label {
+      cursor: pointer;
+    }
+  }
+  .transmited {
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      border-top: 1px solid $borderC;
+      display: block;
+      position: absolute;
+      top: 8px;
+      width: 100%;
+    }
+    .iconCheck3 {
+      background: #fff;
+      padding: 0 25px;
+      position: relative;
+    }
+  }
+  .fromAdmin {
+
+    .messageSender {
+      float: right;
+    }
+    .messageTimestamp {
+      float: left;
+    }
+    .inquiryUser {
+      float: right;
+    }
+    .inquiryMessage {
+      float: left;
+      background: #dcf4fc;
+      margin-right: 10px;
+
+      &:after {
+        border-right: none;
+        border-left: 8px solid #dcf4fc;
+        right: -8px;
+      }
+    }
+  }
+  .fromUser {
+
+    .messageSender {
+      float: left;
+    }
+    .messageTimestamp {
+      float: right;
+    }
+    .inquiryUser {
+      float: left;
+    }
+    .inquiryMessage {
+      float: right;
+      background: #eee;
+      margin-left: 10px;
+
+      &:after {
+        border-left: none;
+        border-right: 8px solid #eee;
+        left: -8px;
+      }
+      &.selected {
+        background: #F9F9E0;
+
+        &:after {
+          border-left: none;
+          border-right: 8px solid #F9F9E0;
+        }
+      }
+    }
+  }
+}
+
+.inpuiryMessageInput {
+  background: #eee;
+  padding: 10px;
+  text-align: right;
+
+  a {
+
+    &:before {
+      @include iconFontLeft(edit);
+    }
+  }
+  .iconError1 {
+    display: block;
+    text-align: left;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 85px;
+  }
+}
+
+.inquiryMessageTransmit {
+
+  .transmitTorigger {
+    margin: 10px;
+  }
+  .messageTransmitMemo {
+    background: #555;
+    padding: 10px;
+
+    select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .chosen-container {
+      width: 100%!important;
+      margin-bottom: 10px;
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      height: 85px;
+    }
+  }
+  .transmitText {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px dotted #555;
+
+    strong {
+      font-weight: bold;
+      font-size: 15px;
+      color: #666;
+    }
+  }
+  .jsCheckToggleTarget {
+    display: none;
+  }
+}
+
+.inquiryHistory {
+  background: #fff;
+  border: 1px solid $borderC;
+
+  li {
+    border-top: 1px solid $borderC;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+  a {
+    display: table;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .title {
+    display: table-cell;
+    width: 100%;
+  }
+  .date {
+    display: table-cell;
+    text-align: right;
+  }
+}
+
+.sectionEditArea {
+  margin: 20px 0;
+  text-align: center;
+
+  input[type=text],
+  .selectItem {
+    width: 85%;
+  }
+}
+
+.tenmplateListWrap {
+  @include cf;
+}
+.newtenmplateCheck {
+  margin-right: 40px;
+  float: right;
+}
+.newtenmplateWrap {
+  @include cf;
+  border:1px solid #ccc;
+  margin: 0 50px 20px 50px;
+  padding:10px;
+  line-height:35px;
+  clear:both;
+
+  p {
+    dispalay:inline-block;
+
+    &:first-child {
+      float: left;
+    }
+    &+p {
+      text-align:right;
+      float:right;
+    }
+  }
+}
+
+.tenmplateSelect {
+  margin: 5px 50px 20px 50px;
+  text-align: left;
+  clear:both;
+
+  input[type=text],
+  select {
+    width: 100%;
+  }
+  .itemCategory {
+    width: 180px;
+    display: inline-block;
+  }
+  .itemTitle {
+    width: 464px;
+    display: inline-block;
+  }
+  .itemTitle2 {
+    width: 548px;
+    display: inline-block;
+  }
+  .editBtn {
+    width: 80px;
+    display: inline-block;
+  }
+}
+.tenmplateDetailWrap {
+  margin: 15px 50px;
+
+  textarea {
+    width: 100%;
+  }
+  .categoryCreate {
+    margin-bottom: 20px;
+
+    &>span {
+      margin-right: 10px;
+    }
+  }
+}
+.tenmplateDetail {
+  padding: 15px;
+  border: 1px solid $borderC;
+}
+
+.confirmWrap {
+  max-height: 230px;
+  padding: 10px;
+  margin-top: 25px;
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-y: auto;
+}

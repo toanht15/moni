@@ -1,0 +1,13 @@
+Admin:
+  ClientID: b1ad507131084537b1c37056222aa060
+  ClientSecret: 6f203e3219cc4da49b67d8cbcf5b78de
+  RedirectUri: auth/instagram_callback
+  Scopes:
+    1: basic
+User:
+  ClientID:
+  ClientSecret:
+  RedirectUri:
+  Scopes:
+    1: basic
+  ManagerAccessToken: 1821975796.c6ad1cb.d9f49dd3d8a54644b91ca55077229c49

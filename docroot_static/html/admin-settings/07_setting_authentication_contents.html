@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>07_setting_authentication_contents / admin-settings</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+
+</head>
+
+<body class="modalInnerBody">
+    <article class="modalInner-large">
+        <header>
+            <h1>年齢確認ページ</h1>
+        </header>
+        <section class="modalInner-cont">
+            <div class="adminPageAuthenticationEdit">
+                <p>「はい」のリンク先（href）に ##LINKYES## のタグを挿入してください。（例：a href="##LINKYES##"）<br> 「いいえ」のリンク先（href）に ##LINKNO## のタグを挿入してください。（例：a href="##LINKNO##"）<br></p>
+                <div class="wysiwygArea">
+                    <p class="adminPageAuthenticationPreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+                    <div>
+                        <img src="../../img/dummy/imgWyswigThin.png" width="800" height="470" alt="wyswig dummy" style="display: block;">
+                    </div>
+                <!-- /.wysiwygArea --></div>
+
+            <!-- /.adminPageAuthenticationEdit --></div>
+        </section>
+        <footer>
+            <p class="btnSet">
+                <span class="btn2"><a href="#modal1">キャンセル</a></span>
+                <span class="btn3"><a href="#modal1">保存</a></span>
+            </p>
+        </footer>
+    </article>
+
+
+</body>
+
+</html>

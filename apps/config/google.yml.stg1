@@ -1,0 +1,23 @@
+Google:
+  ClientID: 1085551647969-6kt1o6rv5cva3upncc9dolj669j3abd8.apps.googleusercontent.com
+  ClientSecret: V5yRNMyvQ6B_dvFezc3qyKrQ
+  ClientEmail: 1085551647969-57ebq3vmqs9ju1nmocnocsu0g2bvlais@developer.gserviceaccount.com
+  ViewId: 83258730
+  P12KeyFile: google_service_account_stg.p12
+  RedirectUri: auth/google_callback
+  ApiBaseUrl: https://www.googleapis.com/auth
+  Scope:
+    1: userinfo.email
+    2: userinfo.profile
+    3: youtube
+User:
+  ClientID: 1085551647969-6kt1o6rv5cva3upncc9dolj669j3abd8.apps.googleusercontent.com
+  ClientSecret: V5yRNMyvQ6B_dvFezc3qyKrQ
+  ClientEmail: 1085551647969-57ebq3vmqs9ju1nmocnocsu0g2bvlais@developer.gserviceaccount.com
+  ViewId: 83258730
+  P12KeyFile: google_service_account_stg.p12
+  RedirectUri: auth/google_callback
+  ApiBaseUrl: https://www.googleapis.com/auth
+  Scope:
+    1: userinfo.profile
+    2: youtube

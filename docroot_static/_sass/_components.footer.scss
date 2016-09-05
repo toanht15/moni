@@ -1,0 +1,52 @@
+html {
+  position: relative;
+  min-height: 100%;
+  background: transparent;
+}
+body>footer {
+  @include wrap;
+  @include cf;
+  clear: both;
+  // border-top: 1px solid $borderC;
+  padding: 5px 0;
+  margin-top: 50px;
+  color: #aaa;
+  width: auto;
+
+  a {
+    color: #aaa;
+  }
+  .copyright {
+    // float: left;
+    padding: 10px 0 15px 0;
+    text-align: center;
+
+    .links {
+      margin-top: 0;
+      border: 0;
+    }
+  }
+  .poweredBy {
+    text-align: center;
+  }
+  .links {
+    // @include cf;
+    // float: right;
+    padding-top: 20px;
+    border-top: 1px solid $borderC;
+    font-size: smaller;
+    text-align: center;
+
+    li {
+      // float: left;
+      margin-left: 10px;
+      display:inline-block;
+    }
+    a:before {
+      @include miniArrowBase(right, #bbb, 5px);
+      content: "";
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'sidenav' : %>sidenav07<% end %>
+
+<% block 'columnContents' : %>
+      <h1 class="hd1">通知先メールアドレス設定</h1>
+      <h2 class="hd2">お問い合わせ受信時の通知先メールアドレスを登録する</h2>
+      <section class="adminUserAttendWrap">
+
+        <p>必ず1件以上のメールアドレスをご登録ください。</p>
+        <p class="adminUserAttend">
+          <strong>メールアドレス</strong>
+          <span class="attention1">メールアドレスを入力してください</span><br><input type="email" placeholder="sample@aainc.co.jp"><span class="btn3"><a href="#">登録</a></span>
+        </p>
+      <!-- /.adminUserAttendWrap --></section>
+
+      <h2 class="hd2">お問い合わせ受信の通知先一覧</h2>
+      <section class="adminUserListWrap">
+
+        <ul class="noticeUserList">
+          <li><span class="adminUserUrl">sato.tetsuhiro@aainc.co.jp</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+          <li><span class="adminUserUrl">sato.tetsuhiro@aainc.co.jp</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+          <li><span class="adminUserUrl">sato.tetsuhiro@aainc.co.jp</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+          <li><span class="adminUserUrl">sato.tetsuhiro@aainc.co.jp</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+        </ul>
+      <!-- /.adminUserListWrap --></section>
+
+    </article>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+
+      <h1>管理者の削除</h1>
+
+      <div class="modalAdminUser">
+        <p class="userCheck"><strong>sato.tetsuhiro@aainc.co.jp</strong>さんを問い合わせ先から削除します。</p>
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn4"><a href="#closeModal">削除</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+<% end %>

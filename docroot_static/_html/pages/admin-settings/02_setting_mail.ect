@@ -1,0 +1,71 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'sidenav' : %>sidenav03<% end %>
+
+<% block 'columnContents' : %>
+      <h1 class="hd1">登録メール設定</h1>
+      <section class="adminSignUpMailWrap">
+        <p><label><input type="checkbox" name="" value="">登録完了メールを送信する</label>
+          <span class="iconHelp">
+            <span class="text">ヘルプ</span>
+            <span class="textBalloon1">
+              <span>登録を完了したユーザーに、<br>下記で設定したメールを自動で送信します。</span>
+            <!-- /.textBalloon1 --></span>
+          <!-- /.iconHelp --></span></p>
+        <p class="supplement1">※送信元メールアドレスは、info@monipla.comです。</p>
+      <!-- /.adminSignUpMailWrap --></section>
+
+
+      <h2 class="hd2">送信者名</h2>
+      <section class="adminSignUpMailWrap">
+        <p><input type="text" id="" value="ファンサイト名をプリセットで表示" class="SenderName"></p>
+      <!-- /.adminSignUpMailWrap --></section>
+
+      <h2 class="hd2">メールタイトル</h2>
+      <section class="adminSignUpMailWrap">
+        <p><input type="text" id="" value="標準タイトルをプリセットで表示　【ファンサイト名】ファンサイトへのご登録ありがとうございました。"></p>
+      <!-- /.adminSignUpMailWrap --></section>
+
+
+
+      <h2 class="hd2">メール本文</h2>
+      <section class="adminSignUpMailWrap">
+        <p class="adminRuleSetting"><textarea name="" id="" cols="30" rows="10">テキスト文例があるとプリセットで表示させたい</textarea></p>
+
+        <p class="btnSet">
+          <span class="btn3"><a href="#" class="middle1">保存</a></span>
+        </p>
+      <!-- /.adminRuleSettingWrap --></section>
+    </article>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="pageAuthenticationEditor">
+    <section class="modalCont-large jsModalCont">
+          <h1>年齢確認ページ</h1>
+          <div class="pagePartsSetting">
+            <div class="adminPageAuthenticationEdit">
+              <p>「はい」のリンク先（href）に ##LINKYES## のタグを挿入してください。（例：a href="##LINKYES##"）<br>
+              「いいえ」のリンク先（href）に ##LINKNO## のタグを挿入してください。（例：a href="##LINKNO##"）<br></p>
+              <div class="wysiwygArea">
+                <p class="adminPageAuthenticationPreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+                <div><img src="../../img/dummy/imgWyswigThin.png" width="815" height="470" alt="wyswig dummy" style="display: block; max-width: none;"></div>
+              <!-- /.wysiwygArea --></div>
+            <!-- /.adminPageAuthenticationEdit --></div>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsTextSetting --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+<% end %>

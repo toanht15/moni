@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>04_page_detail / admin-blog</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/unit.js"></script>
+  <script src="../../../../js/admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <nav class="categoryNav">
+      <ul class="tablink1">
+        <li><a href="#">ページ一覧</a></li>
+        <li class="current"><span>ページ作成</span></li>
+        <li><a href="#">カテゴリ</a></li>
+        <li><a href="#">ファイル</a></li>
+      <!-- /.tablink1 --></ul>
+    <!-- /.categoryNav --></nav>
+    <h1 class="hd1">ページ作成</h1>
+
+    <div class="pageSettingWrap1">
+      <dl class="pageEdit1">
+        <dt>レイアウト</dt>
+        <dd class="pageLayout"><label for="layout1"><input type="radio" id="layout1" name="layout" checked="checked"><img src="../../../../img/icon/iconColumn2.png" width="20" height="15" alt="696px">696px</label><label for="layout2"><input type="radio" id="layout2" name="layout"><img src="../../../../img/icon/iconColumn1.png" width="20" height="15" alt="960px">960px</label><label for="layout3"><input type="radio" id="layout3" name="layout"><img src="../../../../img/icon/iconColumn3.png" width="20" height="15" alt="960px（ヘッダーなし）">960px（ヘッダーなし）</label></dd>
+        <dt><label class="require1" for="field1">ページタイトル</label></dt>
+        <dd><input type="text" class="categoryName" id="field1"><small class="textLimit">（<span>0</span>文字／35文字）</small><br><label><input type="checkbox">見出しタイトルを非表示にする</label></dd>
+        <dt><label class="require1" for="field2">パーマリンク</label></dt>
+        <dd>http://monipla.com/cliantname/pages/<input type="text" id="field2" class="directoryName"><a href="#" class="iconCopy1">URLをコピー</a><br><span class="iconError1">パーマリンクが同一階層内で重複しています</span></dd>
+        <dt>トップページパネルリンクの表示</dt>
+        <dd><label><input type="checkbox">表示する</label></dd>
+        <dt>記述タイプを選ぶ</dt>
+        <dd><label for="pageBlogType"><input type="radio" name="pageType" id="pageBlogType" checked="checked" value="pageTypeBlog">ブログ形式を利用</label><label for="pageTempType"><input type="radio" name="pageType" id="pageTempType" value="pageTempType">テンプレートを利用</label></dd>
+      <!-- /.pageEdit1 --></dl>
+      <div class="pageStatus1">
+        <h1>ステータス：<span class="iconCheck3">公開中</span></h1>
+        <dl>
+          <dt>作成：</dt>
+          <dd>taisa - 2014/10/21</dd>
+          <dt>公開：</dt>
+          <dd>taisa - 2014/10/21</dd>
+          <dt>編集：</dt>
+          <dd>taisa - 2014/10/21</dd>
+        </dl>
+        <p><a href="#">リビジョン（32）</a></p>
+      </div>
+    <!-- /.pageSettingWrap1 --></div>
+
+    <div class="pageContEdit">
+
+      <div id="jsPageContBlogEdit">
+        <p class="pagePreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+        <img src="../../../../img/dummy/imgWyswig.png" width="960" height="580" alt="wyswig dummy" style="display: block;">
+        <p><a href="#" class="linkAdd">登録が必要な限定コンテンツを作成</a></p>
+        <img src="../../../../img/dummy/imgWyswig.png" width="960" height="580" alt="wyswig dummy" style="display: block;">
+      <!-- /#jsPageContBlogEdit --></div>
+
+      <div id="jsPageContTempEdit" class="pageContTempEdit">
+        <p class="pagePreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+        <section>
+        <h1>追加可能なパーツ一覧</h1>
+        <ul class="pagePartsType">
+          <li>
+            <p>画像スライダー</p>
+            <p><img src="../../../../img/pageTempParts/iconSlider.gif"></p>
+            <p class="addParts"><a href="#pagePartsSliderSetting" class="jsOpenModal">追加する</a></p>
+          </li>
+          <li>
+            <p>画像+テキスト</p>
+            <p><img src="../../../../img/pageTempParts/iconFloatImage.gif"></p>
+            <p class="addParts"><a href="#pagePartsFloatImageSetting" class="jsOpenModal">追加する</a></p>
+          </li>
+          <li>
+            <p>画像全面配置</p>
+            <p><img src="../../../../img/pageTempParts/iconFullImage.gif"></p>
+            <p class="addParts"><a href="#pagePartsFullImageSetting" class="jsOpenModal">追加する</a></p>
+          </li>
+          <li>
+            <p>文章入力</p>
+            <p><img src="../../../../img/pageTempParts/iconText.gif"></p>
+            <p class="addParts"><a href="#pagePartsTextSetting" class="jsOpenModal">追加する</a></p>
+          </li>
+          <li>
+            <p>Instagram投稿一覧</p>
+            <p><img src="../../../../img/pageTempParts/inconInstaImages.gif"></p>
+            <p class="addParts"><a href="#pagePartsInstaSetting" class="jsOpenModal">追加する</a></p>
+          </li>
+        <!-- /.pagePartsType --></ul>
+        <div class="pagePartsList">
+          <h1>設定済みパーツ一覧</h1>
+          <ul>
+            <li>
+              <p class="partsName">画像スライダー</p>
+              <p class="partsIcon"><img src="../../../../img/pageTempParts/iconSlider.gif"></p>
+              <p class="btnSet">
+              　　<span class="btn2"><a href="#" class="small1">削除する</a></span>
+              　　<span class="btn3"><a href="#" class="small1">編集する</a></span>
+            　　</p>
+            </li>
+            <li>
+              <p class="partsName">画像+テキスト</p>
+              <p class="partsIcon"><img src="../../../../img/pageTempParts/iconFloatImage.gif"></p>
+              <p class="btnSet">
+              　　<span class="btn2"><a href="#" class="small1">削除する</a></span>
+              　　<span class="btn3"><a href="#" class="small1">編集する</a></span>
+            　　</p>
+            </li>
+            <li>
+              <p class="partsName">画像全面配置</p>
+              <p class="partsIcon"><img src="../../../../img/pageTempParts/iconFullImage.gif"></p>
+              <p class="btnSet">
+              　　<span class="btn2"><a href="#" class="small1">削除する</a></span>
+              　　<span class="btn3"><a href="#" class="small1">編集する</a></span>
+            　　</p>
+            </li>
+            <li>
+              <p class="partsName">文章入力</p>
+              <p class="partsIcon"><img src="../../../../img/pageTempParts/iconText.gif"></p>
+              <p class="btnSet">
+              　　<span class="btn2"><a href="#" class="small1">削除する</a></span>
+              　　<span class="btn3"><a href="#" class="small1">編集する</a></span>
+            　　</p>
+            </li>
+            <li>
+              <p class="partsName">Instagram画像一覧</p>
+              <p class="partsIcon"><img src="../../../../img/pageTempParts/inconInstaImages.gif"></p>
+              <p class="btnSet">
+              　　<span class="btn2"><a href="#" class="small1">削除する</a></span>
+              　　<span class="btn3"><a href="#" class="small1">編集する</a></span>
+            　　</p>
+            </li>
+            <li class="partsLimited">以下のコンテンツを登録が必要な限定コンテンツにする（ドラッグ・ドロップして設定）</li>
+          </ul>
+        </div>
+        </section>
+      <!-- /#jsPageContTempEdit --></div>
+    <!-- /.pageContEdit --></div>
+
+    <div class="pageSettingWrap1">
+      <section class="pageCategory">
+        <h1>カテゴリ</h1>
+        <p class="addNewCategory"><a href="#" class="linkAdd">新規追加</a></p>
+        <div class="newCategory">
+          <dl>
+            <dt>カテゴリ名</dt>
+            <dd><input type="text"><small class="textLimit"><br>（<span>0</span>文字／35文字）</small></dd>
+            <dt>親カテゴリ</dt>
+            <dd>
+              <select name="display" id="display">
+                <option value="">なし</option>
+                <option value="">親カテゴリ1</option>
+                <option value="">親カテゴリ2</option>
+                <option value="">親カテゴリ3</option>
+                <option value="">　親カテゴリ3-1</option>
+                <option value="">　親カテゴリ3-2</option>
+                <option value="">　　親カテゴリ3-2-1</option>
+                <option value="">　親カテゴリ3-3</option>
+                <option value="">親カテゴリ4</option>
+              </select><br>
+              <span class="iconError1">カテゴリ名が同一階層内で重複しています</span>
+            </dd>
+          </dl>
+          <p><span class="btn3"><a href="#" class="small1">追加</a></span></p>
+        <!-- /.newCategory --></div>
+        <ul>
+          <li><label><input type="checkbox">親カテゴリ1</label></li>
+          <li>
+            <label><input type="checkbox">親カテゴリ2</label>
+            <ul>
+              <li><label><input type="checkbox">子カテゴリ2-1</label></li>
+              <li><label><input type="checkbox">子カテゴリ2-2</label></li>
+            </ul>
+          </li>
+          <li>
+            <label><input type="checkbox">親カテゴリ3</label>
+            <ul>
+              <li>
+                <label><input type="checkbox">子カテゴリ3-1</label>
+                <ul>
+                  <li><label><input type="checkbox">孫カテゴリ3-1-1</label></li>
+                  <li><label><input type="checkbox">孫カテゴリ3-1-2</label></li>
+                  <li><label><input type="checkbox">孫カテゴリ3-1-3</label></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><label><input type="checkbox">親カテゴリ4</label></li>
+          <li>
+            <label><input type="checkbox">親カテゴリ5</label>
+            <ul>
+              <li><label><input type="checkbox">子カテゴリ5-1</label></li>
+              <li><label><input type="checkbox">子カテゴリ5-2</label></li>
+            </ul>
+          </li>
+          <li><label><input type="checkbox">親カテゴリ6</label></li>
+        </ul>
+      <!-- /.pageCategory --></section>
+      <section class="pagePlugin">
+        <h1>SNSプラグインの表示</h1>
+        <ul>
+          <li><label><input type="checkbox">Facebook「いいね！」</label></li>
+          <li><label><input type="checkbox">Twitter「ツイート」</label></li>
+          <li><label><input type="checkbox">Google+</label></li>
+          <li><textarea name="" id="" cols="30" rows="2"></textarea></li>
+          <li><a href="#" class="linkAdd">追加</a></li>
+        </ul>
+      <!-- /.pagePlugin --></section>
+      <section class="pageMeta">
+        <h1>meta情報</h1>
+        <dl>
+          <dt>title</dt>
+          <dd><input type="text"></dd>
+          <dt>description</dt>
+          <dd><textarea name="" id="" cols="30" rows="2" class="metaText"></textarea></dd>
+          <dt>keyword(,カンマ区切り)</dt>
+          <dd><textarea name="" id="" cols="30" rows="2" class="metaText"></textarea></dd>
+          <dt>OG Image</dt>
+          <dd><img src="../../../../img/dummy/CPmain.jpg" alt="og image"><input type="file"></dd>
+        </dl>
+      <!-- /.pageMeta --></section>
+      <section class="pagePublish">
+        <h1>公開設定</h1>
+        <dl>
+          <dt>ステータス：<span class="iconCheck3">公開中</span></dt>
+          <dd>
+            <select name="" id="">
+              <option value="">公開中</option>
+              <option value="">下書き</option>
+            </select>
+          </dd>
+          <dt>公開日</dt>
+          <dd>
+            <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+            <select name="openTimeHH" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select
+            ><span class="coron">:</span
+            ><select name="openTimeMM" class="inputTime">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+            </select
+            >
+          </dd>
+        </dl>
+        <p class="deletePage"><a href="#modal1" class="linkDelete jsOpenModal">ページ削除</a></p>
+      <!-- /.pagePublish --></section>
+    <!-- /.pageSettingWrap1 --></div>
+
+    <div class="pageEditCheck">
+      <ul>
+        <li class="btn2"><a href="#" class="small1">削除</a></li>
+        <li class="btn3"><a href="#" class="">保存</a></li>
+      </ul>
+    <!-- /.pageEditCheck --></div>
+    <section class="backPage">
+      <p><a href="#" class="iconPrev1">ページ一覧へ</a></p>
+    <!-- /.backPage --></section>
+
+  </article>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <script>
+
+    jQuery(function(){
+      $.datepicker.setDefaults($.datepicker.regional['ja']);
+      $(".jsDate").datepicker();
+    });
+
+//parts template
+jQuery(function(){
+$('input[name="pageType"]').on('change',function(){
+  $('#jsPageContBlogEdit,#jsPageContTempEdit').css('display','none');
+  $('input[name="pageType"]:checked').val() === 'pageTypeBlog' ? $('#jsPageContBlogEdit').css('display','block') :  $('#jsPageContTempEdit').css('display','block');
+});
+
+$('.jsEditSlide').on('click',function(){
+  var target = $(this).data('slide-id');
+  $(target).toggleClass('editActive');
+  if($(target).hasClass('editActive')){
+    $(this).text('決定');
+  }
+  else {
+    var editedHtml = $('.inputCaption',target).val() + '<span class="url">' + $('.inputLink',target).val() + '</span>';
+    $('.text',target).html(editedHtml);
+    $(this).text('編集');
+  }
+})
+
+});
+
+
+  </script>
+  <div class="modal1 jsModal" id="modal1">
+      <section class="modalCont-small jsModalCont">
+          <h1>確認</h1>
+          <p class="iconError1">このページを削除しますか？</p>
+          <p class="btnSet">
+            <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+            <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+          </p>
+      <!-- /.modalCont-small --></section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="pagePartsSliderSetting">
+    <section class="modalCont-large jsModalCont">
+          <h1>スライダー設定</h1>
+          <div class="pagePartsSetting">
+            <div class="pagePartsSettingCont">
+              <p class="btn3"><a href="javascript:void(0);" data-link="https://monipla.com/output_demo1/admin-blog/file_list?f_id=1" class="jsFileUploaderPopup">画像を一覧から選択する</a></p>
+              <p class="photo"><img src="../../../../img/dummy/card1.png"></p>
+              <p class="slideNum">スライダー1ページ当たりの表示枚数<br><label for="pcSlideNum">PC</label><input type="text" id="pcSlideNum" maxlength="3" value="5"> <label for="spSlideNum">SP</label><input type="text" id="spSlideNum" maxlength="3" value="2"></p>
+              <p><label for="insertCaption">テキスト<small>※20文字以内で入力</small></label><input type="text" id="insertCaption"></p>
+              <p><label for="insertLink">リンクURL</label><input type="text" id="insertLink"></p>
+              <p class="btnInsert"><span class="btn3"><a href="#addSlide" class="small1">追加する</a></span></p>
+            <!-- /.pagePartsSettingCont --></div>
+            <ul>
+              <li id="jsInsertSlide1">
+                <p><img src="../../../../img/dummy/card1.png"></p>
+                <p class="text">テキストテキストテキスト<span class="url">http://cp.monipla.com/</span></p>
+                <p class="input"><label for="insertCaption1">キャプション</label><input type="text" id="insertCaption1" class="inputCaption" value="テキストテキストテキスト"><span class="url"><label for="insertLink1">リンクURL</label><input type="text" id="insertLink1" class="inputLink" value="http://cp.monipla.com/"></span></p>
+                <p class="btn">
+                  <span class="btn2 btnDelete"><a href="javascript:void(0);" data-slide-id="#jsInsertSlide1" class="small1">削除</a></span>
+                  <span class="btn3 jsSlideEdit"><a href="javascript:void(0);" data-slide-id="#jsInsertSlide1" class="small1 jsEditSlide">編集する</a></span>
+                </p>
+              </li>
+              <li id="jsInsertSlide2">
+                <p><img src="../../../../img/dummy/card1.png"></p>
+                <p class="text">テキストテキストテキスト<span class="url">http://cp.monipla.com/</span></p>
+                <p class="input"><label for="insertCaption2">キャプション</label><input type="text" id="insertCaption2" class="inputCaption" value="テキストテキストテキスト"><span class="url"><label for="insertLink2">リンクURL</label><input type="text" id="insertLink2" class="inputLink" value="http://cp.monipla.com/"></span></p>
+                <p class="btn">
+                  <span class="btn2 btnDelete"><a href="javascript:void(0);" data-slide-id="#jsInsertSlide2" class="small1">削除</a></span>
+                  <span class="btn3 jsSlideEdit"><a href="javascript:void(0);" data-slide-id="#jsInsertSlide2" class="small1 jsEditSlide">編集する</a></span>
+                </p>
+              </li>
+            </ul>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsSliderSetting --></div>
+
+  <div class="modal1 jsModal" id="pagePartsFloatImageSetting">
+    <section class="modalCont-large jsModalCont">
+          <h1>画像+テキスト</h1>
+          <div class="pagePartsSetting">
+            <div class="pagePartsSettingCont">
+              <p class="btn3"><a href="javascript:void(0);" data-link="https://monipla.com/output_demo1/admin-blog/file_list?f_id=1" class="jsFileUploaderPopup">画像を一覧から選択する</a></p>
+              <p class="floatPos">画像配置：<label for="pagePartsFloatImageType1"><input type="radio" name="pagePartsFloatImageType" id="pagePartsFloatImageType1" checked="checked" value="pagePartsSliderType1">左に配置</label><label for="pagePartsFloatImageType2"><input type="radio" name="pagePartsFloatImageType" id="pagePartsFloatImageType2" checked="checked" value="pagePartsSliderType2">右に配置</label></p>
+              <p>スマホでの表示方法：<label for="pagePartsFloatImageSPType"><input type="checkbox" name="pagePartsFloatImageSPType" id="pagePartsFloatImageSPType" checked="checked" value="pagePartsFloatImageSPType">回り込みを解除する</label></p>
+              <p class="photo"><img src="../../../../img/dummy/card1.png"></p>
+              <p><label for="insertFloatImageCaption">キャプション</label><textarea id="insertFloatImageCaption"></textarea></p>
+              <p><label for="insertFloatImageText">キャプション</label><textarea id="insertFloatImageText"></textarea></p>
+              <p><label for="insertFloatImageLink">リンクURL</label><input type="text" id="insertFloatImageLink"></p>
+            <!-- /.pagePartsSettingCont --></div>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsFloatImageSetting --></div>
+
+  <div class="modal1 jsModal" id="pagePartsFullImageSetting">
+    <section class="modalCont-large jsModalCont">
+          <h1>画像全面配置</h1>
+          <div class="pagePartsSetting">
+            <div class="pagePartsSettingCont">
+              <p class="btn3"><a href="javascript:void(0);" data-link="https://monipla.com/output_demo1/admin-blog/file_list?f_id=1" class="jsFileUploaderPopup">画像を一覧から選択する</a></p>
+              <p class="photo"><img src="../../../../img/dummy/card1.png"></p>
+              <p><label for="insertFullImageLink">リンクURL</label><input type="text" id="insertFullImageLink"></p>
+            <!-- /.pagePartsSettingCont --></div>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsFullImageSetting --></div>
+
+  <div class="modal1 jsModal" id="pagePartsTextSetting">
+    <section class="modalCont-large jsModalCont">
+          <h1>文章入力</h1>
+          <div class="pagePartsSetting">
+            <div class="pagePartsSettingCont">
+              <p><label for="insertTextCaption">テキスト</label><textarea id="insertTextCaption"></textarea></p>
+            <!-- /.pagePartsSettingCont --></div>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsTextSetting --></div>
+
+  <div class="modal1 jsModal" id="pagePartsInstaSetting">
+    <section class="modalCont-large jsModalCont">
+          <h1>Instagram投稿一覧</h1>
+          <div class="pagePartsSetting">
+            <div class="pagePartsSettingCont">
+              <p>モニプラキャンペーンを経てInstagramに投稿された写真のみ出力可能です。</p>
+              <p><label for="insertUrl">外部出力APIのURL<span class="iconHelp"><span class="text">ヘルプ</span>
+                <span class="textBalloon1">
+                  <span>
+                    　出力をする画像を集めたキャンペーンの<br>「投稿管理」より外部出力APIのURL作成から<br>
+                    　URLを取得してください。
+                  </span>
+                <!-- /.textBalloon1 --></span>
+              <!-- /.iconHelp --></span></label></p>
+              <div class="jsPagePartsInstagramApiUrl">
+                <p><input type="text" id="insertUrl" class="url"><a href="#" class="iconBtnDelete">削除</a></p>
+                <p><input type="text" id="insertUrl" class="url"><a href="#" class="iconBtnDelete">削除</a></p>
+              <!-- /.jsPagePartsInstagramApiUrl --></div>
+              <p><a href="#" class="linkAdd">新規追加</a></p>
+              <p class="supplement1">※画像は新着順に表示されます。<br>
+              ※URLは6個まで指定可能です。</p>
+            <!-- /.pagePartsSettingCont --></div>
+            <p class="btnSet">
+              <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+              <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+            </p>
+          <!-- /.pagePartsSetting --></div>
+    </section>
+  <!-- /#pagePartsTextSetting --></div>
+
+</body>
+</html>

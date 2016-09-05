@@ -1,0 +1,39 @@
+csvダウンロード通知
+
+■ブランド名: <#brand_name>
+
+■ダウンロード該当URL: <#url>
+
+■ダウンロード日時: <#download_time>
+
+■ダウンロード件数: <#download_count>
+
+■ダウンロード項目
+<#LOOP_DOWNLOAD_ITEM>
+＊<#ITEM>
+<#LOOP_PROFILE_QUESTION>
+・<#status>
+<#/LOOP_PROFILE_QUESTION>
+<#LOOP_CONVERSION>
+・<#status>
+<#/LOOP_CONVERSION>
+<#LOOP_JOIN_STATUS>
+・<#status>
+<#/LOOP_JOIN_STATUS>
+<#LOOP_QUESTION>
+・<#status>
+<#/LOOP_QUESTION>
+<#LOOP_SHARE>
+・<#status>
+<#/LOOP_SHARE>
+<#LOOP_PHOTO>
+・<#status>
+<#/LOOP_PHOTO>
+<#/LOOP_DOWNLOAD_ITEM>
+
+
+
+
+
+
+

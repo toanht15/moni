@@ -1,0 +1,71 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <nav class="categoryNav">
+      <ul class="tablink1">
+        <li><a href="#">ページ一覧</a></li>
+        <li><a href="#">ページ作成</a></li>
+        <li class="current"><span>カテゴリ</span></li>
+      <!-- /.tablink1 --></ul>
+    <!-- /.categoryNav --></nav>
+    <h1 class="hd1">カテゴリ作成</h1>
+
+    <dl class="categoryEdit1">
+      <dt><label class="require1" for="field1">カテゴリ名</label></dt>
+      <dd><input type="text" class="categoryName" id="field1"><small class="textLimit">（<span>0</span>文字／35文字）</small><br><span class="iconError1">カテゴリ名が同一階層内で重複しています</span></dd>
+      <dt><label class="require1" for="field2">ディレクトリ名</label></dt>
+      <dd>http://monipla.com/cliantname/pages/<input type="text" id="field2" class="directoryName"><br><span class="iconError1">ディレクトリ名が同一階層内で重複しています</span></dd>
+      <dt>親カテゴリ</dt>
+      <dd>
+        <select name="display" id="display">
+          <option value="">なし</option>
+          <option value="">親カテゴリ1</option>
+          <option value="">親カテゴリ2</option>
+          <option value="">親カテゴリ3</option>
+          <option value="">　親カテゴリ3-1</option>
+          <option value="">　親カテゴリ3-2</option>
+          <option value="">　　親カテゴリ3-2-1</option>
+          <option value="">　親カテゴリ3-3</option>
+          <option value="">親カテゴリ4</option>
+        </select>
+      </dd>
+      <dt>デザイン</dt>
+      <dd class="jsCheckToggleWrap">
+        <label><input type="checkbox" class="jsCheckToggle">カスタマイズ</label><span class="btn2"><a href="#" class="small1">プレビュー</a></span>
+        <div class="viewCustom jsCheckToggleTarget"><img src="../../img/dummy/imgWyswig.png" width="960" height="580" alt="wyswig dummy" style="display: block;"></div>
+      </dd>
+      <dt>SNSプラグインの表示</dt>
+      <dd>
+        <ul>
+          <li><label><input type="checkbox">Facebook「いいね！」</label></li>
+          <li><label><input type="checkbox">Twitter「ツイート」</label></li>
+          <li><label><input type="checkbox">Google+</label></li>
+          <li><textarea name="" id="" cols="30" rows="2"></textarea></li>
+          <li><a href="#" class="linkAdd">追加</a></li>
+        </ul>
+      </dd>
+      <dt>meta情報</dt>
+      <dd>
+        <dl>
+          <dt>description</dt>
+          <dd><textarea name="" id="" cols="30" rows="2" class="metaText"></textarea></dd>
+          <dt>keyword(,カンマ区切り)</dt>
+          <dd><textarea name="" id="" cols="30" rows="2" class="metaText"></textarea></dd>
+          <dt>OG Image</dt>
+          <dd><label><input type="radio" name="ogImage">アップロード</label><input type="file"></dd>
+          <dd><label><input type="radio" name="ogImage">URL</label><input type="text" class="categoryImg"></dd>
+        </dl>
+      </dd>
+    <!-- /.categoryEdit1 --></dl>
+
+    <div class="categoryEditCheck">
+      <ul>
+        <li class="btn2"><a href="#" class="small1">削除</a></li>
+        <li class="btn3"><a href="#" class="">保存</a></li>
+      </ul>
+    <!-- /.categoryEditCheck --></div>
+
+    <section class="backPage">
+      <p><a href="#" class="iconPrev1">カテゴリ一覧へ</a></p>
+    <!-- /.backPage --></section>
+<% end %>

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>07_ig_list_sp / sns</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/style_sp.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/brandco/services/BrandcoMasonryCategoryService.js"></script>
+  <script src="../../../../js/_unit_sp.js"></script>
+
+  <!-- syn -->
+  <script src="../../../../js/syn/synapse.min.js"></script>
+  <script src="../../../../js/syn/jquery.inview.min.js"></script>
+  <script src="../../../../js/syn/unit_syn.dev.js"></script>
+  <!-- /.syn -->
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <style>.ig-b- { display: inline-block; }.ig-b- img { visibility: hidden; }.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+  <header>
+    <section class="account">
+      <ul>
+        <li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li><li class="accountLogo"><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li>
+      </ul>
+    <!-- /.account --></section>
+    <section class="company">
+      <div class="companyName">
+        <p class="logo">
+          <a href="#"><img src="../../../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+        </p>
+        <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+        <p class="spGnavBtn"><a href="#side-menu"  class="syn-notice jsMenuTrigger">MENU</a></p>
+      <!-- /.companyName --></div>
+      <aside class="drawerNaviWrap close jsModalTarget-menu" id="side-menu">
+        <div class="drawerNavi">
+          <div id="adg_div">
+            <script src="http://i.socdm.com/sdk/js/adg-script-loader.js?id=31095&targetID=adg_31095&displayid=1&adType=FREE&async=false&tagver=2.0.0"></script>
+          </div>
+          <script>
+            // ロード完了時イベント
+            window.addEventListener($adg.listener.loaded, function (e) {
+              // inview は、オブジェクトの各辺が描画領域に入ると報告されるが、そのうち最初の1回だけ
+              // 受け取れるようにフラグを立てて管理する。
+              var firstInView = false;
+
+              $('#adg_div').css('display', 'block');
+              // jquery.inviewによるinview判定
+              $('#adg_div').on('inview', function(event, isInView){
+                if (isInView) {
+                  if (!firstInView) {
+                    $adg.ads.trackShowEvent(); // トラッキング
+                    firstInView = true;
+                  }
+                }
+              });
+            });
+            window.addEventListener($adg.listener.failed, function () {
+              //console.log('adFailed!');
+            });
+          </script>
+          <h2 class="hd2">ブランド名orモニプラ</h2>
+          <ul class="privateMenu">
+            <li class="home"><a href="http://www.aainc.co.jp/">トップページ</a></li>
+            <li><a href="#">ほめられ美脚なら♪</a></li>
+            <li><a href="#">脱ビール腹！大人の男磨きしよう！</a></li>
+            <li><a href="#">男のやせる専門店誕生</a></li>
+          </ul>
+
+          <div id='synapse-service-list-outer-box' style='display: none'>
+            <h2 class="hd2">おすすめサービス</h2>
+            <ul id='synapse-service-list'>
+            </ul>
+          </div>
+
+          <div id="synapse-logo-box" class="synapse_logo" style='display: none'></div>
+        </div>
+      </aside>
+      <div class="modalBase jsModalBase"></div>
+    <!-- /.company --></section>
+  </header>
+  <article class="mainCol">
+    <header class="snsPageHeader">
+      <figure><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt=""></figure>
+      <div class="accountWrap">
+        <h1><a href="#" target="_blank">jillstuartbeauty</a></h1>
+        <div class="snsBtnWrap"><a href="http://instagram.com/jillstuartbeauty?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></div>
+      <!-- /.accountWrap --></div>
+    <!-- /.snsPageHeader --></header>
+
+    <header class="snsPageHeader">
+      <figure><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt=""></figure>
+      <div class="accountWrap">
+        <h1><a href="#" target="_blank">jillstuartbeauty</a></h1>
+        <div class="snsBtnWrap"><a href="http://instagram.com/jillstuartbeauty?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></div>
+        <p class="aboutAccount">JILLSTUART BEAUTY公式 Instagram <a href="http://jillstuart-beauty.com">http://jillstuart-beauty.com</a></p>
+      <!-- /.accountWrap --></div>
+    <!-- /.snsPageHeader --></header>
+
+    <div class="snsPageWrap jsMasonry">
+
+      <section class="snsPageList jsPanel">
+        <a href="#modal1" class="igInner jsOpenModal">
+          <p class="contImg">
+            <img src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11085117_420934181408004_2094591561_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/10990555_609306332534020_939790362_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/10954647_671734406282633_370437626_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/928764_1447793888844610_753300014_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpf1/t51.2885-15/10598433_1626847587545972_1085157393_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-d-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11055834_1382773408708395_2018214474_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11024417_1597109080535911_1055023196_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-g-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11005119_805460696155662_382592121_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <section class="snsPageList jsPanel">
+        <a href="#" class="igInner">
+          <p class="contImg">
+            <img src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/10995126_604577653019693_768946120_n.jpg" alt="">
+          <!-- /.contImg --></p>
+        <!-- /.igInner --></a>
+      <!-- /.snsPageList --></section>
+
+      <p class="jsPanel morePanels">
+        <span class="btn2"><a href="" class="small1">more</a></span>
+      </p>
+
+      <p class="jsPanel loading">
+        <img src="../../../../img/base/amimeLoading.gif" alt="loading">
+      <!-- /.loading --></p>
+
+      <section class="snsWrap jsPanel">
+        <ul class="snsBtns-btn">
+          <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+          ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+          ><li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li
+          >
+        <!-- /.snsBtns-btn --></ul>
+        <ul class="snsBtns-box">
+          <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+          ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+          ><li><div class="g-plusone" data-size="tall"></div></li
+          ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+        <!-- /.snsBtns-box --></ul>
+      <!-- /.snsWrap --></section>
+
+    <!-- /.snsPageWrap --></div>
+
+    <p class="pagePrev"><a href="#">一覧へ戻る</a></p>
+
+    <nav class="bredlink1">
+      <ul>
+        <li class="home"><a href="#">HOME</a></li>
+        <li><a href="#">親カテゴリータイトル親カテゴリータイトル親カテゴリータイトル親カテゴリ</a></li>
+        <li><a href="#">子カテゴリータイトル子カテゴリータイトル子カテゴリータイトル子カテゴリ</a></li>
+        <li><a href="#">孫カテゴリータイトル孫カテゴリータイトル孫カテゴリータイトル孫カテゴリ</a></li>
+        <li class="current"><span>ページタイトルページタイトルページタイトルページタイトルページタイトル</span></li>
+      </ul>
+    <!-- /.bredlink1 --></nav>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+  <footer>
+    <div class="copyright">
+      <ul class="links">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+      </ul>
+      <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+    </div>
+    <ul class="links">
+      <li><a href="#">モニプラ出展利用規約</a></li>
+      <li><a href="#">アライドID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+    <p class="poweredBy"><small>Powered by monipla</small></p>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-ig jsModalCont">
+      <div class="modalIg">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/02GeNLFJFv/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">JILL STUART 2015 Summer Collection JILL STUART Nail Lacquer R #JILLSTUART #JILLSTUARTBeauty #Nail #NailLacquer #Limiteditem</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">JILLSTUART BEAUTY公式 Instagramさん(@jillstuartbeauty)が投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-30T08:35:03+00:00">2015 3月 30 1:35午前 PDT</time></p></div></blockquote>
+        <p class="panelComment">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br><a href="#">http://www.eshop.jillstuart-beauty.com/</a></p>
+      <!-- /.modalIg --></div>
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    <!-- /.modalCont-ig --></section>
+  <!-- /.modal1 --></div>
+
+  <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+  <script>
+  jQuery(function($) {
+      BrandcoMasonryCategoryService.goMason(true);
+
+      $('#sortable').imagesLoaded(function() {
+        BrandcoMasonryCategoryService.goMason(true);
+      });
+  });
+  </script>
+
+</body>
+</html>

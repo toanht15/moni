@@ -1,0 +1,1 @@
+SELECT EXISTS (SELECT 1 from cp_user_action_statuses WHERE cp_action_id = ?cp_action_id?) as isExist

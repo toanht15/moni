@@ -1,0 +1,98 @@
+<% extend 'partial/layout/page.admin.modal' %>
+
+<% block 'mainContents' : %>
+  <article class="modalInner-large">
+    <section class="skeletonWrap">
+      <div class="stepListEdit">
+        <div class="stepListWrap">
+          <ul class="stepList">
+            <li class="stepDetail_require">
+              <h1>STEP1</h1>
+              <ul class="moduleList">
+                <li class="moduleDetail1">
+                  <span class="addModuleL">追加する</span>
+                  <span class="moduleIcon">
+                    <img src="../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                    <span class="textBalloon1"><span>キャンペーン告知<br>モジュールタイトル…</span></span>
+                  <!-- /.moduleIcon --></span>
+                  <span class="addModuleR">追加する</span>
+                <!-- /.moduleDetail1 --></li>
+                <li class="moduleDetail1">
+                  <span class="moduleIcon lock">
+                    <img src="../../img/module/address1.png" width="25" height="25" alt="住所確認">
+                    <span class="textBalloon1"><span>住所確認<br>モジュールタイトル…</span></span>
+                  <!-- /.moduleIcon --></span>
+                  <span class="addModuleR">追加する</span>
+                <!-- /.moduleDetail1 --></li>
+                <li class="moduleDetail1">
+                  <span class="moduleIcon">
+                    <img src="../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                    <span class="textBalloon1"><span>参加完了<br>モジュールタイトル…</span></span>
+                  <!-- /.moduleIcon --></span>
+                  <span class="addModuleR">追加する</span>
+                <!-- /.moduleDetail1 --></li>
+              <!-- /.moduleList --></ul>
+            <!-- /.stepDetail_require --></li>
+            <li class="stepDetail_require">
+              <h1>STEP2</h1>
+              <ul class="moduleList">
+                <li class="moduleDetail1">
+                  <span class="moduleIcon">
+                    <img src="../../img/module/win1.png" width="25" height="25" alt="当選発表">
+                    <span class="textBalloon1"><span>当選発表<br>モジュールタイトル…</span></span>
+                  <!-- /.moduleIcon --></span>
+                <!-- /.moduleDetail1 --></li>
+                <li class="moduleDetail1">
+                  <span class="moduleIcon new">
+                    <img src="../../img/module/facebookLike.png" width="25" height="25" alt="Facebookいいね">
+                    <span class="textBalloon1"><span>Facebookいいね</span></span>
+                  <!-- /.moduleIcon --></span>
+                <!-- /.moduleDetail1 --></li>
+              <!-- /.moduleList --></ul>
+            <!-- /.stepDetail_require --></li>
+            <li class="stepDetail_require">
+              <h1>STEP N</h1>
+              <ul class="moduleList">
+                <li class="addModuleDetail1"><span>追加する</span></li>
+              <!-- /.moduleList --></ul>
+            <!-- /.stepDetail_require --></li>
+          <!-- /.stepList --></ul>
+        <!-- /.stepListWrap --></div>
+        <div class="deleteModule">
+          <p>削除する</p>
+        <!-- /.deleteModule --></div>
+        <p class="supplement1">アイコンをドラッグ&ドロップすることでフローをカスタマイズできます。</p>
+      <!-- /.stepListEdit --></div>
+    <!-- /.sleletonWrap --></section>
+
+    <ul class="selectModuleList">
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/check-in1.png" width="25" height="25" alt="チェックイン"></span><span class="moduleName">チェックイン</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/coupon1.png" width="25" height="25" alt="クーポン"></span><span class="moduleName">クーポン</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/enquete1.png" width="25" height="25" alt="アンケート"></span><span class="moduleName">アンケート</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/kakikomi1.png" width="25" height="25" alt="カキコミ"></span><span class="moduleName">カキコミ</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/mail1.png" width="25" height="25" alt="お知らせ"></span><span class="moduleName">お知らせ</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/monitor1.png" width="25" height="25" alt="モニター"></span><span class="moduleName">モニター</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/photo1.png" width="25" height="25" alt="フォトコン"></span><span class="moduleName">フォトコン</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/present1.png" width="25" height="25" alt="懸賞"></span><span class="moduleName">懸賞</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/ranking1.png" width="25" height="25" alt="人気投票"></span><span class="moduleName">人気投票</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/speedwin1.png" width="25" height="25" alt="スピードくじ"></span><span class="moduleName">スピードくじ</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/free1.png" width="25" height="25" alt="自由記入"></span><span class="moduleName">自由記入</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/engagement1.png" width="55" height="55" alt="ファンゲート"></span><span class="moduleName">ファンゲート</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/brunch1.png" width="55" height="55" alt="分岐設問"></span><span class="moduleName">分岐設問</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/share1.png" width="55" height="55" alt="シェア"></span><span class="moduleName">シェア</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/facebookLike.png" width="55" height="55" alt="Facebookいいね"></span><span class="moduleName">Facebook<br>いいね</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/twitterFollow1.png" width="55" height="55" alt="Twitterフォロー"></span><span class="moduleName">Twitter<br>フォロー</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/instagramFollow1.png" width="55" height="55" alt="Instagramフォロー"></span><span class="moduleName">Instagram<br>フォロー</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/twitterTweet1.png" width="55" height="55" alt="ツイート"></span><span class="moduleName">ツイート</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/twitterRetweet1.png" width="55" height="55" alt="リツート"></span><span class="moduleName">リツート</span></li>
+      <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../img/module/ytchannel1.png" width="55" height="55" alt="Youtubeチャンネル登録"></span><span class="moduleName">Youtube<br>チャンネル<br>登録</span></li>
+    <!-- /.selectModuleList --></ul>
+
+    <footer>
+        <p class="btnSet">
+            <span class="btn2"><a id="cancelChanges">キャンセル</a></span>
+            <span class="btn3"><a id="confirmSave">保存</a></span>
+        </p>
+    </footer>
+  <!-- /.modalInner-large --></article>
+<% end %>

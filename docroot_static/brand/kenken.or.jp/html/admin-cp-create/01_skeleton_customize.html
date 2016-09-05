@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_skeleton_customize / admin-cp-create</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.net.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.api.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.helper.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.message.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <h1 class="hd1">キャンペーンフロー編集</h1>
+
+    <section class="makeStepType">
+      <div class="makeStepTypeCont">
+
+        <section class="skeletonWrap">
+          <p class="skeltonDetail">
+            <span class="iconHelp">
+            <span class="text">ヘルプ</span>
+              <span class="textBalloon1">
+                  <span>繋がっているSTEPでは、ユーザー自らの操作で次に進めます<br>離れているSTEPでは、次に進むためには管理者の操作が必要です。</span>
+              <!-- /.textBalloon1 --></span>
+            <!-- /.iconHelp --></span>
+            <span class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+          <!-- /.skeltonDetail --></p>
+          <div class="stepListEdit">
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="addModuleL">追加する</span>
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                        <span class="textBalloon1"><span>キャンペーン告知</span></span>
+                      <!-- /.moduleIcon --></span>
+                      <span class="addModuleR">追加する</span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon lock">
+                        <img src="../../../../img/module/address1.png" width="25" height="25" alt="住所確認">
+                        <span class="textBalloon1"><span>住所確認</span></span>
+                      <!-- /.moduleIcon --></span>
+                      <span class="addModuleR">追加する</span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                        <span class="textBalloon1"><span>参加完了</span></span>
+                      <!-- /.moduleIcon --></span>
+                      <span class="addModuleR">追加する</span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="当選発表">
+                        <span class="textBalloon1"><span>当選発表</span></span>
+                        <span class="addModuleR">追加する</span>
+                      <!-- /.moduleIcon --></span>
+                    </li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon new">
+                        <img src="../../../../img/module/facebookLike.png" width="25" height="25" alt="Facebookいいね">
+                        <span class="textBalloon1"><span>Facebookいいね</span></span>
+                      <!-- /.moduleIcon --></span>
+                    </li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP N</h1>
+                  <ul class="moduleList">
+                    <li class="addModuleDetail1"><span>追加する</span></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+            <div class="deleteModule">
+              <p class="selected">削除する</p>
+            <!-- /.deleteModule --></div>
+            <p class="supplement1">アイコンをドラッグ&ドロップすることでフローをカスタマイズできます。</p>
+          <!-- /.stepListEdit --></div>
+        <!-- /.sleletonWrap --></section>
+
+        <ul class="selectModuleList">
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/check-in1.png" width="25" height="25" alt="チェックイン"></span><span class="moduleName">チェックイン</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/coupon1.png" width="25" height="25" alt="クーポン"></span><span class="moduleName">クーポン</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート"></span><span class="moduleName">アンケート</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/kakikomi1.png" width="25" height="25" alt="カキコミ"></span><span class="moduleName">カキコミ</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/mail1.png" width="25" height="25" alt="お知らせ"></span><span class="moduleName">お知らせ</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/monitor1.png" width="25" height="25" alt="モニター"></span><span class="moduleName">モニター</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォトコン"></span><span class="moduleName">フォトコン</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/present1.png" width="25" height="25" alt="懸賞"></span><span class="moduleName">懸賞</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/ranking1.png" width="25" height="25" alt="人気投票"></span><span class="moduleName">人気投票</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/speedwin1.png" width="25" height="25" alt="スピードくじ"></span><span class="moduleName">スピードくじ</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/free1.png" width="25" height="25" alt="自由記入"></span><span class="moduleName">自由記入</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/engagement1.png" width="55" height="55" alt="ファンゲート"></span><span class="moduleName">ファンゲート</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/brunch1.png" width="55" height="55" alt="分岐設問"></span><span class="moduleName">分岐設問</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/share1.png" width="55" height="55" alt="シェア"></span><span class="moduleName">シェア</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/facebookLike.png" width="55" height="55" alt="Facebookいいね"></span><span class="moduleName">Facebook<br>いいね</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/twitterFollow1.png" width="55" height="55" alt="Twitterフォロー"></span><span class="moduleName">Twitter<br>フォロー</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/instagramFollow1.png" width="55" height="55" alt="Instagramフォロー"></span><span class="moduleName">Instagram<br>フォロー</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/twitterTweet1.png" width="55" height="55" alt="ツイート"></span><span class="moduleName">ツイート</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/twitterRetweet1.png" width="55" height="55" alt="リツート"></span><span class="moduleName">リツート</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/ytchannel1.png" width="55" height="55" alt="Youtubeチャンネル登録"></span><span class="moduleName">Youtube<br>チャンネル<br>登録</span></li>
+          <li class="moduleDetail2"><span class="hdModuleIcon"><img src="../../../../img/module/conversion.png" width="55" height="55" alt="コンバージョン計測"></span><span class="moduleName">コンバージョン計測</span></li>
+        <!-- /.selectModuleList --></ul>
+
+      <!-- /.makeStepTypeCont --></div>
+    <!-- /.makeStepType --></section>
+
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_setting_user / admin-settings</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+
+</head>
+
+<body>
+    <header class="editHeadWrap">
+        <section class="editHead">
+            <div class="wrap">
+                <h1><a href="#"><img src="../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+                <nav class="editMenu">
+                    <ul>
+                        <li class="actionCampaign">
+                            <a href="#">キャンペーン</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">作成</a></li>
+                                <li><a href="#">クーポン設定</a></li>
+                            </ul>
+                        </li>
+                        <li class="actionMessage">
+                            <a href="#">メッセージ</a>
+                        </li>
+                        <li class="actionContents">
+                            <a href="#">コンテンツ</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">ページ</a></li>
+                                <li><a href="#">コメント</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                        <li class="actionFan">
+                            <a href="#">ファン<span class="badge1">+99</span></a>
+                        </li>
+                        <li class="actionDashboard">
+                            <a href="#">ダッシュボード</a>
+                        </li>
+                        <li class="actionInfo">
+                            <a href="#">お知らせ<span class="badge1">+3</span></a>
+                        </li>
+                        <li class="actionContact">
+                            <a href="#">お問い合わせ</a>
+                        </li>
+                        <li class="actionSetting">
+                            <a href="#">設定</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">管理者設定</a></li>
+                                <li><a href="#">ユーザー設定</a></li>
+                                <li><a href="#">ページ設定</a></li>
+                                <li><a href="#">CVタグ設定</a></li>
+                                <li><a href="#">リダイレクト設定</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                    </ul>
+                <!-- /.editMenu --></nav>
+            <!-- /.wrap --></div>
+        <!-- /.editHead --></section>
+
+        <section class="account">
+            <ul>
+                <li class="accountCompany">
+                    <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li>
+                <li class="preview"><a href="#">プレビュー</a></li>
+                <li class="accountName">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+                <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+            </ul>
+        <!-- /.account --></section>
+
+    <!-- /.editHeadWrap --></header>
+
+    <div class="adminWrap">
+        <aside class="adminSideCol">
+            <nav class="adminSettingWrap">
+                <ul>
+                    <li class="admin"><a href="#">管理者設定</a></li>
+                    <li class="user"><span class="current">ユーザー設定</span></li>
+                    <li class="mail"><a href="#">登録メール設定</a></li>
+                    <li class="page"><a href="#">ページ設定</a></li>
+                    <li class="cvtag"><a href="#">コンバージョンタグ設定</a></li>
+                    <li class="redirect"><a href="#">リダイレクトリンク設定</a></li>
+                    <li class="contact"><a href="#">通知先メールアドレス設定</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <article class="adminMainCol">
+            <h1 class="hd1">ユーザー設定</h1>
+            <p class="btnPagePreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+
+            <h2 class="hd2">新規登録・ログインアカウント設定</h2>
+            <section class="adminSettingBase">
+                <p>新規登録・ログイン時に利用できるアカウントを設定します。<br>必ず一つ以上お選びください。</p>
+                <ul class="adminUserSns">
+                    <li><label><input type="checkbox">Facebook</label></li>
+                    <li><label><input type="checkbox">Twitter</label></li>
+                    <li><label><input type="checkbox">LINE</label></li>
+                    <li><label><input type="checkbox">Instagram</label></li>
+                    <li><label><input type="checkbox">Google</label></li>
+                    <li><label><input type="checkbox">Yahoo!</label></li>
+                    <li><label><input type="checkbox">メールアドレス</label></li>
+                <!-- /.adminUserSns --></ul>
+                <p class="btnSet">
+                    <span class="btn3"><a href="#modal1" class="jsOpenModal">保存</a></span>
+                </p>
+            <!-- /.adminSettingBase --></section>
+
+            <h2 class="hd2">
+        個人情報
+        <span class="iconHelp">
+          <span class="text">ヘルプ</span>
+          <span class="textBalloon1">
+            <span>
+              ここでは性別・生年月日・住所(都道府県)のみ<br>の取得がオススメです
+            </span>
+      <!-- /.textBalloon1 --></span>
+    <!-- /.iconHelp --></span>
+  <!-- /.hd2 --></h2>
+            <section class="adminSettingBase">
+                <p>会員登録時、必須入力にする個人情報の設定</p>
+                <ul class="adminUserData">
+                    <li><label><input type="checkbox">氏名（ふりがな）</label></li>
+                    <li><label><input type="checkbox">性別</label></li>
+                    <li><label><input type="checkbox">生年月日</label></li>
+                    <li><label><input type="checkbox">郵便番号</label></li>
+                    <li class="jsCheckToggleWrap">
+                        <label><input type="checkbox" class="jsCheckToggle">住所</label>
+                        <ul class="jsCheckToggleTarget" style="display:none;">
+                            <li><label><input type="radio" name="address">全て取得</label></li>
+                            <li><label><input type="radio" name="address">都道府県のみを取得</label></li>
+                        </ul>
+                    </li>
+                    <li><label><input type="checkbox">電話番号</label></li>
+                    <li class="jsCheckToggleWrap">
+                        <label><input type="checkbox" class="jsCheckToggle">年齢制限</label>
+                        <select name="" id="">
+                            <option value="#">20歳以上</option>
+                            <option value="#">20歳以上</option>
+                            <option value="#">20歳以上</option>
+                            <option value="#">20歳以上</option>
+                            <option value="#">20歳以上</option>
+                        </select>
+                        <ul class="jsCheckToggleTarget adminUserAuthentication" style=" display: none;">
+                            <li>
+                                <p><label><input type="checkbox">ページ来訪時にも年齢確認をする</label><a href="#" class="openNewWindow1 authenticationPagePrev">ページを確認</a>（<a href="#pageAuthenticationEditor" class="jsOpenModal">デザイン変更</a>）</p>
+                                <p><label>年齢対象外の遷移URL<input type="text"></label></p>
+                            </li>
+                        </ul>
+                    </li>
+                <!-- /.adminUserData --></ul>
+
+                <p class="btnSet">
+                    <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+                    <span class="btn3"><a href="#" class="middle1">保存</a></span>
+                <!-- /.btnSet --></p>
+            <!-- /.adminSettingBase --></section>
+
+            <h2 class="hd2">ファン登録時アンケート</h2>
+            <section class="adminSettingBase">
+                <p>この機能を利用して、メールアドレスなどの個人情報を取得することはできません。<br>遵守いただけない場合サービスのご提供を停止、終了する場合があります。</p>
+
+                <div class="userSurveyWrap">
+                    <ul class="userSurveyList">
+                        <li class="userSurveyItem">
+                            <p class="itemTags">
+                                <small class="itemTagsType">単一回答</small>
+                                <small class="itemTagsRequire">必須</small>
+                            <!-- /.itemTags --></p>
+                            <p class="itemText"><strong>Q1.あなたの家族構成を教えてください。</strong></p>
+                        <!-- /.userSurveyItem --></li>
+                        <li class="userSurveyItem">
+                            <p class="itemTags">
+                                <small class="itemTagsType">複数回答</small>
+                            <!-- /.itemTags --></p>
+                            <p class="itemText"><strong>Q2.あなたの年収はいくらですか？</strong><small class="choices">選択肢：300万円未満…/300万〜40…/500万～60…/600万～70…</small></p>
+                        <!-- /.userSurveyItem --></li>
+                        <li class="userSurveyItem">
+                            <p class="itemTags">
+                                <small class="itemTagsType">単一回答</small>
+                            <!-- /.itemTags --></p>
+                            <p class="itemText"><strong>Q3.この商品の感想を教えてください。</strong></p>
+                        <!-- /.userSurveyItem --></li>
+                    <!-- /.userSurveyList --></ul>
+                <!-- /.userSurveyWrap --></div>
+
+                <div class="userSurveyWrap">
+                    <p class="unitems"><strong>アンケートを取り始めましょう！</strong><br>アンケートをとることでユーザーの趣味趣向が可視化され、マーケティングにご活用いただけます。</p>
+                <!-- /.userSurveyWrap --></div>
+
+                <p><span class="btn1"><a href="#" class="middle1">編集</a></span></p>
+            <!-- /.adminSettingBase --></section>
+
+            <div class="adminRuleItem">
+                <h2 class="hd2">利用規約</h2>
+                <section class="adminSettingBase">
+                    <p>貴社の利用規約を、こちらに記載してください。ユーザーが会員登録するときに確認する利用規約に追加されます。Allied ID標準の利用規約があるので、記載は任意です。</p>
+
+                    <p class="adminRuleSetting">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </p>
+                    <p><label><input type="checkbox">利用規約への同意を確認するチェックボックスを表示する</label></p>
+
+                    <p class="btnSet">
+                        <span class="btn2"><a href="#" class="middle1">キャンセル</a></span>
+                        <span class="btn3"><a href="#" class="middle1">保存</a></span>
+                    </p>
+                <!-- /.adminSettingBase --></section>
+            <!-- /.adminRuleItem --></div>
+            <p class="btnPagePreview"><span class="btn1"><a target="#" class="middle1">プレビュー</a></span></p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <ul class="links">
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+            </ul>
+            <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+        <!-- /.copyright --></div>
+        <ul class="links">
+            <li><a href="#">モニプラ出展利用規約</a></li>
+            <li><a href="#">アライドID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+        <p class="poweredBy"><small>Powered by monipla</small></p>
+    </footer>
+    <div class="modal1 jsModal" id="pageAuthenticationEditor">
+        <section class="modalCont-large jsModalCont">
+            <h1>年齢確認ページ</h1>
+            <div class="pagePartsSetting">
+                <div class="adminPageAuthenticationEdit">
+                    <p>「はい」のリンク先（href）に ##LINKYES## のタグを挿入してください。（例：a href="##LINKYES##"）<br> 「いいえ」のリンク先（href）に ##LINKNO## のタグを挿入してください。（例：a href="##LINKNO##"）<br></p>
+                    <div class="wysiwygArea">
+                        <p class="adminPageAuthenticationPreview"><span class="btn2"><a href="#" class="small1">プレビュー</a></span></p>
+                        <div>
+                            <img src="../../img/dummy/imgWyswigThin.png" width="815" height="470" alt="wyswig dummy" style="display: block; max-width: none;">
+                        </div>
+                    <!-- /.wysiwygArea --></div>
+                <!-- /.adminPageAuthenticationEdit --></div>
+                <p class="btnSet">
+                    <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                    <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+                </p>
+            <!-- /.pagePartsSetting --></div>
+        </section>
+    <!-- /#pagePartsTextSetting --></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+    $(function() {
+
+    });
+  </script>
+</body>
+
+</html>

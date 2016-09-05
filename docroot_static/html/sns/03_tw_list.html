@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_tw_list / sns</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/bi/jquery-barIndicator.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/_unit.js"></script>
+    <style>
+        /* site background */
+        
+        body {
+            background-color: #f3f3f3;
+            background-image: url(../../img/dummy/01.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+        }
+        /* panel title color */
+        
+        .contBoxMain h1 {
+            background-color: red;
+        }
+        /* site title color */
+        
+        .gnavi h1 {
+            color: red;
+        }
+        /* nav link color */
+        
+        .gnavi li a {
+            color: red;
+        }
+        
+        body>footer,
+        body>footer a {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+
+    <header>
+        <section class="account">
+            <ul>
+                <li class="accountName">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+                <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+                <!-- <li class="accountLogo"><a href="#"><img src="../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li> -->
+            </ul>
+        <!-- /.account --></section>
+        <section class="company">
+            <div class="companyName">
+                <p class="logo">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶">
+                    </a>
+                </p>
+                <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+                <p class="spGnavBtn"><a href="#side-menu" class="syn-notice jsMenuTrigger">MENU</a></p>
+            <!-- /.companyName --></div>
+            <nav class="gnavi">
+                <ul class="jsGnavi">
+                    <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキストサンプル</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキストサンプル</a></li>
+                    <li><a href="#">サンプルテキストサンプル</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                </ul>
+                <a href="#" class="openLink">0</a>
+            <!-- /.gnavi --></nav>
+        <!-- /.company --></section>
+    </header>
+
+    <article class="mainCol">
+        <header class="snsPageHeader">
+            <figure>
+                <img src="../../img/dummy/02.jpg" width="40" height="40" alt="">
+            </figure>
+            <div class="accountWrap">
+                <h1><a href="#" target="_blank">雪肌精公式ツイッター ‏@kose_sekkisei</a><span class="labelTw">Twitter</span></h1>
+                <div class="snsBtnWrap"><a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @twitter</a></div>
+            <!-- /.accountWrap --></div>
+        <!-- /.snsPageHeader --></header>
+
+        <header class="snsPageHeader">
+            <figure>
+                <img src="../../img/dummy/02.jpg" width="40" height="40" alt="">
+            </figure>
+            <div class="accountWrap">
+                <h1><a href="#" target="_blank">雪肌精公式ツイッター ‏@kose_sekkisei</a><span class="labelTw">Twitter</span></h1>
+                <div class="snsBtnWrap"><a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @twitter</a></div>
+                <p class="aboutAccount">こちらはコーセー 雪肌精の公式Twitterアカウントです。 宣伝部の雪肌精担当(ソーシャルメディア専属PR)SETSUKOを中心に、お得な情報をツイートしていきます。※Twitter上でのご意見などは拝見しておりますが、お返事できないこともございます。ご了承くださいませ。(max全角160文字)</p>
+            <!-- /.accountWrap --></div>
+        <!-- /.snsPageHeader --></header>
+
+        <div class="snsPageWrap jsMasonry" id="sortable">
+            <section class="snsPageList jsPanel">
+                <a href="#" class="twInner">
+                    <p class="contText">
+                        今日は東京は少し暖かい日でしたが、エアコンがガンガンに効きすぎたお部屋にいると、肌がカピカピになってしまいますよね…。乾燥ダメージが気になる時はエクセレントシリーズでリッチなケアをします♪今日は東京は少し暖かい日でしたが、エアコンがガンガンに効きすぎたお部屋にいると、肌がカピカピ
+                        <img src="../../img/dummy/02.jpg" width="285" height="241" alt="">
+                        <small class="timeStamp">1:12 - 2015年2月18日<span class="timeLogo"><span class="iconTW2_2">Twitter</span></span></small>
+                    <!-- /.contText --></p>
+                <!-- /.contText --></p>
+                <!-- /.twInner --></a>
+                <ul class="twActions">
+                    <li><a href="#" class="twFollow">フォローする</a></li>
+                    <li><a href="#" class="twReply">リプライ</a></li>
+                    <li><a href="#" class="twRetweet">リツイート</a></li>
+                    <li><a href="#" class="twFavo">お気に入り</a></li>
+                <!-- /.twActions --></ul>
+            <!-- /.snsPageList --></section>
+
+            <section class="snsPageList jsPanel">
+                <a href="#" class="twInner">
+                    <p class="contText">
+                        ネイルも大好きなＳＥＴＳＵＫＯからのお知らせ♪NAIL HOLIC｜KOSE｜ネイル好きの血が騒ぎだす68色が、ずらり。プチプラなのもウフッ http://www.nailholic.jp/ #nailholic_kose
+                        <img src="http://upload.aafactory.jp/brandco/mock2/img/kose/B-NRHzACUAEfwpN.jpg" width="285" height="241" alt="">
+                        <small class="timeStamp">1:12 - 2015年2月18日<span class="timeLogo"><span class="iconTW2_2">Twitter</span></span></small>
+                    <!-- /.contText --></p>
+                <!-- /.contText --></p>
+                <!-- /.twInner --></a>
+                <ul class="twActions">
+                    <li><a href="#" class="twFollow">フォローする</a></li>
+                    <li><a href="#" class="twReply">リプライ</a></li>
+                    <li><a href="#" class="twRetweet">リツイート</a></li>
+                    <li><a href="#" class="twFavo">お気に入り</a></li>
+                <!-- /.twActions --></ul>
+            <!-- /.snsPageList --></section>
+
+            <section class="snsPageList jsPanel">
+                <a href="#" class="twInner">
+                    <p class="contText">
+                        サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                        <small class="timeStamp">1:12 - 2015年2月18日<span class="timeLogo"><span class="iconTW2_2">Twitter</span></span></small>
+                    <!-- /.contText --></p>
+                <!-- /.contText --></p>
+                <!-- /.twInner --></a>
+                <ul class="twActions">
+                    <li><a href="#" class="twFollow">フォローする</a></li>
+                    <li><a href="#" class="twReply">リプライ</a></li>
+                    <li><a href="#" class="twRetweet">リツイート</a></li>
+                    <li><a href="#" class="twFavo">お気に入り</a></li>
+                <!-- /.twActions --></ul>
+            <!-- /.snsPageList --></section>
+
+            <section class="snsPageList jsPanel">
+                <a href="#" class="twInner">
+                    <p class="contText">
+                        サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                        <img src="../../img/dummy/02.jpg" width="285" height="241" alt="">
+                        <small class="timeStamp">1:12 - 2015年2月18日<span class="timeLogo"><span class="iconTW2_2">Twitter</span></span></small>
+                    <!-- /.contText --></p>
+                <!-- /.contText --></p>
+                <!-- /.twInner --></a>
+                <ul class="twActions">
+                    <li><a href="#" class="twFollow">フォローする</a></li>
+                    <li><a href="#" class="twReply">リプライ</a></li>
+                    <li><a href="#" class="twRetweet">リツイート</a></li>
+                    <li><a href="#" class="twFavo">お気に入り</a></li>
+                <!-- /.twActions --></ul>
+            <!-- /.snsPageList --></section>
+
+            <section class="snsPageList jsPanel">
+                <a href="#" class="twInner">
+                    <p class="contText">
+                        サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                        <small class="timeStamp">1:12 - 2015年2月18日<span class="timeLogo"><span class="iconTW2_2">Twitter</span></span></small>
+                    <!-- /.contText --></p>
+                <!-- /.contText --></p>
+                <!-- /.twInner --></a>
+                <ul class="twActions">
+                    <li><a href="#" class="twFollow">フォローする</a></li>
+                    <li><a href="#" class="twReply">リプライ</a></li>
+                    <li><a href="#" class="twRetweet">リツイート</a></li>
+                    <li><a href="#" class="twFavo">お気に入り</a></li>
+                <!-- /.twActions --></ul>
+            <!-- /.snsPageList --></section>
+
+            <section class="snsPageList jsPanel">
+                <a href="#" class="twInner">
+                    <p class="contText">
+                        サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                        <small class="timeStamp">1:12 - 2015年2月18日<span class="timeLogo"><span class="iconTW2_2">Twitter</span></span></small>
+                    <!-- /.contText --></p>
+                <!-- /.contText --></p>
+                <!-- /.twInner --></a>
+                <ul class="twActions">
+                    <li><a href="#" class="twFollow">フォローする</a></li>
+                    <li><a href="#" class="twReply">リプライ</a></li>
+                    <li><a href="#" class="twRetweet">リツイート</a></li>
+                    <li><a href="#" class="twFavo">お気に入り</a></li>
+                <!-- /.twActions --></ul>
+            <!-- /.snsPageList --></section>
+
+            <p class="jsPanel morePanels">
+                <span class="btn2"><a href="" class="small1">more</a></span>
+            </p>
+
+            <p class="jsPanel loading">
+                <img src="../../img/base/amimeLoading.gif" alt="loading">
+            <!-- /.loading --></p>
+
+            <section class="snsWrap jsPanel">
+                <ul class="snsBtns-btn">
+                    <li>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </li>
+                    <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+                    <li>
+                        <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+                    </li>
+                <!-- /.snsBtns-btn --></ul>
+                <ul class="snsBtns-box">
+                    <li>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </li>
+                    <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li>
+                    <li>
+                        <div class="g-plusone" data-size="tall"></div>
+                    </li>
+                    <li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+                <!-- /.snsBtns-box --></ul>
+            <!-- /.snsWrap --></section>
+
+        <!-- /.snsPageWrap --></div>
+
+        <p class="pagePrev"><a href="#">一覧へ戻る</a></p>
+
+        <nav class="bredlink1">
+            <ul>
+                <li class="home"><a href="#">HOME</a></li>
+                <li><a href="#">親カテゴリータイトル親カテゴリータイトル親カテゴリータイトル親カテゴリ</a></li>
+                <li><a href="#">子カテゴリータイトル子カテゴリータイトル子カテゴリータイトル子カテゴリ</a></li>
+                <li><a href="#">孫カテゴリータイトル孫カテゴリータイトル孫カテゴリータイトル孫カテゴリ</a></li>
+                <li class="current"><span>ページタイトルページタイトルページタイトルページタイトルページタイトル</span></li>
+            </ul>
+        <!-- /.bredlink1 --></nav>
+        <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+    </article>
+
+    <footer>
+        <div class="copyright">
+            <ul class="links">
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+            </ul>
+            <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+        <!-- /.copyright --></div>
+        <ul class="links">
+            <li><a href="#">モニプラ出展利用規約</a></li>
+            <li><a href="#">アライドID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+        <p class="poweredBy"><small>Powered by monipla</small></p>
+    </footer>
+
+    <script src="../../js/masonry.pkgd.min.js"></script>
+    <script src="../../js/min/imagesloaded.pkgd.min.js"></script>
+    <script src="../../js/brandco/services/BrandcoMasonryCategoryService.js"></script>
+    <script>
+  jQuery(function($) {
+      BrandcoMasonryCategoryService.goMason(true);
+
+      $('#sortable').imagesLoaded(function() {
+        BrandcoMasonryCategoryService.goMason(true);
+      });
+  });
+  </script>
+</body>
+
+</html>

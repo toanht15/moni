@@ -1,0 +1,639 @@
+.userListWrap {
+  @include cf;
+  margin: 20px 10px 0;
+  background: #fff;
+
+  .checkedUser {
+    background: #F9F9E0;
+
+    label:after {
+      @include fontBase(check2);
+      color: $iconC3;
+      font-size: 14px;
+      position: absolute;
+      bottom: 2px;
+      left: 30px;
+      background: #fff;
+      border-radius: 7px;
+    }
+  }
+  .sendUser {
+    background: #eee;
+
+    label:after {
+      position: absolute;
+      bottom: 2px;
+      left: 30px;
+      width: 15px;
+      height: 11px;
+      background: url(../img/icon/iconMail1.png) no-repeat;
+      content: "";
+    }
+  }
+  .tablink2 {
+    float: left;
+    margin: 0 0 0 -1px;
+  }
+  .showItemNum {
+    margin: 10px auto 20px;
+  }
+}
+.sortBox {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  z-index: 110;
+  display: none;
+  padding: 10px;
+  min-width: 190px;
+  max-width: 300px;
+  border: 1px solid $borderC;
+  background: #FFF;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .5);
+  color: #333;
+  letter-spacing: normal;
+
+  h1 {
+    margin-bottom: 5px;
+  }
+  ul {
+    width: 100%;
+    overflow: auto;
+    padding: 5px 0;
+    border: none;
+    max-height: 120px;
+    background: #FFF;
+
+    li {
+      margin: 3px 0;
+      white-space: nowrap;
+    }
+  }
+  .switchWrap {
+    border-top: 1px solid $borderC;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .btnSet {
+    border-top: 1px solid $borderC;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .boxCloseBtn {
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  .range {
+    white-space: nowrap;
+    padding: 5px 0;
+
+    .check {
+      display: block;
+      margin-top: 5px;
+    }
+    .jsCheckToggleTarget {
+      display: none;
+    }
+    .dash {
+
+      &+.inputDate {
+        display: inline-block;
+      }
+    }
+  }
+  .inputDate {
+    width: 100px;
+  }
+  .inputFriends {
+    width: 70px;
+  }
+  .inputNo {
+    width: 100%;
+    display: block;
+  }
+  .attention1 {
+    margin-bottom: 10px;
+  }
+  .order {
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid $borderC;
+  }
+  .snsAccountName {
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+  }
+}
+.ratingBox {
+  display: none;
+  position: absolute;
+  top: -2px;
+  left: 90%;
+  z-index: 100;
+  padding: 6px 10px;
+  border: 1px solid $borderC;
+  background: #FFF;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .5);
+  color: #333;
+  text-align: left;
+
+  .ratingBlock {
+    vertical-align: middle;
+    border-right: 1px solid $borderC;
+    padding-right: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url("../img/raty/iconBlockOff.png") no-repeat;
+
+    &:hover {
+      background: url("../img/raty/iconBlockOn.png") no-repeat;
+    }
+  }
+  .starRating {
+    font-size: 0;
+    vertical-align: middle;
+
+    img:nth-last-of-type(1) {
+      margin: 0 0 0 10px;
+    }
+  }
+}
+.checkedUserWrap {
+  position: relative;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  .checkedUser {
+    display: inline-block;
+    vertical-align: middle;
+    height: 28px;
+    border: 1px solid $borderC;
+    background: #fff;
+    line-height: 27px;
+  }
+  .iconCheck3 {
+    display: inline-block;
+    text-align: center;
+    width: 170px;
+  }
+  .slectedBox {
+    display: inline-block;
+    text-align: center;
+    width: 170px;
+  }
+  .btn3_area {
+    vertical-align: top;
+    width: auto;
+
+    * {
+      width: auto;
+      padding: 0 10px;
+      font-size: 13px;
+      vertical-align: top;
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+  .selectRandom {
+    display: inline-block;
+    vertical-align: middle;
+
+    .or {
+      background: #ccc;
+      font-size: 11px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      color: #fff;
+      margin: 0 10px;
+    }
+  }
+  .selectRating {
+    @extend .selectRandom;
+    // padding-left: 10px;
+
+    .labelModeAllied {
+      padding: 7px 10px;
+      display: inline-block;
+    }
+    .btn3 .small2 {
+      width: 130px;
+    }
+  }
+  .elected {
+    @extend .selectRandom;
+
+    .next {
+      font-size: 15px;
+      color: #666;
+      display: inline-block;
+      width: 18px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      margin: 0 10px;
+    }
+  }
+  .iconHelp {
+    display: inline-block;
+
+    .textBalloon1 {
+      top: 30px;
+      bottom: auto;
+    }
+  }
+}
+.userActionInfo {
+  position: relative;
+
+  &:hover .textBalloon1 {
+    display: block;
+  }
+  .sortBox {
+    top: 25px;
+  }
+}
+.checkedUserAction {
+  position: absolute;
+  top: 33px;
+  left: 0px;
+  z-index: 100;
+  display: none;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #cccccc;
+  background: #FFF;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+
+  li {
+    padding-left: 17px;
+    text-align: left;
+    text-indent: -17px;
+  }
+  [type="text"] {
+    width: 128px;
+    height: 20px;
+  }
+}
+.userListMessage {
+  clear: both;
+  margin: 10px 0;
+  background: #404040;
+
+  p {
+    padding: 5px 0;
+    color: #FFF;
+    text-align: center;
+  }
+  a {
+    color: #FFF;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .num {
+    font-weight: bold;
+  }
+}
+.userListSearch {
+  display: none;
+  clear: both;
+  width: 907px;
+}
+.userListSearchCont {
+  @include cf;
+  border: 1px solid $borderC;
+  background: #f8f8f8;
+
+  &>li {
+    position: relative;
+    float: left;
+    margin: 5px 10px;
+
+    .btnArrowB1 {
+      margin-left: 5px;
+    }
+  }
+  img {
+    vertical-align: middle;
+  }
+}
+.userListCont {
+  float: left;
+  margin-bottom: 20px;
+  width: 907px;
+}
+.userName {
+  position: relative;
+  float: left;
+
+  li {
+    position: relative;
+    margin-top: -1px;
+    width: 148px;
+    height: 34px;
+    border: 1px solid $borderC;
+    line-height: 34px;
+    background: #FFF;
+    -ms-word-break: break-all;
+        word-break: break-all;
+  }
+  label {
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    height: 100%;
+
+    img {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+  .allUser {
+    margin-top: 0;
+    height: 50px;
+    border-right: 1px solid #fff;
+    background: #737373;
+    color: #FFF;
+    font-weight: bold;
+
+    [type="checkbox"] {
+      position: absolute;
+      top: 0;
+      left: 5px;
+      bottom: 0;
+      margin: auto;
+    }
+    .iconBtnSort,
+    .btnArrowB1 {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -7px;
+    }
+    .textBalloon1> span {
+      text-indent: 0;
+    }
+  }
+}
+.itemTableWrap {
+  float: left;
+  overflow: auto;
+  width: 755px;
+  border: 1px solid $borderC;
+  background: #FFF;
+}
+.itemTable {
+  float: left;
+  margin-left: -1px;
+  min-width: 755px;
+
+  th,
+  td {
+    max-width: 225px;
+    white-space: nowrap;
+    position: relative;
+  }
+  th {
+    height: 25px;
+    background: #737373;
+    color: #fff;
+    padding: 0 5px;
+  }
+  td {
+    height: 34px;
+    border: 1px solid $borderC;
+    text-align: center;
+    padding: 0 5px;
+
+  }
+  thead th {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+
+    &:first-child {
+      border-left-color: $borderC;
+    }
+    &:last-child {
+      border-right-color: $borderC;
+    }
+    .iconLike:before,
+    .iconComment:before,
+    .iconReply:before,
+    .iconRetweet:before {
+      margin-right: 0;
+      color: #fff;
+    }
+    .range {
+      .iconLike:before,
+      .iconComment:before,
+      .iconReply:before,
+      .iconRetweet:before {
+        margin-right: 5px;
+        color: #666;
+      }
+    }
+  }
+  .iconBtnSort,
+  .btnArrowB1 {
+    margin-left: 10px;
+  }
+  .accountList {
+    text-align: left;
+    display: block;
+  }
+  .snsAccount {
+
+    .iconIG2:before,
+    .iconIN2:before {
+      color: #FFF;
+    }
+    .sortBox {
+      top: 25px;
+    }
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .postPreview {
+    max-width: 20px;
+    max-height: 20px;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+  }
+  .userRating {
+
+    img {
+      margin: -0.2em 5px 0 0;
+    }
+    &:hover .ratingBox {
+      display: block;
+    }
+  }
+  .iconFB2,
+  .iconTW2,
+  .iconGP2 {
+    background: #FFF;
+    border-radius: 2px;
+  }
+}
+
+.userListSegment {
+  position: relative;
+  margin-bottom: 15px;
+
+  .newSettingSegment {
+
+    a:before {
+      color: #888;
+      font-size: 17px;
+    }
+  }
+  .addSegment {
+    border: 1px solid $borderC;
+    border-radius: 3px;
+    padding: 0 5px;
+    line-height: 27px;
+    display: inline-block;
+    font-size: 13px;
+    vertical-align: middle;
+
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      @include iconFontLeft(all);
+      color: #888;
+      font-size: 17px;
+    }
+    .inner {
+      margin-right: 10px;
+
+      &:after {
+        @include miniArrowBase(bottom, $borderC, 4px);
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin: -.2em 0 0 5px;
+      }
+    }
+  }
+  .segmentItemsWrap {
+    font-size: 0;
+
+    &>* {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  .segmentItemTag {
+    background: #fef7f1;
+    border: 1px solid #f79c53;
+    border-radius: 3px;
+    padding: 0 5px;
+    line-height: 27px;
+    display: inline-block;
+    font-size: 13px;
+    vertical-align: middle;
+
+    .itemDelete {
+      display: inline-block;
+      overflow: hidden;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      line-height: 14px;
+      margin: -.2em 0 0 5px;
+
+      &:before {
+        @include fontBase(delete);
+        background: #fff;
+        border-radius: 50%;
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+        color: #888;
+        border: 1px solid $borderC;
+      }
+    }
+  }
+}
+
+.userListSegmentDetail {
+  position: absolute;
+  width: 400px;
+  border: 1px solid $borderC;
+  padding: 10px 0 15px;
+  background: #fff;
+  z-index: 90;
+  top: 33px;
+  display: none;
+
+  .boxCloseBtn {
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 0 10px;
+  }
+  .selectedLabel {
+    padding: 10px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+
+    &>* {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .hogehoge {
+      font-size: 15px;
+    }
+    .selectedNumber {
+      font-size: 12px;
+      text-align: right;
+      padding-right: 10px;
+
+      strong {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  .segmentItemList {
+    float: none;
+    width: 100%;
+
+    .segmentItemListInner {
+      max-height: 200px;
+      overflow: auto;
+    }
+    .segmentItemInner {
+      height: 35px;
+    }
+    .status {
+      padding-right: 20px;
+    }
+    .customaudienceTooltip {
+      right: -210px;
+      margin-top: -23px;
+    }
+  }
+  .btnSet {
+    margin-top: 15px;
+  }
+}

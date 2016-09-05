@@ -1,0 +1,1 @@
+<#USER_NAME>様へ《結果発表のお知らせ》<#CAMPAIGN_TITLE>（開催：<#BRAND_NAME>）

@@ -1,0 +1,12 @@
+{
+  "require": {
+    "facebook/php-ads-sdk": "2.4.*"
+  },
+  "autoload": {
+    "facebook/php-ads-sdk": {
+      "classmap": [
+          "vendor/facebook/php-ads-sdk"
+      ]
+    }
+  }
+}

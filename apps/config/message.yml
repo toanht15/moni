@@ -1,0 +1,167 @@
+adminMessage:
+#インデックスページ用メッセージ
+   updated:
+     msg: 更新しました。
+     class: info1
+   failed:
+     msg: 更新に失敗しました。
+     class: error1
+   register-failed:
+     msg: 新規登録に失敗しました。
+     class: error1
+   facebook-auth-failed:
+     msg: Facebook認証に失敗しました。
+     class: error1
+   facebook-no-page-admin:
+     msg: Facebookページの管理者権限が取得できませんでした。管理者権限のあるユーザでログインし直してください。
+     class: error1
+   action-draft:
+     msg: 下書きを保存しました。
+     class: message1
+   action-saved:
+     msg: 内容を確定しました。
+     class: message1
+   action-saving-failed:
+     msg: 保存に失敗しました。
+     class: error1
+   action-can-edit:
+     msg: 確定を解除しました。
+     class: message1
+   action-not-filled:
+     msg: 入力項目にエラーがあります。もう一度ご確認下さい。
+     class: error1
+   already_have_email_aaid:
+     msg: このメールアドレスは既にAllied IDに登録されています。
+     class: error1
+   confirm-success:
+     msg: 確認完了しました。
+     class: message1
+   send_invite:
+     msg: 管理者招待メールを送信しました。
+     class: info1
+   reservation-fix:
+     msg: オプション設定を確定しました。
+     class: message1
+   reservation-unfix:
+     msg: オプション設定を解除しました。
+     class: message1
+   reservation-schedule:
+     msg: メッセージ配信を予約しました。
+     class: message1
+   reservation-unschedule:
+     msg: メッセージ配信の予約を解除しました。
+     class: message1
+   action-created:
+     msg: 新規作成しました。
+     class: message1
+   action-creating-failed:
+     msg: 新規作成に失敗しました。
+     class: error1
+   action-deleted:
+     msg: 削除しました。
+     class: message1
+   action-publish:
+     msg: 公開に変更しました。
+     class: message1
+   action-draft:
+     msg: 下書きに変更しました。
+     class: message1
+   cp_over_time:
+     msg: キャンペーンの開催期限は終了しています。
+     class: error1
+   cp_join_limit:
+     msg: 参加者数が上限人数に達しました。
+     class: error1
+   cp_winner_limit:
+     msg: 当選者数が上限人数に達しました。
+     class: error1
+   NOT_ENOUGH_COUPON:
+     msg: ご指定のクーポンの残りより送信対象者のほうが多いため送信できません。別のクーポンを割り当てるか、新しくクーポンを作成して割り当てて下さい。
+     class: error1
+   coupon_deleted:
+     msg: 削除が完了しました。
+     class: info1
+   photo-download-failed:
+     msg: ダウンロード対象の投稿写真がまだありません。
+     class: error1
+   photo-download-error:
+     msg: ダウンロードに失敗しました。
+     class: error1
+   question-answer-download-failed:
+     msg: ダウンロード対象の投稿アンケートがまだありません。
+     class: error1
+   tweet-download-failed:
+     msg: ダウンロード対象のツイートがまだありません。
+     class: error1
+   conversion-download-failed:
+     msg: ダウンロード対象のコンバージョンログがまだありません。
+     class: error1
+   conversion-download-error:
+   redirector-download-failed:
+     msg: ダウンロード対象のリダイレクトログがまだありません。
+     class: error1
+   redirector-download-error:
+     msg: ダウンロードに失敗しました。
+     class: error1
+   download-error:
+     msg: ダウンロードに失敗しました。
+   withdraw_success:
+     msg: 退会処理を完了しました。ご利用いただきありがとうございました。
+     class: info1
+   reset-demo-data:
+     msg: デモモードのデータをリセットしました。
+     class: info1
+   canceled_demo:
+     msg: デモモードを終了しました。
+     class: info1
+   inquiry-forward:
+     msg: メッセージを転送しました。
+     class: message1
+   action-registered:
+     msg: 内容を登録しました。
+     class: message1
+   invalid-file-ids:
+     msg: ダウンロードするデータを選択して下さい。
+     class: error1
+   download-failed:
+     msg: ダウンロードに失敗しました。再度お試し下さい。
+     class: error1
+   fixed-announce-delivery-user:
+     msg: 当選者を確定しました。
+     class: info1
+   send-target-user-success:
+     msg: オーディエンスを送信しました。
+     class: info1
+   send-target-user-fail:
+     msg: 送信が失敗しました。
+     class: error1
+
+userMessage:
+#モーダルメッセージ
+   notice-send-success:
+     msg: 送信が完了しました。お問い合わせいただき、ありがとうございます。
+     class: info1
+   notice-send-failed:
+     msg: 送信に失敗しました。お手数ですが、もう一度やり直して下さい。
+     class: error1
+   cp_over_time:
+     msg: キャンペーンの開催期限は終了しています。
+     class: error1
+   cp_join_limit:
+     msg: 参加者数が上限人数に達しました。
+     class: error1
+   cp_winner_limit:
+     msg: 当選者数が上限人数に達しました。
+     class: error1
+   withdraw_success:
+     msg: 退会処理を完了しました。ご利用いただきありがとうございました。
+     class: info1
+   reset-demo-data:
+     msg: デモモードのデータをリセットしました。
+     class: info1
+   optout_success:
+     msg: ファンサイトからのメール配信を停止しました。
+     class: info1
+   optout_failed:
+     msg: メール配信の停止に失敗しました。お手数ですが、再度お試しください。
+     class: error1

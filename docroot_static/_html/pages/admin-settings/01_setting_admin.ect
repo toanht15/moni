@@ -1,0 +1,59 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'sidenav' : %>sidenav01<% end %>
+
+<% block 'columnContents' : %>
+      <h1 class="hd1">管理者設定</h1>
+      <h2 class="hd2">管理者を招待する</h2>
+      <section class="adminUserAttendWrap">
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+        <p class="adminUserAttend">
+          <strong>メールアドレス</strong>
+          <span class="attention1">メールアドレスを入力してください</span><br><input type="email" placeholder="sample@brandco.co.jp"><span class="btn3"><a href="#">送信</a></span>
+        </p>
+      <!-- /.adminUserAttendWrap --></section>
+
+      <h2 class="hd2">管理者一覧</h2>
+      <section class="adminUserListWrap">
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+        <ul class="adminUserList">
+          <li><img src="../../img/dummy/02.jpg" height="38" width="38" alt="use name" class="adminUserImg"><span class="adminUserName">相原　幸司</span><span class="adminUserRole">権限ロール1</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+          <li><img src="../../img/dummy/02.jpg" height="38" width="38" alt="use name" class="adminUserImg"><span class="adminUserName">津下本　耕太郎</span><span class="adminUserRole">権限ロール2</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+          <li><img src="../../img/dummy/02.jpg" height="38" width="38" alt="use name" class="adminUserImg"><span class="adminUserName">金箱　遼</span><span class="adminUserRole">権限ロール3</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+          <li><img src="../../img/dummy/02.jpg" height="38" width="38" alt="use name" class="adminUserImg"><span class="adminUserName">浅岡　敦子</span><span class="adminUserRole">権限ロール4</span><a href="#modal1" class="adminUserDelete jsOpenModal">ユーザーの削除</a></li>
+        </ul>
+      <!-- /.adminUserListWrap --></section>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+
+      <h1>管理者の削除</h1>
+
+      <div class="modalAdminUser">
+        <p class="userCheck"><img src="../../img/dummy/02.jpg" height="38" width="38" alt="use name" class="adminUserImg"><strong>相原　幸司</strong>さんを管理者から削除します。</p>
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn4"><a href="#closeModal">削除</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+<% end %>
+
+</body>
+</html>

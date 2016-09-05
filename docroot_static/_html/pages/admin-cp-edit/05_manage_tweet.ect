@@ -1,0 +1,756 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1"><img src="../../img/dummy/02.jpg" width="40" height="40" alt="campaign img" class="hdCampaignIcon"><span class="label2">登録完了</span><span class="hdInnerText">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が</span></h1>
+    <ul class="campaignAction">
+      <li class="setting"><a href="#">基本設定</a></li>
+      <li class="attract"><a href="#">集客設定</a></li>
+      <li class="photo"><a href="#">投稿写真管理<span class="badge1">99</span></a></li>
+      <li class="stepedit"><a href="#">STEPグループ編集</a></li>
+      <li class="download"><a href="#">個人情報取得</a></li>
+      <li class="user"><a href="#">参加者一覧</a></li>
+      <li class="download"><a href="#">STEP6DL</a></li>
+      <li class="hashtag"><a href="#">写真投稿</a></li>
+      <li class="tweet"><a href="#">ツイート管理</a></li>
+      <li class="status"><span class="campaignTag">発表日：2014/6/17</span><span class="campaignTag">当選数：90,000</span></li>
+    </ul>
+
+    <section class="campaignFlowWrap">
+      <div class="campaignFlow">
+        <ul class="campaignFlowCont">
+          <li class="flowDetail_focus">
+            <h1>STEP1-3</h1>
+            <div class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">キャンペーン告知</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">モジュール</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></div>
+          <!-- /.flowDetail_focus --></li>
+          <li class="flowDetail">
+            <h1>STEP4</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../img/module/win1.png" width="16" height="16" alt="結果発表" class="hdModuleIcon">結果発表</dt>
+                <dd><span class="iconMail1"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">--</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail --></li>
+        <li class="flowDetail">
+          <h1>STEP *</h1>
+          <a class="moduleWrap">
+            <p class="addModule"><span class="linkAdd">追加する</span></p>
+          <!-- /.campaignModule1 --></a>
+        <!-- /.flowDetail --></li>
+        <!-- /.campaignFlowCont --></ul>
+      <!-- /.campaignFlow --></div>
+      <ul class="campaignFlowScroll">
+        <li class="flowPrev">←</li>
+        <li class="flowNext">→</li>
+      <!-- /.campaignFlowScroll --></ul>
+    <!-- /.campaignFlowWrap --></section>
+
+    <section class="campaignPhotoWrap">
+
+      <div class="campaignPhotoSearch">
+        <ul class="tablink1">
+          <li class="current"><span>STEP1-3：ツイート１</span></li>
+          <li><a href="#">STEP1-4：ツイート２</a></li>
+        <!-- /.tablink1 --></ul>
+
+        <div class="itemsSortingDetail">
+          <dl>
+            <dt>検閲</dt>
+            <dd><label><input type="radio" name="radio1">あり</label><label><input type="radio" name="radio1">なし</label></dd>
+          </dl>
+          <p class="btnSet"><span class="btn3"><a href="#" class="small1">適用</a></span></p>
+        <!-- /.itemsSortingDetail --></div>
+        <div class="itemsSortingDetail">
+          <dl>
+            <dt>絞り込み</dt>
+            <dd class="jsCheckToggleWrap"><label><input type="checkbox" id="" name="title_required" class="jsCheckToggle">アカウント公開</label><label><input type="checkbox" id="" name="title_required">アカウント非公開</label><label><input type="checkbox" id="" name="title_required">ツイート削除済</label>
+            <p class="attentionWrap jsCheckToggleTarget" style="display: none;"><label><input type="checkbox" name="1" value="1">出力</label>&nbsp;<label><input type="checkbox" name="1" value="2">非出力</label>&nbsp;</p></dd>
+            <dt>並び替え</dt>
+            <dd>
+              <select name="" id="">
+                <option>投稿順</option>
+                <option>ユーザーID順</option>
+              </select>
+              <label><input type="radio" name="radio3">[A-Z↓] 昇順</label><label><input type="radio" name="radio3">[Z-A↑] 降順</label></dd>
+              <dt>ユーザーネーム重複</dt>
+              <dd>ほげほげ</dd>
+          </dl>
+          <p class="btnSet"><span class="btn2"><a href="#" class="small1">リセット</a></span><span class="btn3"><a href="#" class="small1">適用</a></span></p>
+        <!-- /.itemsSortingDetail --></div>
+      <!-- /.campaignPhotoSearch --></div>
+
+
+      <div class="pager1">
+        <p>99,999,999件中2001件～2020件表示しています</p>
+        <ul>
+          <li class="first"><a href="#">最初のページヘ</a></li>
+          <li class="prev"><a href="#">前のページへ</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><span>6</span></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">99</a></li>
+          <li class="next"><a href="#">次のページへ</a></li>
+          <li class="last"><a href="#">最後のページヘ</a></li>
+        </ul>
+      <!-- /.pager1 --></div>
+
+      <p class="batchAction">
+        <label><input type="checkbox">全選択</label>
+        <label><input type="radio" value="" name="1" checked="checked">出力</label>
+        <label><input type="radio" value="" name="1">非出力</label>
+        <span class="btn3"><a href="#" class="small1">適用</a></span>
+      <!-- /.batchAction --></p>
+
+      <div class="outputApi">
+        <p class="labelModeAllied">
+          <span class="confirmed">出力選択<strong>999</strong>件</span>
+          <span class="btn2"><a href="#" class="large2">外部出力APIのURL作成</a></span>
+          <span class="url">URL：https://cp.monipla.jp/campaign/gsgargap.json</span>
+        <!-- /.labelModeAllied --></p>
+      <!-- /.outputApi --></div>
+
+      <ul class="campaignTweet">
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label3">公開</span>
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jpsato.masaki+300@aainc.co.jpsato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほし</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/cp1.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label7">削除済</span>
+            <span class="label2">非出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">日本語が長くてもおｋだよ！日本語が長くてもおｋだよ！日本語が長くてもおｋだよ！</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよ</span>
+              <span class="thumb">
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label8">非公開</span>
+            <span class="label2">非出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">ユーザー名が入る</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label2">非出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">ユーザー名が入る</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事て、心にうつりゆくよしなし事て、心にうつりゆくよしなし事</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、</span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつり</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆく、日暮らし、硯にむかひて、心にうつりゆく、日暮らし、硯にむかひて、心にうつりゆく</span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にう、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、</span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、</span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">そこはかとなく書きつくれば、そこはかとなく書きつくれば、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、</span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、そこはかとなく書きつくれば、そこはかとなく書きつくれば、そこはかとなく書きつくれば、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+              </a>
+          </span>
+        </li>
+        <li>
+          <span class="labels">
+            <input type="checkbox">
+            <span class="label4">出力</span>
+          <!-- /.labels --></span><span class="userData">
+            <a href="#">
+              <span class="user">
+                <img src="../../img/base/imgUser1.jpg" width="30" height="30" alt="user name">
+                <span class="userMeta">
+                  <span class="userName">sato.masaki+300@aainc.co.jp</span>
+                </span>
+              </span>
+              <span class="tweet">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、そこはかとなく書きつくれば、</span>
+              <span class="thumb">
+                <span><img src="../../img/dummy/01.png" alt=""></span>
+              </span>
+              <span class="post">2015/05/11 23:59</span>
+            </a>
+          </span>
+        </li>
+      <!-- /.campaignTweet --></ul>
+
+      <p class="batchAction">
+        <label><input type="checkbox">全選択</label>
+        <label><input type="radio" value="" name="1" checked="checked">承認</label>
+        <label><input type="radio" value="" name="1">非承認</label>
+        <label><input type="checkbox" value="">TOPパネルに表示</label>
+        <span class="btn3"><a href="#" class="small1">適用</a></span>
+      <!-- /.batchAction --></p>
+
+      <div class="pager1">
+        <p>99,999,999件中2001件～2020件表示しています</p>
+        <ul>
+          <li class="first"><a href="#">最初のページヘ</a></li>
+          <li class="prev"><a href="#">前のページへ</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><span>6</span></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">99</a></li>
+          <li class="next"><a href="#">次のページへ</a></li>
+          <li class="last"><a href="#">最後のページヘ</a></li>
+        </ul>
+      <!-- /.pager1 --></div>
+      <p class="showItemNum">
+        表示件数
+        <select name="" id="">
+          <option value="#" selected>20件</option>
+          <option value="#" selected>50件</option>
+          <option value="#" selected>100件</option>
+        </select>
+        <span class="btn2"><a href="#" class="small1">反映</a></span>
+      <!-- /.showItemNum --></p>
+
+    <!-- /.campaignPhotoWrap --></section>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-large jsModalCont">
+
+      <div class="modalCampaignPhoto">
+        <div class="photoPage">
+          <figure><img src="../../img/dummy/01.png" alt="photo title"></figure>
+          <div class="postWrap">
+            <h1 class="postTitle">タイトルが入りますよサンプルテキストサンプルテキスト</h1>
+            <p class="postText">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p class="postData"><img src="../../img/base/imgUser1.jpg" alt="user name"><span class="timeStamp">2015/04/16</span></p>
+            <p class="postTag"><span>ハワイ</span><span>海岸</span><span>hogehoge</span><span>fuga</span><span>サンプルテキストサンプルテキスト</span><span>海岸</span><span>hogehoge</span><span>fuga</span></p>
+          <!-- /.postWrap --></div>
+        <!-- /.photoPage --></div>
+
+        <table class="photoData">
+          <tbody>
+            <tr>
+              <th>投稿先</th>
+              <td>キャンペーンタイトル（や常設コンテンツページ名など）</td>
+            </tr>
+            <tr>
+              <th>投稿日時</th>
+              <td>2015/05/11 18:27</td>
+            </tr>
+            <tr>
+              <th>ユーザー名</th>
+              <td><img src="../../img/base/imgUser1.jpg" alt="user name" class="userImg">ユーザー名が入るユーザー名が入る</td>
+            </tr>
+            <tr>
+              <th>ステータス</th>
+              <td>
+                <span class="label5">非出力</span>
+                <select name="" id="">
+                  <option>ステータス変更</option>
+                  <option>未承認</option>
+                  <option>承認</option>
+                  <option>非承認</option>
+                </select>
+                <label><input type="checkbox">TOPパネルに表示</label>
+                <span class="btn3"><a href="#" class="small1">適用</a></span>
+              </td>
+            </tr>
+          </tbody>
+        <!-- /.photoData --></table>
+
+        <ul class="pager2">
+          <li class="prev"><a href="#" class="iconPrev1">前の投稿</a></li>
+          <li class="next"><a href="#" class="iconNext1">次の投稿</a></li>
+        <!-- /.pager2 --></ul>
+      <!-- /.modalCampaignPhoto --></div>
+
+
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+<% end %>

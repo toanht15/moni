@@ -1,0 +1,13 @@
+ImageUrl: https://dev-brandco-parts.s3.amazonaws.com/unittest/present.jpg
+# g1.philip7322@gmail.com
+Facebook:
+  PageId: 371658346239166
+  # 基本的には切れない
+  PageAccessToken: CAANf4gFzrZCcBAMoLPMTRXm6zzslRmdHzWXyw7lmtugBk4Y50hxBt0ZBWGCW2jcUmrMpBpBpcVVzGeLSZAu8rBtEi0sycbkje8XWTY7FpPCaxk7pwBNZADqmPsRuS85k3K5zgMa78PlzsqnrTXSCwCQhKZBpTZArdFDePED2MfFT7TFt9gtQiREjUWZBt7E1YAZD
+  UserId: 330346313781541
+  # 2ヶ月で切れるからjenkinsでは使ってない
+  UserAccessToken: CAAJBhlWJQqABADHY9wEBJKgWQHxLysIhpjUzACrdzGDZCbyZBdEdnjic4FjclUv032d9AOusXlLXGXd1ZBL5wenZCojnNZC2ZAK2UamZC6uA6bH2TDmhWAZCpn1nthTnsixqFUlTncBeky6dATnQNQdzwEbS0KvK7kZA6K4p382DqZCLtqb6j9iZBrHFwdH9wVO4iuiG79hdt8q4QZDZD
+Twitter:
+  UserId: 33911197
+  UserAccessToken: 33911197-kCNNlTKr30OMk9eIQbU4Vad76O0tV18V0LF3aAxIa
+  UserRefreshToken: CjiI73qBGeTqyx12SYQJsoAeu7ANQK689WhYqtqKOPbmn

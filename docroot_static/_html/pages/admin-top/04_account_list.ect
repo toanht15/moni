@@ -1,0 +1,80 @@
+<% extend 'partial/layout/page.admin.modal' %>
+
+<% block 'mainContents' : %>
+    <header class="innerFB-small">
+      <h1>ユーザー名ユーザー名さんが管理しているFBページ</h1>
+    </header>
+    <section class="modalInner-cont">
+      <section class="editContList">
+        <ul>
+          <li>
+            <p class="fbpageList">
+              <label for="check1">
+                <input type="checkbox" id="check1">
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1/s160x160/970020_555829351138374_334563186_a.png" alt="" width="40" height="40"><span>FBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキストFBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキストFBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span>
+              </label>
+            </p>
+          </li>
+          <li>
+            <p class="fbpageList">
+              <label for="check2">
+                <input type="checkbox" id="check2">
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1/c10.10.160.160/547722_212722468890691_1385445315_a.jpg" alt="" width="40" height="40"><span>FBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span>
+              </label>
+            </p>
+          </li>
+          <li>
+            <p class="fbpageList">
+              <label for="check3">
+                <input type="checkbox" id="check3">
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1/c10.11.160.160/420651_356430367730792_44800634_a.jpg" alt="" width="40" height="40"><span>FBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span>
+              </label>
+            </p>
+          </li>
+          <li>
+            <p class="fbpageList">
+              <label for="check4">
+                <input type="checkbox" id="check4">
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1/s160x160/970020_555829351138374_334563186_a.png" alt="" width="40" height="40"><span>FBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span>
+              </label>
+            </p>
+          </li>
+          <li>
+            <p class="fbpageList">
+              <label for="check5">
+                <input type="checkbox" id="check5">
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1/c10.11.160.160/420651_356430367730792_44800634_a.jpg" alt="" width="40" height="40"><span>FBページタイトルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</span>
+              </label>
+            </p>
+          </li>
+        </ul>
+        <div class="pager1">
+          <p>99,999件中101件～120件表示しています</p>
+            <ul>
+              <li class="first"><a href="#">最初のページヘ</a></li>
+              <li class="prev"><a href="#">前のページへ</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><span>6</span></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">99</a></li>
+              <li class="next"><a href="#">次のページへ</a></li>
+              <li class="last"><a href="#">最後のページヘ</a></li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <footer>
+      <p class="btnSet"><span class="btn2"><a href="#closeModalFrame">キャンセル</a></span><span class="btn3"><a href="#modal1" class="jsOpenModal">連携</a></span></p>
+    </footer>
+<% end %>
+
+<% block 'modal' : %>
+    <div class="modal2 jsModal" id="modal1">
+        <section class="modalCont-small jsModalCont">
+            <h1>連携完了しました</h1>
+            <p>サンプルテキストサンプルテキスト</p>
+            <p class="btnSet"><span class="btn3"><a href="#closeModalFrame" class="middle1">解除する</a></span></p>
+        </section>
+    </div>
+<% end %>

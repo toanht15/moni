@@ -1,0 +1,85 @@
+/* ### parts.scss ### */
+body { min-width: 0; }
+
+.lpWrap { margin: 0 0; }
+
+.whitebelgHeadSnsBtns-btn { display: none; }
+
+#whitebelgBtnToggleNav { display: block; }
+
+#whitebelgBtnToggleNav.active { background: url(../img/base/btnMenuClose.gif); background-size: 34px 34px; }
+
+/* PC */
+#whitebelgHeader { width: auto; position: relative; }
+#whitebelgHeader.whitebelgHeaderHiddenFanNum h1 { padding: 5px !important; }
+#whitebelgHeader.whitebelgHeaderHiddenFanNum ul li a { width: auto !important; }
+#whitebelgHeader.whitebelgHeaderHiddenFanNum ul li.whitebelgNavStudyGroup { border-width: 0 3px 3px 3px; }
+#whitebelgHeader.active ul { display: block; }
+
+#whitebelgHeaderInner { width: auto; border: solid; border-width: 3px 3px 3px 3px; margin: 10px auto 0; border-image: url(../img/base/bgFrame.png) 3 3 3 3 repeat repeat; -moz-border-image: url(../img/base/bgFrame.png) 3 3 3 3 repeat repeat; -webkit-border-image: url(../img/base/bgFrame.png) 3 3 3 3 repeat repeat; box-sizing: border-box; padding: 0 !important; position: relative; }
+#whitebelgHeaderInner h1 { padding: 5px !important; }
+#whitebelgHeaderInner h1 a { display: inline-block; background: none; width: auto; height: auto; }
+#whitebelgHeaderInner h1 img { display: inline; }
+#whitebelgHeaderInner ul { width: auto; margin: 0 auto; font-size: 0; display: none; position: absolute; top: 66px; left: -3px; right: -3px; z-index: 10000; }
+#whitebelgHeaderInner ul li { display: block; font-size: 1rem; border: solid; border-width: 0 3px 3px 3px; border-image: url(../img/base/bgFrame.png) 0 3 3 3 repeat repeat; -moz-border-image: url(../img/base/bgFrame.png) 0 3 3 3 repeat repeat; -webkit-border-image: url(../img/base/bgFrame.png) 0 3 3 3 repeat repeat; }
+#whitebelgHeaderInner ul li.whitebelgNavStudyGroup { border: solid; border-width: 0 3px 3px 3px; border-image: url(../img/base/bgFrame.png) 0 3 3 3 repeat repeat; -moz-border-image: url(../img/base/bgFrame.png) 0 3 3 3 repeat repeat; -webkit-border-image: url(../img/base/bgFrame.png) 0 3 3 3 repeat repeat; }
+#whitebelgHeaderInner ul li a { text-indent: 0; display: block; width: auto !important; height: auto; background: url(../img/base/bg.jpg) !important; box-sizing: border-box; padding: 10px 0; text-align: center; color: #fff; font-weight: bold; }
+#whitebelgHeaderInner ul li.whitebelgNavClose { display: block; }
+#whitebelgHeaderInner ul li.whitebelgNavClose a { background: #fff !important; color: #00797b; }
+
+#whitebelgStudentsNum { position: static; background: url(../img/base/bgStudentsNum.png) 0 0 no-repeat; background-size: 300px 46px; width: 300px; height: 46px; margin: 10px auto 0; font-size: 0; text-align: right; box-sizing: border-box; padding: 8px 42px 0 0; }
+
+#whitebelgStudentsNum span { font-size: 13px; display: inline-block; width: 17px; height: 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum1 { background: url(../img/base/num0.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum0 { background: url(../img/base/num0.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum1 { background: url(../img/base/num1.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum2 { background: url(../img/base/num2.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum3 { background: url(../img/base/num3.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum4 { background: url(../img/base/num4.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum5 { background: url(../img/base/num5.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum6 { background: url(../img/base/num6.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum7 { background: url(../img/base/num7.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum8 { background: url(../img/base/num8.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNum9 { background: url(../img/base/num9.png); background-size: 17px 30px; }
+#whitebelgStudentsNum span.whitebelgStudentsNumc { background: url(../img/base/numComma.png) 0 100% no-repeat; margin-bottom: -3px; width: 6px; background-size: 6px 11px; }
+
+body > article { width: auto; border: 0; padding: 8px !important; }
+body > article.singleWrap { margin: 0 auto; padding: 9px !important; width: auto; }
+body > article > .messageWrap { padding: 0; }
+
+#whitebelgFootAgegate { background: none; width: auto; height: auto; margin: 20px 10px -20px; }
+#whitebelgFootAgegate img { display: inline-block; }
+
+.pageTop { margin: 0; }
+.pageTop a { position: fixed; bottom: 10px; right: 10px; text-align: left; width: 36px; height: 36px; background: url(../img/base/btnPagetop.png); background-size: 36px 36px; text-indent: -9999px; overflow: hidden; }
+.pageTop a:before { display: none; }
+
+/* stamp */
+.whitebelgScholarshipStampNum { background: url(../img/scholarship/pc/bgStampNum.png); background-size: 210px 51px; width: 210px; height: 51px; box-sizing: border-box; margin: 0 auto 20px !important; text-align: right; padding: 10px 30px 0 0 !important; }
+.whitebelgScholarshipStampNum span { font-size: 13px; display: inline-block; width: 18px; height: 32px; }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum1 { background: url(../img/base/pc/num0.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum0 { background: url(../img/base/pc/num0.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum1 { background: url(../img/base/pc/num1.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum2 { background: url(../img/base/pc/num2.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum3 { background: url(../img/base/pc/num3.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum4 { background: url(../img/base/pc/num4.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum5 { background: url(../img/base/pc/num5.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum6 { background: url(../img/base/pc/num6.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum7 { background: url(../img/base/pc/num7.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum8 { background: url(../img/base/pc/num8.png); }
+.whitebelgScholarshipStampNum span.whitebelgScholarshipStampNum9 { background: url(../img/base/pc/num9.png); }
+
+.pagePartsWrap .stampRally .stampRallyLogin { border: 0; width: 300px; height: 93px; position: relative; background: url(../img/scholarship/bgLogin.png) 0 0 no-repeat; background-size: 300px 93px; height: 93px; margin: 0 auto; }
+.pagePartsWrap .stampRally .stampRallyLogin h1 { display: none; }
+.pagePartsWrap .stampRally .stampRallyLogin .btnSet .btn3 { margin: 0; }
+.pagePartsWrap .stampRally .stampRallyLogin .btnSet .btn3 a { position: absolute; left: 50%; top: 38px; margin-left: -84px; width: 166px; height: 40px; background: url(../img/scholarship/btnLogin.png) 0 0 no-repeat; background-size: 166px 40px; box-shadow: none; text-align: left; text-indent: -9999px; }
+.pagePartsWrap .stampRally .stampRallyLogin .btnSet .btn3 a:hover { opacity: .75; }
+.pagePartsWrap .stampRally .stampRallyList { width: auto; margin: 0 0 20px; border-width: 2px; box-sizing: border-box; border-image: url(../img/base/bgFrame.png) 2 1 repeat repeat; -moz-border-image: url(../img/base/bgFrame.png) 2 1 repeat repeat; -webkit-border-image: url(../img/base/bgFrame.png) 2 1 repeat repeat; }
+.pagePartsWrap .stampRally .stampRallyList li { background: url(../img/scholarship/bgActiveStamp.png) 0 0 no-repeat; width: calc( 50% - 4px); padding: 7px; margin: 0 2px 4px; }
+.pagePartsWrap .stampRally .stampRallyList li.stampStatusComingsoon, .pagePartsWrap .stampRally .stampRallyList li.stampStatusJoined, .pagePartsWrap .stampRally .stampRallyList li.stampStatusFinished { background: #fff; }
+.pagePartsWrap .stampRally .stampRallyList li.stampStatusComingsoon { padding-top: 7px; }
+.pagePartsWrap .stampRally .stampRallyList li.stampStatusComingsoonNoDate { padding-top: 30px; }
+.pagePartsWrap .stampRally .stampRallyList li:nth-child(3n+1) { clear: none; }
+.pagePartsWrap .stampRally .stampRallyList li:nth-child(4n+1) { clear: left; }
+.pagePartsWrap .stampRally .stampRallyList li .startDate { font-size: 13px; color: #395c45; }
+.pagePartsWrap .stampRally .stampRallyList li .startDate:before { display: none; }

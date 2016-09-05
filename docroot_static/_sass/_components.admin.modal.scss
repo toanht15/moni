@@ -1,0 +1,233 @@
+%contEditBase {
+
+  @at-root {
+    .moduleEditWrap & {
+      width: 700px;
+      margin: 20px auto;
+
+      textarea {
+        width: 700px - 12px;
+        height: 160px;
+      }
+    }
+  }
+  table {
+    width: 100%;
+
+    th {
+      padding: 0 0 15px;
+      min-width: 130px;
+      color: #555;
+      vertical-align: text-top;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    td {
+      padding: 0 0 15px;
+      vertical-align: text-top;
+    }
+  }
+  .pageTitle {
+    width: 460px;
+  }
+}
+.panelContEdit {
+  @extend %contEditBase;
+  float: left;
+  width: -webkit-calc(100% - 254px);
+  width: calc(100% - 254px);
+
+  table {
+    width: 100%;
+  }
+  textarea,
+  [type="text"] {
+    width: 100%;
+  }
+  label {
+    min-width: 80px;
+    display: inline-block;
+  }
+  label+[type="text"],
+  label+[type="url"] {
+    width: 340px;
+  }
+}
+
+.editProfile {
+  float: left;
+  width: 50%;
+
+  dt {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  dd {
+    position: relative;
+    margin: 0 0 20px 10px;
+  }
+  .colorPicker {
+    width: 75px;
+    text-align: center;
+  }
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+  input[type="file"] {
+    display: block;
+    margin: 5px 0;
+    padding-left: 0;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .textBalloon1 {
+  left: 50%;
+    &>span {
+      left: -30%;
+      &:after {
+        left: 30%;
+      }
+    }
+  }
+}
+.editProfileManager {
+  clear: both;
+  border: 1px dotted $borderC;
+  padding: 20px 10px 10px;
+  position: relative;
+
+  p {
+    position: absolute;
+    top: -10px;
+    left: -webkit-calc(50% - 70px);
+    left: calc(50% - 70px);
+    background: #fff;
+    width: 130px;
+    padding: 0 5px;
+  }
+  dt {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  dd {
+    position: relative;
+  }
+  small {
+    display: block;
+  }
+  input {
+    width: 368px;
+  }
+}
+
+.editMenuList {
+  margin-right: 10px;
+
+  li {
+    @include cf;
+    position: relative;
+    padding-top: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+
+    &:first-child {
+      margin-top: -10px;
+    }
+  }
+  .listNum {
+    display: inline-block;
+    width: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  dl,
+  .menuTitle {
+    @include cf;
+    display: inline-block;
+    margin-right: 10px;
+    width: 570px;
+    vertical-align: middle;
+  }
+  dl {
+    display: none;
+  }
+  .menuTitle {
+    margin-bottom: 10px;
+  }
+  dt {
+    float: left;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+  }
+  dd {
+    float: left;
+    margin-bottom: 10px;
+    width: 480px;
+    height: 26px;
+
+    input {
+      width: 458px;
+    }
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .action {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
+    text-align: center;
+
+    &>* {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+  .moreAction {
+    display: none;
+  }
+  .openLink,
+  .closeLink,
+  .openAction,
+  .closeAction {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -11px;
+    width: 22px;
+  }
+  .closeLink {
+    width: auto;
+  }
+}
+.addNew {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.linkSNSList {
+  margin: auto;
+  height: 100%;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 10px 10px;
+    vertical-align: middle;
+  }
+}
+.glossary {
+  margin-left: 15px;
+}

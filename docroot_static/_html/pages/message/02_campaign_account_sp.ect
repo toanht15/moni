@@ -1,0 +1,84 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'pageStatus' : %>logout<% end %>
+
+<% block 'mainContents' : %>
+    <section class="messageWrap">
+      <section class="campaign">
+        <p class="campaignImg"><img src="../../img/dummy/CPmain.jpg" width="690" height="280" alt="img text"></p>
+        <p class="campaignText">“すっぴん、透明肌”和漢植物エキス命名、雪のように透き通ったくすみのない肌を目指す、スキンケアを中心とした1985年発売のロングセラーブランド「薬用 雪肌精」今回は5名様に「薬用 雪肌精」をプレゼントいたします！</p>
+
+        <div class="joinCommSite">
+          <h1>お持ちのアカウントでかんたん応募！</h1>
+          <ul class="btnSet">
+            <li class="btnSnsFb1"><a href="#" class="arrow1"><span class="inner">Facebook<br>で応募</span></a></li>
+            <li class="btnSnsTw1"><a href="#" class="arrow1"><span class="inner">Twitter<br>で応募</span></a></li>
+            <li class="btnSnsIn1"><a href="#" class="arrow1"><span class="inner">LinkedIn<br>で応募</span></a></li>
+            <li class="btnSnsLn1"><a href="#" class="arrow1"><span class="inner">LINE<br>で応募</span></a></li>
+            <li class="btnSnsIg1"><a href="#" class="arrow1"><span class="inner">Instagram<br>で応募</span></a></li>
+            <li class="btnSnsGp1"><a href="#" class="arrow1"><span class="inner">Google<br>で応募</span></a></li>
+            <li class="btnSnsYh1"><a href="#" class="arrow1"><span class="inner">Yahoo! <br>JAPAN ID<br>で応募</span></a></li>
+          <!-- /.btnSet --></ul>
+
+          <h2>メールアドレスで応募</h2>
+          <div class="prompt" id="#step1">
+            <p class="promptText">このメールアドレスを利用して登録されているSNS等のアカウントが見つかりました。<span>sato.tetsuhiro@aainc.co.jp</span></p>
+            <div class="prompSet">
+              <p>このメールアドレスで応募するには<a href="#">登録しているSNS等でログインする</a></p>
+              <p class="centerdLine"><span>または</span></p>
+              <p><a href="#modal1" class="jsOpenModal">仮パスワードを発行する</a></p>
+            <!-- /.prompSet --></div>
+         <!-- /.prompt --></div>
+          <p class="supplement1"><a href="#">別のメールアドレスで応募する</a></p>
+
+          <p class="loginAttention">※本サービスを利用するにあたり、<a href="#"><img src="../../img/icon/iconAlliedID2.png" alt="アライドID">アライドID</a>の情報を利用いたします。</p>
+          <p class="supplement1"><a href="#" class="openNewWindow1">アライドID利用規約</a>に同意の上、ご応募ください。</p>
+        <!-- /.joinCommSite --></div>
+
+        <div class="campaignShare">
+          <p>このキャンペーンを友達に知らせよう</p>
+          <ul class="snsBtns-box">
+            <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+            ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+            ><li><div class="g-plusone" data-size="tall"></div></li
+            ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+          <!-- /.snsBtns-box --></ul>
+        <!-- /.campaignShare --></div>
+        <ul class="campaignData">
+          <li class="present"><span class="itemTitle">プレゼント</span><span class="itemData">9,999,999名様</span></li>
+          <li class="term"><span class="itemTitle">開催期間</span><span class="itemData">2014/09/17（水）～2014/10/31（金）23:59</span></li>
+          <li class="result"><span class="itemTitle">発表日</span><span class="itemData">2014/11/06（木）</span></li>
+          <li class="sponsor"><span class="itemTitle">開催</span><span class="itemData">モニプラ運営事務局</span></li>
+          <li class="attention"><span class="itemTitle">注意事項</span><span class="itemData">・当選されたお客様には、モニプラにご登録のメールアドレスへご連絡いたします。<br>・賞品の発送は11月中旬を予定しております。<br>・応募は、お一人様1回限りとさせていただきます。<br>・応募は日本国内にお住まいの方に限らせていただきます。<br>・当選賞品の販売・換金はできません。</span></li>
+        <!-- /.campaignData --></ul>
+        <p class="campaignDate"><small>2014/06/25 10:57</small></p>
+      <!-- /.campaign --></section>
+
+    <!-- /.messageWrap --></section>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+      <div class="modalMail">
+        <p>入力されたメールアドレス宛に仮パスワード発行のメールをお送りしましたので、ご確認のうえ応募にお進みください。</p>
+        <p>しばらくたった後もメールが届いていない場合は<a href="https://monipla.com/monipla/inquiry/index" target="_blank">お問い合わせ</a>をお願いします。</p>
+      <!-- /.modalMail --></div>
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    <!-- /.modalCont-ig --></section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="modal1" style="height: 2119px; display: block;">
+    <section class="modalCont-medium jsModalCont" style="display: block; opacity: 1; top: 786px;">
+    <div class="modalAction">
+      <h1>仮パスワードを発行してよろしいですか？</h1>
+      <p class="btnSet">
+        <span class="btn2"><a href="#">キャンセル</a></span>
+        <span class="btn4"><a href="#" class="large2">仮パスワードを発行</a></span>
+      </p>
+    <!-- /.modalAction --></div>
+    <!-- /.modalCont-ig --></section>
+  <!-- /.modal1 --></div>
+<% end %>

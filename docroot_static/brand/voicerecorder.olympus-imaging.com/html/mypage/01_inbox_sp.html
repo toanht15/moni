@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_inbox_sp / mypage</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/style_sp.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!--<script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>-->
+  <script src="../../../../js/_unit_sp.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <!-- olympus files -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/style_sp.css">
+  <script src="../../js/util.js"></script>
+
+  <!-- olympus header  -->
+  <header id="olympusHeader"><div id="olympusHeaderInner">
+    <div id="olympusHeaderContent">
+      <p id="logoOlympus">
+        <img src="../../img/olympus-imaging.jp/000000002.svg" alt="OLYMPUS" class="svg" />
+        <img src="../../img/olympus-imaging.jp/000000003.svg" alt="" class="svgSp" />
+        <img src="../../img/olympus-imaging.jp/000000004.gif" alt="" class="image" />
+      <!-- /#logoOlympus --></p>
+      <div id="logoOlympusSub">
+        <p><a href="http://www.olympus.co.jp/">Olympus Japan</a></p>
+        <p><a href="http://www.olympus-global.com/en/network/"><img src="../../img/olympus-imaging.jp/000000017.gif" alt="OLYMPUS" /></a></p>
+      <!-- /#logoOlympusSub --></div>
+      <p id="logoOlympusImaging">
+        <a href="http://olympus-imaging.jp/">
+          <img src="../../img/olympus-imaging.jp/000000005.svg" alt="OLYMPUS IMAGING" class="svg" />
+          <img src="../../img/olympus-imaging.jp/000000006.gif" alt="OLYMPUS IMAGING" class="image" />
+        </a>
+      </p>
+    <!-- /#olympusHeaderContent --></div>
+    <!-- /#olympusHeaderInner --></div>
+
+    <div id="olympusVoiceRecorderHeader">
+      <h1><img src="../../img/common/logo.gif" width="223"></h1>
+      <button id="btnOlympusMenu"><img src="../../img/common/btnMenu.gif" width="45"></button>
+      <nav id="olympusGlobalNav">
+        <ul>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/" class="nav1"><img src="../../img/common/btnGlobalNav1.gif" alt="TOP"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/introduce" class="nav2"><img src="../../img/common/btnGlobalNav2.gif" alt="なぜレコーダーが選ばれるの？"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/categories/use" class="nav3"><img src="../../img/common/btnGlobalNav3.gif" alt="ボイスレコーダー活用術"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/type" class="nav4"><img src="../../img/common/btnGlobalNav4.gif" alt="レコーダーのタイプ"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/original" class="nav5"><img src="../../img/common/btnGlobalNav5.gif" alt="オリンパスのボイスレコーダーはここがすごい！"></a></li>
+          <li><span class="nav6"><img src="../../img/common/btnGlobalNav6_disable.gif" alt="どれ買うナビ"></span></li>
+          <li><span class="nav7"><img src="../../img/common/btnGlobalNav7_disable.gif" alt="レビュー"></span></li>
+          <li><a href="#" id="olympusGlobalNavClose"><img src="../../img/common/btnGlobalNav8.gif" alt="閉じる"></a></li>
+        </ul>
+      </nav>
+    <!-- /#olympusVoiceRecorderHeader --></div>
+  <!-- /#olympusHeader --></header>
+  <!-- / olympus header  -->
+
+  <article>
+    <section class="mypageUserWrap">
+      <h1 class="mypageUser"><figure><img src="../../../../img/dummy/02.jpg" height="40" width="40" alt="user img"></figure><span class="nametext">サンプルテキストサンプルテキストサンプルテキストさん</span><span class="edit"><a href="#" class="jsMypageSetteing">設定変更</a></span></h1>
+      <div class="mypageSetting jsMypageSetteingTarget">
+        <div class="btnSet"><p class="btn3"><a href="#" class="large2">アカウントの設定</a></p></div>
+        <dl>
+          <dt>メッセージをメールで受け取る</dt>
+          <dd><label><input type="radio" name="radio1">受け取る</label></dd>
+          <dd><label><input type="radio" name="radio1">受け取らない</label></dd>
+        </dl>
+        <p class="withdraw"><a href="#">退会手続き</a></p>
+      <!-- /.mypageSetting --></div>
+    <!-- /.mypageUserWrap --></section>
+
+    <section class="messageWrap">
+
+      <h2>メッセージ</h2>
+
+      <ul class="messageList">
+        <li>
+          <ul class="messageListInner">
+            <li class="notRead">
+              <a href="#">
+                <figure><img src="../../../../img/icon/iconMail2.png" height="40" width="40" alt="message"></figure><span class="title">おでかけサマーグッズプレゼント!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li>
+              <a href="#">
+                <figure><img src="../../../../img/dummy/02.jpg" height="40" width="40" alt="dummy img"></figure><span class="title">おでかけサマーグッズプレゼント!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="showAll"><a href="#" class="jsMessageToggle"><small>これ以前のメッセージ3件</small></a></li>
+            <li class="notRead"><a href="#"><span class="title">キャンペーンの申込みが完了しました</span><small class="timestamp">12:00</small></a></li>
+            <li class="notRead"><a href="#"><span class="title">おめでとうございます！　当選のご報告</span><small class="timestamp">18:17</small></a></li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li>
+              <a href="#">
+                <figure><img src="../../../../img/icon/iconMail2.png" height="40" width="40" alt="message"></figure><span class="title">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li>
+              <a href="#">
+                <figure><img src="../../../../img/dummy/02.jpg" height="40" width="40" alt="dummy img"></figure><span class="title">おでかけサマーグッズプレゼント!!!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="showAll"><a href="#" class="jsMessageToggle"><small>これ以前のメッセージ6件</small></a></li>
+          <!-- /.messageListInner --></ul>
+        </li>
+      <!-- /.messageList --></ul>
+    <!-- /.messageWrap --></section>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+
+  <!-- olympus footer  -->
+  <footer id="olympusFooter">
+    <ul class="snsBtns-btn">
+      <li>
+        <div id="fb-root" data-appid = "749555551767856"></div>
+        <div class="fb-like" data-href="http://www.voicerecorder.olympus-imaging.com/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+      </li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+    <!-- /.snsBtns --></ul>
+
+    <ul class="olympusLinks">
+      <li><a href="http://olympus-imaging.jp/notice/policy.html" target="_blank">ご利用条件</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">お問い合わせ</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">会社概要</a></li>
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/page/site">本サイトについて</a></li>
+    </ul>
+    <p class="copyright">© <script type="text/javascript">
+    <!--
+    myD = new Date();
+    myYear = myD.getYear();
+    myYears = (myYear < 2000) ? myYear + 1900 : myYear;
+    document.write(myYears);
+    -->
+    </script> Olympus Corporation<br>Powered by monipla</p>
+    <ul class="olympusMoniplaLinks">
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/inquiry/">モニプラお問い合わせ</a></li>
+      <li><a href="//allied-id.com/agreement" target="_blank">利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    </ul>
+  <!-- /#olympusFooter --></footer>
+  <!-- / olympus footer  -->
+</body>
+</html>

@@ -1,0 +1,80 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'sidenav' : %>sidenav06<% end %>
+
+<% block 'columnContents' : %>
+      <h1 class="hd1">リダイレクトリンク設定</h1>
+
+      <section class="adminRedirectWrap">
+        <p><span class="btn1"><a href="#">新規作成</a></span></p>
+      <!-- /.adminRedirectWrap --></section>
+
+      <h2 class="hd2">リダイレクトリンク一覧</h2>
+      <section class="adminRedirectWrap">
+
+        <table class="adminRedirectTable">
+          <thead>
+            <tr>
+              <th>リダイレクトリンク</th>
+              <th>実URL</th>
+              <th>説明</th>
+              <th>アクセス数</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp/http://yahoo.co.jp/http://yahoo.co.jp/http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td>
+                <span class="btn1"><a href="#" class="small2">編集</a></span>
+                <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span>
+              </td>
+            </tr>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td>
+                <span class="btn1"><a href="#" class="small2">編集</a></span>
+                <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span>
+              </td>
+            </tr>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td>
+                <span class="btn1"><a href="#" class="small2">編集</a></span>
+                <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span>
+              </td>
+            </tr>
+            <tr>
+              <th>http://monipla.com/brand/r/38</th>
+              <td>http://yahoo.co.jp</td>
+              <td>ヤフー</td>
+              <td>10,322</td>
+              <td>
+                <span class="btn1"><a href="#" class="small2">編集</a></span>
+                <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span>
+              </td>
+            </tr>
+          </tbody>
+        <!-- /.adminRedirectTable --></table>
+      <!-- /.adminRedirectWrap --></section>
+
+    <!-- /.adminMainCol --></article>
+<% end %>
+
+<% block 'script' : %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+<% end %>

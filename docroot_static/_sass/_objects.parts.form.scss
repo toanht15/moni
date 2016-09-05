@@ -1,0 +1,377 @@
+// form parts
+input {
+  max-width: 100%;
+  padding: 2px 5px;
+  border: 1px solid $borderC;
+}
+[type="text"],
+[type="number"],
+[type="password"],
+[type="url"],
+[type="tel"],
+[type="email"] {
+  height: 30px;
+  vertical-align: middle;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  &:disabled {
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    color: #888;
+    -webkit-text-fill-color: #888;
+    opacity: 1;
+  }
+  &.emptyError {
+    border-color: #b20000;
+    background: rgba(178, 0, 0, .1);
+  }
+  &.inputDate {
+    width: 100px;
+    margin-right: 5px;
+  }
+  &.inputTime {
+    width: 55px;
+  }
+  &.inputNum {
+    width: 65px;
+    margin-right: 5px;
+  }
+  &.inputNumSmall {
+    width: 50px;
+    margin-right: 5px;
+  }
+}
+[type="file"] {
+  border: none;
+  padding: 2px 0;
+}
+[type="radio"],
+[type="checkbox"] {
+  padding: 0;
+  border: none;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+select {
+  border: 1px solid $borderC;
+  height: 30px;
+  line-height: 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+textarea {
+  max-width: 100%;
+  padding: 2px 5px;
+  border: 1px solid $borderC;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  &:disabled {
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    color: #888;
+    -webkit-text-fill-color:#888;
+    opacity: 1;
+  }
+  &.emptyError {
+    border-color: #b20000;
+    background: rgba(178, 0, 0, .1);
+  }
+  &.pluralItems {
+    width: 100%;
+    height: 30px;
+    display: inherit;
+  }
+}
+label {
+  margin-right: 10px;
+
+  [type="text"] {
+    margin-left: 5px;
+  }
+}
+%customBtnBase {
+  border: none;
+
+  @media (min-width: 1px) {
+    display: none;
+
+    &+label {
+      display: inline-block;
+      padding-left: 23px;
+      text-indent: -23px;
+    }
+    &+label:before {
+      content: "";
+      border: 1px solid #999;
+      background: #FFF;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      width: 16px;
+      height: 16px;
+    }
+    &:checked+label:before {
+      border: none;
+      background-color: #B20000;
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+.customCheck {
+  @extend %customBtnBase;
+
+  &+label:before {
+    border-radius: 2px;
+  }
+  &:checked+label:before {
+    @include fontBase(check1);
+    color: #FFF;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+.customRadio {
+  @extend %customBtnBase;
+
+  &+label:before {
+    border-radius: 50%;
+  }
+  &:checked+label:before {
+    border: 2px solid #B20000;
+    box-shadow: 0 0 0 3px #FFF inset;
+    width: 14px;
+    height: 14px;
+  }
+}
+.customRadioBtn {
+  $btnC: #fff;
+  $color: #2CB395;
+  $bgLight: mix($btnC, #fff, 80%);
+  $bgDark: mix($bgLight, #000, 90%);
+  $fontLight: mix($color, $btnC, 50%);
+  $shadow: calc-color-bright($btnC, -25);
+  display: none;
+
+  &+label {
+    @include btnDetailBase;
+    @include btnLinkBase($color, $btnC, $shadow);
+    background-color: calc-color-bright($btnC, -2);
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+    border-radius: 3px;
+
+    &:hover {
+      @include btnHoverBase($color, $btnC, $shadow);
+    }
+    &:active {
+      @include btnActiveBase($color, $btnC, $shadow);
+    }
+  }
+  &+label:before {
+    content: "";
+    background: #2CB395;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 2px 7px 2px 2px;
+    border-radius: 5px;
+    vertical-align: middle;
+  }
+  &:checked+label {
+    @include btnActiveBase($color, $btnC, $shadow);
+    color: $color;
+    font-weight: bold;
+
+    &:before {
+      @include iconFontLeft(check2);
+      font-size: 14px;
+      color: $iconC3;
+      background: transparent;
+    }
+  }
+  &:disabled+label {
+    // @include btnDetailBase;
+    // @include btnActiveBase($color, $btnC, $shadow);
+    @include btnDisabledBase($fontLight, $bgLight);
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    font-size: 13px;
+    color: $fontLight;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    background-color: calc-color-bright($btnC, -4);
+    box-shadow: none;
+
+    &:before {
+      content: "";
+      background: $fontLight;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 2px 7px 2px 2px;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+  }
+}
+.customRadioModule {
+  display: none;
+
+  &+label {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid $borderC;
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    margin-bottom: 10px;
+
+    img {
+      display: block;
+      margin: 0 auto 5px;
+    }
+    &:hover {
+
+      img {
+        opacity: .87;
+      }
+      .textBalloon1 {
+        display: block;
+      }
+    }
+    &:active {
+    }
+  }
+  &:checked+label {
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.35) inset;
+    background: #EEE;
+    font-weight: bold;
+
+    &:before {
+      @include fontBase(check2);
+      font-size: 20px;
+      color: $iconC3;
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+  &:disabled+label {
+    background: #ccc;
+
+    img {
+      opacity: .3;
+    }
+  }
+}
+.coron {
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+}
+.dash {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+.textLimit {
+  color: #333;
+  font-size: smaller;
+  font-weight: normal;
+}
+.errFocus {
+  background: #fff2f2;
+}
+.iconError1 {
+  @extend .attention1;
+
+  &:before {
+    @include iconFontLeft(caution);
+    font-size: 14px;
+    // background: $iconC4;
+    background: #b20000;
+    color: #FFF;
+    border-radius: 50%;
+  }
+}
+.prefectures {
+  box-sizing: border-box;
+  width: 160px;
+  height: 110px;
+  overflow: auto;
+  padding: 5px 0 5px 5px;
+  border: 1px solid $borderC;
+
+  label {
+    width: 100%;
+  }
+}
+
+%fileUploadBase {
+  border: 1px dotted $borderC;
+  background: #f8f8f8;
+  padding: 10px;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+
+  .thumb {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid $borderC;
+    margin-right: 16px;
+    position: relative;
+
+    img {
+      display: block;
+      border: 1px solid #fff;
+      width: 33px;
+      height: 33px;
+    }
+    .iconBtnDelete {
+      position: absolute;
+      right: -8px;
+      top: 3px;
+      margin-top: -7px;
+    }
+  }
+  [type="file"] {
+    display: inline;
+    max-width: 60%;
+    max-width: -webkit-calc(100% - 65px);
+    max-width: calc(100% - 65px);
+    margin-top: 10px;
+  }
+  .supplement1 {
+    margin-top: 10px;
+    display: block;
+  }
+}
+.fileUpload_img {
+  @extend %fileUploadBase;
+
+  .thumb {
+    background-image: url(../img/icon/iconUplod_img1.png);
+    -webkit-background-size: 35px 35px;
+            background-size: 35px 35px;
+  }
+}

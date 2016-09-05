@@ -1,0 +1,92 @@
+<% if @header == 'true' : %>
+<% else : %>
+<header>
+  <section class="account">
+    <ul>
+      <% if @status == 'logout' : %>
+        <li class="btn3"><a href="#" class="loginBtn">無料登録・ログイン</a></li>
+      <% else if @status == 'login' : %>
+        <li class="accountName"><a href="#"><img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+        <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+        <!-- <li class="accountLogo"><a href="#"><img src="../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li> -->
+      <% end %>
+    </ul>
+  <!-- /.account --></section>
+  <section class="company">
+    <div class="companyName">
+      <p class="logo">
+        <a href="#"><img src="../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶"></a>
+      </p>
+      <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+      <p class="spGnavBtn"><a href="#side-menu"  class="syn-notice jsMenuTrigger">MENU</a></p>
+    <!-- /.companyName --></div>
+    <% if @pageType == 'pc' : %>
+      <% if @menu == true : %>
+        <nav class="gnavi">
+          <ul class="jsGnavi">
+            <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+            <li><a href="#">サンプルテキストサンプル</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+            <li><a href="#">サンプルテキストサンプル</a></li>
+            <li><a href="#">サンプルテキストサンプル</a></li>
+            <li><a href="#">サンプルテキスト</a></li>
+          </ul>
+          <a href="#" class="openLink">0</a>
+        <!-- /.gnavi --></nav>
+      <% end %>
+    <% else if @pageType == 'sp' : %>
+      <p class="spFanNumber">18235人</p>
+      <aside class="drawerNaviWrap close jsModalTarget-menu" id="side-menu">
+        <div class="drawerNavi">
+          <div id="adg_div">
+            <script src="http://i.socdm.com/sdk/js/adg-script-loader.js?id=31095&targetID=adg_31095&displayid=1&adType=FREE&async=false&tagver=2.0.0"></script>
+          </div>
+          <script>
+            // ロード完了時イベント
+            window.addEventListener($adg.listener.loaded, function (e) {
+              // inview は、オブジェクトの各辺が描画領域に入ると報告されるが、そのうち最初の1回だけ
+              // 受け取れるようにフラグを立てて管理する。
+              var firstInView = false;
+
+              $('#adg_div').css('display', 'block');
+              // jquery.inviewによるinview判定
+              $('#adg_div').on('inview', function(event, isInView){
+                if (isInView) {
+                  if (!firstInView) {
+                    $adg.ads.trackShowEvent(); // トラッキング
+                    firstInView = true;
+                  }
+                }
+              });
+            });
+            window.addEventListener($adg.listener.failed, function () {
+              //console.log('adFailed!');
+            });
+          </script>
+          <h2 class="hd2">ブランド名orモニプラ</h2>
+          <ul class="privateMenu">
+            <li class="home"><a href="http://www.aainc.co.jp/">トップページ</a></li>
+            <li><a href="#">ほめられ美脚なら♪</a></li>
+            <li><a href="#">脱ビール腹！大人の男磨きしよう！</a></li>
+            <li><a href="#">男のやせる専門店誕生</a></li>
+          </ul>
+
+          <div id='synapse-service-list-outer-box' style='display: none'>
+            <h2 class="hd2">おすすめサービス</h2>
+            <ul id='synapse-service-list'>
+            </ul>
+          </div>
+
+          <div id="synapse-logo-box" class="synapse_logo" style='display: none'></div>
+        </div>
+      </aside>
+      <div class="modalBase jsModalBase"></div>
+    <% end %>
+  <!-- /.company --></section>
+</header>
+<% end %>

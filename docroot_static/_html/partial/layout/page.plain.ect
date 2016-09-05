@@ -1,0 +1,23 @@
+<% pageInfo = {
+    title: @title,
+    htmlDir: @htmlDir
+} %>
+<!doctype html>
+<html lang="ja">
+<head>
+    <% if content 'headCont' : %>
+        <% include 'partial/parts/head', pageInfo %>
+    <% else : %>
+        <meta charset="UTF-8">
+        <title><%- @title %> / <%- @htmlDir %></title>
+        <link rel="icon" href="../../img/base/favicon.ico">
+    <% end %>
+
+    <% content 'head' %>
+</head>
+<body>
+
+    <% content 'mainContents' %>
+
+</body>
+</html>

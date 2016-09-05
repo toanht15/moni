@@ -1,0 +1,66 @@
+<% extend 'partial/layout/page.admin.modal' %>
+
+<% block 'mainContents' : %>
+    <header class="innerTW-small">
+      <h1>新規パネル追加的なタイトルテキスト</h1>
+    </header>
+    <section class="modalInner-cont">
+      <div class="panelContEdit">
+        <form action="#">
+          <table>
+            <tbody>
+              <tr>
+                <th>SNSリンク</th>
+                <td>https://www.twitter.com/hgoehoge/fugafuga/</td>
+              </tr>
+              <tr>
+                <th>パネルリンク</th>
+                <td>monipla.com/hogehoge/fugafuga/<br><label><input type="checkbox">新しいウィンドウで開く</label></td>
+              </tr>
+              <tr>
+                <th>表示</th>
+                <td>
+                  <a href="#" class="switch on"><span class="switchInner"><span class="selectON">ON</span><span class="selectOFF">OFF</span></span></a>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">投稿内容</th>
+              </tr>
+              <tr>
+                <td colspan="2"><textarea name="" id="" cols="40" rows="4" disabled="disabled">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</textarea></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+      </div>
+      <div class="panelContPreview">
+        <p class="previeTitle">パネルプレビュー</p>
+
+        <section class="contBoxMain-tw">
+          <div class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<img src="../../img/dummy/02.jpg" height="150" alt=""></p>
+            <!-- /.contWrap --></div>
+          </div>
+          <div class="nav">
+            <ul class="twActions">
+              <li><a href="#" class="twFollow">フォローする</a></li>
+              <li><a href="#" class="twReply">リプライ</a></li>
+              <li><a href="#" class="twRetweet">リツイート</a></li>
+              <li><a href="#" class="twFavo">お気に入り</a></li>
+            <!-- /.twActions --></ul>
+          </div>
+        <footer>
+          <div>
+            <p class="postType"><img src="../../img/dummy/01.png" width="28" height="28" alt=""><span>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト@sample_sample</span></p>
+          </div>
+        </footer>
+        <!-- /.contBoxMain-tw--></section>
+
+      <!-- /.panelContPreview --></div>
+    <!-- /.modalInner-cont --></section>
+    <footer>
+      <p class="btnSet"><span class="btn2"><a href="#closeModalFrame">キャンセル</a></span><span class="btn3"><a href="#closeModalFrame">保存</a></span></p>
+    </footer>
+<% end %>

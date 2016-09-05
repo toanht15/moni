@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>07_message_glossary / admin-cp-edit</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+
+    <article>
+        <h1 class="hd1">用語説明</h1>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">すべてのキャンペーンに表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>日付</th>
+                        <td>キャンペーンの開催期間のみ表示</td>
+                        <tr>
+                            <th>参加者数(全体)</th>
+                            <td>キャンペーン全体の参加者数（STEP1を完了したユーザ数）</td>
+                        </tr>
+                        <tr>
+                            <th>参加者数(PCのみ)</th>
+                            <td>PCより参加登録したキャンペーンの参加者数</td>
+                        </tr>
+                        <tr>
+                            <th>参加者数(モバイルのみ)</th>
+                            <td>モバイルより参加登録したキャンペーンの参加者数</td>
+                        </tr>
+                        <tr>
+                            <th>参加者数(新規会員のみ)</th>
+                            <td>当キャンペーンでブランドに新規登録したの参加者数</td>
+                        </tr>
+                        <tr>
+                            <th>参加者数(既存会員のみ)</th>
+                            <td>当キャンペーン以前にブランドに登録済みの参加者数</td>
+                        </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">2016年01月01日以降に開催されたキャンペーンのみ表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>キャンペーントップPV(全体)</th>
+                        <td>キャンペーントップページ（/campaigns/xxxx）のページビュー数（Google アナリティクスより取得）</td>
+                    </tr>
+                    <tr>
+                        <th>キャンペーントップPV(PCのみ)</th>
+                        <td>PC経由でのキャンペーントップページ（/campaigns/xxxx）のページビュー数（Google アナリティクスより取得）</td>
+                    </tr>
+                    <tr>
+                        <th>キャンペーントップPV(モバイルのみ)</th>
+                        <td>モバイル経由でのキャンペーントップページ（/campaigns/xxxx）のページビュー数（Google アナリティクスより取得）</td>
+                    </tr>
+                    <tr>
+                        <th>キャンペーントップUU(全体)</th>
+                        <td>キャンペーントップページ（/campaigns/xxxx）のユニークユーザ数（Google アナリティクスより取得）</td>
+                    </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">2016年01月01日以降に開催されたキャンペーン　かつ　LPを設定しているキャンペーン　のみ表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>キャンペーンLPPV(全体)</th>
+                        <td>キャンペーンランディングページ（/page/xxxx）のページビュー数（Google アナリティクスより取得）</td>
+                    </tr>
+                    <tr>
+                        <th>キャンペーンLPPV(PCのみ)</th>
+                        <td>PC経由でのキャンペーンランディングページ（/page/xxxx）のページビュー数（Google アナリティクスより取得）</td>
+                    </tr>
+                    <tr>
+                        <th>キャンペーンLPPV(モバイルのみ)</th>
+                        <td>モバイル経由でのキャンペーンランディングページ（/page/xxxx）のページビュー数（Google アナリティクスより取得）</td>
+                    </tr>
+                    <tr>
+                        <th>キャンペーンLPUU(全体)</th>
+                        <td>キャンペーンランディングページ（/campaigns/xxxx）のユニークユーザ数（Google アナリティクスより取得）</td>
+                    </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">FBいいね！モジュールを使用している場合に表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>新規Facebookいいね！数(アカウント名)</th>
+                        <td>キャンペーンのステップで、いいね！ボタンが押下された回数</td>
+                    </tr>
+                    <tr>
+                        <th>既存Facebookいいね！数(アカウント名)</th>
+                        <td>キャンペーンのステップで、すでにいいね！済みであった回数</td>
+                    </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">TWフォローモジュールを使用している場合に表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>新規Twitterフォロー数(アカウント名)</th>
+                        <td>キャンペーンのステップで、フォローボタンが押下された回数</td>
+                    </tr>
+                    <tr>
+                        <th>既存Twitterフォロー数(アカウント名)</th>
+                        <td>キャンペーンのステップで、すでにフォロー済みであった回数</td>
+                    </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">IGフォローモジュールを使用している場合に表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>新規Instagramフォロー数(アカウント名)</th>
+                        <td>キャンペーンのステップで、フォローボタンが押下された回数</td>
+                    </tr>
+                    <tr>
+                        <th>既存Instagramフォロー数(アカウント名)</th>
+                        <td>キャンペーンのステップで、すでにフォロー済みであった回数</td>
+                    </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+
+        <section class="glossaryListWrap">
+            <h2 class="hd2">YTチャンネル登録モジュールを使用している場合に表示される項目</h2>
+
+            <table class="glossaryList1">
+                <tbody>
+                    <tr>
+                        <th>新規チャンネル登録数(アカウント名)</th>
+                        <td>キャンペーンのステップで、チャンネル登録ボタンが押下された回数</td>
+                    </tr>
+                    <tr>
+                        <th>既存チャンネル登録数(アカウント名)</th>
+                        <td>キャンペーンのステップで、すでにチャンネル登録済みであった回数</td>
+                    </tr>
+                </tbody>
+            <!-- /.fileList1 --></table>
+        <!-- /.fileListWrap --></section>
+    </article>
+
+</body>
+
+</html>

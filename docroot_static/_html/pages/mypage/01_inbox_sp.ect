@@ -1,0 +1,83 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'mainContents' : %>
+    <section class="mypageUserWrap">
+      <h1 class="mypageUser"><figure><img src="../../img/dummy/02.jpg" height="40" width="40" alt="user img"></figure><span class="nametext">サンプルテキストサンプルテキストサンプルテキストさん</span><span class="edit"><a href="#" class="jsMypageSetteing">設定変更</a></span></h1>
+      <div class="mypageSetting jsMypageSetteingTarget">
+        <div class="btnSet"><p class="btn3"><a href="#" class="large2">アカウントの設定</a></p></div>
+        <dl>
+          <dt>メッセージをメールで受け取る</dt>
+          <dd><label><input type="radio" name="radio1">受け取る</label></dd>
+          <dd><label><input type="radio" name="radio1">受け取らない</label></dd>
+        </dl>
+        <p class="supplement1">当選通知メールについては受け取り可否に関わらずお送りさせていただきます</p>
+        <p class="withdraw"><a href="#">退会手続き</a></p>
+      <!-- /.mypageSetting --></div>
+    <!-- /.mypageUserWrap --></section>
+
+    <section class="messageWrap">
+
+      <h2>メッセージ</h2>
+
+      <ul class="messageList">
+        <li>
+          <ul class="messageListInner">
+            <li class="notRead">
+              <a href="#">
+                <figure><img src="../../img/dummy/book.png" class="book" alt="message"></figure><span class="title">健康検定ガイドブックを購入しました。</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li class="notRead">
+              <a href="#">
+                <figure><img src="../../img/icon/iconMail2.png" height="40" width="40" alt="message"></figure><span class="title">おでかけサマーグッズプレゼント!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li>
+              <a href="#">
+                <figure><img src="../../img/dummy/02.jpg" height="40" width="40" alt="dummy img"></figure><span class="title">おでかけサマーグッズプレゼント!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="showAll"><a href="#" class="jsMessageToggle"><small>これ以前のメッセージ3件</small></a></li>
+            <li class="notRead"><a href="#"><span class="title">キャンペーンの申込みが完了しました</span><small class="timestamp">12:00</small></a></li>
+            <li class="notRead"><a href="#"><span class="title">おめでとうございます！　当選のご報告</span><small class="timestamp">18:17</small></a></li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li>
+              <a href="#">
+                <figure><img src="../../img/icon/iconMail2.png" height="40" width="40" alt="message"></figure><span class="title">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+          <!-- /.messageListInner --></ul>
+        </li>
+        <li>
+          <ul class="messageListInner">
+            <li>
+              <a href="#">
+                <figure><img src="../../img/dummy/02.jpg" height="40" width="40" alt="dummy img"></figure><span class="title">おでかけサマーグッズプレゼント!!!!</span><small class="timestamp">2014/08/06</small>
+              </a>
+            </li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="readed"><a href="#"><span class="title">サンプルテキストサンプルテキストサンプルテキスト</span><small class="timestamp">12:00</small></a></li>
+            <li class="showAll"><a href="#" class="jsMessageToggle"><small>これ以前のメッセージ6件</small></a></li>
+          <!-- /.messageListInner --></ul>
+        </li>
+      <!-- /.messageList --></ul>
+    <!-- /.messageWrap --></section>
+<% end %>

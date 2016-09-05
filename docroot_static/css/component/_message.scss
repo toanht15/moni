@@ -1,0 +1,411 @@
+article>.messageWrap {
+  padding: 14px 14px 0;
+  margin: auto;
+  background: #FFF;
+  border: 1px solid $borderC;
+  position: relative;
+
+  .hd2 {
+    width: 600px;
+    margin: 10px auto;
+  }
+  .message,
+  .campaign {
+    width: 600px;
+    margin: 0 auto 15px;
+  }
+  .toList {
+    position: fixed;
+
+    a {
+      display: block;
+      background: url(../img/base/iconArrowL1.png) no-repeat center #ccc;
+      width: 50px;
+      height: 50px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .loading img {
+    margin: 0;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.message {
+  background: #FFF;
+  border: 1px solid $borderC;
+  margin-bottom: 15px;
+
+  .btnSet {
+    margin-bottom: 10px;
+  }
+  .messageImg {
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .messageText {
+    margin: 10px 9px;
+    word-break: break-all;
+  }
+  .messageDate {
+    margin: 0 9px 10px;
+    text-align: right;
+  }
+  .commonTableList1 {
+    margin: 10px 9px;
+  }
+  .module {
+    margin: 10px 9px;
+
+    dt {
+      font-weight: bold;
+      margin-bottom: 5px;
+
+      .num {
+        display: block;
+      }
+    }
+    dd {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid $borderC;
+
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      select {
+        width: 100%;
+      }
+    }
+    .itemList {
+
+      li {
+        margin: 10px 0;
+
+        textarea {
+          display: block;
+          margin-left: 23px;
+          width: 556px;
+          height: 100px;
+        }
+      }
+    }
+  }
+  .messageInner {
+    margin: 20px 20px 10px;
+    border: 1px solid $borderC;
+    border-radius: 6px;
+    padding: 19px;
+    background-color: #FFF;
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+
+  @at-root {
+    .displaySP {
+
+      .btnSet {
+        margin-bottom: 0;
+
+        &>* {
+          margin-bottom: 10px;
+        }
+      }
+      .commonTableList1 {
+
+        li {
+          display: block;
+        }
+        .title1 {
+          padding: 5px;
+          display: block;
+          width: auto;
+          border-right: none;
+          margin: 0;
+        }
+        .itme1 {
+          padding: 5px;
+          display: block;
+          margin: 0;
+        }
+        .itemEdit {
+          margin: auto;
+          padding: 5px;
+          display: block;
+        }
+        [type="text"],
+        [type="password"],
+        [type="url"],
+        [type="email"] {
+          width: 256px;
+
+          &.name {
+            width: 70px;
+          }
+          &.num {
+            width: 40px;
+          }
+        }
+        textarea {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+      .module .itemList li textarea {
+        width: calc(100% - 23px);
+      }
+      .messageInner {
+        margin: 10px;
+        padding: 9px;
+        background-color: #FFF;
+
+        h1 {
+          font-size: 24px;
+        }
+        h2 {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    #{&}_thanks {
+      @extend .message;
+      background: #FAFAFA;
+
+      .messageInner {
+        background: url(../img/message/bgThanks1.png) no-repeat bottom right #fff;
+
+        h1 {
+          color: #ccc;
+        }
+      }
+    }
+    #{&}_win {
+      @extend .message;
+      background: #FEF2E3;
+
+      .messageInner {
+        background: url(../img/message/bgWin1.png) no-repeat bottom right #fff;
+
+        h1 {
+          color: #FAB561;
+        }
+      }
+    }
+  }
+  .fangate {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .fangateimg {
+      width: 120px;
+      height: 120px;
+      display: table-cell;
+      padding: 10px 10px 0 10px;
+      vertical-align: top;
+
+      img {
+        width: 120px;
+        height: 120px;
+        display: block;
+      }
+    }
+    .fangateAccount {
+      padding: 10px 10px 0 10px;
+      display: table-cell;
+      vertical-align: top;
+
+      .fangateName {
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+      }
+      small {
+        display: block;
+      }
+    }
+    .fangateSns {
+      margin-top: 15px;
+    }
+  }
+}
+
+.messageList {
+  width: 600px;
+  margin: 0 auto 15px;
+  // border-bottom: 1px solid $borderC;
+
+  &>li {
+    border: 1px solid $borderC;
+    margin-bottom: 10px;
+    border-top: none;
+    background: #FFF;
+  }
+  a {
+    width: 100%;
+    display: table;
+    padding: 10px 0;
+  }
+  .messageListInner {
+
+    li {
+      @extend .cf;
+      margin-left: 60px;
+      border-top: 1px solid $borderC;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .notRead {
+      // background: #F9F9E0;
+      font-weight: bold;
+    }
+    figure {
+      width: 40px;
+      height: 40px;
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 10px;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+    .title {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 10px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .timestamp {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: right;
+      padding-right: 10px;
+    }
+    .showAll {
+      border-top: none;
+      text-align: center;
+      margin: 0 5px 5px 70px;
+
+      a {
+        padding: 5px 0;
+        background: #EEE;
+        border-radius: 6px;
+      }
+      @at-root {
+        #{&}+* {
+          border-top: none;
+        }
+      }
+    }
+    .readed {
+      display: none;
+    }
+  }
+}
+.messageListNone {
+  width: 600px;
+  margin: 0 auto 15px;
+  border: 1px solid $borderC;
+  text-align: center;
+  padding: 35px 0 50px;
+  background: #FFF;
+
+  img {
+    display: block;
+    margin: 0 auto 30px;
+    width: auto;
+    height: 95px;
+  }
+}
+.messageUserWrap {
+  margin-bottom: 30px;
+  background: #FFF;
+
+  .messageUser {
+    padding: 9px 0;
+    width: 928px;
+    border: 1px solid $borderC;
+    display: table;
+
+    &>* {
+      vertical-align: middle;
+      display: table-cell;
+    }
+    figure {
+      width: 30px;
+      padding: 0 9px;
+
+      img {
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .nametext {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .edit {
+      width: 20px;
+      padding: 0 9px;
+
+      a {
+        display: block;
+        width: 15px;
+        height: 15px;
+        padding: 5px;
+        background: url(../img/base/iconGear2.png) no-repeat center;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-background-size: 15px;
+             -o-background-size: 15px;
+                background-size: 15px;
+      }
+    }
+  }
+  .messageSetting {
+    display: none;
+    border: 1px solid $borderC;
+    border-top: none;
+    text-align: center;
+    padding: 9px;
+    background: #eee;
+
+    dl {
+      margin-top: 20px;
+
+      dt {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      dd {
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+  }
+}

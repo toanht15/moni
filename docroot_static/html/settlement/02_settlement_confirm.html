@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_settlement_confirm / message</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <script src="../../js/brandco/Brandco.js"></script>
+  <script src="../../js/brandco/Brandco.net.js"></script>
+  <script src="../../js/brandco/Brandco.api.js"></script>
+  <script src="../../js/brandco/Brandco.helper.js"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../js/_unit.js"></script>
+
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #f3f3f3;
+      background-image: url(../../img/dummy/01.png);
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: repeat;
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: red;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: red;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: red;
+    }
+    body>footer, body>footer a {
+      color: red;
+    }
+
+  </style>
+
+  <link rel="icon" href="../../img/base/favicon.ico">
+
+</head>
+<body>
+
+  <article>
+    <section class="messageWrap">
+      <section class="message">
+        <h1 class="messageHd1">お客様の注文</h1>
+        <div class="messageOrder">
+          <div class="settlementInfo">
+            <p class="productImg"><img src="../../img/dummy/book.png" alt="健康検定ガイドブック"></p>
+
+            <div class="settlementInfoInner">
+              <h2 class="title">健康検定ガイドブック</h2>
+              <p class="price"><strong>2,160</strong>円（税込）</p>
+              <p class="number">数量
+                <span><strong>1</strong>点</span>
+              </p>
+            <!-- /.settlementInfoInner --></div>
+          <!-- /.settlementInfo --></div>
+          <dl class="total">
+            <dt>商品の小計：</dt>
+            <dd>2,160円</dd>
+            <dt>送料・手数料：</dt>
+            <dd>315円</dd>
+            <dt>注文合計：</dt>
+            <dd class="price"><strong>2,475</strong>円</dd>
+          <!-- /.total --></dl>
+          <p class="orderDate">注文日：2016年5月2日</p>
+
+          <section>
+            <h2 class="hd2">配送先情報</h2>
+            <p>〒444-4444<br>
+            神奈川県小平市強羅君津0-11-22<br>
+            定規天真爛漫坂 333<br>
+            電話番号：000-0000-0000</p>
+            <p>名前：アライド太郎</p>
+          </section>
+
+          <section>
+            <h2 class="hd2">請求先情報</h2>
+            <p>配送先情報と同じ</p>
+          </section>
+
+          <section>
+            <h2 class="hd2">お支払い方法</h2>
+            <p>クレジットカード決済</p>
+            <p class="ChoiceCrad"><span><img src="../../img/message/cardIcon_visa.png" alt="VISA"></span>下4桁 3333</p>
+          </section>
+
+          <div class="settlementBtnSet">
+            <p class="btn3"><a href="#" class="large1">注文を確定する</a></p>
+            <p class="cancel"><a href="#">注文内容を変更する</a></p>
+          <!-- /.settlementBtnSet --></div>
+          <p class="supplement1">※注文確定後のキャンセルはできません。<br>
+          ※配送先情報に誤りがある場合は商品をお届けできない可能性があります。<br>
+          入力内容に間違いが無いかご確認をお願いいたします。</p>
+        <!-- /.messageOrder --></div>
+        <p class="messageDate"><small>2014/06/25 10:57</small></p>
+      <!-- /.message --></section>
+    <!-- /.messageWrap --></section>
+
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+  </article>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by BRANDCo on MONIPLA</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+      <figure class="modalImgPreview">
+        <figcaption class="title">画像タイトル画像タイトル画像タイトル画像タイトル画像タイトル（タイトル省略なし）</figcaption>
+        <img src="../../img/dummy/imgWyswig.png" alt="img title">
+      <!-- /.modalImgPreview --></figure>
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    <!-- /.modalCont-medium.jsModalCont --></section>
+  <!-- /#modal1.modal1.jsModal --></div>
+
+<script>
+$(function(){
+  $('.jsAcMenu').on('change',function(){
+    var target = $(this).parents('li').find('.jsAcMenuTarget');
+
+    console.log(target);
+
+    $('.jsAcMenuTarget').not(target).css({
+       display: 'none',
+       height: 'auto'
+     }).animate({
+       height: 0
+     }, 500);
+
+     target.animate({
+        height: 0
+      }, 500, function(){
+        $(this).css({
+          display: 'block',
+          height: 'auto'
+        });
+      });
+   });
+});
+</script>
+
+</body>
+</html>

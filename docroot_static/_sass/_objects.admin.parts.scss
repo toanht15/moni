@@ -1,0 +1,106 @@
+.batchAction {
+  margin-bottom: 10px;
+  border: 1px solid $borderC;
+  padding: 5px 10px;
+  background: #eee;
+
+  label {
+
+    &:first-child {
+      padding-right: 14px;
+      margin-right: 25px;
+      border-right: 1px solid #9d9d9d;
+    }
+  }
+  .iconCheck3 {
+    padding-right: 14px;
+    margin-right: 25px;
+    border-right: 1px solid #9d9d9d;
+  }
+}
+.viewLimit {
+  text-align: right;
+  margin-bottom: 10px;
+
+  .viewLimitTitle {
+    margin-right: 10px;
+    color: #9d9d9d;
+  }
+  label {
+    color: #247CB6;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .surveyText {
+    position: relative;
+
+    &:hover .textBalloon1 {
+      display: block;
+    }
+  }
+}
+.outputApi {
+  margin-bottom: 10px;
+  border: 1px solid $borderC;
+
+  .labelModeAllied {
+    padding: 5px 10px;
+  }
+  .outputApiWrap {
+    @include cf;
+
+    dt {
+      float: left;
+      clear: both;
+      min-height: 30px;
+      width: 110px;
+      line-height: 30px;
+    }
+    dd {
+      float: left;
+      min-height: 30px;
+      line-height: 30px;
+    }
+    .surveyText {
+      position: relative;
+
+      &:hover .textBalloon1 {
+        display: block;
+      }
+    }
+    .confirmed {
+      margin-right: 0;
+    }
+  }
+  .confirmed {
+    margin-right: 10px;
+
+    strong {
+      font-weight: bold;
+      margin: 0 5px;
+      font-size: 16px;
+    }
+  }
+  .btn2 {
+    margin-right: 10px;
+  }
+  .url {
+    font-size: 11px;
+  }
+}
+%adminCheckBase {
+  padding: 10px;
+  border: 1px solid $borderC;
+  background: #eee;
+
+  ul {
+    position: relative;
+    text-align: center;
+
+    li {
+      margin: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'pageStatus' : %>logout<% end %>
+
+<% block 'singleContents' : %>
+    <h1 class="singleWrapHd1">新規登録</h1>
+    <section>
+      <h1 class="hd1">GDOクラブ会員情報で新規登録（無料）</h1>
+      <div class="signupThirdParty">
+        <p class="btnGDO"><a href="#"><span>GDOクラブ会員</span></a></p>
+        <p><small>※上記よりご登録いただいた場合、氏名、メールアドレスをアライドアーキテクツ株式会社に提供することを承諾したものとみなします。</small></p>
+      <!-- /.signupThirdParty --></div>
+      <h1 class="hd1">お持ちのアカウントで新規登録（無料）</h1>
+      <ul class="signupSns">
+        <li class="btnSnsFb1"><a href="#" class="login1"><span class="inner">Facebook</span></a></li>
+        <li class="btnSnsTw1"><a href="#" class="login1"><span class="inner">Twitter</span></a></li>
+        <li class="btnSnsIn1"><a href="#" class="login1"><span class="inner">LinkedIn</span></a></li>
+        <li class="btnSnsLn1"><a href="#" class="login1"><span class="inner">LINE</span></a></li>
+        <li class="btnSnsIg1"><a href="#" class="login1"><span class="inner">Instagram</span></a></li>
+        <li class="btnSnsGp1"><a href="#" class="login1"><span class="inner">Google</span></a></li>
+        <li class="btnSnsYh1"><a href="#" class="login1"><span class="inner">Yahoo! JAPAN ID</span></a></li>
+      <!-- /.signupSns --></ul>
+      <h1 class="hd1">メールアドレスで新規登録（無料）</h1>
+      <form action="">
+        <ul class="addressJoin">
+          <li class="address"><input type="email" placeholder="メールアドレス"></li>
+          <li class="optin"><small><label><input type="checkbox" checked>アライドID・モニプラからのお知らせを受け取る</label></small></li>
+          <li class="btn3"><a href="#" class="large1">次へ</a></li>
+        </ul>
+        <p class="signupAttention"><p class="joinCommSiteLogin"><a href="#">アカウントをお持ちの方</a></p></p>
+      </form>
+      <p class="signupAttention">※本サービスは<a href="#"><img src="../../img/icon/iconAlliedID2.png" width="16" height="16" alt="Allied ID">Allied ID</a>をアカウント管理システムとして利用しています。</p>
+    </section>
+<% end %>

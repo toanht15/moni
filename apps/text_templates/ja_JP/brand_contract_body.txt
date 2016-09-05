@@ -1,0 +1,12 @@
+<p style="margin-bottom:20px;"><span style="line-height: 1.6;">平素は「<#BRAND_NAME>」</span>キャンペーン<span style="line-height: 1.6;">サイトをご利用下さり、誠にありがとうございます。</span></p>
+    <div class="ckeditorWrap">
+    <p>サイト開設以来、皆様にご利用いただきましたが、<br><span style="line-height: 1.6;">この度、キャンペーンの終了に伴い、サイトをクローズさせていただく運びとなりました。</span></p>
+    <p>つきましては、下記のスケジュールにて「<#BRAND_NAME>」キャンペーンサイトを<br>終了させていただきますことをお知らせ申し上げます。</p>
+    <p>&nbsp;</p>
+    <h3>終了に関するスケジュール</h3>
+    <p><#CLOSE_START_DATE>から<#CLOSE_END_DATE>まで<br>キャンペーンサイトへのログインができなくなり、キャンペーンや記事コンテンツへアクセスもできなくなります。</p>
+    <p><#CLOSE_END_DATETIME>を持ちましてサイトをクローズいたします</p>
+    <p>※ログインシステムに使用しているAlliedIDからは退会とはなりません。<br>お客さまのAlliedIDご登録情報につきましては、マイページ（ <a href="http://allied-id.com/my">http://allied-id.com/my</a> ） をご覧ください。</p>
+    <p>お客様にはご迷惑をお掛けいたしますが、何卒ご理解を賜りますようお願い申し上げます。<br>また、今後とも引き続き<#BRAND_NAME>をご愛顧賜りますよう、よろしくお願い申し上げます。</p>
+    <p>&nbsp;</p>
+</div>

@@ -1,0 +1,7 @@
+// 自分用のディレクトリ名を指定する。[name]を置換すること。
+AmazonS3:
+  AccessKey:AKIAJE4WOFRB7NRTZFSA
+  SecretKey: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
+  BucketName: dev-brandco-parts
+  TmpPath: dev-brandco/tmp/
+  ImagePath: dev-brandco/image/

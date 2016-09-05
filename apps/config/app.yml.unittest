@@ -1,0 +1,95 @@
+Protocol:
+  Secure: http
+  Normal: http
+Domain:
+  brandco: brandcotest.com
+  brandco_manager: manager.brandcotest.com
+  brandco_api: api.brandcotest.com
+  aaid: allied-id.moniplatest.com
+  brandco_static_track: static-track.brandcotest.com
+  brandco_tracker: track.brandcotest.com
+DBInfo:
+  main:
+    w: mysql://brandco:changeme@127.0.0.1/db_brandco
+    r: mysql://brandco:changeme@127.0.0.1/db_brandco
+  tracker:
+    w: mysql://brandco:changeme@127.0.0.1/db_brandco_track
+    r: mysql://brandco:changeme@127.0.0.1/db_brandco_track
+DB:
+  SQLLib: ${AAFW_DIR}/plugins/db_sql
+Store:
+  SchemaCacheInterval: 30
+ManagerIps:
+  0: "124.35.221.2"
+  1: "210.138.60.124"
+Log4php:
+  configFileName: logger_config.php
+  loggers:
+    app:
+      level: DEBUG
+    sql:
+      level: DEBUG
+    cv:
+      level: DEBUG
+    hipchat:
+      level: DEBUG
+  appenders:
+    app:
+      name: /tmp/brandco_app_%s.log
+    sql:
+      name: /tmp/brandco_sql_%s.log
+    cv:
+      name: /tmp/brandco_cv_%s.log
+    hipchat:
+      name: /tmp/brandco_hipchat_%s.log
+    emailTracker:
+      name: /tmp/brandco-tracker_email_%s.log
+ShortenURL:
+  user: aainc
+  apiKey: R_29ee7cfeb0396c22b965dfd315d34b02
+TemporaryDirectory: /tmp/
+UseCore: 1
+NewRelic:
+  use: 1
+  consoleApplicationName: brandco.dev.jp
+Analytics:
+  Status: Off
+  ID:
+  Domain:
+Static:
+  Url: //static-brandcotest.com
+Mail:
+  Default:
+    FromAddress: dummy@aainc.co.jp
+    BccAddress: dummy@aainc.co.jp
+    Envelope: dummy@aainc.co.jp
+    Charset: ISO-2022-JP
+    RealCharset: ISO-2022-JP-MS
+  Support: dummy@aainc.co.jp
+  KPI:
+    ToAddress: dummy@aainc.co.jp
+    CcAddress: dummy@aainc.co.jp
+M17N:
+  DefaultLanguage: ja_JP
+  DefaultCountry: JP
+  Mail:
+    ja_JP:
+      Charset: ISO-2022-JP
+      RealCharset: ISO-2022-JP-MS
+BasicCertification : 0
+Maintenance: 0
+DeclineIP:
+  0:"192.168.50.1"
+  1:"210.138.60.124"
+PersonalMachineIp:
+  0: "192.168.50.1"
+UtilityAPI: Off
+AdEbis:
+  Status: Off
+  Domain:
+HipChat:
+  Token:
+  Rooms:
+platform:
+  client_secret:
+SynBrandId: 1

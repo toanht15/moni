@@ -1,0 +1,1937 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>04_message_user / admin-cp-edit</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <script src="../../../../js/raty/jquery.raty.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+  <!-- olympus files -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../js/util.js"></script>
+
+  <!-- olympus header  -->
+  <header id="olympusHeader"><div id="olympusHeaderInner">
+    <div id="olympusHeaderContent">
+      <p id="logoOlympus">
+        <img src="../../img/olympus-imaging.jp/000000002.svg" alt="OLYMPUS" class="svg" />
+        <img src="../../img/olympus-imaging.jp/000000003.svg" alt="" class="svgSp" />
+        <img src="../../img/olympus-imaging.jp/000000004.gif" alt="" class="image" />
+      <!-- /#logoOlympus --></p>
+      <div id="logoOlympusSub">
+        <p><a href="http://www.olympus.co.jp/">Olympus Japan</a></p>
+        <p><a href="http://www.olympus-global.com/en/network/"><img src="../../img/olympus-imaging.jp/000000017.gif" alt="OLYMPUS" /></a></p>
+      <!-- /#logoOlympusSub --></div>
+      <p id="logoOlympusImaging">
+        <a href="http://olympus-imaging.jp/">
+          <img src="../../img/olympus-imaging.jp/000000005.svg" alt="OLYMPUS IMAGING" class="svg" />
+          <img src="../../img/olympus-imaging.jp/000000006.gif" alt="OLYMPUS IMAGING" class="image" />
+        </a>
+      </p>
+    <!-- /#olympusHeaderContent --></div>
+    <!-- /#olympusHeaderInner --></div>
+
+    <div id="olympusVoiceRecorderHeader">
+      <h1><img src="../../img/common/logo.gif" width="223"></h1>
+      <button id="btnOlympusMenu"><img src="../../img/common/btnMenu.gif" width="45"></button>
+      <nav id="olympusGlobalNav">
+        <ul>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/" class="nav1"><img src="../../img/common/btnGlobalNav1.gif" alt="TOP"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/introduce" class="nav2"><img src="../../img/common/btnGlobalNav2.gif" alt="なぜレコーダーが選ばれるの？"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/categories/use" class="nav3"><img src="../../img/common/btnGlobalNav3.gif" alt="ボイスレコーダー活用術"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/type" class="nav4"><img src="../../img/common/btnGlobalNav4.gif" alt="レコーダーのタイプ"></a></li>
+          <li><a href="http://www.voicerecorder.olympus-imaging.com/page/original" class="nav5"><img src="../../img/common/btnGlobalNav5.gif" alt="オリンパスのボイスレコーダーはここがすごい！"></a></li>
+          <li><span class="nav6"><img src="../../img/common/btnGlobalNav6_disable.gif" alt="どれ買うナビ"></span></li>
+          <li><span class="nav7"><img src="../../img/common/btnGlobalNav7_disable.gif" alt="レビュー"></span></li>
+          <li><a href="#" id="olympusGlobalNavClose"><img src="../../img/common/btnGlobalNav8.gif" alt="閉じる"></a></li>
+        </ul>
+      </nav>
+    <!-- /#olympusVoiceRecorderHeader --></div>
+  <!-- /#olympusHeader --></header>
+  <!-- / olympus header  -->
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+
+    <h1 class="hd1"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="campaign img" class="hdCampaignIcon"><span class="label2">登録完了</span><span class="hdInnerText">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が</span></h1>
+    <ul class="campaignAction">
+      <li class="setting"><a href="#">基本設定</a></li>
+      <li class="attract"><a href="#">集客設定</a></li>
+      <li class="stepedit"><a href="#">STEPグループ編集</a></li>
+      <li class="download"><a href="#">個人情報取得</a></li>
+      <li class="user"><a href="#">参加者一覧</a></li>
+      <li class="download"><a href="#">STEP6DL</a></li>
+      <li class="status"><span class="campaignTag">発表日：2014/6/17</span><span class="campaignTag">当選数：90,000</span></li>
+    </ul>
+
+    <section class="campaignFlowWrap">
+      <div class="campaignFlow">
+        <ul class="campaignFlowCont">
+          <li class="flowDetail_finished">
+            <h1>STEP1-3</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">２行ってどうなるの</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">モジュール</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail_finished --></li>
+          <li class="flowDetail_focus">
+            <h1>STEP4</h1>
+            <div class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/win1.png" width="16" height="16" alt="結果発表" class="hdModuleIcon">結果発表</dt>
+                <dd><span class="iconMail1"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">--</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></div>
+          <!-- /.flowDetail_focus --></li>
+          <li class="flowDetail">
+            <h1>STEP5</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/kakikomi1.png" width="16" height="16" alt="カキコミ" class="hdModuleIcon">カキコミ</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail --></li>
+          <li class="flowDetail">
+            <h1>STEP6</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/photo1.png" width="16" height="16" alt="フォト" class="hdModuleIcon">フォト</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail --></li>
+          <li class="flowDetail">
+            <h1>STEP7</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/mail1.png" width="16" height="16" alt="メッセージ" class="hdModuleIcon">メッセージ</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail --></li>
+          <li class="flowDetail">
+            <h1>STEP8</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/mail1.png" width="16" height="16" alt="メッセージ" class="hdModuleIcon">メッセージ</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail --></li>
+          <li class="flowDetail">
+            <h1>STEP *</h1>
+            <a class="moduleWrap">
+              <p class="addModule"><span class="linkAdd">追加する</span></p>
+            <!-- /.campaignModule1 --></a>
+          <!-- /.flowDetail --></li>
+        <!-- /.campaignFlowCont --></ul>
+      <!-- /.campaignFlow --></div>
+
+      <ul class="campaignFlowScroll">
+        <li class="flowPrev">←</li>
+        <li class="flowNext">→</li>
+      <!-- /.campaignFlowScroll --></ul>
+
+    <!-- /.campaignFlowWrap --></section>
+
+    <section class="campaignEditWrap">
+      <header class="campaignEditHeader">
+        <a href="#" class="campaignEditItem_finished">
+          <p class="messageEdit">
+            <span class="stepNum">1</span><span class="stepTitle">メッセージ作成</span>
+          <!-- /.messageEdit --></p>
+        <!-- /.campaignEditItem --></a>
+        <div class="campaignEditItem">
+          <p class="select">
+            <span class="stepNum">2</span><span class="stepTitle">対象ユーザー選択<small>当選者数：99,183,145人<br><a href="#">送信済：80人</a></small></span>
+          <!-- /.select--></p>
+          <p class="selectedUser">
+            <a href="#">
+              <small>送信対象</small><br><span class="userNum">--</span>人
+            </a>
+          <!-- /.selectedUser --></p>
+        <!-- /.campaignEditItem --></div>
+        <a href="#" class="campaignEditItem">
+          <p class="option">
+            <span class="stepTitle">オプション設定<br><small>・即時送信<br>・メール通知あり</small></span>
+          <!-- /.option --></p>
+        <!-- /.campaignEditHeader --></a>
+        <p class="btn3_area"><span class="jsOpenModal">送信</span></p>
+      <!-- /.campaignEditHeader --></header>
+      <section class="campaignEditCont">
+
+        <section class="userListWrap">
+
+          <section class="userList">
+            <div class="pager1">
+              <p><strong>「送信対象」</strong><strong>99,999,999</strong>件中<strong>2001</strong>件～<strong>2020</strong>件表示しています<a href="#"><small>全ユーザーを表示</small></a></p>
+              <ul>
+                <li class="first"><a href="#">最初のページヘ</a></li>
+                <li class="prev"><a href="#">前のページへ</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><span>6</span></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">99</a></li>
+                <li class="next"><a href="#">次のページへ</a></li>
+                <li class="last"><a href="#">最後のページヘ</a></li>
+              </ul>
+            <!-- /.pager1 --></div>
+            <div class="checkedUserWrap jsAreaToggleWrap">
+              <p class="checkedUser"><span class="iconCheck3">選択中<strong class="jsCountArea">99,999,999</strong>人</span><span class="btn3_area"><a href="#" class="jsAreaToggle">対象に入れる</a></span></p>
+              <p class="selectRandom">
+                <small class="or">or</small>
+                <span class="btn3"><a href="#modal1" class="small1 jsOpenModal">抽選する</a></span>
+              <!-- /.selectRandom --></p>
+              <p class="iconHelp">
+                <span class="text"></span>
+                <span class="textBalloon1">
+                  <span>絞り込まれたリスト全体から、<br>自動抽選で対象を抽出します</span>
+                <!-- /.textBalloon1 --></span>
+              <!-- /.iconHelp --></p>
+              <div class="checkedUserAction jsAreaToggleTarget">
+                <ul>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーにする</label></li>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーから外す</label></li>
+                </ul>
+                <p class="btnSet">
+                  <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                  <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                </p>
+              <!-- /.checkedUserAction --></div>
+            <!-- /.checkedUserWrap --></div>
+
+            <div class="userListMessage">
+              <p>このページ内のスレッド <strong class="num">50</strong> 件すべてが選択されています。<a href="#"><strong class="num">436</strong>件をすべて選択</a></p>
+            <!-- /.userListMessage --></div>
+            <div class="userListSearch jsSortItemTarget">
+              <ul class="userListSearchCont">
+                <li class="jsAreaToggleWrap">
+                  ID<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                    <div class="range jsCheckToggleWrap">
+                      <p><input type="text" placeholder="No." class="inputNo"></p>
+                      <p class="jsCheckToggleTarget"><span class="dash">～</span><input type="text" placeholder="No." class="inputNo"></p>
+                      <p><label class="check"><input type="checkbox" class="jsCheckToggle">範囲検索</label></p>
+                    <!-- /.range --></div>
+                    <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  history<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  SNS<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                    <ul>
+                      <li><label><input type="checkbox"><span class="iconFB2">Facebook</span>Facebook</label></li>
+                      <li><label><input type="checkbox"><span class="iconTW2">Twitter</span>Twitter</label></li>
+                      <li><label><input type="checkbox"><span class="iconIG2">Instagram</span>Google</label></li>
+                      <li><label><input type="checkbox"><span class="iconYH2">Yahoo!</span>Yahoo!</label></li>
+                      <li><label><input type="checkbox"><span class="iconGP2">Google</span>Google</label></li>
+                    </ul>
+                    <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Last<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Account<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  m / f<a href="#" class="btnArrowB1">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                    <ul>
+                      <li><label><input type="checkbox"><span class="iconSexM">男性</span>男性</label></li>
+                      <li><label><input type="checkbox"><span class="iconSexF">女性</span>女性</label></li>
+                      <li><label><input type="checkbox"><span class="iconSexN">未設定</span>未設定</label></li>
+                    </ul>
+                    <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  address<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  age<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  etc<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  hogehoge<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  fugafuga<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  piyopiyo<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q1<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q2<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q3<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q4<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q5<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" alt="account name" width="20" height="20"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+              </ul>
+            <!-- /userListSearch --></div>
+            <div class="userListCont">
+              <ul class="userName">
+                <li class="allUser"><input type="checkbox" class="jsCountAll" name="user"><a href="#" class="btnArrowB1 jsSortItem">絞り込む</a></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="Sasaki Akira">Sasaki Akira</label></li>
+                <li class="sendUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="久保田 康太郎">久保田 康太郎</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐村河内 昌樹">佐村河内 昌樹</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="勅使河原 麻里子">勅使河原 麻…</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="Ishikawa Goemon">Ishikawa G…</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="岡田 智">岡田 智</label></li>
+                <li class="sendUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐藤 徹">佐藤 徹</label></li>
+                <li class="sendUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="荒木 毅">荒木 毅</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="千葉 薫">千葉 薫</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="高橋 正弘">高橋 正弘</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="岡田 智">岡田 智</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐藤 徹">佐藤 徹</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="荒木 毅">荒木 毅</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="千葉 薫">千葉 薫</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="高橋 正弘">高橋 正弘</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="岡田 智">岡田 智</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐藤 徹">佐藤 徹</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="荒木 毅">荒木 毅</label></li>
+                <li class="sendUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="千葉 薫">千葉 薫</label></li>
+                <li class="checkedUser"><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="高橋 正弘">高橋 正弘</label></li>
+              </ul>
+              <div class="itemTableWrap">
+                <table class="itemTable">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        評価<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul class="order">
+                            <li><a href="#">[A-Z↓] 昇順</a></li>
+                            <li><a href="#">[Z-A↑] 降順</a></li>
+                          <!-- /.order --></ul>
+                          <ul>
+                            <li><label><input type="checkbox">5</label></li>
+                            <li><label><input type="checkbox">4</label></li>
+                            <li><label><input type="checkbox">3</label></li>
+                            <li><label><input type="checkbox">2</label></li>
+                            <li><label><input type="checkbox">1</label></li>
+                            <li><label><input type="checkbox">未設定</label></li>
+                            <li><label><input type="checkbox">ブロックユーザー</label></li>
+                          </ul>
+                          <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        会員ID<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul class="order">
+                            <li><a href="#">[A-Z↓] 昇順</a></li>
+                            <li><a href="#">[Z-A↑] 降順</a></li>
+                          <!-- /.order --></ul>
+                          <p><textarea placeholder="No." class="pluralItems"></textarea><small class="supplement1">※カンマ/改行区切りで複数指定可</small></p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        性別<a href="#" class="iconBtnSort jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox"><span class="iconSexM">男性</span>男性</label></li>
+                            <li><label><input type="checkbox"><span class="iconSexF">女性</span>女性</label></li>
+                            <li><label><input type="checkbox"><span class="iconSexN">未設定</span>未設定</label></li>
+                          </ul>
+                          <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          <!-- /.btnSet --></p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        都道府県<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul class="prefectures">
+                            <li><label><input type="checkbox">北海道</label></li>
+                            <li><label><input type="checkbox">青森</label></li>
+                            <li><label><input type="checkbox">岩手</label></li>
+                            <li><label><input type="checkbox">秋田</label></li>
+                            <li><label><input type="checkbox">山形</label></li>
+                            <li><label><input type="checkbox">福島</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                            <li><label><input type="checkbox">ほげほげ</label></li>
+                          </ul>
+                          <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        年齢<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <div class="range">
+                            <p><input type="text" placeholder="0" class="inputNum">歳<span class="dash">～</span><input type="text" placeholder="99" class="inputNum">歳<label class="check"><input type="checkbox">未設定</label></p>
+                          <!-- /.range --></div>
+                          <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        登録期間<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <div class="range jsCheckToggleWrap">
+                            <p><input type="text" class="jsDate inputDate" placeholder="年/月/日"></p>
+                            <p class="jsCheckToggleTarget"><span class="dash">～</span><input type="text" class="jsDate inputDate" placeholder="年/月/日"></p>
+                            <p><label class="check"><input type="checkbox" class="jsCheckToggle">範囲検索</label></p>
+                          <!-- /.range --></div>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th colspan="7">
+                        SNS連携 / 友達・フォロワー数
+                      </th>
+                      <th colspan="2">
+                        <span class="iconFB2">Facebook</span>いいね！
+                      </th>
+                      <th>
+                        <span class="iconTW2">Twitter</span>フォロー
+                      </th>
+                      <th>
+                        <span class="iconIG2">Instagram</span>フォロー
+                      </th>
+                      <th>
+                        <span class="iconYT2">Youtube</span>登録
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        最終ログイン日<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <div class="range jsCheckToggleWrap">
+                            <p>
+                              <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+                              <select name="openTimeHH" class="inputTime">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                              </select
+                              ><span class="coron">:</span
+                              ><select name="openTimeMM" class="inputTime">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="33">33</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                                <option value="46">46</option>
+                                <option value="47">47</option>
+                                <option value="48">48</option>
+                                <option value="49">49</option>
+                                <option value="50">50</option>
+                                <option value="51">51</option>
+                                <option value="52">52</option>
+                                <option value="53">53</option>
+                                <option value="54">54</option>
+                                <option value="55">55</option>
+                                <option value="56">56</option>
+                                <option value="57">57</option>
+                                <option value="58">58</option>
+                                <option value="59">59</option>
+                              </select>
+                            </p>
+                            <p class="jsCheckToggleTarget">
+                              <span class="dash">～</span><input type="text" class="jsDate inputDate" placeholder="年/月/日">
+                              <select name="openTimeHH" class="inputTime">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                              </select
+                              ><span class="coron">:</span
+                              ><select name="openTimeMM" class="inputTime">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="33">33</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                                <option value="46">46</option>
+                                <option value="47">47</option>
+                                <option value="48">48</option>
+                                <option value="49">49</option>
+                                <option value="50">50</option>
+                                <option value="51">51</option>
+                                <option value="52">52</option>
+                                <option value="53">53</option>
+                                <option value="54">54</option>
+                                <option value="55">55</option>
+                                <option value="56">56</option>
+                                <option value="57">57</option>
+                                <option value="58">58</option>
+                                <option value="59">59</option>
+                              </select>
+                            </p>
+                          <!-- /.range --></div>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        投稿写真<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">Yes</label></li>
+                            <li><label><input type="checkbox">No</label></li>
+                            <li><label><input type="checkbox">その他</label></li>
+                            <li><label><input type="checkbox">フリー回答項目1</label></li>
+                            <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                          </ul>
+                          <p><input type="text" placeholder="キーワード"></p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        item<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">Yes</label></li>
+                            <li><label><input type="checkbox">No</label></li>
+                            <li><label><input type="checkbox">その他</label></li>
+                            <li><label><input type="checkbox">フリー回答項目1</label></li>
+                            <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                          </ul>
+                          <p><input type="text" placeholder="キーワード"></p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th rowspan="2" class="jsAreaToggleWrap">
+                        item<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">Yes</label></li>
+                            <li><label><input type="checkbox">No</label></li>
+                            <li><label><input type="checkbox">その他</label></li>
+                            <li><label><input type="checkbox">フリー回答項目1</label></li>
+                            <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                          </ul>
+                          <p><input type="text" placeholder="キーワード"></p>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        <span class="iconFB2">Facebook</span><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">連携済み</label></li>
+                            <li><label><input type="checkbox">未連携</label></li>
+                          </ul>
+                          <div class="range">
+                            <p>友達数</p>
+                            <p><input type="text" class="inputFriends"><span class="dash">～</span><input type="text" class="inputFriends"></p>
+                          <!-- /.range --></div>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        <span class="iconTW2">Twitter</span><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">連携済み</label></li>
+                            <li><label><input type="checkbox">未連携</label></li>
+                          </ul>
+                          <div class="range">
+                            <p>フォロワー数</p>
+                            <p><input type="text" class="inputFriends"><span class="dash">～</span><input type="text" class="inputFriends"></p>
+                          <!-- /.range --></div>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        <span class="iconIG2">Instagram</span><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">連携済み</label></li>
+                            <li><label><input type="checkbox">未連携</label></li>
+                          </ul>
+                          <div class="range">
+                            <p>フォロワー数</p>
+                            <p><input type="text" class="inputFriends"><span class="dash">～</span><input type="text" class="inputFriends"></p>
+                          <!-- /.range --></div>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        <span class="iconYH2">Yahoo! JAPAN</span><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">連携済み</label></li>
+                            <li><label><input type="checkbox">未連携</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        <span class="iconGP2">Google+</span><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">連携済み</label></li>
+                            <li><label><input type="checkbox">未連携</label></li>
+                          </ul>
+                          <div class="range">
+                            <p>フォロワー数</p>
+                            <p><input type="text" class="inputFriends"><span class="dash">～</span><input type="text" class="inputFriends"></p>
+                          <!-- /.range --></div>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        <span class="iconGdo2">GDO</span><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">連携済み</label></li>
+                            <li><label><input type="checkbox">未連携</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="snsAccount jsAreaToggleWrap">
+                        合計<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <div class="range">
+                            <p>友達数</p>
+                            <p><input type="text" class="inputFriends"><span class="dash">～</span><input type="text" class="inputFriends"></p>
+                          <!-- /.range --></div>
+                          <div class="range">
+                            <p>連携SNS数</p>
+                            <p><input type="text" class="inputFriends"><span class="dash">～</span><input type="text" class="inputFriends"></p>
+                          <!-- /.range --></div>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      <!-- /.snsAccount --></th>
+                      <th class="jsAreaToggleWrap">
+                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="snsAccountName">アカウント名が入るアカウント名が入るアカウント名が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">いいね！済</label></li>
+                            <li><label><input type="checkbox">いいね！未</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap">
+                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/v/t1.0-1/c12.12.155.155/547722_212722468890691_1385445315_n.jpg?oh=eba39d51d61029889ed1859a42d152a0&oe=565D3A23&__gda__=1453148193_0ba618910c6008dc4d0941c676960baa" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="snsAccountName">アカウント名が入るアカウント名が入るアカウント名が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">いいね！済</label></li>
+                            <li><label><input type="checkbox">いいね！未</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap">
+                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="snsAccountName">アカウント名が入るアカウント名が入るアカウント名が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">いいね！済</label></li>
+                            <li><label><input type="checkbox">いいね！未</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap">
+                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="snsAccountName">アカウント名が入るアカウント名が入るアカウント名が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">いいね！済</label></li>
+                            <li><label><input type="checkbox">いいね！未</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap">
+                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget">
+                          <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                          <p class="snsAccountName">アカウント名が入るアカウント名が入るアカウント名が入る</p>
+                          <ul>
+                            <li><label><input type="checkbox">いいね！済</label></li>
+                            <li><label><input type="checkbox">いいね！未</label></li>
+                          </ul>
+                          <p class="btnSet">
+                            <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                            <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                          </p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_0.png" width="24" height="24" alt="rating 0">-
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="0"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>765</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>125</td>
+                      <td><a href="#" class="iconIG2">Instagram</a>50</td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>126</td>
+                      <td><a href="#" class="iconGdo2">GDO</a></td>
+                      <td>1,066</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td><a href="#"><img src="../../../../img/dummy/02.jpg" alt="img name" class="postPreview">img_name.jpg</a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="sendUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_1.png" width="24" height="24" alt="rating 1">1
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="1"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexN">未設定</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>265</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>54</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td></td>
+                      <td></td>
+                      <td>319</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td><a href="#"><img src="../../../../img/dummy/03.jpg" alt="img name" class="postPreview">img_name.jpg</a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_2.png" width="24" height="24" alt="rating 2">2
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="2"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexN">未設定</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>56</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="#" class="iconGP2">Google+</a>12</td>
+                      <td></td>
+                      <td>68</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td><a href="#"><img src="../../../../img/dummy/CPmain.jpg" alt="img name" class="postPreview">img_name.jpg</a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_3.png" width="24" height="24" alt="rating 3">3
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="3"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="#" class="iconGP2">Google+</a>25</td>
+                      <td></td>
+                      <td>25</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_4.png" width="24" height="24" alt="rating 4">4
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="4"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_5.png" width="24" height="24" alt="rating 5">5
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="5"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexF">女性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td><a href="#" class="iconTW2">Twitter</a>36</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>98</td>
+                      <td></td>
+                      <td>134</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="sendUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconBlockOn.png" width="18" height="18" alt="block user">
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="0"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>425</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>361</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>156</td>
+                      <td></td>
+                      <td>969</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="sendUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_0.png" width="24" height="24" alt="rating 0">-
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="0"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexN">未設定</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="#" class="iconGP2">Google+</a>54</td>
+                      <td></td>
+                      <td>54</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_1.png" width="24" height="24" alt="rating 1">1
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="1"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexF">女性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>196</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>69</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>77</td>
+                      <td></td>
+                      <td>342</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_2.png" width="24" height="24" alt="rating 2">2
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="2"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexN">未設定</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td><a href="#" class="iconTW2">Twitter</a>65</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>16</td>
+                      <td></td>
+                      <td>113</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_3.png" width="24" height="24" alt="rating 3">3
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="3"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>189</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>564</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>32</td>
+                      <td></td>
+                      <td>786</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_4.png" width="24" height="24" alt="rating 4">4
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="4"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td><span class="attention1">NEW</span></td>
+                      <td><a href="#" class="iconFB2">Facebook</a>189</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>564</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>32</td>
+                      <td></td>
+                      <td>786</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_5.png" width="24" height="24" alt="rating 5">5
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="5"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>54</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>80</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>134</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconBlockOn.png" width="18" height="18" alt="block user">
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="0"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_0.png" width="24" height="24" alt="rating 0">-
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="0"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td><a href="#" class="iconTW2">Twitter</a>998</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td></td>
+                      <td></td>
+                      <td>998</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_1.png" width="24" height="24" alt="rating 1">1
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="1"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexN">未設定</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>236</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>10</td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>55</td>
+                      <td></td>
+                      <td>190</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_2.png" width="24" height="24" alt="rating 2">2
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="2"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexF">女性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td><a href="#" class="iconTW2">Twitter</a>66</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>66</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_3.png" width="24" height="24" alt="rating 3">3
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="3"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexF">女性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="#" class="iconYH2">Yahoo! JAPAN</a></td>
+                      <td><a href="#" class="iconGP2">Google+</a>32</td>
+                      <td></td>
+                      <td>32</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="sendUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_4.png" width="24" height="24" alt="rating 4">4
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="4"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexF">女性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>565</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>565</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="checkedUser">
+                      <td class="userRating">
+                        <img src="../../../../img/raty/iconStar_5.png" width="24" height="24" alt="rating 5">5
+                        <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="5"></span></p>
+                      <!-- /.userRating --></td>
+                      <td>0000</td>
+                      <td><span class="iconSexM">男性</span></td>
+                      <td>東京</td>
+                      <td>99</td>
+                      <td>６ヶ月前</td>
+                      <td><a href="#" class="iconFB2">Facebook</a>286</td>
+                      <td><a href="#" class="iconTW2">Twitter</a>105</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>391</td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td></td>
+                      <td><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" width="20" height="20" alt="アカウント名が入るアカウント名が入るアカウント名が入る"></td>
+                      <td>一週間前</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                <!-- /.itemTable --></table>
+              <!-- /.itemTableWrap --></div>
+            <!-- /.userListCont --></div>
+
+            <ul class="tablink2">
+              <li class="current"><span>プロフィール</span></li>
+              <li><a href="#">参加状況</a></li>
+              <li><a href="#">アンケート回答内容</a></li>
+            </ul>
+
+            <div class="checkedUserWrap jsAreaToggleWrap">
+              <p class="checkedUser"><span class="iconCheck3">選択中<strong class="jsCountArea">99,999,999</strong>人</span><span class="btn3_area"><a href="#" class="jsAreaToggle">対象に入れる</a></span></p>
+              <p class="selectRandom">
+                <small class="or">or</small>
+                <span class="btn3"><a href="#modal1" class="small1 jsOpenModal">抽選する</a></span>
+              <!-- /.selectRandom --></p>
+            <p class="iconHelp">
+              <span class="text"></span>
+              <span class="textBalloon1">
+                <span>絞り込まれたリスト全体から、<br>自動抽選で対象を抽出します</span>
+              <!-- /.textBalloon1 --></span>
+            <!-- /.iconHelp --></p>
+              <div class="checkedUserAction jsAreaToggleTarget">
+                <ul>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーにする</label></li>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーから外す</label></li>
+                </ul>
+                <p class="btnSet">
+                  <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                  <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                </p>
+              <!-- /.checkedUserAction --></div>
+            <!-- /.checkedUserWrap --></div>
+
+            <div class="pager1">
+              <p><strong>「送信対象」</strong><strong>99,999,999</strong>件中<strong>2001</strong>件～<strong>2020</strong>件表示しています<a href="#"><small>全ユーザーを表示</small></a></p>
+              <ul>
+                <li class="first"><a href="#">最初のページヘ</a></li>
+                <li class="prev"><a href="#">前のページへ</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><span>6</span></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">99</a></li>
+                <li class="next"><a href="#">次のページへ</a></li>
+                <li class="last"><a href="#">最後のページヘ</a></li>
+              </ul>
+            <!-- /.pager1 --></div>
+            <p class="showItemNum">
+              表示件数
+              <select name="" id="">
+                <option value="#" selected>20件</option>
+                <option value="#" selected>50件</option>
+                <option value="#" selected>100件</option>
+              </select>
+              <span class="btn2"><a href="#" class="small1">反映</a></span>
+            <!-- /.showItemNum --></p>
+
+          <!-- /.userListWrap --></section>
+        <!-- /.userListWrap --></section>
+      <!-- /.campaignEditCont --></section>
+      <footer class="moduleCheck">
+        <ul>
+          <li class="btn2"><a href="#" class="small1">下書き保存</a></li>
+          <li class="btn3"><a href="#" class="">内容確定</a></li>
+        </ul>
+      <!-- /.moduleCheck --></footer>
+    <!-- /.campaignEditWrap --></section>
+
+  </article>
+  <!-- olympus footer  -->
+  <footer id="olympusFooter">
+    <ul class="snsBtns-btn">
+      <li>
+        <div id="fb-root" data-appid = "749555551767856"></div>
+        <div class="fb-like" data-href="http://www.voicerecorder.olympus-imaging.com/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+      </li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+    <!-- /.snsBtns --></ul>
+
+    <ul class="olympusLinks">
+      <li><a href="http://olympus-imaging.jp/notice/policy.html" target="_blank">ご利用条件</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">お問い合わせ</a></li>
+      <li><a href="http://olympus-imaging.jp/contact/" target="_blank">会社概要</a></li>
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/page/site">本サイトについて</a></li>
+    </ul>
+    <p class="copyright">© <script type="text/javascript">
+    <!--
+    myD = new Date();
+    myYear = myD.getYear();
+    myYears = (myYear < 2000) ? myYear + 1900 : myYear;
+    document.write(myYears);
+    -->
+    </script> Olympus Corporation<br>Powered by monipla</p>
+    <ul class="olympusMoniplaLinks">
+      <li><a href="http://www.voicerecorder.olympus-imaging.com/inquiry/">モニプラお問い合わせ</a></li>
+      <li><a href="//allied-id.com/agreement" target="_blank">利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    </ul>
+  <!-- /#olympusFooter --></footer>
+  <!-- / olympus footer  -->
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+      <h1>抽選する</h1>
+      <div class="modalUserRandomSelect">
+        <p>当選者数<input type="text" value="100" class="inputNum">名様<small>（参加完了：<strong>4,962</strong>名）</small></p>
+        <dl class="randomOption">
+          <dt>抽選補助条件</dt>
+          <dd><label><input type="checkbox" checked>住所重複を除外</label></dd>
+          <dd><label><input type="checkbox">何かその他条件が入る</label></dd>
+        <!-- /.randomOption --></dl>
+        <p class="supplement1">※抽選後、住所重複や退会などにより対象とならないユーザーが出た場合は設定人数に満たなくなります。再度の抽選をお願いします。</p>
+      <!-- /.modalUserRandomSelect --></div>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal">この条件で抽出</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+  <script>
+
+    jQuery(function(){
+      $.datepicker.setDefaults($.datepicker.regional['ja']);
+      $(".jsDate").datepicker();
+
+      // star rating
+      $('.starRating').raty({
+        size: 20,
+        path: '../../../../img/raty/',
+        starOff: 'iconStar_0.png',
+        starOn: 'iconStar_5.png',
+        cancelOff : 'iconResetOff.png',
+        cancelOn  : 'iconResetOn.png',
+        cancel: true,
+        cancelPlace: 'right',
+        score: function() {
+          return $(this).attr('data-score');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+</html>

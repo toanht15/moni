@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_list_insta / pages</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/bi/jquery-barIndicator.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/_unit.js"></script>
+    <style>
+        /* site background */
+        
+        body {
+            background-color: #f3f3f3;
+            background-image: url(../../img/dummy/01.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+        }
+        /* panel title color */
+        
+        .contBoxMain h1 {
+            background-color: red;
+        }
+        /* site title color */
+        
+        .gnavi h1 {
+            color: red;
+        }
+        /* nav link color */
+        
+        .gnavi li a {
+            color: red;
+        }
+        
+        body>footer,
+        body>footer a {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=604939886244009&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+
+    <header>
+        <section class="account">
+            <ul>
+                <li class="accountName">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+                <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+                <!-- <li class="accountLogo"><a href="#"><img src="../../img/base/imgLogo_w.png" width="111" height="18" alt=""></a></li> -->
+            </ul>
+        <!-- /.account --></section>
+        <section class="company">
+            <div class="companyName">
+                <p class="logo">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" alt="トクホの伊右衛門 特茶">
+                    </a>
+                </p>
+                <h1>サンプルテキストサンプルテキストサンプルテキストサンプルテキ</h1>
+                <p class="spGnavBtn"><a href="#side-menu" class="syn-notice jsMenuTrigger">MENU</a></p>
+            <!-- /.companyName --></div>
+            <nav class="gnavi">
+                <ul class="jsGnavi">
+                    <li><a href="#">サンプルテキストサンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキストサンプル</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                    <li><a href="#">サンプルテキストサンプル</a></li>
+                    <li><a href="#">サンプルテキストサンプル</a></li>
+                    <li><a href="#">サンプルテキスト</a></li>
+                </ul>
+                <a href="#" class="openLink">0</a>
+            <!-- /.gnavi --></nav>
+        <!-- /.company --></section>
+    </header>
+
+    <article class="mainCol">
+        <div class="mainContWrap">
+            <section class="pageWrap">
+                <header>
+                    <h1>カテゴリータイトルカテゴリータイトルカテゴリータイトルカテゴリータイ (35L)</h1>
+                </header>
+
+                <ul class="snsGList">
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAMXe3Rk-OW/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                        <div class="actionArea">
+                            <p class="instaLikes">1,800</p>
+                        <!-- /.actionArea --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAMHQUIrGY6/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAL4bmuSqqM/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAIoDc4RcYO/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAG8zh7nT9d/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAKjD6xHJEg/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAKRxF-ncvN/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAJUvleo9MM/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAJkGQIkOXM/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAJuwCALnnJ/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAJ6E37EFLx/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                    <li>
+                        <div class="instaPhotoWrap">
+                            <a href="#modal1" class="jsOpenModal">
+                                <p class="instaPhoto">
+                                    <img src="https://www.instagram.com/p/BAIeTw7EFH7/media/?size=m" alt="">
+                                </p>
+                                <p class="inText">
+                                    <span class="userInfo"><span><img src="../../img/base/imgUser1.jpg" height="25" width="25" alt=""></span><span>sato.tetsuhiro</span></span>コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！コメント入るよ！</p>
+                            </a>
+                        <!-- /.instaPhoto --></div>
+                    </li>
+                </ul>
+
+                <ul class="pager2">
+                    <li class="prev"><a href="#" class="iconPrev1">前のページ</a></li>
+                    <li class="next"><a href="#" class="iconNext1">次のページ</a></li>
+                <!-- /.pager2 --></ul>
+
+            <!-- /.bredlink1 --></nav>
+                <footer>
+                    <ul class="snsBtns-box">
+                        <li>
+                            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                        </li>
+                        <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li>
+                        <li>
+                            <div class="g-plusone" data-size="tall"></div>
+                        </li>
+                        <li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span></li>
+                    <!-- /.snsBtns-box --></ul>
+                </footer>
+            <!-- /.pageWrap --></section>
+
+            <nav class="bredlink1">
+                <ul>
+                    <li class="home"><a href="#">HOME</a></li>
+                    <li><a href="#">親カテゴリータイトル親カテゴリータイトル親カテゴリータイトル親カテゴリ</a></li>
+                    <li><a href="#">子カテゴリータイトル子カテゴリータイトル子カテゴリータイトル子カテゴリ</a></li>
+                    <li><a href="#">孫カテゴリータイトル孫カテゴリータイトル孫カテゴリータイトル孫カテゴリ</a></li>
+                    <li class="current"><span>ページタイトルページタイトルページタイトルページタイトルページタイトル</span></li>
+                </ul>
+            <!-- /.bredlink1 --></nav>
+        <!-- /.mainContWrap --></div>
+
+        <aside class="sideCol jsStamp">
+
+            <nav class="sideNavi">
+                <ul>
+                    <li><a href="#">親カテゴリー1</a></li>
+                    <li><a href="#">親カテゴリー親カテゴリー親カテゴリー親カテゴリー2</a></li>
+                    <li>
+                        <span>親カテゴリー3</span>
+                        <ul class="sideNaviInner">
+                            <li>
+                                <a href="#">親カテゴリー3 Top</a>
+                                <ul>
+                                    <li><a href="#">子カテゴリー3-1</a></li>
+                                    <li><a href="#">子カテゴリー3-2</a></li>
+                                </ul>
+                            </li>
+                        <!-- /.sideNaviInner --></ul>
+                    </li>
+                    <li>
+                        <span>親カテゴリー4</span>
+                        <ul class="sideNaviInner">
+                            <li>
+                                <a href="#">親カテゴリー4 Top</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">子カテゴリー4-1</a>
+                                        <ul>
+                                            <li><a href="#">孫カテゴリー孫カテゴリー孫カテゴリー4-1-1</a></li>
+                                            <li><a href="#">孫カテゴリー4-1-2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">子カテゴリー4-2</a></li>
+                                </ul>
+                            </li>
+                        <!-- /.sideNaviInner --></ul>
+                    </li>
+                    <li><a href="#">親カテゴリー5</a></li>
+                </ul>
+            <!-- /.sideNavi --></nav>
+
+            <section class="contBoxSide boxSizeSmall">
+                <div class="fanCounter">
+                    <h1><strong>99,999,999</strong>人</h1>
+                <!-- /.fanCounter --></div>
+                <ul class="snsBtns-btn">
+                    <li>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </li>
+                    <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li>
+                    <li>
+                        <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+                    </li>
+                    <li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});</script></span></li>
+                <!-- /.snsBtns-btn --></ul>
+            <!-- /.contBoxSide-->
+            </section>
+            <section class="contBoxSide-snsList boxSizeSmall">
+                <h1>公式SNSアカウント</h1>
+                <ul>
+                    <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsFB1.png" alt="facebook" width="22"></span><span class="snsTitle">サンプルテキスト</span></a></li>
+                    <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsTW1.png" alt="twitter" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+                    <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsYT1.png" alt="Youtube" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+                    <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsRss1.png" alt="RSS" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+                    <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsIG1.png" alt="instagram" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+                </ul>
+            <!-- /.contBoxSide-->
+            </section>
+            <nav class="sideNavi">
+                <h1>menu title</h1>
+                <ul>
+                    <li><a href="#">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</a></li>
+                    <li><a href="#">menu link</a></li>
+                    <li><a href="#">menu link</a></li>
+                    <li><a href="#">menu link</a></li>
+                    <li><a href="#">menu link</a></li>
+                    <li><a href="#">menu link</a></li>
+                </ul>
+            </nav>
+            <nav class="sideNavi">
+                <h1><img src="../../img/dummy/03.jpg" alt="dummy img"></h1>
+                <ul>
+                    <li><a href="#">メニューに画像入れるとこうなる</a></li>
+                    <li><a href="#">menu link</a></li>
+                    <li><a href="#">menu link</a></li>
+                </ul>
+            </nav>
+            <section class="contBoxSide">
+                <a href="#" class="bannerArea">
+                    <img src="../../img/dummy/02.jpg" height="60" alt="dummy">
+                </a>
+            <!-- /.contBoxSide-->
+            </section>
+            <section class="contBoxSide">
+                <a href="#" class="bannerArea">
+                    <img src="../../img/dummy/02.jpg" height="60" alt="dummy">
+                </a>
+            <!-- /.contBoxSide-->
+            </section>
+        <!-- /.sideCol --></aside>
+        <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+    </article>
+
+    <footer>
+        <div class="copyright">
+            <ul class="links">
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+            </ul>
+            <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+        <!-- /.copyright --></div>
+        <ul class="links">
+            <li><a href="#">モニプラ出展利用規約</a></li>
+            <li><a href="#">アライドID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+        <p class="poweredBy"><small>Powered by monipla</small></p>
+    </footer>
+    <div class="modal1 jsModal" id="modal1">
+        <section class="modalCont-ig jsModalCont">
+            <div class="modalIg">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:8px;">
+                        <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
+                            <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                        </div>
+                        <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BAMXe3Rk-OW/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">お土産を買いに行ったのですが、パリにも関わらずピナレロのparisが売ってませんでした。諦めてキャップを買いました。 現地ではLOOKとTIMEが多かったように思います。さすがフランスです。 尚、モンテカルロでぶち抜いてきたCIPOLLINI乗りのお爺さんがこの旅No.1格好良ロードバイカーでした。自転車と上手く付き合えば、後40年は遊べるよとの事でした。So cool!!! #france #paris #memory #roadbike #ロードバイク #derosa #デローザ #campagnolo #cycling #サイクリング #travel #landscape #scenery #view #adventure #exploring #fashion #style #art #beautiful #photo #wild #nature</a></p>
+                        <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">齋藤佑樹/yukisaitoさん(@uk3110insta)が投稿した写真 -
+                            <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-01-06T09:52:19+00:00">2016 1月 6 1:52午前 PST</time>
+                        </p>
+                    </div>
+                </blockquote>
+                <p class="panelComment">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br><a href="#">http://www.eshop.jillstuart-beauty.com/</a></p>
+            <!-- /.modalIg --></div>
+            <p>
+                <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+            </p>
+        <!-- /.modalCont-ig --></section>
+    <!-- /.modal1 --></div>
+
+    <script>
+        jQuery(function($){
+            var sideHeight = $('.sideCol').outerHeight();
+            $('.mainCol').css('min-height',sideHeight);
+        });
+    </script>
+</body>
+
+</html>

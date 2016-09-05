@@ -1,0 +1,583 @@
+.freeAreaWrap {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  min-height: 40px;
+  width: 100%;
+
+  .freeArea {
+    min-height: 40px;
+  }
+}
+
+.snsWrap {
+  width: 100%;
+}
+%snsBtnsBase {
+  text-align: center;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+  }
+  .line {
+    margin: 0;
+  }
+  iframe {
+    z-index: 110;
+  }
+}
+.snsBtns-box {
+  @extend %snsBtnsBase;
+
+  li.gp {
+    width:58px;
+  }
+}
+.snsBtns-btn {
+  @extend %snsBtnsBase;
+
+  li {
+    height: 20px;
+  }
+}
+
+.jsFarbtastic {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  z-index: 100;
+  display: none;
+  margin-top: -105px;
+  width: 195px;
+  height: 195px;
+}
+
+.commonList1 {
+  list-style: disc inside;
+  margin-bottom: 30px;
+
+  li {
+    margin-top: 10px;
+    padding-left: 1em;
+    text-indent: -1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.ruleAreaWrap1 {
+  margin-bottom: 30px;
+
+  .ruleArea {
+    overflow: auto;
+    margin: 5px 0;
+    padding: 15px;
+    height: 100px;
+    border: 1px solid $borderC;
+    border-radius: 5px;
+  }
+  .ruleReadCheck {
+    text-align: center;
+    margin-top: 5px;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+  .consent {
+    text-align:center;
+    margin-top:5px;
+  }
+}
+
+.singleWrap {
+  position: relative;
+  margin: 30px auto 0;
+  width: 578px;
+  border: 1px solid $borderC;
+  background: #fff;
+  padding: 10px;
+
+  .singleWrapHd1 {
+    margin: -10px -10px 20px -10px;
+  }
+}
+.iframeInnerBody {
+  margin: auto;
+  padding: 10px 0;
+  min-width: 580px;
+  width: 580px;
+  background: #FFF;
+
+  &>article {
+    width: 580px;
+  }
+}
+.popupAuth {
+  position: relative;
+  padding: 10px;
+  margin: auto;
+  min-width: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.notFound,
+.notInternal,
+.maintenance {
+  @include wrap;
+  margin: 30px auto;
+  padding: 20px;
+  background: #FFF;
+  text-align: center;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+    strong {
+      font-size: 115px;
+      font-weight: bold;
+      display: block;
+      line-height: 1;
+    }
+    img {
+      display: block;
+      margin: 0 auto 10px;
+    }
+    small {
+      font-size: 20px;
+      margin-top: 10px;
+      display: block;
+      font-weight: normal;
+    }
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+.siteClose {
+  @include wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 30px auto;
+  padding: 20px;
+  background: #FFF;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+.backPage {
+  margin-top: 10px;
+  width: 100%;
+  background: #FFF;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid $borderC;
+}
+.pageAuthentication {
+  @include wrap;
+  margin: 30px auto;
+  padding: 20px;
+  background: #FFF;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .pageAuthenticationDescription {
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 16px;
+  }
+}
+.agreementWrap {
+  padding: 15px;
+  margin: auto;
+  background: #FFF;
+  border: 1px solid $borderC;
+  position: relative;
+}
+.agreementCont {
+    margin: 0 auto 15px;
+    // width: 600px;
+}
+
+
+
+.inquiryWrap {
+  padding: 15px;
+  margin: auto;
+  background: #FFF;
+  border: 1px solid $borderC;
+  position: relative;
+
+  .hd2 {
+    width: 600px;
+    margin: 10px auto;
+  }
+  .commonTableList1,
+  .ruleAreaWrap1 {
+    width: 600px;
+    margin: 0 auto 15px;
+  }
+  .commonTableList1 {
+
+    .title1 {
+      width: 160px;
+    }
+  }
+}
+
+.ckeditorWrap {
+  @include ckeditor;
+}
+
+.twActions {
+  @include cf;
+  height: 100%;
+
+  li {
+    float: left;
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #fff;
+
+    &:hover {
+      background: #eee;
+    }
+    &:after {
+      font-size: 21px;
+      width: 21px;
+      height: 21px;
+      color: $iconC2;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+  .twFollow:after {
+    @include fontBase(follow);
+  }
+  .twReply:after {
+    @include fontBase(reply-action);
+  }
+  .twRetweet:after {
+    @include fontBase(retweet-action);
+  }
+  .twFavo:after {
+    @include fontBase(fangate);
+  }
+}
+.markdownListWrap {
+  min-width: 800px;
+
+  article {
+    width: 780px;
+    margin: auto;
+  }
+}
+.markdownList {
+  margin-bottom: 20px;
+
+  thead {
+    background: #eee;
+  }
+  tbody {
+    background: #FFF;
+
+    th {
+      width: 10%;
+    }
+    td {
+      width: 45%;
+    }
+  }
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid $borderC;
+  }
+  pre {
+    white-space: pre-wrap;
+  }
+}
+
+.metaList {
+  margin-top: 10px;
+
+  th {
+    width: 10%;
+    background: #eee;
+  }
+  td {
+    width: 45%;
+  }
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid $borderC;
+  }
+}
+%accountBase {
+  letter-spacing: -.4em;
+
+  &>* {
+    letter-spacing: normal;
+  }
+  .accountImg {
+    height: 50px;
+    padding-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+
+    img {
+      width: 50px;
+    }
+  }
+  .accountInfo {
+    vertical-align: middle;
+    display: inline-block;
+
+    &>* {
+    display: block;
+    line-height: 1;
+    }
+  }
+  .snsType {
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #aaa;
+  }
+  .accountName {
+    font-size: 13px;
+    font-weight: bold;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+}
+
+.accountMerge {
+
+  header {
+    padding: 5px 0;
+    background: #FFC437;
+
+    h1,
+    .usedAccount {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    h1 {
+      padding-right: 20px;
+      width: 490px;
+      font-weight: bold;
+    }
+    .usedAccount {
+      @extend %accountBase;
+      width: 470px;
+      padding: 5px 10px;
+      background: #fff;
+
+      h2 {
+        padding-right: 20px;
+        display: inline-block;
+        color: #B63543;
+        font-weight: bold;
+      }
+      .accountImg {
+        height: 35px;
+        display: inline-block;
+
+        img {
+          width: 35px;
+        }
+      }
+    }
+  }
+
+  .linkAccount,
+  .addAccount,
+  .myAccount {
+    @extend %accountBase;
+  }
+}
+.accountMergeCont {
+  width: 600px;
+  padding-top: 20px;
+  margin: auto;
+
+  h2 {
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  .errorText {
+    margin: 30px 0;
+    text-align: center;
+    font-weight: bold;
+
+    span {
+      margin-bottom: 5px;
+      display: block;
+      color: #d80303;
+    }
+  }
+}
+.aaidAccount {
+  @include cf;
+  height: 70px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid $borderC;
+  table-layout: fixed;
+
+  &+.accountList {
+    margin-top: -1px;
+  }
+}
+
+.accountList {
+
+  h3 {
+    padding: 10px;
+    color: #fff;
+    background: #666;
+  }
+}
+
+.myAccount,
+.myAccountDetail {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.myAccount {
+
+  .name {
+    margin-bottom: 3px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .mail {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .accountInfo {
+    width: 320px;
+  }
+}
+.myAccountDetail {
+  float: right;
+
+  dl {
+    dt {
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+    dd {
+      font-size: 16px;
+    }
+  }
+  .number {
+    font-size: 11px;
+    display: table-cell;
+    text-align: center;
+    position: relative;
+  }
+}
+.linkAccountList {
+
+  .linkAccount {
+    border: 1px solid $borderC;
+    border-top: 0;
+    padding: 10px;
+  }
+  .addAccount {
+    @include cf;
+    margin-top: 50px;
+    padding: 10px;
+    border: 2px dashed #666;
+    background: #FFF8EA;
+    position: relative;
+
+    &:before {
+      @include fontBase(add-plus);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin: -40px 0 0 -10px;
+      font-size: 25px;
+      color: #666;
+    }
+    .selectedAccount {
+      float: right;
+      line-height: 54px;
+      color: #b63543;
+      font-weight: bold;
+    }
+  }
+}
+.accountMergeAttention {
+  margin-top: 15px;
+  text-align: center;
+
+  &>p:first-child {
+    font-size: 13px;
+  }
+  .supplement1 {
+    margin-top: 10px;
+  }
+}
+.previewWrap {
+    width: 744px;
+    margin: 0 auto;
+
+    .smapleImg {
+        margin: 15px 0;
+    }
+    .ckeditorWrap {
+        width: 719px;
+        margin: 0 auto;
+    }
+}

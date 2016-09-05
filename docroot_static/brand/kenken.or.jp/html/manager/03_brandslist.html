@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>モニプラ - Manager</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../manager/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+    <!-- Custom styles for this template -->
+    <link href="../../../../manager/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">モニプラ - Manager</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="01_dashboard.html">Overview</a></li>
+            <li><a href="02_report.html">Report</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Brands list</a></li>
+          </ul>
+        </div>
+        <div class="col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Brands list</h1>
+          <h4><span class="edit"><a href="#" class="jsMessageSetting">Search</a></span></h4>
+          <div class="jsMessageSettingTarget" style="display:none">
+          <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="container">
+          <!-- Row start -->
+          <div class="row">
+          <div class="col-md-11 col-sm-6 col-xs-12">
+          <div class="panel panel-default">
+          <div class="panel-heading clearfix">
+            <h3 class="panel-title">Detail Search</h3>
+          </div>
+          <div class="panel-body">
+          <form class="form-horizontal row-border" action="#">
+          <div class="form-group">
+            <label class="col-md-2 control-label">Brand Name</label>
+            <div class="col-md-4">
+              <input name="regular" class="form-control" type="text" placeholder="Brand Name">
+            </div>
+
+            <label class="col-md-2 control-label">Shown Name</label>
+            <div class="col-md-4">
+              <input class="form-control" name="pass" type="password" placeholder="Shown Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="Categories">Categories</label>
+            <div class="col-md-4">
+              <select id="Categories" name="Categories" class="form-control">
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+                <option value="4">Option three</option>
+                <option value="5">Option three</option>
+                <option value="6">Option three</option>
+                <option value="7">Option three</option>
+                <option value="8">Option three</option>
+                <option value="9">Option three</option>
+                <option value="10">Option three</option>
+                <option value="11">Option three</option>
+                <option value="12">Option three</option>
+                <option value="13">Option three</option>
+                <option value="14">Option three</option>
+                <option value="15">Option three</option>
+                <option value="16">Option three</option>
+                <option value="17">Option three</option>
+                <option value="18">Option three</option>
+                <option value="19">Option three</option>
+                <option value="20">Option three</option>
+                <option value="21">Option three</option>
+                <option value="22">Option three</option>
+                <option value="23">Option three</option>
+                <option value="24">Option three</option>
+                <option value="25">Option three</option>
+                <option value="26">Option three</option>
+                <option value="27">Option three</option>
+                <option value="28">Option three</option>
+                <option value="29">Option three</option>
+                <option value="30">Option three</option>
+                <option value="31">Option three</option>
+                <option value="32">Option three</option>
+                <option value="33">Option three</option>
+                <option value="34">Option three</option>
+              </select>
+            </div>
+            <label class="col-md-2 control-label">Plan</label>
+            <div class="col-md-4">
+              <label class="checkbox-inline">
+                <input id="inlineCheckbox1" value="option1" checked="" type="checkbox">Free
+              </label>
+              <label class="checkbox-inline">
+                <input id="inlineCheckbox2" value="option2" type="checkbox"> Basic
+              </label>
+              <label class="checkbox-inline">
+                <input id="inlineCheckbox3" value="option3"  type="checkbox"> Promotion
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">Format</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Format" id="Format1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="Format" id="Format2" value="option2" type="radio">Company
+              </label>
+              <label class="radio-inline">
+                <input name="Format" id="Format3" value="option2" type="radio">Personal
+              </label>
+            </div>
+            <label class="col-md-2 control-label">Scale</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Scale" id="Scale1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="Scale" id="Scale2" value="option2" type="radio">Huge
+              </label>
+              <label class="radio-inline">
+                <input name="Scale" id="Scale3" value="option2" type="radio">Large
+              </label>
+              <label class="radio-inline">
+                <input name="Scale" id="Scale4" value="option2" type="radio">Medium
+              </label>
+              <label class="radio-inline">
+                <input name="v" id="Scale5" value="option2" type="radio">Small
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">Contract Period</label>
+            <div class="col-md-4 ">
+              <input type="text" class="col-md-4 jsDate inputDate" placeholder="date">
+              <span class="col-md-4 ">Between</span>
+              <input type="text" class="col-md-4 jsDate inputDate" placeholder="date">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="engineer">Person in charge</label>
+            <div class="col-md-2">
+              <select id="engineer" name="selectbasic" class="form-control">
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <select id="sale" name="selectbasic" class="form-control">
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">Approval State</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="State" id="State1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="State" id="State2" value="option2" type="radio">non-approval
+              </label>
+              <label class="radio-inline">
+                <input name="State" id="State3" value="option2" type="radio">approval
+              </label>
+              <label class="radio-inline">
+                <input name="State" id="State4" value="option2" type="radio">non-contract
+              </label>
+            </div>
+            <label class="col-md-2 control-label">Emergency Contact</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Contact" id="Contact1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="Contact" id="Contact2" value="option2" type="radio">Yes
+              </label>
+              <label class="radio-inline">
+                <input name="Contact" id="Contact3" value="option2" type="radio">No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">charges</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="charges" id="charges1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="charges" id="charges2" value="option2" type="radio">Short
+              </label>
+              <label class="radio-inline">
+                <input name="charges" id="charges3" value="option2" type="radio">Monthly
+              </label>
+              <label class="radio-inline">
+                <input name="v" id="charges4" value="option2" type="radio">Promotion
+              </label>
+            </div>
+            <label class="col-md-2 control-label">Emergency Calling</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Calling" id="Calling1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="Calling" id="Calling2" value="option2" type="radio">Yes
+              </label>
+              <label class="radio-inline">
+                <input name="Calling" id="Calling3" value="option2" type="radio">No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">Payment</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Payment" id="Payment1" value="option1" checked="" type="radio"> Default
+              </label>
+              <label class="radio-inline">
+                <input name="Payment" id="Payment2" value="option2" type="radio">Yes
+              </label>
+              <label class="radio-inline">
+                <input name="Payment" id="Payment3" value="option2" type="radio">No
+              </label>
+            </div>
+            <label class="col-md-2 control-label">Show Logo</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Logo" id="Logo1" value="option1" checked="" type="radio"> Default
+              </label>
+              <label class="radio-inline">
+                <input name="Logo" id="Logo2" value="option2" type="radio">No
+              </label>
+              <label class="radio-inline">
+                <input name="Logo" id="Logo3" value="option2" type="radio">User only
+              </label>
+              <label class="radio-inline">
+                <input name="Logo" id="Logo4" value="option2" type="radio">Lp only
+              </label>
+              <label class="radio-inline">
+                <input name="Logo" id="Logo5" value="option2" type="radio">Both
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">Contract Terminated</label>
+            <div class="col-md-4">
+              <label class="radio-inline">
+                <input name="Contract" id="Contract1" value="option1" checked="" type="radio">Default
+              </label>
+              <label class="radio-inline">
+                <input name="Contract" id="Contract2" value="option2" type="radio">Yes
+              </label>
+              <label class="radio-inline">
+                <input name="Contract" id="Contract3" value="option2" type="radio">No
+              </label>
+            </div>
+            <label class="col-md-2 control-label" for="tag">Tag</label>
+            <div class="col-md-3">
+              <select id="tag" name="tag" class="form-control ">
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+                <option value="4">Option three</option>
+                <option value="5">Option three</option>
+                <option value="6">Option three</option>
+                <option value="7">Option three</option>
+                <option value="8">Option three</option>
+                <option value="9">Option three</option>
+                <option value="10">Option three</option>
+                <option value="11">Option three</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+            <a href="javascript:void(0);" onclick="document.add_brand.submit();return false;" class="btn btn-primary btn-lg btn-block"> Search </a>
+          </div>
+          </form>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Brand Name / Display Name</th>
+                  <th>Category</th>
+                  <th>Plan</th>
+                  <th>Sales / Consultant</th>
+                  <th>Contract date</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              <tr class="warning">
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              <tr class="danger">
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="ログイン">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="設定">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </button>
+                  1,001</td>
+                <td>アライドアーキテクツ株式会社 / アライド</td>
+                <td>テスト確認用</td>
+                <td>basic</td>
+                <td>金箱 / 金箱</td>
+                <td>2014-4-3</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="../../../../manager/js/bootstrap.min.js"></script>
+    <script src="../../../../manager/js/tooltip.js"></script>
+    <script src="../../../../manager/js/services/BrandListService.js"></script>
+  </body>
+</html>

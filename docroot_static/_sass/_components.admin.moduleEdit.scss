@@ -1,0 +1,1128 @@
+.moduleBasicSetting1 {
+  padding: 20px;
+
+  dl {
+    @include cf;
+    margin: auto;
+    width: 720px;
+    font-size: 0;
+  }
+  dt {
+    display: inline-block;
+    margin-bottom: 15px;
+    min-height: 26px;
+    width: 115px;
+    vertical-align: top;
+    line-height: 26px;
+    box-sizing: border-box;
+    font-size: 13px;
+  }
+  .labelModeAllied {
+    padding: 0 3px;
+  }
+  dd {
+    display: inline-block;
+    margin: 0 0 15px 10px;
+    min-height: 26px;
+    width: 595px;
+    line-height: 26px;
+    font-size: 13px;
+
+    p:first-child {
+      display: inline-block;
+    }
+
+    &.title {
+      line-height: 1.5;
+    }
+    .inputTitle {
+      width: 593px;
+    }
+    .inputId {
+      width: 200px;
+    }
+    &>label {
+      margin-right: 30px;
+    }
+    .cautionList {
+      line-height: 20px;
+      display: inline-block;
+    }
+  }
+  .prizeSetting {
+    width: 580px;
+
+    li {
+      margin-bottom: 10px;
+      line-height: 30px;
+    }
+    .showNum [type="text"] {
+      display: none;
+      width: 128px;
+    }
+    .prizeCheck ul {
+      display: none;
+    }
+    .prizeName {
+      margin-right: 10px;
+    }
+    .num {
+      margin-right: 5px;
+      width: 50px;
+    }
+  }
+  .innerList {
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .joinAccount {
+    display: none;
+    margin-left: 1em;
+  }
+  .attentionWrap {
+    display: none;
+
+    textarea {
+      width: 568px;
+      height: 130px;
+    }
+  }
+  .iconBtnDelete {
+    opacity: 0.5;
+  }
+  *:hover>.iconBtnDelete {
+    opacity: 1;
+  }
+  .settingClose {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    &:before {
+      @include fontBase(clock);
+      color: $iconC1;
+      display: block;
+      font-size: 16px;
+    }
+    input {
+      display: none;
+    }
+    &:hover .textBalloon1 {
+      display: block;
+    }
+  }
+  .closeTimeDate {
+
+  }
+  .closeTimeSet {
+
+  }
+  .thumbImg {
+    float: left;
+
+    img {
+      display: block;
+      max-height: 160px;
+    }
+    input,
+    small {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
+.attractSetting1 {
+  padding: 19px;
+
+  ul {
+    margin: auto;
+    width: 700px;
+  }
+  li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    text-indent: -30px;
+    .iconHelp {
+      text-indent: 0;
+    }
+    .supplement1 {
+      font-weight: normal;
+    }
+
+    textarea {
+      display: block;
+      margin: 5px 0;
+      width: 658px;
+      height: 120px;
+    }
+  }
+  .innerList {
+
+    li {
+      margin: 10px 0;
+    }
+  }
+  .mailNews {
+
+    textarea {
+      display: none;
+    }
+  }
+  .openNewWindow1 {
+    margin-left: 40px;
+  }
+  .labelTitle {
+    display: inline-block;
+    padding-left: 0;
+    width: 120px;
+    vertical-align: middle;
+    text-indent: 0;
+  }
+  .url {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $borderC;
+    font-weight: bold;
+    font-size: 16px;
+
+    [type="text"] {
+      width: 558px;
+    }
+  }
+  .embed {
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    textarea {
+      height: 60px;
+    }
+    .iframeSize {
+      margin-right: 15px;
+    }
+    [type="text"] {
+      margin: 0 5px 0 10px;
+      width: 100px;
+    }
+  }
+}
+
+.moduleEditWrap {
+  display: table;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid $borderC;
+  background: #fff;
+  table-layout: fixed;
+  margin-top: 20px;
+}
+.moduleEdit1 {
+  display: table-cell;
+  padding: 14px 0;
+  min-height: 508px;
+  max-width: 328px;
+  width: 328px;
+  background: #ccc;
+  vertical-align: top;
+
+  .iconBtnDelete {
+    margin-left: 5px;
+    opacity: .5;
+  }
+  *:hover>.iconBtnDelete {
+    opacity: 1;
+  }
+  .btn1Edit [type="text"] {
+    width: 140px;
+  }
+  h1 {
+    position: relative;
+    padding: 3px 0;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      color: $iconC1;
+      display: inline-block;
+      font-size: 23px;
+      vertical-align: middle;
+      margin-right: 7px;
+      margin-top: -.2em;
+    }
+    &:after {
+      @include fontBase(arrow-top);
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -6px;
+      color: #FFF;
+    }
+  }
+  .close {
+
+    &:after {
+      @include fontBase(arrow-bottom);
+    }
+    &+.moduleSettingWrap {
+      display: none;
+    }
+  }
+  .btn1Edit [type="text"] {
+    width: 140px;
+  }
+  .editReenquete1:before {
+    @include fontBase(re-enquete);
+  }
+  .editTitle1:before {
+    @include fontBase(title);
+  }
+  .editImg1:before {
+    @include fontBase(image);
+  }
+  .editText1:before {
+    @include fontBase(text);
+  }
+  .editCheck1:before {
+    @include fontBase(check1);
+  }
+  .editRadio1:before {
+    @include fontBase(radio);
+  }
+  .editMovie1:before {
+    @include fontBase(youtube);
+  }
+  .editBtn1:before {
+    @include fontBase(button);
+  }
+  .editBranch1:before {
+    @include fontBase(branch-parallel);
+  }
+  .editEngagement1:before {
+    @include fontBase(fangate);
+  }
+  .editEnquete1:before {
+    @include fontBase(enquete);
+  }
+  .editInstantWin1:before {
+    @include fontBase(instantwin);
+  }
+  .editDesign1:before {
+    @include fontBase(design);
+  }
+  .editCoupon1:before {
+    @include fontBase(coupon);
+  }
+  .editShare1:before {
+    @include fontBase(share);
+  }
+  .editTwitterFollow1:before {
+    @include fontBase(follow-twitter);
+  }
+  .editFacebookLike1:before {
+    @include fontBase(follow-facebook);
+  }
+  .editCvtag1:before {
+    @include fontBase(conversion);
+  }
+  .editInstagramFollow1:before {
+    @include fontBase(ig1);
+  }
+  .editHashtag1:before {
+    @include fontBase(hashtag);
+  }
+  .editTweet1:before {
+    @include fontBase(tweet);
+  }
+  .editRetweet1:before {
+    @include fontBase(retweet-module);
+  }
+  .editCode1:before {
+    @include fontBase(code);
+  }
+  .editGift1:before {
+    @include fontBase(gift);
+  }
+  .editDeadline1:before {
+    @include fontBase(deadline);
+  }
+  .editYoutubeFollow1:before {
+    @include fontBase(follow-youtube);
+  }
+  .editRanking1:before {
+    @include fontBase(ranking);
+  }
+  .editLineFollow1:before {
+    @include fontBase(ln2);
+  }
+}
+.moduleCont1 {
+  width: 310px;
+  margin: 0 auto 15px;
+
+  &.labelModeAllied {
+    margin: -5px auto 10px;
+    padding: 5px 4px;
+  }
+}
+.areaSelectList {
+  margin: 0 0 10px 0;
+  padding: 0;
+
+  dt {
+    box-sizing: border-box;
+    padding: 5px 10px 0 15px;
+    margin-bottom: 0;
+    width: 580px;
+    background: #e9e9e9;
+    vertical-align: bottom;
+    font-weight: bold;
+  }
+  dd {
+    box-sizing: border-box;
+    padding: 10px 10px 10px 12px;
+    width: 580px;
+    border: 4px solid #e9e9e9;
+    background: #fff;
+    margin-left: 0;
+
+    &> label {
+      margin-right: 17px;
+    }
+  }
+}
+.moduleCont2 {
+  margin: 0 auto 15px;
+}
+
+
+.moduleSettingWrap {
+  margin-top: 10px;
+
+  [type="text"],
+  [type="url"],
+  [type="file"] {
+    width: 100%;
+    margin-left: 0;
+
+    &.inputNum {
+      width: 80px;
+      margin-right: 5px;
+    }
+  }
+  label {
+    margin-right: 0;
+    vertical-align: middle;
+
+    &+[type="text"],
+    &+[type="file"] {
+      width: 279px;
+    }
+  }
+  [type="checkbox"],
+  [type="radio"] {
+
+    &+[type="text"],
+    &+[type="url"],
+    &+[type="file"] {
+      width: 275px;
+    }
+  }
+  select {
+    width: 100%;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 150px;
+
+    &.hashtag {
+      height: 100px;
+    }
+    &.line {
+      height: 50px;
+      line-height: 1.7;
+    }
+  }
+  img {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .iconError1 {
+    display: block;
+    font-weight: normal;
+    margin: 5px 0;
+  }
+  .selectedImg {
+    display: block;
+    background: #FFF;
+    padding: 5px;
+    border: 1px solid $borderC;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &>*:first-child {
+    margin-top: 0;
+  }
+  .inputDate {
+    width: 100px;
+  }
+  .inputTime {
+    width: 55px;
+  }
+  .youtubeUrl {
+    display: table;
+    width: 100%;
+    letter-spacing: -.5px;
+
+    span {
+      display: table-cell;
+      white-space: nowrap;
+    }
+    [type="text"],
+    [type="url"] {
+      display: table-cell;
+    }
+  }
+  .lineAccount {
+  }
+  .userSurveyWrap {
+    padding: 10px;
+  }
+}
+
+.moduleSetting {
+
+  li {
+    margin-top: 5px;
+    padding-left: 18px;
+    text-indent: -18px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    * {
+      text-indent: 0;
+    }
+  }
+  .btnBranch1,
+  .btnBranch2 {
+    float: right;
+  }
+  .btnAction {
+    margin-left: 5px;
+
+    &:before {
+      @include miniArrowBase(right, #333, 4px);
+      display: inline-block;
+      content: "";
+      margin-right: 5px;
+    }
+    select {
+      width: 100px;
+    }
+  }
+}
+.moduleSettingList {
+}
+.moduleSettingTitle {
+  position: relative;
+  padding: 10px;
+  font-weight: bold;
+  background: #666;
+  color: #fff;
+  margin-top: 10px;
+
+  &:after {
+    @include fontBase(arrow-top);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -6px;
+    font-size: 12px;
+    color: #FFF;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.close {
+
+    &+.moduleSettingDetail {
+      display: none;
+    }
+    &:after {
+      @include fontBase(arrow-bottom);
+    }
+  }
+}
+.moduleSettingDetail {
+  overflow: hidden;
+  margin-top: -1px;
+  border: 1px solid $borderC;
+  background: #fff;
+  padding: 10px;
+
+  dl {
+    width: 308px;
+    margin-left: -10px;
+
+    &+* {
+      margin-top: 20px;
+    }
+  }
+  dt {
+    padding: 10px 10px 0 10px;
+    margin-bottom: 5px;
+    border-top: 1px dashed #fff;
+
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+  dd {
+    padding: 0 10px 10px 10px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &.iconError1 {
+      padding: 0 10px;
+    }
+  }
+  .sharePreset {
+    height: 60px;
+  }
+}
+
+.moduleSeelctItemSetting {
+  @include cf;;
+  margin-top: 10px;
+  border-top: 1px solid #fff;
+  width: 308px;
+  margin-left: -10px;
+
+  dt {
+    float: left;
+    padding: 0 0 0 10px;
+    margin: 10px 0 0;
+    width: 214px;
+    height: 26px;
+    line-height: 26px;
+  }
+  dd {
+    float: right;
+    padding: 0 10px 0 0;
+    margin: 10px 0 0;
+    width: 74px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+  }
+}
+
+.moduleEnqueteList {
+  margin-top: 10px;
+
+  .addQuestion {
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    background: #ddd;
+  }
+  .linkAdd {
+    display: block;
+    padding: 8px 10px;
+  }
+}
+.moduleEnqueteDetail1 {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  background: #ddd;
+
+  .title {
+    position: relative;
+    padding: 10px 32px 10px 10px;
+
+    label {
+      font-weight: bold;
+    }
+    .num {
+      display: inline-block;
+      width: 36px;
+    }
+    [type="text"] {
+      width: 230px;
+    }
+    .type {
+      display: block;
+      margin-bottom: 5px;
+      height: 16px;
+      line-height: 16px;
+    }
+    &:after {
+      @include fontBase(arrow-bottom);
+      position: absolute;
+      font-weight: bold;
+      top: 50%;
+      right: 10px;
+      margin-top: -6px;
+      font-size: 12px;
+      color: #FFF;
+    }
+    &:hover {
+      cursor: move;
+    }
+    .supplement1 {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+  .close{
+
+    &+.detail {
+      display: none;
+    }
+    &:after {
+      @include fontBase(arrow-top);
+      font-weight: bold;
+    }
+  }
+  .moduleItemDelete {
+    margin: 0 10px 10px;
+  }
+  .supplement1 {
+    margin: 0 10px 10px;
+  }
+}
+.moduleEnqueteSelect {
+  margin-bottom: 10px;
+  padding: 10px 10px 0;
+  border-top: 1px dashed #FFF;
+
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  label {
+    width: 100%;
+    display: inline-block;
+  }
+  .num {
+    display: inline-block;
+    width: 30px;
+
+    & + [type="text"] {
+      width: -webkit-calc(100% - 30px - 20px);
+      width: calc(100% - 30px - 20px);
+    }
+  }
+  [type="text"] {
+    margin-left: 0;
+    width: -webkit-calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+  [type="file"] {
+    width: -webkit-calc(100% - 20px - 30px);
+    width: calc(100% - 20px - 30px);
+    margin-left: 30px;
+  }
+  .iconBtnDelete {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+}
+.moduleEnquetePulldown {
+  margin-bottom: 10px;
+  padding: 10px 10px 0;
+  border-top: 1px dashed #FFF;
+}
+.moduleEnqueteSetting {
+  overflow: hidden;
+  padding: 10px 10px 0;
+  border-top: 1px solid #fff;
+
+  dt {
+    float: left;
+    margin-bottom: 10px;
+    width: 214px;
+    height: 26px;
+    line-height: 26px;
+  }
+  dd {
+    float: right;
+    margin-bottom: 10px;
+    width: 74px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+
+    &>* {
+      margin: 0;
+    }
+  }
+}
+
+.moduleLineAccount {
+
+  li {
+    margin-top: 5px;
+
+    &:first-child {
+      margin-top: 0;
+
+      input[type="text"] {
+        width: 195px;
+      }
+    }
+    &:nth-child(2) {
+
+      input[type="text"] {
+        width: 165px;
+        margin-left: 5px;
+      }
+    }
+  }
+  span {
+    margin-left:15px;
+  }
+  textarea {
+    line-height: 1.7;
+  }
+}
+
+.moduleLotEstablish {
+
+  input[type="text"] {
+    width: 100px;
+    margin: 0 5px;
+  }
+  small {
+    display: block;
+    margin-top: 5px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.moduleLotJoin {
+
+  li {
+    margin-top: 5px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  [type="text"] {
+    width: 80px;
+  }
+  select {
+    width: auto;
+  }
+}
+.moduleAccountDetail1 {
+
+}
+
+.moduleGiftDetail1 {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  background: #ddd;
+
+  .title {
+    position: relative;
+    padding: 10px;
+    font-weight: bold;
+
+    &:after {
+      @include fontBase(arrow-bottom);
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -6px;
+      font-size: 12px;
+      color: #FFF;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .close {
+
+    &:after {
+      @include fontBase(arrow-top);
+    }
+    &+.moduleGiftSetting {
+      display: none;
+    }
+  }
+}
+.moduleGiftSetting {
+  overflow: hidden;
+  border-top: 1px solid #fff;
+
+  dt {
+    padding: 10px 10px 0;
+    margin-bottom: 5px;
+    border-top: 1px dashed #fff;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+  dd {
+    padding: 0 10px 10px;
+  }
+}
+.moduleGiftCard {
+  @include cf;
+  margin: -5px 0 0 -5px;
+
+  li {
+    width: 90px;
+    float: left;
+    margin: 5px 0 0 5px;
+  }
+  img {
+    width: 70px;
+    height: 40px;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .upload {
+    clear: both;
+    width: auto;
+    margin-top: 15px;
+  }
+}
+.moduleGiftScale {
+
+  li {
+    margin-top: 15px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .setColor {
+
+    strong {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 75px;
+    }
+    [type="text"] {
+      width: 100px;
+    }
+  }
+  [type="text"] {
+    width: 50px;
+  }
+  strong {
+    display: block;
+  }
+  label {
+    width: 140px;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    height: 30px;
+    margin: 5px 0 0 3px;
+
+    &+.supplement1 {
+      width: 140px;
+      margin-top: 5px;
+      text-align: right;
+    }
+  }
+  .supplement1 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.moduleGiftType {
+  margin-bottom: 20px;
+
+  li {
+    margin-top: 5px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &>li {
+    padding-left: 18px;
+  }
+  .giftTypeLabel {
+    margin-left: -18px;
+  }
+  p {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &+* {
+    border-top: 1px dashed #fff;
+    padding-top: 10px;
+  }
+}
+
+.moduleRankingItem {
+  width: 308px;
+  margin: 10px 0 10px -10px;
+  border-top: 1px solid #fff;
+
+  li {
+    padding: 10px 30px 10px 10px;
+    position: relative;
+    border-bottom: 1px dashed #fff;
+  }
+  .itemLabel {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  textarea {
+    height: 60px;
+  }
+  .iconBtnDelete {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+  }
+  .youtubeUrl {
+    font-size: 11px;
+  }
+}
+
+.modulePreview1 {
+  display: table-cell;
+  padding: 14px 10px;
+  width: 610px;
+  vertical-align: top;
+  text-align: center;
+
+  %displayBase {
+    margin: auto;
+    text-align: left;
+  }
+  .displaySP {
+    @extend %displayBase;
+    width: 300px;
+  }
+  .displayPC {
+    @extend %displayBase;
+    width: 600px;
+  }
+}
+.modulePreviewHeader {
+  display: table;
+  margin-bottom: 20px;
+  width: 100%;
+
+  &>* {
+    display: table-cell;
+  }
+  .btn2 {
+    width: 80px;
+  }
+}
+
+.moduleHashtag {
+
+  [type="text"] {
+    // width: 100%;
+    // margin: 0 0 10px 5px;
+    // margin-bottom: 10px;
+  }
+  .linkAdd {
+    margin-bottom: 5px;
+  }
+  li {
+    display:inline-block;
+    margin: 0 5px 5px 0px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .entryHashTag {
+    display: table;
+    table-layout: fixed;
+    margin-bottom: 10px;
+    vertical-align: middle;
+
+    .hash {
+      padding-right: 5px;
+      display: table-cell;
+    }
+    .entry {
+      width: 100%;
+      display: table-cell;
+    }
+  }
+}
+
+.adminRuleCheck {
+  margin: 0 auto 30px;
+  width: 450px;
+
+  li {
+    display: table;
+    margin: 5px 0;
+    width: 100%;
+    table-layout: fixed;
+
+    [type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    &>* {
+      display: table-cell;
+      text-indent: 0;
+    }
+    label {
+      padding: 0 10px 0 23px;
+      text-indent: -23px;
+    }
+    .openNewWindow1 {
+      width: 50px;
+    }
+    .num {
+      font-weight: bold;
+    }
+  }
+}
+.admincCampaignTime {
+  text-align: center;
+
+  strong {
+    font-weight: bold;
+    font-style: 1.1em;
+  }
+}
+.moduleCheck {
+  @extend %adminCheckBase;
+  border-top: none;
+  position: relative;
+
+  .urlCopyWrap {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -9px;
+  }
+}

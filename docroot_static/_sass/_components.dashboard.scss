@@ -1,0 +1,146 @@
+.dashboardFliter {
+  @include cf;
+  background: #fff;
+  border: 1px solid $borderC;
+  margin-bottom: 15px;
+  padding: 10px;
+
+  h2 {
+    font-size: 18px;
+    float: left;
+    line-height: 30px;
+  }
+  .filter {
+    float: right;
+
+    &>* {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .type {
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  .term {
+    margin-right: 10px;
+
+    select {
+      margin-right: 5px;
+    }
+  }
+  .inputDate {
+    margin: 0;
+  }
+  .iconError1 {
+    margin-right: 10px;
+  }
+}
+
+.dashboardGrafWrap {
+
+}
+.dashboardGraf {
+  background: #fff;
+  border: 1px solid $borderC;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+
+  h1 {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 5px;
+    background: #eee;
+  }
+  .grafData {
+    margin: 10px;
+    position: relative;
+
+  }
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .moreData {
+    text-align: center;
+    margin: 10px;
+    height: 20px;
+    line-height: 20px;
+  }
+  @at-root {
+    #{&}_small {
+      @extend .dashboardGraf;
+      width: 312px;
+    }
+    #{&}_medium {
+      @extend .dashboardGraf;
+      width: 474px;
+    }
+    #{&}_large {
+      @extend .dashboardGraf;
+      width: 960px;
+    }
+    #{&}_fan {
+      @extend .dashboardGraf;
+      width: 960px;
+
+      .grafData {
+        height: 208px;
+      }
+    }
+    #{&}_account {
+      @extend .dashboardGraf;
+      width: 312px;
+
+      .grafData {
+        height: 304px;
+      }
+    }
+    #{&}_sex {
+      @extend .dashboardGraf;
+      width: 312px;
+
+      .grafData {
+        height: 120px;
+      }
+    }
+    #{&}_age {
+      @extend .dashboardGraf;
+      width: 312px;
+
+      .grafData {
+        height: 120px;
+      }
+    }
+    #{&}_address {
+      @extend .dashboardGraf;
+      width: 312px;
+
+      .grafData {
+        height: 274px;
+      }
+    }
+    #{&}_pv {
+      @extend .dashboardGraf;
+      width: 960px;
+
+      .grafData {
+        height: 208px;
+      }
+    }
+  }
+}

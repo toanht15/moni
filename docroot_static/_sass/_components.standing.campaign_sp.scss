@@ -1,0 +1,20 @@
+.campaign {
+
+  //Settlement
+  .message,
+  .message_thanks,
+  .message_repurchase {
+    width: auto;
+  }
+  .messageSettlement .productImg {
+    width: 70px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .messageSettlement .settlementInfoInner,
+  .messageSettlement .text {
+    width: auto;
+  }
+}

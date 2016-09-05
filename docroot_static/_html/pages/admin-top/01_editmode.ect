@@ -1,0 +1,636 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'head' : %>
+  <!-- site base setting -->
+  <style>
+    /* site background */
+    body {
+      background-color: #F7F4F9;
+      background-image: url(../../img/dummy/04.jpg);
+      /*background-repeat: no-repeat;*/
+      background-repeat: repeat-x;
+      /*background-repeat: repeat-y;*/
+      /*background-repeat: repeat;*/
+    }
+
+    /* panel title color */
+    .contBoxMain h1 {
+      background-color: green;
+    }
+
+    /* site title color */
+    .gnavi h1 {
+      color: green;
+    }
+
+    /* nav link color */
+    .gnavi li a {
+      color: green;
+    }
+    body>footer, body>footer a {
+      color: green;
+    }
+
+  </style>
+<% end %>
+
+<% block 'customHeader' : %>
+    <div class="privateMode">
+      <p>ページは現在非公開です<a href="#">設定</a></p>
+    <!-- /.privateMode --></div>
+<% end %>
+
+<% block 'mainContents' : %>
+    <section class="freeAreaWrap">
+      <section class="addArea">
+        <a href="#freeAreaEntries" class="jsOpenModal"><span>追加する</span></a>
+      </section>
+    </section>
+    <section class="freeAreaWrap jsEditAreaWrap">
+      <div class="freeArea">
+        <div>free area</div>
+        <section class="editArea">
+          <a href="#freeAreaEntries" class="jsOpenModal"><span>編集する</span></a>
+        </section>
+      </div>
+    </section>
+    <section class="addPanel">
+      <ul>
+        <li><span class="addArea"><a href="#selectPanelKind" class="jsOpenModal"><span>追加する</span></a></span></li>
+        <li>
+          <a href="#editPanelForm" class="jsPostPanel jsOpenModal">
+            <img src="../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconFB1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#modal5" class="jsPostPanel jsOpenModal">
+            サンプルテキストサンプルテキストサンプルサンプルテキストサンプルテキストサンプルテキストサンプルテキスト[...]
+            <span class="postData jsPostData"><span class="iconTW1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconYT1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconRss1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconFB1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="jsPostPanel">
+            <img src="../../img/dummy/02.jpg" width="60" height="60" alt="">サンプルテキストサンプルテキストサンプル[...]
+            <span class="postData jsPostData"><span class="iconTW1">サンプルテキストサンプルテキストサン[...]</span>2014/02/04 12:59</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <article class="mainCol" id="sortable">
+
+      <div class="jsPanelWrap" id="jsTopSortable">
+        <section class="jsPanel contBoxMain-tw boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          </a>
+          <div class="nav">
+            <ul class="twActions">
+              <li><a href="#" class="twFollow">フォローする</a></li>
+              <li><a href="#" class="twReply">リプライ</a></li>
+              <li><a href="#" class="twRetweet">リツイート</a></li>
+              <li><a href="#" class="twFavo">お気に入り</a></li>
+            <!-- /.twActions --></ul>
+          <!-- /.nav --></div>
+          <footer>
+            <a href="#">
+              <p class="postType"><img src="https://pbs.twimg.com/profile_images/502649231174144000/ptywbztn.jpeg" width="28" height="28" alt=""><span><span>アスタブラン公式ツイッター@kose_astablanc</span></span></p>
+            </a>
+            <p class="timeLogo"><small><span class="iconTW2_2">Twitter</span></small></p>
+          </footer>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain-tw--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box titleサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box titleサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-rss boxSizeSmall contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box titleサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-cms boxSizeSmall contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contTitle">タイトルがはいる</p>
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box titleサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-cms boxSizeMiddle contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contTitle">タイトルがはいる</p>
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box titleサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-cms boxSizeLarge contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contTitle">タイトルがはいる</p>
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box titleサンプルテキストサンプルテキスト</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeMiddle contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/02.jpg" height="180" alt="dummy"></p>
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+            <p><img src="../../img/dummy/02.jpg" height="200" alt="dummy"></p>
+            <p class="postType">灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+      <!-- /#jsTopSortable --></div>
+
+      <div class="jsPanelWrap" id="jsNormalSortable">
+
+        <section class="jsPanel contBoxMain-free boxSizeLarge">
+          <div class="ckeditorWrap">
+            <p><strong>Lorem ipsum</strong></p>
+
+            <p><em>Lorem ipsum</em> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <del>Excepteur</del> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <!-- /.ckeditorWrap --></div>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-yt boxSizeSmall contFixed">
+          <div class="videoInner">
+            <iframe iframe src="//www.youtube.com/embed/jLHWsUoDy-4" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">ty box title</p>
+            <!-- /.contWrap --></div>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-fb boxSizeSmall contFixed">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">ty box title</p>
+            <!-- /.contWrap --></div>
+          </a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-ig boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/01.png" alt="dummy"></p>
+              <p class="contText">box contents サンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="panelComment">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>http://www.eshop.jillstuart-beauty.com/</p>
+            <p class="postType">instagram account name</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-photo boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <img src="../../img/dummy/02.jpg" height="180" alt="dummy">
+              <p class="contText">「タイトルが入りますよサンプルテキストサンプルテキスト」</p>
+              <p class="postDate"><img src="../../img/base/imgUser1.jpg" width="20" height="20" alt="user name">2015/04/30</p>
+              <p class="postType">学生時代最高の思い出を！学生旅行フォトコンテスト！</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/02.jpg" height="100" alt="dummy"></p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-tw boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<img src="../../img/dummy/02.jpg" height="150" alt=""></p>
+            <!-- /.contWrap --></div>
+          </a>
+          <div class="nav">
+            <ul class="twActions">
+              <li><a href="#" class="twFollow">フォローする</a></li>
+              <li><a href="#" class="twReply">リプライ</a></li>
+              <li><a href="#" class="twRetweet">リツイート</a></li>
+              <li><a href="#" class="twFavo">お気に入り</a></li>
+            <!-- /.twActions --></ul>
+          <!-- /.nav --></div>
+          <footer>
+            <a href="#">
+              <p class="postType"><img src="../../img/dummy/01.png" width="28" height="28" alt=""><span>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト@sample_sample</span></p>
+            </a>
+          </footer>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">https://www.facebook.com/KAGOMEJapan?sk=app_196266070409836&app_data=%7B%22act_url%22%3A%22%2Fcampaign%2Fdetail%2F21467%3Finflow%3Dmptppc%22%7D</p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/02.jpg" height="180" alt="dummy"></p>
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示を解除</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/02.jpg" height="150" alt="dummy"></p>
+              <p class="postType">灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑灑</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain-yt--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-fb boxSizeSmall">
+          <div class="videoInner">
+            <iframe iframe src="//www.youtube.com/embed/jLHWsUoDy-4" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">fb box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/02.jpg" height="150" alt="dummy"></p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p class="contText">box contents サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p class="postType">box title</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+        <section class="jsPanel contBoxMain-ig boxSizeSmall">
+          <a href="#" class="contInner">
+            <div class="contWrap">
+              <p><img src="../../img/dummy/01.png" alt="dummy"></p>
+              <p class="panelComment">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>http://www.eshop.jillstuart-beauty.com/</p>
+              <p class="postType">instagram account name</p>
+            <!-- /.contWrap --></div>
+          <!-- /.contInner --></a>
+          <ul class="editBox1">
+            <li><a href="#modal1" class="linkEdit jsOpenModal">編集</a></li>
+            <li><a href="#modal1" class="linkSize jsPanelSizing">サイズ変更</a></li>
+            <li><a href="#modal1" class="linkFix jsFixed">優先表示にする</a></li>
+            <li><a href="#modal1" class="linkNonDisplay jsOpenModal">非表示</a></li>
+            <li class="panelLink"><a href="#" class="openNewWindow1">パネルリンクを開く</a></li>
+          </ul>
+        <!-- /.contBoxMain--></section>
+
+      <!-- /#jsNormalSortable --></div>
+      <aside class="sideCol jsStamp">
+        <section class="contBoxSide boxSizeSmall">
+          <div class="fanCounter">
+            <h1><strong>99,999,999</strong>人</h1>
+          <!-- /.fanCounter --></div>
+          <ul class="snsBtns-btn">
+            <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></li
+            ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none">ツイート</a></li
+            ><li><div class="g-plusone" data-size="tall" data-annotation="none"></div></li
+            ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});</script></span></li>
+          <!-- /.snsBtns-btn --></ul>
+        <!-- /.contBoxSide--></section>
+        <section class="contBoxSide-snsList boxSizeSmall jsEditAreaWrap">
+          <h1>公式SNSアカウント</h1>
+          <ul>
+            <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsFB1.png" alt="facebook" width="22"></span><span class="snsTitle">サンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsTW1.png" alt="twitter" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsYT1.png" alt="Youtube" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsRss1.png" alt="RSS" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+            <li><a href="#"><span class="snsIcon"><img src="../../img/sns/iconSnsIG1.png" alt="instagram" width="22"></span><span class="snsTitle">サンプルテキストサンプルテキストサンプルテキスト</span></a></li>
+          </ul>
+          <section class="editArea">
+            <a href="#"><span>編集する</span></a>
+          </section>
+        <!-- /.contBoxSide--></section>
+        <nav class="sideNavi boxSizeSmall jsEditAreaWrap">
+          <h1>menu title</h1>
+          <ul>
+            <li><a href="#">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+            <li><a href="#">menu link</a></li>
+          </ul>
+          <section class="editArea">
+            <a href="#sidelMenus" class="jsOpenModal"><span>編集する</span></a>
+          </section>
+        </nav>
+        <section class="contBoxSide boxSizeSmall jsEditAreaWrap">
+          <a href="#" class="bannerArea"><img src="../../img/dummy/02.jpg" alt="dummy" height="60"></a>
+          <section class="editArea">
+            <a href="#"><span>編集する</span></a>
+          </section>
+        <!-- /.contBoxSide--></section>
+        <section class="contBoxSide boxSizeSmall jsEditAreaWrap">
+          <a href="#" class="bannerArea"><img src="../../img/dummy/02.jpg" alt="dummy" height="60"></a>
+          <section class="editArea">
+            <a href="#"><span>編集する</span></a>
+          </section>
+        <!-- /.contBoxSide--></section>
+      <!-- /.sideCol --></aside>
+    <!-- /.mainCol --></article>
+    <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <p>
+        small modal<br>
+        <span class="btn1 small1"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn2 small1"><a href="#closeModal">sample</a></span>
+      </p>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="modal2">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="02_post_list.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="selectPanelKind">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="01_contents_add.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="editPanelForm">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="02_post_detail.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="modal5">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="02_post_detail_tw.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="editProfile">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="07_profile.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="globalMenus">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="04_menu.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="freeAreaEntries">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="05_freearea_list.html" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <div class="modal1 jsModal" id="sidelMenus">
+    <section class="modalCont-large jsModalCont">
+      <iframe data-src="04_menu_add.html" frameborder="0"></iframe>
+    </section>
+  </div>
+<% end %>
+
+<% block 'script' : %>
+  <script src="../../js/masonry.pkgd.min.js"></script>
+  <script src="../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../js/brandco/services/BrandcoMasonryTopService.js"></script>
+  <script>
+    jQuery(function($) {
+        BrandcoMasonryTopService.goMason(true);
+
+        $('#sortable').imagesLoaded(function() {
+          BrandcoMasonryTopService.goMason(true);
+        });
+    });
+  </script>
+<% end %>

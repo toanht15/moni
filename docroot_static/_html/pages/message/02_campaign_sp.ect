@@ -1,0 +1,251 @@
+<% extend 'partial/layout/page.user.sp' %>
+
+<% block 'pageStatus' : %>logout<% end %>
+
+<% block 'head' : %>
+    <style type="text/css">#logly-lift-4088597 #logly-lift-widget {width: 100%;}#logly-lift-4088597 #logly-lift-widget-label {border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #5C97FF;}#logly-lift-4088597 #logly-lift-widget-label-caption {padding: 5px 10px;background-color: #5C97FF;float: left;}#logly-lift-4088597 #logly-lift-widget-label-caption a {color: #FFFFFF;text-decoration: none;}#logly-lift-4088597 .logly-lift-ad {display: inline-block;zoom: 1;vertical-align:top;width: 49%;margin: 5px 0;padding: 0;}#logly-lift-4088597 .logly-lift-ad-image {vertical-align: top;width: 120px;height: 90px;padding-right: 0;}#logly-lift-4088597 .logly-lift-ad-image-inner {position: relative;overflow: hidden;width: 120px;height: 90px;}#logly-lift-4088597 .logly-lift-ad-image-inner img {position: absolute;max-width: none;max-height: none;border-style:none;}#logly-lift-4088597 .logly-lift-ad-content {word-break: break-all;}#logly-lift-4088597 .logly-lift-ad-disclosure {text-align: left;}#logly-lift-4088597 .logly-lift-ad-disclosure a {color: #999999;}#logly-lift-4088597 .logly-lift-clear {clear: both;}#logly-lift-4088597 .ie-lte9 .logly-lift-ad {display: inline;}#logly-lift-4088597 .logly-lift-ad-clear {  clear:both;  display:block;}#logly-lift-4088597 .logly-lift-ad-link {  color:#333;  text-decoration:none;  display:block;  padding: 3% 2.6%;  border-top: 1px solid #ddd;}#logly-lift-4088597 #logly-lift-widget-content {}#logly-lift-4088597 #logly-lift-widget-content-inner {  letter-spacing:-.40em;  border:1px solid #DDD;}#logly-lift-4088597 .logly-lift-ad {  letter-spacing:normal;    position: relative;    vertical-align: top;    display: inline-block;  width: 50%;  margin:0;}#logly-lift-4088597 .logly-lift-ad::before {  content:'';  position:absolute;  width:1px;  height:100%;  background:#DDD;  top:0;}#logly-lift-4088597 .logly-lift-ad:nth-of-type(1),#logly-lift-4088597 .logly-lift-ad:nth-of-type(2) {  margin-top:-1px;}#logly-lift-4088597 .logly-lift-ad:nth-of-type(even)::before {  left:0;}#logly-lift-4088597 .logly-lift-ad:nth-of-type(odd)::before {  right:-1px;}#logly-lift-4088597 .logly-lift-ad-img-inner {  background-repeat: no-repeat;  background-size: cover;  background-position:top center;}#logly-lift-4088597 .logly-lift-ad-img-spacer {  padding-top:56%;}#logly-lift-4088597 .logly-lift-ad-img img {  display:none;}#logly-lift-4088597 .logly-lift-ad-title {    font-size: 14px;    line-height: 18px;    font-weight: bold;    height: 63px;    text-align: left;    padding: 8px 0px 0px 0px;    overflow: hidden;    box-sizing:border-box;}#logly-lift-4088597 .logly-lift-ad-adv {  display: block;    font-size: 11px;    color: #999;  line-height:11px;}#logly-lift-4088597 #logly-lift-widget-content-inner div:not([class*="○○"]).logly-lift-ad .logly-lift-ad-adv {  display:none;}#logly-lift-4088597 #logly-lift-widget-label-caption {  float:none;  text-align:right;  background:none;  padding:10px 8px;}#logly-lift-4088597 #logly-lift-widget-label-caption a {  color: #999999;  text-decoration: none;  font-size:13px;}#logly-lift-4088597 #logly-lift-widget-label-caption a span {  display:inline-block;  background:url(http://cdn.logly.co.jp/spritesource-s5c12c753d2.png) no-repeat 0 -103px;  color:transparent;  margin-left:3px;  width:36px;  height:14px;  vertical-align:middle;  *display:inline;  *zoom:1;}#logly-lift-4088597 #logly-lift-widget-label-caption a:hover span {  background:url(http://cdn.logly.co.jp/spritesource-s5c12c753d2.png) no-repeat 0 -117px;}</style>
+
+<% end %>
+
+<% block 'mainContents' : %>
+    <section class="messageWrap">
+        <section class="campaign">
+            <p class="campaignImg"><img src="../../img/dummy/CPmain.jpg" width="690" height="280" alt="img text"></p>
+            <p class="campaignText">“すっぴん、透明肌”和漢植物エキス命名、雪のように透き通ったくすみのない肌を目指す、スキンケアを中心とした1985年発売のロングセラーブランド「薬用 雪肌精」今回は5名様に「薬用 雪肌精」をプレゼントいたします！</p>
+
+            <div class="joinCommSite">
+              <h1 style="margin-top:20px;">お持ちのアカウントでかんたん応募！</h1>
+              <!-- <ul class="btnSet">
+                <li class="btnSnsFb1"><a href="#" class="arrow1"><span class="inner">Facebook<br>で応募</span></a></li>
+                <li class="btnSnsTw1"><a href="#" class="arrow1"><span class="inner">Twitter<br>で応募</span></a></li>
+                <li class="btnSnsIn1"><a href="#" class="arrow1"><span class="inner">LinkedIn<br>で応募</span></a></li>
+                <li class="btnSnsLn1"><a href="#" class="arrow1"><span class="inner">LINE<br>で応募</span></a></li>
+                <li class="btnSnsIg1"><a href="#" class="arrow1"><span class="inner">Instagram<br>で応募</span></a></li>
+                <li class="btnSnsGp1"><a href="#" class="arrow1"><span class="inner">Google<br>で応募</span></a></li>
+                <li class="btnSnsYh1"><a href="#" class="arrow1"><span class="inner">Yahoo! <br>JAPAN ID<br>で応募</span></a></li>
+              </ul> -->
+<!--               <div class="snsSymbolListWrap">
+                <ul class="snsSymbolList">
+                  <li class="iconFB2">Facebook</li>
+                  <li class="iconTW2">Twitter</li>
+                  <li class="iconLN2">LINE</li>
+                  <li class="iconIG2">Instagram</li>
+                  <li class="iconGP2">Google</li>
+                  <li class="iconYH2">Yahoo!</li>
+                  <li class="iconML2">mail</li>
+                </ul>
+              </div> -->
+              <div class="branch">
+                <div class="snsJoinLargeWrap">
+                  <ul class="snsJoinLarge">
+                    <li class="btnSnsFb1"><a href="#" class="arrow1"><span class="inner">Facebook<br>で応募</span></a></li>
+                    <li class="btnSnsTw1"><a href="#" class="arrow1"><span class="inner">Twitter<br>で応募</span></a></li>
+                    <!-- <li class="btnSnsIn1"><a href="#" class="arrow1"><span class="inner">LinkedIn<br>で応募</span></a></li>
+                    <li class="btnSnsLn1"><a href="#" class="arrow1"><span class="inner">LINE<br>で応募</span></a></li>
+                    <li class="btnSnsIg1"><a href="#" class="arrow1"><span class="inner">Instagram<br>で応募</span></a></li>
+                    <li class="btnSnsGp1"><a href="#" class="arrow1"><span class="inner">Google<br>で応募</span></a></li>
+                    <li class="btnSnsYh1"><a href="#" class="arrow1"><span class="inner">Yahoo! <br>JAPAN ID<br>で応募</span></a></li> -->
+                  <!-- /.snsJoinLarge --></ul>
+                <!-- /.snsJoinLargeWrap --></div>
+
+                <div class="snsJoinOtherWrap">
+                  <ul class="snsJoinOther">
+                    <!-- <li class="btnSnsFb1"><a href="#" class="square1" title="Facebook"><span class="inner">Facebook</span></a></li>
+                    <li class="btnSnsTw1"><a href="#" class="square1" title="Twitter"><span class="inner">Twitter</span></a></li> -->
+                    <li class="btnSnsIn1"><a href="#" class="square1" title="LinkedIn"><span class="inner">LinkedIn</span></a></li>
+                    <li class="btnSnsLn1"><a href="#" class="square1" title="LINE"><span class="inner">LINE</span></a></li>
+                    <li class="btnSnsIg1"><a href="#" class="square1" title="Instagram"><span class="inner">Instagram</span></a></li>
+                    <li class="btnSnsGp1"><a href="#" class="square1" title="Google"><span class="inner">Google</span></a></li>
+                    <li class="btnSnsYh1"><a href="#" class="square1" title="Yahoo!&#10;JAPAN ID"><span class="inner">Yahoo! JAPAN ID</span></a></li>
+                    <!-- <li class="btnMail1"><a href="#" class="square1" title="メールアドレス"><span class="inner">メールアドレス</span></a></li> -->
+                  <!-- /.snsJoinOther --></ul>
+                <!-- /.snsJoinOtherWrap --></div>
+
+                <div class="addressJoinWrap">
+                  <ul class="btnList">
+                    <li class="btnMail1"><a href="#" class="arrow1"><span class="inner">メールアドレス<br>で応募</span></a></li>
+                  <!-- /.btnList --></ul>
+                <!-- /.addressJoinWrap --></div>
+              <!-- /.branch --></div>
+
+              <p class="loginAttention">※本サービスを利用するにあたり、<a href="#"><img src="../../img/icon/iconAlliedID2.png" alt="アライドID">アライドID</a>の情報を利用いたします。</p>
+              <p class="supplement1"><a href="#" class="openNewWindow1">アライドID利用規約</a>、<a href="#" class="openNewWindow1">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a>に同意の上、ご応募ください。</p>
+            <!-- /.joinCommSite --></div>
+
+            <div class="campaignShare">
+              <p>このキャンペーンを友達に知らせよう</p>
+              <ul class="snsBtns-box">
+                <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li
+                ><li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li
+                ><li class="line"><span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});</script></span></li
+                ><li><a href="http://b.hatena.ne.jp/entry/https://monipla.com/syndot-campaign/campaigns/6681" class="hatena-bookmark-button" data-hatena-bookmark-title="毎日ラッキーくじ★Amazonギフト券が当たる！" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li><li class="gp"><div class="g-plusone" data-size="medium"></div></li>
+              <!-- /.snsBtns-box --></ul>
+            <!-- /.campaignShare --></div>
+            <ul class="campaignData">
+              <li class="present"><span class="itemTitle">プレゼント</span><span class="itemData">9,999,999名様</span></li>
+              <li class="term"><span class="itemTitle">開催期間</span><span class="itemData">2014/09/17（水）～2014/10/31（金）23:59</span></li>
+              <li class="result"><span class="itemTitle">発表日</span><span class="itemData">2014/11/06（木）</span></li>
+              <li class="sponsor"><span class="itemTitle">開催</span><span class="itemData">モニプラ運営事務局</span></li>
+              <li class="attention"><span class="itemTitle">注意事項</span><span class="itemData">・当選されたお客様には、モニプラにご登録のメールアドレスへご連絡いたします。<br>・賞品の発送は11月中旬を予定しております。<br>・応募は、お一人様1回限りとさせていただきます。<br>・応募は日本国内にお住まいの方に限らせていただきます。<br>・当選賞品の販売・換金はできません。</span></li>
+            <!-- /.campaignData --></ul>
+            <p class="notAffiliated"><small>Not affiliated with Facebook, Inc.</small></p>
+        <!-- /.campaign --></section>
+
+        <a id="newMessage"></a>
+        <section class="message">
+          <div class="messageEngagement">
+            <h1>「ソフトバンク（SoftBank）」のFacebookページを応援しよう！</h1>
+            <div class="engagementInner">
+              <figure><img src="../../img/dummy/02.jpg" alt="ソフトバンク（SoftBank）" width="65" height="65"></figure>
+              <div class="engagementFb_pc">
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+              <!-- /.engagementFb_pc --></div>
+              <div class="engagementFb_sp">
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+              <!-- /.engagementFb_sp --></div>
+            <!-- /.engagementInner --></div>
+          <!-- /.messageEngagement --></div>
+          <div class="messageFooter">
+            <p class="skip"><a href="#"><small>いいね！せず次へ</small></a></p>
+            <p class="date"><small>2014/06/25 10:57</small></p>
+          <!-- /.messageFooter --></div>
+        <!-- /.message --></section>
+
+        <section class="message">
+            <h1 class="synExtensionHd1">あなたへのオススメ</h1>
+            <div class="jsSynExtension" id="logly-lift-4088597">
+                <!--[if lte IE 9 ]><div id="logly-lift-widget" class="ie-lte9"><![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+                <div id="logly-lift-widget"><!--<![endif]-->
+                    <div id="logly-lift-widget-content">
+                        <div id="logly-lift-widget-content-inner">
+                            <div class="logly-lift-ad logly-lift-ad-1 logly-lift-advbox-はてな">
+                                <a href="http://dsp.logly.co.jp/click?ad=XG01LurJV6nkiWXlwJfsAnFe5EC5IZuj7pUotfVGf5rZv5xMUcmCR7_RkhhI1aoP_vk8MgGsdv-1sOSz4ZY4Qp4vFbIBAzRfyuUZ4RLT7zJag8qNZqS6a1INSNkhPK7xVjqJGO84o1H_oYX0pdcz67zOV9INmFLsiCXDOLgN5xGEIe5hF6V3mT8TkJhAhXEHvhkPeZGuEzM2NhooTsErOfU8gSHcuFkWSc5tgJ-GB0cbi99vmNaSadcX7mmDZy0r-2jrkqLEzGcagup9jQsQGtyPnIMnzEkMDJX8tijSRgYcjCKYnodAcobS3xyjkbE_0Uypu9ZuxhkY2bn06oNgzhF0PZKeT8DZ0zELKpm-U-UF3k-sKEvedwia9AwyyZa7ban1Io1f6WcqpjrIsZ3YkA" target="_blank" class="logly-lift-ad-link">
+                                    <div class="logly-lift-ad-inner">
+                                        <div class="logly-lift-ad-img">
+                                            <div class="logly-lift-ad-img-inner" style="background-image:url(//cdn.logly.co.jp/images/000/069/689/original.png?1461567251);">
+                                                <div class="logly-lift-ad-img-spacer"></div>
+                                                <img src="//cdn.logly.co.jp/images/000/069/689/original.png?1461567251" width="126" height="90" style="width: 126px; height: 90px; top: 0px; left: -3px;">
+                                            </div>
+                                        </div>
+                                        <div class="logly-lift-ad-content">
+                                            <div class="logly-lift-ad-content-inner">
+                                                <div class="logly-lift-ad-title">GWは映画三昧！映画関連記事まとめ</div>
+                                                <div class="logly-lift-ad-adv">（はてな）</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="https://b.logly.co.jp/bc?ac=pPXtf7KC-GPlGHCuaOGu1A&amp;ad=120441" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">
+                                </a>
+                            </div>
+                            <div class="logly-lift-ad logly-lift-ad-art logly-lift-ad-2">
+                                <a href="https://monipla.com/monipla/campaigns/7343?fid=mplstpc" target="_top" class="logly-lift-ad-link" data-click-url="http://dsp.logly.co.jp/click?ad=XG01LurJV6nkiWXlwJfsAnFe5EC5IZuj7pUotfVGf5rZv5xMUcmCRwYPU2S7LfDA2EEaCn_TJOUn6eA3a_C-WkwRBmctzQ3ASmITq1Cz-IEvQomFz5yWGkzarofneJGy1zwYdEPzcbqHL3C8ypkSt1Nud5twFaVdjjSg4-3mv96BwI8sFoBnL5oId4OUfZ_IBv-igbxlq8On1x-_tiSiQrfQ43pGeaNAz6eIAxdKjVDwL6Z_Qp7qMbCTpmMMhA0SDF4TJ8lr1SuNhfbVhj8YifyO93V6CLUVYhBUEkj02i2I2twVYWUpqnvHFEOHK5puMhcrKAtQW6qmse97WL11JlmfuhE-2Fmy1OSGRYlOhEAqFGk0fLwY-JaPFlRuSUcPwrUH3zpiZUd1ikKwRaf7X39yiRUZ7k32tVbIRxvn0X3j4W3t5R1GxFoW0qc0Z98RO1Bhz6Oji-VjBJrJQIur2nuMwc1Uya90w8zzM_wb2sbFxxThRQm4KakfwNBwIT5Hw90E-HQqd2B1pUpLVGalxiTrbpmgOsNv6fUfJAizIRsubBRW2lM7Az2E6odV37D9JDDkaZHnnIG_FT_5JXQICJUefDk23t-D" ontouchstart="this.setAttribute('href',this.getAttribute('data-click-url'));">
+                                    <div class="logly-lift-ad-inner">
+                                        <div class="logly-lift-ad-img">
+                                            <div class="logly-lift-ad-img-inner" style="background-image:url(//monipla.com/monipla/proxy?u=aHR0cHM6Ly9zMy1hcC1ub3J0aGVhc3QtMS5hbWF6b25hd3MuY29tL3BhcnRzLmJyYW5kY28uanAvaW1hZ2UvYnJhbmQvMDEzZDQwNzE2NmVjNGZhNTZlYjFlMWY4Y2JlMTgzYjkvY3Bfc2V0dGluZ19iYXNpYy80MzA0M2VlN2JhNDI4M2VkNDU4NWVmN2YwYjJkY2RkNy5wbmc=);">
+                                                <div class="logly-lift-ad-img-spacer"></div>
+                                                <img src="//monipla.com/monipla/proxy?u=aHR0cHM6Ly9zMy1hcC1ub3J0aGVhc3QtMS5hbWF6b25hd3MuY29tL3BhcnRzLmJyYW5kY28uanAvaW1hZ2UvYnJhbmQvMDEzZDQwNzE2NmVjNGZhNTZlYjFlMWY4Y2JlMTgzYjkvY3Bfc2V0dGluZ19iYXNpYy80MzA0M2VlN2JhNDI4M2VkNDU4NWVmN2YwYjJkY2RkNy5wbmc=" width="171" height="90" style="width: 171px; height: 90px; top: 0px; left: -25px;">
+                                            </div>
+                                        </div>
+                                        <div class="logly-lift-ad-content">
+                                            <div class="logly-lift-ad-content-inner">
+                                                <div class="logly-lift-ad-title">毎日チャレンジ★その場で当たりが分かるスピードくじでAmazonギフト券プレゼン...</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="https://b.logly.co.jp/bc?ac=pPXtf7KC-GPlGHCuaOGu1A&amp;ad=ARTICLE%3Ahttps%3A%2F%2Fmonipla.com%2Fmonipla%2Fcampaigns%2F7343%3Ffid%3Dmplstpc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">
+                                </a>
+                            </div>
+                            <div class="logly-lift-ad logly-lift-ad-art logly-lift-ad-3">
+                                <a href="https://monipla.com/tanrei_cp/campaigns/6908?fid=mplstpc" target="_top" class="logly-lift-ad-link" data-click-url="http://dsp.logly.co.jp/click?ad=XG01LurJV6nkiWXlwJfsAnFe5EC5IZuj7pUotfVGf5rZv5xMUcmCRwYPU2S7LfDA2EEaCn_TJOUn6eA3a_C-WkwRBmctzQ3ASmITq1Cz-IEvQomFz5yWGkzarofneJGy1zwYdEPzcbqHL3C8ypkSt1Nud5twFaVdCRs1UzrmzljhN2MLg5zocNFiS_EOXrLdv-jTH76JZBMc5zcSAH_xE6Hqx38iAou_4x1bUauLYAKzQaP04tx74zq_1Ks-4h9EgvHkhqTmAoeUsKlj4UnEEnB6gAuQp5IioIXdp1qXNX9RlIVouXWlXogUgOCAjk6oP_zzZkqQVTbK-l7ARq5E52IoST5h53QgBQTvV3BK8I2Ybyqn4brftge6R7P58gvot9qp10GPqJKodPv_geu4zyOzxYNGwYNBjeS-zJD_jhTPDoO9vfYoibCbeDWoEbRNVbxz0usGU_Hdj2Fk43yJH-MldbO_C2Fc7CskFbU_CnvI9NLFAYV9pI0QRxEHvbbxfu7iELNz_naBuY_jeC4hIICYdipDYHRccavKyYxru_Qv_SfVf_2MsujU12BjS5S1N2ZFhrBU-1b_JdJl5NswJxgl5LTVoC5xn8njDja62Ow" ontouchstart="this.setAttribute('href',this.getAttribute('data-click-url'));">
+                                    <div class="logly-lift-ad-inner">
+                                        <div class="logly-lift-ad-img">
+                                            <div class="logly-lift-ad-img-inner" style="background-image:url(//monipla.com/tanrei_cp/proxy?u=aHR0cHM6Ly9zMy1hcC1ub3J0aGVhc3QtMS5hbWF6b25hd3MuY29tL3BhcnRzLmJyYW5kY28uanAvaW1hZ2UvYnJhbmQvZThjMDY1M2ZlYTEzZjkxYmYzYzQ4MTU5ZjdjMjRmNzgvY3BfYWN0aW9uX2VudHJ5LzEwNWQ3YTllNTE4MTE4OTViMTVmMWM2ZWI2MzkxYTkyLnBuZw==);">
+                                                <div class="logly-lift-ad-img-spacer"></div>
+                                                <img src="//monipla.com/tanrei_cp/proxy?u=aHR0cHM6Ly9zMy1hcC1ub3J0aGVhc3QtMS5hbWF6b25hd3MuY29tL3BhcnRzLmJyYW5kY28uanAvaW1hZ2UvYnJhbmQvZThjMDY1M2ZlYTEzZjkxYmYzYzQ4MTU5ZjdjMjRmNzgvY3BfYWN0aW9uX2VudHJ5LzEwNWQ3YTllNTE4MTE4OTViMTVmMWM2ZWI2MzkxYTkyLnBuZw==" width="171" height="90" style="width: 171px; height: 90px; top: 0px; left: -25px;">
+                                            </div>
+                                        </div>
+                                        <div class="logly-lift-ad-content">
+                                            <div class="logly-lift-ad-content-inner">
+                                                <div class="logly-lift-ad-title">淡麗侍シリーズ新CMを見て淡麗極上〈生〉１ケースをGETしよう！</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="https://b.logly.co.jp/bc?ac=pPXtf7KC-GPlGHCuaOGu1A&amp;ad=ARTICLE%3Ahttps%3A%2F%2Fmonipla.com%2Ftanrei_cp%2Fcampaigns%2F6908%3Ffid%3Dmplstpc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">
+                                </a>
+                            </div>
+                            <div class="logly-lift-ad logly-lift-ad-art logly-lift-ad-4">
+                                <a href="https://monipla.com/circleksunkus/campaigns/7283?fid=mplstpc" target="_top" class="logly-lift-ad-link" data-click-url="http://dsp.logly.co.jp/click?ad=XG01LurJV6nkiWXlwJfsAnFe5EC5IZuj7pUotfVGf5rZv5xMUcmCRwYPU2S7LfDA2EEaCn_TJOUn6eA3a_C-WkwRBmctzQ3ASmITq1Cz-IEvQomFz5yWGkzarofneJGy1zwYdEPzcbqHL3C8ypkSt1Nud5twFaVd7pH5RIYe1Rw9QvnizIFpAxMN9jl_rBE43vE6mhjJMbzBljeRGutQNG01v3ZvhowDivuD2MSh1qMC9Avn0atj2mYVrqc8Gj95Ki4qN2wP6ue1sztK4lZ6t_MdfkpN_xznheqr2_NKfIvR0ia_T4em_GdHrVZP4PR74rmfoSMEyj1yA4kyGlhQfwZgXjL_U_UDX_26HfuRIQ8kN94_Da_argkSkUIBxniPe1jAx2NJWGAEZPoiIKyXsPHwWQ6jZTe__VbdYwfqiLXMEdvuaKdw_nfeR9gQPKYgQXPyHMoaxFGxrd48_Q_hpSub99XmXe89lLhpwgvBlmYQ8OjXylqbKhP0Pdcxt9jIaTNAjIKFKvUAKL9OrucCFtN6dA_Lna7qowg-Or4-zoEWDfeuBWb3Wkl0-iHsBh4U3F4KMZtA6OtMU6OAzss7gGIGgu6ULZMtaOnIxlW46Bc4KmHRxwBYtlgcThfDyUDd" ontouchstart="this.setAttribute('href',this.getAttribute('data-click-url'));">
+                                    <div class="logly-lift-ad-inner">
+                                        <div class="logly-lift-ad-img">
+                                            <div class="logly-lift-ad-img-inner" style="background-image:url(//monipla.com/circleksunkus/proxy?u=aHR0cHM6Ly9zMy1hcC1ub3J0aGVhc3QtMS5hbWF6b25hd3MuY29tL3BhcnRzLmJyYW5kY28uanAvaW1hZ2UvYnJhbmQvNzBjNjM5ZGY1ZTMwYmRlZTQ0MGU0Y2RmNTk5ZmVjMmIvdXBsb2FkX2ZpbGUvOTM3NDBkYjYxYmZjYWMzMzRkY2NkNjlkM2EwZjI0ZDBlN2FlYjRkYy8xNjA0MThfc3BlZWRrdWppXzEwMDA1MjQucG5n);">
+                                                <div class="logly-lift-ad-img-spacer"></div>
+                                                <img src="//monipla.com/circleksunkus/proxy?u=aHR0cHM6Ly9zMy1hcC1ub3J0aGVhc3QtMS5hbWF6b25hd3MuY29tL3BhcnRzLmJyYW5kY28uanAvaW1hZ2UvYnJhbmQvNzBjNjM5ZGY1ZTMwYmRlZTQ0MGU0Y2RmNTk5ZmVjMmIvdXBsb2FkX2ZpbGUvOTM3NDBkYjYxYmZjYWMzMzRkY2NkNjlkM2EwZjI0ZDBlN2FlYjRkYy8xNjA0MThfc3BlZWRrdWppXzEwMDA1MjQucG5n" width="171" height="90" style="width: 171px; height: 90px; top: 0px; left: -25px;">
+                                            </div>
+                                        </div>
+                                        <div class="logly-lift-ad-content">
+                                            <div class="logly-lift-ad-content-inner">
+                                                <div class="logly-lift-ad-title">【スピードくじ】豪華賞品が64名様に当たるチャンス！</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="https://b.logly.co.jp/bc?ac=pPXtf7KC-GPlGHCuaOGu1A&amp;ad=ARTICLE%3Ahttps%3A%2F%2Fmonipla.com%2Fcircleksunkus%2Fcampaigns%2F7283%3Ffid%3Dmplstpc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">
+                                </a>
+                            </div>
+                            <div class="logly-lift-ad-clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- /.messageWrap --></section>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-auth jsModalCont">
+      <h1 class="singleWrapHd1">お持ちのアカウントで簡単応募！</h1>
+      <div class="snsJoinLargeWrap">
+        <ul class="snsJoinLarge">
+          <li class="btnSnsFb1"><a href="#" class="arrow1"><span class="inner">Facebook<br>で応募</span></a></li>
+          <li class="btnSnsTw1"><a href="#" class="arrow1"><span class="inner">Twitter<br>で応募</span></a></li>
+          <!-- <li class="btnSnsIn1"><a href="#" class="arrow1"><span class="inner">LinkedIn<br>で応募</span></a></li>
+          <li class="btnSnsLn1"><a href="#" class="arrow1"><span class="inner">LINE<br>で応募</span></a></li>
+          <li class="btnSnsIg1"><a href="#" class="arrow1"><span class="inner">Instagram<br>で応募</span></a></li>
+          <li class="btnSnsGp1"><a href="#" class="arrow1"><span class="inner">Google<br>で応募</span></a></li>
+          <li class="btnSnsYh1"><a href="#" class="arrow1"><span class="inner">Yahoo! <br>JAPAN ID<br>で応募</span></a></li> -->
+        <!-- /.snsJoinLarge --></ul>
+      <!-- /.snsJoinLargeWrap --></div>
+
+      <div class="snsJoinOtherWrap">
+        <ul class="snsJoinOther">
+          <!-- <li class="btnSnsFb1"><a href="#" class="square1" title="Facebook"><span class="inner">Facebook</span></a></li>
+          <li class="btnSnsTw1"><a href="#" class="square1" title="Twitter"><span class="inner">Twitter</span></a></li> -->
+          <li class="btnSnsIn1"><a href="#" class="square1" title="LinkedIn"><span class="inner">LinkedIn</span></a></li>
+          <li class="btnSnsLn1"><a href="#" class="square1" title="LINE"><span class="inner">LINE</span></a></li>
+          <li class="btnSnsIg1"><a href="#" class="square1" title="Instagram"><span class="inner">Instagram</span></a></li>
+          <li class="btnSnsGp1"><a href="#" class="square1" title="Google"><span class="inner">Google</span></a></li>
+          <li class="btnSnsYh1"><a href="#" class="square1" title="Yahoo!&#10;JAPAN ID"><span class="inner">Yahoo! JAPAN ID</span></a></li>
+          <!-- <li class="btnMail1"><a href="#" class="square1" title="メールアドレス"><span class="inner">メールアドレス</span></a></li> -->
+        <!-- /.snsJoinOther --></ul>
+      <!-- /.snsJoinOtherWrap --></div>
+
+      <div class="addressJoinWrap">
+        <ul class="btnList">
+          <li class="btnMail1"><a href="#" class="arrow1"><span class="inner">メールアドレス<br>で応募</span></a></li>
+        <!-- /.btnList --></ul>
+      <!-- /.addressJoinWrap --></div>
+
+      <div class="addressJoinWrap">
+        <h2 class="addressJoinHd2">メールアドレスで応募</h2>
+        <ul class="addressJoin">
+          <li class="address"><input type="email" name="mail_address" value="" placeholder="メールアドレス"></li>
+          <li class="btn3"><a href="#" class="large1">次へ</a></li>
+        <!-- /.addressJoin --></ul>
+      <!-- /.addressJoinWrap --></div>
+
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">閉じる</a>
+      </p>
+    <!-- /.modalCont-auth --></section>
+  <!-- /.modal1 --></div>
+<% end %>

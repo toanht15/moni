@@ -1,0 +1,22 @@
+.campaign {
+
+  //Settlement
+  .message,
+  .message_thanks,
+  .message_repurchase {
+    width: 580px;
+    margin: 10px 10px 20px;
+  }
+  .messageSettlement .productImg {
+    width: 200px;
+  }
+  .messageOrderContent .productImg {
+    width: 36px;
+  }
+  .messageSettlement .settlementInfoInner,
+  .messageSettlement .text {
+    width: calc(100% - 200px - 15px);
+    width: -webki-calc(100% - 200px - 15px);
+    width: 325px;
+  }
+}

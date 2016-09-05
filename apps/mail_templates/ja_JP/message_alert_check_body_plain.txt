@@ -1,0 +1,31 @@
+メッセージ送信失敗検知
+
+■配送中で1時間以上経過しているメッセージ
+<#LOOP_STATUS_DELIVERING>
+Delivery Reservation ID：<#reservation_id>
+Cp ID：<#cp_id>
+
+<#/LOOP_STATUS_DELIVERING>
+
+■配送失敗のメッセージ
+<#LOOP_STATUS_DELIVERY_FAIL>
+Delivery Reservation ID：<#reservation_id>
+Cp ID：<#cp_id>
+
+<#/LOOP_STATUS_DELIVERY_FAIL>
+
+■配送完了で、このreservationに紐づくcp_message_delivery_targetsのstatusが0または2のままのメッセージ
+<#LOOP_STATUS_DELIVERED>
+Delivery Reservation ID：<#reservation_id>
+Cp ID：<#cp_id>
+
+<#/LOOP_STATUS_DELIVERED>
+
+■開催時にメールが送信されていないキャンペーン
+<#LOOP_STATUS_SEND_MAIL>
+Cp ID：<#cp_id>
+
+<#/LOOP_STATUS_SEND_MAIL>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Copyright (c) Allied Architects, Inc. ALL RIGHTS RESERVED

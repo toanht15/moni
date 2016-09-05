@@ -1,0 +1,44 @@
+<?php
+
+$settings = aafwApplicationConfig::getInstance();
+
+return array(
+
+	'rootLogger' => array(
+		'level' => 'INFO',
+		'appenders' => array('phpunit'),
+	),
+
+	'loggers' => array(
+
+		'monipla_facebook' => array(
+			'level' => $settings->Log4php['loggers']['monipla_facebook']['level'],
+			'appenders' => array('phpunit'),
+			'additivity' => false,
+		),
+
+		'monipla_find' => array(
+			'level' => $settings->Log4php['loggers']['monipla_find']['level'],
+			'appenders' => array('phpunit'),
+			'additivity' => false,
+		),
+
+		'monipla_twitter' => array(
+			'level' => $settings->Log4php['loggers']['monipla_twitter']['level'],
+			'appenders' => array('phpunit'),
+			'additivity' => false,
+		),
+
+        'platform' => array(
+            'level' => $settings->Log4php['loggers']['platform']['level'],
+            'appenders' => array('phpunit'),
+            'additivity' => false,
+        ),
+	),
+
+	'appenders' => array(
+		'phpunit' => array(
+			'class' => 'LoggerAppenderNull'
+		),
+	)
+);

@@ -1,0 +1,6 @@
+AmazonS3:
+  AccessKey: AKIAJTBNXMFK3OLY64VA
+  SecretKey: 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
+  BucketName: stg-parts.brandco.jp
+  TmpPath: tmp/
+  ImagePath: image/

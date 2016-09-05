@@ -1,0 +1,9 @@
+StoreSession:
+  Host: monipla-redis.8gksjs.ng.0001.apne1.cache.amazonaws.com
+  Port: 6379
+  DbId: 0
+StoreCache:
+  Host: monipla-cache-001.8gksjs.0001.apne1.cache.amazonaws.com
+  Port: 6379
+  DbId: 0
+  TrackerDbId: 1

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_plugin_list / admin-comment</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+    <script src="../../js/_unit.js"></script>
+    <script src="../../js/_admin_unit.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+
+</head>
+
+<body>
+    <header class="editHeadWrap">
+        <section class="editHead">
+            <div class="wrap">
+                <h1><a href="#"><img src="../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+                <nav class="editMenu">
+                    <ul>
+                        <li class="actionCampaign">
+                            <a href="#">キャンペーン</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">作成</a></li>
+                                <li><a href="#">クーポン設定</a></li>
+                            </ul>
+                        </li>
+                        <li class="actionMessage">
+                            <a href="#">メッセージ</a>
+                        </li>
+                        <li class="actionContents">
+                            <a href="#">コンテンツ</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">ページ</a></li>
+                                <li><a href="#">コメント</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                        <li class="actionFan">
+                            <a href="#">ファン<span class="badge1">+99</span></a>
+                        </li>
+                        <li class="actionDashboard">
+                            <a href="#">ダッシュボード</a>
+                        </li>
+                        <li class="actionInfo">
+                            <a href="#">お知らせ<span class="badge1">+3</span></a>
+                        </li>
+                        <li class="actionContact">
+                            <a href="#">お問い合わせ</a>
+                        </li>
+                        <li class="actionSetting">
+                            <a href="#">設定</a>
+                            <ul class="editMenuInner">
+                                <li><a href="#">管理者設定</a></li>
+                                <li><a href="#">ユーザー設定</a></li>
+                                <li><a href="#">ページ設定</a></li>
+                                <li><a href="#">CVタグ設定</a></li>
+                                <li><a href="#">リダイレクト設定</a></li>
+                            <!-- /.editMenuInner --></ul>
+                        </li>
+                    </ul>
+                <!-- /.editMenu --></nav>
+            <!-- /.wrap --></div>
+        <!-- /.editHead --></section>
+
+        <section class="account">
+            <ul>
+                <li class="accountCompany">
+                    <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li>
+                <li class="preview"><a href="#">プレビュー</a></li>
+                <li class="accountName">
+                    <a href="#">
+                        <img src="../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li>
+                <li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+            </ul>
+        <!-- /.account --></section>
+
+    <!-- /.editHeadWrap --></header>
+
+    <article>
+        <h1 class="hd1">コメント機能</h1>
+        <section class="commentPluginWrap">
+            <h2 class="hd2">コメントプラグイン新規作成</h2>
+            <p class="btn1"><a href="#" class="middle2">モニプラに作成
+        <span class="iconHelp">
+          <span class="textBalloon1">
+            <span>モニプラのページに埋め込みで作成します。</span>
+      <!-- /.textBalloon1 --></span>
+    <!-- /.iconHelp --></span></a></p>
+            <p class="btn1"><a href="#" class="middle2">外部に作成
+        <span class="iconHelp">
+          <span class="textBalloon1">
+            <span>任意に指定した外部に作成します。</span>
+      <!-- /.textBalloon1 --></span>
+    <!-- /.iconHelp --></span></a></p>
+        <!-- /.commentPluginWrap --></section>
+        <h2 class="hd2">コメントプラグイン一覧<span class="subLink">（<a href="#">コメントをまとめて見る</a>）</span></h2>
+        <section class="commentPluginWrap">
+            <div class="itemsSorting">
+                <p class="itemType">
+                    <label><input type="radio" name="itemsSorting">全て</label>
+                    <label><input type="radio" name="itemsSorting">ページ</label>
+                    <label><input type="radio" name="itemsSorting">外部埋め込み</label>
+                    <!-- <span style="padding-left:15px;">|　<a href="#">コメントの全件を見る</a></span> -->
+                <!-- /.itemType --></p>
+
+                <p class="itemOrder">
+                    並べ替え
+                    <select name="" id="">
+                        <option value="#">更新日（降順）</option>
+                        <option value="#">更新日（昇順）</option>
+                        <option value="#">ほげほげ</option>
+                        <option value="#">ふがふが</option>
+                    </select>
+                <!-- /.itemOrder --></p>
+            <!-- /.itemsSorting --></div>
+            <table class="commentPlugin1">
+                <thead>
+                    <tr>
+                        <th>プラグイン名</th>
+                        <th>コメント数</th>
+                        <th>シェア数（リーチ数<span class="iconHelp"><span class="textBalloon1"><span>シェアしたユーザの友達数の合計</span>
+                        <!-- /.textBalloon1 --></span>
+                        
+                        <!-- /.iconHelp --></span>）
+                        </th>
+                        <th>設定</th>
+                        <th>属性</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">「あなたの子供の頃の思い出を聞かせてください」アンケート</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>7400(354)<br>
+                            <span class="iconTW2">Twitter</span>130(267)
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">バーディが世界を救う！？ゴルフ菜園プロジェクト～みんなのバーディでアフ…</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>13(3)<br>
+                            <span class="iconTW2">Twitter</span>74(4)
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="linkNonDisplay">GDOブログ「お知らせです！」</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>13<br>
+                            <span class="iconTW2">Twitter</span>74
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td class="jsAreaToggleWrap"><a href="#"><span class="preview jsAreaToggle">外部（4件）</span></a>
+                            <div class="urlBox jsAreaToggleTarget">
+                                <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                                <ul class="urlList">
+                                    <li><a href="#">http://www.aainc.co.jp/release/20162658</a></li>
+                                    <li><a href="#">http://www.aainc.co.jp/release/20160765</a></li>
+                                    <li><a href="#">http://www.aainc.co.jp/release/20160547</a></li>
+                                    <li><a href="#">http://www.aainc.co.jp/release/20160215</a></li>
+                                </ul>
+                            <!-- /.urlBox --></div>
+                        </td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">「あなたの子供の頃の思い出を聞かせてください」アンケート</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>7400<br>
+                            <span class="iconTW2">Twitter</span>130
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">バーディが世界を救う！？ゴルフ菜園プロジェクト～みんなのバーディでアフ…</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>13<br>
+                            <span class="iconTW2">Twitter</span>74
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="linkNonDisplay">GDOブログ「お知らせです！」</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>13<br>
+                            <span class="iconTW2">Twitter</span>74
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td><a href="#"><span class="preview">外部</span></a></td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">「あなたの子供の頃の思い出を聞かせてください」アンケート</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>7400<br>
+                            <span class="iconTW2">Twitter</span>130
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">バーディが世界を救う！？ゴルフ菜園プロジェクト～みんなのバーディでアフ…</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>13<br>
+                            <span class="iconTW2">Twitter</span>74
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="linkNonDisplay">GDOブログ「お知らせです！」</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>13<br>
+                            <span class="iconTW2">Twitter</span>74
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td><a href="#"><span class="preview">外部</span></a></td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="iconCheck3">「あなたの子供の頃の思い出を聞かせてください」アンケート</a><br> 最新コメント : 2016/03/09 00:00
+                        </td>
+                        <td><span class="actionReply">返信</span>200</td>
+                        <td>
+                            <span class="iconFB2">Facebook</span>7400<br>
+                            <span class="iconTW2">Twitter</span>130
+                        </td>
+                        <td><a href="#">編集</a></td>
+                        <td>ページ</td>
+                        <td><a href="#">コピー</a></td>
+                    </tr>
+                </tbody>
+            <!-- /.commentPlugin1 --></table>
+            <div class="pager1">
+                <p>99,999件中101件～120件表示しています</p>
+                <ul>
+                    <li class="first"><a href="#">最初のページヘ</a></li>
+                    <li class="prev"><a href="#">前のページへ</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>6</span></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">99</a></li>
+                    <li class="next"><a href="#">次のページへ</a></li>
+                    <li class="last"><a href="#">最後のページヘ</a></li>
+                </ul>
+            <!-- /.pager1 --></div>
+            <p class="showItemNum">
+                表示件数
+                <select name="" id="">
+                    <option value="#" selected>20件</option>
+                    <option value="#" selected>50件</option>
+                    <option value="#" selected>100件</option>
+                </select>
+                <span class="btn2"><a href="#" class="small1">反映</a></span>
+            <!-- /.showItemNum --></p>
+        <!-- /.commentPluginWrap --></section>
+    </article>
+
+    <footer>
+        <div class="copyright">
+            <ul class="links">
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">ミスパリ・ダンディハウス・ダイエットセンター公式ファンサイト利用規約</a></li>
+            </ul>
+            <small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED</small>
+        <!-- /.copyright --></div>
+        <ul class="links">
+            <li><a href="#">モニプラ出展利用規約</a></li>
+            <li><a href="#">アライドID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+        <p class="poweredBy"><small>Powered by monipla</small></p>
+    </footer>
+
+</body>
+
+</html>

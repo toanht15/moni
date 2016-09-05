@@ -1,0 +1,182 @@
+@charset "UTF-8";
+#moniplaCommentPlugin{box-sizing: border-box;margin: 10px 0 0 0; padding: 0 10px; min-width: 280px; background: #fff; color: #333; font-size: 14px;  font-family: Verdana,"游ゴシック",YuGothic,"メイリオ",Meiryo,"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3"; line-height: 1.5; }
+#moniplaCommentPlugin *{margin: 0;  padding: 0; list-style: none; }
+#moniplaCommentPlugin a{ color: #06a; text-decoration: none; }
+#moniplaCommentPlugin a:hover{ text-decoration: underline; }
+#moniplaCommentPlugin input{ vertical-align: middle; }
+#moniplaCommentPlugin [type=text], #moniplaCommentPlugin textarea{-webkit-box-sizing: border-box; box-sizing: border-box;padding: 2px 5px; max-width: 100%; border: 1px solid #ccc; border-radius: 3px;  font-size: 13px; }
+#moniplaCommentPlugin [type=text]:disabled, #moniplaCommentPlugin textarea:disabled{ border: 1px solid #ddd; background: #f8f8f8; color: #888; opacity: 1;-webkit-text-fill-color: #888; }
+#moniplaCommentPlugin [type=text]{ height: 30px; }
+#moniplaCommentPlugin [type=radio], #moniplaCommentPlugin [type=checkbox]{margin-right: 5px; padding: 0; border: none; }
+#moniplaCommentPlugin .pluginHeader{ display: table; margin-bottom: 20px;padding: 15px 0; width: 100%; border-bottom: 1px solid #ccc; }
+#moniplaCommentPlugin .pluginHeader .needLogin{ display: table-cell; vertical-align: middle; white-space: nowrap; }
+#moniplaCommentPlugin .pluginHeader .accountStatus{ position: relative; display: table-cell; width: 100%; vertical-align: middle; text-align: right; }
+#moniplaCommentPlugin .pluginHeader .accountStatus> *{ display: inline-block; vertical-align: middle; }
+#moniplaCommentPlugin .pluginHeader .accountStatus .accountAuth{ margin-left: 5px; }
+#moniplaCommentPlugin .pluginHeader .commentCopyright{ margin: -15px auto -5px auto; }
+#moniplaCommentPlugin .btnSubmit1{ display: inline-block; vertical-align: middle; }
+#moniplaCommentPlugin .btnSubmit1> *{ display: inline-block; -webkit-box-sizing: border-box; box-sizing: border-box;width: 100%; height: 30px; border-radius: 3px; text-align: center; font-size: 13px; line-height: 30px; }
+#moniplaCommentPlugin .btnSubmit1> a{padding: 0 0 3px;background: #2cb395; box-shadow: 0 -3px 0 0 #1c7360 inset;  color: #fff; }
+#moniplaCommentPlugin .btnSubmit1> a:hover{background: #2fc0a0; text-decoration: none; }
+#moniplaCommentPlugin .btnSubmit1> a:active{ background: #29a68a; box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; text-decoration: none; }
+#moniplaCommentPlugin .btnSubmit1> span{ background: #caece5; color: #96d9ca; }
+#moniplaCommentPlugin .btnLike1{ display: inline-block; }
+#moniplaCommentPlugin .btnLike1 [class*=inner]:before{display: inline-block; margin: -17px -15px -13px; width: 50px; height: 50px; background-image: url(../img/comment/animateHeart.png); -webkit-background-size: auto 50px; background-size: auto 50px; content: ""; vertical-align: middle; }
+#moniplaCommentPlugin .btnLike1 .innerOff:before{ background-position: 0 0; }
+#moniplaCommentPlugin .btnLike1 .innerOn:before{ background-position: -1400px 0; -webkit-transition: all 1s steps(28); transition: all 1s steps(28); }
+#moniplaCommentPlugin .btnReadmore1{ display: block; }
+#moniplaCommentPlugin .btnReadmore1> *{ display: block; width: 100%; height: 30px; text-align: center;font-size: 12px; line-height: 30px; }
+#moniplaCommentPlugin .btnReadmore1> a{ background: #ccc; color: #000; }
+#moniplaCommentPlugin .btnReadmore1> a:hover{text-decoration: none; opacity: .7; }
+#moniplaCommentPlugin .btnToggle{ position: relative; display: block; overflow: hidden; width: 14px; height: 14px; border-radius: 2px;text-indent: -9999px; font-size: 0; }
+#moniplaCommentPlugin .btnToggle:before{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; margin: auto; width: 0; height: 0;border-top: 7px solid #dadada; border-right: 6px solid transparent; border-bottom: none; border-left: 6px solid transparent; content: ""; }
+#moniplaCommentPlugin .checkToggle{ cursor: pointer; }
+#moniplaCommentPlugin .checkToggle:hover{ opacity: .7; }
+#moniplaCommentPlugin .checkToggle+ [type=checkbox]{ display: none; }
+#moniplaCommentPlugin .badge1{ position: relative; display: inline-block; padding: 2px 3px; min-width: 14px; height: 16px; border-radius: 10px 10px; background: #d13646;color: #fff; vertical-align: middle; text-align: center; font-size: 11px; line-height: 16px; }
+#moniplaCommentPlugin .badge1:before{ position: absolute; bottom: 0; left: -3px; display: block; width: 0; height: 0; border-top: none; border-right: 3px solid transparent; border-bottom: 6px solid #d13646; border-left: 3px solid transparent; content: ""; -webkit-transform: rotate(240deg); transform: rotate(240deg); }
+#moniplaCommentPlugin .iconFb1, #moniplaCommentPlugin .iconTw1{ display: inline-block; overflow: hidden; width: 20px; height: 20px; vertical-align: middle; text-indent: -9999px;font-size: 0; }
+#moniplaCommentPlugin .iconFb1{ background: url(../img/comment/iconSnsFb1.png); }
+#moniplaCommentPlugin .iconTw1{ background: url(../img/comment/iconSnsTw1.png); }
+#moniplaCommentPlugin .selectSns{ margin-left: 5px; }
+#moniplaCommentPlugin .selectSns li{ display: inline-block; margin-right: 5px;vertical-align: middle; }
+#moniplaCommentPlugin .selectSns .iconFb1, #moniplaCommentPlugin .selectSns .iconTw1{ opacity: .7; }
+#moniplaCommentPlugin .selectSns [type=checkbox]:checked+ .iconFb1, #moniplaCommentPlugin .selectSns [type=checkbox]:checked+ .iconTw1{ opacity: 1; }
+#moniplaCommentPlugin .iconReply:before{display: inline-block; margin: -.3em 3px 0 0; width: 16px; height: 12px; background: url(../img/comment/iconReply1.png) no-repeat; content: ""; vertical-align: middle; }
+#moniplaCommentPlugin .balloonLikeUser{ position: relative; display: block; }
+#moniplaCommentPlugin .balloonLikeUser .inner{ position: relative; left: -50%; display: block; padding: 5px 8px; background: #333; color: #fff; line-height: 1.5; }
+#moniplaCommentPlugin .balloonLikeUser .inner:before{ position: absolute; top: -6px; right: 0; left: 0; margin: auto;width: 0; height: 0; border-top: none; border-right: 5px solid transparent; border-bottom: 6px solid #333; border-left: 5px solid transparent; content: ""; }
+#moniplaCommentPlugin .threadTitleWrap{ margin-bottom: 20px; }
+#moniplaCommentPlugin .threadTitle strong{font-weight: 400; font-size: 18px; }
+#moniplaCommentPlugin .threadComment{ border-bottom: 2px solid #ccc; }
+#moniplaCommentPlugin .threadComment .inner{display: inline-block; margin-bottom: -2px; padding: 0 10px; border-bottom: 2px solid #262a4c; font-weight: 700; font-size: 15px; }
+#moniplaCommentPlugin .noticeList{position: absolute; top: 30px; right: 0; z-index: 100;  display: none; border: 1px solid #ccc; background: #fff; box-shadow: 1px 1px 2px rgba(0,0,0,.5); text-align: left; }
+#moniplaCommentPlugin .noticeList li{ border-top: 1px solid #ccc; }
+#moniplaCommentPlugin .noticeList li:first-child{ border-top: none; }
+#moniplaCommentPlugin .noticeList a{display: block; padding: 10px;  width: 280px; color: #333; font-size: 0; }
+#moniplaCommentPlugin .noticeList a:hover{ background: #eaeaea; text-decoration: none; }
+#moniplaCommentPlugin .noticeList .actionUserImg{display: inline-block; margin-right: 10px; width: 30px; height: 30px; vertical-align: top; }
+#moniplaCommentPlugin .noticeList .actionComment{ display: inline-block; width: 240px; vertical-align: top; font-size: 12px; line-height: 1.2; }
+#moniplaCommentPlugin .noticeList .actionDate{color: #888; font-size: 11px; }
+#moniplaCommentPlugin [type=checkbox]:checked~ .noticeList{ display: block; }
+#moniplaCommentPlugin .commentPostWrap{ margin-bottom: 25px; }
+#moniplaCommentPlugin .commentPost{position: relative; margin-bottom: 15px; }
+#moniplaCommentPlugin .commentPost:after{ display: block; clear: both; content: ""; }
+#moniplaCommentPlugin .commentPost .userData{ float: left; width: 50px; }
+#moniplaCommentPlugin .commentPost .postBody{position: relative; margin-left: 50px; }
+#moniplaCommentPlugin .commentPost .postOptions{position: absolute; top: 0; right: 0; width: 14px; height: 14px; }
+#moniplaCommentPlugin .commentPost .optionActions{position: absolute; top: 14px; right: 0; z-index: 100;  display: none; border: 1px solid #ccc; background: #fff; box-shadow: 1px 1px 2px rgba(0,0,0,.5);white-space: nowrap; }
+#moniplaCommentPlugin .commentPost .optionActions li{ border-top: 1px solid #ccc; }
+#moniplaCommentPlugin .commentPost .optionActions li:first-child{ border-top: none; }
+#moniplaCommentPlugin .commentPost .optionActions a{ display: block; padding: 5px 10px; color: #333; }
+#moniplaCommentPlugin .commentPost .optionActions a:hover{ background: #eaeaea; text-decoration: none; }
+#moniplaCommentPlugin .commentPost [type=checkbox]:checked~ .optionActions{ display: block; }
+#moniplaCommentPlugin .commentPost .userImage{display: block; width: 40px; height: 40px; }
+#moniplaCommentPlugin .commentPost .userImage img{ width: 100%; height: 100%; }
+#moniplaCommentPlugin .commentPost .postUserName{margin-bottom: 5px; padding-right: 20px; font-weight: 700; font-size: 12px; }
+#moniplaCommentPlugin .commentPost .postUserName [type=text]{ min-width: 180px; width: 50%; }
+#moniplaCommentPlugin .commentPost .postTitle{ margin-bottom: 10px; }
+#moniplaCommentPlugin .commentPost .postTitle strong{ font-weight: 700; }
+#moniplaCommentPlugin .commentPost .postTitle [type=text]{ width: 100%; }
+#moniplaCommentPlugin .commentPost .postRating{ margin-bottom: 10px; }
+#moniplaCommentPlugin .commentPost .postRating img{margin-right: 5px; width: 16px; height: 16px; vertical-align: middle; }
+#moniplaCommentPlugin .commentPost .postImages{ margin-bottom: 10px; font-size: 0; }
+#moniplaCommentPlugin .commentPost .postImages .thumb{position: relative; display: inline-block;  margin-right: 10px; width: 70px; height: 50px; background: #ccc; vertical-align: middle; transition: all .2s ease-out; transform-origin: 0 0; }
+#moniplaCommentPlugin .commentPost .postImages .thumb:hover{ z-index: 110; transform: scale(5); }
+#moniplaCommentPlugin .commentPost .postImages img{position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto;max-width: 100%; max-height: 100%;  width: auto; height: auto; }
+#moniplaCommentPlugin .commentPost .postText{ margin-bottom: 10px; }
+#moniplaCommentPlugin .commentPost .postTextEdit{position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%;  width: 100%; border-radius: 3px; word-wrap: break-word; word-break: break-all;font-size: 13px; -webkit-transition: all .1s ease-out; transition: all .1s ease-out; }
+#moniplaCommentPlugin .commentPost .postTextEdit[contenteditable=true]{padding: 2px 5px;  min-height: 54px; border: 1px solid #ccc; }
+#moniplaCommentPlugin .commentPost .postTextEdit.empty:before{position: absolute; top: 2px; left: 5px; color: #aaa; content: attr(data-placeholder); }
+#moniplaCommentPlugin .commentPost .postTextEdit .mention{margin-right: 4px;padding: 0 2px; border: 1px solid #ccc; border-radius: 3px;  background: #eee; }
+#moniplaCommentPlugin .commentPost .userActionWrap{ white-space: nowrap; font-size: 12px; }
+#moniplaCommentPlugin .commentPost .userActionWrap:after{ display: block; clear: both; content: ""; }
+#moniplaCommentPlugin .commentPost .userActionWrap> *{ float: left; margin: 0 15px 5px 0; min-height: 20px; }
+#moniplaCommentPlugin .commentPost .userActionWrap .shareSns> *{ display: inline-block; margin-right: 5px;vertical-align: middle; }
+#moniplaCommentPlugin .commentPost .userActionWrap .likeNumber{ position: relative; display: inline-block; vertical-align: middle; }
+#moniplaCommentPlugin .commentPost .userActionWrap .likeNumber:hover .balloonLikeUser{ display: block; }
+#moniplaCommentPlugin .commentPost .userActionWrap .balloonLikeUser{position: absolute; top: 2.5em; left: 50%;z-index: 100;  display: none; }
+#moniplaCommentPlugin .commentPost .userActionWrap .reply a{ display: block; }
+#moniplaCommentPlugin .commentPost .userActionWrap .postDate{ float: right; margin-right: 0; }
+#moniplaCommentPlugin .commentPost .userActionWrap .postDate small{color: #bbb; font-size: 12px; }
+#moniplaCommentPlugin .commentPost .userActionWrap .postSubmit{ float: right; margin-right: 0; }
+#moniplaCommentPlugin .commentPost .userActionWrap .postSubmit:after{ display: block; clear: both; content: ""; }
+#moniplaCommentPlugin .commentPost .userActionWrap .btnSubmit1{ float: right; width: 120px; }
+#moniplaCommentPlugin .commentPost .userActionWrap .cancelSubmit{float: left; margin-right: 15px; line-height: 30px; }
+#moniplaCommentPlugin .commentPost.current{margin: -5px -5px 15px -5px;  padding: 5px; background: #fffeed; }
+@keyframes bgColor{ 0%{ background: #fffeed; }
+    100%{ background: rgba(255,254,237,0); } }
+#moniplaCommentPlugin .commentPost .shareBox{ position: absolute; top: 50%; left: 50%; box-sizing: border-box;margin: -81px 0 0 -140px; padding: 20px 10px; width: 280px; border-radius: 3px; background: rgba(0,0,0,.7); color: #fff; }
+#moniplaCommentPlugin .commentPost .shareBox p{ text-align: center; }
+#moniplaCommentPlugin .commentPost .shareBox p strong{ font-weight: 400; }
+#moniplaCommentPlugin .commentPost .shareBox p+ .shareLargeWrap{ margin-top: 15px; }
+#moniplaCommentPlugin .commentPost .shareBox .boxCloseBtn{ position: absolute; top: 10px; right: 10px; display: block; overflow: hidden; width: 15px; height: 15px; background: url(../img/base/btnClose1.png); text-indent: 100%; white-space: nowrap; }
+#moniplaCommentPlugin .commentPost .shareBox .boxCloseBtn a{ display: block; }
+#moniplaCommentPlugin .commentPost .shareBox .shareLargeWrap{text-align: center; font-size: 0; }
+#moniplaCommentPlugin .commentPost .shareBox .shareLargeWrap li{display: inline-block;  width: 110px; font-size: 13px; }
+#moniplaCommentPlugin .commentPost .shareBox .shareLargeWrap li:first-child{ margin-right: 10px; }
+#moniplaCommentPlugin .commentPost .shareBox .shareOtherWrap{ margin-top: 10px; text-align: center;font-size: 0; }
+#moniplaCommentPlugin .commentPost .shareBox .shareOtherWrap li{display: inline-block; margin-right: 10px;  width: 40px; font-size: 13px; }
+#moniplaCommentPlugin .commentPost .shareBox .shareOtherWrap li:last-child{ margin-right: 0; }
+#moniplaCommentPlugin .commentReplyWrap{ margin-left: 50px; }
+#moniplaCommentPlugin .commentReplyWrap .commentPost .userData{ width: 40px; }
+#moniplaCommentPlugin .commentReplyWrap .commentPost .postBody{ margin-left: 40px; }
+#moniplaCommentPlugin .commentReplyWrap .commentPost .userImage{ width: 30px; height: 30px; }
+#moniplaCommentPlugin .commentReplyWrap .commentPost.current{ margin: -5px -5px 15px -5px; }
+#moniplaCommentPlugin .commentNotdisplay{ position: relative; margin: 20px auto; padding: 0 30px; text-align: center; }
+#moniplaCommentPlugin .commentNotdisplay:before{position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto;width: 100%; height: 1px; background: #ccc;  content: ""; }
+#moniplaCommentPlugin .commentNotdisplay .innerText{ position: relative; display: inline-block; padding: 0 30px; background: #fff; font-size: 11px; }
+#moniplaCommentPlugin .commentNotdisplay+ .jsPostWrap{ display: none; }
+#moniplaCommentPlugin .showOtherComment{ position: relative; margin: 20px auto; padding: 0 30px; text-align: center; }
+#moniplaCommentPlugin .showOtherComment:before{position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto;width: 100%; height: 1px; background: #ccc;  content: ""; }
+#moniplaCommentPlugin .showOtherComment .innerText{ position: relative; display: inline-block; padding: 0 30px; background: #fff; font-size: 11px; }
+#moniplaCommentPlugin .commentReadMore{ margin: 25px auto; }
+#moniplaCommentPlugin .commentCopyright{ margin: 30px auto; text-align: right; }
+#moniplaCommentPlugin .commentCopyright small{ font-size: 12px; }
+#moniplaCommentPlugin .commentCopyright img{ height: 14px; vertical-align: middle; }
+#moniplaCommentPlugin .btnSnsFb1, #moniplaCommentPlugin .btnSnsGp1, #moniplaCommentPlugin .btnSnsLn1, #moniplaCommentPlugin .btnSnsTb1, #moniplaCommentPlugin .btnSnsTw1{position: relative; display: inline-block; vertical-align: middle; }
+#moniplaCommentPlugin .btnSnsFb1> *, #moniplaCommentPlugin .btnSnsGp1> *, #moniplaCommentPlugin .btnSnsLn1> *, #moniplaCommentPlugin .btnSnsTb1> *, #moniplaCommentPlugin .btnSnsTw1> *{ display: inline-block; -webkit-box-sizing: border-box; box-sizing: border-box;width: 100%; height: 37px; border-radius: 3px; text-align: center; font-size: 13px; line-height: 37px; }
+#moniplaCommentPlugin .btnSnsFb1> a, #moniplaCommentPlugin .btnSnsGp1> a, #moniplaCommentPlugin .btnSnsLn1> a, #moniplaCommentPlugin .btnSnsTb1> a, #moniplaCommentPlugin .btnSnsTw1> a{ color: #fff; }
+#moniplaCommentPlugin .btnSnsFb1> a:hover, #moniplaCommentPlugin .btnSnsGp1> a:hover, #moniplaCommentPlugin .btnSnsLn1> a:hover, #moniplaCommentPlugin .btnSnsTb1> a:hover, #moniplaCommentPlugin .btnSnsTw1> a:hover{ text-decoration: none; }
+#moniplaCommentPlugin .btnSnsFb1> a:active, #moniplaCommentPlugin .btnSnsGp1> a:active, #moniplaCommentPlugin .btnSnsLn1> a:active, #moniplaCommentPlugin .btnSnsTb1> a:active, #moniplaCommentPlugin .btnSnsTw1> a:active{ box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; text-decoration: none; }
+#moniplaCommentPlugin .btnSnsFb1> a:before, #moniplaCommentPlugin .btnSnsGp1> a:before, #moniplaCommentPlugin .btnSnsLn1> a:before, #moniplaCommentPlugin .btnSnsTb1> a:before, #moniplaCommentPlugin .btnSnsTw1> a:before{position: absolute; top: 50%; left: 8px; margin-top: -11px; width: 20px; height: 20px; background-size: 20px 20px;background-repeat: no-repeat; color: #fff;  content: ""; }
+#moniplaCommentPlugin .btnSnsGp1, #moniplaCommentPlugin .btnSnsLn1, #moniplaCommentPlugin .btnSnsTb1{ vertical-align: middle; text-indent: -9999px; font-size: 0; }
+#moniplaCommentPlugin .btnSnsGp1> *, #moniplaCommentPlugin .btnSnsLn1> *, #moniplaCommentPlugin .btnSnsTb1> *{ height: 40px; }
+#moniplaCommentPlugin .btnSnsGp1> a, #moniplaCommentPlugin .btnSnsLn1> a, #moniplaCommentPlugin .btnSnsTb1> a{ display: block; }
+#moniplaCommentPlugin .btnSnsGp1> a:before, #moniplaCommentPlugin .btnSnsLn1> a:before, #moniplaCommentPlugin .btnSnsTb1> a:before{ margin-top: -13px; width: 22px; height: 22px; background-size: 22px 22px; }
+#moniplaCommentPlugin .btnSnsFb1> a{padding: 0 0 3px; background: #3b5998; box-shadow: 0 -3px 0 0 #223458 inset; }
+#moniplaCommentPlugin .btnSnsFb1> a:hover{ background: #4060a5; box-shadow: 0 -3px 0 0 #223458 inset; }
+#moniplaCommentPlugin .btnSnsFb1> a:active{ background: #36528b; box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; }
+#moniplaCommentPlugin .btnSnsFb1> a:before{ background-image: url(../img/comment/iconSnsFb3.png); }
+#moniplaCommentPlugin .btnSnsTw1> a{padding: 0 0 3px; background-color: #55acee; box-shadow: 0 -3px 0 0 #3e7eae inset; }
+#moniplaCommentPlugin .btnSnsTw1> a:hover{ background-color: #5ab5fb; box-shadow: 0 -3px 0 0 #3e7eae inset; }
+#moniplaCommentPlugin .btnSnsTw1> a:active{ background-color: #50a3e1; box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; }
+#moniplaCommentPlugin .btnSnsTw1> a:before{ background-image: url(../img/comment/iconSnsTw3.png); }
+#moniplaCommentPlugin .btnSnsLn1> a{padding: 0 0 3px; background-color: #00c300; box-shadow: 0 -3px 0 0 #008300 inset; }
+#moniplaCommentPlugin .btnSnsLn1> a:hover{ background-color: #00d000; box-shadow: 0 -3px 0 0 #008300 inset; }
+#moniplaCommentPlugin .btnSnsLn1> a:active{ background-color: #00b600; box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; }
+#moniplaCommentPlugin .btnSnsLn1> a:before{ background-image: url(../img/comment/iconSnsLn3.png); }
+#moniplaCommentPlugin .btnSnsGp1> a{padding: 0 0 3px; background-color: #dc4e41; box-shadow: 0 -3px 0 0 #9c372e inset; }
+#moniplaCommentPlugin .btnSnsGp1> a:hover{ background-color: #e95345; box-shadow: 0 -3px 0 0 #9c372e inset; }
+#moniplaCommentPlugin .btnSnsGp1> a:active{ background-color: #cf493d; box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; }
+#moniplaCommentPlugin .btnSnsGp1> a:before{ background-image: url(../img/comment/iconSnsGp3.png); }
+#moniplaCommentPlugin .btnSnsTb1> a{padding: 0 0 3px; background-color: #31435d; box-shadow: 0 -3px 0 0 #1b2533 inset; }
+#moniplaCommentPlugin .btnSnsTb1> a:hover{ background-color: #3f5677; box-shadow: 0 -3px 0 0 #1b2533 inset; }
+#moniplaCommentPlugin .btnSnsTb1> a:active{ background-color: #2b3c52; box-shadow: 0 3px 1px 0 rgba(0,0,0,.2) inset; }
+#moniplaCommentPlugin .btnSnsTb1> a:before{ background-image: url(../img/comment/iconSnsTb3.png); }
+@media (max-width:400px){ #moniplaCommentPlugin .btnToggle{ width: 18px; height: 18px; }
+    #moniplaCommentPlugin .commentPost .postOptions{ width: 18px; height: 18px; }
+    #moniplaCommentPlugin .commentPost .optionActions{ top: 18px; }
+    #moniplaCommentPlugin .commentPost .postUserName{ padding-right: 25px; }
+    #moniplaCommentPlugin .commentPost .postTextEdit{ font-size: 14px; }
+    #moniplaCommentPlugin .commentPost .postTextEdit[contenteditable=true]{ min-height: 56px; }
+    #moniplaCommentPlugin .commentPost .userActionWrap{margin-top: 15px; font-size: 13px; }
+    #moniplaCommentPlugin .commentPost .userActionWrap> *{ margin-bottom: 10px; }
+    #moniplaCommentPlugin .commentPost .userActionWrap .shareSns{ margin-bottom: 15px; }
+    #moniplaCommentPlugin .commentPost .userActionWrap .likeNumber:hover .balloonLikeUser{ display: none; }
+    #moniplaCommentPlugin .commentPost .userActionWrap .reply{ clear: both; }
+    #moniplaCommentPlugin .commentPost .userActionWrap .postSubmit{ float: none; clear: both; }
+    #moniplaCommentPlugin .commentPost .userActionWrap .btnSubmit1{ float: none; width: 100%; }
+    #moniplaCommentPlugin .commentPost .userActionWrap .cancelSubmit{display: block; float: none; margin: 10px auto 0; text-align: right; }
+    #moniplaCommentPlugin .commentNotdisplay .innerText{ font-size: 13px; }
+    #moniplaCommentPlugin .showOtherComment .innerText{ font-size: 13px; } }

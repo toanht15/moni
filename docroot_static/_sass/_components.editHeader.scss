@@ -1,0 +1,113 @@
+.editMenu {
+
+  &>ul {
+    @include cf;
+
+    &>li {
+      position: relative;
+      float: left;
+      width: 100px;
+      height: 60px;
+
+      &>a {
+        height: 1em;
+        padding: 39px 0 10px;
+        color: #999;
+        line-height: 1;
+
+        &:before {
+          position: absolute;
+          color: #E2E2E2;
+          font-size: 22px;
+          display: block;
+          margin: auto;
+          top: 10px;
+          left: 50%;
+          margin-left: -11px;
+        }
+      }
+      &:hover {
+        background: #222;
+
+        .editMenuInner {
+          display: block;
+        }
+      }
+    }
+  }
+  .actionPage>a:before {
+    @include fontBase(page);
+  }
+  .actionContents>a:before {
+    @include fontBase(contents);
+  }
+  .actionCampaign>a:before {
+    @include fontBase(campaign);
+  }
+  .actionMessage>a:before {
+    @include fontBase(mail-close2);
+  }
+  .actionCommunication>a:before {
+    @include fontBase(communication);
+    font-size: 32px;
+    top: 10px;
+    margin-left: -16px;
+  }
+  .actionFan>a:before {
+    @include fontBase(fan);
+    font-size: 26px;
+    top: 10px;
+    margin-left: -13px;
+  }
+  .actionInfo>a:before {
+    @include fontBase(info);
+  }
+  .actionDashboard>a:before {
+    @include fontBase(dashboard);
+  }
+  .actionContact>a:before {
+    @include fontBase(contact);
+  }
+  .actionSetting {
+    float: right;
+
+    &>a:before {
+      @include fontBase(gear);
+    }
+  }
+  %badgeBase {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  a {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    position: relative;
+
+    &:hover {
+      background: #222;
+      text-decoration: none;
+    }
+  }
+}
+
+.editMenuInner {
+  display: none;
+  width: 100px;
+  border: 1px solid $borderC;
+  background: #666;
+
+  li {
+    border-top: 1px solid $borderC;
+
+    &:first-child {
+      border-top: none;
+    }
+    a {
+      padding: 5px;
+      color: #fff;
+    }
+  }
+}

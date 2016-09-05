@@ -1,0 +1,11 @@
+Debug: 0
+defaultAction: defaultAction
+SessionTime: 6M
+SubDirectory:
+Forbidden: 403.php
+NotFound: 404.php
+ErrorPage: 500.php
+Sites: user, manager, api, monipla
+DefaultSessionHandler: RedisSessionHandler
+MobileSessionHandler: RedisSessionHandler
+AllowedMemorySize: 80

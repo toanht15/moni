@@ -1,0 +1,75 @@
+/* ### setting.scss ### */
+#olympusVoiceRecorderHeader:after { display: block; clear: both; content: ''; }
+
+/* ### mixin.scss ### */
+/* ### layout.scss ### */
+a { color: #08107b; text-decoration: none; }
+
+/* ----------------------------------------------------------------- olympus Header
+----------------------------------------------------------------- */
+#olympusHeader { position: relative; background: #fff; }
+
+#olympusHeaderInner { padding-bottom: 12px; border-bottom: 1px solid #ccc; position: relative; z-index: 100; }
+#olympusHeaderInner ul { list-style: none; }
+
+#olympusHeaderContent { margin: 0 auto; padding-top: 15px; max-width: 960px; text-align: right; }
+
+#logoOlympus { float: left; width: 308px; height: 30px; }
+
+#logoOlympus img { width: 308px; height: 30px; }
+
+#logoOlympusImaging { margin: 7px 8px 0 10px; padding-left: 10px; border-left: 1px solid #ccc; display: inline-block; height: 15px; vertical-align: top; }
+#logoOlympusImaging img { margin-top: 2px; width: 124px; height: 10px; }
+
+#logoOlympus .image, #logoOlympus .svgSp, #logoOlympusImaging .image { display: none; }
+
+#logoOlympusSub { margin-top: 3px; display: inline-block; }
+#logoOlympusSub p { padding-left: 5px; display: table-cell; line-height: 1.3; vertical-align: middle; font-size: 12px; }
+#logoOlympusSub p:first-child { padding-left: 0; }
+
+#olympusVoiceRecorderHeader { width: 960px; margin: 0 auto 35px; text-align: center; }
+#olympusVoiceRecorderHeader h1 { padding: 15px 0; padding: 0; height: 150px; display: block; text-align: center; background: url(../img/common/logoPC.gif) 50% 50% no-repeat; }
+#olympusVoiceRecorderHeader h1 img { display: none; }
+#olympusVoiceRecorderHeader h1 a { display: inline-block; width: 464px; height: 77px; margin-top: 38px; }
+#olympusVoiceRecorderHeader li { float: left; margin: 0; }
+#olympusVoiceRecorderHeader li:last-child { display: none; }
+#olympusVoiceRecorderHeader li a { display: block; height: 65px; width: 159px; background: url(../img/common/bgGlobalNav.png?v2) 0 0 no-repeat; }
+#olympusVoiceRecorderHeader li a.nav1 { width: 77px; background-position: 0 0; }
+#olympusVoiceRecorderHeader li a.nav1:hover { background-position: 0 -65px; }
+#olympusVoiceRecorderHeader li a.nav2 { width: 162px; background-position: -77px 0; }
+#olympusVoiceRecorderHeader li a.nav2:hover { background-position: -77px -65px; }
+#olympusVoiceRecorderHeader li a.nav3 { width: 161px; background-position: -239px 0; }
+#olympusVoiceRecorderHeader li a.nav3:hover { background-position: -239px -65px; }
+#olympusVoiceRecorderHeader li a.nav4 { width: 162px; background-position: -400px 0; }
+#olympusVoiceRecorderHeader li a.nav4:hover { background-position: -400px -65px; }
+#olympusVoiceRecorderHeader li a.nav5 { width: 161px; background-position: -562px 0; }
+#olympusVoiceRecorderHeader li a.nav5:hover { background-position: -562px -65px; }
+#olympusVoiceRecorderHeader li a.nav6 { width: 121px; background-position: -723px 0; }
+#olympusVoiceRecorderHeader li a.nav6:hover { background-position: -723px -65px; }
+#olympusVoiceRecorderHeader li a.nav7 { width: 116px; background-position: -844px 0; }
+#olympusVoiceRecorderHeader li a.nav7:hover { background-position: -844px -65px; }
+#olympusVoiceRecorderHeader li a.nav8 { display: none; }
+#olympusVoiceRecorderHeader li span { display: block; height: 64px; width: 159px; }
+#olympusVoiceRecorderHeader li span.nav4 { width: 162px; background: url(../img/common/btnGlobalNavPC4_disable.gif); }
+#olympusVoiceRecorderHeader li span.nav6 { width: 121px; background: url(../img/common/btnGlobalNavPC6_disable.gif); }
+#olympusVoiceRecorderHeader li span.nav7 { width: 116px; background: url(../img/common/btnGlobalNavPC7_disable.gif?v2); }
+#olympusVoiceRecorderHeader li img { display: none; }
+#olympusVoiceRecorderHeader #btnOlympusMenu { display: none; }
+#olympusVoiceRecorderHeader img { max-width: 100%; height: auto; }
+
+@media screen and (max-width: 960px) { #logoOlympus .svg, #logoOlympus .image { display: none; }
+  #logoOlympus .svgSp { display: block; }
+  #logoOlympus, #logoOlympus img { width: auto; height: 28px; }
+  #logoOlympus { margin-top: 1px; } }
+@media screen and (max-width: 940px) { #olympusHeaderContent { padding-right: 20px; padding-left: 20px; width: auto; } }
+/* ----------------------------------------------------------------- Footer
+----------------------------------------------------------------- */
+body > footer#olympusFooter { color: #000000; border: 0; padding: 0; }
+body > footer#olympusFooter .snsBtns-btn { text-align: right; padding-bottom: 30px; max-width: 960px; margin: 0 auto; }
+body > footer#olympusFooter .copyright { clear: both; }
+body > footer#olympusFooter > ul li { display: inline-block; margin-left: 10px; }
+body > footer#olympusFooter > ul li a { color: #000000; text-decoration: none; }
+body > footer#olympusFooter > ul li a:hover { text-decoration: underline; }
+body > footer#olympusFooter > ul li a:before { display: inline-block; margin-right: 5px; border: 5px solid transparent; border-right: 0 solid transparent; border-left: 5px solid #E0E0E0; content: ""; }
+body > footer#olympusFooter .olympusLinks { font-size: smaller; margin-bottom: 10px; padding: 10px 0; border-bottom: 1px solid #CCCCCC; text-align: center; }
+body > footer#olympusFooter .olympusMoniplaLinks { float: right; font-size: smaller; margin: 0 0 10px; }

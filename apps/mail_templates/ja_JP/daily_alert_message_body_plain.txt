@@ -1,0 +1,75 @@
+▼当選発表日を過ぎたキャンペーン
+
+    ID	タイトル(ファンサイト）
+    <#LOOP_NON_ANNOUNCE_DATA>
+    <#ID>   <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_NON_ANNOUNCE_DATA>
+
+
+▼当選発表日前のキャンペーン
+
+    <#TODAY>（今日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_TODAY_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_TODAY_DATA>
+
+    <#TOMORROW>（あと1日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_TOMORROW_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_TOMORROW_DATA>
+
+    <#TWO_DAY_AFTER>（あと2日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_TWO_DAY_AFTER_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_TWO_DAY_AFTER_DATA>
+
+    <#THREE_DAY_AFTER>（あと3日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_THREE_DAY_AFTER_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_THREE_DAY_AFTER_DATA>
+
+    <#FOUR_DAY_AFTER>（あと4日）
+    ID	タイトル(ファンサイト））
+    <#LOOP_FOUR_DAY_AFTER_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_FOUR_DAY_AFTER_DATA>
+
+    <#FIVE_DAY_AFTER>（あと5日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_FIVE_DAY_AFTER_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_FIVE_DAY_AFTER_DATA>
+
+    <#SIX_DAY_AFTER>（あと6日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_SIX_DAY_AFTER_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_SIX_DAY_AFTER_DATA>
+
+    <#SEVEN_DAY_AFTER>（あと7日）
+    ID	タイトル(ファンサイト）
+    <#LOOP_SEVEN_DAY_AFTER_DATA>
+    <#ID>  <#TITLE>(<#BRAND_NAME>)
+    <#CAMPAIGN_URL>
+
+    <#/LOOP_SEVEN_DAY_AFTER_DATA>

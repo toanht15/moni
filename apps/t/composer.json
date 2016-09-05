@@ -1,0 +1,14 @@
+{
+    "name": "brandco unit_test",
+    "authors": [
+        {
+            "name": "allied",
+            "email": "system@aainc.co.jp"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*",
+        "phake/phake": "1.0.*",
+        "mockery/mockery": "0.9.*"
+    }
+}

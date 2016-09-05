@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>02_file_list / admin-others</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+
+  <article>
+    <h1 class="hd1">ファイル</h1>
+
+    <section class="fileUploadWrap jsAreaToggleWrap">
+      <p class="uploadToggle"><a href="#" class="linkAdd jsAreaToggle">新規ファイル追加</a></p>
+      <div class="uploadcont jsAreaToggleTarget">
+        <ul class="fileUploadList">
+          <li>
+            <span class="fileName"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="画像ファイル">AAABBBCCCDDD201504.jpg (257KB)</span><small class="status">準備完了</small><small class="cancel"><a href="#">削除</a></small>
+          </li>
+          <li>
+            <span class="fileName"><img src="../../../../img/file/css.png" width="40" height="40" alt="スタイルシートファイル">style.css (44KB)</span><small class="status">準備完了</small><small class="cancel"><a href="#">削除</a></small>
+          </li>
+          <li>
+            <span class="fileName"><img src="../../../../img/file/js.png" width="40" height="40" alt="JavaScriptファイル">jquery.masonry.js (12KB)</span><small class="status">32% / 100%</small><small class="cancel"><a href="#">削除</a></small>
+          </li>
+          <li>
+            <span class="fileName"><img src="../../../../img/file/zip.png" width="40" height="40" alt="ZIPファイル">AABCCDD2015.zip (8.2MB)</span><small class="status">66% / 100%</small><small class="cancel"><a href="#">削除</a></small>
+          </li>
+          <li>
+            <span class="fileName"><img src="../../../../img/file/pdf.png" width="40" height="40" alt="PDFファイル">PressRelease20150422.pdf (156KB)</span><small class="status">12% / 100%</small><small class="cancel"><a href="#">削除</a></small>
+          </li>
+        <!-- /.fileUploadList --></ul>
+        <div class="fileUploadAreaWrap">
+          <P><input type="file"></P>
+          <div class="fileUploadArea">
+            <p class="or">または</p>
+            <p>ファイルをドラッグ＆ドロップしてください</p>
+          <!-- /.fileUploadArea --></div>
+
+          <div class="fileUploadArea hover">
+            <p class="or">または</p>
+            <p>ファイルをドラッグ＆ドロップしてください</p>
+          <!-- /.fileUploadArea --></div>
+          <p>
+            <small>※1ファイルの容量の上限は10MBまでです。1度でアップロードできる上限は合計50MBです。</small><br>
+            <span class="iconError1">ファイルの容量が10MBを超えています</span><br>
+            <span class="iconError1">ファイルの合計が50MBを超えています</span><br>
+            <span class="btn3"><a href="#" class="middle1">アップロード</a></span>
+          </p>
+        <!-- /.fileUploadAreaWrap --></div>
+      <!-- /.uploadcont --></div>
+    <!-- /.fileUploadWrap --></section>
+
+    <section class="fileListWrap">
+      <table class="fileList1">
+        <thead>
+          <tr>
+            <th class="thumb"></th>
+            <th class="fileName">ファイル</th>
+            <th class="type">種類</th>
+            <th class="scale">サイズ</th>
+            <th class="size">容量</th>
+            <th class="edit"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="thumb"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="画像ファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプサンプルテキストサンプルテキス
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">CSS</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/css.png" width="40" height="40" alt="スタイルシートファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              PressRelease20150422.pdfPressRelease20150422.pdfPressRelease20150422.pdfPressRelease20150422.pdf
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">画像</td>
+            <td class="scale">W:690px<br>H:400px</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/pdf.png" width="40" height="40" alt="PDFファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">PDF</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/zip.png" width="40" height="40" alt="ZIPファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">ZIP</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/js.png" width="40" height="40" alt="JavaScriptファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">JS</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/other.png" width="40" height="40" alt="その他"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">その他</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/css.png" width="40" height="40" alt="スタイルシートファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">CSS</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+          <tr>
+            <td class="thumb"><img src="../../../../img/file/pdf.png" width="40" height="40" alt="PDFファイル"><span class="btn3"><a href="#" class="small1">本文に挿入</a></span></td>
+            <td class="fileName">
+              サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプ
+              <small class="supplement1">https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/static/brand/9bf31c7ff062936a96d3c8bd1f8f2ff3/free_area_entry/1c5b74b8059619ca626b5599c5d0056d.css<a href="#" class="iconCopy1">URLをコピー</a></small>
+            </td>
+            <td class="type">PDF</td>
+            <td class="scale">-</td>
+            <td class="size">748KB</td>
+            <td clas="edit"><a href="#" class="iconBtnEdit">編集</a> <a href="#modal1" class="iconBtnDelete jsOpenModal">削除</a></td>
+          </tr>
+        </tbody>
+      <!-- /.fileList1 --></table>
+
+      <div class="pager1">
+        <p>99,999件中101件～120件表示しています</p>
+          <ul>
+            <li class="first"><a href="#">最初のページヘ</a></li>
+            <li class="prev"><a href="#">前のページへ</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><span>6</span></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">99</a></li>
+            <li class="next"><a href="#">次のページへ</a></li>
+            <li class="last"><a href="#">最後のページヘ</a></li>
+        </ul>
+      <!-- /.pager1 --></div>
+    <!-- /.fileListWrap --></section>
+  </article>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-small jsModalCont">
+      <h1>本当に削除しますか？</h1>
+      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+        <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+</body>
+</html>

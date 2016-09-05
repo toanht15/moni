@@ -1,0 +1,188 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+  <nav class="categoryNav">
+    <ul class="tablink1">
+      <li><a href="#">ページ一覧</a></li>
+      <li><a href="#">ページ作成</a></li>
+      <li class="current"><span>埋込ページ作成</span></li>
+      <li><a href="#">カテゴリ</a></li>
+    <!-- /.tablink1 --></ul>
+  <!-- /.categoryNav --></nav>
+  <h1 class="hd1">埋込ページ作成
+  <span class="iconHelp">
+    <span class="text">ヘルプ</span>
+    <span class="textBalloon1">
+      <span>他のWebサイトに表示させるためのページを作成し、<br>埋込タグを発行します</span>
+    <!-- /.textBalloon1 --></span>
+  <!-- /.iconHelp --></span>
+  </h1>
+
+  <div class="pageSettingWrap1">
+    <dl class="pageEdit1">
+      <dt><label class="require1" for="field1">ページタイトル</label></dt>
+      <dd><input type="text" class="categoryName" id="field1"><small class="textLimit">（<span>0</span>文字／35文字）</small></dd>
+      <dt>埋込タグ</dt>
+      <dd class="pageLayout">
+        <p>ページを「公開」すると、タグが発行され、コピーすることができます。<br>
+        埋込をしたい外部サイトのページに下記タグをコピー＆ペーストしてください。</p>
+        <div class="inputTag">
+          <p><a href="#" class="iconCopy1">URLをコピー</a></p>
+          <p><textarea name="" id="" cols="30" rows="5" ><script type="text/javascript">monipla.Sample.include('monipla',1);</script></textarea></p>
+        <!-- /.inputTag --></div>
+      </dd>
+    <!-- /.pageEdit1 --></dl>
+    <div class="pageStatus1">
+      <h1>ステータス：<span class="iconCheck3">公開中</span></h1>
+      <dl>
+        <dt>作成：</dt>
+        <dd>taisa - 2014/10/21</dd>
+        <dt>公開：</dt>
+        <dd>taisa - 2014/10/21</dd>
+        <dt>編集：</dt>
+        <dd>taisa - 2014/10/21</dd>
+      </dl>
+    </div>
+  <!-- /.pageSettingWrap1 --></div>
+
+  <div class="pageContEdit">
+    <p>リンクを設定する際は以下にご注意ください。<br>
+      ・同じウインドウ内でページ遷移をしたい：&lt;a&gt;タグに　<b>target="_top"</b>　を追加<br>
+      ・新しいウインドウで表示をしたい：　&lt;a&gt;タグに　<b>target="_blank"</b>　を追加</p>
+    <div id="jsPageContBlogEdit">
+      <img src="../../img/dummy/imgWyswig.png" width="960" height="580" alt="wyswig dummy" style="display: block;">
+    <!-- /#jsPageContBlogEdit --></div>
+  <!-- /.pageContEdit --></div>
+
+  <div class="pageSettingWrap1">
+    <section class="pageBrowse">
+      <h1>閲覧設定</h1>
+      <ul>
+        <li><label><input type="radio" name="pageType" id="" checked="checked" value="">誰でも閲覧可能</label></li>
+        <li><label><input type="radio" name="pageType" id="" value="">閲覧には登録・ログインが必要</label>
+          <div class="loginAccountDisabled">
+            <p><strong>登録・ログインが可能なアカウント</strong></p>
+            <p><label><input type="checkbox" disabled="disabled">Facebook</label><label><input type="checkbox" disabled="disabled">Twitter</label><label><input type="checkbox" disabled="disabled">LinkedIn</label><label><input type="checkbox" disabled="disabled">LINE</label><label><input type="checkbox" disabled="disabled">Instagram</label><label><input type="checkbox" disabled="disabled">Google+</label><label><input type="checkbox" disabled="disabled">Yahoo!JAPAN ID</label></p>
+          <!-- /.loginAccountDisabled --></div>
+        </li>
+      </ul>
+    <!-- /.pageBrowse --></section>
+
+    <section class="pagePublish">
+      <h1>公開設定</h1>
+      <dl>
+        <dt>ステータス：<span class="iconCheck3">公開中</span></dt>
+        <dd>
+          <select name="" id="">
+            <option value="">公開中</option>
+            <option value="">下書き</option>
+          </select>
+        </dd>
+        <dt>公開日</dt>
+        <dd>
+          <input type="text" class="jsDate inputDate" placeholder="年/月/日">
+          <select name="openTimeHH" class="inputTime">
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+          </select
+          ><span class="coron">:</span
+          ><select name="openTimeMM" class="inputTime">
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+          </select
+          >
+        </dd>
+      </dl>
+      <p class="deletePage"><a href="#modal1" class="linkDelete jsOpenModal">ページ削除</a></p>
+    <!-- /.pagePublish --></section>
+  <!-- /.pageSettingWrap1 --></div>
+
+  <div class="pageEditCheck">
+    <ul>
+      <li class="btn3"><a href="#" class="">内容確定</a></li>
+    </ul>
+  <!-- /.pageEditCheck --></div>
+  <section class="backPage">
+    <p><a href="#" class="iconPrev1">ページ一覧へ</a></p>
+  <!-- /.backPage --></section>
+<% end %>

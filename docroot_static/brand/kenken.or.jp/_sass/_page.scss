@@ -1,0 +1,116 @@
+﻿@charset "utf-8";
+/* ### page.scss ### */
+//======================================================================================================================
+body > article {
+}
+
+.mainCol .ckeditorWrap .kenkenWrap {
+  /* top page */
+  h2.kenkenTtlKenkoukentei {
+    background: url(../img/index/pc/ttlKenkoukentei.gif) 0 0 no-repeat;
+    height: 315px;
+    padding: 0;
+    margin: 0 0 30px;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+    img {
+      display: none;
+    }
+  }
+  .kenkenLeadHealthLifespan {
+    background: url(../img/index/pc/ttlHelthLifespan.gif) 0 0 no-repeat;
+    height: 33px;
+    padding: 0;
+    margin: 0 0 30px;
+    img {
+      display: none;
+    }
+  }
+
+  /* about page */
+  .kenkenAboutLogo1 {
+    height: 92px;
+    background: url(../img/about/pc/imgAbout.gif) 0 0 no-repeat;
+    img {
+      display: none;
+    }
+  }
+  .kenkenAboutProfTable {
+    margin: 0 0 20px;
+    td:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  /* privacy */
+  .kenkenPrivacyCont {
+    margin: 0 0 40px;
+
+    .kenkenPrivacyHeader {
+      text-align: right;
+    }
+    ul {
+      margin: 0;
+      li {
+        text-indent: -2em;
+        padding-left: 2em;
+        margin: 0 0 1em;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+}/* end ckeditorWrap */
+
+
+/* for SP 
+================================================================================================================================================================================ */
+@media screen and (max-width: 640px) {
+.mainCol .ckeditorWrap .kenkenWrap {
+  h2.kenkenTtlKenkoukentei {
+    background: none;
+    height: auto;
+    margin: 0 0 20px;
+
+    img {
+      display: block;
+    }
+  }
+  .kenkenLeadHealthLifespan {
+    background: none;
+    height: auto;
+    padding: 0;
+    margin: 0 0 20px;
+    img {
+      display: block;
+    }
+  }
+
+  /* about */
+  .kenkenAboutLogo1 {
+    height: auto;
+    background: none;
+    img {
+      display: block;
+    }
+  }
+
+  /* privacy */
+  .kenkenPrivacyCont {
+    font-size: 13px;
+    padding-top: 40px;
+
+    h3 {
+      font-size: 15px;
+    }
+  }
+
+}/* end ckeditroWrap */
+
+}/* end for SP */

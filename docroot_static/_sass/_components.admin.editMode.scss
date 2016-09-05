@@ -1,0 +1,515 @@
+.editHeadWrap {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.15);
+}
+.editHead {
+  background: #404040;
+  position: relative;
+  z-index: 110;
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+
+  .wrap {
+    @include cf;
+  }
+  h1 {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 5px;
+
+    a {
+      display: block;
+      padding: 0 10px;
+
+      &:hover {
+        background: #222;
+      }
+    }
+    img {
+      vertical-align: middle;
+    }
+    &+.editMenu {
+      margin-left: 158px;
+    }
+  }
+  .editLock {
+    float: left;
+    height: 60px;
+
+    a {
+      display: block;
+      margin-top: 20px;
+      width: 19px;
+      height: 19px;
+      background: url(../img/icon/iconLock1.png) no-repeat center;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &+.editMenu {
+      margin-left: 177px;
+    }
+  }
+}
+.jsEditAreaWrap {
+  position: relative;
+}
+%areaBase {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(6,19,9,.8);
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -12.5px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+
+    &:before {
+      width: 25px;
+      border-radius: 5px;
+      background: $iconC3;
+      color: #fff;
+    }
+  }
+}
+.editArea {
+  @extend %areaBase;
+  display: none;
+
+  span:before {
+    @include iconFontLeft(edit);
+    font-size: 25px;
+    margin-top: 0;
+  }
+}
+.gnavi h1 .editArea {
+  bottom: -4px;
+  height: 36px;
+}
+.gnavi nav .editArea {
+  height: 36px;
+}
+.addArea {
+  @extend %areaBase;
+  display: block;
+
+  span:before {
+    @include iconFontLeft(plus);
+    font-size: 25px;
+    margin-top: 0;
+  }
+}
+
+%editMenuDetail {
+  h1 {
+    margin-bottom: 5px;
+    color: #6f6f6f;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  ul {
+    @include cf;
+    margin: auto;
+
+    li {
+      position: relative;
+      float: left;
+      margin: 0 10px 10px 0;
+      width: 105px;
+      height: 110px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      background: #eee;
+      box-shadow: 1px 1px 0 0 #fff;
+      text-align: center;
+
+      a {
+        position: relative;
+        display: block;
+        padding: 5px;
+        height: 100px;
+
+        &:after {
+          position: absolute;
+          top: 6px;
+          left: 13px;
+          display: block;
+          font-size: 20px;
+          background: #FFF;
+          border-top-left-radius: 3px;
+        }
+        &:hover {
+          background: #fff;
+        }
+        span {
+          display: block;
+          margin-top: 3px;
+          height: 18px;
+          font-size: 10px;
+          line-height: 18px;
+        }
+        .btnAdd {
+          font-size: 13px;
+        }
+      }
+      img {
+        display: block;
+        margin: auto;
+        width: 80px;
+        height: 80px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+.editSNS {
+  @extend %editMenuDetail;
+
+  li {
+
+    &.fbAccount a:after {
+      @include fontBase(fb1);
+      color: $fbC;
+    }
+    &.twAccount a:after {
+      @include fontBase(tw1);
+      color: $twC;
+    }
+    &.ytAccount a:after {
+      width: 20px;
+      height: 20px;
+      content: "";
+      background: url(../img/sns/iconSnsYT2.png);
+    }
+    &.rssAccount a:after {
+      width: 20px;
+      height: 20px;
+      content: "";
+      background: url(../img/sns/iconSnsRss2.png);
+    }
+    &.igAccount a:after {
+      @include fontBase(ig1);
+      color: $iconC1;
+      background: transparent;
+    }
+    &.addAccount {
+      height: 110px;
+
+      a:hover {
+        text-decoration: none;
+      }
+      a:before {
+        position: absolute;
+        left: 50%;
+        display: block;
+        margin-left: -40px;
+        width: 80px;
+        height: 80px;
+        border-radius: 3px;
+        background: rgba(21,60,27,.8);
+        content: "";
+      }
+      a:after {
+        content: none;
+      }
+      .linkAdd {
+        position: relative;
+        top: 31px;
+        margin: auto;
+        color: #fff;
+      }
+    }
+  }
+}
+.editBRANDCo {
+  @extend %editMenuDetail;
+}
+.editBox1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0;
+  min-height: 72px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+  color: #FFF;
+  cursor: move;
+
+  &>* {
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 5px;
+  }
+  a {
+    color: #fff;
+  }
+  .btnEdit {
+    margin-right: 5px;
+  }
+  .panelLink {
+    display: block;
+  }
+}
+.editAccount {
+  @include cf;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 120;
+  display: none;
+  padding: 10px;
+  width: 838px;
+  border-bottom: 1px solid #ddd;
+  background: #f8f8f8;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.45);
+
+  .getPostMethod {
+    float: left;
+    margin-right: 8px;
+    width: 540px;
+
+    li {
+      margin-bottom: 10px;
+    }
+    .autoItemNum {
+      vertical-align: middle;
+      display: none;
+    }
+  }
+  .liftingAccount {
+    float: left;
+    padding: 8px;
+    margin-right: 10px;
+    width: 124px;
+    border-radius: 3px;
+    background: #eee;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.35) inset;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .btn3,
+    .btn4 {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}
+.editContList {
+  margin-right: 10px;
+  border-bottom: 1px solid $borderC;
+
+  li {
+    @include cf;
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid $borderC;
+
+    .postText {
+      display: inline-block;
+      margin-right: 10px;
+      width: 785px;
+      vertical-align: middle;
+      font-size: 12px;
+
+      img {
+        display: block;
+        float: left;
+        margin: 0 10px 10px 0;
+        width: 70px;
+        height: 70px;
+      }
+      span {
+        display: block;
+      }
+      .user {
+
+        img {
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+    .fbpageList {
+
+      input {
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+      label {
+        display: block;
+      }
+      img {
+        margin: 0 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        vertical-align: middle;
+      }
+      span {
+        display: inline-block;
+        width: 730px;
+        vertical-align: middle;
+      }
+    }
+    .action {
+      display: inline-block;
+      width: 120px;
+      vertical-align: middle;
+      text-align: center;
+
+      &>* {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .pager1 {
+
+    li {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+  @at-root {
+    .modalInner-cont & {
+
+      li {
+        padding-left: 0;
+        padding-right: 0;
+
+        .postText {
+          width: 685px;
+        }
+      }
+    }
+  }
+}
+.addPanel {
+  margin: 10px 0;
+  padding: 5px 4px;
+  border: 1px solid $borderC;
+  border-radius: 3px;
+  background: rgba(0,0,0,.3);
+
+  ul {
+    @include cf;
+    font-size: 11px;
+  }
+  li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-left: 4px;
+    width: 132px;
+    height: 132px;
+    border: 1px solid $borderC;
+    background: #FFF;
+
+    &:first-child {
+      margin-left: 0;
+      background: initial;
+
+      a {
+        padding: 0;
+      }
+    }
+    a {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      position: relative;
+      top: -10px;
+      left: -10px;
+      display: block;
+      margin-right: 10px;
+      width: 132px;
+    }
+  }
+  .postData {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    color: #FFF;
+
+    %iconSet1 {
+      display: block;
+      margin-bottom: 5px;
+
+      &:before {
+        display: block;
+      }
+    }
+  }
+}
+.editAdSNS {
+  @extend %editMenuDetail;
+
+  ul li {
+
+    a {
+      span {
+        margin-top: 83px;
+      }
+      &:after {
+        font-size: 80px;
+      }
+    }
+  }
+  li {
+
+    &.fbAccount a:after {
+      @include fontBase(fb1);
+      color: $fbC;
+    }
+    &.twAccount a:after {
+      @include fontBase(tw1);
+      color: $twC;
+    }
+  }
+}

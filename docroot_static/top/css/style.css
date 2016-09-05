@@ -1,0 +1,430 @@
+@charset "UTF-8";
+/*
+YUI 3.17.2 (build 9c3c78e)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+}
+
+legend {
+  color: #000;
+}
+
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+html, body {
+  min-width: 100%;
+  font-family: 'メイリオ',Meiryo,"Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3";
+  min-height: 100%;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color:#333;
+  text-decoration:none;
+}
+a:hover {
+  color:#999;
+  text-decoration:none;
+}
+
+.wrap {
+  margin: auto;
+  position: relative;
+}
+.cf:after, .pointWrap .point1:after, .pointWrap .point2:after, footer:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+@media screen and (min-width: 481px) {
+  html, body {
+    line-height: 2;
+    font-size: 15px;
+  }
+  .displayPc {
+    display: none;
+  }
+  .wrap {
+    width: 960px;
+    position:relative;
+  }
+  .mainVisualWrap .wrap {
+    height: 530px;
+  }
+  .mainVisualWrap .mainLogo {
+    width: 340px;
+    padding-top:125px;
+  }
+  .mainVisualWrap .mainLogo img {
+    width: 340px;
+    height: 56px;
+  }
+  .mainVisualWrap h2 {
+    font-size:28px;
+    font-weight:normal;
+    color:#B9B9B9;
+  }
+  .mainVisualWrap .mainVisual {
+    width: 590px;
+    height:486px;
+    position:absolute;
+    top:20px;
+    right:0;
+	z-index:0;
+  }
+  .mainVisualWrap .mainVisual img {
+    width: 590px;
+    height:486px;
+  }
+  .mainVisualWrap h3 {
+    font-size:13px;
+    font-weight:bold;
+    color:#666;
+    background:url(../img/base/bgBrandList.png) repeat-x 50%;
+    width:430px;
+    margin-top:40px;
+  }
+  .mainVisualWrap h3 span {
+    background:#FFF;
+    padding:10px 10px 0 0;
+  }
+  .mainVisualWrap .CLlist {
+    width:440px;
+  }
+  .mainVisualWrap .CLlist li {
+    float:left;
+    margin-right:10px;
+  }
+  .mainVisualWrap .CLlist li img {
+    width:100px;
+    height:100px;
+  }
+  .mainVisualWrap .snsBtns {
+    position:absolute;
+    top:10px; 
+    right:10px;
+	z-index:1;
+  }
+    .mainVisualWrap .lead {
+	  width:420px;
+	  font-size:16px;
+	  line-height:1.6;
+	  margin-top:45px;
+	  color:#3F3F3F;
+  }
+  .mainVisualWrap .snsBtns li {
+    height: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .mainVisualWrap .snsBtns li * {
+    height: 20px;
+    vertical-align: top !important;
+  }
+  .point {
+    background:#EEE;
+    width:100%;
+    display:block;
+    padding:40px 0;
+  }
+  .point h1 {
+    width:960px;
+    color:#999;
+    background:url(../img/base/bgBrandList.png) repeat-x 50%;
+    text-align:center;
+  }
+  .point h1 span {
+    padding:0 30px;
+    background:#EEE;
+    font-size:40px;
+  }
+  .point .PointList {
+  }
+  .point .PointList h2 {
+    font-size:18px;
+    margin-bottom:15px;
+  }
+  .point .PointList li {
+    display:block;
+    width:450px;
+    float:left;
+    text-align:center;
+    margin:0 30px 0 0;
+  }
+  .point .PointList .PontIcon img{
+    width:70px;
+    height:auto;
+  }
+  .point .PointList .PontImg img{
+    width:350px;
+    height:auto;
+  }
+  .point .OtherFunc {
+    padding:20px;
+    text-align:center;
+    border:1px solid #CCC;
+    background:#FFF;
+    font-size:18px;
+    margin-top:50px;
+  }
+  .BizBnr {
+    text-align:center;
+    margin:30px 0 0 0;
+  }
+  .BizBnr a img {
+    width:400px;
+  }
+  footer {
+    background:#FFF;
+    padding:50px 0;
+  }
+  footer .AAlogo img {
+    width:140px;
+    float:left;
+  }
+  footer .AALink {
+    float:right;
+    font-size:11px;
+    border-left:1px solid #CCC;
+    padding-left:10px;
+  }
+  footer .AALink li {
+    float:left;
+    margin-right:10px;
+    padding-right:10px;
+    border-right:1px solid #CCC;
+  }
+
+  footer .copy {
+    text-align:right;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .displaySp {
+    display: none;
+  }
+  .wrap {
+    width: 100%x;
+    position:relative;
+    padding:20px 10px;
+  }
+  .mainVisualWrap .wrap {
+  }
+  .mainVisualWrap .mainLogo {
+    width: 100%;
+  }
+  .mainVisualWrap .mainLogo img {
+    width: 200px;
+    height: 32px;
+  }
+  .mainVisualWrap h2 {
+    font-size:16px;
+    font-weight:normal;
+    color:#999;
+  }
+  .mainVisualWrap .mainVisual {
+    display:none;
+  }
+  .mainVisualWrap h3 {
+    font-size:13px;
+    font-weight:bold;
+    color:#666;
+    background:url(../img/base/bgBrandList.png) repeat-x 50%;
+    width:100%;
+    margin-top:30px;
+  }
+  .mainVisualWrap h3 span {
+    background:#FFF;
+    padding:10px 10px 0 0;
+  }
+  .mainVisualWrap .CLlist {
+      width:100%;
+  }
+  .mainVisualWrap .CLlist li {
+    float:left;
+    margin:0 5px 5px 0;
+  }
+  .mainVisualWrap .CLlist li:last-child {
+    margin-right:0;
+  }
+  .mainVisualWrap .CLlist li img {
+    width:65px;
+    height:65px;
+  }
+  .mainVisualWrap .lead {
+	  width:100%;
+	  margin-top:30px;
+	  color:#3F3F3F;
+  }
+  .point {
+    background:#EEE;
+    display:block;
+    width:100%;
+    padding:0;
+  }
+  .point h1 {
+    width:100%;
+    color:#999;
+    text-align:center;
+    margin-bottom:20px;
+    background:url(../img/base/bgBrandList.png) repeat-x 50%;
+  }
+  .point h1 span {
+    font-size:22px;
+    padding:0 15px;
+    background:#EEE;
+  }
+  .point .PointList {
+  }
+  .point .PointList h2 {
+    font-size:13px;
+    margin-bottom:15px;
+  }
+  .point .PointList li {
+    display:block;
+    width:100%;
+    text-align:center;
+    margin:0 0 30px ;
+    padding:0 0 30px 0;
+    border-bottom:1px solid #FFF;
+  }
+  .point .PointList .PontIcon img{
+    width:40px;
+    height:auto;
+  }
+  .point .PointList .PontImg img{
+    width:260px;
+    height:auto;
+  }
+  .point .OtherFunc {
+    padding:20px;
+    text-align:center;
+    border:1px solid #CCC;
+    background:#FFF;
+    font-size:14px;
+    margin:30px 0;
+  }
+  .toTop {
+    text-align:right;
+    margin:20px;
+  }
+  .toTopLink {
+    background:url(../img/base/iconArrowT1.png) no-repeat left 50%;
+    padding:15px 0 15px 20px;
+  }
+  .snsBtns {
+    text-align:center;
+  }
+  .snsBtns li {
+    height: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .snsBtns li * {
+    height: 20px;
+    vertical-align: top !important;
+  }
+  .BizBnr {
+    text-align:center;
+    margin:20px 0 0 0;
+  }
+  .BizBnr a img {
+    width:240px;
+  }
+  footer {
+    background:#FFF;
+    padding:10px 0 20px 0;
+    text-align:center;
+  }
+  footer .AAlogo img {
+    width:120px;
+  }
+  footer .AALink {
+    font-size:11px;
+    padding-left:10px;
+  }
+  footer .AALink li {
+    display:inline-block;
+    text-align:center;
+    padding:15px;
+  }
+  footer .AALink li a {
+    background:url(../img/base/iconArrowR1.png) no-repeat left;
+    padding-left: 10px;
+  }
+  footer .copy {
+    text-align:center;
+  }
+}

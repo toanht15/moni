@@ -1,0 +1,168 @@
+<html lang="ja">
+<head>
+  <meta charset="shift-jis">
+  <title>モニプラ mail</title>
+
+  <style>
+/*<!--*/
+body {
+  font-family: '游ゴシック',YuGothic,'メイリオ',Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Verdana;
+      background: #F5F5F5;
+      color: #333;
+      line-height: 1.6;
+      min-width: 600px;
+      font-size: 18px;
+      margin: 0;
+      padding: 30px 0;
+    }
+    a {
+  color: #06A;
+}
+    /*-->*/
+  </style>
+
+</head>
+<body style="font-family: '游ゴシック',YuGothic,'メイリオ',Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Verdana; background: #F5F5F5; color: #333; line-height: 1.6; min-width: 600px; font-size: 18px; margin: 0;">
+<div style="width:100%; background:#F5F5F5; padding: 15px 0 30px 0;">
+  <center>
+    <div style="width: 580px; background: #FFF;">
+
+      <table width="580" cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+        <tr>
+          <td width="70" height="70"><img src="<#BRAND_LOGO_URL>" width="60" height="60" alt="企業ロゴ" style="display: block; padding:5px;"></td>
+          <td style="font-size:24px; padding-left:10px; text-align:left;"><#BRAND_NAME></td>
+        </tr>
+        <tr>
+          <td height="30" colspan="2" style="border-top:1px solid #DDD;"></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table width="420" cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+        <tr>
+          <td style="text-align:left;"><#USER_NAME>さんに、<#BRAND_NAME>からメッセージが届いています。是非ご確認ください。</td>
+        </tr>
+        <tr>
+          <td height="30"></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table width="420" cellpadding="0" cellspacing="0" border="0" style="border: 1px solid #ddd;">
+        <tbody>
+          <tr>
+            <td rowspan="7" width="10"></td>
+            <td width="398" height="10"></td>
+            <td rowspan="7" width="10"></td>
+          </tr>
+          <#CAMPAIGN_IMAGE_TAG>
+          <#CAMPAIGN_TITLE_TAG>
+          <tr>
+            <td>
+              <table width="398">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" width="34"></td>
+                    <td colspan="2" height="10"></td>
+                    <td rowspan="3" width="34"></td>
+                  </tr>
+                  <tr>
+                    <td width="70" style="vertical-align: top; text-align: left"><img src="<#STATIC_URL>/img/mail/messagePush/icon_mail.jpg" width="55" height="40" /></td>
+                    <td style="vertical-align: top; text-align: left; font-size: 16px;"><a href="<#THREAD_URL>"><#MESSAGE_TITLE></a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" height="25"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="67" style="text-align: center; vertical-align: top;"><a href="<#THREAD_URL>"><img src="<#STATIC_URL>/img/mail/messagePush/btn_read.jpg" width="240" height="52" alt="メッセージを読む" style="border:none;"/></a></td>
+          </tr>
+          <#NOTIFICATION_OTHER_CONTENTS_TAG>
+          <tr>
+            <td height="15"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table width="420" cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+        <tr>
+          <td height="40"></td>
+        </tr>
+        <tr>
+          <td style="text-align: left; font-size:13px;">ご登録中の情報</td>
+        </tr>
+        <tr>
+          <td align="center">
+            <table width="420" cellpadding="5" cellspacing="0" border="0" style="font-size:13px; border:1px solid #DDD;">
+              <tbody>
+                <tr>
+                  <td width="150" rowspan="4" align="center" style="border-right:1px solid #DDD; text-align:center;">
+                    <p><img src="<#USER_IMAGE>" width="100" height="100" alt="AAIDニックネーム"/></p>
+                    <p style="font-size: 11px;"><#USER_NAME></p>
+                  </td>
+                  <#SOCIAL_ACCOUNTS_TITLE_TAG>
+                </tr>
+                <#SOCIAL_ACCOUNTS_TAG>
+                <tr>
+                  <td bgcolor="#EEEEEE" style="background:#EEE; text-align: left;">ログイン用メールアドレス</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left;"><#USER_MAIL></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <table style="font-size: 10px; color: #333;">
+              <tbody>
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td>※ログインの際は、上記の連携アカウント、メールアドレスをご利用ください。</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="40"></td>
+        </tr>
+        </tbody>
+      </table>
+
+
+      <table width="580" cellpadding="0" cellspacing="0" border="0" style="font-size: 10px; color: #333; background:#EEE;">
+        <tbody>
+        <tr>
+          <td style="padding: 10px 0;text-align: center;">配信専用のメールアドレスよりお送りしております。<br>本メールに返信されても、お答えできませんのでご了承ください。</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0;text-align: center;"><a href="<#OPTOUT_URL>">このメールを受け取りたくない場合はこちら</a></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0;text-align: center;">
+            <a href="http://monipla.com">モニプラ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<#BRAND_INQUIRY_URL>">お問い合わせ</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 0;text-align: center;">Copyright (c)2016 Allied Architects, Inc. All rights reserved.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </center>
+</div>
+<#PIXEL_TAG>
+
+</body>
+</html>

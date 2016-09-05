@@ -1,0 +1,186 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'mainContents' : %>
+    <h1 class="hd1">SNS広告との連携データ管理</h1>
+
+    <div class="customaudienceWrap">
+      <dl class="customaudienceDataSetting">
+        <dt>広告アカウント</dt>
+        <dd class="spreadWidth">
+            <ul class="addAcountList">
+                <li><label><input type="checkbox" name="account"><span class="iconFB1">ファシオ</span></label></li>
+                <li><label><input type="checkbox" name="account"><span class="iconTW1_2">Visee -ヴィセ-</span></label></li>
+            <!-- /.addAcountList --></ul>
+            <p class="addAcount"><a href="#">新規にアカウントを連携する</a>
+            <!-- /.addAcount --></p>
+        </dd>
+        <dt class="require1"><label>タイトル</label></dt>
+        <dd>
+          <input type="text" id="input3" placeholder="カスタムオーディエンスのタイトル">
+          <span class="jsCheckToggleWrap">
+            <span class="sub"><label><input type="checkbox" class="jsCheckToggle">メモ</label></span><input type="text" id="input3" placeholder="" class="jsCheckToggleTarget" style="display:none;">
+            </span></dd>
+
+          <dt>送信対象</dt>
+          <dd class="spreadWidth">
+            <p class="segmentTotal"><strong>---<span>名</span></strong></p>
+            <ul class="segmentList">
+              <li class="segmentItem">
+                <div class="segmentItemInner">
+                  <div class="metricBoxWrap jsSyncTarget">
+                    <div class="metricBoxs">
+                      <div class="metricBoxOptionAdd"><p><a href="#metricDtaileSetting" class="jsOpenModal"></a></p></div>
+                    <!-- /.metricBoxs --></div>
+                  <!-- /.metricBoxWrap --></div>
+                <!-- /.segmentItemInner --></div>
+              <!-- /.segmentItem --></li>
+            <!-- /.segmentList --></ul>
+          </dd>
+      <!-- /.customaudienceDataSetting --></dl>
+      <ul class="btnSet">
+        <li class="btn1"><a href="#closeModal" class="large1">下書き保存</a></li>
+        <li class="btn3"><a href="#" class="large1">データの送信</a></li>
+      </ul>
+      <section class="backPage">
+        <p><a href="#" class="iconPrev1">広告アカウント一覧</a></p>
+      <!-- /.backPage --></section>
+
+
+
+    <!-- /.customaudienceWrap --></div>
+<% end %>
+
+<% block 'modal' : %>
+              <div class="modal1 jsModal" id="metricDtaileSetting2">
+                <section class="metricSettingBox modalCont-large jsModalCont">
+                  <h1>OR条件</h1>
+                  <div class="pagePartsSetting">
+                    <div class="pagePartsSettingCont">
+                      <p>追加する条件を「項目」より選び、「値」を決めてください。</p>
+                      <h2 class="segmentSelectHd">項目</h2>
+                      <div class="segmentSelectCont">
+                        <div class="segmentTab">
+                          <ul>
+                            <li><a href="#" title="ユーザー情報">ユーザー情報</a></li>
+                            <li><a href="#" title="カスタムプロフィール">カスタムプロフィール</a></li>
+                            <li><a href="#" title="コンバージョン">コンバージョン</a></li>
+                            <li><a href="#" title="SNS">SNS</a></li>
+                            <li><a href="#" title="キャンペーン" class="selected">キャンペーン</a></li>
+                            <li><a href="#" title="メッセージ">メッセージ</a></li>
+                            <li><a href="#" title="外部連携DMP連携">外部連携DMP連携</a></li>
+                          </ul>
+                        <!-- /.segmentTab --></div>
+                        <div class="segmentData">
+                          <ul class="second">
+                            <li><a href="#" title="新 ASTABLANC　先行モニター募集（参加完了：1,425名）">新 ASTABLANC　先行モニター募集（参加完了：1,425名）</a></li>
+                            <li><a href="#" title="沖縄旅行が当たる！泡 Art Contest（参加完了：3,126名）">沖縄旅行が当たる！泡 Art Contest（参加完了：3,126名）</a></li>
+                            <li><a href="#" title="ファシオ アイメイクセルフィ投稿キャンペーン（参加完了：3,126名）" class="selected">ファシオ アイメイクセルフィ投稿キャンペーン（参加完...</a></li>
+                            <li><a href="#" title="ファシオ　ミネラル ファンデーション　プレゼントキャンペーン（参加完了：3,126名）">ファシオ　ミネラル ファンデーション　プレゼントキャンペーン（参加完...</a></li>
+                            <li><a href="#" title="米肌　人気アイテムを詰め込んだスペシャルコフレプレゼント！（参加完了：3,126名）">米肌　人気アイテムを詰め込んだスペシャルコフレプレゼント！（参加完...</a></li>
+                            <li><a href="#" title="「薬用 雪肌精」を5名様にプレゼント！（参加完了：912名）">「薬用 雪肌精」を5名様にプレゼント！（参加完了：912名）</a></li>
+                          </ul>
+                          <ul class="third">
+                            <li><a href="#" title="1 キャンペーン告知">1 キャンペーン告知</a></li>
+                            <li><a href="#" title="2 メッセージ">2 メッセージ</a></li>
+                            <li><a href="#" title="3 配送先情報">3 配送先情報</a></li>
+                            <li><a href="#" title="4 参加完了">4 参加完了</a></li>
+                            <li><a href="#" title="5 シェア">5 シェア</a></li>
+                            <li><a href="#" title="6 エンゲージ（FB）" class="selected">6 エンゲージ（FB）</a></li>
+                            <li><a href="#" title="7 エンゲージ（TW）">7 エンゲージ（TW）</a></li>
+                            <li><a href="#" title="8 スピードくじ">8 スピードくじ</a></li>
+                            <li><a href="#" title="9 アンケート">9 アンケート</a></li>
+                          </ul>
+                        <!-- /.segmentData --></div>
+                      <!-- /.segmentSelectCont --></div>
+                      <div class="segmentValue">
+                        <h2 class="segmentSelectHd">値</h2>
+                        <div class="segmentValueInner">
+                          <dl class="metricSettingList">
+                            <dt>6 エンゲージ（FB）</dt>
+                            <dd>
+                              <ul class="status">
+                                <li><label><input type="checkbox">新規いいね！</label></li>
+                                <li><label><input type="checkbox">既存いいね！</label></li>
+                                <li><label><input type="checkbox">非表示</label></li>
+                                <li><label><input type="checkbox">スキップ</label></li>
+                              <!-- /.status --></ul>
+                            </dd>
+                            </dl>
+                        </div>
+                      <!-- /.segmentValue --></div>
+                    <!-- /.pagePartsSettingCont --></div>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+                      <span class="btn3"><a href="#closeModal" class="small1">設定する</a></span>
+                    </p>
+                  <!-- /.pagePartsSetting --></div>
+                </section>
+              <!-- /#metricDtaileSetting --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script>
+
+    //cloneModal
+    $(function(){
+      $('.jsCloneToggle').click(function(){
+        var clone = $(this).next().clone().css({
+          top: $(this).offset().top + 15,
+          left: $(this).offset().left - 98
+        }).stop(true, true).fadeToggle(200);
+
+        clone.find('.jsAreaToggle').click(function(){
+          clone.fadeOut().queue(function(){
+            clone.remove();
+          });
+          return false;
+        });
+        $('body').append(clone);
+        return false;
+      });
+    });
+  </script>
+  <script>
+
+  //scroll sync
+  $(function(){
+    var containers = $('.jsSyncTarget');
+    var horizontalSync = function (e) {
+      var self = containers.not(this).off('scroll');
+
+      for(i=0; i < self.length; i++){
+        self[i].scrollLeft = this.scrollLeft;
+        setTimeout(function () { self.on('scroll', horizontalSync); }, 10);
+      }
+    }
+    containers.on('scroll', horizontalSync);
+   });
+  </script>
+  <script>
+    if($('.metricBoxs').length>0){
+      var skeleton = $('.metricBoxs');
+      for (var i = skeleton.length - 1; i >= 0; i--) {
+        var target = $(skeleton[i]);
+        var targetWidth = 0;
+        targetWidth += 170 * (target.find('li').length - 1);
+        targetWidth += 73;
+        targetWidth += 10 * (target.children('li').length);
+        if(targetWidth > target.parent().width()){
+          target.width(targetWidth);
+        }
+      };
+    }
+  </script>
+  <script>
+    $(function(){
+      $('.jsTextareaToggle').click(function(){
+        var target = $(this).prev('.segmentName');
+        var txt = target.text();
+        target.html('<input type="text" value="'+txt+'" />');
+        $(this).css({display:'none'});
+        console.log(txt);
+      });
+    });
+
+  </script>
+<% end %>

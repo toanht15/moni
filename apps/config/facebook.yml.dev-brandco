@@ -1,0 +1,21 @@
+Admin:
+  AppId: 689158087792857
+  AppSecretKey: a3ca02b1b428b26f5693fdbf9b121b08
+  Scope:
+    1: publish_actions
+    2: manage_pages
+    3: read_insights
+    4: read_stream
+    5: user_photos
+    6: user_videos
+  TokenExpiredCheck: 0
+User:
+  AppId: 455048314560961
+  AppSecretKey: f87197818b84335481494dc68176bdb4
+  Scope:
+    1: publish_actions
+    2: manage_pages
+    3: read_insights
+    4: read_stream
+    5: user_photos
+    6: user_videos

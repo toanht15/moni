@@ -1,0 +1,559 @@
+.userSurveyWrap {
+    border: 1px solid $borderC;
+    background: #fff;
+    padding: 20px;
+    margin: 10px auto;
+
+    .cautionText1 {
+        margin-bottom: 5px;
+    }
+    .unitems {
+
+        strong {
+            color: #ff8239;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    .btnSet {
+        clear: both;
+    }
+}
+
+.userSurveyList {
+}
+.userSurveyItem {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-bottom: 1px solid $borderC;
+    padding: 10px 0;
+    display: table;
+    width: 100%;
+
+    &:first-child {
+        padding-top: 0;
+    }
+    &.selected {
+
+        .itemInner {
+            opacity: .6;
+        }
+    }
+    .itemInner {
+        display: table-cell;
+        vertical-align: middle;
+        max-width: 1px;
+    }
+    .surveyItemMove {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 0;
+        width: 25px;
+
+        &:before {
+            @include fontBase(menu);
+            font-size: 15px;
+            color: #888;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: move;
+        }
+    }
+    .surveyItemAction {
+        position: relative;
+        width: 30px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+    }
+    .addSelected {
+        font-size: 0;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        background: #5e5e5e;
+        position: relative;
+
+        &:before {
+            @include fontBase(plus);
+            font-size: 14px;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 14px;
+            height: 14px;
+        }
+    }
+    .added {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        color: #FFF;
+        vertical-align: middle;
+        line-height: 14px;
+        font-size: 0;
+
+        &:before {
+            @include fontBase(check2);
+            color: $iconC3;
+            font-size: 14px;
+            display: inline-block;
+        }
+    }
+
+    .itemTags {
+        font-size: 0;
+        margin-bottom: 5px;
+
+        [class*="itemTags"] {
+            font-size: 11px;
+            height: 18px;
+            line-height: 18px;
+            padding: 0 3px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            color: #fff;
+        }
+    }
+    .itemTagsType {
+        background: #5e5e5e;
+    }
+    .itemTagsRequire {
+        background: #ba0000;
+    }
+    .itemTagsRecommend {
+        background: #ff8637;
+    }
+    .itemText {
+
+        strong {
+            display: block;
+            font-size: 14px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .choices {
+            display: block;
+            line-height: 1.1;
+            font-size: 11px;
+            color: #aaa;
+        }
+    }
+}
+.userSurveyItemMoreread {
+    padding: 10px;
+
+    a {
+        background: #eee;
+        text-align: center;
+        color: #333;
+        height: 35px;
+        line-height: 35px;
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+            background: #ccc;
+        }
+    }
+}
+.userSurveyItemNew {
+    padding: 10px;
+
+    a {
+        border: 1px solid $borderC;
+        background: #fff;
+        text-align: center;
+        color: #333;
+        height: 45px;
+        line-height: 45px;
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+            background: #eee;
+        }
+        &:before {
+            @include fontBase(plus);
+            font-size: 14px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            background: #5e5e5e;
+            display: inline-block;
+            vertical-align: middle;
+            margin: -.2em 5px 0 0;
+        }
+    }
+}
+.userSurveyItemPlaceholder {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    color: #ccc;
+    border: 1px dashed $borderC;
+    margin: 10px;
+    display: none;
+}
+
+.userSurveyColWrap {
+    display: table;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.userSurveySettingCol {
+    position: relative;
+    width: 50%;
+    display: table-cell;
+    vertical-align: top;
+    border: 1px solid $borderC;
+    border-top: none;
+
+    .userSurveyColHeader {
+        width: -webkit-calc(100% + 2px);
+        width: calc(100% + 2px);
+        margin-left: -1px;
+        border-bottom: 1px solid $borderC;
+    }
+}
+.userSurveyPreviewCol {
+    position: relative;
+    width: 50%;
+    display: table-cell;
+    vertical-align: top;
+    background: #fff;
+    border: 10px solid #f8f8f8;
+    border-top: none;
+
+    .userSurveyColHeader {
+        width: -webkit-calc(100% + 20px);
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        border-bottom: 10px solid #f8f8f8;
+    }
+    .btnSet {
+        background: #f8f8f8;
+        margin: 0;
+        padding: 20px 0 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+.userSurveyColHeader {
+    @include cf;
+    background: #fff;
+    padding-bottom: 10px;
+    height: 20px;
+    line-height: 20px;
+
+    .hd2 {
+        margin: 0;
+        float: left;
+    }
+    .surveyPreview {
+        float: right;
+    }
+    .messagePreview {
+        text-align: center;
+    }
+}
+
+.userSurveyNonselected {
+    position: relative;
+
+    .nonselectedItemsList {
+        overflow: auto;
+
+        .userSurveyList:not(:first-child) {
+            border-top: 4px solid $borderC;
+        }
+        .userSurveyItem {
+            padding: 10px;
+        }
+    }
+    .userSurveyItem:not(.selected):hover {
+        background: #f9f9e0;
+    }
+}
+.userSurveyItemTooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid $borderC;
+    top: 0;
+    right: 40px;
+    z-index: 100;
+    display: none;
+    margin-top: -20px;
+
+    &:before {
+        @include miniArrowBase(left, $borderC, 10px);
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: -10px;
+    }
+    &:after {
+        @include miniArrowBase(left, #fff, 10px);
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: -9px;
+    }
+    .tooltipInner {
+        padding: 10px 0 10px 10px;
+        width: 300px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .tooltipTitle {
+        padding-right: 10px;
+        margin-bottom: 15px;
+
+        strong {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    .tooltipChoices {
+        padding-right: 10px;
+        overflow: auto;
+        max-height: 200px;
+        list-style: disc inside;
+
+        li:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.userSurveyPreviewInner {
+    overflow: auto;
+
+    .userSurveyItem {
+        padding: 10px;
+    }
+
+    .displaySP {
+        @import 'components.message_sp';
+        padding: 20px;
+
+        .message {
+            width: 300px;
+            margin: auto;
+        }
+    }
+}
+
+.userSurveyItemEdit {
+
+    .itemTitle {
+        padding: 10px;
+
+        label {
+            margin: 0;
+        }
+        .num {
+            display: inline-block;
+            width: 20px;
+            vertical-align: middle;
+        }
+        [type="text"] {
+            width: -webkit-calc(100% - 20px);
+            width: calc(100% - 20px);
+            margin: 0;
+        }
+    }
+    .itemType{
+        @include cf;
+        padding: 5px 10px;
+        border-top: 1px solid $borderC;
+
+        li {
+            float: left;
+            width: 50%;
+            line-height: 30px;
+        }
+        label {
+            margin: 0;
+        }
+    }
+    .itemAnswers {
+        border-top: 1px solid $borderC;
+    }
+    .itemAnswersInner {
+        padding: 10px;
+    }
+    .itemAnswersDetail {
+
+        li {
+            padding-right: 24px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .text {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+        .num {
+            display: inline-block;
+            width: 35px;
+            vertical-align: middle;
+        }
+        [type="text"] {
+            width: -webkit-calc(100% - 35px);
+            width: calc(100% - 35px);
+            margin: 0;
+        }
+        [type="file"] {
+            margin: 5px 0 0 35px;
+            display: block;
+            font-size: 11px;
+        }
+        .iconBtnDelete {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    .itemAnswersPullDown {
+
+        textarea {
+            display: block;
+            width: 100%;
+            height: 150px;
+        }
+    }
+    .itemAnswersOption {
+        @include cf;
+        margin-top: 5px;
+
+        .historyToggle {
+            float: right;
+            font-size: 11px;
+
+            &:before {
+                @include iconFontLeft(clock);
+                color: #333;
+            }
+            &:after {
+                @include iconFontRight(arrow-bottom);
+                color: #a4a4a4;
+            }
+            &.open:after {
+                @include iconFontRight(arrow-top);
+            }
+        }
+    }
+    .itemHistoryAnswers {
+        max-height: 157px;
+        overflow: auto;
+        border-top: 1px dashed $borderC;
+        display: none;
+
+        li {
+            border-top: 1px dashed $borderC;
+            padding: 5px 10px;
+
+            &:first-child {
+                border: none;
+            }
+            &.selected {
+
+                .itemHistoryTitle {
+                    opacity: .6;
+                }
+            }
+        }
+        .itemHistoryTitle {
+            display: inline-block;
+            vertical-align: middle;
+            width: -webkit-calc(100% - 30px);
+            width: calc(100% - 30px);
+            margin-right: 10px;
+        }
+        .addSelected {
+            font-size: 0;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #5e5e5e;
+            position: relative;
+            vertical-align: middle;
+
+            &:before {
+                @include fontBase(plus);
+                font-size: 14px;
+                color: #fff;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                width: 14px;
+                height: 14px;
+            }
+        }
+        .added {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            color: #FFF;
+            vertical-align: middle;
+            line-height: 14px;
+            font-size: 0;
+            margin-left: 3px;
+
+            &:before {
+                @include fontBase(check2);
+                color: $iconC3;
+                font-size: 14px;
+                display: inline-block;
+            }
+        }
+    }
+    .itemOptions {
+        border-top: 1px solid $borderC;
+        padding: 10px;
+
+        .optionSettings {
+            @include cf;
+
+            dt {
+                float: left;
+                margin-bottom: 10px;
+                width: -webkit-calc(100% - 74px);
+                width: calc(100% - 74px);
+                height: 26px;
+                line-height: 26px;
+            }
+            dd {
+                float: right;
+                margin-bottom: 10px;
+                width: 74px;
+                height: 26px;
+                text-align: center;
+                line-height: 26px;
+            }
+            .switch {
+                margin: 0;
+            }
+        }
+    }
+}

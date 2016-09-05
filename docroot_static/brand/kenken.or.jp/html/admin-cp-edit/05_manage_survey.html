@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>05_manage_photo / admin-cp-edit</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+              </ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Infomation</a>
+              <span class="badge1">+3</span>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+                <li><a href="#">リダイレクト設定</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+
+    <h1 class="hd1"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="campaign img" class="hdCampaignIcon"><span class="label2">登録完了</span><span class="hdInnerText">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が</span></h1>
+    <ul class="campaignAction">
+      <li class="setting"><a href="#">基本設定</a></li>
+      <li class="attract"><a href="#">集客設定</a></li>
+      <li class="photo"><a href="#">投稿写真管理<span class="badge1">99</span></a></li>
+      <li class="stepedit"><a href="#">STEPグループ編集</a></li>
+      <li class="download"><a href="#">個人情報取得</a></li>
+      <li class="user"><a href="#">参加者一覧</a></li>
+      <li class="download"><a href="#">STEP6DL</a></li>
+      <li class="hashtag"><a href="#">写真投稿</a></li>
+      <li class="tweet"><a href="#">ツイート管理</a></li>
+      <li class="status"><span class="campaignTag">発表日：2014/6/17</span><span class="campaignTag">当選数：90,000</span></li>
+    </ul>
+
+    <section class="campaignFlowWrap">
+      <div class="campaignFlow">
+        <ul class="campaignFlowCont">
+          <li class="flowDetail_focus">
+            <h1>STEP1-3</h1>
+            <div class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">キャンペーン告知</dt>
+                <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">モジュール</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                <dd></dd>
+                <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></div>
+          <!-- /.flowDetail_focus --></li>
+          <li class="flowDetail">
+            <h1>STEP4</h1>
+            <a href="#" class="moduleWrap">
+              <dl class="campaignModule1">
+                <dt><img src="../../../../img/module/win1.png" width="16" height="16" alt="結果発表" class="hdModuleIcon">結果発表</dt>
+                <dd><span class="iconMail1"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconMail2"><strong class="num">--</strong>人</span></dd>
+                <dd><span class="iconCheck3"><strong class="num">--</strong>人</span></dd>
+              <!-- /.campaignModule1 --></dl>
+            <!-- /.moduleWrap --></a>
+          <!-- /.flowDetail --></li>
+        <li class="flowDetail">
+          <h1>STEP *</h1>
+          <a class="moduleWrap">
+            <p class="addModule"><span class="linkAdd">追加する</span></p>
+          <!-- /.campaignModule1 --></a>
+        <!-- /.flowDetail --></li>
+        <!-- /.campaignFlowCont --></ul>
+      <!-- /.campaignFlow --></div>
+      <ul class="campaignFlowScroll">
+        <li class="flowPrev">←</li>
+        <li class="flowNext">→</li>
+      <!-- /.campaignFlowScroll --></ul>
+    <!-- /.campaignFlowWrap --></section>
+
+    <section class="campaignPhotoWrap">
+
+      <div class="campaignPhotoSearch">
+        <ul class="tablink1">
+          <li class="current"><span>STEP1-3：アンケート１</span></li>
+          <li><a href="#">STEP1-4：アンケート２</a></li>
+        <!-- /.tablink1 --></ul>
+
+        <div class="itemsSortingDetail">
+          <dl>
+            <dt>検閲</dt>
+            <dd><label><input type="radio" name="radio1">あり</label><label><input type="radio" name="radio1">なし（投稿と同時に承認となり写真がページに表示されます）</label></dd>
+          </dl>
+          <p class="btnSet"><span class="btn3"><a href="#" class="small1">適用</a></span></p>
+        <!-- /.itemsSortingDetail --></div>
+        <div class="itemsSortingDetail">
+          <dl>
+            <dt>絞り込み</dt>
+            <dd><label><input type="radio" name="radio2">全て</label><label><input type="radio" name="radio2">未承認</label><label><input type="radio" name="radio2">承認</label><label><input type="radio" name="radio2">非承認</label></dd>
+            <dt>並び替え</dt>
+            <dd>
+              <select name="" id="">
+                <option>投稿順</option>
+                <option>ユーザーID順</option>
+              </select>
+              <label><input type="radio" name="radio3">[A-Z↓] 昇順</label><label><input type="radio" name="radio3">[Z-A↑] 降順</label></dd>
+              <dt>表示件数</dt>
+              <dd>
+                <select name="" id="">
+                  <option>10</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>件
+              </dd>
+          </dl>
+          <p class="btnSet"><!-- <span class="btn2"><a href="#" class="small1">リセット</a></span> --><span class="btn3"><a href="#" class="small1">適用</a></span></p>
+        <!-- /.itemsSortingDetail --></div>
+      <!-- /.campaignPhotoSearch --></div>
+
+      <div class="outputApi">
+        <div class="labelModeAllied">
+          <dl class="outputApiWrap">
+            <dt>出力対象</dt>
+            <dd><label class="surveyText"><input type="checkbox" name="radio2" value="Q1">Q1<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label><label class="surveyText"><input type="checkbox" name="radio2" value="Q2">Q2<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label><label class="surveyText"><input type="checkbox" name="radio2" value="Q3">Q3<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label><label class="surveyText"><input type="checkbox" name="radio2" value="Q4">Q4<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label></dd>
+            <dt class="confirmed">承認済<strong>999</strong>件</dt>
+            <dd><span class="btn2"><a href="#" class="large2">外部出力APIのURL作成</a></span>
+          <span class="url">URL：https://cp.monipla.jp/campaign/gsgargap.json</span></dd>
+          </dl>
+        <!-- /.labelModeAllied --></div>
+      <!-- /.outputApi --></div>
+
+      <p class="batchAction">
+        <label><input type="checkbox">全選択</label>
+        <label><input type="radio" value="" name="1" checked="checked">出力</label>
+        <label><input type="radio" value="" name="1">非出力</label>
+        <span class="btn3"><a href="#" class="small1">適用</a></span>
+      <!-- /.batchAction --></p>
+      <p class="viewLimit"><span class="viewLimitTitle">表示する質問</span><label class="surveyText"><input type="checkbox" name="radio2" value="Q1">Q1<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label><label class="surveyText"><input type="checkbox" name="radio2" value="Q2">Q2<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label><label class="surveyText"><input type="checkbox" name="radio2" value="Q3">Q3<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label><label class="surveyText"><input type="checkbox" name="radio2" value="Q4">Q4<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></label></p>
+
+      <div class="campaignSurvey">
+        <div class="survey">
+          <div class="surveyMeta">
+            <p class="labels">
+              <input type="checkbox">
+              <span class="label2">非承認</span>
+              <span class="user"><img src="../../../../img/base/imgUser1.jpg" width="30" height="30" alt="user name"><span class="name">加藤 康祐</span></span>
+            <!-- /.labels --></p>
+            <p class="postDate">05/01<span class="number">(No.1)</span></p>
+          <!-- /.surveyMeta --></div>
+
+          <ul class="answerList">
+            <li><span class="surveyText">Q1<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q2<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすいろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q3<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q4<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span><span class="thumb"><span><img src="../../../../img/dummy/cp1.png" alt="" data-pin-nopin="true"></span></span>画像のバージョン</li>
+          </ul>
+        <!-- /.survey --></div>
+        <div class="survey">
+          <div class="surveyMeta">
+            <p class="labels">
+              <input type="checkbox">
+              <span class="label4">承認</span>
+              <span class="user"><img src="../../../../img/base/imgUser1.jpg" width="30" height="30" alt="user name"><span class="name">加藤 康祐</span></span>
+            <!-- /.labels --></p>
+            <p class="postDate">05/01<span class="number">(No.1)</span></p>
+          <!-- /.surveyMeta --></div>
+
+          <ul class="answerList">
+            <li><span class="surveyText">Q1<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q2<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすいろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q3<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q4<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span><span class="thumb"><span><img src="../../../../img/dummy/cp1.png" alt="" data-pin-nopin="true"></span></span>画像のバージョン</li>
+          </ul>
+        <!-- /.survey --></div>
+        <div class="survey">
+          <div class="surveyMeta">
+            <p class="labels">
+              <input type="checkbox">
+              <span class="label4">承認</span>
+              <span class="user"><img src="../../../../img/base/imgUser1.jpg" width="30" height="30" alt="user name"><span class="name">加藤 康祐</span></span>
+            <!-- /.labels --></p>
+            <p class="postDate">05/01<span class="number">(No.1)</span></p>
+          <!-- /.surveyMeta --></div>
+
+          <ul class="answerList">
+            <li><span class="surveyText">Q1<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q2<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすいろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q3<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span>いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす</li>
+            <li><span class="surveyText">Q4<span class="textBalloon1">
+                  <span>
+                  【自由回答】クランボンはカブカブ笑ったよ？
+                  </span>
+                <!-- /.textBalloon1 --></span></span><span class="thumb"><span><img src="../../../../img/dummy/cp1.png" alt="" data-pin-nopin="true"></span></span><span class="thumb"><span><img src="../../../../img/dummy/cp1.png" alt="" data-pin-nopin="true"></span></span><span class="thumb"><span><img src="../../../../img/dummy/cp1.png" alt="" data-pin-nopin="true"></span></span></li>
+          </ul>
+        <!-- /.survey --></div>
+      <!-- /.campaignSurvey --></div>
+
+      <p class="batchAction">
+        <label><input type="checkbox">全選択</label>
+        <label><input type="radio" value="" name="1" checked="checked">承認</label>
+        <label><input type="radio" value="" name="1">非承認</label>
+        <label><input type="checkbox" value="">TOPパネルに表示</label>
+        <span class="btn3"><a href="#" class="small1">適用</a></span>
+      <!-- /.batchAction --></p>
+
+      <div class="pager1">
+        <p>99,999,999件中2001件～2020件表示しています</p>
+        <ul>
+          <li class="first"><a href="#">最初のページヘ</a></li>
+          <li class="prev"><a href="#">前のページへ</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><span>6</span></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">99</a></li>
+          <li class="next"><a href="#">次のページへ</a></li>
+          <li class="last"><a href="#">最後のページヘ</a></li>
+        </ul>
+      <!-- /.pager1 --></div>
+    <!-- /.campaignPhotoWrap --></section>
+
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-large jsModalCont">
+
+      <div class="modalCampaignPhoto">
+        <div class="photoPage">
+          <figure><img src="../../../../img/dummy/01.png" alt="photo title"></figure>
+          <div class="postWrap">
+            <h1 class="postTitle">タイトルが入りますよサンプルテキストサンプルテキスト</h1>
+            <p class="postText">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p class="postData"><img src="../../../../img/base/imgUser1.jpg" alt="user name"><span class="timeStamp">2015/04/16</span></p>
+            <p class="postTag"><span>ハワイ</span><span>海岸</span><span>hogehoge</span><span>fuga</span><span>サンプルテキストサンプルテキスト</span><span>海岸</span><span>hogehoge</span><span>fuga</span></p>
+          <!-- /.postWrap --></div>
+        <!-- /.photoPage --></div>
+
+        <table class="photoData">
+          <tbody>
+            <tr>
+              <th>投稿先</th>
+              <td>キャンペーンタイトル（や常設コンテンツページ名など）</td>
+            </tr>
+            <tr>
+              <th>投稿日時</th>
+              <td>2015/05/11 18:27</td>
+            </tr>
+            <tr>
+              <th>ユーザー名</th>
+              <td><img src="../../../../img/base/imgUser1.jpg" alt="user name" class="userImg">ユーザー名が入るユーザー名が入る</td>
+            </tr>
+            <tr>
+              <th>ステータス</th>
+              <td>
+                <span class="label5">非出力</span>
+                <select name="" id="">
+                  <option>ステータス変更</option>
+                  <option>未承認</option>
+                  <option>承認</option>
+                  <option>非承認</option>
+                </select>
+                <label><input type="checkbox">TOPパネルに表示</label>
+                <span class="btn3"><a href="#" class="small1">適用</a></span>
+              </td>
+            </tr>
+          </tbody>
+        <!-- /.photoData --></table>
+
+        <ul class="pager2">
+          <li class="prev"><a href="#" class="iconPrev1">前の投稿</a></li>
+          <li class="next"><a href="#" class="iconNext1">次の投稿</a></li>
+        <!-- /.pager2 --></ul>
+      <!-- /.modalCampaignPhoto --></div>
+
+
+      <p>
+        <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+
+</body>
+</html>

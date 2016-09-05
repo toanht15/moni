@@ -1,0 +1,23 @@
+Admin:
+  ConsumerKey: ZkXMk1MHDFeLnbPoRf8AL7wDr
+  ConsumerSecret: 0RUUFSBgCGPn1xeHLHMOgDXQmEUBsqciPWPfqrbyLOjzxzbSWe
+  AccessToken: 393272305-UC01TKVWGjuB3maFoosimaOynyAXedEdt1iDavL9
+  AccessTokenSecret: qbQN4egklhcUHF7B5WtGY0Uy0w9EmX8wrsZLhnsv0qFNf
+User:
+  ConsumerKey: rudZxZO1YofD3e0pB7hjpRbJX
+  ConsumerSecret: NI3r7K518rTQNL1W79GPDPiMlCAdiRxkmenVduqMf0YXgJslRC
+Batch:
+  ConsumerKey: lG8W0CfqcZW7zehwMiTlqgOwG
+  ConsumerSecret: iHoh9krwrTSNPGFLCfhQefdow37ry8WfWJQ9XwDpcub2hTj2mJ
+  AccessToken: 393272305-VzlEfhuGqH1myeHGK2pg5xIGMNUf8JfSlBjVSZzL
+  AccessTokenSecret: QfZzsf3ldnFvDqeSJvwFWgw6XgzWyo0ZGGRsAMUw6wspw
+TwitterAppsForCrawler:
+  1:
+    ConsumerKey: m9RHEvN1fj1fJ6eshE1xp8Vup
+    ConsumerSecret: t48uPCUVabzQW5gy9QBMlkFEc6J4emvApnL7vppAvEhZnvpWxM
+  2:
+    ConsumerKey: WRX75tzYwo9gQvSPc8zaEK9A1
+    ConsumerSecret: WJqEEluUL0OzOX31qOPn7C48IhPH4EyWecGgJHpZrFZKOPdmUa
+Ads:
+  ConsumerKey: opPW3oqhMbXPg9UBHPKWezsHK
+  ConsumerSecret: JBOqvT6b0iOvLuHZRvHvta0ytjqXgT2Z3xWr2S5b0S9VpSHjDv

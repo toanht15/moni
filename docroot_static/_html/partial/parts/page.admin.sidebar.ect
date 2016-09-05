@@ -1,0 +1,13 @@
+<aside class="adminSideCol">
+    <nav class="adminSettingWrap">
+        <ul>
+            <li class="admin"><% if @sidebar == 'sidenav01' : %><span class="current">管理者設定</span><% else : %><a href="#">管理者設定</a><% end %></li>
+            <li class="user"><% if @sidebar == 'sidenav02' : %><span class="current">ユーザー設定</span><% else :%><a href="#">ユーザー設定</a><% end %></li>
+            <li class="mail"><% if @sidebar == 'sidenav03' : %><span class="current">登録メール設定</span><% else :%><a href="#">登録メール設定</a><% end %></li>
+            <li class="page"><% if @sidebar == 'sidenav04' : %><span class="current">ページ設定</span><% else :%><a href="#">ページ設定</a><% end %></li>
+            <li class="cvtag"><% if @sidebar == 'sidenav05' : %><span class="current">コンバージョンタグ設定</span><% else :%><a href="#">コンバージョンタグ設定</a><% end %></li>
+            <li class="redirect"><% if @sidebar == 'sidenav06' : %><span class="current">リダイレクトリンク設定</span><% else :%><a href="#">リダイレクトリンク設定</a><% end %></li>
+            <li class="contact"><% if @sidebar == 'sidenav07' : %><span class="current">通知先メールアドレス設定</span><% else :%><a href="#">通知先メールアドレス設定</a><% end %></li>
+        </ul>
+    </nav>
+</aside>

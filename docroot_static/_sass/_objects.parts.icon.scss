@@ -1,0 +1,549 @@
+/*
+  icon set
+  open new window
+  mail
+  check
+  type
+  actions
+*/
+
+// icon set
+%iconSet1:before {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 25px;
+  vertical-align: middle;
+  background: #FFF;
+}
+.iconFB1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(fb1);
+    color: $fbC;
+    border-radius: 3px;
+  }
+}
+.iconTW1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(tw1);
+    color: $twC;
+  }
+}
+.iconTW1_2 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(tw2);
+    color: $twC;
+  }
+}
+.iconIG1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(ig1);
+    color: $igC;
+  }
+}
+.iconYH1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(yh1);
+    color: #f00;
+  }
+}
+.iconYT1 {
+  @extend %iconSet1;
+
+  &:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url(../img/sns/iconSnsYT1.png);
+  }
+}
+.iconGP1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(gp1);
+    color: $gpC;
+  }
+}
+.iconLN1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(ln1);
+    color: $lnC;
+  }
+}
+.iconRss1 {
+  @extend %iconSet1;
+
+  &:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url(../img/sns/iconSnsRss1.png);
+  }
+}
+.iconGdo1 {
+  @extend %iconSet1;
+
+  &:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url(../img/thirdParty/iconGdo1.png);
+  }
+}
+.iconIN1 {
+  @extend %iconSet1;
+
+  &:before {
+    @include fontBase(in1);
+    color: $inC;
+  }
+}
+%iconSet2 {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: relative;
+
+  &:before {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+}
+.iconFB2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(fb1);
+      color: $fbC;
+  }
+}
+.iconFB2_off {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(fb1);
+      color: #9B9B9B;
+  }
+}
+.iconTW2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(tw1);
+      color: $twC;
+  }
+}
+.iconTW2_off {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(tw1);
+      color: #9B9B9B;
+  }
+}
+.iconTW2_2 {
+  @extend %iconSet2;
+
+  &:before {
+    @include fontBase(tw2);
+    color: $twC;
+  }
+}
+.iconIG2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(ig1);
+      color: #000;
+  }
+}
+.iconYH2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(yh1);
+      color: #f00;
+  }
+}
+.iconGP2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(gp1);
+      color: $gpC;
+  }
+}
+.iconGdo2 {
+  @extend %iconSet2;
+
+  &:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(../img/thirdParty/iconGdo2.png);
+  }
+}
+.iconLN2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(ln1);
+      color: $lnC;
+  }
+}
+.iconYT2 {
+  @extend %iconSet2;
+  background: url(../img/sns/iconSnsYT4.png);
+}
+.iconIN2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(in1);
+      color: $inC;
+  }
+}
+.iconML2 {
+  @extend %iconSet2;
+
+    &:before {
+      @include fontBase(mail-close2);
+      color: #333;
+  }
+}
+%iconSexBase {
+  @extend %iconSet2;
+  width: 10px;
+  height: 20px;
+  background: url(../img/icon/iconSexBase1.png) no-repeat;
+}
+.iconSexM {
+  @extend %iconSexBase;
+  background-position: 0 0;
+}
+.iconSexF {
+  @extend %iconSexBase;
+  background-position: -10px 0;
+}
+.iconSexN {
+  @extend %iconSexBase;
+  background-position: -20px 0;
+}
+
+// open new window
+.openNewWindow1 {
+
+  &:after {
+    @include iconFontRight(newwindow);
+    margin-right: 0;
+    margin-left: 5px;
+    font-size: 13px;
+    color: $iconC1;
+  }
+}
+
+.download {
+
+  &:after {
+    @include iconFontRight(download);
+    margin-right: 0;
+    margin-left: 5px;
+    font-size: 13px;
+    color: $iconC1;
+  }
+}
+.up {
+
+  &:after {
+    @include fontBase(up);
+    margin-right: 0;
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.down {
+
+  &:after {
+    @include fontBase(down);
+    margin-right: 0;
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+// mail
+.iconMail1 {
+
+  &:before {
+    @include iconFontLeft(mail-close2);
+    font-size: 15px;
+    color: $iconC3;
+  }
+}
+.iconMail2 {
+
+  &:before {
+    @include iconFontLeft(mail-open);
+    font-size: 15px;
+    color: $iconC3;
+  }
+}
+
+// check
+.iconCheck3 {
+
+  &:before {
+    @include iconFontLeft(check2);
+    font-size: 14px;
+    color: $iconC3;
+  }
+}
+
+// draft
+.iconDraft1 {
+
+  &:before {
+    @include iconFontLeft(write);
+    font-size: 14px;
+    color: $iconC1;
+  }
+}
+.iconDraft2 {
+
+  &:after {
+    @include iconFontRight(write);
+    font-size: 14px;
+    color: $iconC1;
+  }
+}
+// copy
+.iconCopy1 {
+
+  &:before {
+    @include iconFontLeft(copy);
+    font-size: 15px;
+    color: $iconC1;
+  }
+}
+
+// runing
+.iconRuning3 {
+
+  &:before {
+    @include iconFontLeft(runing);
+    font-size: 14px;
+    color: $iconC3;
+  }
+}
+//shipping
+.shipping1 {
+
+  &:before {
+    @include iconFontLeft(shipping);
+    font-size: 16px;
+    color: $iconC1;
+  }
+}
+.shipping2 {
+
+  &:before {
+    @include iconFontLeft(shipping);
+    font-size: 16px;
+    color: $iconC3;
+  }
+}
+
+// type
+%typeIconBase1 {
+  display: inline-block;
+  padding-left: 21px;
+  position: relative;
+
+  &:before {
+    font-size: 15px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -7px;
+    color: $iconC1;
+  }
+}
+.typePage1 {
+  @extend %typeIconBase1;
+
+  &:before {
+    @include fontBase(page);
+  }
+}
+.typeCampaign1 {
+  @extend %typeIconBase1;
+
+  &:before {
+    @include fontBase(campaign);
+  }
+}
+.typeMail1 {
+  @extend %typeIconBase1;
+
+  &:before {
+    @include fontBase(mail-close2);
+  }
+}
+
+// history
+.iconHistory {
+  background: url(../img/icon/iconHistroy.png) no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20px;
+  height: 16px;
+}
+
+//caution
+.iconCaution {
+
+  &:before {
+    @include fontBase(caution);
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    background: #b20000;
+    border-radius: 50%;
+    text-align: center;
+  }
+  &:hover .textBalloon1,
+  &:hover .helpBalloon {
+    display: block;
+  }
+  .text {
+    display: none;
+  }
+}
+
+// help
+.iconHelp {
+  vertical-align: middle;
+  position: relative;
+  font-weight: normal;
+  display: inline-block;
+
+  &:before {
+    @include fontBase(question);
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    background: #a2a2a2;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+    margin-top: -.2em;
+  }
+  &:hover .textBalloon1,
+  &:hover .helpBalloon {
+    display: block;
+  }
+  .text {
+    display: none;
+  }
+}
+
+.actionLike {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -.2em 5px 0 0;
+  overflow: hidden;
+  font-size: 0;
+  width: 19px;
+  height: 19px;
+
+  &:before {
+    @include fontBase(fangate);
+    font-size: 19px;
+    color: #333;
+  }
+}
+.actionReply {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -.2em 5px 0 0;
+  overflow: hidden;
+  font-size: 0;
+  width: 19px;
+  height: 19px;
+
+  &:before {
+    @include fontBase(comment);
+    font-size: 19px;
+    color: #333;
+  }
+}
+.iconLike {
+  @extend %iconSet1;
+
+  &:before {
+    @include iconFontLeft(follow-facebook);
+    font-size: 14px;
+    color: #666;
+    background:none;
+  }
+}
+.iconComment {
+  @extend %iconSet1;
+  margin-left: 3px;
+
+  &:before {
+    @include iconFontLeft(comment);
+    font-size: 14px;
+    color: #666;
+    background:none;
+  }
+}
+.iconReply {
+  @extend %iconSet1;
+
+  &:before {
+    @include iconFontLeft(reply-action);
+    font-size: 14px;
+    color: #666;
+    background:none;
+  }
+}
+.iconRetweet {
+  @extend %iconSet1;
+  margin-left: 3px;
+
+  &:before {
+    @include iconFontLeft(retweet-action);
+    font-size: 14px;
+    color: #666;
+    background:none;
+  }
+}

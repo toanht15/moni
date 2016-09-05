@@ -1,0 +1,20 @@
+<% extend 'partial/layout/page.plain' %>
+
+<% block 'headCont' : %>true<% end %>
+
+<% block 'head' : %>
+    <link rel="stylesheet" href="../../css/style_sp.css">
+<% end %>
+
+<% block 'mainContents' : %>
+    <article>
+        <section class="notInternal">
+            <h1><img src="../../img/base/imgLogo_g.png" width="111" height="18" alt="モニプラ"><strong>500</strong>Not Internal Server Error<small>お探しのページを表示できません</small></h1>
+            <p>システムエラーが発生しております。<br>お手数ですが、しばらく時間を置いてから再度お試しください。</p>
+            <p class="btnSet"><span class="btn1"><a href="#">前のページへ</a></span><span class="btn1"><a href="#">TOPページへ</a></span></p>
+        <!-- /.notInternal --></section>
+        <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+    </article>
+
+    <% include 'partial/parts/globalFooter' %>
+<% end %>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>05_setting_redirect_edit / admin-setting</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <div class="adminWrap">
+    <aside class="adminSideCol">
+      <nav class="adminSettingWrap">
+        <ul>
+          <li class="admin"><a href="#">管理者設定</a></li>
+          <li class="user"><a href="#">ユーザー設定</a></li>
+          <li class="page"><a href="#">ページ設定</a></li>
+          <li class="cvtag"><a href="#">コンバージョンタグ設定</a></li>
+          <li class="redirect"><span class="current">リダイレクトリンク設定</span></li>
+        </ul>
+      <!-- /.adminSettingWrap --></nav>
+    <!-- /.adminSideCol --></aside>
+    <article class="adminMainCol">
+      <h1 class="hd1">リダイレクトリンク編集</h1>
+
+      <section class="adminRedirectWrap">
+        <dl class="adminRedirectSetting">
+          <dt><label for="input1" class="require1">リダイレクトリンク</label></dt>
+          <dd>http://monipla.com/brand/r/<input type="text" value="hoge" id="input1" class="urlParts"></dd>
+          <dt><label for="input2" class="require1">実URL</label></dt>
+          <dd><input type="text" value="http://yahoo.co.jp" id="input2"></dd>
+          <dt><label for="input3">説明
+                <span class="iconHelp">
+                  <span class="text">ヘルプ</span>
+                  <span class="textBalloon1">
+                    <span>
+                       管理用のメモのため、一般公開されません
+                    </span>
+                  <!-- /.textBalloon1 --></span>
+                  <!-- /.iconHelp --></span>
+          </label>
+          </dt>
+          <dd><textarea name="" id="input3">ヤフー</textarea></dd>
+        <!-- /.adminCvtagSetting --></dl>
+        <p class="btnSet"><span class="btn3"><a href="#">作成</a></span></p>
+        <p class="deleteContents"><a href="#modal1" class="linkDelete jsOpenModal">削除する</a></p>
+      <!-- /.adminRedirectWrap --></section>
+
+    <!-- /.adminMainCol --></article>
+  <!-- /.adminWrap --></div>
+
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+      <section class="modalCont-small jsModalCont">
+          <h1>確認</h1>
+          <p class="iconError1">このリンクを削除しますか？</p>
+          <p class="btnSet">
+            <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+            <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+          </p>
+      <!-- /.modalCont-small --></section>
+  <!-- /.modal1 --></div>
+
+</body>
+</html>

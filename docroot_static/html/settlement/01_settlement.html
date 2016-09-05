@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_settlement / message</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="../../js/brandco/Brandco.js"></script>
+    <script src="../../js/brandco/Brandco.net.js"></script>
+    <script src="../../js/brandco/Brandco.api.js"></script>
+    <script src="../../js/brandco/Brandco.helper.js"></script>
+
+    <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../../js/_unit.js"></script>
+
+    <!-- postcode --><script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+
+    <!-- site base setting --><style>
+        /* site background */
+        
+        body {
+            background-color: #f3f3f3;
+            background-image: url(../../img/dummy/01.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+        }
+        /* panel title color */
+        
+        .contBoxMain h1 {
+            background-color: red;
+        }
+        /* site title color */
+        
+        .gnavi h1 {
+            color: red;
+        }
+        /* nav link color */
+        
+        .gnavi li a {
+            color: red;
+        }
+        
+        body>footer,
+        body>footer a {
+            color: red;
+        }
+    </style>
+
+    <link rel="icon" href="../../img/base/favicon.ico">
+
+</head>
+
+<body>
+
+    <article>
+        <section class="messageWrap">
+            <section class="message">
+                <h1 class="messageHd1">お客様の注文</h1>
+                <div class="messageOrder">
+                    <div class="settlementInfo">
+                        <p class="productImg">
+                            <img src="../../img/dummy/book.png" alt="健康検定ガイドブック">
+                        </p>
+                        <div class="settlementInfoInner">
+                            <h2 class="title">健康検定ガイドブック</h2>
+                            <p class="price"><strong>2,160</strong>円（税込）</p>
+                            <p class="number">数量
+                                <select name="" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>点
+                            </p>
+                        <!-- /.settlementInfoInner --></div>
+                    <!-- /.settlementInfo --></div>
+                    <dl class="total">
+                        <dt>商品の小計：</dt>
+                        <dd>2,160円</dd>
+                        <dt>送料・手数料：</dt>
+                        <dd>315円</dd>
+                        <dt>注文合計：</dt>
+                        <dd class="price"><strong>2,475</strong>円</dd>
+                    <!-- /.total --></dl>
+                    <section>
+                        <h2 class="hd2">配送先情報</h2>
+                        <p class="loginRecommend">
+                            <span class="info">「<a href="#">ログイン</a>」をすると、ユーザー登録済の方は以下の入力を省略できる可能性があります。</span>
+                        <!-- /.loginRecommend --></p>
+                        <ul class="commonTableList1">
+                            <li>
+                                <p class="title1">
+                                    <span class="require1">氏名（かな）</span>
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="iconError1">入力してください</span>
+                                    <span class="editInput">
+                    <label class="editName"><span>姓</span><input type="text" class="name"></label><label class="editName"><span>名</span><input type="text" class="name"></label>
+                                    </span>
+                                    <span class="editInput">
+                    <label class="editName"><span>せい</span><input type="text" class="name"></label><label class="editName"><span>めい</span><input type="text" class="name"></label>
+                                <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                            <li>
+                                <p class="title1">
+                                    <span class="require1">郵便番号</span>
+                                    <span class="supplement1">※半角数字</span>
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="editInput">
+                    <input type="text" autocorrect="”off”" autocapitalize="”off”" class="inputNum">－<input type="text" class="inputNum">
+                    <a href="#">住所検索</a>
+              <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                            <li>
+                                <p class="title1">
+                                    <span class="require1">都道府県</span>
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="editInput">
+                    <select name="" id="">
+                      <option value="1">北海道</option>
+                      <option value="2">青森県</option>
+                      <option value="3">岩手県</option>
+                      <option value="4">宮城県</option>
+                      <option value="5">秋田県</option>
+                      <option value="6">山形県</option>
+                      <option value="7">福島県</option>
+                      <option value="8">茨城県</option>
+                      <option value="9">栃木県</option>
+                      <option value="10">群馬県</option>
+                      <option value="11">埼玉県</option>
+                      <option value="12">千葉県</option>
+                      <option value="13" selected="selected">東京都</option>
+                      <option value="14">神奈川県</option>
+                      <option value="15">新潟県</option>
+                      <option value="16">富山県</option>
+                      <option value="17">石川県</option>
+                      <option value="18">福井県</option>
+                      <option value="19">山梨県</option>
+                      <option value="20">長野県</option>
+                      <option value="21">岐阜県</option>
+                      <option value="22">静岡県</option>
+                      <option value="23">愛知県</option>
+                      <option value="24">三重県</option>
+                      <option value="25">滋賀県</option>
+                      <option value="26">京都府</option>
+                      <option value="27">大阪府</option>
+                      <option value="28">兵庫県</option>
+                      <option value="29">奈良県</option>
+                      <option value="30">和歌山県</option>
+                      <option value="31">鳥取県</option>
+                      <option value="32">島根県</option>
+                      <option value="33">岡山県</option>
+                      <option value="34">広島県</option>
+                      <option value="35">山口県</option>
+                      <option value="36">徳島県</option>
+                      <option value="37">香川県</option>
+                      <option value="38">愛媛県</option>
+                      <option value="39">高知県</option>
+                      <option value="40">福岡県</option>
+                      <option value="41">佐賀県</option>
+                      <option value="42">長崎県</option>
+                      <option value="43">熊本県</option>
+                      <option value="44">大分県</option>
+                      <option value="45">宮崎県</option>
+                      <option value="46">鹿児島県</option>
+                      <option value="47">沖縄県</option>
+                    </select>
+              <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                            <li>
+                                <p class="title1">
+                                    <span class="require1">市区町村</span>
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="editInput">
+                    <input type="text">
+              <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                            <li>
+                                <p class="title1">
+                                    <span class="require1">番地</span>
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="editInput">
+                    <span class="iconError1">入力してください</span>
+                                    <input type="text" name="address2" value="" class="errFocus">
+                                    <span class="supplement1">※番地、マンション名等の入れ忘れのないようお願いいたします。</span>
+                                <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                            <li>
+                                <p class="title1">
+                                    建物
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="editInput">
+                    <input type="text">
+              <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                            <li>
+                                <p class="title1">
+                                    <span class="require1">電話番号</span>
+                                <!-- /.title1 --></p>
+                                <p class="itemEdit">
+                                    <span class="editInput">
+                    <input type="tel" class="inputNum">－<input type="tel" class="inputNum">－<input type="tel" class="inputNum">
+              <!-- /.editInput --></span>
+                                <!-- /.itemEdit --></p>
+                            </li>
+                        <!-- /.commonTableList1 --></ul>
+                    </section>
+
+                    <section>
+                        <h2 class="hd2">請求先情報</h2>
+                        <p><input type="checkbox" class="customCheck" id="check12" checked="checked"><label for="check12">配送先情報と同じ</label></p>
+                    </section>
+
+                    <section>
+                        <h2 class="hd2">お支払い方法</h2>
+                        <ul class="acMenu jsAcMenuWrap">
+                            <li>
+                                <span class="cheackTitle"><input type="radio" id="radio01" class="customRadio jsAcMenu" name="radio"><label for="radio01">クレジットカード決済<span><img src="../../img/message/cardType.png" alt="" class="cradTypeImg"></span></label>
+                                </span>
+                                <div class="settlementMethod jsAcMenuTarget" style="display: none;">
+                                    <span class="iconError1">入力してください</span>
+                                    <p class="cradName">
+                                        <span>カード名義人（半角英字）</span><input name="cardName" type="text">
+                                    <!-- /.cradName --></p>
+                                    <p class="cradNumber">
+                                        <span>カード番号（半角数字）</span><input name="cardNumber" type="tel" class="errFocus">
+                                    <!-- /.cradNumber --></p>
+                                    <p class="cradTerm">
+                                        <span>有効期限</span>
+                                        <select name="cardExpirationMonth">
+                                            <option value="1" selected="selected">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <select name="cardExpirationYear">
+                                            <option value="2015" selected="selected">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                            <option value="2035">2035</option>
+                                        </select>
+                                    <!-- /.cradTerm --></p>
+                                    <p class="securityCode">
+                                        <span>セキュリティ・コード</span>
+                                        <input type="text" autocorrect="off" autocapitalize="off" class="inputNum">
+                                        <span><a href="#modal1" class="jsOpenModal">セキュリティ・コードについて</a></span>
+                                    <!-- /.securityCode --></p>
+                                <!-- /#js.method --></div>
+                            </li>
+                            <li>
+                                <span class="cheackTitle"><input type="radio" id="radio02" class="customRadio jsAcMenu" name="radio"><label for="radio02">コンビニ支払い</label></span>
+                                <div class="acMenuIneer jsAcMenuTarget" style="display: none;">
+                                    <p>お支払いの際に必要となるお支払い番号等はメールにてお送りいたします。</p>
+                                    <p><a href="#">コンビニでのお支払い方法</a></p>
+                                    <p class="selectConveni"><strong>お支払いをするコンビニを選んでください。</strong>
+                                        <select name="" id="">
+                                            <option value="1">ファミリーマート</option>
+                                            <option value="2">ローソン</option>
+                                            <option value="3">サンクス</option>
+                                            <option value="4">サークルK</option>
+                                            <option value="5">ミニストップ</option>
+                                            <option value="6">デイリーヤマザキ</option>
+                                            <option value="7">セブンイレブン</option>
+                                            <option value="8">セイコーマート</option>
+                                            <option value="9">スリーエフ</option>
+                                        </select>
+                                    <!-- /.selectConveni --></p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="cheackTitle"><input type="radio" id="radio03" class="customRadio jsAcMenu" name="radio"><label for="radio03">楽天ID決済</label></span>
+                                <div class="acMenuIneer jsAcMenuTarget" style="display: none;">
+                                    <p>楽天の内容が入る</p>
+                                </div>
+                            </li>
+                    </section>
+                    </ul>
+                    <div class="settlementBtnSet">
+                        <p class="btn3"><a href="#" class="large1">登録し次に進む</a></p>
+                        <p class="cancel"><a href="#">キャンセル</a></p>
+                    <!-- /.settlementBtnSet --></div>
+                    <p class="supplement1">※未ログインの方、会員登録がお済みで無い方は、次の画面でログイン・会員登録が必要になります。</p>
+                <!-- /.messageOrder --></div>
+                <p class="messageDate"><small>2014/06/25 10:57</small></p>
+            <!-- /.message --></section>
+        <!-- /.messageWrap --></section>
+
+        <p class="pageTop"><a href="#top"><span>ページTOPへ</span></a></p>
+    </article>
+
+    <footer>
+        <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by BRANDCo on MONIPLA</small></p>
+        <ul class="links">
+            <li><a href="#">ログアウト</a></li>
+            <li><a href="#">BRANDCo開設規約</a></li>
+            <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+            <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+            <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+        <!-- /.links --></ul>
+    </footer>
+
+    <div class="modal1 jsModal" id="modal1">
+        <section class="modalCont-medium jsModalCont">
+            <div class="modalsettlement">
+                <h1>セキュリティ・コードについて</h1>
+                <p>カード裏面、サイン欄右端の数字</p>
+                <p>
+                    <img src="../../img/message/imgSecurityCode.png" alt="img title">
+                </p>
+                <p>※カードによっては表面に記載がある場合もあります。</p>
+            <!-- /.modalImgPreview --></div>
+            <p>
+                <a href="#closeModal" class="modalCloseBtn">キャンセル</a>
+            </p>
+        <!-- /.modalCont-small.jsModalCont --></section>
+    <!-- /#modal1.modal1.jsModal --></div>
+
+    <script>
+$(function(){
+  $('.jsAcMenu').on('change',function(){
+    var target = $(this).parents('li').find('.jsAcMenuTarget');
+    $('.jsAcMenuTarget').not(target).slideUp(200);
+    target.slideDown(200);
+  });
+});
+</script>
+
+</body>
+
+</html>

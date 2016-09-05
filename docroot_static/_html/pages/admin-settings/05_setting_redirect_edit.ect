@@ -1,0 +1,45 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'sidenav' : %>sidenav06<% end %>
+
+<% block 'columnContents' : %>
+      <h1 class="hd1">リダイレクトリンク編集</h1>
+
+      <section class="adminRedirectWrap">
+        <dl class="adminRedirectSetting">
+          <dt><label for="input1" class="require1">リダイレクトリンク</label></dt>
+          <dd>http://monipla.com/brand/r/<input type="text" value="hoge" id="input1" class="urlParts"></dd>
+          <dt><label for="input2" class="require1">実URL</label></dt>
+          <dd><input type="text" value="http://yahoo.co.jp" id="input2"></dd>
+          <dt><label for="input3">説明
+                <span class="iconHelp">
+                  <span class="text">ヘルプ</span>
+                  <span class="textBalloon1">
+                    <span>
+                       管理用のメモのため、一般公開されません
+                    </span>
+                  <!-- /.textBalloon1 --></span>
+                  <!-- /.iconHelp --></span>
+          </label>
+          </dt>
+          <dd><textarea name="" id="input3">ヤフー</textarea></dd>
+        <!-- /.adminCvtagSetting --></dl>
+        <p class="btnSet"><span class="btn3"><a href="#">作成</a></span></p>
+        <p class="deleteContents"><a href="#modal1" class="linkDelete jsOpenModal">削除する</a></p>
+      <!-- /.adminRedirectWrap --></section>
+
+    <!-- /.adminMainCol --></article>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+      <section class="modalCont-small jsModalCont">
+          <h1>確認</h1>
+          <p class="iconError1">このリンクを削除しますか？</p>
+          <p class="btnSet">
+            <span class="btn2"><a href="#closeModal" class="small1">キャンセル</a></span>
+            <span class="btn4"><a href="#closeModal" class="small1">削除</a></span>
+          </p>
+      <!-- /.modalCont-small --></section>
+  <!-- /.modal1 --></div>
+<% end %>

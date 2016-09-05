@@ -1,0 +1,439 @@
+<% extend 'partial/layout/page.plain' %>
+
+<% block 'head' : %>
+    <!-- 挙動テスト用の記述なので組込みには不要 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <style>
+        html,
+        body {
+            min-width: 280px;
+            width: 100%;
+            min-height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        jQuery(function(){
+            $(document).on('click', 'a.btnLike1', function(event) {
+                $(this).find('[class*="inner"]').toggleClass('innerOff innerOn')
+                return false;
+            });
+        });
+    </script>
+    <!-- テスト用記述ここまで -->
+<% end %>
+
+<% block 'mainContents' : %>
+    <div id="moniplaCommentPlugin">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $moniJq = jQuery.noConflict(true);
+
+            function appendReplyArea(event) {
+                var target = $moniJq(event.target);
+                var parent = target.parents('.commentPostWrap');
+                var mention = '<div class="postTextEdit empty" contenteditable="true" data-placeholder="コメントを追加"><div><br></div></div>';
+                if(target.data('mention')) {
+                    mention = '<div class="postTextEdit" contenteditable="true" data-placeholder="コメントを追加"><div><span class="mention" contenteditable="false">'+target.data('mention')+'</span><br></div></div>';
+                }
+
+                if(parent.find('.commentForm').length) {
+                    parent.find('.commentForm .postText').html(mention);
+                } else {
+                    var newReplyForm = document.createElement('form');
+                    newReplyForm.className = 'commentForm';
+                    newReplyForm.innerHTML = '<div class="commentPost"><div class="userData"><p class="userImage"><img src="../../img/dummy/01.png" alt="ユーザー名が入るユーザー名が入る"></p><!-- /.userData --></div><div class="postBody"><p class="postUserName"><input type="text" placeholder="ハンドルネーム"></p><p class="postTitle"><input type="text" placeholder="メッセージの見出し"></p><div class="postText"></div><!-- /.postText --></div><div class="userActionWrap"><div class="shareSns"><p>共有</p><ul class="selectSns"><li><label><input type="checkbox"><span class="iconFb1">Facebook</span></label></li><li><label><input type="checkbox"><span class="iconTw1">Twitter</span></label></li><!-- /.selectSns --></ul><!-- /.shareSns --></div><p class="postSubmit"><span class="btnSubmit1"><a href="#">投稿する</a></span></p><!-- /.userActionWrap --></div><!-- /.postBody --></div><!-- /.commentPost --></div>';
+                    var appendTarget;
+
+                    $moniJq(newReplyForm).find('.postText').html(mention);
+
+                    if(!parent.find('.commentReplyWrap').length) {
+                        var replyWrap = document.createElement('div');
+                        replyWrap.className = 'commentReplyWrap';
+                        parent.append(replyWrap);
+                    }
+
+                    appendTarget = parent.find('.commentReplyWrap');
+                    appendTarget.append(newReplyForm);
+                }
+                return false;
+            }
+            $moniJq(document).on('change keydown keypress input', '.postTextEdit', function(event){
+                var target = event.currentTarget;
+                if(target.innerText.length <= 1) {
+                    target.className = 'postTextEdit empty';
+                } else {
+                    target.className = 'postTextEdit';
+                }
+            });
+
+            function hidePost(event) {
+                var target = $moniJq(event.target);
+                var parentPost = $moniJq(target.parents('.jsPostWrap')[0]);
+
+                var hideText = document.createElement('div');
+                hideText.className = 'commentNotdisplay';
+                hideText.innerHTML = '<p class="innerText">この投稿は非表示になりました。<a href="javascript:void(0);" onclick="showPost(event);">元に戻す</a></p><!-- /.commentNotdisplay -->';
+                hideText.style.opacity = 0;
+
+                parentPost.fadeOut(300, function() {
+                    parentPost.before(hideText);
+                    $moniJq(hideText).animate({
+                        opacity: 1
+                    }, 300);
+                });
+                uncheckedCheck();
+
+                return false;
+            }
+            function showPost(event) {
+                var target = $moniJq(event.target);
+                var hideText = target.parents('.commentNotdisplay');
+
+                hideText.fadeOut(300, function(e) {
+                    hideText.next('.jsPostWrap').fadeIn(300, function(e) {
+                        hideText.remove();
+                    })
+                });
+                uncheckedCheck();
+                return false;
+            }
+            function editPost(event) {
+                var target = $moniJq(event.target);
+                var postBody = target.parents('.postBody');
+                var postTextEdit = postBody.find('.postTextEdit');
+                postTextEdit.attr('contenteditable', true)
+                            .attr('data-originText', postTextEdit.html());
+
+                postBody.find('.userActionWrap').children().hide();
+                postBody.find('.userActionWrap').append('<p class="postSubmit"><span class="btnSubmit1"><a href="#">保存する</a></span><span class="cancelSubmit"><a href="javascript:void(0);" onclick="cancelEditPost(event);">キャンセル</a></span></p>');
+
+                uncheckedCheck();
+                return false;
+            }
+            function cancelEditPost(event) {
+                var target = $moniJq(event.target);
+                var postBody = target.parents('.postBody');
+                var postTextEdit = postBody.find('.postTextEdit');
+                postTextEdit.html(postTextEdit.attr('data-originText'))
+                            .attr('data-originText', '')
+                            .attr('contenteditable', false)
+                            .removeClass('empty');
+
+                postBody.find('.postSubmit').remove();
+                postBody.find('.userActionWrap').children().show();
+
+                uncheckedCheck();
+                return false;
+            }
+
+            function deletePost(event) {
+                uncheckedCheck();
+                var deletePopup = confirm('このコメントを削除してもいいですか？');
+                if (deletePopup) {
+                    // 削除する
+                } else {
+                    // キャンセル
+                }
+            }
+
+            function uncheckedCheck() {
+                var checkboxs = document.getElementsByName('moniplaCheckToggle');
+                for(var i = 0; i<checkboxs.length; i++) {
+                    checkboxs[i].checked = false;
+                }
+            }
+        </script>
+
+        <link rel="stylesheet" href="../../css/moniplaComment.css">
+        <div class="pluginHeader">
+            <p class="needLogin">コメントにはログインが必要です</p>
+            <div class="accountStatus">
+                <p class="accountAuth"><a href="javascript:void(0)" onclick="window.open('../auth/05_popup_signup.html', '', 'width=600,height=620','resizable or resizable=yes or resizable=1'); return false;">ログイン</a></p>
+            <!-- /.accountStatus --></div>
+        <!-- /.pluginHeader --></div>
+        <div class="threadTitleWrap">
+            <p class="threadTitle"><strong>好きな歌手を教えて下さい！</strong></p>
+            <p class="threadComment"><strong class="inner">999コメント</strong></p>
+        <!-- /.threadTitleWrap --></div>
+
+        <div class="commentPostWrap">
+            <from class="commentForm">
+                <div class="commentPost">
+                    <div class="userData">
+                        <p class="userImage"><img src="../../img/comment/imgUser1.jpg" alt="ユーザー名が入るユーザー名が入る"></p>
+                    <!-- /.userData --></div>
+                    <div class="postBody">
+                        <p class="postUserName"><input type="text" placeholder="ハンドルネーム"></p>
+                        <p class="postTitle"><input type="text" placeholder="メッセージの見出し"></p>
+                        <p class="postRating"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_0.png"><img src="../../img/raty/iconStar_0.png"></p>
+                        <div class="postText">
+                            <div class="postTextEdit empty" contenteditable="true" data-placeholder="コメントを追加">
+                                <div><br></div>
+                            </div>
+                        <!-- /.postText --></div>
+                        <div class="userActionWrap">
+                            <p class="postSubmit"><span class="btnSubmit1"><a href="#">投稿する</a></span></p>
+                        <!-- /.userActionWrap --></div>
+                    <!-- /.postBody --></div>
+                <!-- /.commentPost --></div>
+            <!-- /.commentForm --></from>
+        <!-- /.commentPostWrap --></div>
+
+        <div class="commentPostWrap">
+            <div class="jsPostWrap">
+                <div class="commentPost">
+                    <div class="userData">
+                        <p class="userImage"><img src="../../img/dummy/01.png" alt="長いユーザー名が入る長いユーザー名が入る長いユーザー名が入る"></p>
+                    <!-- /.userData --></div>
+                    <div class="postBody">
+                        <div class="postOptions">
+                            <label class="checkToggle" for="postOption01"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption01" name="moniplaCheckToggle">
+                            <ul class="optionActions">
+                                <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                <li><a href="#">違反報告する</a></li>
+                            <!-- /.optionActions --></ul>
+                        <!-- /.postOptions --></div>
+                        <p class="postUserName">長いユーザー名が入る長いユーザー名が入る長いユーザー名が入る</p>
+                        <p class="postTitle"><strong>投稿の見出しが入るよ</strong></p>
+                        <p class="postRating"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_0.png"><img src="../../img/raty/iconStar_0.png"></p>
+                        <p class="postImages">
+                            <span class="thumb"><img src="../../img/dummy/cp1.png"></span>
+                            <span class="thumb"><img src="../../img/dummy/05.jpg"></span>
+                            <span class="thumb"><img src="../../img/dummy/CPmain.jpg"></span>
+                        <!-- /.postImages --></p>
+                        <div class="postText">
+                            <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                <div>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</div>
+                            <!-- /.postTextEdit --></div>
+                        <!-- /.postText --></div>
+
+                        <div class="userActionWrap">
+                            <p class="likePost">
+                                <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                            <!-- /.likePost --></p>
+                            <p class="reply"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);">返信</a></p>
+                            <p class="postDate"><small>2016/05/12 15:36</small></p>
+                        <!-- /.userActionWrap --></div>
+                    <!-- /.postBody --></div>
+                <!-- /.commentPost --></div>
+                <div class="commentReplyWrap">
+                    <div class="showOtherComment">
+                        <p class="innerText"><a href="#">他9件の返信を見る</a></p>
+                    <!-- /.showOtherComment --></div>
+                    <div class="commentPost">
+                        <div class="jsPostWrap">
+                            <div class="userData">
+                                <p class="userImage"><img src="../../img/dummy/01.png" alt="佐藤 哲裕"></p>
+                            <!-- /.userData --></div>
+                            <div class="postBody">
+                                <div class="postOptions">
+                                    <label class="checkToggle" for="postOption02"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption02" name="moniplaCheckToggle">
+                                    <ul class="optionActions">
+                                        <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                        <li><a href="#">違反報告する</a></li>
+                                    <!-- /.optionActions --></ul>
+                                <!-- /.postOptions --></div>
+                                <p class="postUserName">佐藤 哲裕</p>
+                                <div class="postText">
+                                    <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                        <div>返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト</div>
+                                    <!-- /.postTextEdit --></div>
+                                <!-- /.postText --></div>
+
+                                <div class="userActionWrap">
+                                    <p class="likePost">
+                                        <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                                    <!-- /.likePost --></p>
+                                    <p class="reply hoge"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);" data-mention="佐藤 哲裕">返信</a></p>
+                                    <p class="postDate"><small>2016/05/12 15:36</small></p>
+                                <!-- /.userActionWrap --></div>
+                            <!-- /.postBody --></div>
+                        <!-- /.jsPostWrap --></div>
+                    <!-- /.commentPost --></div>
+                <!-- /.commentReplyWrap --></div>
+            <!-- /.jsPostWrap --></div>
+        <!-- /.commentPostWrap --></div>
+
+        <div class="commentPostWrap">
+            <div class="jsPostWrap">
+                <div class="commentPost">
+                    <div class="userData">
+                        <p class="userImage"><img src="../../img/dummy/01.png" alt="東山 侑真"></p>
+                    <!-- /.userData --></div>
+                    <div class="postBody">
+                        <div class="postOptions">
+                            <label class="checkToggle" for="postOption03"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption03" name="moniplaCheckToggle">
+                            <ul class="optionActions">
+                                <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                <li><a href="#">違反報告する</a></li>
+                            <!-- /.optionActions --></ul>
+                        <!-- /.postOptions --></div>
+                        <p class="postUserName">東山 侑真</p>
+                        <p class="postTitle"><strong>投稿の見出しが入るよ</strong></p>
+                        <p class="postRating"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_0.png"><img src="../../img/raty/iconStar_0.png"></p>
+                        <div class="postText">
+                            <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                <div>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</div>
+                            <!-- /.postTextEdit --></div>
+                        <!-- /.postText --></div>
+
+                        <div class="userActionWrap">
+                            <p class="likePost">
+                                <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                            <!-- /.likePost --></p>
+                            <p class="reply"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);">返信</a></p>
+                            <p class="postDate"><small>2016/05/12 15:36</small></p>
+                        <!-- /.userActionWrap --></div>
+                    <!-- /.postBody --></div>
+                <!-- /.commentPost --></div>
+            <!-- /.jsPostWrap --></div>
+        <!-- /.commentPostWrap --></div>
+
+        <div class="commentPostWrap">
+            <div class="commentNotdisplay">
+                <p class="innerText">この投稿は非表示になりました。<a href="javascript:void(0);" onclick="showPost(event);">元に戻す</a></p>
+            <!-- /.commentNotdisplay --></div>
+            <div class="jsPostWrap">
+                <div class="commentPost">
+                    <div class="userData">
+                        <p class="userImage"><img src="../../img/dummy/01.png" alt="Noritaka Himei"></p>
+                    <!-- /.userData --></div>
+                    <div class="postBody">
+                        <div class="postOptions">
+                            <label class="checkToggle" for="postOption07"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption07" name="moniplaCheckToggle">
+                            <ul class="optionActions">
+                                <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                <li><a href="#">違反報告する</a></li>
+                            <!-- /.optionActions --></ul>
+                        <!-- /.postOptions --></div>
+                        <p class="postUserName">Noritaka Himei</p>
+                        <p class="postTitle"><strong>投稿の見出しが入るよ</strong></p>
+                        <p class="postRating"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_0.png"><img src="../../img/raty/iconStar_0.png"></p>
+                        <div class="postText">
+                            <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                <div>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</div>
+                            <!-- /.postTextEdit --></div>
+                        <!-- /.postText --></div>
+
+                        <div class="userActionWrap">
+                            <p class="likePost">
+                                <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                            <!-- /.likePost --></p>
+                            <p class="reply"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);">返信</a></p>
+                            <p class="postDate"><small>2016/05/12 15:36</small></p>
+                        <!-- /.userActionWrap --></div>
+                    <!-- /.postBody --></div>
+                <!-- /.commentPost --></div>
+            <!-- /.jsPostWrap --></div>
+        <!-- /.commentPostWrap --></div>
+
+        <div class="commentPostWrap">
+            <div class="jsPostWrap">
+                <div class="commentPost">
+                    <div class="userData">
+                        <p class="userImage"><img src="../../img/dummy/01.png" alt="刈谷 由紀"></p>
+                    <!-- /.userData --></div>
+                    <div class="postBody">
+                        <div class="postOptions">
+                            <label class="checkToggle" for="postOption04"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption04" name="moniplaCheckToggle">
+                            <ul class="optionActions">
+                                <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                <li><a href="#">違反報告する</a></li>
+                            <!-- /.optionActions --></ul>
+                        <!-- /.postOptions --></div>
+                        <p class="postUserName">刈谷 由紀</p>
+                        <p class="postTitle"><strong>投稿の見出しが入るよ</strong></p>
+                        <p class="postRating"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_5.png"><img src="../../img/raty/iconStar_0.png"><img src="../../img/raty/iconStar_0.png"></p>
+                        <div class="postText">
+                            <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                <div>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</div>
+                            <!-- /.postTextEdit --></div>
+                        <!-- /.postText --></div>
+
+                        <div class="userActionWrap">
+                            <p class="likePost">
+                                <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                            <!-- /.likePost --></p>
+                            <p class="reply"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);">返信</a></p>
+                            <p class="postDate"><small>2016/05/12 15:36</small></p>
+                        <!-- /.userActionWrap --></div>
+                    <!-- /.postBody --></div>
+                <!-- /.commentPost --></div>
+
+                <div class="commentReplyWrap">
+                    <div class="commentPost">
+                        <div class="commentNotdisplay">
+                            <p class="innerText">この投稿は非表示になりました。<a href="javascript:void(0);" onclick="showPost(event);">元に戻す</a></p>
+                        <!-- /.commentNotdisplay --></div>
+                        <div class="jsPostWrap">
+                            <div class="userData">
+                                <p class="userImage"><img src="../../img/dummy/01.png" alt="相原 幸司"></p>
+                            <!-- /.userData --></div>
+                            <div class="postBody">
+                                <div class="postOptions">
+                                    <label class="checkToggle" for="postOption05"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption05" name="moniplaCheckToggle">
+                                    <ul class="optionActions">
+                                        <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                        <li><a href="#">違反報告する</a></li>
+                                    <!-- /.optionActions --></ul>
+                                <!-- /.postOptions --></div>
+                                <p class="postUserName">相原 幸司</p>
+                                <div class="postText">
+                                    <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                        <div>返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト</div>
+                                    <!-- /.postTextEdit --></div>
+                                <!-- /.postText --></div>
+
+                                <div class="userActionWrap">
+                                    <p class="likePost">
+                                        <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                                    <!-- /.likePost --></p>
+                                    <p class="reply"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);" data-mention="相原 幸司">返信</a></p>
+                                    <p class="postDate"><small>2016/05/12 15:36</small></p>
+                                <!-- /.userActionWrap --></div>
+                            <!-- /.postBody --></div>
+                        <!-- /.jsPostWrap --></div>
+                    <!-- /.commentPost --></div>
+
+                    <div class="commentPost">
+                        <div class="jsPostWrap">
+                            <div class="userData">
+                                <p class="userImage"><img src="../../img/dummy/01.png" alt="ユーザー名が入るユーザー名が入る"></p>
+                            <!-- /.userData --></div>
+                            <div class="postBody">
+                                <div class="postOptions">
+                                    <label class="checkToggle" for="postOption06"><span class="btnToggle">記事オプション</span></label><input type="checkbox" id="postOption06" name="moniplaCheckToggle">
+                                    <ul class="optionActions">
+                                        <li><a href="javascript:void(0);" onclick="hidePost(event);">非表示にする</a></li>
+                                        <li><a href="#">違反報告する</a></li>
+                                    <!-- /.optionActions --></ul>
+                                <!-- /.postOptions --></div>
+                                <p class="postUserName">ユーザー名が入るユーザー名が入る</p>
+                                <div class="postText">
+                                    <div class="postTextEdit" contenteditable="false" data-placeholder="コメントを追加">
+                                        <div><span class="mention" contenteditable="false">相原 幸司</span>返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト返信テキスト</div>
+                                    <!-- /.postTextEdit --></div>
+                                <!-- /.postText --></div>
+
+                                <div class="userActionWrap">
+                                    <p class="likePost">
+                                        <span class="btnLike1"><span class="innerOff">いいね</span>・96</span>
+                                    <!-- /.likePost --></p>
+                                    <p class="reply hoge"><a href="javascript:void(0);" class="iconReply" onclick="appendReplyArea(event);" data-mention="ユーザー名が入るユーザー名が入る">返信</a></p>
+                                    <p class="postDate"><small>2016/05/12 15:36</small></p>
+                                <!-- /.userActionWrap --></div>
+                            <!-- /.postBody --></div>
+                        <!-- /.jsPostWrap --></div>
+                    <!-- /.commentPost --></div>
+                <!-- /.commentReplyWrap --></div>
+            <!-- /.jsPostWrap --></div>
+        <!-- /.commentPostWrap --></div>
+
+        <p class="commentReadMore"><span class="btnReadmore1"><a href="#">もっと読む</a></span></p>
+
+        <p class="commentCopyright"><small class="copy">powered by <img src="../../img/comment/imgLogoMonipla_lg.png" alt="monipla"></small></p>
+    <!-- /#moniplaCommentPlugin --></div>
+<% end %>

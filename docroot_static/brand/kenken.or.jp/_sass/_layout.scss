@@ -1,0 +1,780 @@
+@charset "utf-8";
+/* ### layout.scss ### */
+//======================================================================================================================
+
+body {
+   font-family: "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ",Meiryo;
+   min-width: 980px;
+   background: #fff !important;
+}
+
+header .account ul li.accountLogo {
+  display: none;
+}
+nav.sideNavi > ul.sideNaviInner:last-child {
+  display: none;
+}
+
+#kenkenHeader {
+  margin: 0 0 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+  background: url(../img/base/bgHeader.gif) 0 0 repeat-x;
+
+  #kenkenHeaderInner {
+    width: 960px;
+    margin: 0 auto;
+  }
+  h1 {
+    a {
+      display: inline-block;
+      color: #fff;
+      line-height: 46px;
+      font-size: 17px;
+      position: relative;
+      padding-left: 168px;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 150px;
+        height: 116px;
+        background: url(../img/base/pc/logo.gif);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      br {
+        display: none;
+      }
+    }
+    img {
+      display: none;
+    }
+  }
+  button {
+    display: none;
+  }
+  ul {
+    padding-left: 150px;
+    letter-spacing: -.40em;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+
+    li {
+      display: inline-block;
+      letter-spacing: normal;
+    }
+    a {
+      display: block;
+      position: relative;
+      line-height: 70px;
+      color: #202020;
+      font-size: 17px;
+      padding: 0 45px;
+
+      &:hover {
+        color: #ea5413;
+        text-decoration: none;
+        &:before {
+          content: "";
+          display: block;
+          height: 4px;
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: #ea5413;
+        }
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        bottom: 20px;
+        background: #D8D4D0;
+      }
+    }
+  }
+}
+
+.pageTop {
+  display: none !important;
+}
+
+.bredlink1 {
+  display: none;
+}
+
+#kenkenFooter {
+  width: 100%;
+  box-sizing: border-box;
+  background: #EA5413;
+  padding: 35px 0;
+  color: #fff;
+  border: 0;
+
+  a {
+    color: #fff;
+  }
+  .kenkenFooterInner {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #EE7642;
+    position: relative;
+  }
+  .links a:before {
+    border-left: 5px solid #fff;
+  }
+  .kenkenPagetop {
+    position: absolute;
+    top: -60px;
+    right: 0;
+
+    a {
+      display: block;
+      width: 157px;
+      height: 41px;
+      background: url(../img/base/pc/btnPagetop.gif);
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+  }
+}
+
+.mainCol .lpWrap .ckeditorWrap .kenkenWrap {
+  float: right;
+  width: 630px;
+}
+
+.mainCol .ckeditorWrap {
+  font-size: 16px;
+  line-height: 1.6;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    margin: 0 0 20px;
+  }
+
+  .kenkenSideCont {
+    float: left;
+    width: 300px;
+    .kenkenSideNav {
+
+      li {
+        margin: 0 0 5px;
+        padding: 0;
+        text-indent: 0;
+
+        &:before {
+          display: none;
+        }
+        a {
+          border: 1px solid #E1E0DF;
+          border-radius: 3px;
+          position: relative;
+          display: block;
+          padding: 20px;
+          color: #202020;
+          font-size: 16px;
+
+
+          &:after {
+            content: "";
+            display: block;
+            width: 3px;
+            background: #EA4400 url(../img/base/pc/bgSideNav.gif) 0 0 no-repeat;
+            position: absolute;
+            top: 4px;
+            left: 3px;
+            bottom: 4px;
+          }
+          &:hover {
+            border: 1px solid #EA5413;
+            color: #fff;
+            background: -moz-linear-gradient(top,  #ee723c 0%, #ea5413 100%);
+            background: -webkit-linear-gradient(top,  #ee723c 0%,#ea5413 100%);
+            background: linear-gradient(to bottom,  #ee723c 0%,#ea5413 100%);
+            text-decoration: none;
+            box-shadow: 0 1px 0 rgba(255,255,255,.2) inset;
+            &:after {
+              background: #FFA770 url(../img/base/pc/bgSideNavHover.gif) 0 0 no-repeat;
+            }
+          }
+        }
+      }
+    }
+    .kenkenSideBnr {
+
+      li {
+        margin: 0 0 5px;
+      }
+    }
+  }
+
+  .kenkenComingSoon {
+    height: 254px;
+    background: url(../img/base/pc/imgComingSoon.gif);
+
+    img {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 0 0 1.5em;
+  }
+  ul {
+    margin: 0 0 40px;
+
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+      list-style: none;
+
+      &:before {
+        content:"・";
+      }
+    }
+  }
+  ol {
+    margin: 0 0 40px;
+    counter-reset:kenkenCommonNumberList;
+
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+      list-style: none;
+
+      &:before {
+        counter-increment:kenkenCommonNumberList;
+        content:counter(kenkenCommonNumberList) ".";
+      }
+    }
+  }
+  .kenkenHeadline1 {
+    background: #EA5413;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    padding: 10px 15px;
+    color: #fff;
+    margin: 0 0 15px;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 3px;
+      position: absolute;
+      left: 3px;
+      top: 0;
+      bottom: 0;
+      background: #FFA670 url(../img/base/pc/bgHeadline2.gif) 0 0 no-repeat;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 3px;
+      position: absolute;
+      right: 3px;
+      top: 0;
+      bottom: 0;
+      background: #FFA670 url(../img/base/pc/bgHeadline2.gif) 0 0 no-repeat;
+    }
+  }
+  .kenkenHeadline2 {
+    background: url(../img/base/pc/bgHeadline3.gif) 0 50% repeat-x;
+    color: #ea5413;
+    font-size: 28px;
+    text-align: center;
+    margin: 0 0 15px;
+
+    span {
+      display: inline-block;
+      padding: 0 15px;
+      background: #fff;
+    }
+  }
+  .kenkenHeadline3 {
+    color: #202020;
+    font-size: 21px;
+    padding: 5px 0 5px 10px;
+    position: relative;
+    margin: 0 0 15px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #EB4A03 url(../img/base/pc/bgHeadline4.gif) 0 0 repeat-x;
+    }
+  }
+  /* column headline */
+  .kenkenColumnHeadline1 {
+    color: #ea5413;
+    font-size: 28px;
+    margin: 0 0 15px;
+    line-height: 1.2;
+  }
+  .kenkenColumnHeadline2 {
+    color: #202020;
+    font-size: 22px;
+    padding: 3px 0;
+    margin: 0 0 15px;
+    border-bottom: #EB4A03 3px solid;
+    span {
+      display: inline-block;
+      background: #fff;
+    }
+  }
+  .kenkenColumnHeadline3 {
+    color: #202020;
+    font-size: 18px;
+    padding: 5px 0 5px 10px;
+    position: relative;
+    margin: 0 0 15px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #EB4A03 url(../img/base/pc/bgHeadline4.gif) 0 0 repeat-x;
+    }
+  }
+
+  table.kenkenTable1 {
+    font-size: 14px;
+    margin: 0 0 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+
+    tr {
+      display: block;
+      padding: 5px 0;
+      border-bottom: 1px dotted #B3B0AD;
+  
+      &:first-child {
+        border-top: 1px dotted #B3B0AD;
+      }
+    }
+    th {
+      background: #F2F1F0;
+      padding: 10px;
+      width: 100px;
+      word-break: keep-all;
+    }
+    td {
+      padding: 10px;
+    }
+  }
+  table.kenkenTable2 {
+    font-size: 14px;
+    margin: 0 0 15px;
+  
+    th {
+      padding: 10px 20px 10px 0;
+      border-bottom: 1px dotted #B3B0AD;
+      word-break: keep-all;
+      vertical-align: top;
+    }
+    td {
+      padding: 10px 0;
+      border-bottom: 1px dotted #B3B0AD;
+      vertical-align: top;
+    }
+  }
+  table.kenkenTable3 {
+    font-size: 14px;
+    margin: 0 0 15px;
+    border-top: 1px solid #B3B0AD;
+    border-left: 1px solid #B3B0AD;
+    width: 100%;
+
+    th {
+      background: #F2F1F0;
+      padding: 10px;
+      word-break: keep-all;
+      border-right: 1px solid #B3B0AD;
+      border-bottom: 1px solid #B3B0AD;
+    }
+    td {
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #B3B0AD;
+      border-right: 1px solid #B3B0AD;
+    }
+  }
+
+  .kenkenLinks {
+    background: #FAF9F7;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 0 10px;
+
+    li {
+      text-indent: 0;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+      a {
+        display: block;
+        padding: 5px;
+        color: #202020;
+        font-size: 16px;
+        position: relative;
+        background: url(../img/base/pc/arrowPageLink.gif) 0 50% no-repeat;
+        padding-left: 15px;
+
+        &:hover {
+          color: #e84600;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  table.kenkenTable2 th {
+    white-space: nowrap;
+  }
+
+  .kenkenCourseTable {
+    border-collapse: separate;
+    font-size: 14px;
+    margin: 0 0 20px;
+
+    thead {
+      tr {
+        padding: 0;
+        &:after {
+          display: none;
+        }
+      }
+      th {
+        background: #ccc;
+        padding: 10px;
+        border-left: 3px solid #fff;
+        &:first-child {
+          width: 145px;
+          border-left: 0;
+        }
+        &:nth-child(2) {
+          width: 235px;
+        }
+        &:nth-child(3) {
+          width: 235px;
+        }
+      }
+    }
+
+    tr {
+      display: block;
+      width: 100%;
+      padding: 20px 0;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px dotted #B3B0AD;
+      }
+
+      td {
+        border-left: 3px solid #fff;
+        padding: 10px;
+
+        &:first-child {
+          width: 143px;
+          box-shadow: 0 0 0 1px #F19167 inset;
+          font-size: 15px;
+          font-weight: bold;
+          color: #ea5616;
+        }
+        &:nth-child(2) {
+          width: 235px;
+        }
+        &:nth-child(3) {
+          width: 235px;
+        }
+        &.kenkenCourseTable2ColCellTtl {
+          width: 132px;
+        }
+        &.kenkenCourseTable2ColCellData {
+          width: 470px;
+        }
+      }
+    }
+    .kenkenCourseTableLabel {
+      display: none;
+    }
+  }
+  .kenkenLinkCont {
+    background: #F7F6F5;
+    padding: 20px;
+    margin: 0 0 20px;
+    text-align: center;
+    border: 1px solid #D4D2CF;
+    box-shadow: 0 0 0 2px #fff inset;
+    border-radius: 5px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  p.kenkenBtn1 {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding: 10px 40px 10px 30px;
+      border-radius: 5px;
+      background: #EB5B1C;
+      color: #fff;
+      box-shadow: 0 2px 0 0 #DF4B0A;
+      font-size: 20px;
+      position: relative;
+
+      &:after {
+        content: "";
+        background: url(../img/base/pc/arrowRight.gif);
+        width: 7px;
+        height: 11px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -5px;
+      }
+      &:hover {
+        text-decoration: none;
+        opacity: .75;
+      }
+    }
+  }
+
+  .kenkenNewsList {
+    margin: 0 0 20px;
+    position: relative;
+
+    li {
+      border-bottom: 1px dotted #B3B0AD;
+      padding: 15px 0 15px 150px;
+      position: relative;
+      text-indent: 0;
+
+      &:before {
+        display: none;
+      }
+      p {
+        margin: 0;
+        &.kenkenNewsListDate {
+          position: absolute;
+          left: 0;
+          top: 15px;
+        }
+      }
+    }
+  }
+  .kenkenBtnMoreNewsList {
+    text-align: right;
+    margin: 0 0 40px;
+
+    a {
+      display: inline-block;
+      background: #F7F6F5;
+      padding: 10px 20px 10px;
+      color: #202020;
+      box-shadow: 0 2px 0 0 #EFEDEB;
+      border-radius: 25px;
+      &:after {
+        content: "";
+        margin: 0 0 4px 5px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 13px;
+        height: 13px;
+        background: url(../img/base/pc/iconPlus.gif);
+      }
+      &:hover {
+        text-decoration: none;
+        opacity: .75;
+      }
+    }
+  }
+  .kenkenMailMagazineLink {
+    background: #F7F6F5;
+    padding: 20px;
+    margin: 0 0 20px;
+    text-align: left;
+    border: 1px solid #D4D2CF;
+    box-shadow: 0 0 0 2px #fff inset;
+    border-radius: 5px;
+    position: relative;
+    p {
+      margin-bottom: 10px;
+      &.kenkenLinkContTtl {
+        font-size: 21px;
+        color: #ea5413;
+        margin: 0 0 0 -18px;
+        line-height: 52px;
+        
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 74px;
+          height: 49px;
+          background: url(../img/base/pc/iconMailMagazine.gif);
+          margin: 0 5px 0 0;
+          vertical-align: top;
+        }
+      }
+      &.kenkenLinkContLead {
+        padding-left: 10px;
+      }
+      &.kenkenBtn1 {
+        position: absolute;
+        right: 38px;
+        top: 50%;
+        margin-top: -26px;
+      }
+    }
+  }
+  .kenkenIndentList {
+    margin: 0;
+
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+      list-style: none;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  /* column page */
+  .kenkenLayoutModule1 {
+    clear: both;
+    margin: 0 0 40px;
+
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .kenkenLayoutModuleLeft {
+      float: left;
+      margin: 0 10px 10px;
+      text-align: center;
+    }
+    .kenkenLayoutModuleRight {
+      float: right;
+      margin: 0 0 10px 10px;
+      text-align: center;
+    }
+    .kenkenLayoutModuleCenter {
+      text-align: center;
+      margin: 0 0 10px;
+    }
+  }
+
+  .kenkenCommonTable1 {
+    margin: 0 0 40px;
+
+    th,td {
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+    }
+    th {
+      white-space: nowrap;
+      font-weight: bold;
+    }
+  }
+  .kenkenCommonTable2 {
+    margin: 0 0 40px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+
+    th,td {
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+    }
+    th {
+      white-space: nowrap;
+      font-weight: bold;
+      background: #eee;
+    }
+  }
+
+  .kenkenCommonTriangleList {
+    margin: 0 0 40px;
+
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+      list-style: none;
+
+      &:before {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 3px 0 3px 6px;
+          border-color: transparent transparent transparent #ea5413;
+          vertical-align: middle;
+          position: relative;
+          margin: -3px 5px 0 0 ;
+      }
+    }
+  }
+  .kenkenCommonTagList {
+    margin: 0 0 40px;
+
+    li {
+      display: inline-block;
+      margin: 0 5px 5px 0;
+      padding: 0;
+      list-style: none;
+      text-indent: 0;
+
+      &:before {
+        display: none;
+      }
+      a {
+        display: block;
+        border: 1px solid #E1E0DF;
+        padding: 5px 15px;
+        font-size: 86%;
+        border-radius: 5px;
+
+        &:hover {
+          text-decoration: none;
+          background: #E1E0DF;
+        }
+      }
+    }
+  }
+
+/* end ckeditor */}
+
+
+

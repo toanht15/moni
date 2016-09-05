@@ -1,0 +1,78 @@
+<% extend 'partial/layout/page.admin' %>
+
+<% block 'sidenav' : %>sidenav05<% end %>
+
+<% block 'columnContents' : %>
+      <h1 class="hd1">コンバージョンタグ設定</h1>
+
+      <section class="adminCvtagWrap">
+        <p><span class="btn1"><a href="#">新規作成</a></span></p>
+      <!-- /.adminCvtagWrap --></section>
+
+      <h2 class="hd2">コンバージョンタグ一覧</h2>
+      <section class="adminCvtagWrap">
+
+        <table class="adminCvtagTable">
+          <thead>
+            <tr>
+              <th>タグ名</th>
+              <th>タグの説明</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>購入完了時</th>
+              <td>購入完了ページに貼るタグタグの説明が入るタグの説明が入るタグの説明が入るタグの説明が入るタグの説明が入るタグの説明が入る</td>
+              <td><span class="btn1"><a href="#" class="small2">操作</a></span>
+              <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span></td>
+            </tr>
+            <tr>
+              <th>会員登録完了</th>
+              <td>会員登録完了ページに貼るタグのようなタグの説明が入るタグの説明が入るタグの説明が入る。リンク入れる人もいるよね。<a href="#">http://www.aainc.co.jp/finish/</a></td>
+              <td><span class="btn1"><a href="#" class="small2">操作</a></span>
+              <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span></td>
+            </tr>
+            <tr>
+              <th>お問い合わせ完了</th>
+              <td>Thanksページに貼るタグ<a href="#">http://www.aainc.co.jp/finish/</a></td>
+              <td><span class="btn1"><a href="#" class="small2">操作</a></span>
+              <span class="csvBtn"><span class="btn3"><a href="#" class="small2">CSVダウンロード</a></span></span></td>
+            </tr>
+          </tbody>
+        <!-- /.adminCvtagTable --></table>
+      <!-- /.adminCvtagWrap --></section>
+
+    </article>
+<% end %>
+
+<% block 'modal' : %>
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+
+      <h1>管理者の削除</h1>
+
+      <div class="modalAdminUser">
+        <p class="userCheck"><img src="../../img/dummy/02.jpg" height="38" width="38" alt="use name" class="adminUserImg"><strong>相原　幸司</strong>さんを管理者から削除します。</p>
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal">OK</a></span>
+      </p>
+    </section>
+  <!-- /.modal1 --></div>
+<% end %>
+
+<% block 'script' : %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+
+    });
+  </script>
+<% end %>
+
+</body>
+</html>

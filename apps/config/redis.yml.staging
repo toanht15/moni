@@ -1,0 +1,9 @@
+StoreSession:
+  Host: stg-bc-cache.8gksjs.0001.apne1.cache.amazonaws.com
+  Port: 6379
+  DbId: 0
+StoreCache:
+  Host: stg-bc-cache.8gksjs.0001.apne1.cache.amazonaws.com
+  Port: 6379
+  DbId: 0
+  TrackerDbId: 1

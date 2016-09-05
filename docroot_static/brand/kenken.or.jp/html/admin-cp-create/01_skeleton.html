@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>01_skeleton / admin-cp-create</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.net.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.api.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.helper.js"></script>
+  <script type="text/javascript" src="../../../../js/brandco/Brandco.message.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">設定</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+    <h1 class="hd1">キャンペーン作成</h1>
+    <section class="makeStepTypeWrap">
+
+      <section class="makeStepType">
+        <h1><label><input type="radio" name="makeStepTypeRadio" checked>おすすめキャンペーンセットを使う</label></h1>
+        <div class="makeStepTypeCont" style="display: block;">
+          <div class="skeltonRecommendWrap">
+            <section class="skeltonSetList">
+              <ul>
+                <li class="current"><span><img src="../../../../img/module/twitterRetweet1.png" width="25" height="25" alt="リツート"></span><p>【拡散】 Twitterリツイートで拡散させるキャンペーン</p></li>
+                <li><a href="#"><span><img src="../../../../img/module/twitterTweet1.png" width="25" height="25" alt="ツイート"></span><p>【拡散】 Twitterでハッシュタグを拡散させるキャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/ranking1.png" width="25" height="25" alt="人気投票"></span><p>【拡散】 投票結果を拡散させるキャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート"></span><p>【リサーチ】 アンケート収集キャンペーン（ユーザー調査 等）</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート"></span><p>【リサーチ】 商品のモニターキャンペーン（事前アンケートアリ）</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト"></span><p>【コンテンツ集め】 写真を投稿してもらうキャンペーン（フォトコンテスト 等）</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/twitterRetweet1.png" width="25" height="25" alt="リツート"></span><p>【コンテンツ集め】 Instagramに投稿してもらうキャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/twitterFollow1.png" width="25" height="25" alt="Twitterフォロー"></span><p>【認知UP】 Twitterアカウントのフォロー獲得キャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/ytchannel1.png" width="25" height="25" alt="Youtubeチャンネル登録"></span><p>【認知UP】 動画視聴＋YouTubeチャンネル登録してもらうキャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/speedwin1.png" width="25" height="25" alt="スピードくじ"></span><p>【認知UP】 毎日参加してもらう、スピードくじキャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/win1.png" width="25" height="25" alt=""></span><p>【集客】 クーポン配布キャンペーン</p></a></li>
+                <li><a href="#"><span><img src="//s0.monipla.com/img/module/code1.png?1437034512" width="25" height="25" alt="コード認証"></span><p>【購入必須】 識別コードで応募してもらうキャンペーン</p></a></li>
+                <li><a href="#"><span><img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト"></span><p>【購入必須】 購入済みレシート写真で応募してもらうキャンペーン</p></a></li>
+              </ul>
+            <!-- /.skeltonSetList --></section>
+            <section class="skeltonSetDetail">
+
+              <div class="skeltonSetDetailWrap">
+                <ul class="stepList">
+                  <li class="stepDetail_require">
+                    <h1>STEP1</h1>
+                    <ul class="moduleList">
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/cpBase.png" width="20" height="20" alt="キャンペーン告知">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/twitterRetweet1.png" width="20" height="20" alt="リツート">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/address1.png" width="20" height="20" alt="住所確認">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/finish1.png" width="20" height="20" alt="参加完了">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                    <!-- /.moduleList --></ul>
+                  <!-- /.stepDetail_require --></li>
+                  <li class="stepDetail_require">
+                    <h1>STEP2</h1>
+                    <ul class="moduleList">
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/win1.png" width="20" height="20" alt="">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/win1.png" width="20" height="20" alt="">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                      <li class="moduleDetail1">
+                        <span class="moduleIcon">
+                          <img src="../../../../img/module/win1.png" width="20" height="20" alt="当選発表">
+                        <!-- /.moduleIcon --></span>
+                      <!-- /.moduleDetail1 --></li>
+                    <!-- /.moduleList --></ul>
+                  <!-- /.stepDetail_require --></li>
+                <!-- /.stepList --></ul>
+
+                <div class="skeltonExplainWrap">
+                  <p>ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明ほげほげの説明</p>
+                <!-- /.skeltonExplainWrap --></div>
+
+                <p class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></p>
+
+
+              <!-- /.skeltonSetDetailWrap --></div>
+            <!-- /.skeltonSetDetail --></section>
+          <!-- /.skeltonRecommendWrap --></div>
+        <!-- /.makeStepTypeCont --></div>
+      <!-- /.makeStepType --></section>
+
+      <section class="makeStepType">
+        <h1><label><input type="radio" name="makeStepTypeRadio">下書きキャンペーン</label></h1>
+        <div class="makeStepTypeCont">
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">プレゼント</span><span class="actionWrap"><span class="btn4"><a href="#" class="middle1">削除</a></span><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/address1.png" width="55" height="55" alt="住所確認">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプル…</span><span class="actionWrap"><span class="btn4"><a href="#" class="middle1">削除</a></span><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/address1.png" width="55" height="55" alt="住所確認">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+        <!-- /.makeStepTypeCont --></div>
+      <!-- /.makeStepType --></section>
+
+      <section class="makeStepType">
+        <h1><label><input type="radio" name="makeStepTypeRadio">基本セットを使う</label></h1>
+        <div class="makeStepTypeCont">
+          <section class="makeNewStepList">
+            <dl class="newStepDetail">
+              <dt>
+                公開設定
+                <span class="iconHelp">
+                <span class="text">ヘルプ</span>
+                <span class="textBalloon1">
+                  <span>
+                    「限定」を選択すると、招待ユーザーのみ<br>参加できるキャンペーンとなります
+                  </span>
+                <!-- /.textBalloon1 --></span>
+                <!-- /.iconHelp --></span>
+              </dt>
+              <dd><input type="radio" name="radio1" checked="checked" class="customRadioBtn" id="radio1-1"><label for="radio1-1">公開</label><input type="radio" name="radio1" class="customRadioBtn" id="radio1-2" disabled><label for="radio1-2">既存キャンペーン</label></dd>
+              <dt>当選発表</dt>
+              <dd><input type="radio" name="radio2" checked="checked" class="customRadioBtn" id="radio2-1"><label for="radio2-1">即時発表</label><input type="radio" name="radio2" class="customRadioBtn" id="radio2-2"><label for="radio2-2">手動発表</label></dd>
+              <dt>住所取得</dt>
+              <dd><input type="radio" name="radio3" checked="checked" class="customRadioBtn" id="radio3-1"><label for="radio3-1">全員</label><input type="radio" name="radio3" class="customRadioBtn" id="radio3-2" disabled><label for="radio3-2">当選者のみ</label><input type="radio" name="radio3" class="customRadioBtn" id="radio3-3"><label for="radio3-3">なし</label></dd>
+              <dt>種別</dt>
+              <dd class="moduleSetType"><input type="radio" name="radio4" checked="checked" class="customRadioModule" id="coupon"><label for="coupon"><img src="../../../../img/module/coupon1.png" width="55" height="55" alt="クーポン">クーポン</label><input type="radio" name="radio4" class="customRadioModule" id="enquete"><label for="enquete"><img src="../../../../img/module/enquete1.png" width="55" height="55" alt="アンケート">アンケート</label><input type="radio" name="radio4" disabled="disabled" class="customRadioModule" id="instantWin"><label for="instantWin"><img src="../../../../img/module/speedwin1.png" width="55" height="55" alt="スピードくじ">スピードくじ<span class="textBalloon1"><span>この条件では開催できません</span></span></label><input type="radio" name="radio4" class="customRadioModule" id="photo"><label for="photo"><img src="../../../../img/module/photo1.png" width="55" height="55" alt="写真投稿">写真投稿</label><input type="radio" name="radio4" class="customRadioModule" id="code"><label for="code"><img src="../../../../img/module/code1.png" width="55" height="55" alt="コード認証">コード認証</label><input type="radio" name="radio4" disabled="disabled" class="customRadioModule" id="present"><label for="present"><img src="../../../../img/module/present1.png" width="55" height="55" alt="プレゼント">プレゼント<span class="textBalloon1"><span>この条件では開催できません</span></span></label><input type="radio" name="radio4" disabled="disabled" class="customRadioModule" id="movie"><label for="movie"><img src="../../../../img/module/movie1.png" width="55" height="55" alt="動画視聴">動画視聴<span class="textBalloon1"><span>この条件では開催できません</span></span></label><input type="radio" name="radio4" class="customRadioModule" id="ranking"><label for="ranking"><img src="../../../../img/module/ranking1.png" width="55" height="55" alt="人気投票">人気投票</label><input type="radio" name="radio4" class="customRadioModule" id="check-in"><label for="check-in"><img src="../../../../img/module/check-in1.png" width="55" height="55" alt="チェックイン">チェックイン</label><input type="radio" name="radio4" class="customRadioModule" id="twitterRetweet"><label for="check-in"><img src="../../../../img/module/twitterRetweet1.png" width="55" height="55" alt="リツート">リツート</label><input type="radio" name="radio4" class="customRadioModule" id="twitterTweet"><label for="check-in"><img src="../../../../img/module/twitterTweet1.png" width="55" height="55" alt="ツート">ツート</label></dd>
+            <!-- /.newStepDetail --></dl>
+            <p class="actionWrap"><span class="btn3"><a href="#" class="middle1">次へ</a></span></p>
+          <!-- /.makeNewStepList --></section>
+
+        <!-- /.makeStepTypeCont --></div>
+      <!-- /.makeStepType --></section>
+
+      <section class="makeStepType">
+        <h1><label><input type="radio" name="makeStepTypeRadio">過去のキャンペーンのコピーを使う</label></h1>
+        <div class="makeStepTypeCont">
+
+          <div class="pager1">
+            <p>50件中1件～10件表示しています</p>
+              <ul>
+                <!-- <li class="first"><a href="#">最初のページヘ</a></li>
+                <li class="prev"><a href="#">前のページへ</a></li> -->
+                <li><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="next"><a href="#">次のページへ</a></li>
+                <li class="last"><a href="#">最後のページヘ</a></li>
+            </ul>
+          </div>
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">キャンペーン名サンプルテキスト</span><span class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/address1.png" width="25" height="25" alt="住所確認">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキス…</span><span class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/address1.png" width="25" height="25" alt="住所確認">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">キャンペーン名サンプルテキスト</span><span class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/dummy/02.jpg" width="25" height="25" alt="dummy">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP3</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP4</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/check-in1.png" width="25" height="25" alt="チェックイン">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP5</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP6</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/check-in1.png" width="25" height="25" alt="チェックイン">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">キャンペーン名サンプルテキスト</span><span class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/dummy/02.jpg" width="25" height="25" alt="dummy">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP3</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/photo1.png" width="25" height="25" alt="フォト">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/mail1.png" width="25" height="25" alt="メッセージ">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP4</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/enquete1.png" width="25" height="25" alt="アンケート">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/check-in1.png" width="25" height="25" alt="チェックイン">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+          <section class="skeletonWrap">
+            <p class="skeltonDetail">
+              <span class="name">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキス…</span><span class="actionWrap"><span class="btn3"><a href="#" class="middle1">選択</a></span></span>
+            <!-- /.skeltonDetail --></p>
+            <div class="stepListWrap">
+              <ul class="stepList">
+                <li class="stepDetail_require">
+                  <h1>STEP1</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/cpBase.png" width="25" height="25" alt="キャンペーン告知">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/address1.png" width="25" height="25" alt="住所確認">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/finish1.png" width="25" height="25" alt="参加完了">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+                <li class="stepDetail_require">
+                  <h1>STEP2</h1>
+                  <ul class="moduleList">
+                    <li class="moduleDetail1">
+                      <span class="moduleIcon">
+                        <img src="../../../../img/module/win1.png" width="25" height="25" alt="">
+                      <!-- /.moduleIcon --></span>
+                    <!-- /.moduleDetail1 --></li>
+                  <!-- /.moduleList --></ul>
+                <!-- /.stepDetail_require --></li>
+              <!-- /.stepList --></ul>
+            <!-- /.stepListWrap --></div>
+          <!-- /.sleletonWrap --></section>
+
+          <div class="pager1">
+            <p>50件中1件～10件表示しています</p>
+              <ul>
+                <!-- <li class="first"><a href="#">最初のページヘ</a></li>
+                <li class="prev"><a href="#">前のページへ</a></li> -->
+                <li><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="next"><a href="#">次のページへ</a></li>
+                <li class="last"><a href="#">最後のページヘ</a></li>
+            </ul>
+          </div>
+
+        <!-- /.makeStepTypeCont --></div>
+      <!-- /.makeStepType --></section>
+
+    <!-- /.makeStepType --></section>
+
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+</body>
+</html>

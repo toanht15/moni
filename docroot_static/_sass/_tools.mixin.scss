@@ -1,0 +1,624 @@
+// clearfix
+@mixin cf {
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+// wrap
+@mixin wrap($device: pc) {
+  position: relative;
+  margin: auto;
+  @if $device == pc {
+    width: 960px;
+  } @else {
+    width: 100%;
+  }
+}
+
+// CK editor
+@mixin ckeditor() {
+  line-height: normal;
+
+  &>*:first-child {
+    margin-top: 0;
+  }
+  h1 {
+    display: block;
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
+  }
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    margin: 0.83em 0;
+    font-weight: bold;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin: 1em 0;
+    font-weight: bold;
+  }
+  h4 {
+    display: block;
+    margin: 1.33em 0;
+    font-weight: bold;
+  }
+  h5 {
+    display: block;
+    font-size: 0.83em;
+    margin: 1.67em 0;
+    font-weight: bold;
+  }
+  h6 {
+    display: block;
+    font-size: 0.67em;
+    margin: 2.33em 0;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  strong {
+    font-weight: bold;
+
+    * {
+      font-weight: bold;
+    }
+  }
+  em {
+    font-style: italic;
+
+    * {
+      font-style: italic;
+    }
+  }
+  del,
+  strike {
+    text-decoration: line-through;
+
+    * {
+      text-decoration: line-through;
+    }
+  }
+  ol,
+  ul {
+    list-style-position: inside;
+    margin-bottom: 10px;
+
+    li {
+      margin-top: 5px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      ol,
+      ul {
+        margin-left: 20px;
+      }
+    }
+  }
+  ol {
+
+    li {
+      list-style-type: decimal
+    }
+  }
+  ul {
+
+    li {
+      list-style-type: disc;
+
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+  blockquote {
+    border: 1px dotted $borderC;
+    padding: 19px;
+    margin: 1em 20px;
+  }
+  a {
+    -ms-word-break: break-all;
+        word-break: break-all;
+  }
+  img {
+    max-width: 100%;
+    display: inline;
+  }
+  hr {
+    margin: 1em 0;
+    padding: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+    border-bottom-color: $borderC;
+  }
+}
+
+@mixin gradationLiner1($startC, $endC) {
+  background: $endC;
+  background: -ms-linear-gradient(top,$startC,$endC);
+  background: -moz-linear-gradient(top,$startC,$endC);
+  background: -webkit-gradient(linear,left top,left bottom, from($startC),to($endC));
+}
+
+@mixin btnDetailBase {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+}
+@mixin btnLinkBase($color, $btnC, $shadow) {
+  background-color: $btnC;
+  box-shadow: 0 -4px 0 0 $shadow inset;
+  color: $color;
+  padding-bottom: 4px;
+}
+@mixin btnHoverBase($color, $btnC, $shadow) {
+  $bgHover: calc-color-bright($btnC, 5);
+  $fontHover: calc-color-bright($color, 5);
+  cursor: pointer;
+  background-color: $bgHover;
+  box-shadow: 0 -3px 0 0 $shadow inset;
+  color: $fontHover;
+  text-decoration: none;
+}
+@mixin btnActiveBase($color, $btnC, $shadow) {
+  $bgActive: calc-color-bright($btnC, -5);
+  $fontActive: calc-color-bright($color, -5);
+  background-color: $bgActive;
+  box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2) inset;
+  color: $fontActive;
+  text-decoration: none;
+}
+@mixin btnDisabledBase($fontLight, $bgLight) {
+  background-color: $bgLight;
+  color: $fontLight;
+  text-shadow: none;
+}
+
+@mixin utilityBase($awy,$size) {
+
+  @if $awy == right {
+    &:after {
+      content: "";
+      display: inline-block;
+      width: $size;
+      height: 1px;
+    }
+  } @else {
+    &:before {
+      content: "";
+      display: inline-block;
+      width: $size;
+      height: 1px;
+    }
+  }
+}
+
+@mixin btnBase1($color, $btnC) {
+  $bgLight: mix($btnC, #fff, 25%);
+  $bgDark: mix($bgLight, #000, 90%);
+  $fontLight: mix($color, $btnC, 50%);
+  $shadow: calc-color-bright($btnC, -25);
+  display: inline-block;
+  vertical-align: middle;
+
+  &>* {
+    @include btnDetailBase;
+  }
+  &>a,
+  &>.btn {
+    @include btnLinkBase($color, $btnC, $shadow);
+
+    &:hover {
+      @include btnHoverBase($color, $btnC, $shadow);
+    }
+    &:active {
+      @include btnActiveBase($color, $btnC, $shadow);
+    }
+  }
+  &>span {
+    @include btnDisabledBase($fontLight, $bgLight);
+  }
+}
+@mixin btnSet1($color, $btnC) {
+  $btnType: #{&};
+  @include btnBase1($color, $btnC);
+
+  &>*{
+    width: 160px;
+    height: 27px;
+    border-radius: 3px;
+    line-height: 27px;
+  }
+  .small1 {
+    width: 80px;
+    height: 23px;
+    font-size: 12px;
+    line-height: 23px;
+  }
+  .small2 {
+    width: 110px;
+    height: 23px;
+    font-size: 12px;
+    line-height: 23px;
+  }
+  .middle1 {
+    width: 120px;
+    font-size: 12px;
+  }
+  .large1 {
+    width: 200px;
+    height: 37px;
+    font-size: 15px;
+    line-height: 37px;
+
+    @at-root {
+      #{&}_arrow1 {
+        width: 200px;
+        height: 37px;
+        font-size: 15px;
+        line-height: 37px;
+
+        &:after {
+          content: "";
+          width: 19px;
+          height: 14px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 5px;
+          background: url("../img/icon/iconArrowR5.png") no-repeat;
+        }
+        &:hover:after {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+  .large2 {
+    width: 210px;
+    height: 27px;
+    line-height: 27px;
+  }
+  .large3 {
+    width: 200px;
+    height: 47px;
+    font-size: 16px;
+    line-height: 1;
+
+    small {
+      display: block;
+      height: 20px;
+      margin: 3px 0 0 0;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  }
+  .loginBtn {
+    width: 135px;
+    height: 23px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 23px;
+  }
+  .movie1 {
+    width: 200px;
+    height: 37px;
+    font-size: 18px;
+    line-height: 37px;
+
+    &:before {
+      @include fontBase(youtube);
+      display: inline-block;
+      vertical-align: middle;
+      margin: -.2em 10px 0 0;
+      font-size: 23px;
+    }
+  }
+  .utilityRight {
+    @include utilityBase(right,16px);
+  }
+  .ynLotMenu1 {
+    width: 200px;
+    height: 37px;
+    font-size: 18px;
+    line-height: 37px;
+
+    &:before {
+      content: url("../img/campaign/synLotMenuIcon.svg");
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+      font-size: 23px;
+      line-height: 23px;
+    }
+  }
+
+  @at-root {
+    #{&}_area {
+      @include btnBase1($color, $btnC);
+      width: 100%;
+      height: 100%;
+
+      * {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  %roundBtnBase {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1.2;
+  }
+
+  .round1 {
+    @extend %roundBtnBase;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 13px;
+  }
+  .round2 {
+    @extend %roundBtnBase;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+}
+
+@mixin btnSnsBase($color, $btnC, $icon) {
+  $bgLight: mix($btnC, #fff, 25%);
+  $bgDark: mix($bgLight, #000, 90%);
+  $fontLight: mix($color, $btnC, 50%);
+  $shadow: calc-color-bright($btnC, -25);
+  display: inline-block;
+  vertical-align: middle;
+
+  a.login1 {
+    @include btnLinkBase($color, $btnC, $shadow);
+
+    &:hover {
+      @include btnHoverBase($color, $btnC, $shadow);
+      text-decoration: none;
+    }
+    &:active {
+      @include btnActiveBase($color, $btnC, $shadow);
+    }
+  }
+  span.login1 {
+    @include btnDisabledBase($fontLight, $bgLight);
+  }
+  .login1 {
+    @include btnDetailBase;
+    border-radius: 3px;
+    width: 220px;
+    height: 60px;
+    text-align: left;
+
+    &::before {
+      @include fontBase($icon);
+      position: absolute;
+      top: -3px;
+      bottom: 0;
+      left: 15px;
+      margin: auto;
+      display: block;
+      color: $color;
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+    }
+    span {
+      padding-left: 60px;
+      display: table-cell;
+      vertical-align: middle;
+      height: 60px;
+    }
+  }
+  a.arrow1 {
+    @include btnLinkBase($color, $btnC, $shadow);
+
+    &:hover {
+      @include btnHoverBase($color, $btnC, $shadow);
+    }
+    &:active {
+      @include btnActiveBase($color, $btnC, $shadow);
+    }
+  }
+  span.arrow1 {
+    @include btnDisabledBase($fontLight, $bgLight);
+  }
+  .arrow1 {
+    @include btnDetailBase;
+    width: 230px;
+    height: 60px;
+    text-align: left;
+    padding: 0 10px 0 15px;
+    border-radius: 3px;
+    font-weight: normal;
+    display: table;
+    font-size: 13px;
+    box-sizing: border-box;
+
+    &::before {
+      @include fontBase($icon);
+      display: table-cell;
+      vertical-align: middle;
+      width: 30px;
+      font-size: 30px;
+      color: $color;
+      background: no-repeat center;
+      -webkit-background-size: contain;
+              background-size: contain;
+    }
+    .inner {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 15px;
+    }
+    &::after {
+      @include fontBase(arrow-right-single);
+      width: 13px;
+      font-size: 13px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    br {
+      display: none;
+    }
+    .space {
+      display: inline;
+    }
+  }
+  a.square1 {
+
+    .inner {
+      @include btnLinkBase($color, $btnC, $shadow);
+    }
+    &:hover {
+      text-decoration: none;
+
+      .inner {
+        @include btnHoverBase($color, $btnC, $shadow);
+      }
+    }
+    &:active {
+
+      .inner {
+        @include btnActiveBase($color, $btnC, $shadow);
+      }
+    }
+  }
+  span.square1 {
+
+    .inner {
+      @include btnDisabledBase($fontLight, $bgLight);
+    }
+  }
+  .square1 {
+    display: inline-block;
+    text-align: center;
+
+    .inner {
+      @include btnDetailBase;
+      width: 60px;
+      height: 60px;
+      border-radius: 3px;
+      font-size: 0;
+
+      &::before {
+        @include fontBase($icon);
+        font-size: 30px;
+        color: $color;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -3px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    &::after {
+      content: attr(title);
+      display: block;
+      font-size: 11px;
+      color: #333;
+      white-space: pre;
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+  }
+}
+
+@mixin btnShareBase($fontColor, $btnColor) {
+  @include btnBase1($fontColor, $btnColor);
+
+  &>* {
+    width: 160px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    border-radius: 3px;
+
+    span {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      width: 35px;
+      height: 35px;
+      content: "";
+      margin-right: 5px;
+    }
+    &:before {
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+  .large1 {
+    width: 200px;
+    height: 37px;
+    font-size: 15px;
+    line-height: 37px;
+  }
+}
+
+@mixin miniArrowBase($position, $color, $size) {
+  border: $size solid transparent;
+  @if $position == left {
+    border-right: $size solid $color;
+    border-left: 0 solid transparent;
+  }@else if $position == top {
+    border-top: 0 solid transparent;
+    border-bottom: $size solid $color;
+  }@else if $position == right {
+    border-right: 0 solid transparent;
+    border-left: $size solid $color;
+  }@else if $position == bottom {
+    border-top: $size solid $color;
+    border-bottom: 0 solid transparent;
+  }
+}
+
+// font base
+@mixin fontBase($name) {
+  font-family: font;
+  content: map-get($icons, #{$name});
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-indent: 0;
+}
+@mixin iconFontLeft($name) { // アイコン（:before）＋テキスト
+   @include fontBase($name);
+   display: inline-block;
+   vertical-align: middle;
+   margin-right: 5px;
+   margin-top: -.2em;
+}
+@mixin iconFontRight($name) { // テキスト＋アイコン（:after）
+  @include fontBase($name);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: -.2em;
+}

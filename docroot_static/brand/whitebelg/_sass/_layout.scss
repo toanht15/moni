@@ -1,0 +1,428 @@
+@charset "utf-8";
+/* ### layout.scss ### */
+//======================================================================================================================
+
+body {
+   font-family: "游ゴシック",YuGothic,"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ",Meiryo;
+   min-width: 980px;
+}
+
+body > header section.company {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.whitebelgHeadSnsBtns-btn {
+  width: 980px;
+  margin: 15px auto 0;
+  text-align: right;
+  height: 20px;
+  overflow: hidden;
+}
+
+#whitebelgBtnToggleNav {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  background: url(../img/base/btnMenuOpen.gif);
+  background-size: 34px 34px;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-align: left;
+  display: none;
+}
+#whitebelgBtnToggleNav.active {
+  background: url(../img/base/btnMenuClose.gif);
+  background-size: 34px 34px;
+}
+
+/* PC */
+#whitebelgHeader {
+  width: 960px;
+  position: relative;
+  margin: 15px auto 0;
+
+  &.whitebelgHeaderHiddenFanNum {
+
+    h1 {
+      padding: 10px 10px 10px 90px !important;
+    }
+  }
+}
+#whitebelgHeaderInner {
+  background-color: #32523f;
+  background-image: url(https://s3-ap-northeast-1.amazonaws.com/parts.brandco.jp/image/brand/15d4e891d784977cacbfcbb00c48f133/background/694937c5fda3c91da37ad042c202d9c3.jpg);
+  background-repeat: repeat;
+  width: 960px;
+  border: solid;
+  border-width: 6px 6px 0 6px;
+  border-image: url(../img/base/bgFrame.png) 6 6 0 6 repeat repeat;
+  -moz-border-image: url(../img/base/bgFrame.png) 6 6 0 6 repeat repeat;
+  -webkit-border-image: url(../img/base/bgFrame.png) 6 6 0 6 repeat repeat;
+  box-sizing: border-box;
+  padding: 0 !important;
+
+  h1 {
+    padding: 10px 10px 10px 10px !important;
+    a {
+      display: block;
+      background: url(../img/base/logoPC.png);
+      width: 757px;
+      height: 150px;
+    }
+    img {
+      display: none;
+    }
+  }
+
+  ul {
+    width: 948px;
+    margin: 0 auto;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 1rem;
+      border: solid;
+      border-width: 6px 6px 0 0;
+      border-image: url(../img/base/bgFrame.png) 6 6 0 0 repeat repeat;
+      -moz-border-image: url(../img/base/bgFrame.png) 6 6 0 0 repeat repeat;
+      -webkit-border-image: url(../img/base/bgFrame.png) 6 6 0 0 repeat repeat;
+      box-sizing: border-box;
+
+      img {
+        display: none;
+      }
+      a {
+        text-indent: -9999px;
+        display: block;
+        width: 185px;
+        height: 65px;
+      }
+
+      &.whitebelgNavSeminar a {
+        background: url(../img/base/btnWhitebelgNavSeminar.png) 50% 50% no-repeat;
+        &:hover {
+          background: #fff url(../img/base/btnWhitebelgNavSeminar_hover.png) 50% 50% no-repeat;
+          box-shadow: 0 0 2px 2px #fff;
+        }
+      }
+      &.whitebelgNavScholarship a {
+        background: url(../img/base/btnWhitebelgNavScholarship.png) 50% 50% no-repeat;
+        &:hover {
+          background: #fff url(../img/base/btnWhitebelgNavScholarship_hover.png) 50% 50% no-repeat;
+          box-shadow: 0 0 2px 2px #fff;
+        }
+      }
+      &.whitebelgNavTime a {
+        background: url(../img/base/btnWhitebelgNavTime.png) 50% 50% no-repeat;
+        &:hover {
+          background: #fff url(../img/base/btnWhitebelgNavTime_hover.png) 50% 50% no-repeat;
+          box-shadow: 0 0 2px 2px #fff;
+        }
+      }
+      &.whitebelgNavSpecialLecture a {
+        background: url(../img/base/btnWhitebelgNavSpecialLecture.png) 50% 50% no-repeat;
+        &:hover {
+          background: #fff url(../img/base/btnWhitebelgNavSpecialLecture_hover.png) 50% 50% no-repeat;
+          box-shadow: 0 0 2px 2px #fff;
+        }
+      }
+      &.whitebelgNavStudyGroup a {
+        background: url(../img/base/btnWhitebelgNavStudyGroup.png) 50% 50% no-repeat;
+        &:hover {
+          background: #fff url(../img/base/btnWhitebelgNavStudyGroup_hover.png) 50% 50% no-repeat;
+          box-shadow: 0 0 2px 2px #fff;
+        }
+      }
+      &.whitebelgNavStudyGroup {
+        border-right: 0;
+
+        a {
+          border-right: 0;
+          width: 184px;
+        }
+      }
+/*
+      &.whitebelgNavSecretParty {
+        border-right: 0;
+        a {
+          background: url(../img/base/btnWhitebelgNavSecretParty.png) 50% 50% no-repeat;
+          &:hover {
+            background: #fff url(../img/base/btnWhitebelgNavSecretParty_hover.png) 50% 50% no-repeat;
+          box-shadow: 0 0 2px 2px #fff;
+          }
+        }
+      }
+*/
+      &.whitebelgNavClose {
+        display: none;
+      }
+    }
+  }
+
+}
+
+
+#whitebelgStudentsNum {
+  background: url(../img/base/pc/bgStudentsNum.png) 0 0 no-repeat;
+  width: 141px;
+  height: 91px;
+  margin: 0;
+  position: absolute;
+  top: 55px;
+  left: 794px;
+  font-size: 0;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 39px 22px 0 10px;
+  text-align: center;
+}
+#whitebelgStudentsNum span {
+  font-size: 13px;
+  display: inline-block;
+  width: 18px;
+  height: 32px;
+
+  &.whitebelgStudentsNum1 {
+    background: url(../img/base/pc/num0.png);
+  }
+  &.whitebelgStudentsNum0 {
+    background: url(../img/base/pc/num0.png);
+  }
+  &.whitebelgStudentsNum1 {
+    background: url(../img/base/pc/num1.png);
+  }
+  &.whitebelgStudentsNum2 {
+    background: url(../img/base/pc/num2.png);
+  }
+  &.whitebelgStudentsNum3 {
+    background: url(../img/base/pc/num3.png);
+  }
+  &.whitebelgStudentsNum4 {
+    background: url(../img/base/pc/num4.png);
+  }
+  &.whitebelgStudentsNum5 {
+    background: url(../img/base/pc/num5.png);
+  }
+  &.whitebelgStudentsNum6 {
+    background: url(../img/base/pc/num6.png);
+  }
+  &.whitebelgStudentsNum7 {
+    background: url(../img/base/pc/num7.png);
+  }
+  &.whitebelgStudentsNum8 {
+    background: url(../img/base/pc/num8.png);
+  }
+  &.whitebelgStudentsNum9 {
+    background: url(../img/base/pc/num9.png);
+  }
+  &.whitebelgStudentsNumc {
+    background: url(../img/base/pc/numComma.png) 0 100% no-repeat;
+    margin-bottom: -3px;
+    width: 6px;
+  }
+}
+
+body > article {
+  background: #fff;
+  padding: 0 !important;
+}
+body > article.singleWrap {
+  width: 578px;
+  padding: 40px 191px !important;
+  margin: 0 auto;
+  border: 0;
+}
+
+
+.bredlink1 {
+  display: none;
+}
+
+#whitebelgFootAgegate {
+  display: block;
+  width: 960px;
+  height: 63px;
+  margin: 20px auto -30px;
+  background: url(../img/base/imgFootAgegatePC.gif);
+
+  img {
+    display: none;
+  }
+}
+
+.pageTop {
+  margin: 0;
+
+  a {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: left;
+    width: 36px;
+    height: 36px;
+    background: url(../img/base/btnPagetop.png);
+    background-size: 36px 36px;
+    text-indent: -9999px;
+    overflow: hidden;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+
+
+/* stamp */
+.whitebelgScholarshipStampNum {
+  background: url(../img/scholarship/pc/bgStampNum.png);
+  width: 320px;
+  height: 81px;
+  box-sizing: border-box;
+  margin: 0 auto 35px !important;
+  text-align: right;
+  padding: 28px 44px 0 0 !important;
+
+  span {
+    font-size: 13px;
+    display: inline-block;
+    width: 18px;
+    height: 32px;
+
+    &.whitebelgScholarshipStampNum1 {
+      background: url(../img/base/pc/num0.png);
+    }
+    &.whitebelgScholarshipStampNum0 {
+      background: url(../img/base/pc/num0.png);
+    }
+    &.whitebelgScholarshipStampNum1 {
+      background: url(../img/base/pc/num1.png);
+    }
+    &.whitebelgScholarshipStampNum2 {
+      background: url(../img/base/pc/num2.png);
+    }
+    &.whitebelgScholarshipStampNum3 {
+      background: url(../img/base/pc/num3.png);
+    }
+    &.whitebelgScholarshipStampNum4 {
+      background: url(../img/base/pc/num4.png);
+    }
+    &.whitebelgScholarshipStampNum5 {
+      background: url(../img/base/pc/num5.png);
+    }
+    &.whitebelgScholarshipStampNum6 {
+      background: url(../img/base/pc/num6.png);
+    }
+    &.whitebelgScholarshipStampNum7 {
+      background: url(../img/base/pc/num7.png);
+    }
+    &.whitebelgScholarshipStampNum8 {
+      background: url(../img/base/pc/num8.png);
+    }
+    &.whitebelgScholarshipStampNum9 {
+      background: url(../img/base/pc/num9.png);
+    }
+  }
+}
+
+.pagePartsWrap {
+  .stampRally {
+
+    .stampRallyLogin {
+      border: 0;
+      width: 499px;
+      height: 106px;
+      position: relative;
+      background: url(../img/scholarship/pc/bgLogin.png) 0 0 no-repeat;
+      margin: 0 auto 15px;
+      h1 {
+        display: none;
+      }
+      .btnSet .btn3 {
+        margin: 0;
+
+        a {
+          position: absolute;
+          left: 50%;
+          top: 44px;
+          margin-left: -102px;
+          width: 205px;
+          height: 46px;
+          background: url(../img/scholarship/pc/btnLogin.png) 0 0 no-repeat;
+          box-shadow: none;
+          text-align: left;
+          text-indent: -9999px;
+
+          &:hover {
+            opacity: .75;
+          }
+        }
+      }
+    }
+
+    .stampRallyList {
+
+    width:892px;
+    box-sizing: border-box;
+    padding: 6px 6px;
+    margin: 0 auto 30px;
+    position: relative;
+    border: solid;
+    border-width: 3px;
+    box-sizing: border-box;
+    border-image: url(../img/base/bgFrame.png) 2 repeat repeat;
+    -moz-border-image: url(../img/base/bgFrame.png) 2 repeat repeat;
+    -webkit-border-image: url(../img/base/bgFrame.png) 2 repeat repeat;
+
+      li {
+        background: url(../img/scholarship/bgActiveStamp.png) 0 0 no-repeat;
+        width: 214px;
+        padding: 7px;
+        margin: 0 2px 4px;
+
+        &.stampStatusComingsoon,
+        &.stampStatusJoined,
+        &.stampStatusFinished {
+          background: #fff;
+        }
+        &.stampStatusComingsoonNoDate {
+          padding-top: 31px;
+        }
+        &:nth-child(3n+1) {
+          clear: none;
+        }
+        &:nth-child(4n+1) {
+          clear: left;
+        }
+        .startDate {
+          font-weight: bold; font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+          font-style: italic;
+          font-size: 18px;
+          color: #395c45;
+          &:before {
+            display: none;
+          }
+          .time {
+            display: none;
+          }
+          small {
+            display: none;
+          }
+        }
+        .endDate {
+          display: none;
+        }
+      }
+    }
+  }
+}

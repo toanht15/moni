@@ -1,0 +1,11 @@
+CP参加・メッセージ回数計測バッチ実行失敗通知
+
+■<#DATE>に失敗した計測バッチ一覧:
+
+<#LOOP_FAIL_BATCH>
+Batch Name：<#batch_name>
+
+<#/LOOP_FAIL_BATCH>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Copyright (c) Allied Architects, Inc. ALL RIGHTS RESERVED

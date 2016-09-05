@@ -1,0 +1,9 @@
+StoreSession:
+  Host: 192.168.1.121
+  Port: 6379
+  DbId: 0
+StoreCache:
+  Host: 192.168.1.121
+  Port: 6379
+  DbId: 0
+  TrackerDbId: 1

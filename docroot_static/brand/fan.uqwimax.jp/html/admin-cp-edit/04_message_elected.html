@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>04_message_user / admin-cp-edit</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/admin.css">
+  <link rel="stylesheet" href="../../../../css/jqueryUI.css">
+
+  <script src="../../../../js/brandco/Brandco.js"></script>
+  <script src="../../../../js/brandco/Brandco.net.js"></script>
+  <script src="../../../../js/brandco/Brandco.api.js"></script>
+  <script src="../../../../js/brandco/Brandco.helper.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../../../js/html5shiv-printshiv.js"></script>
+  <![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="../../../../js/masonry.pkgd.min.js"></script>
+  <script src="../../../../js/min/imagesloaded.pkgd.min.js"></script>
+  <script src="../../../../js/_unit.js"></script>
+  <script src="../../../../js/_admin_unit.js"></script>
+
+  <script src="../../../../js/raty/jquery.raty.js"></script>
+
+  <link rel="icon" href="../../../../img/base/favicon.ico">
+
+</head>
+<body>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <header class="editHeadWrap">
+    <section class="editHead">
+      <div class="wrap">
+        <h1><a href="#"><img src="../../../../img/base/imgLogo_w.png" width="108" height="18" alt="モニプラ"></a></h1>
+        <nav class="editMenu">
+          <ul>
+            <li class="actionPage">
+              <a href="#">Page</a>
+              <ul class="editMenuInner">
+                <li><a href="#">ページ作成</a></li>
+                <li><a href="#">ページ一覧</a></li>
+                <li><a href="#">カテゴリ</a></li>
+                <li><a href="#">ファイル</a></li>
+              <!-- /.editMenuInner --></ul>
+            </li>
+            <li class="actionCampaign">
+              <a href="#">Campaign</a>
+            </li>
+            <li class="actionMessage">
+              <a href="#">Message</a>
+            </li>
+            <li class="actionCommunication">
+              <a href="#">Communication</a>
+            </li>
+            <li class="actionFan">
+              <a href="#">Fan</a>
+              <span class="badge1">+99</span>
+            </li>
+            <li class="actionDashboard">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="actionInfo">
+              <a href="#">Information</a>
+            </li>
+            <li class="actionSetting">
+              <a href="#">Setting</a>
+              <ul class="editMenuInner">
+                <li><a href="#">管理者設定</a></li>
+                <li><a href="#">ユーザー設定</a></li>
+                <li><a href="#">ページ設定</a></li>
+                <li><a href="#">CVタグ設定</a></li>
+              </ul>
+            </li>
+          </ul>
+        <!-- /.editMenu --></nav>
+      <!-- /.wrap --></div>
+    <!-- /.editHead --></section>
+
+    <section class="account">
+      <ul>
+        <li class="accountCompany"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">企業名が入る企業名が入る企業名が入る</li><li class="preview"><a href="#">プレビュー</a></li><li class="accountName"><a href="#"><img src="../../../../img/dummy/02.jpg" width="30" height="30" alt="">浅岡敦子さん</a><span class="badge1">99</span></li><li class="logout"><a href="#"><span class="textBalloon1"><span>ログアウト</span></span></a></li>
+      </ul>
+    <!-- /.account --></section>
+
+  <!-- /.editHeadWrap --></header>
+
+  <article>
+
+    <h1 class="hd1"><img src="../../../../img/dummy/02.jpg" width="40" height="40" alt="campaign img" class="hdCampaignIcon"><span class="label2">登録完了</span><span class="hdInnerText">キャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が入るサンプルテキストキャンペーン名が</span></h1>
+    <div class="campaignAction">
+      <ul class="data">
+        <li class="campaignTag">期間：2014/6/17 12:00 ~ 2014/6/17 23:59</li>
+        <li class="campaignTag">発表：2014/6/17</li>
+        <li class="campaignTag">当選数：90,000</li>
+        <li class="preview"><a href="#" class="font-open">キャンペーンページへ</a></li>
+      <!-- /.data --></ul>
+      <ul class="action">
+        <li><a href="#" class="font-fan">参加者一覧</a></li>
+        <li><a href="#" class="font-win">当選発表</a></li>
+        <li><a href="#modal3" class="font-download jsOpenModal">データダウンロード</a></li>
+      <!-- /.action --></ul>
+    <!-- /.campaignAction --></div>
+
+    <section class="campaignFlowWrap">
+      <div class="campaignFlowArea">
+        <div class="campaignFlow">
+          <ul class="campaignFlowCont">
+            <li class="flowDetail_finished">
+              <h1>STEP1-3
+                <span class="iconHelp">
+                      <span class="text">ヘルプ</span>
+                      <span class="textBalloon1">
+                        <span>
+                          STEPグループごとに編集画面が開きます
+                        </span>
+                      <!-- /.textBalloon1 --></span>
+                <!-- /.iconHelp --></span>
+              </h1>
+              <a href="#" class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/cpBase.png" width="16" height="16" alt="キャンペーン告知" class="hdModuleIcon">２行ってどうなるの</dt>
+                  <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/dummy/02.jpg" width="16" height="16" alt="dummy" class="hdModuleIcon">モジュール</dt>
+                  <dd></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/finish1.png" width="16" height="16" alt="参加完了" class="hdModuleIcon">参加完了</dt>
+                  <dd></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></a>
+            <!-- /.flowDetail_finished --></li>
+            <li class="flowDetail_focus">
+              <h1>STEP4
+                <span class="iconHelp">
+                      <span class="text">ヘルプ</span>
+                      <span class="textBalloon1">
+                        <span>
+                          複数パターンの当選発表をする場合は<br>新たな当選通知を作成してください
+                        </span>
+                      <!-- /.textBalloon1 --></span>
+                <!-- /.iconHelp --></span>
+              </h1>
+              <div class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/win1.png" width="16" height="16" alt="結果発表" class="hdModuleIcon">結果発表</dt>
+                  <dd><span class="iconMail1"><strong class="num">--</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">--</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">--</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></div>
+            <!-- /.flowDetail_focus --></li>
+            <li class="flowDetail">
+              <h1>STEP5</h1>
+              <a href="#" class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/kakikomi1.png" width="16" height="16" alt="カキコミ" class="hdModuleIcon">カキコミ</dt>
+                  <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></a>
+            <!-- /.flowDetail --></li>
+            <li class="flowDetail">
+              <h1>STEP6</h1>
+              <a href="#" class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/photo1.png" width="16" height="16" alt="フォト" class="hdModuleIcon">フォト</dt>
+                  <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></a>
+            <!-- /.flowDetail --></li>
+            <li class="flowDetail">
+              <h1>STEP7</h1>
+              <a href="#" class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/mail1.png" width="16" height="16" alt="メッセージ" class="hdModuleIcon">メッセージ</dt>
+                  <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></a>
+            <!-- /.flowDetail --></li>
+            <li class="flowDetail">
+              <h1>STEP8</h1>
+              <a href="#" class="moduleWrap">
+                <dl class="campaignModule1">
+                  <dt><img src="../../../../img/module/mail1.png" width="16" height="16" alt="メッセージ" class="hdModuleIcon">メッセージ</dt>
+                  <dd><span class="iconMail1"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconMail2"><strong class="num">5,231</strong>人</span></dd>
+                  <dd><span class="iconCheck3"><strong class="num">5,231</strong>人</span></dd>
+                <!-- /.campaignModule1 --></dl>
+              <!-- /.moduleWrap --></a>
+            <!-- /.flowDetail --></li>
+          <!-- /.campaignFlowCont --></ul>
+        <!-- /.campaignFlow --></div>
+        <ul class="campaignFlowScroll">
+          <li class="flowPrev">←</li>
+          <li class="flowNext">→</li>
+        <!-- /.campaignFlowScroll --></ul>
+      <!-- /.campaignFlowArea --></div>
+      <p class="campaignSettingBase"><a href="#" class="font-gear">基本設定</a><a href="#" class="font-attract">集客設定</a><a href="#modal2" class="font-edit jsOpenModal">フロー編集</a></p>
+    <!-- /.campaignFlowWrap --></section>
+
+    <section class="campaignEditWrap">
+      <header class="campaignEditHeader">
+        <a href="#" class="campaignEditItem_finished">
+          <p class="messageEdit">
+            <span class="stepNum">1</span><span class="stepTitle">メッセージ作成</span>
+          <!-- /.messageEdit --></p>
+        <!-- /.campaignEditItem --></a>
+
+        <div class="campaignEditItemElected">
+          <div class="userListHeaderCont_current">
+            <p class="select">
+              <span class="stepNum">2</span><span class="stepTitle">当選候補者の選択<small>送信済：--人</small></span>
+            <!-- /.select--></p>
+            <p class="selectedUser">
+              <span>
+                <small>当選対象</small><br><span class="userNum">--</span>人
+              </span>
+            <!-- /.selectedUser --></p>
+          <!-- /.userListHeaderCont_current --></div>
+        <!-- /.campaignEditItem --></div>
+
+        <a href="#" class="campaignEditItem">
+          <p class="option">
+            <span class="stepTitle">オプション設定<br><small>・即時送信<br>・メール通知あり</small></span>
+          <!-- /.option --></p>
+        <!-- /.campaignEditHeader --></a>
+
+        <p class="btn3_area"><span class="jsOpenModal">送信</span></p>
+      <!-- /.campaignEditHeader --></header>
+      <section class="campaignEditCont">
+        <section class="userListWrap">
+
+          <section class="userList">
+            <div class="pager1">
+              <p><strong>「送信対象」</strong><strong>99,999,999</strong>件中<strong>2001</strong>件～<strong>2020</strong>件表示しています<a href="#"><small>全ユーザーを表示</small></a></p>
+              <ul>
+                <li class="first"><a href="#">最初のページヘ</a></li>
+                <li class="prev"><a href="#">前のページへ</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><span>6</span></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">99</a></li>
+                <li class="next"><a href="#">次のページへ</a></li>
+                <li class="last"><a href="#">最後のページヘ</a></li>
+              </ul>
+            <!-- /.pager1 --></div>
+            <div class="checkedUserWrap jsAreaToggleWrap">
+              <p class="checkedUser"><span class="iconCheck3">選択中<strong class="jsCountArea">99,999,999</strong>人</span><span class="btn3_area"><a href="#" class="jsAreaToggle">対象に入れる</a></span></p>
+              <p class="selectRandom">
+                <small class="or">or</small>
+                <span class="btn3"><a href="#modal1" class="small1 jsOpenModal">抽選する</a></span>
+              <!-- /.selectRandom --></p>
+              <p class="iconHelp">
+                <span class="text"></span>
+                <span class="textBalloon1">
+                  <span>絞り込まれたリスト全体から、<br>自動抽選で対象を抽出します</span>
+                <!-- /.textBalloon1 --></span>
+              <!-- /.iconHelp --></p>
+              <div class="checkedUserAction jsAreaToggleTarget">
+                <ul>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーにする</label></li>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーから外す</label></li>
+                </ul>
+                <p class="btnSet">
+                  <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                  <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                </p>
+              <!-- /.checkedUserAction --></div>
+              <p class="elected">
+                <small class="next">⇒</small>
+                <span class="btn4"><a href="#modal5" class="small1 jsOpenModal">当選者確定</a></span>
+              <!-- /.elected --></p>
+              <p class="selectRating">
+                <small class="or">or</small>
+                <span class="labelModeAllied">
+                  <span class="btn3"><a href="#modal4" class="small2 jsOpenModal">一括で評価をつける</a></span>
+                </span>
+                <span class="iconHelp">
+                  <span class="text"></span>
+                  <span class="textBalloon1">
+                    <span>絞り込まれたリスト全体から、<br>一括で評価できます。</span>
+                  <!-- /.textBalloon1 --></span>
+                <!-- /.iconHelp --></span>
+              <!-- /.selectRating --></p>
+            <!-- /.checkedUserWrap --></div>
+
+            <div class="userListMessage">
+              <p>現在表示されているユーザー <strong class="num">50</strong> のみが選択されています。<a href="#"><strong class="num">436</strong>件をすべて選択</a></p>
+            <!-- /.userListMessage --></div>
+            <div class="userListSearch jsSortItemTarget">
+              <ul class="userListSearchCont">
+                <li class="jsAreaToggleWrap">
+                  ID<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                    <div class="range jsCheckToggleWrap">
+                      <p><input type="text" placeholder="No." class="inputNo"></p>
+                      <p class="jsCheckToggleTarget"><span class="dash">～</span><input type="text" placeholder="No." class="inputNo"></p>
+                      <p><label class="check"><input type="checkbox" class="jsCheckToggle">範囲検索</label></p>
+                    <!-- /.range --></div>
+                    <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  history<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  SNS<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                    <ul>
+                      <li><label><input type="checkbox"><span class="iconFB2">Facebook</span>Facebook</label></li>
+                      <li><label><input type="checkbox"><span class="iconTW2">Twitter</span>Twitter</label></li>
+                      <li><label><input type="checkbox"><span class="iconIG2">Instagram</span>Google</label></li>
+                      <li><label><input type="checkbox"><span class="iconYH2">Yahoo!</span>Yahoo!</label></li>
+                      <li><label><input type="checkbox"><span class="iconGP2">Google</span>Google</label></li>
+                    </ul>
+                    <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Last<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Account<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  m / f<a href="#" class="btnArrowB1">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <p class="boxCloseBtn"><a href="#" class="jsAreaToggle">閉じる</a></p>
+                    <p class="attention1">エラー文言が入るエラー文言が入る</p>
+                    <ul>
+                      <li><label><input type="checkbox"><span class="iconSexM">男性</span>男性</label></li>
+                      <li><label><input type="checkbox"><span class="iconSexF">女性</span>女性</label></li>
+                      <li><label><input type="checkbox"><span class="iconSexN">未設定</span>未設定</label></li>
+                    </ul>
+                    <p class="switchWrap">and<a href="#" class="toggle_switch right">toggle_switch</a>or</p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  address<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  age<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  etc<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  hogehoge<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  fugafuga<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  piyopiyo<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q1<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q2<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q3<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q4<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  Q5<a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+                <li class="jsAreaToggleWrap">
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/11825779_856595624395077_2719384369801543466_n.png?oh=cdcccf5254681916404775b9d57fc014&oe=5661255D&__gda__=1453148410_93807ca2824f27a65f8bc67af91fe6c8" alt="account name" width="20" height="20"><a href="#" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                  <div class="sortBox jsAreaToggleTarget">
+                    <h1 class="iconSort2">絞り込み</h1>
+                    <ul>
+                      <li><label><input type="checkbox">Yes</label></li>
+                      <li><label><input type="checkbox">No</label></li>
+                      <li><label><input type="checkbox">その他</label></li>
+                      <li><label><input type="checkbox">フリー回答項目1</label></li>
+                      <li><label><input type="checkbox">フリー回答項目2フリー回答項目2</label></li>
+                    </ul>
+                    <p><input type="text" placeholder="キーワード"></p>
+                    <p class="btnSet">
+                      <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                      <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                    </p>
+                  <!-- /.sortBox --></div>
+                </li>
+              </ul>
+            <!-- /userListSearch --></div>
+            <div class="userListCont">
+              <ul class="userName">
+                <li class="allUser"><input type="checkbox" class="jsCountAll" name="user"><a href="#" class="btnArrowB1 jsSortItem iconHelp">
+                  <span class="text">ヘルプ</span>
+                  <span class="textBalloon1">
+                    <span>
+                      参加履歴などで対象を絞り込めます
+                    </span>
+                  <!-- /.textBalloon1 --></span>
+                  絞り込む</a>
+                </li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="Sasaki Akira">Sasaki Akira</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="久保田 康太郎">久保田 康太郎</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐村河内 昌樹">佐村河内 昌樹</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="勅使河原 麻里子">勅使河原 麻…</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="Ishikawa Goemon">Ishikawa G…</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="岡田 智">岡田 智</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐藤 徹">佐藤 徹</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="荒木 毅">荒木 毅</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="千葉 薫">千葉 薫</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="高橋 正弘">高橋 正弘</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="岡田 智">岡田 智</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐藤 徹">佐藤 徹</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="荒木 毅">荒木 毅</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="千葉 薫">千葉 薫</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="高橋 正弘">高橋 正弘</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="岡田 智">岡田 智</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="佐藤 徹">佐藤 徹</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="荒木 毅">荒木 毅</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="千葉 薫">千葉 薫</label></li>
+                <li><label><input type="checkbox" class="jsCountTarget" name="user"><img src="../../../../img/dummy/02.jpg" width="20" height="20" alt="高橋 正弘">高橋 正弘</label></li>
+              </ul>
+              <div class="itemTableWrap">
+                <table class="itemTable">
+                  <thead>
+                    <tr>
+                      <th class="jsAreaToggleWrap" colspan="4"> STEP1-4 </th>
+                      <th class="jsAreaToggleWrap" colspan="1"> STEP5 </th>
+                    </tr>
+                    <tr>
+                      <th class="jsAreaToggleWrap snsAccount" title="1.キャンペーン告知"> 1.キャンペーン告知 <a href="javascript:void(0)" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget" data-search_type="28/33565">
+                          <p class="boxCloseBtn"><a href="javascript:void(0)" class="jsAreaToggle">閉じる</a></p>
+                          <div class="range jsCheckToggleWrap">
+                            <ul>
+                              <li><input type="checkbox" id="search_participate_condition/33565/1/2_1" name="search_participate_condition/33565/1/2" value="1"><label for="search_participate_condition/33565/1/2_1">完了</label>&nbsp; </li>
+                              <li> <input type="checkbox" id="search_participate_condition/33565/2/2_1" name="search_participate_condition/33565/2/2" value="1"><label for="search_participate_condition/33565/2/2_1">既読</label>&nbsp; </li>
+                              <li> <input type="checkbox" id="search_participate_condition/33565/3/2_1" name="search_participate_condition/33565/3/2" value="1"><label for="search_participate_condition/33565/3/2_1">未読</label>&nbsp; </li>
+                              <li> <input type="checkbox" id="search_participate_condition/33565/4/2_1" name="search_participate_condition/33565/4/2" value="1"><label for="search_participate_condition/33565/4/2_1">未送信</label>&nbsp; </li>
+                              <li> <input type="checkbox" id="search_participate_condition/33565/6/2_1" name="search_participate_condition/33565/6/2" value="1"><label for="search_participate_condition/33565/6/2_1">参加条件外</label>&nbsp; </li>
+                              </ul>
+                            <!-- /.range --></div>
+                            <p class="btnSet"><span class="btn2"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-clear_type="28/33565" data-search_no="2">リセット</a></span><span class="btn3"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-search_type="28/33565" data-search_no="2">絞り込む</a></span></p>
+                          <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap snsAccount" title="2.アンケート"> 2.アンケート <a href="javascript:void(0)" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget" data-search_type="28/33566">
+                          <p class="boxCloseBtn"><a href="javascript:void(0)" class="jsAreaToggle">閉じる</a></p>
+                          <div class="range jsCheckToggleWrap">
+                            <ul>
+                              <li><input type="checkbox" id="search_participate_condition/33566/1/2_1" name="search_participate_condition/33566/1/2" value="1"><label for="search_participate_condition/33566/1/2_1">完了</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33566/2/2_1" name="search_participate_condition/33566/2/2" value="1"><label for="search_participate_condition/33566/2/2_1">既読</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33566/3/2_1" name="search_participate_condition/33566/3/2" value="1"><label for="search_participate_condition/33566/3/2_1">未読</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33566/4/2_1" name="search_participate_condition/33566/4/2" value="1"><label for="search_participate_condition/33566/4/2_1">未送信</label>&nbsp; </li>
+                            </ul>
+                          <!-- /.range --></div>
+                          <p class="btnSet"><span class="btn2"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-clear_type="28/33566" data-search_no="2">リセット</a></span><span class="btn3"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-search_type="28/33566" data-search_no="2">絞り込む</a></span></p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap snsAccount" title="3.配送先情報を入力してください"> 3.配送先情報を入力してくだ... <a href="javascript:void(0)" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget" data-search_type="28/33567">
+                          <p class="boxCloseBtn"><a href="javascript:void(0)" class="jsAreaToggle">閉じる</a></p>
+                          <div class="range jsCheckToggleWrap">
+                            <ul>
+                              <li><input type="checkbox" id="search_participate_condition/33567/1/2_1" name="search_participate_condition/33567/1/2" value="1"><label for="search_participate_condition/33567/1/2_1">完了</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33567/2/2_1" name="search_participate_condition/33567/2/2" value="1"><label for="search_participate_condition/33567/2/2_1">既読</label>&nbsp; </li>
+                              <li> <input type="checkbox" id="search_participate_condition/33567/3/2_1" name="search_participate_condition/33567/3/2" value="1"><label for="search_participate_condition/33567/3/2_1">未読</label>&nbsp; </li>
+                              <li> <input type="checkbox" id="search_participate_condition/33567/4/2_1" name="search_participate_condition/33567/4/2" value="1"><label for="search_participate_condition/33567/4/2_1">未送信</label>&nbsp; </li>
+                            </ul>
+                          <!-- /.range --></div>
+                          <p class="btnSet"><span class="btn2"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-clear_type="28/33567" data-search_no="2">リセット</a></span><span class="btn3"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-search_type="28/33567" data-search_no="2">絞り込む</a></span></p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                      <th class="jsAreaToggleWrap snsAccount" title="4.ご参加いただきありがとうございました！"> 4.ご参加いただきありがとう... <a href="javascript:void(0)" class="iconBtnSort jsAreaToggle">絞り込む</a>
+                        <div class="sortBox jsAreaToggleTarget" data-search_type="28/33568">
+                          <p class="boxCloseBtn"><a href="javascript:void(0)" class="jsAreaToggle">閉じる</a></p>
+                          <div class="range jsCheckToggleWrap">
+                            <ul>
+                              <li><input type="checkbox" id="search_participate_condition/33568/1/2_1" name="search_participate_condition/33568/1/2" value="1" checked="checked"><label for="search_participate_condition/33568/1/2_1">完了</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33568/2/2_1" name="search_participate_condition/33568/2/2" value="1"><label for="search_participate_condition/33568/2/2_1">既読</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33568/3/2_1" name="search_participate_condition/33568/3/2" value="1"><label for="search_participate_condition/33568/3/2_1">未読</label>&nbsp; </li>
+                              <li><input type="checkbox" id="search_participate_condition/33568/4/2_1" name="search_participate_condition/33568/4/2" value="1"><label for="search_participate_condition/33568/4/2_1">未送信</label>&nbsp; </li>
+                            </ul>
+                          <!-- /.range --></div>
+                          <p class="btnSet"><span class="btn2"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-clear_type="28/33568" data-search_no="2">リセット</a></span><span class="btn3"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-search_type="28/33568" data-search_no="2">絞り込む</a></span></p>
+                        <!-- /.sortBox --></div>
+                      </th>
+                        <th class="jsAreaToggleWrap snsAccount" title="5.ご当選おめでとうございます！"> 5.ご当選おめでとうございま... <a href="javascript:void(0)" class="btnArrowB1 jsAreaToggle">絞り込む</a>
+                          <div class="sortBox jsAreaToggleTarget" data-search_type="28/33569">
+                            <p class="boxCloseBtn"><a href="javascript:void(0)" class="jsAreaToggle">閉じる</a></p>
+                            <div class="range jsCheckToggleWrap">
+                              <ul>
+                                <li><input type="checkbox" id="search_participate_condition/33569/1/2_1" name="search_participate_condition/33569/1/2" value="1"><label for="search_participate_condition/33569/1/2_1">完了</label>&nbsp; </li>
+                                <li><input type="checkbox" id="search_participate_condition/33569/2/2_1" name="search_participate_condition/33569/2/2" value="1"><label for="search_participate_condition/33569/2/2_1">既読</label>&nbsp; </li>
+                                <li> <input type="checkbox" id="search_participate_condition/33569/3/2_1" name="search_participate_condition/33569/3/2" value="1"><label for="search_participate_condition/33569/3/2_1">未読</label>&nbsp; </li>
+                                <li> <input type="checkbox" id="search_participate_condition/33569/4/2_1" name="search_participate_condition/33569/4/2" value="1"><label for="search_participate_condition/33569/4/2_1">未送信</label>&nbsp; </li>
+                              </ul>
+                              <hr>
+                              <ul>
+                                <li><input type="checkbox" id="search_participate_condition/33568/1/2_1" name="search_participate_condition/33568/1/2" value="1" checked="checked"><label for="search_participate_condition/33568/1/2_1">当選</label>&nbsp; </li>
+                                <li><input type="checkbox" id="search_participate_condition/33568/2/2_1" name="search_participate_condition/33568/2/2" value="1"><label for="search_participate_condition/33568/2/2_1">未当選</label>&nbsp; </li>
+                              </ul>
+                            <!-- /.range --></div>
+                            <p class="btnSet"><span class="btn2"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-clear_type="28/33569" data-search_no="2">リセット</a></span><span class="btn3"><a href="javascript:void(0)" class="small1 jsAreaToggle" data-search_type="28/33569" data-search_no="2">絞り込む</a></span></p>
+                          <!-- /.sortBox --></div>
+                        </th>
+                      </tr>
+                    </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                <!-- /.itemTable --></table>
+              <!-- /.itemTableWrap --></div>
+            <!-- /.userListCont --></div>
+
+            <ul class="tablink2">
+              <li class="current"><span>プロフィール</span></li>
+              <li><a href="#">参加状況</a></li>
+              <li><a href="#">アンケート回答内容</a></li>
+            </ul>
+
+            <div class="checkedUserWrap jsAreaToggleWrap">
+              <p class="checkedUser"><span class="iconCheck3">選択中<strong class="jsCountArea">99,999,999</strong>人</span><span class="btn3_area"><a href="#" class="jsAreaToggle">対象に入れる</a></span></p>
+              <p class="selectRandom">
+                <small class="or">or</small>
+                <span class="btn3"><a href="#modal1" class="small1 jsOpenModal">抽選する</a></span>
+              <!-- /.selectRandom --></p>
+              <p class="iconHelp">
+                <span class="text"></span>
+                <span class="textBalloon1">
+                  <span>絞り込まれたリスト全体から、<br>自動抽選で対象を抽出します</span>
+                <!-- /.textBalloon1 --></span>
+              <!-- /.iconHelp --></p>
+              <div class="checkedUserAction jsAreaToggleTarget">
+                <ul>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーにする</label></li>
+                  <li><label><input type="radio" name="checkedUser1">対象ユーザーから外す</label></li>
+                </ul>
+                <p class="btnSet">
+                  <span class="btn2"><a href="#" class="small1 jsAreaToggle">リセット</a></span>
+                  <span class="btn3"><a href="#" class="small1 jsAreaToggle">絞り込む</a></span>
+                </p>
+              <!-- /.checkedUserAction --></div>
+            <!-- /.checkedUserWrap --></div>
+
+            <div class="pager1">
+              <p><strong>「送信対象」</strong><strong>99,999,999</strong>件中<strong>2001</strong>件～<strong>2020</strong>件表示しています<a href="#"><small>全ユーザーを表示</small></a></p>
+              <ul>
+                <li class="first"><a href="#">最初のページヘ</a></li>
+                <li class="prev"><a href="#">前のページへ</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><span>6</span></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">99</a></li>
+                <li class="next"><a href="#">次のページへ</a></li>
+                <li class="last"><a href="#">最後のページヘ</a></li>
+              </ul>
+            <!-- /.pager1 --></div>
+            <p class="showItemNum">
+              表示件数
+              <select name="" id="">
+                <option value="#" selected>20件</option>
+                <option value="#" selected>50件</option>
+                <option value="#" selected>100件</option>
+              </select>
+              <span class="btn2"><a href="#" class="small1">反映</a></span>
+            <!-- /.showItemNum --></p>
+
+          <!-- /.userListWrap --></section>
+        <!-- /.userListWrap --></section>
+      <!-- /.campaignEditCont --></section>
+      <footer class="moduleCheck">
+        <ul>
+          <li class="btn2"><a href="#" class="small1">下書き保存</a></li>
+          <li class="btn3"><a href="#" class="">内容確定</a></li>
+        </ul>
+      <!-- /.moduleCheck --></footer>
+    <!-- /.campaignEditWrap --></section>
+
+  </article>
+  <footer>
+    <p class="copyright"><small>COPYRIGHT © 2014 SUNTORY BEVERAGE & FOOD LIMITED. ALL RIGHTS RESERVED<br>Powered by モニプラ</small></p>
+    <ul class="links">
+      <li><a href="#">ログアウト</a></li>
+      <li><a href="#">BRANDCo開設規約</a></li>
+      <li><a href="http://allied-id.com/agreement" target="_blank">AAID利用規約</a></li>
+      <li><a href="http://www.aainc.co.jp/privacy/" target="_blank">個人情報保護方針</a></li>
+      <li><a href="http://allied-id.com/maintenance" target="_blank">メンテナンス情報</a></li>
+    <!-- /.links --></ul>
+  </footer>
+
+  <div class="modal1 jsModal" id="modal1">
+    <section class="modalCont-medium jsModalCont">
+      <h1>抽選する</h1>
+      <div class="modalUserRandomSelect">
+        <p>当選者数<input type="text" value="100" class="inputNum">名様<small>（参加完了：<strong>4,962</strong>名）</small></p>
+        <dl class="randomOption">
+          <dt>抽選補助条件</dt>
+          <dd><label><input type="checkbox" checked>住所重複を除外</label></dd>
+          <dd><label><input type="checkbox">何かその他条件が入る</label></dd>
+        <!-- /.randomOption --></dl>
+        <p class="supplement1">※抽選後、住所重複や退会などにより対象とならないユーザーが出た場合は設定人数に満たなくなります。再度の抽選をお願いします。</p>
+      <!-- /.modalUserRandomSelect --></div>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal">この条件で抽出</a></span>
+      <!-- /.btnSet --></p>
+    <!-- /.modalCont-medium --></section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="modal2">
+    <section class="modalCont-large jsModalCont">
+      <iframe src="01_skeleton_iframe.html" frameborder="0"></iframe>
+    <!-- /.modalCont-large --></section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="modal3">
+    <section class="modalCont-small jsModalCont">
+      <h1>データダウンロード</h1>
+      <p>何か必要があればテキストを入れる。<br><span class="font-download">表示があるものは直接ダウンロードされます。</span></p>
+      <ul>
+        <li><a href="#">参加者情報</a></li>
+        <li><a href="#" class="download">日別既読件数</a></li>
+        <li><a href="#" class="download">日別流入元</a></li>
+        <li><a href="#" class="download">ギフト受信ユーザー一覧</a></li>
+        <li><a href="#" class="download">ギフト受信ユーザー配送先</a></li>
+        <li>
+          <span class="download labelModeClient">当選者配送先</span>
+          <select>
+            <option selected>選択して下さい</option>
+            <option>STEP1</option>
+            <option>STEP2</option>
+            <option>STEP3</option>
+            <option>STEP4</option>
+          </select>
+        </li>
+        <li>
+          <s class="download labelModeClient">当選者配送先</s>
+          <select disabled>
+            <option selected>選択して下さい</option>
+            <option>STEP1</option>
+            <option>STEP2</option>
+            <option>STEP3</option>
+            <option>STEP4</option>
+          </select>
+        </li>
+        <li><a href="#" class="download labelModeAllied">個人情報</a></li>
+      </ul>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal" class="middle1">キャンセル</a></span>
+      <!-- /.btnSet --></p>
+    <!-- /.modalCont-small --></section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="modal4">
+    <section class="modalCont-medium jsModalCont">
+      <h1>一括評価する</h1>
+      <div class="modalUserRandomSelect">
+        <div class="userRatingModal">
+          <p class="ratingBox"><a href="#" class="ratingBlock">ブロック</a><span class="starRating" data-score="0"></span></p>
+        <!-- /.userRatingModal --></div>
+      <!-- /.modalUserRandomSelect --></div>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn3"><a href="#closeModal">この設定で評価</a></span>
+      <!-- /.btnSet --></p>
+    <!-- /.modalCont-medium --></section>
+  <!-- /.modal1 --></div>
+
+  <div class="modal1 jsModal" id="modal5">
+    <section class="modalCont-medium jsModalCont">
+      <h1>当選者の確定前に下記項目をご確認ください</h1>
+      <ul class="adminRuleCheck">
+        <li><label><input id="duplicated_address_check" type="checkbox">当選予定人数<strong class="num">XX</strong>名に対して、<strong class="num">XX</strong>名の当選者を確定しますがよろしいですか？複数の当選グループを使用する場合は、合計人数にご注意ください。</label></li>
+        <li><label><input id="duplicated_address_check" type="checkbox">当選確定後は対象者の変更ができませんがよろしいですか？</label></li>
+      </ul>
+      <p class="supplement1">※配送目的外のデータ抽出による個人情報漏洩を防止するため、当選者を一度確定した後は解除ができなくなっております。</p>
+      <p class="btnSet">
+        <span class="btn2"><a href="#closeModal">キャンセル</a></span>
+        <span class="btn4"><a href="#closeModal">確定する</a></span>
+      <!-- /.btnSet --></p>
+    <!-- /.modalCont-medium --></section>
+  <!-- /.modal1 --></div>
+
+
+
+
+  <script>
+
+    jQuery(function(){
+      $.datepicker.setDefaults($.datepicker.regional['ja']);
+      $(".jsDate").datepicker();
+
+      // star rating
+      $('.starRating').raty({
+        size: 20,
+        path: '../../img/raty/',
+        starOff: 'iconStar_0.png',
+        starOn: 'iconStar_5.png',
+        cancelOff : 'iconResetOff.png',
+        cancelOn  : 'iconResetOn.png',
+        cancel: true,
+        cancelPlace: 'right',
+        score: function() {
+          return $(this).attr('data-score');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+</html>
